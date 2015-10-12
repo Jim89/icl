@@ -1,0 +1,90 @@
+---
+title: "Statistics and Econometrics Lecture 1"
+author: "Jim Leach"
+date: "12 October 2015"
+output:
+  pdf_document
+---
+
+# The nature of econometrics and econometric data
+
+## What is econometrics?
+
+Econometrics is the process of developing statistical models for understanding economic relatitionships and theories, and helping to inform policy or business decisions. 
+
+It is distinct from mathematical statistics which relies heavily on __experimental data__ (i.e. those not obtained through controlled experiements - also termed __observational__ or __retrospective__).
+
+Econometrics relies on __nonexperiemental data__, often collected in a laboratory/experimental settings. 
+
+## Empirical Economic Analysis
+
+An __empirical analysis__ uses data to test theories and estimate relationships (Wooldrige, 2012). Theories or relationships are entered in to an __economic model__ to describe them. For example:
+
+\begin{equation} \label{eq:economic_model}
+y = f(x_1, x_2, x_3, x_4, x_5)
+\end{equation}
+
+This equation \eqref{eq:economic_model} is a good example of an economic model. That is, the outcome, $y$ is a function of a range of inputs $x_i$. Note that the exact function is not specified.
+
+This can be turned in to an __econometric model__ by specifying the fuction, for example
+
+\begin{equation} \label{eq:econometric_model}
+y = \beta_0 + \beta_{1}x_1 + u
+\end{equation}
+
+equation \eqref{eq:econometric_model} is specific and is therefore termed an exonometric model. The $beta$ values are termed the _model parameters_. $u$ is termed the _error_ or _disturbance_ term.  Note that $u$ is how ambiguities or errors in the model are noted. $u$ can never be reduced to 0 as there will always be some element of the model that cannot be measured to 100% accuracy.
+
+Once an economic model has been specified, a _hypothesis_ can be generated which will be tested via statistical procedures. 
+
+## The structure of economic data:
+
+There are several forms of economic data, covering:
+
+* __Cross-sectional data__ - a sample taken at a given (and identical) point in time for all records in the data set. e.g. on a specific day, or within a specific year (i.e. time differences can be ignored if they are minor relative to the overall effect being studied). It is generally assumed that cross sectional data have been obtained via a process of __random sampling__. 
+
+
+* __Time series data__ - a sample taking over a period of time. Can be tricky to work with as most economic variables will have some underlying association with time, or will display _seasonality_ (underlying trends over a time period). The __data frequency__ is also important. Common frequencies include daily, weekly, monthly and yearly. 
+
+* __Pooled cross-sectional data__ - data that has both cross-sectional and time-series features. An example is two cross-sectional surveys, one in year A and one in year A + n. Tthe two years'/periods' data can be combined in a __pooled cross section__ to increase the sample size, and help understand broader changes that may have taken place in the periods' being studied (for example studying the before and after effects of a major government policy).
+
+* __Panel or Longitudinal data__ - consists of a time series for each cross-sectional member in the data set. I.e. 50 people, each with a time series of daily events over a month. The distinction from pooled cross sectional data is that the _same_ cross-sectional members are studied over time (whereas in pooled cross sectional there is no guarentee the same members are included in multiple pools). Panel data is powerful as it allows outside factors to be more readily controlled for, and lags in behaviour can also be studied. However, it can be hard to collect. 
+
+## Econometric Goals
+
+The key goals of econometrics are:
+
+* Estimating relationships between variables;
+* Testing hypotheses (e.g. does time spent in education increase average salary);
+* Forecasting economic metrics; and
+* Evaluating business policy.
+
+## Hypothesis Testing
+
+Once an econometric model has been defined, a range of hypotheses can be formulated in terms of the $\beta$ parameters. The classic hypothesis is that $\beta = 0$ and as such tests are used to assess the significance, or otherwise, of non-zero values. 
+
+However, simply establishing the significance (or otherwise) or a relationship is not that interesting. Instead, a frequent goal is to infer _causal_ relationships between variables.
+
+## Correlation vs. Causation
+
+The interplay of correlation vs. causality must be understood. Causality is defined as:
+
+> "Holding all other relevant factors constant, how does variable $y$ change if variable $x$ changes."
+
+Causality can be difficult to establish as it may be practical complex/infeasible to truly hold all other variables constant, especially given the limitations of non-experimental data. 
+
+This facet of holding all variables constant is named by the Latin phrase __Ceteris Paribus__.
+
+## Econometrics in Business
+
+The basic workflow of econometrics in a business setting looks something like:
+
+1. Pose a managerial question;
+2. Convert managerial question to a statistical one;
+3. Collect the required data, and assess it's suitablity (data analysis epicyles e.g. Peng 2015);
+4. Perform a data analysis (Peng, 2015); and
+5. Implement (or not) solutions.
+
+
+
+
+

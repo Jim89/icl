@@ -1,0 +1,93 @@
+---
+title: "Statistics and Econometrics Lecture 2"
+author: "Jim Leach"
+date: "12 October 2015"
+output: pdf_document
+---
+
+
+# Definition of a regression model
+
+## A simple model
+
+Equation \ref{eq:basic} below defines the simplest regression model, and table 1 provides some common names for the $y$ and $x$ variables.
+
+\begin{equation} \label{eq:basic}
+y = \beta_0 + \beta_{1}x + u
+\end{equation}
+
+### Table 1: Key definitions
+
+```{r table1, echo=FALSE}
+library(knitr)
+kable(data.frame(y = c("Dependant variable", "Explained variable", "Response", "Predicted variable", "Regressand"), x = c("Independant variable", "Explanatory variable", "Control variable", "Predictor", "Regressor")))
+```
+
+Both $y$ and $x$ are termed _observable_, i.e. data is present for them, the $\beta$ variables are to be estimated from the regression, and $u$ (the error or disturbance term) is termed _unobservable_. 
+
+## Mean assumption
+
+When the intercept term ($\beta_0$) is included in equation \eqref{eq:basic} then the population average of $u$ is set to zero (without losing anything), i.e. equation \eqref{eq:mean_assump} below holds true.
+
+\begin{equation} \label{eq:mean_assump}
+E(u) = 0
+\end{equation}
+
+This is due to the following:
+
+If the regression equation is written as:
+\begin{equation}
+y = \beta_0 + \beta_{1}x + v
+\end{equation}
+
+Where $v$ represents an error term where $E(v) \neq 0$.
+
+This can be rewritten as:
+\begin{equation}
+y = \beta_0 + \beta_{1} x + [v - E(v)] + E(v)
+\end{equation}
+
+Combining the $E(V)$ value with the intercept and treating $E(u) = v - E(v)$ allows this to be written as:
+
+\begin{equation}
+y = [\beta_0 + E(v)] + \beta_{1} x + u
+\end{equation}
+
+This demonstrates that it is always possible to treat $E(u) = 0$ as true and this assumption is not termed to be restrictive as long as an intercept is included (and allowing for the fact that the intercept term is not of interest).
+
+## Zero Conditional Mean (ZCM)
+
+The zero conditional mean exends the assumption in equation \eqref{eq:mean_assump}. If $\Delta{u} = 0$ then it is also true that:
+
+\begin{equation}
+\Delta{y} = \beta_{1}\Delta{x}
+\end{equation}
+
+Given that both $x$ and $u$ are treated as random variables and that "$u$ is fixed whilst $x$ is varied" it is possible to say that the mean of $u$ for any given value of $x$ is the same, and is equal to zero.
+
+\begin{equation} \label{eq:zcm}
+E(u|x) = E(u) = 0
+\end{equation}
+
+Equation \eqref{eq:zcm} describes this relationship mathematically. It is known as the __zero-conditional-mean__ assumption (ZCM) and is critical in understanding the fundamentals of regression. 
+
+Furthermore, if the ZCM states that $E(u|x) = 0$ then it also implies that $x$ and $u$ are uncorrelated, i.e. $Cov(x, u) = 0$.
+
+In practice, it is not possible to know for certain if the ZCM assumption holds true, and so it may be necessary to test for it as part of the analytical process.
+
+## Population Regression Function (PRF)
+
+Taking conditional expectations of \eqref{eq:basic} gives
+
+\begin{equation} \label{eq:prf}
+E(y|x) = \beta_0 + \beta_{1}x
+\end{equation}
+
+This equation \eqref{eq:prf} is termed the __population regression function__. In this equation, $\beta_1$ can be interpreted as
+
+> "The change in the expected value of y, given a one unit change in the value of x"
+
+The distribution of $y$ in \eqref{eq:basic} is centered around $E(y|x)$ and so $y$ is broken in to:
+
+* Systematic part of $y$ being given by $E(y|x)$; and
+* The unsystematic part of $y$ being given by $u$.
