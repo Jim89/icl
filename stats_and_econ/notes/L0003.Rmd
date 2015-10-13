@@ -1,0 +1,86 @@
+---
+title: "Statistics and Econometrics - Lecture 3"
+author: "Jim Leach"
+date: "13 October 2015"
+output: pdf_document
+---
+
+# Ordinary least squares (OLS)
+
+## Basic definition
+
+We term the data to be assessed a __random sample__ of _independant_ observations, i.e. ${(x_i, y_i), i = 1, 2, ...n}$. Following on from this, it is possible to write the PRF at an observation level:
+
+\begin{equation} \label{eq:obs_lvl_prf}
+y_i = \beta_0 + \beta_{1}x_i + u_i
+\end{equation}
+
+Note that $i$ is the observation index.
+
+From this, estimates for the parameters are noted as $(\hat{\beta_0}, \hat{\beta{1}})$. The _hat_ symbol denotes that these parameters are _estimates_, rather than the true population values.
+
+### Objective
+
+The __sum of squared residuals__ (SSR) is given by \eqref{eq:ssr} below. 
+
+\begin{equation} \label{eq:ssr}
+SSR = \sum_{i=1}^n \hat\mu_{i}^2 = \sum_{i=1}^{n}(y_i - \hat\beta_0 - \hat\beta_{1}x_i)^2
+\end{equation}
+
+The SSR measures the difference between the regression line and the individual observations of the dependant variable, $y$. The objective of OLS is to choose parameters, $\beta$ so as to minimise the value of the SSR.
+
+That is, the values of $(\hat{\beta_0}, \hat{\beta{1}})$ can be said to be minimisers of the SSR. 
+
+### First Order Conditions
+
+In order to minimise the regression equation to find the values of $\hat\beta_0$ and $\hat\beta_1$ it is necessary to take the first order derivatives of the SSR with respect to the two parameters, set each equation to be equivalent to 0 and then solve for $\beta_0$ and $\beta_1$ respectively. 
+
+\begin{equation} \label{eq:ssr_beta0}
+\frac{\partial SSR}{\partial\hat\beta_0} = -2 . \sum_{i=1}^{n} (y_i - \hat\beta_0 - \hat\beta_{1}x_i) = 0
+\end{equation}
+
+\begin{equation} \label{eq:ssr_beta1}
+\frac{\partial SSR}{\partial\hat\beta_1} = -2 . \sum_{i=1}^{n} (y_i - \hat\beta_0 - \hat\beta_{1}x_i)x_i = 0
+\end{equation}
+
+Solving \eqref{eq:ssr_beta0} and \eqref{eq:ssr_beta1} yields the following definitions of the parameters:
+
+$\hat\beta_i = \frac{\sum_{i=1}^n (x_i - \bar{x})(y_i - \bar{y})}{\sum_{i=1}^n(x_i - \bar{x})^2}$, and $\hat\beta_0 = \bar{y} - \hat\beta_{1}\bar{x}$.
+
+(Recall that $\bar{x} = \frac{1}{n}\sum_{i=1}^2x_i$)
+
+It is also noted that the OLS solution has the (relatively trivial) requirement that $\sum_{i=1}^n(x_i - \bar{x})^2 > 0$
+
+This is trivial as it simply requires that not all the $x_i$ values in the sample are the same, even one differing value will ensure that this condition is true.
+
+## Sample Regression Function
+
+Once the OLS calculations for the parameters have been performed, the __sample regression function__ (SRF) can be written as
+
+\begin{equation} \label{eq:srf}
+\hat{y} = \hat\beta_0 + \hat\beta_{1}x
+\end{equation}
+
+The SRF is an estimate of the true population regression function.
+
+### Interpreting OLS Estimates
+
+As with the PRF, the interpretation of SRF parameters is relatively simple. The $\hat\beta_1$ coefficient is interpreted as the change in the $\hat{y}$ (the estimated value of $y$) when $x$ increases by one unit. 
+
+Note that the true value of the dependant can be expressed as
+
+\begin{equation}
+y = \hat{y} + \hat{u}
+\end{equation}
+
+or alternatively,
+
+\begin{equation}
+y = E(y|x) + u
+\end{equation}
+
+
+
+
+
+
