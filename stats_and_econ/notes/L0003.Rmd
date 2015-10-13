@@ -69,7 +69,7 @@ As with the PRF, the interpretation of SRF parameters is relatively simple. The 
 
 Note that the true value of the dependant can be expressed as
 
-\begin{equation}
+\begin{equation} \label{eq:yi}
 y = \hat{y} + \hat{u}
 \end{equation}
 
@@ -78,6 +78,55 @@ or alternatively,
 \begin{equation}
 y = E(y|x) + u
 \end{equation}
+
+In this way it is imagined that the SRF is a good estimate of PRF and represents the "average" values of the true regression parameters, with an increasing accuracy as $n$ tends to $\infty$.
+
+## SRF and Sums of Squares
+
+Once the SRF has been derived and calculated, several further definitions are possible. Recall from \eqref{eq:yi} that each $y_i$ can be represented by a combination of the estimated value of y, and the residual.
+
+It is therefore useful to define several ways to measure variations in $y$ from $\bar{y}$ (the mean $y$).
+
+* SST - Total sum of squares (total variation in $y_i$): $SST = \sum_{i=1}^n (y_i - \bar{y})^2$
+
+* SSE - Explained sum of squares (variation in $\hat{y_i}$): $SSE = \sum_{i=1}^n (\hat{y_i} - \bar{y})^2$
+
+* SSR - Sum of squared residuals (variation in $\hat{u_i^2}$): $SSR = \sum_{i=1}^n \hat{u_i^2}$
+
+Combining these forumlae shows that $SST = SSE + SSR$, i.e. the total variation in the observed $y$ values can be explained by a combination of the variation in the $\hat{y}$ (estimate) values and the residuals ($u$).
+
+### An Assessment of Fit - $R^2$
+
+To determine the extent to which the x values explain the variation in $y$ a new metric is defined - $R^2$.
+
+The $R^2$ metric describes the fraction of variation in $y$ that is explained by the SRF:
+
+\begin{equation} \label{eq:r2}
+R^2 = \frac{SSE}{SST} = 1- \frac{SSR}{SST}
+\end{equation}
+
+In general, a larger $R^2$ means a better fit for the model (but be cautious of overfitting), and remember that $0 \leq R^2 \leq 1$
+
+## Changing units of measurement
+
+* If y is multiplied by a constant, c:
+  
+> The OLS intercept and slope estimates are also multiplied by c (recall the definition of $\hat\beta_0$ and $\hat\beta_1$).
+  
+* If x is multipled by a constant, c:
+  
+> The OLS slope will be divided by the same constant, c, (or multiplied by $1/c$) and the intercept estimate will be unaffected (recall that the intercept describes on a $y$ value).
+
+* The $R^2$ value does not change when varying the units of measurement (as it is described only in terms of $y$, so varying the units of $x$ has no effect, and varying the units of $y$ affects both $SSR$ and $SST$ in the same way).
+
+## Non-linearity
+
+The OLS requires only that the regression model is __linear in parameters $(\hat\beta_0, \hat\beta_1)$. As such, non linear relationships in $x$ and $y$ can be easily accomodated.
+
+
+
+
+
 
 
 
