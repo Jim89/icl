@@ -123,6 +123,62 @@ In general, a larger $R^2$ means a better fit for the model (but be cautious of 
 
 The OLS requires only that the regression model is __linear in parameters $(\hat\beta_0, \hat\beta_1)$. As such, non linear relationships in $x$ and $y$ can be easily accomodated.
 
+An easy way to to do this is with $\log$ relationships between $y$ and $x$. However, it must be remembered that if $\log$ relationships are used, the interpretation of the SRF parameters will change slightly. The table below describes these interpretations.
+
+
+
+\begin{center}
+\begin{tabular}{ c c c  c}
+ Model & Dependant Variable & Independant Variable & Interpretation of $\beta_1$ \\ \hline
+ Level - level & y & x & $\Delta y = \beta_1 \Delta x$ \\
+ Level - log & y & $log (x)$ & $\Delta y = ( \beta_1 / 100 ) \% \Delta x$ \\
+ Log - level & $log (y)$ & x & $\% \Delta y = ( 100 \beta_1 ) \Delta x$ \\
+ Log - log & $log(y)$ & $log(x)$ & $\% \Delta y = \beta_1 \% \Delta x$
+\end{tabular}
+\end{center}
+
+## Properties of OLS Estimators
+
+There are a few key properites of OLS estimators that are important to know:
+
+* The data used to generate the SRF are a realisation of a __random sample__;
+* The OLS parameter estimates are therefore themselves random values. 
+* To make inferences about the population parameters we need to understand the __mean__ and __variance__ of the OLS estimators.
+
+### SRF Assumptions:
+
+1. __Linear in parameters__ - in the population model, $y$ is truly related to $x$ in a way that is linear in the parameters;
+2. __Random sampling__ - ${(x_i, y_i), i = 1, 2, ..., n}$ with  $n > 2$ is a random sample from the population;
+3. __Sample variation__ - the sample values, $x_i$ are not the same value; and
+4. __Zero conditional mean__ - $E(u|x) = 0$ for any given value of $x$.
+
+### Estimator properties
+
+Following on from these 4 assumptions, several properties of the OLS estimators can be stated:
+
+* The OLS estimators are unbiased, i.e. $E(\hat\beta_1) = \beta_1$ and $E(\hat\beta_0) = \beta_0$.
+
+The unbiased OLS estimates are "centered" around the population parameters ($\beta$ values). Therefore, on average, they correctly estimate the population values.
+
+It is noted that:
+
+\begin{equation}
+\hat\beta_1 = \beta_1 + \frac{\sum_{i=1}^n (u_i - \bar{u})(x_i - \bar{x})}{\sum_{i=1}^n (x_i - \bar{x})^2}
+\end{equation}
+
+I.e., the OLS estimate for $\hat\beta_1$ is composed of the population value ($\beta_1$) plus an error term. This error term comprises the covariance of errors, $u$ and $x$ values, divided by the variance in the $x$ values. As such, it can be seen that a large variance (i.e. range) of $x$ values is desireable to get a good estimate for $\hat\beta_1$.
+
+## Homo- and Heteroskedasticity
+
+The homoskedasticity assumption states that:
+
+\begin{equation}
+Var(u_i | x_i) = \sigma ^ 2
+\end{equation}
+
+I.e. the variation in the errors (a function of the population model) is not related to the $x$ values, implying that $Var(u_i) = \sigma ^ 2$.
+
+If this assumption does not hold, i.e. $Var(u_i)$ is found to depend on the value of $x_i$ then the errors are said to exhibit __heteroskedasticity__.
 
 
 
@@ -133,3 +189,4 @@ The OLS requires only that the regression model is __linear in parameters $(\hat
 
 
 
+ 
