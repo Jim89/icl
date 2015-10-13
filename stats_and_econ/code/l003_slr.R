@@ -3,8 +3,13 @@
 
 # look at description of data provided with the RData file ---------------------
   desc
+  summary(data)
+  str(data)
 
-# fitting a linear model
-fit <- lm(wage ~ educ, data = data)
+# fitting a linear model -------------------------------------------------------
+  fit <- lm(wage ~ educ, data = data) 
 
-summary(fit)
+# look at the output of the model 
+  summary(fit)
+
+  
