@@ -75,7 +75,7 @@ y = \hat{y} + \hat{u}
 
 or alternatively,
 
-\begin{equation}
+\begin{equation} \label{eq:y}
 y = E(y|x) + u
 \end{equation}
 
@@ -156,6 +156,8 @@ There are a few key properites of OLS estimators that are important to know:
 
 Following on from these 4 assumptions, several properties of the OLS estimators can be stated:
 
+#### Theorem 2.1
+
 * The OLS estimators are unbiased, i.e. $E(\hat\beta_1) = \beta_1$ and $E(\hat\beta_0) = \beta_0$.
 
 The unbiased OLS estimates are "centered" around the population parameters ($\beta$ values). Therefore, on average, they correctly estimate the population values.
@@ -170,7 +172,7 @@ I.e., the OLS estimate for $\hat\beta_1$ is composed of the population value ($\
 
 ## Homo- and Heteroskedasticity
 
-The homoskedasticity assumption states that:
+The homoskedasticity assumption (often noted as assumption 5 following on from the four above) states that:
 
 \begin{equation}
 Var(u_i | x_i) = \sigma ^ 2
@@ -180,9 +182,39 @@ I.e. the variation in the errors (a function of the population model) is not rel
 
 If this assumption does not hold, i.e. $Var(u_i)$ is found to depend on the value of $x_i$ then the errors are said to exhibit __heteroskedasticity__.
 
+#### Theorem 2.2
 
+Theorem 2.1 stated that the OLS parameter estimates had expected values of the population parameters. However, a description of the _variance_ of the OLS parameters is needed. This is theorem 2.2, under this:
 
+\begin{equation}
+Var(\hat\beta_1) = \frac{\sigma^2}{\sum_{i=1}^n (x_i - \bar{x})^2}
+\end{equation}
 
+and
+
+\begin{equation}
+Var(\hat\beta_0) = \frac{\sigma^2 n^{-1} \sum_{i=1}^n x_{i}^2}{\sum_{i=1}^n  (x_i - \bar{x})^2}
+\end{equation}
+
+In essence, theorem 2.2 stats that the larger the value of $\sigma^2$, the greater the variability in the parameters estimated from OLS. Similarly, the larger the variance in $x$, the smaller the variance in the parameters.
+
+##### Estimation of $\sigma^2$
+
+Given that $y$ can be described in multiple ways (\eqref{eq:yi}, \eqref{eq:y}), i.e. in terms of the residuals or the errors, it is possible to write:
+
+\begin{equation}
+\hat{u}_i = u_i - (\hat\beta_0 - \beta_0) - (\hat\beta_1 - \beta_1)x_i
+\end{equation}
+
+That is, the errors in the PRF can be estimated from the residuals. Following from this, the best estimator of $\sigma^2$ is:
+
+\begin{equation}
+\hat\sigma^2 = \frac{SSR}{n-2} = \frac{\sum_{i=1}^2\hat{u}_i^2}{n-2}
+\end{equation}
+
+This yields a new __Theorem__. Under assumptions one to five (four base assumptions, plus homoskedasticity assumption): $E(\hat\sigma^2 = \sigma^2)$.
+
+$\hat\sigma = \sqrt{\hat\sigma^2}$ is the __standard error of the regression__ and it used in forming the standard errors of the SRF parameters.
 
 
 
