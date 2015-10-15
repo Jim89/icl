@@ -36,3 +36,39 @@ There are many challenges associated with working with big data, including:
 
 Previously, there were few producers of data, and many consumers. Now there are as many producers as there are consumers. 
 
+***
+
+# Cloud computing
+
+Has many benefits:
+
+* Cost & management - i.e. economies of scale, out-sourcing;
+* Reduced time to deployment;
+* Scalability;
+* Reliability; and
+* Sustainability - the hardware is not owned as does not need to be maintained.
+
+Has several types: public cloud, private cloud, hybid (critical apps/data on private, non-critical public), cloud bursting (switching to cloud providers during peak load times).
+
+Comprised of:
+
+* Infrastructure as a Service (IaaS) - hardware related services e.g. storage or computational power (e.g. Amazon EC2, S3);
+* Platform as a Service (PaaS) - cloud based development platforms, e.g. Google application engine, Microsoft Azure; and
+* Software as a Service (SaaS) - complete software offering in the cloud, e.g. Salesforce CRM, Google Docs.
+
+Key ingredients are:
+* Service-Oriented Architechture (SOA);
+* Utility computing (on demand computing);
+* Virtualisation;
+* SaaS;
+* PaaS; and
+* IaaS.
+
+### Virtualisation
+
+Often uses Hypervisor. The concept ensures that apps are isolated from each other and therefore do not crash the overall/underlying phyrical system if they fail. 
+
+Virtualisation is good for flexible resource management, esp. on CPU, reasonably well with RAM. Resource management of hard disk storage is still a challenge (esp. if apps want to read/write large amounts of data!)
+
+
+
