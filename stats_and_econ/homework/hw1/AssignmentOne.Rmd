@@ -1,0 +1,202 @@
+---
+title: "Statistics and Econometrics - Assigment One"
+author: "Jim Leach"
+date: "15 October 2015"
+output: pdf_document
+---
+
+# Document purpose
+
+The purpose of this document is to write up the response to the first assigment give as part of the _Statistics and Econometrics_ module. It is divided in to two sections, each covering a section of the assigment as given. Each major section is divided in to further subsections, one for each question in the assigment.
+
+A number of `R` packages have been used throughout this assignment. These are loaded before the responses are given:
+
+```{r load_pkg, echo = TRUE, message = FALSE}
+library(dplyr)
+library(ggplot2)
+```
+
+***
+
+# Section one - CEOs & Salaries
+
+The data provided for this section contains information on chief executive officers for US corporations. Only two variables in the data will be used, annual compensation (`salary`) and the prior years experience as a CEO (`ceoten`). 
+
+## Loading the data:
+
+The data are loaded from the provided `.RData` file:
+```{r s1_load}
+load("./data/ceosal2.RData")
+```
+
+
+## 1a
+
+```{r 1a}
+avg_sal <- prettyNum(mean(data$salary)*1000, big.mark = ",")
+avg_ten <- mean(data$ceoten) %>% signif(1)
+```
+
+The average salary in the data is `r paste0("$", avg_sal)`. The average CEO tenure in the data is `r avg_ten` (1 s.f.).
+
+## 1b
+
+```{r 1b}
+first_year <- data %>% filter(ceoten == 0) %>% nrow
+longest_tenure <- max(data$ceoten)
+
+```
+
+The number of CEOs that are in their first year (`ceotan` = 0) is `r first_year`.
+The longest tenure as CEO is `r longest_tenure`.
+
+## 1c
+
+```{r 1c}
+avg_sal_above <- data %>% 
+                  filter(ceoten >= mean(ceoten)) %>%
+                  summarise(avg_sal = mean(salary))
+
+avg_sal_below <- data %>% 
+                  filter(ceoten < mean(ceoten)) %>% 
+                  summarise(avg_sal = mean(salary))
+           
+```
+
+The average salary for CEOs with tenure longer than or equal to the average tenure is `r paste0("$", prettyNum(1000*as.numeric(avg_sal_above), big.mark=","))`.
+
+The average salary for CEOs with tenure shorter than the average tenure is `r paste0("$", prettyNum(1000*as.numeric(avg_sal_below), big.mark=","))`.
+
+## 1d
+```{r 1d, fig.height=4.5, fig.width=6}
+data %>% 
+  ggplot(aes(x = ceoten, y = salary)) +
+  geom_point(color = "firebrick") +
+  geom_smooth(method = "lm") + 
+  ylab("Salary ($1000s)") +
+  xlab("CEO Tenure (Years)") +
+  ggtitle("CEO Salary vs. CEO Tenure \n (with linear smoother)") +
+  theme_minimal()
+```
+
+## 1e
+
+```{r 1e}
+fit <- lm(log(salary) ~ ceoten, data = data)
+fit_summary <- summary(fit)
+b0 <- fit_summary$coefficients[1,1]
+b1 <- fit_summary$coefficients[2,1]
+r2 <- fit_summary$r.squared
+sample_size <- nrow(data)
+```
+
+The SRF formula is given by \eqref{eq:srf_1} below:
+\begin{equation} \label{eq:srf_1}
+log(salary) = \hat\beta_0 + \hat\beta_1 ceoten + \hat{u}
+\end{equation}
+
+The regression analysis gives the following values for the parameters of the SRF:
+
+* $\hat\beta_0$: `r b0`;
+* $\hat\beta_1$: `r b1`;
+* Sample size: `r sample_size`;
+* $R^2$: `r round(r2, 3)`.
+
+The predicted percentage increase in salary given one additional year as CEO is given by \eqref{eq:y_inc}:
+
+\begin{equation} \label{eq:y_inc}
+\% \Delta y = (100\beta_1)\Delta x
+\end{equation}
+
+As such, the predicted percentage increase in salary given one additonal year as CEO is `r paste0(round(100*b1, 4),"%")`, or approximately `r paste0(signif(100*b1, 1),"%")`.
+
+```{r s1_teardown, echo = FALSE, message = FALSE}
+rm(list = ls())
+```
+
+***
+
+\pagebreak
+
+# Section 2 - Birth weights and cigarettes
+ 
+The data provided for this section of the assignment contains information on births to women in the United States. There are again two variables of interest: the infant birth weight (`bwght`) and the average number of cigarettes the mother smoked per day during pregnancy (`cigs`).
+
+## Loading the data:
+
+The data are loaded from the provided `.RData` file:
+```{r s2_load}
+load("./data/bwght.RData")
+```
+
+## 2a
+
+```{r 2a}
+fit2 <- lm(bwght ~ cigs, data = data)
+fit2_summary <- summary(fit2)
+b0_2 <- fit2_summary$coefficients[1,1]
+b1_2 <- fit2_summary$coefficients[2,1]
+r2_2 <- fit2_summary$r.squared
+sample_size_2 <- nrow(data)
+```
+
+The SRF is given by \eqref{eq:srf_2} below:
+
+\begin{equation} \label{eq:srf_2}
+bwght = \hat\beta_0 + \hat\beta_1 cigs + \hat{u}
+\end{equation}
+
+The regression analysis gives the following values for the parameters of the SRF:
+
+* $\hat\beta_0$: `r b0_2`;
+* $\hat\beta_1$: `r b1_2`;
+* Sample size: `r sample_size_2`;
+* $R^2$: `r round(r2_2, 3)`;
+
+## 2b
+
+The predicted birth weight when `cigs` is 0 is given by the $\hat\beta_0$ value of the regression analysis, i.e. `r round(b0_2, 2)` ounces.
+
+```{r 2b}
+bwght_predict <- b0_2 + b1_2 * 20
+```
+
+Following the SRF formula given in \eqref{eq:srf_2} is is also possible to calculate `bwght` when `cigs` has a value of 20 (note the assumption that $E(u) = 0$). Doing so, the predicted birth weight when `cigs` is 20 is `r round(bwght_predict, 2)`.
+
+This is less than the predicted birth weight when `cigs` is 0, implying that their is a negative correlation between smoking and birth weight (i.e. the more cigarettes are smoked during pregnancy, the lower the expected birth weight). 
+
+## 2c
+
+```{r 2c}
+p_val <- fit2_summary$coefficients[2, 4]
+```
+
+Whilst the $p$-value for the $\hat\beta_{1}$ parameter of $`r signif(p_val, 3)`$ is very small, it is probably not possible to conclude, with certainty, that a true causal relationship between a child's birth weight and the mother's smoking habits has been found. 
+
+This is due to the fact that there are potentially many other variables that may contribute to a childs birth weight including genetic factors, the mother's own weight, the mother's age, the existence of other medical conditions in either mother or infant and the gestational age at birth (i.e. was the baby significantly early or late).
+
+To establish a causal relationship between smoking and birth weight a similar analysis would have to be performed but including those other variables (or some combination of them) to assess the true marginal effect of smoking on birth weight.
+
+## 2d
+
+With a given value of `bwght`, the value of `cigs` can be calculated by rearranging \eqref{eq:srf_2} to give $cigs = \frac{bwght - \hat\beta_{0}}{\hat\beta_1}$.
+
+```{r 2d}
+cigs <- (125 - b0_2)/b1_2
+```
+
+Therefore, to predict a birth weight of 125 ounces, the value of `cigs` would have to be `r round(cigs, 1)`. As a negatie value, this does not make a great deal of sense. 
+
+This occurs due to the fact that the $\hat\beta_0$ value of `r round(b0_2, 2)` is lower than the predicted birth weight of 125. I.e. if no cigarettes are smoked, the estimated birth weight is `r round(b0_2, 2)` ounces. Given that the $\hat\beta_1$ value is also negative, it follows that a "negative value" of cigarettes is the only way to increase the predicted birth weight about the $\hat\beta_0$ value. In reality this is more likely to represent not smoking at all during pregnancy.
+
+## 2e
+
+If 85% of women in the sample do not smoke whilst pregnant then it would be expected that, given then ceteris paribus assumption, 85% of women would have an infant with birth weight of approximately `r round(b0_2, 2)` (as the second term in the SRF \eqref{eq:srf_2} will evaluate to 0).
+
+```{r 2e}
+prop <- mean(data$bwght >= b0_2)
+```
+
+Approximately `r paste0(100*round(prop, 2), "%")` of women in the sample have a child with a birth weight greater than or equal to the $\hat\beta_0$ value.
+
+This is broadly consistent with the findings from section $2d$. However, the fact that this value differs from the expected value (of 85%) under the ceteris paribus assumption demonstrates that this assumption is likely not holding in this case, and that factors other than _just_ the mother's smoking habit are affecting the weight of the infant.
