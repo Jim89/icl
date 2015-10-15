@@ -1,0 +1,61 @@
+---
+title: "Introduction to Data Analytics Lecture 1"
+author: "Jim Leach"
+date: "15 October 2015"
+output: pdf_document
+---
+
+# Deriving value from data
+
+To understand how to derive data, a simple formula is most instructive:
+
+$value(data) = f(action)$
+
+$action = f(data, analytics, visualisation)$
+
+$vis(data) -> pattern$
+
+$vis(algorithm) -> process$
+
+This shows that value from data is a function of an action - i.e. there is no value unless the data allow an action to be taken. 
+
+## What about big data?
+
+There is confusion and fear about what big data is. The 3V's are touted frequently, but in reality it is variety that is the most cause for concern. Fear is present due to privacy and data security concerns. 
+
+A good workable definition of _big data_ is:
+
+> Data that is so large it really cannot be managed.
+
+## Maximising value
+
+Often, in order to $max value(data)$, it is necessary to work with a reduced amount of data. However, in order to really get the most from data, and specifically from data-oriented projects, the key is to __ensure there is clarity of explanation with the people who will take an action based on the data.__ In other words, make sure the stakeholders are "bought in" and understand what is going on! This can help to reduce confusion and fear and make the project successful. 
+
+A good project structure looks like:
+
+> $Description \rightarrow Evaluation \rightarrow Explanation \rightarrow Prediciton$
+
+This can help ensure that a sensible __decision__ is made based on the project.
+
+## Practical tips
+
+* Investigate outliers fully - they may hold the real value;
+* Experiment frequently - trial and error is important;
+* Constantly translate findings to _real life_ - see the bigger picture; and
+* Adapt to knew knowledge constantly.
+
+Visualisation is key - it provides a "common language" to help people understand. 
+Question assumptions, and strip a business down to its truly core functions/fundamentals to understand what the data is, or could be, saying. 
+
+## Developing an assessment framework
+
+When approaching a project, it is good to have a framework to use to assess things. A sensible approach for data is:
+
+1. Define/describe the _key_ data that is of interest;
+2. Understand who has this data - note, it might be someone else!;
+3. Understand what opportunities might arise from using this data, e.g. growth through cross selling, cost optimisation through efficiency or risk analysis through better assessments. 
+4. Define the threats that might arise from using this data (or from someone else using it!)
+
+
+
+
