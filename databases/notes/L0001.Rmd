@@ -64,11 +64,79 @@ Key ingredients are:
 * PaaS; and
 * IaaS.
 
+Depending on the service, different functionality and restrictions are provided or applied. E.g. Google App Engine has high level functionality (e.g. it scales automatically) but is more restrictive for developers. Amazon EC2 is incredibly simple with low level functionality ownly, but as a result can be more flexible.
+
 ### Virtualisation
 
 Often uses Hypervisor. The concept ensures that apps are isolated from each other and therefore do not crash the overall/underlying phyrical system if they fail. 
 
 Virtualisation is good for flexible resource management, esp. on CPU, reasonably well with RAM. Resource management of hard disk storage is still a challenge (esp. if apps want to read/write large amounts of data!)
 
+## Business Intelligence OLAP and OLTP
 
+### Relational databases
+
+Formally given sets $D_1, D_2, ... D_n$, a __relation__ $r$ is defined as a subset such that $D_1 x D_2 x ... x D_n$, i.e. a relation is a set of $n$ tuples. e.g.
+
+`customer_name = {Jones, Smith, Curry}`
+
+`customer_street = {Main, North, Park}`
+
+Then:
+
+` r = { (Jones, Main), (Smith, North), (Curry, Park)}`
+
+i.e. `r` is a relation over customer_name and customer_street.
+
+### Relation Schema
+
+If $A_1, A_2, ..., A_n$ are defined as _attributes_ then $R = (A_1, A_2, ..., A_n)$ is a _relation schema_. e.g. `Customer_schema = (customer_name, customer_steet)`.
+
+$r(R)$ is a relation on the relation schema R, e.g. `customer (Customer_schema)`. 
+
+To put this more plainly:
+
+* Attributes = columns;
+* Tuples = rows; and
+* Relation = table.
+
+It is therefore possible to say that a _database_ is something that consists of multiple relations (tables). Information is broken up accross each relation (table) such that each relation stores one part of the information, e.g. the account relation, the depositor relation and the customer relation. Storing all information in one relation (table) is a poor choice as it would introduce repitition/duplication and/or the need for `NULL` values.
+
+SQL sits on top of the database and operates using relational algebra. We use a _database management system (DBMS)_ to handle the database (e.g. DB2, Oracle, SQL-Server etc).
+
+## OLTP vs. OLAP
+
+#### OLTP (Online Transaction Processing)
+
+* User facing;
+* Real time;
+* Low latency;
+* Highly-concurrent;
+* Many, small transactions, often of a "standard" nature;
+* Read and write the database;
+* E.g. e-commerce, online banking, transaction databases.
+
+#### OLAP (Online Analytics Processing)
+
+* Back end;
+* Batch workloads;
+* Low concurrency;
+* Large, complex analytical queries, often ad-hoc;
+* Often read data only;
+* e.g. business intelligence, data mining etc.
+
+## OLTP with OLAP
+
+To solve the issue of a single database using both OLTP and OLAP, it is normal to have separate databases for each process. 
+
+One OLTP database for user-facing, real time, high-volume applications and a second, separate OLAP database for data warehousing and large scale analytics.
+
+The two are connected via an _ETL_ process (Extract, Transform, Load).
+
+## Star Schema
+
+Within the data warehouse, data are often organised by a __star schema__. In this set up there is:
+
+1. A _fact_ table: a large accumlation of facts, e.g. sales. Often insert-only; and
+2. A set of _dimension_ tables: smaller, static information that relates to the entities involved in the facts.
 
