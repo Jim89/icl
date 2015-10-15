@@ -1,0 +1,38 @@
+---
+title: "Very Large Data Management Lecture 1"
+author: "Jim Leach"
+date: "15 October 2015"
+output: pdf_document
+---
+
+# A definition of big data?
+
+Due to the hype of 'big data' there is a lot of uncertainty as to what it actually _is_. A good working definition is:
+
+> Big data is any data that has become hard to really handle/process (with traditional methods).
+
+There are many challenges associated with working with big data, including:
+
+* Captutre;
+* Curation;
+* Storage;
+* Search;
+* Sharing;
+* Transfer;
+* Analysis; and
+* Visualisation
+
+## The 3 V's:
+
+1. Volume - data are continually increasing over time. Often more limited by disk I/O bandwidth as opposed to raw storage space.
+
+2. Velocity - Any online process (both web-based and, for example, sensor data) generates data almost continually. The speed with which it arrives means that there is the potential for missed opportunities if decisions are not made in (near) real time.
+
+3. Variety - data come in many forms: relational, text (unstructured), seme-structured (e.g. `XML`), graphs, streaming etc. The challenge is not processing just any one of these types, but in linking them all together to derive meaning. 
+
+4. An additional V is Veracity - there can be uncertainty in the data due to inconsistency, incompleteness, latency, ambiguities etc. 
+
+## Data creation model
+
+Previously, there were few producers of data, and many consumers. Now there are as many producers as there are consumers. 
+
