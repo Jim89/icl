@@ -163,7 +163,7 @@ bwght_predict <- b0_2 + b1_2 * 20
 
 Following the SRF formula given in \eqref{eq:srf_2} is is also possible to calculate `bwght` when `cigs` has a value of 20 (note the assumption that $E(u) = 0$). Doing so, the predicted birth weight when `cigs` is 20 is `r round(bwght_predict, 2)`.
 
-This is less than the predicted birth weight when `cigs` is 0, implying that their is a negative correlation between smoking and birth weight (i.e. the more cigarettes are smoked during pregnancy, the lower the expected birth weight). 
+This is less than the predicted birth weight when `cigs` is 0, implying that there is a negative correlation between smoking and birth weight (i.e. the more cigarettes are smoked during pregnancy, the lower the expected birth weight). 
 
 ## 2c
 
@@ -187,16 +187,17 @@ cigs <- (125 - b0_2)/b1_2
 
 Therefore, to predict a birth weight of 125 ounces, the value of `cigs` would have to be `r round(cigs, 1)`. As a negatie value, this does not make a great deal of sense. 
 
-This occurs due to the fact that the $\hat\beta_0$ value of `r round(b0_2, 2)` is lower than the predicted birth weight of 125. I.e. if no cigarettes are smoked, the estimated birth weight is `r round(b0_2, 2)` ounces. Given that the $\hat\beta_1$ value is also negative, it follows that a "negative value" of cigarettes is the only way to increase the predicted birth weight about the $\hat\beta_0$ value. In reality this is more likely to represent not smoking at all during pregnancy.
+This occurs due to the fact that the $\hat\beta_0$ value of `r round(b0_2, 2)` is lower than the predicted birth weight of 125. I.e. if no cigarettes are smoked, the estimated birth weight is `r round(b0_2, 2)` ounces. Given that the $\hat\beta_1$ value is also negative, it follows that a "negative value" of cigarettes is the only way to increase the predicted birth weight about the $\hat\beta_0$ value. In reality this is more likely to represent not smoking at all during pregnancy, and is additionally indicative that other factors may contribute to the birth weight, beyond just `cigs`.
 
 ## 2e
 
-If 85% of women in the sample do not smoke whilst pregnant then it would be expected that, given then ceteris paribus assumption, 85% of women would have an infant with birth weight of approximately `r round(b0_2, 2)` (as the second term in the SRF \eqref{eq:srf_2} will evaluate to 0).
+If 85% of women in the sample do not smoke whilst pregnant then it would be expected that, given then ceteris paribus assumption, 85% of women would have an infant with birth weight of approximately `r round(b0_2, 2)` (as the second term in the SRF \eqref{eq:srf_2} will evaluate to 0). To assess if this is the case, a simple calculation can be performed to determine the proportion of women in the sample with a baby that has a birth weight of $\hat\beta_0$ ounces, plus or minus $10 \%$:
 
 ```{r 2e}
-prop <- mean(data$bwght >= b0_2)
+range <- b0_2 + c(-1, 1) * 0.1 * b0_2
+prop <- between(data$bwght, range[1], range[2]) %>% mean()
 ```
 
-Approximately `r paste0(100*round(prop, 2), "%")` of women in the sample have a child with a birth weight greater than or equal to the $\hat\beta_0$ value.
+Approximately `r paste0(100*round(prop, 2), "%")` of women in the sample have a child with a birth weight approximately equal to the $\hat\beta_0$ value of `r round(b0_2, 2)` ounces.
 
-This is broadly consistent with the findings from section $2d$. However, the fact that this value differs from the expected value (of 85%) under the ceteris paribus assumption demonstrates that this assumption is likely not holding in this case, and that factors other than _just_ the mother's smoking habit are affecting the weight of the infant.
+This is broadly consistent with the findings from section $2d$: The fact that this value differs from the expected value (of 85%) under the ceteris paribus assumption demonstrates that the ceteris paribus assumption is likely not holding in this case, and that factors other than _just_ the mother's smoking habit are affecting the weight of the infant.
