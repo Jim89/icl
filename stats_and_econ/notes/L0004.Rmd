@@ -1,0 +1,296 @@
+---
+title: "Statistics and Econometrics - Lecture 4"
+author: "Jim Leach"
+date: "19 October 2015"
+output: pdf_document
+---
+
+# Multiple Regression Analysis
+
+## Defining Multiple Linear Regression 
+
+Multiple linear regression (MLR) can generally specified by \eqref{eq:mlr} below:
+
+\begin{equation} \label{eq:mlr}
+y = \beta_0 + \beta_{1}x_1 + ... + \beta_{k}x_k + u
+\end{equation}
+
+Where $y$ is the dependant variable; $x_1, ..., x_k$ are the independant variables; $\beta_1, ..., \beta_k$ are the slope parameters, $\beta_0$ is the intercept term, $u$ is the error/disturbance term and $k$ is the number of independant variables.
+
+### MLR and the Zero Conditional Mean Assumption
+
+As with simple linear regression, a base assumption of MLR is that $E(u|x)=0$ and moreover that the zero-conditional mean \eqref{eq:mlrzcm} holds true.
+
+\begin{equation} \label{eq:mlrzcm}
+E(u|x_1, ..., x_k) = 0
+\end{equation}
+
+* The average $u$ is the same, irrespective of the value of the $x$'s;
+* The factors, $u$, are uncorrelated with $x_1, ..., x_k$;
+* ZCM is a _key_ condition of the OLS estimators being _unbiased_; and
+* It __defines the population regression function__.
+
+## Motivation
+
+### Ensuring Ceteris Paribus
+
+It has been seen previously that if the zero conditional mean assumption ($E(u|x) = 0$) does not hold true then the estimates for the OLS parameters in a simple linear regression are not accurate. 
+
+However, if it were possible to truly hold other factors fixed, this would not occur. This is a major motivation for multiple regression - the ability to ensure that other, related variables are held constant. This can help to determine causal relationships.
+
+### Flexible functional forms
+
+Consider equation \eqref{eq:multi_1} where $y$ may increase initially with $x$ and then decrease as $x$ increases (diminishing returns).
+
+\begin{equation} \label{eq:multi_1}
+y = \beta_0 + \beta_{1}x + \beta_{2}x^2 + ... + u
+\end{equation}
+
+This can happen if $\beta_1$ is positive, and $\beta_2$ is negative: At low values of $x$, the second term of \eqref{multi_1} will likely be small and $y$ will increase with $x$. However, as $x$ increases, the value of the second, negative term will increase and the growth in $y$ will decrease, or $y$ will begin to decrease. 
+
+This is a significant advantage of multiple linear regression - the ability to capture more complex functional forms. 
+
+### General merits
+
+* Many factors that affect the dependant variable can be explicity controlled for (held fixed), helping to ensure ceteris paribus conclusions;
+* Better explanation(s) of the dependant variable can be created; and
+* Flexible functional forms can be included.
+
+## OLS Estimates
+
+### Observation level model
+
+As previously, it is assumed that for MLR, te data provided is a random sample of independant observations: $\{(x_{i1}, x_{i2}, ..., x_{ik}, y_i), i = 1, 2, ..., n\}$ which leads to the observational level model \eqref{eq:mlrplm}, where $i$ is the observation index.
+
+\begin{equation} \label{eq:mlrplm}
+y_i = \beta_0 + \beta_{1}x_{i1} + ... + \beta_{k}x_{ik} + u_i
+\end{equation}
+
+Following from this, the residuals can be defined as \eqref{eq:mlr_resid}
+
+\begin{equation} \label{eq:mlr_resid}
+\hat{u_i} = y_i - \hat\beta_0 - \hat\beta_1 x_{i1} - ... - \hat\beta_k x_{ik}
+\end{equation}
+
+The __sum of squared residuals__ (used to indicated the "goodness" of the estimates) is given by:
+
+\begin{equation}
+SSR = \sum_{i=1}^n \hat{u_{i}^2}
+\end{equation}
+
+### Solving OLS
+
+As previously, the method for solving the MLR equation for the OLS estimates relies on the first order derivatives with respect to the SSR equation for each parameter with the value set equal to 0:
+
+\begin{equation}
+\sum_{i=1}^n (y_i - \hat\beta_0 - \hat\beta_1 x_{i1} - ... - \hat\beta_k x_{ik}) = 0
+\end{equation}
+
+\begin{equation}
+\sum_{i=1}^n (y_i - \hat\beta_0 - \hat\beta_1 x_{i1} - ... - \hat\beta_k x_{ik})x_{ij} = 0
+\end{equation}
+
+Solving these equations gives the OLS __sample regression function__ \eqref{eq:srf} which is treated as an estimator for the true PRF.
+
+\begin{equation} \label{eq:srf}
+\hat{y_i}=\hat\beta_0 + \hat\beta_1 x_{i1} + ... + \hat\beta_{k} x_{ik}
+\end{equation}
+
+It should be noted that terms such as "run a regression of $y$ on $x_1, ... x_k$" or "regress $y$ on $x_1, ..., x_k$" refer exclusively to OLS estimates of the regression model.
+
+### Interpretation of parameters
+
+The SRF \eqref{eq:mlr_srf} can be written in terms of changes:
+
+\begin{equation}
+\Delta\hat{y} = \hat\beta_1\Delta x_1 + ... + \hat\beta_k \Delta x_k
+\end{equation}
+
+This shows that:
+
+* The coefficient on $x_1$ is the _partial effect_ of $x_1$ holding all other x values fixed;
+* $\hat\beta_1$ has a ceteris paribus interpretation as long as the ZCM is true or the factors in $u$ are not related to $x_1$; and
+* The other coefficients have similar interpreations.
+
+## Sum of Squares
+
+As with SLR, each $y_i$ value can be decomposed in to the estimated value, plus some residual error: $y_i = \hat{y_i} + \hat{u_i}$.
+
+In order to measure variation from $\bar{y}$, a few definitions are required:
+
+* _Total sum of squares (SST)_ (total variation in $y_i$): $SST = \sum_{i=1}^n (y_i - \bar{y})^2$
+
+* _Explained sum of squares (SSE)_ (variation in $y_i$): $SSE = \sum_{i=1}^n (\hat{y_i} - \bar{y})^2$
+
+* _Sum of squared residuals (SSR)_: $\sum_{i=1}^n \hat{u_{i}^2}$
+
+### R-Squared
+
+The fraction of variation in $y$ that is explained by $x$ is used to determine the goodness of fit, $R^2$:
+
+\begin{equation}
+R^2 = \frac{SSE}{SST} = 1- \frac{SSR}{SST}
+\end{equation}
+
+It should be noted that the $R^2$ value will _never_ decrease as further variables are added in to the model (although it may remain constant for variables that have a 0 relationship with $y$). As such, it is a poor way to address how many variables to include. It is also a poor choice for comparing between models.
+
+### Example - returns to education:
+
+Consider the MLR model given by \eqref{eq:wages_eg}
+
+\begin{equation} \label{eq:wages_eq}
+\hat{log(wage)} = .284 + .092educ + .004educ + .002tenure
+\end{equation}
+
+The interpretation of the $educ$ coefficient is that a 1 unit increase in education is predicted to increased $log(wage)$ by 0.0092, or 9.2%, holding exper and tenure fixed.
+
+Similarly, holding _just_ educ fixed, the effect of a 1 unit increase of exper and tenure is given by $\Delta\hat{log(wage)} = .004 + .022 = .026$.
+
+The $R^2$ value is interpreted as for SLR. For this model, $R^2$ is 0.316, i.e. approximately 32% of the variation in $wage$ is explained by $educ, exper and tenure$.
+
+## Statistical Properties of OLS Estimates
+
+As with the SLR, a number of assumptions are made during the formulation of the MLR model:
+
+1. __MLR1__ Linearity in parameters - $y$ is related to $x$'s by the PRF;
+2. __MLR2__ Random sampling - $\{(x_{i1}, ..., x_{ik}, y_i), i = 1, 2, ...nz\}$ with $n > k+1$ is a random sample drawn from the population model;
+3. __MLR3__ No perfect collinearity - None of the $x_i$ variables is constant, and there are no _perfect_ linear relationships (e.g. $x_1 = -x_2$) among $X$'s; and
+4. __MLR4__ Zero conditional mean - the disturbance, $u$ satisfied $E(u|x_1, ..., x_k) = 0$ for any given value of $(x_1, ..., x_k)$.
+
+### (Un)biasedness of Estimators
+
+#### Theorem - Under MLR1 to MLR4, the OLS estimators are unbiased.
+
+<br>
+
+I.e. $E(\hat\beta_j) = \beta_j, j= 0, 1, ...k$ It is stated that the _unbiased_ estimators:
+
+* Are "centrered" around ($\beta_0, ..., \beta_k$);
+* Correctly estimate ($\beta_0, ..., \beta_k$) on average; and
+* Will be "near" the true values of ($\beta_0, ..., \beta_k$) for a "typical" sample.
+
+## Data Selection - Inclusion and Exclusion of Variables
+
+### Inclusion of irrelevant $x$
+
+In this scenario, "irrelevant" is such that the coefficient $\beta_j$ for variable $x_j$ is 0. As such, inclusion of such a variable has no effect on the "unbiasedness" of the other OLS parameter estimates, and does not strongly penalise the model (as the OLS estimates for $\beta_j$ will also be 0).
+
+However (as is shown later), inclusion of irrelevant variables can have an undesirable effect on the variance estimate for the OLS parameters.
+
+### Omission of relevant $x$
+
+Consider a model as \eqref{eq:eg}
+
+\begin{equation} \label{eq:eg}
+y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + u
+\end{equation}
+
+If the $\beta_2$ term is omitted it becomes $y = \beta_0 + \beta_1 x_1 + v$ with $v = \beta_2 x_2 + u$.
+
+As such, the estimated model is $\tilde{y} = \tilde{\beta_0} + \tilde{\beta_1}x_1$.
+
+### Omitted Variable bias
+
+Using this model, the OLS is biased: $E(\tilde\beta_1) = \beta_1 + \beta_2\tilde\delta$ where $\beta_2\tilde\delta$ is termed the _omitted variable bias_ and $\tilde\delta$ is the coefficient of regressing $x_2$ on $x_1$.
+
+There are two special cases where the omitted variable bias becomes 0:
+
+i. when $\beta_2 = 0$; or
+ii. when $\tilde\delta = 0$
+
+Outside of these special cases (which are rare) omission of a relevant variable means that the other OLS estimators will be biased.
+
+The direction and size of this bias is dependant on how the omitted variable(s) relate(s) to those included:
+
+\begin{center}
+  \begin{tabular}{ c c c }
+    \hline
+                 & $Corr(x_1, x_2) > 0$ & $Corr(x_1, x_2) < 0$\\
+    $\beta_2 >0$ & Positive bias & Negative bias\\
+    $\beta_2 <0$ & Negative bias & Positive bias\\
+    \hline
+  \end{tabular}
+\end{center}
+
+In practive, knowing about the sign of $\beta_2$ and $Corr(x_1, x_2)$ is useful for interpreting the OLS estimates, but may not be feasible in practice.
+
+#### MLR5 - Homoskedasticity
+
+Or $Var(u_i | x_{ik}) = \sigma^2 for i = 1, 2, ..., n$, i.e. $Var(u_i) = \sigma^2$.
+
+MLR5 requires that the variance of $u$ be unrelated to the $x$ values. 
+
+## Gauss-Markov Assumptions
+
+Collectively, assumptions MLR1- MLR5 are termed the __Gauss-Markov__ assumptions:
+
+1. Linearity in parameters;
+2. Random sampling;
+3. No collinearity in $x$'s and no $x_i$ is constant;
+4. ZCM; and
+5. Homoskedasticity
+
+Note that the unbiasedness of the OLS parameters is _only_ reliant on assumptions 1 to 5. 
+
+However, assumption 5 is used to derive a simple formula for the variances of the estimators.
+
+#### Theorem - Under MLR1 to MLR5 the variances of the OLS estimators are given by \eqref{eq:vars}
+
+\begin{equation} \label{eq:vars}
+Var(\hat\\beta_j) = \frac{\sigma^2}{SST_j(1-R_j^2)}
+\end{equation}
+
+Recalling that $SST_j = \sum_{i=1}^n(x_{ij} - \bar{x})^2, \bar{x_j} = n^{-1}.\sum_{i=1}^nx_{ij}$ and $R^2$ is the R-squared from regressing $x_j$ on to all other independant variables.
+
+Therefore:
+
+* The larger the $\sigma^2$ (variance in error terms), the greater $Var(\hat\beta_j)$;
+* The larger the variation in $x_j$, the smaller $Var(\hat\beta_j)$; and
+* The larger $R_j^2$, the greater $Var(\hat\beta_j)$ (i.e. the more the other variables explain the variation in $x_j$, the greater the variation)
+
+__Multicollinearity__ is high (but not perfect) correlation between two or more independant variables in a model (which does _not_ violate MLR3). This can be a problem in MLR that should be assessed when building a model.
+
+### Variation and Variable Omission
+
+Recall the example in \eqref{eq:eg} where the $beta_2$ term was omitted to give $y=\beta_0 + \beta_1x_1 + v$ with $v = \beta_2x_2 + u$.
+
+If $\hat\beta_1$ and $\tilde\beta_1$ be the OLS estimators from the true and misspecified models respectively then:
+
+\begin{equation}
+Var(\hat\beta_1) = \frac{\sigma^2}{SST_1(1-R_1^2)}, Var(\tilde\beta_1) = \frac{\sigma^2}{SST_1}
+\end{equation}
+
+In this instance:
+
+* When $R_1^2 = 0$ both $\hat\beta_1$ and $\tilde\beta_1$ are the same;
+* When $\beta_2 = 0$ (i.e. an irrelevant variable is omitted) and $R_1^2>0$ ($x_1$ is correlated with $x_2$) then both $\hat\beta_1$ and $\tilde\beta_1$ are unbiased but the latter is more efficient - this demonstrates the principle that _inclusion of irrelvant $x$'s is not harmless_; and
+* When $\beta_2\neq0$ and $R_1^2 > 0$ then $\hat\beta_1$ is unbiased but $\tilde\beta_1$ is biased.
+
+### Estimation of $\sigma^2$
+
+It is the case that a good estimator of $\sigma^2$ is given by $\hat\sigma^2$ which can be calculated from the residuals:
+
+\begin{equation}
+\hat\sigma^2 = \frac{SSR}{n-(k+1)}
+\end{equation}
+
+(SSR = sum of square residuals). The __degrees of freedom__ ( # observations - # estimated coefficients) is used.
+
+Taking square roots gives the __standard error of the regression__: $\hat\sigma = \sqrt{\hat\sigma^2}$
+
+#### Theorem - Under MLR1 to MLR5, $E(\hat\sigma^2) = \sigma^2$
+
+## Efficiency of OLS Estimation
+
+_Under MLR1 to MLR5, $(\hat\beta_0, \hat\beta_1, ..., \hat\beta_k)$ are the best linear, unbiased estimators (BLUEs) of the population parameters,  $\beta_0, \beta_1, ..., \beta_k)$_
+
+The term _linear estimator_ refers to the fact that each $\beta$ value is a linear combination of $y$'s (see OLS derivation). Under assumptions MLR1-4, these linear estimators are said to be unbiased. 
+
+The BLUE estimators are the ones with the smallest variance. OLS delivers BLUE estimators as they are:
+
+* linear;
+* unbiased;
+* efficient (have the smallest variance).
+
+
+
