@@ -137,6 +137,26 @@ An _important_ x should be both statistically and economically significant.
 
 ## Confidence Intervals
 
+The confidence interval for $\hat\beta_j$ is based on theorem 4.2 and \eqref{eq:t42}.
+
+The (1-$\alpha$)% CI is defined below, where c is the (1-$\alpha$/2) percentile in a $t_{n-k-1}$ distribution
+
+\begin{equation}
+\hat\beta_j \pm c . se(\hat\beta_j) = [\hat\beta_j - c . se(\hat\beta_j), \hat\beta_j + c . se(\hat\beta_j)]
+\end{equation}
+
+The 95% confidence interval is interpreted as the range of values between which the true population parameter $\beta_j$ will lie 95% of the time if many random samples are drawn.
+
+When df is large (>120) then the $t$ distribution can be replaced with a standard normal (and as such, the 95% CI is about $\hat\beta_j \pm 1.96 . se(\hat\beta_j)$)
+
+The width of the CI depends on the standard error, and the critical value.
+
+* A higher confidence level requires a larger C and a wider interval.
+* A large standard error produces a wider confidence interval.
+
+### Two-sided tests
+
+In a two-sided test, i.e. $H_0 : \beta_j = a_j$, $H_0$ can be reject at the $\alpha$ significance level if (and only if) the (1-$\alpha$)% CI does not contain $a_j$.
 
 
 
