@@ -1,0 +1,109 @@
+---
+title: "Statistics and Econometrics - Lecture 5"
+author: "Jim Leach"
+date: "20 October 2015"
+output: pdf_document
+---
+
+# Inference in Regression
+
+## OLS Estimate Distribution
+
+### Motivation
+
+The main goal of MLR is to gain knowledge about the unobservable population parameters ($\beta$'s).
+
+OLS provides the point estimates of the parameters and, being unbiased, will get these right, on average. 
+
+However to know the "true values" or estimate if a hypothesis is supported, more than the mean and variances of the $\hat\beta_j$ values is required.
+
+### Normality Assumption
+
+* __MLR6__ Normality - _The disturbance, $u$, is independant of all explanatory variables and is normally distributed with mean zero and variance $\sigma^2$_.
+
+\begin{equation}
+u ~ Normal(0, \sigma^2)
+\end{equation}
+
+This is both a strong and a restrictive assumption. Further more it implies MLR4 (ZCM - $E(u|x) = 0$) and MLR5 (homoskedasticity: $Var(u|x) = \sigma^2$).
+
+Combined, MLR assumptions one to six are termed the __classic linear model__ assumptions (CLM).
+
+Under CLM, OLS produces the _minimum variance, unbiased estimators_ (i.e. not just the BLUE estimators, but the best estimators from all unbiased methods, including non-linear estimators.).
+
+Following from this, CLM implies \eqref{eq:clm_imp}
+
+\begin{equation} \label{eq:clm_imip}
+y|\textbf{x} ~ Normal(\beta_0 + \beta_1x_1 + ... + \beta_kx_k, \sigma^2)
+\end{equation}
+
+I.e. the $y$ value has the same shape as $u$ and therefore is also normally distributed with variance due to the errors.
+
+It is often the case that MLR6 does __not__ hold true (e.g. for many models, a negative value of $y$ is not realistic).
+
+As stated, MLR6 is restrictive. However for large-sample models, the inference methods presented below can be used without it holding true.
+
+## Sampling Distribution of OLS
+
+#### Theorem 4.1 - Normal Sampling Distribution
+
+_Under CLM_: $\hat\beta_j ~ Normal(\beta_j, Var(\hat\beta_j))$, _where the variance is given by:_ $Var(\hat\beta_j) = \frac{\sigma^2}{SST_j(1-R_j^2)}$
+
+This implies that:
+
+\begin{equation}
+\frac{\hat\beta_j - \beta_j}{sd(\hat\beta_j)} ~ Normal(0, 1)
+\end{equation}
+
+Recall that the value of $\sigma^2$ has to be estimated:
+
+\begin{equation}
+se(\hat\beta_j) = \frac{\hat\sigma}{\sqrt{SST_j(1-R_j^2)}}
+\end{equation}
+
+This is termed the __standard error__ of $\hat\beta_j$ and leads to:
+
+##### Theorem 4.2 - $t$-distribution
+
+Following from theorem 4.1, under CLM the followig is also true:
+
+\begin{equation} \label{eq:t42}
+\frac{\hat\beta_j - \beta_j}{se(\hat\beta_j)} ~ t_{n-k-1}
+\end{equation}
+
+Here, $k+1$ is the number of unknown parameters in the population model and $n-k-1$ is the __degrees of freedom__.
+
+Theorem 4.2 is critical for driving the ability to perform hypothesis testing as described here.
+
+## Testing Hypothesis
+
+### Simple Null
+
+The simplest null hypothesis is given by:
+
+\begin{equation}
+H_0 : \beta_j = 0
+\end{equation}
+
+If this null hypothesis holds true it implies that, holding other variables constant, the $x_j$ value has no effect on $y$.
+
+### Testing the simple null
+
+To test the simple null hypothesis, a __$t$-statistic__ is developed:
+
+\begin{equation}
+t_{\hat\beta_j} = \frac{\hat\beta_j}{se(\hat\beta_j)}
+\end{equation}
+
+(This is simlar to \eqref{eq:t42} given $H_0 : \beta_j = 0$). Recall that when the degrees of freedom (n - k - 1) are large (>120) the $t$ distribution approaches the standard normal.
+
+
+
+
+
+
+
+
+
+
+
