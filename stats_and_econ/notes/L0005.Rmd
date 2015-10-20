@@ -97,9 +97,45 @@ t_{\hat\beta_j} = \frac{\hat\beta_j}{se(\hat\beta_j)}
 
 (This is simlar to \eqref{eq:t42} given $H_0 : \beta_j = 0$). Recall that when the degrees of freedom (n - k - 1) are large (>120) the $t$ distribution approaches the standard normal.
 
+The $t$-statistic, along with a rejection rule (e.g. __alternative hypothesis__ and the chosed __significance level__) are used to decide whether to reject the null.
 
+The __significance level__ is defined as the probability of rejecting $H_0$ when it is true and has typical values of 1%, 5%, or 10%.
 
+The __alternative hypothesis__ can be:
 
+* $H_1 : \beta_j > 0$ or $H_1 : \beta_j < 0$ i.e. one-sided; or
+* $H_1 : \beta_j \neq 0$, i.e. two-sided.
+
+### One-Sided Alternatives
+
+1. Pick a significance level;
+2. Look up the (1-$\alpha$) percentile in a $t$ distribution with n - k - 1 degrees of freedom and call this $c$, the critical value.
+3. Reject the null if the calculated $t$ statistic is > c for testing $H_1 : \beta_j > 0$ or less than c for testing $H_1 : \beta_j < 0$.
+
+### Two-Sided Alternative
+
+1. The critical value here is instead based on (1-$\alpha$/2) percentile in a $t$ distribution with n-k-1 df.
+2. Reject $H_0$ if the __absolute value__ of the $t$ statistic is greater than c, i.e. $|t_{\hat\beta_j}| > c$
+
+### Some terminology
+
+Unless otherwise stated, the alternative is assumed to be two-sided. If the null is rejected, it is typically stated that "$x_j$ is statistically significant (or different fromm 0) at the $\alpha$ level".
+
+## $p$-Values and testing other hypotheses
+
+Most software (R included) will compute a $p$ value from a $t$ score, assuming a two-sided test. To calculate the one-sided alternative, simply divide the two-sided by 2.
+
+More generally, and $t$ statistic can be computed for: $H_0 : \beta_j = a_j$ and the releated statistic given by: $t = \frac{\hat\beta_j - a_j}{se(\hat\beta_j)}$.
+
+## Economic vs. Statistical significance
+
+__Statistical__ significance is when an explanatory variable has a $t$ value that is sufficiently large, i.e. beyond the critical value, c.
+
+__Economic__ significane is when the size of the estimate, $\hat\beta_j$ is large relative to the size of $y$.
+
+An _important_ x should be both statistically and economically significant.
+
+## Confidence Intervals
 
 
 
