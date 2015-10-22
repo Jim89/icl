@@ -13,7 +13,9 @@ A number of `R` packages have been used throughout this assignment. These are lo
 
 ```{r load_pkg, echo = TRUE, message = FALSE}
 library(dplyr)
-library(ggplot2)
+library(magrittr)
+library(broom)
+library(knitr)
 ```
 
 ***
@@ -30,4 +32,55 @@ The data are loaded from the provided `.RData` file.
 load("./data/discrim.RData")
 ```
 
+
+## 1a
+
+The model to be developed uses the median income and the proportion of black residents to explain the median price of soda, with the population regression function given by \eqref{eq:prf1}.
+
+\begin{equation} \label{eq:prf1}
+log(psoda) = \beta_0 + \beta_1prpblck + \beta_2log(income) + u
+\end{equation}
+
+Upon exploration of the data, the proportion of black residents is given as a decimal proportion. In order to simplify the interpretation of the regression parameters, this is multiplied by 100 to give this as a percentage before the model is estimated.
+
+This model is estimated and the results reported below.
+
+```{r 1a}
+data %<>% mutate(prpblck_cln = 100 * prpblck)
+fit1a <- lm(log(psoda) ~ prpblck_cln + log(income), data = data)
+fit1a_summary <- summary(fit1a)
+tidy_coef1a <- fit1a %>% tidy
+ss1a <- nrow(data)
+r2_1a <- fit1a_summary$r.squared
+kable(tidy_coef1a)
+```
+
+In addition to the parameter estimates given above, the model has an $R^2$ value of `r round(r2_1a, 4)` on a sample size of `r ss1a`. The SRF can be explicitly written as \eqref{eq:srf1}.
+
+\begin{equation} \label{eq:srf1}
+log(psoda)  = `r round(tidy_coef1a[1,2], 3)` + `r round(tidy_coef1a[2, 2], 3)`prpblck + `r round(tidy_coef1a[3, 2], 3)`log(income) + \hat{u}
+\end{equation}
+
+The intepretation of the $\beta_1$ ($prpblck$) coefficient is the change in the expected value of $log(psoda)$ upon a one unit change in the value of $prpblck$, holding $log(income)$ constant. Given that the $prpblack$ data has been converted in to a percentage, "one unit" in this instance refers to a 1 percentage point increase in the percentage of black residents.
+
+To obtain the percentage change in $psoda$ the $\beta_1$ coefficient must be multiplied by 100. As such, the estimated percentage change in $psoda$ for an increase of 0.20/20% in $prpblck$ is given by 5 times the value of the coefficient, multiplied by 100. This value is: `r round(tidy_coef1a[2, 2]*20*100, 1)`%.
+
+## 1b
+
+```{r 1b}
+fit1b <- lm(log(psoda) ~ prpblck_cln, data = data)
+fit1b_summary <- summary(fit1b)
+fit1a_prpblck_coef <- fit1a_summary$coefficients[2, 1]
+fit1b_prpblck_coef <- fit1b_summary$coefficients[2, 1]
+```
+
+If a simple linear regression esimate of $log(psoda)$ on $prpblck$ is performed, the resulting precentage change in the value of $psoda$ given a one unit increase in the percentage of black residents is `r round(fit1b_prpblck_coef*100, 2)`%.
+
+The value from the model including income is `r round(fit1a_prpblck_coef*100, 2)`%. As such the discrimination effect is larger when income is controlled for. 
+
+When income is ignored in the model, the discrimination effect appears smaller. This would suggest that the proportion/percentage of black residents has little effect on the median price of soda. 
+
+However, when income _is_ controlled for, the discrimination effect is almost twice as large. This would suggest that, given a constant income, the proportion/percentage of black residents has an effect on the median price of soda.
+
+## 1c
 
