@@ -1,5 +1,5 @@
 ---
-title: "Statistics and Econometrics - Assigment Two"
+title: "Statistics and Econometrics - Assignment Two"
 author: "Jim Leach"
 date: "22 October 2015"
 output: pdf_document
@@ -7,7 +7,7 @@ output: pdf_document
 
 # Document purpose
 
-The purpose of this document is to write up the response to the second assigment give as part of the _Statistics and Econometrics_ module. It is divided in to two sections, each covering a section of the assigment as given. Each major section is divided in to further subsections, one for each question in the assigment.
+The purpose of this document is to write up the response to the second assignment given as part of the _Statistics and Econometrics_ module. It is divided in to two sections, each covering a section of the assignment as given. Each major section is divided in to further subsections, one for each question in the assignment.
 
 A number of `R` packages have been used throughout this assignment. These are loaded before the responses are given:
 
@@ -22,7 +22,7 @@ library(knitr)
 
 # Section one - ZIP Code Pricing Disparity
 
-The data for this section are ZIP-code level prices for a number of items at fast food restaurants. The data also constain characteristics of each ZIP-code population. The ZIP-codes are from New Jersey and Pennsylvania.  The aim is to understand if fast-food restaurants charge higher prices in areas with a higher proportion of black residents.
+The data for this section are ZIP-code level prices for a number of items at fast food restaurants. The data also contain characteristics of each ZIP-code population. The ZIP-codes are from New Jersey and Pennsylvania.  The aim is to understand if fast-food restaurants charge higher prices in areas with a higher proportion of black residents.
 
 ## Loading the data
 
@@ -41,16 +41,16 @@ The model to be developed uses the median income and the proportion of black res
 log(psoda) = \beta_0 + \beta_1prpblck + \beta_2log(income) + u
 \end{equation}
 
-Upon exploration of the data, the proportion of black residents is given as a decimal proportion. In order to simplify the interpretation of the regression parameters, this is multiplied by 100 to give this as a percentage before the model is estimated.
+The proportion of black residents is given as a decimal proportion. In order to simplify the interpretation of the regression parameters, this is multiplied by 100 to give this as a percentage before the model is estimated.
 
 This model is estimated and the results reported below.
 
 ```{r 1a}
 data %<>% mutate(prpblck_cln = 100 * prpblck)
 fit1a <- lm(log(psoda) ~ prpblck_cln + log(income), data = data)
-fit1a_summary <- summary(fit1a)
+fit1a_summary <- fit1a %>% summary
 tidy_coef1a <- fit1a %>% tidy
-ss1a <- nrow(data)
+ss1a <- data %>% nrow
 r2_1a <- fit1a_summary$r.squared
 kable(tidy_coef1a, caption = "Coefficient estimates from regression of soda prices on the proportion of black residents, and median income. Note that 'prpblck_cln' is the proportion of black residents expressed as a percentage.")
 ```
@@ -61,20 +61,20 @@ In addition to the parameter estimates given above, the model has an $R^2$ value
 log(psoda)  = `r round(tidy_coef1a[1,2], 3)` + `r round(tidy_coef1a[2, 2], 3)`prpblck + `r round(tidy_coef1a[3, 2], 3)`log(income) + \hat{u}
 \end{equation}
 
-The intepretation of the $\beta_1$ ($prpblck$) coefficient is the change in the expected value of $log(psoda)$ upon a one unit change in the value of $prpblck$, holding $log(income)$ constant. Given that the $prpblack$ data has been converted in to a percentage, "one unit" in this instance refers to a 1 percentage point increase in the percentage of black residents.
+The interpretation of the $\beta_1$ ($prpblck$) coefficient is the change in the expected value of $log(psoda)$ upon a one unit change in the value of $prpblck$, holding $log(income)$ constant. Given that the $prpblack$ data has been converted in to a percentage, "one unit" in this instance refers to a 1 percentage point increase in the percentage of black residents.
 
-To obtain the percentage change in $psoda$ the $\beta_1$ coefficient must be multiplied by 100. As such, the estimated percentage change in $psoda$ for an increase of 0.20/20% in $prpblck$ is given by 5 times the value of the coefficient, multiplied by 100. This value is: `r round(tidy_coef1a[2, 2]*20*100, 1)`%.
+To obtain the percentage change in $psoda$ the $\beta_1$ coefficient must be multiplied by 100. As such, the estimated percentage change in $psoda$ for an increase of 0.20/20% in $prpblck$ is given by 20 times the value of the coefficient (which is the expected change for a 1% increase), multiplied by 100. This value is: `r round(tidy_coef1a[2, 2]*20*100, 1)`%.
 
 ## 1b
 
 ```{r 1b}
 fit1b <- lm(log(psoda) ~ prpblck_cln, data = data)
-fit1b_summary <- summary(fit1b)
+fit1b_summary <- fit1b %>% summary
 fit1a_prpblck_coef <- fit1a_summary$coefficients[2, 1]
 fit1b_prpblck_coef <- fit1b_summary$coefficients[2, 1]
 ```
 
-If a simple linear regression esimate of $log(psoda)$ on $prpblck$ is performed, the resulting precentage change in the value of $psoda$ given a one unit increase in the percentage of black residents is `r round(fit1b_prpblck_coef*100, 2)`%.
+If a simple linear regression estimate of $log(psoda)$ on $prpblck$ is performed, the resulting percentage change in the value of $psoda$ given a one unit increase in the percentage of black residents is `r round(fit1b_prpblck_coef*100, 2)`%.
 
 The value from the model including income is `r round(fit1a_prpblck_coef*100, 2)`%. As such the discrimination effect is larger when income is controlled for. 
 
@@ -89,11 +89,11 @@ The variable $prppov$ is also expressed as a decimal proportion. Therefore it wi
 ```{r 1c}
 data %<>% mutate(prppov_cln = 100 * prppov)
 fit1c <- lm(log(psoda) ~ prpblck_cln + log(income) + prppov_cln, data)
-fit1c_summary <- summary(fit1c)
+fit1c_summary <- fit1c %>% summary
 fit1c_prpblck_coef <- fit1c_summary$coefficients[2, 1]
 ```
 
-The new value for the $\hat\beta_{prpblck}$ coefficient is `r round(fit1c_prpblck_coef, 3)`, i.e. the expected percentage change in the median soda price given a one unit increase in the proprtion/percentage of black residents is now `r round(fit1c_prpblck_coef*100, 2)`%. This is lower than when the proportion of residents living in poverty is not controlled for, i.e. $\hat\beta_{prpblck}$ has decreased.
+The new value for the $\hat\beta_{prpblck}$ coefficient is $`r round(fit1c_prpblck_coef, 4)`$, i.e. the expected percentage change in the median soda price given a one unit increase in the proportion/percentage of black residents is now `r round(fit1c_prpblck_coef*100, 3)`%. This is lower than when the proportion of residents living in poverty is not controlled for, i.e. $\hat\beta_{prpblck}$ has decreased.
 
 ## 1d
 
@@ -101,13 +101,13 @@ The new value for the $\hat\beta_{prpblck}$ coefficient is `r round(fit1c_prpblc
 corr_income_pov <- cor(log(data$income), data$prppov, use = "complete.obs")
 ```
 
-The correlation between $log(income)$ and $prppov$ is `r round(corr_income_pov, 3)`, i.e. there is a negative correlation between the two and it is strong. From intution, this is roughly expected, i.e. as the median income in a ZIP-code increases, it would be expected that the proportion of residents living in poverty would decrease.
+The correlation between $log(income)$ and $prppov$ is `r round(corr_income_pov, 3)`, i.e. there is a strong, negative correlation between them. From intuition, this is roughly expected, i.e. as the median income in a ZIP-code increases, it would be expected that the proportion of residents living in poverty would decrease.
 
 ## 1e
 
 > "Because $log(income)$ and $prppov$ are so highly correlated, they have no business being in the same regression."
 
-This is an issue of __(multi)collinearity__, a common topic in regression. [Consequences](https://en.wikipedia.org/wiki/Multicollinearity#Consequences_of_multicollinearity) of multicollinearity include potential imprecisions in the parameter estimates for independant variables, redundancy of information in the model (which can lead to overfitting), and larger standard errors in affected coefficients (which may lead to a failure to reject the null hypothesis). (Wikipedia: 2015)
+This is an issue of __(multi)collinearity__, a common topic in regression. [Consequences](https://en.wikipedia.org/wiki/Multicollinearity#Consequences_of_multicollinearity) of multicollinearity include potential imprecision in the parameter estimates for independant variables, redundancy of information in the model (which can lead to overfitting), and larger standard errors in affected coefficients (which may lead to a failure to reject the null hypothesis). (Wikipedia: 2015)
 
 Therefore to assess the above statement, it is first useful to examine the coefficients from the model created in 1c that contains both variables:
 
@@ -115,11 +115,15 @@ Therefore to assess the above statement, it is first useful to examine the coeff
 
 It is seen that both $log(income)$ and $prppov$ have coefficients that remain statistically significant at the 5% level, and have (small) effects on $psoda$, as does $prpblck$. As such, for these two relatively simple models, there is little issue including both $log(income)$ and $prppov$.
 
-However, in general it can be unwise to include highly correlated variables in a model due to the consequences that can arise if this is does. Additionally, inclusion of an irrelvant variable will lead to larger variances in the $\hat\beta_j$ parameter etstimates. As such, if two variables, $x_1$ and $x_2$ are both included in a model but are highly correlated, then it can be seen that either of these variables is irrelevant, given the presence of the other. Therefore the variance of the other $\hat\beta_j$ parameters will increase, and so it is unwise to include both in the model.
+However, in general it can be unwise to include highly correlated variables in a model due to the potential consequences noted above. Additionally, inclusion of an irrelevant variable will lead to larger variances in the $\hat\beta_j$ parameter estimates. For example, if two variables, $x_1$ and $x_2$ are both included in a model but are highly correlated, then it can be seen that either of these variables is irrelevant, given the presence of the other. Therefore the variance of the other $\hat\beta_j$ parameters will increase, and so it is unwise to include both in the model. This is an example of the principle that _inclusion of irrelevant variables is not harmless._
 
 ```{r s1_cleanup, echo = FALSE}
 rm(list = ls())
 ```
+
+***
+
+\pagebreak
 
 # Section Two - CEO Salaries
 
@@ -142,7 +146,7 @@ log(salary) = \beta_0 + \beta_1log(sales) + \beta_2roe + \beta_3ros + u
 
 ## 2a
 
-In terms of the model parameters, the null hypothesis that, after controlling for $sales$ and $roe$, $ros$ has no effect on CEO salary is given by \eqref{eq:2anull}, and alternative is given by \eqref{eq:2aalt}.
+In terms of the model parameters, the null hypothesis that, after controlling for $sales$ and $roe$, $ros$ has no effect on CEO salary is given by \eqref{eq:2anull}, and the alternative that better stock market performance increases salary is given by \eqref{eq:2aalt}.
 
 \begin{equation} \label{eq:2anull}
 H_0 : \beta_{ros} = 0
@@ -156,9 +160,9 @@ H_a : \beta_{ros} > 0
 
 ```{r 2b}
 fit2b <- lm(log(salary) ~ log(sales) + roe + ros, data)
-fit2b_summary <- summary(fit2b)
+fit2b_summary <- fit2b %>% summary
 tidy_coef2b <- fit2b %>% tidy
-ss2b <- nrow(data)
+ss2b <- data %>% nrow
 r2_2b <- fit2b_summary$r.squared
 kable(tidy_coef2b, caption = "Coefficient estimates from regression of log(CEO salary) on log(firm sales), return on equity, and return on stock")
 ```
@@ -175,7 +179,7 @@ log(salary) = `r round(tidy_coef2b[1, 2], 3)` + `r round(tidy_coef2b[2, 2], 3)`l
 
 In short, $ros$ does not have a practically large effect on salary.
 
-## 1c
+## 2c
 
 Given the null hypothesis in \eqref{eq:2anull}, the $t$-statistic is given by \eqref{eq:t}
 
@@ -185,7 +189,7 @@ t_{\hat\beta_j} = \dfrac{\hat\beta_j}{se(\hat\beta_j)}
 
 Looking up the critical value at the 10% significance level for a one sided test in the normal table (given the large sample size) returns a value of 1.282.
 
-The $t$-value can be calculated, or extraced from the linear model.
+The $t$-value can be calculated, or extracted from the linear model.
 
 ```{r 2c}
 t_calc <- (tidy_coef2b[4, 2] - 0) / tidy_coef2b[4, 3]
@@ -195,7 +199,7 @@ crit <- 1.282
 
 These values are `r t_calc` and `r t_lm` respectively, i.e. identical. Given the critical value of `r crit` is larger than this $t$ value, in this instance the null would fail to be rejected at the 10% level.
 
-## 1d
+## 2d
 
 $ros$ would not be included in a final model explaining CEO compensation in terms of firm performance. This is due to two reasons: firstly it is not __statistically__ significant at even the 10% level (which is relatively high), and secondly it is not __economically__ significant, given the very small effect that it has on the expected value of CEO salary.
 
