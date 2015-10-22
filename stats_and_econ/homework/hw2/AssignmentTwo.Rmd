@@ -149,7 +149,56 @@ H_0 : \beta_{ros} = 0
 \end{equation}
 
 \begin{equation} \label{eq:2aalt}
-H_a : \beta_{ros} \neq 0
+H_a : \beta_{ros} > 0
 \end{equation}
 
+# 2b
 
+```{r 2b}
+fit2b <- lm(log(salary) ~ log(sales) + roe + ros, data)
+fit2b_summary <- summary(fit2b)
+tidy_coef2b <- fit2b %>% tidy
+ss2b <- nrow(data)
+r2_2b <- fit2b_summary$r.squared
+kable(tidy_coef2b, caption = "Coefficient estimates from regression of log(CEO salary) on log(firm sales), return on equity, and return on stock")
+```
+
+The parameter estimates for the PRF in \eqref{eq:prf2} are given in the table above. In addition, the $R^2$ value for this model is `r round(r2_2b, 3)` on a sample size of `r ss2b`.
+
+As such the SRF can be expressed by \eqref{eq:srf2b}.
+
+\begin{equation} \label{eq:srf2b}
+log(salary) = `r round(tidy_coef2b[1, 2], 3)` + `r round(tidy_coef2b[2, 2], 3)`log(sales) + `r round(tidy_coef2b[3, 2], 3)`roe + `r round(tidy_coef2b[4, 2], 4)`ros + \hat{u}
+\end{equation}
+
+1 basis point is defined as one hundredth of one percent, therefore 50 basis points is 50 hundredths of one percent, or 0.5%. $ros$ is expressed as a percentage, therefore the predicted percentage increase in salary if $ros$ increases by 50 basis points (0.5%) is given by $100\frac{\beta_{ros}}{2}$ which is a value of `r round((tidy_coef2b[4, 2]/2)*100, 3)`%. 
+
+In short, $ros$ does not have a practically large effect on salary.
+
+## 1c
+
+Given the null hypothesis in \eqref{eq:2anull}, the $t$-statistic is given by \eqref{eq:t}
+
+\begin{equation} \label{eq:t}
+t_{\hat\beta_j} = \dfrac{\hat\beta_j}{se(\hat\beta_j)}
+\end{equation}
+
+Looking up the critical value at the 10% significance level for a one sided test in the normal table (given the large sample size) returns a value of 1.282.
+
+The $t$-value can be calculated, or extraced from the linear model.
+
+```{r 2c}
+t_calc <- (tidy_coef2b[4, 2] - 0) / tidy_coef2b[4, 3]
+t_lm <- tidy_coef2b[4, 4]
+crit <- 1.282
+```
+
+These values are `r t_calc` and `r t_lm` respectively, i.e. identical. Given the critical value of `r crit` is larger than this $t$ value, in this instance the null would fail to be rejected at the 10% level.
+
+## 1d
+
+$ros$ would not be included in a final model explaining CEO compensation in terms of firm performance. This is due to two reasons: firstly it is not __statistically__ significant at even the 10% level (which is relatively high), and secondly it is not __economically__ significant, given the very small effect that it has on the expected value of CEO salary.
+
+```{r s2_cleanup, echo = FALSE}
+rm(list = ls())
+```
