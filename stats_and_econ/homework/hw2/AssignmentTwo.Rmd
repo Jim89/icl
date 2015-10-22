@@ -1,0 +1,33 @@
+---
+title: "Statistics and Econometrics - Assigment Two"
+author: "Jim Leach"
+date: "22 October 2015"
+output: pdf_document
+---
+
+# Document purpose
+
+The purpose of this document is to write up the response to the second assigment give as part of the _Statistics and Econometrics_ module. It is divided in to two sections, each covering a section of the assigment as given. Each major section is divided in to further subsections, one for each question in the assigment.
+
+A number of `R` packages have been used throughout this assignment. These are loaded before the responses are given:
+
+```{r load_pkg, echo = TRUE, message = FALSE}
+library(dplyr)
+library(ggplot2)
+```
+
+***
+
+# Section one - ZIP Code Pricing Disparity
+
+The data for this section are ZIP-code level prices for a number of items at fast food restaurants. The data also constain characteristics of each ZIP-code population. The ZIP-codes are from New Jersey and Pennsylvania.  The aim is to understand if fast-food restaurants charge higher prices in areas with a higher proportion of black residents.
+
+## Loading the data
+
+The data are loaded from the provided `.RData` file.
+
+```{r s1_load}
+load("./data/discrim.RData")
+```
+
+
