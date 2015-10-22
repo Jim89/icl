@@ -52,7 +52,7 @@ fit1a_summary <- summary(fit1a)
 tidy_coef1a <- fit1a %>% tidy
 ss1a <- nrow(data)
 r2_1a <- fit1a_summary$r.squared
-kable(tidy_coef1a)
+kable(tidy_coef1a, caption = "Coefficient estimates from regression of soda prices on the proportion of black residents, and median income. Note that 'prpblck_cln' is the proportion of black residents expressed as a percentage.")
 ```
 
 In addition to the parameter estimates given above, the model has an $R^2$ value of `r round(r2_1a, 4)` on a sample size of `r ss1a`. The SRF can be explicitly written as \eqref{eq:srf1}.
@@ -83,4 +83,73 @@ When income is ignored in the model, the discrimination effect appears smaller. 
 However, when income _is_ controlled for, the discrimination effect is almost twice as large. This would suggest that, given a constant income, the proportion/percentage of black residents has an effect on the median price of soda.
 
 ## 1c
+
+The variable $prppov$ is also expressed as a decimal proportion. Therefore it will be adjusted to a percentage, for the same reason as $prpblck$ was: coefficient interpretation. This variable is then added to the model from section 1a.
+
+```{r 1c}
+data %<>% mutate(prppov_cln = 100 * prppov)
+fit1c <- lm(log(psoda) ~ prpblck_cln + log(income) + prppov_cln, data)
+fit1c_summary <- summary(fit1c)
+fit1c_prpblck_coef <- fit1c_summary$coefficients[2, 1]
+```
+
+The new value for the $\hat\beta_{prpblck}$ coefficient is `r round(fit1c_prpblck_coef, 3)`, i.e. the expected percentage change in the median soda price given a one unit increase in the proprtion/percentage of black residents is now `r round(fit1c_prpblck_coef*100, 2)`%. This is lower than when the proportion of residents living in poverty is not controlled for, i.e. $\hat\beta_{prpblck}$ has decreased.
+
+## 1d
+
+```{r 1d}
+corr_income_pov <- cor(log(data$income), data$prppov, use = "complete.obs")
+```
+
+The correlation between $log(income)$ and $prppov$ is `r round(corr_income_pov, 3)`, i.e. there is a negative correlation between the two and it is strong. From intution, this is roughly expected, i.e. as the median income in a ZIP-code increases, it would be expected that the proportion of residents living in poverty would decrease.
+
+## 1e
+
+> "Because $log(income)$ and $prppov$ are so highly correlated, they have no business being in the same regression."
+
+This is an issue of __(multi)collinearity__, a common topic in regression. [Consequences](https://en.wikipedia.org/wiki/Multicollinearity#Consequences_of_multicollinearity) of multicollinearity include potential imprecisions in the parameter estimates for independant variables, redundancy of information in the model (which can lead to overfitting), and larger standard errors in affected coefficients (which may lead to a failure to reject the null hypothesis). (Wikipedia: 2015)
+
+Therefore to assess the above statement, it is first useful to examine the coefficients from the model created in 1c that contains both variables:
+
+`r kable(tidy(fit1c), caption = "Coefficient estimates from regression of soda prices on the proportion of black residents, proportion of residents in poverty, and median income. Note that 'prpblck_cln' and 'prppov_cln' are the proportion of black residents and those in poverty expressed as percentages, respectively.")`
+
+It is seen that both $log(income)$ and $prppov$ have coefficients that remain statistically significant at the 5% level, and have (small) effects on $psoda$, as does $prpblck$. As such, for these two relatively simple models, there is little issue including both $log(income)$ and $prppov$.
+
+However, in general it can be unwise to include highly correlated variables in a model due to the consequences that can arise if this is does. Additionally, inclusion of an irrelvant variable will lead to larger variances in the $\hat\beta_j$ parameter etstimates. As such, if two variables, $x_1$ and $x_2$ are both included in a model but are highly correlated, then it can be seen that either of these variables is irrelevant, given the presence of the other. Therefore the variance of the other $\hat\beta_j$ parameters will increase, and so it is unwise to include both in the model.
+
+```{r s1_cleanup, echo = FALSE}
+rm(list = ls())
+```
+
+# Section Two - CEO Salaries
+
+
+The data for this section contain CEO salaries and related metrics about each firm, including the annual sales, the return on equity, and the return on stock.
+
+## Loading the data
+
+The data are loaded from the provided `.RData` file.
+
+```{r s2_load}
+load("./data/ceosal1.RData")
+```
+
+The population regression function in \eqref{eq:prf2} will be modelled.
+
+\begin{equation} \label{eq:prf2}
+log(salary) = \beta_0 + \beta_1log(sales) + \beta_2roe + \beta_3ros + u
+\end{equation}
+
+## 2a
+
+In terms of the model parameters, the null hypothesis that, after controlling for $sales$ and $roe$, $ros$ has no effect on CEO salary is given by \eqref{eq:2anull}, and alternative is given by \eqref{eq:2aalt}.
+
+\begin{equation} \label{eq:2anull}
+H_0 : \beta_{ros} = 0
+\end{equation}
+
+\begin{equation} \label{eq:2aalt}
+H_a : \beta_{ros} \neq 0
+\end{equation}
+
 
