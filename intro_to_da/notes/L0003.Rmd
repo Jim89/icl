@@ -1,9 +1,81 @@
 ---
 title: "Introduction to Data Analytics Lecture 3"
 author: "Jim Leach"
-date: "15 October 2015"
+date: "24 October 2015"
 output: pdf_document
 ---
 
 # Biases and Assumptions
+
+> Avoid sampling on the dependent variable (the outcome). Learn to live with congnitive biases: give and get help when making tough calls.
+
+## Rationality
+
+Rationality is not automatic. Individuals are loss averse, they generally act to minimise losses. People will also gamble/work to avoid losses, even if they are in an existing bad position (i.e. gamblers fallacy). This tendency can be hugely affected by the linguistic framing of a decision choice (e.g. recovering a loss vs. realising a gain).
+
+There is a concept of __subjective expected utility__ proposed by Savage in 1954. It states that the normal decision making process is determined by assessing the expected values of alternatives, where each alternative is of subjectively difference value to decision makers. This process is the _rational baseline_ of decision making.
+
+Kahneman and Tversky gained Nobel prize for work on __cognitive biases and heurisitics__ that can lead individuals to violatte rationality.
+
+## Heuristics and Biases
+
+There are multiple types of bias that can affect decision making in the workplace.
+
+Heuristics (rules of thumb) can be very useful in developing (often effective) efficiencies in decision making. However, they are also problematic in that they introduce biases. In short, past $\neq$ future.
+
+In "Judgement in Managerial Decision Making" (2012), Bazerman lists the following eleven types of bias:
+
+1. __Ease of recall__ - tend to assume the answer is something that has been recently seen. The inferences made about an event's frequencey are often based on the ease of remembering an example of it;
+2. __Ease of retrieval__ (based on memory structure) - often overestimate something's prevalence if information about it can be retrieved rapidly;
+3. __Insensitivity to base rates__ - i.e. ignoring the prior and background information (classic example is false positive rates and rare disease diagnoses). In business it is common to ignore the base rate for failure;
+4. __Insensitivity to sample size__ - Smaller samles are more likely to produce strange results, for example it is more likely to see 60% heads on 3 coin flips than on 3,000;
+4. __Misconceptions of chance__ - i.e. we expect a sequence of events to "look" random (lottery - "that will never happen"). It is important to take in to account the independence of events;
+6. __Regression to the mean__ - extreme values tend back to the mean with time. This fact is often overlooked, and occurs when there is an element of chance in the process;
+7. __Conjugation fallacy__ - A conjugation (at least 2 combined factors) cannot possibly be more probable than any single individual factors alone. However conjugations may _seem_ more probable from intuition, but this is not possible;
+8. __Confirmation trap__ - Responses that confirm underlying assumptions are preferred. This can form a trap where each new piece of evidence confirms the assumption, even if it would also confirm something else (e.g. $2, 4, 6$, $1, 3, 5$ sequence of numbers - what is the rule?). Information or evidence that confirms the bias may be _sought_;
+9. __Anchoring__ - Given a piece of information, future responses can be anchored to it in some way, e.g. in negotiation with prices or if a value is given and a response requested, depending on the initial value, higher or lower guesses are more probable, despite the truth of the situation;
+10. __Conjunctive & Disjunctive events__ - The odds of conjunctive events (i.e. events that are linked) are often overestimated and the odds of disjunctive effects are often underesimtated;
+11. __Hindsight__ - Tend to biased towards abilities to understand/know things when looking back in time (i.e. in the face of historic evidence it is easy to say it would have been obvious at the time).
+
+## Switching standards
+
+It is common to blame _circumstances_ for _our_ shortcomings, but the _characteristics_ of others for _theirs_. E.g. we scored poorly on a test due to poor sleep, but someone else did because they're dumb. This is termed the __fundamental attribution error__.
+
+In short, explanation logics are switched depending on if the judge is an _actor_ or an _observer_ in the situation. This is sometimes overcome if, when observing someone else, that person is very similar to the judge. 
+
+## Emotions - up and down
+
+Emotions can improve us, or tear us down. This results in an __egocentric bias__: we overestimate our chances of succeeding relative to others', even in the same situation. 
+
+Related to this is __irrational escalation__: people will commit to escalating courses of action (even those that are loss-making) in the face of competition or pressure (cf. £20 note auction, winner pays + takes, loser pays). Under stress, individuals revert to a response from ingrained lessons or behavrious: __threat rigidity__.
+
+## Information Effects
+
+Biases 1, 2 and 9 in the list above (availability, retrieval and anchoring) can be though of as _information effects_ that bias decisions. 
+
+It is important to remember not to rely on available, but useless data. 
+
+# Key lessons
+
+Avoid sampling on the dependent variable. Ensure that data are selected that have variance in the outcome, otherwise relationships between data and outcome _cannot_ be assessed. 
+
+Collect data on confounders, and use it. 
+
+Focusing on disproving assumptions and hypotheses, not on proving them.
+
+> Learn to live with congnitive biases: give and get help when making tough calls.
+
+* Know what our biases are (and those of others);
+* Realise when they lead us astray;
+* Enlist others to check our thinking; but
+* Avoid "yes men" - do not just enlist people who will "tell you what you want to hear".
+
+## A framework of assessment
+
+
+
+
+
+
+
 
