@@ -7,7 +7,7 @@ output: pdf_document
 
 # Social Networks, leadership and picking people
 
-> Networking $\neq$ having networks. 
+> Help others first, just because.
 
 ## Myth-busting
 
@@ -48,7 +48,56 @@ There is usefulness in our network. They provide reach (to others), connection t
 
 Networks are relevant to the spread of innovation, success in careers, satisfaction and health, power in business.
 
+Networks can have many forms, e.g. hub and spokes, chains and unclosed loops, archipelagos with narrow bridges,  islands and neighbourhoods, and more. They help us understand structures, flows, ties, changes over time. 
 
+### Measures
+
+There are many important network statistics, some of them include:
+
+#### Cohesion
+
+* Density - the total number of links / the total possible links;
+* Distance - the shortest path between two points;
+* Cliques - are there groups more connected to each other than to everyone else;
+* Avg. path length - average distance between all possible pairs
+
+#### Influence
+
+* centrality/betweeness/closeness - the number of links on a node;
+* Eigenvector/power - A node's links, weighted by the links of it's connected nodes.
+
+#### Opportunity
+
+* Weak ties - ties to others whose ties have little overlap with yours;
+* Structural holes - bridging largely unnoected components of a network graph.
+
+Our network(s) must be tailored to our task: at times, the team is very important, however if a project is unsuccessful the team is irrelevant. Therefore know _how_ to build a team, but also how to _adapt_ it to a situation. 
+
+## Building a team
+
+We can build a team for (generally) one of three things:
+
+* Cohesion - building and strengthening connection(s);
+* Influence - harnessing a network to interact with powerful people; or
+* Opportunity - building a large, diffuse network to bring new ideas and opportunities.
+
+It is important to tailor the network to the situation. If a task requires:
+
+* creativity - go for leverage/opportunity;
+* commitment - go for cohesion;
+* confidence - go for status/influence
+
+It is important to know ourselves and what we prefer. If unsure - ask yourself and others.
+
+The people-picking style will change over a project lifecyle. e.g. for project stages:
+
+* Ideas - opportunity > influence > cohesion;
+* Mobilisation - influence > opportunity & cohesion;
+* Execution - cohesion > influence > opportunity
+
+## Conclusion
+
+Remember networks provide conduits for information (opportunity), sources of support (cohesion) and opportunities for influence (status). Pick wisely and generously.
 
 
 
