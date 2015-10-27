@@ -158,8 +158,113 @@ The width of the CI depends on the standard error, and the critical value.
 
 In a two-sided test, i.e. $H_0 : \beta_j = a_j$, $H_0$ can be reject at the $\alpha$ significance level if (and only if) the (1-$\alpha$)% CI does not contain $a_j$.
 
+## Linear Combination of Parameters
 
+At times it can be important to assess if $x_1$ has the same effect on $y$ as does $x_2$, i.e. to test:
 
+\begin{equation}
+H_0 : \beta_1 - \beta_2 = 0; H_1: \beta_1 - \beta_2 \neq 0
+\end{equation}
 
+Conceptually, a $t$-test could be used (of the form $t = \frac{\hat\beta_1-\hat\beta_2}{se(\hat\beta_1-\hat\beta_2)})$). However $se(\hat\beta_1-\hat\beta_2)$ is usually not available.
+
+### Re-parameterise
+
+A solution is to re-parameterise the model to give \eqref{eq:repar}.
+
+\begin{equation} \label{eq:repar}
+log(y) = \beta_0 + \theta x_1 + \beta_2(x_2 + x_1) +u
+\end{equation}
+
+Where $\theta = \beta_1 - \beta_2$.
+
+The hypothesis can then be rewritten as:
+
+\begin{equation}
+H_0: \theta = 0; H_1 \theta \neq 0
+\end{equation}
+
+It is said that the parameter of interest $\theta$ has been isolated by re-parameterisation. Given that the OLS output will provide both $\hat\theta$ and $se(\hat\theta)$, this hypothesis can be tested.
+
+Note that both $\beta_0$ and $\beta_2$ remain in the equation and so will remain unchanged.
+
+The OLS output will provide the value for $\theta$, which is then used to determine if $x_1$ and $x_2$ have the same effect on $y$. 
+
+## Testing Multiple Linear Restrictions - the $F$ test
+
+It is also at times desirable to test the effect of a group of variables on $y$ (with the remaining variables as a control).
+
+This is often performed using __exclusion restrictions__ - i.e. whether a group of parameters are all equal to zero. Generally, multiple linear restrictions involve more than one linear restriction on parameters.
+
+### Testing Exclusions
+
+The first step is define an __unrestricted model__, e.g. \eqref{eq:ur}
+
+\begin{equation} \label{eq:ur}
+y = \beta_0 + \beta_1 x_1+ ... + \beta_k x_k + u
+\end{equation}
+
+$q$ restrictions are then applied under the null hypothesis: $H_0 : \beta_{k-q-1} = 0, ... , \beta_k = 0$. (The alternative is simple that $H_0$ is not true.)
+
+Under this null, the __restricted modell__ \eqref{eq:r} is defined:
+
+\begin{equation} \label{eq:r}
+y = \beta_0 + \beta_1 x_1 + ... + \beta_{k-q} x_{k-q} + u_{(r)}
+\end{equation}
+
+It is not sufficient to simply test each $t$ statistic separately as an assessment of the $q$ parameters' _joint_ significant is being sought. I.e., it is possible for none to be individually significant but for the group to have a combined significance.
+
+In order to perform this test, the __restricted__ and __unrestricted__ models are interpreted separately. Intuitively, a (large) changein the $SSR$ will indicate that variables should/shouldn't be included. Therefore a test statistic is defined:
+
+\begin{equation} \label{eq:f}
+F = \dfrac{(SSR_r - SSR_{ur})/q}{SSR_{ur}/(n-k-1)} \approx F_{q, n-k-1}
+\end{equation}
+
+Where $q$ is the number of restrictions (or $df_r = dr_{ur}$) and $n-k-1$ is the degrees of freedom in the unrestricted model.
+
+### The $F$-Statistic
+
+The F-stat is always positive (as the $SSR_r$ cannot be less than $SSR_{ur}$). Similar as to a $t$ test, an $F$ distribution is used to define a critical value above which the null hypothesis is reject (at a specified significance level). Essentially, $H_0$ is rejected if the increase in SSR moving from the unrestricted to the restricted model is "large enough".
+
+N.b. when $q$ = 1, $H_0$ can be tested with either a $t$ or an $F$ statistic.
+
+### The $R^2$ form
+
+Recall that $SSR_r = SST(1-R_r^2)$. This allows \eqref{eq:f} to be rewritten as:
+
+\begin{equation} \label{eq:f_r}
+F = \dfrac{(R_{ur}^2 - R_r^2)/q}{(1-R^2_{ur})/(n-k-1))}
+\end{equation}
+
+This equation, \eqref{eq:f_r}, is termed the __R-squared form__ of the $F$ statistic.
+
+If $H_0$ is rejected, it is said that the $x_{k-q-1}, ..., x_k$ parameters are __jointly statistically significant__, if it is not they are __jointly insignificant__. 
+
+The $p$-value for a $F$ test is the probability of the $F$ distribution having a value of or greater than the observed value.
+
+### Practical tip
+
+These tests can be performed easily in R using the `linearHypothesis()` function from the `cars` package. 
+
+### F Test for Overall Signifince
+
+When q = k, the null is routinely tested by most software packages, including R. This is known as an __F test for overall significance__.
+
+The null in this instance is that _none_ of the explanatory variables has an effect on $y$, therefore the restricted model is $y = \beta_0 + u$.
+
+Under this null, the $F$ stat has an $F_{k, n-k-1}$ distribution. Further, as the R-squared value under the null is zero, the $F$ stat is given by \eqref{eq:f_simpl}
+
+\begin{equation} \label{eq:f_simpl}
+F = \dfrac{R^2 /k}{(1-R^2)/(n-k-1)}
+\end{equation}
+
+## Final note - reporting regression results
+
+A good practice for the minimum reporting standards is to report:
+
+* Estimated coefficients _and_ standard errors;
+* R-squared;
+* Sample size;
+* Equation form of SRF (if the number of equations is small) or a table of parameters for multiple models/complex models.
 
 
