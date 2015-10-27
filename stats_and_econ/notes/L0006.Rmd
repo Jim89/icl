@@ -1,0 +1,41 @@
+---
+title: "Statistics and Econometrics - Lecture 6"
+author: "Jim Leach"
+date: "26 October 2015"
+output: pdf_document
+---
+
+# Multiple Regression and Dummy Variables
+
+## Qualitative Information
+
+Many factors in projects return nonnumerical/qualitative data that take just two values, e.g. yes/no, male/female etc.
+
+Such data can be modelled as binary valued variables termed __dummy variables__. E.g. female = 1 if female, = 0 otherwise. Such assignment is arbitrary and determined by interpretation convenience.
+
+Dummy variables can then be used to incorporate qualitative information in to a regression, as in \eqref{eq:dummy}
+
+\begin{equation} \label{eq:dummy}
+wage = \beta_0 + \delta_0 female + \beta_1 educ + u
+\end{equation}
+
+In \eqref{eq:dummy}, $\delta_0$ characterises the gender difference in wage. Further, under the __ZCM__ assumption:
+
+* $E(wage | female = 1, educ) = \beta_0 + \delta_0 + \beta_1 educ$;
+* $E(wage | female = 0, educ) = \beta_0 + \beta_1 educ$
+
+i.e., $\delta_0$ represents an _intercept shift_.
+
+## Interpretation of a dummy
+
+Dummy variables are interpreted as the change in $y$ observed for each dummy respective to a __base group__, in the example \eqref{eq:dummy} the base group would be _males_. Otherwise, dummy variables are interpreted as the expected change in the dependant variable given a change in the dummy's group.
+
+## Dummy Variables for Multiple Categories
+
+For qualitative groups with more than 2 values it is necessary to include more than 1 dummy variable. In general, for $g$ groups, $g1$ dummy variables are required, with the intercept representing the base group.
+
+## Dummy Variables for Ordinal Information
+
+For variables with multiple values, where the order matters but not the scale, dummy variables are also useful. E.g. a govt. credit risk might range from 04 but with no distinction between groups. I.e. a transfer from 01 is not the same as from 23.
+
+In this instance, separate dummy variables are required for each value that the group may take. If an ordinal variable (e.g. rank out of 100) has too many values, it may be sensible to group it in to categories (e.g. 010, 1120, etc) and use those dummies instead.
