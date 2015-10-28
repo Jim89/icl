@@ -61,6 +61,38 @@ __$t$ and $F$ testing, and confidence intervals can all be carried out exactly t
 
 (Note that even if normality in $u$ is not required, homoskedasticity still _is_ required.)
 
+## Functional forms: Log, Quadratic, Interactions
+
+OLS can be used to describe relationships that are not strictly linear by using nonlinear function of $x$ and $y$ (recall that the _parameters_ are still a linear function for $y$).
+
+### Logarithmic form
+
+Logarithms can be used in multiple ways in a linear regression, each having a slightly different effect on the coefficient interpretaion. 
+
+These interpretations are given by the below table.
+
+\begin{center}
+\begin{tabular}{ c c c  c}
+ Model & Dependant Variable & Independant Variable & Interpretation of $\beta_1$ \\ \hline
+ Level - level & y & x & $\Delta y = \beta_1 \Delta x$ \\
+ Level - log & y & $log (x)$ & $\Delta y = ( \beta_1 / 100 ) \% \Delta x$ \\
+ Log - level & $log (y)$ & x & $\% \Delta y = ( 100 \beta_1 ) \Delta x$ \\
+ Log - log & $log(y)$ & $log(x)$ & $\% \Delta y = \beta_1 \% \Delta x$
+\end{tabular}
+\end{center}
+
+Log models are useful for a number of reasons:
+
+1. They are invariant to the scale of variables since they measure _percentage_ changes;
+2. For models with $y>0$ (i.e. y is never negative), then the conditional distribution of $y$ with repsect to $x$ is often heteroskedastic/skewed (i.e. the variance of $y$ changes with $x$). Taking logs can eliminate the heteroskedastic and/or the skewness problems; and
+3. Taking logs of a variable can narrow the range, limiting the effect of outliers.
+
+Variables that are often used in log form include any values that are, by definition, positive such as wage, salary, sales, market value etc (often these are £/$ ammounts). Variables that are very large (e.g. populations, total number of employees) are also often found in log form.
+
+Variables that are more likely to be used in level form include those measured in years and those that are proportions (e.g. unemployment rate). This is usually due to the fact that the coefficient estimation for such variables is very simple in the level form.
+
+### Quadratic form
+
 
 
 
