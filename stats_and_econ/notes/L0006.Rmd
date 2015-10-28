@@ -39,3 +39,57 @@ For qualitative groups with more than 2 values it is necessary to include more t
 For variables with multiple values, where the order matters but not the scale, dummy variables are also useful. E.g. a govt. credit risk might range from 04 but with no distinction between groups. I.e. a transfer from 01 is not the same as from 23.
 
 In this instance, separate dummy variables are required for each value that the group may take. If an ordinal variable (e.g. rank out of 100) has too many values, it may be sensible to group it in to categories (e.g. 010, 1120, etc) and use those dummies instead.
+
+
+## Interactions with dummy variables
+
+### Dummy-dummy
+
+Interacting dummy variables is like subdividing a group, i.e. the change in $y$ when group 1 changes, within group 2. It can be useful to explicitly state the PRF involving dummy variables and their interactions in order to effectively understand the interpretation of the coefficients. e.g.
+
+\begin{equation} \label{eq:dummy_inter}
+wage  = \beta_0 + \delta_1SingleFemale + \delta_2MarriedFemale + \delta_3MarriedMale + \beta_1educ + ... + u
+\end{equation}
+
+describes a model for wage, controlling for gender and marital status. The dummy variables are actually the _interaction_ between two other variables, _female_ and _married_, therefore \eqref{eq:dummy_inter} can be rewritten as:
+
+\begin{equation} \label{eq:dummy_rw}
+wage = \beta_0 + \delta_1 female + \delta_2 married . female + \delta_3 married + \beta_1 educ + ... + u
+\end{equation}
+
+In \eqref{eq:dummy_rw}, if _female_ = 0 and _married_ = 1, it is the case that $wage = \beta_0 + \delta_3 + \beta_1 educ + ... + u$, i.e. for married males, the effect on wage is $\delta_3$.
+
+Interactions are important if it is thought that the change in the outcome will be different based on the levels of one group _within_ different levels of another (e.g. the effect on wage for men who are married vs. not married and for females who are married vs. not married). $F$-tests can be used to determine if the interaction term is of statistical significance.
+
+### Dummy-quantitative
+
+Interacting a dummy within a quantitative variable can be used to assess how the slope of the quantitative variable changes within levels of a dummy. 
+
+(In R the $x_1$`:`$x_2$ syntax can be used to specify an interaction.)
+
+Performing an interaction of this nature can be important for understanding differences in intercept and slope accross groups, eg. \eqref{eq:dummy_qual}
+
+\begin{equation} \label{eq:dummy_qual}
+log(wage) = (\beta_0 + \delta_0 female) + (\beta_1 + \delta_1 female)educ + u
+\end{equation}
+
+In this example, when _female_ = 0, the intercept and slope are given by $\beta_0$ and $\beta_1$, when _female_ = 1, the intercept and slope are given by $(\beta_0 + \delta_0)$ and $(\beta_1 + \delta_1)$, the differences in  intercept and slope are measured by $\delta_0$ and $\delta_1$ repectively. 
+
+In this instance if:
+
+* $\delta_0 < 0$ and $\delta_1 <0$ then the intercept and the slope for _female_ will be lower than for males; and
+* $\delta_0 < 0$ and $\delta_1 > 1$ then the intercept for _females_ will be lower, but the slope will be larger.
+
+In order to estimate these parameters, OLS is used for \eqref{eq:dummy_qual2}
+
+\begin{equation} \label{eq:dummy_qual2}
+log(wage) = \beta_0 + \delta_0 female + \beta_1 educ + \delta_1 female . educ + U
+\end{equation}
+
+A number of interesting hypotheses can be tested using interaction terms. For example, in the wage/gender/education model it is possible to test:
+
+* The return to education is the same for men and women ($\delta_1 = 0$);
+* The expected wages are the same for men and women who have the same level of education ($\delta_0 = 0$ and $\delta_1 = 0$).
+
+As ever, $F$ statistic tests can be performed to test exclusion restrictions.
+
