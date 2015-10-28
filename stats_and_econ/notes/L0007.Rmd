@@ -93,6 +93,21 @@ Variables that are more likely to be used in level form include those measured i
 
 ### Quadratic form
 
+\begin{equation} \label{eq:quad}
+y = \beta_0 + \beta_1 x + \beta_2 x^2 +u
+\end{equation}
+
+The PRF given in \eqref{eq:quad} is a typical _quadratic_ form of a linear regression. In this instance, it is not possible to interpret $\beta_1$ alone as the coefficient that measures the change in y with respect to x. $\beta_2$ must be taken in to account as well.
+
+\begin{equation} \label{eq:quad_diff}
+\Delta \hat{y} \approx (\hat\beta_1 + 2 \hat\beta_2 x)\Delta x
+\end{equation}
+
+\eqref{eq:quad_diff} describes how y varies with x (it is obtained by taking the first differential of \eqref{eq:quad} with respect to x). As can be seen, y depends on _both_ $\beta_1$ _and_ $\beta_2$. 
+
+In this instance, if $\hat\beta_1 >0$ and $\hat\beta_2 <0$ then as x increases, the second term will become larger: i.e. at low values of x, y will increase. However as x increases, this growth will slow and eventually reverse to reduce y at high values of x. It is possible to define the point at which this "turn" occurs: $x^{*} = |\hat\beta_1 / (2\hat\beta_2)|$
+
+(If $\hat\beta_1 <0$ and $\hat\beta_2 >0$ then this pattern would be reversed and y would decrease with x at low x, before turning to increase with x at high x).
 
 
 
