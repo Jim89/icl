@@ -1,0 +1,21 @@
+---
+title: "Statistics and Econometrics - Assignment Three"
+author: "Jim Leach"
+date: "28 October 2015"
+output: pdf_document
+---
+
+# Document purpose
+
+The purpose of this document is to write up the response to the third assignment given as part of the _Statistics and Econometrics_ module. It is divided in to two sections, each covering a section of the assignment as given. Each major section is divided in to further subsections, one for each question in the assignment.
+
+A number of `R` packages have been used throughout this assignment. These are loaded before the responses are given:
+
+```{r load_pkg, echo = TRUE, message = FALSE}
+library(dplyr)
+library(magrittr)
+library(broom)
+library(knitr)
+```
+
+***
