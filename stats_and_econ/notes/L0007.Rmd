@@ -1,0 +1,69 @@
+---
+title: "Statistics and Econometrics - Lecture 7"
+author: "Jim Leach"
+date: "27 October 2015"
+output: pdf_document
+---
+
+# Further topics in MLR
+
+## Linear Probability Model
+
+If the dependant variable is binary (i.e. $y = 0$ or $y=1$) then the interpretation of the $\beta$ coefficients changes.
+
+Firstly, it is possible to re-write the generic PRF to give \eqref{eq:lpm} (noting that the ZCM assumption still holds).
+
+\begin{equation} \label{eq:lpm}
+P(y=1|x) = E(y|x) = \beta_0 + \beta_1 x_1 + ... + \beta_kx_k
+\end{equation}
+
+The value $P(y=1|x)$ is termed the __reponse probability__ and the overall regression model is termed a __linear probability model (LPM)__.
+
+In the LPM, the $\beta$ parameters are interpreted as the change in the _probability of success_ given a one unit increase in the related independant variable, i.e. $\Delta P(y=1|x) = \beta_j\Delta x_j$. 
+
+### Shortcomings of LPM
+
+It is possible that when using the LPM, the predicted probability can be outside $[0, 1]$. I.e., the linear function is not suitable for modelling probablities and more advanced models should be used (e.g. logit and probit). 
+
+Further, for LPM it is the case that
+
+\begin{equation}
+Var(u|x) = Var(y|x) = P(y=1|x)[1-P(y=1|x)]
+\end{equation}
+
+I.e., MLR5 (homoskedasticity assumption) does not hold as the variance of the error term is seen to depend on $x$. This does _not_ cause estimation bias but it _does_ invalidate the standard error calculations.
+
+## Self-selection problems
+
+Typically, dummy variables are used when a _program effect_ is being investigated, e.g. the effectiveness of a drug, new job training etc. 
+
+Typically individuals are divided in to two groups, a _control_ and a _treatment_, the test results used to measure the program effect.
+
+However, it is the case that individuals often chose whether (or not) to participate in a program. This can lead to __self selection__ problems. These problems can only be eliminated if it is possible to control for everything that may be correlated with the outcome of interest.
+
+Often this is not possible and therefore $E(u|participation = 1) \neq E(u|participation = 0)$, i.e. the ZCM is violated and the estimate of the program effect will be biased.
+
+## Large sample (Asymptotic) Inference
+
+In practice MLR6 ($u\textasciitilde Normal(0, \sigma^2)$) is too strong an assumption and does not hold in general. However, MLR1-4 imply that the OLS estimators are unbiased, and MLR1-6 (CLM) imply that they are normally distributed.
+
+The central limit theorem (CLT) provides and answer to this condundrum - i.e. how is inference performed without MLR6. In short, when $n$ is large, the OLS estimators themselves are approximately normally distributed.
+
+Therefore it is possible to write \eqref{eq:t} even when $u$ is not normally distributed.
+
+\begin{equation} \label{eq:t}
+\dfrac{\hat\beta_j - \beta_j}{se(\hat\beta_j)} \textasciitilde t_{n-k-1}
+\end{equation}
+
+It is also known that $t_{n-k-1}$ approaches Normal(0, 1) as n increases. Therefore, how large must $n$ be to get a good approximation? In short it depends on the distribution of $u$, but in general an n of 30 is acceptable.
+
+__$t$ and $F$ testing, and confidence intervals can all be carried out exactly the same even when MLR6 does not hold__.
+
+(Note that even if normality in $u$ is not required, homoskedasticity still _is_ required.)
+
+
+
+
+
+
+
