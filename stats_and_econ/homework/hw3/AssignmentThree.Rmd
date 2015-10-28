@@ -19,3 +19,24 @@ library(knitr)
 ```
 
 ***
+
+# Section 1
+
+In this section, it is posited that data from a survery on wages, education, experience and gender is provided. In addition, data on marijuana use is also asked for. The question asked regarding marijuana use was:
+
+> "On how many separate occasions last month did you smoke marijuana?"
+
+## 1a
+
+\begin{equation} \label{eq:1a}
+log(wage) = \beta_0 + \delta_1 female + \beta_1 education + \beta_2 experience + \beta_4 marijuana
+\end{equation}
+
+If it is assumed that:
+
+* gender is a binary variable named $female$ whereby a value of $1$ indicates female, and $0$ indicates male; and
+* education, experience and marijuana are purely quantitaive variables
+
+then a simple equation such as \eqref{eq:1a} can be written to allow statements such as "Smoking marijuana five more times per month is estimated to change wage by x%". Note that the dummy variable $female$ contrasts the change in wage between genders with males as the base group.
+
+
