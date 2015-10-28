@@ -34,12 +34,24 @@ log(wage) = \beta_0 + \delta_1 female + \beta_1 education + \beta_2 experience +
 
 If it is assumed that:
 
-* gender is a binary variable named $female$ whereby a value of $1$ indicates female, and $0$ indicates male; and
-* education, experience and marijuana are purely quantitaive variables
+* gender is represented by a binary variable (named $female$) whereby a value of $1$ indicates female, and $0$ indicates male; and
+* education, experience and marijuana are purely quantitaive variables named as such
 
-then a simple equation such as \eqref{eq:1a} can be written to allow statements such as "Smoking marijuana five more times per month is estimated to change wage by x%". Note that the dummy variable $female$ contrasts the change in wage between genders with males as the base group.
+then a simple equation such as \eqref{eq:1a} can be written to allow statements such as "Smoking marijuana five more times per month is estimated to change wage by x%". Note that the dummy variable $female$ contrasts the change in wage between genders (holding the other independant constant) with males as the base group.
 
 ## 1b
+
+\begin{equation} \label{eq:1b}
+log(wage) = \beta_0 + \delta_1 female + \beta_1 education + \beta_2 experience + \beta_4 marijuana + \delta_2 marijuana.female
+\end{equation}
+
+The regression function given in \eqref{eq:1b} would allow a test to be performed to understand if drug (marijuana) use has a different effect on wage for men and women. In \eqref{eq:1b} it is the $\delta_2$ parameter that describes this effect, it is the estimated change in the slope coefficient for marijuana use ($\beta_4$) for females over the reference group (males).
+
+It would be possible to test that there are no differences in the effects of drug usage for men and women using the following hypothesis:
+
+* $H_0:\delta 1 = 0$ and $\delta_2 = 0$, i.e. the wage is the same for men and women who have the same level of drug use.
+
+For this hypothesis, an $F$-statistic could be generated to test for exclusion restrictions. 
 
 
 
