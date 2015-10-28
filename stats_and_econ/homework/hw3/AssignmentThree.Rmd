@@ -29,7 +29,7 @@ In this section, it is posited that data from a survery on wages, education, exp
 ## 1a
 
 \begin{equation} \label{eq:1a}
-log(wage) = \beta_0 + \delta_1 female + \beta_1 education + \beta_2 experience + \beta_4 marijuana
+log(wage) = \beta_0 + \delta_1 female + \beta_1 education + \beta_2 experience + \beta_4 marijuana + u
 \end{equation}
 
 If it is assumed that:
@@ -42,16 +42,45 @@ then a simple equation such as \eqref{eq:1a} can be written to allow statements 
 ## 1b
 
 \begin{equation} \label{eq:1b}
-log(wage) = \beta_0 + \delta_1 female + \beta_1 education + \beta_2 experience + \beta_4 marijuana + \delta_2 marijuana.female
+log(wage) = \beta_0 + \delta_1 female + \beta_1 education + \beta_2 experience + \beta_3 marijuana + \delta_2 marijuana.female + u
 \end{equation}
 
-The regression function given in \eqref{eq:1b} would allow a test to be performed to understand if drug (marijuana) use has a different effect on wage for men and women. In \eqref{eq:1b} it is the $\delta_2$ parameter that describes this effect, it is the estimated change in the slope coefficient for marijuana use ($\beta_4$) for females over the reference group (males).
+The regression function given in \eqref{eq:1b} would allow a test to be performed to understand if drug (marijuana) use has a different effect on wage for men and women. In \eqref{eq:1b} it is the $\delta_2$ parameter that describes this effect, it is the estimated change in the slope coefficient for marijuana use ($\beta_3$) for females over the reference group (males).
 
 It would be possible to test that there are no differences in the effects of drug usage for men and women using the following hypothesis:
 
-* $H_0:\delta 1 = 0$ and $\delta_2 = 0$, i.e. the wage is the same for men and women who have the same level of drug use.
+* $H_0:\delta_1 = 0$ and $\delta_2 = 0$, i.e. the wage is the same for men and women who have the same level of drug use.
 
 For this hypothesis, an $F$-statistic could be generated to test for exclusion restrictions. 
+
+## 1c
+
+
+\begin{equation} \label{eq:1c}
+log(wage) = \beta_0 + \delta_1marijuana + \beta_1 education + \beta_2 experience
+\end{equation}
+
+
+In this example gender is omitted (for simplicity's sake), as are interaction terms between marijuana use and the other variables. It is assumed that marijuana use is given by a categorical factor variable with four levels:
+
+1. nonuser (0 uses per month);
+1. light user (1 to 5 uses per month);
+2. moderate user (6 to 10 uses per month); and
+4. heavy user (greater than 10 uses per month).
+
+In the equation given by \eqref{eq:1c} the effect of marijuana use on wage is given by $\delta_1$. A fuller and more explicit regression function could also be given by:
+
+\begin{equation} \label{eq:1c_2}
+log(wage) = \beta_0 + \delta_0 light + \delta_1 medium + \delta_2 heavy + ... + u
+\end{equation}
+
+In equation \eqref{eq:1c_2}, the "..." term represents the other variables included in \eqref{eq:1c} but omitted here for brevity. In \eqref{eq:1c_2}, $\beta_0$ represents the estimated wage for nonusers holding the other variables constant, $\delta_0$ represents the change for light users, $\delta_1$ for medium users and $\delta_2$ for heavy users.
+
+## 1d
+
+
+
+
 
 
 
