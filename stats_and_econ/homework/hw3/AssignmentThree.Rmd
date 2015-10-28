@@ -78,9 +78,39 @@ In equation \eqref{eq:1c_2}, the "..." term represents the other variables inclu
 
 ## 1d
 
+To test the null hypothesis that marijuana usage has no effect on wage is done using an $F$ statistic. In this instance, _marijuana use_ is not well defined and as such it is assumed that this means that the null is that _any_ use of marijuana has no effect on wage. 
 
+As such, this is best understood using \eqref{eq:1c_2} to test for multiple linear restrictions in the $\delta$ parameters of the marijuana dummy variable. To do so, an __unrestricted__ model is defined (again, gender is omitted for simplicity's sake).
 
+\begin{equation} \label{eq:1d_ur}
+log(wage) = \beta_0 + \delta_0 light + \delta_1 medium + \delta_2 heavy + \beta_1 education + \beta_2 experience + u
+\end{equation}
 
+In order to test the null that marijuana usage has no effect on wage it is also necessary to construct the __restricted model__ that describes this.
 
+\begin{equation} \label{eq:1d_r}
+log(wage) = \beta_0 + \beta_1 edcuation + \beta_2 experience + u
+\end{equation}
 
+The restricted model \eqref{eq:1d_r} will allow the null $H_0: \delta_0 = 0$ and $\delta_1 = 0$ and $\delta_2 = 0$ to be tested.
+
+In order to do this, the $F$ statistic is computed.
+
+\begin{equation} \label{eq:1d_fstat}
+F = \dfrac{(SSR_r - SSR_{ur})/q}{SSR_{ur}/(n-k-1)}
+\end{equation}
+
+In \eqref{eq:1d_fstat} $SSR_r$ and $SSR_{ur}$ represent the sum of squared residuals from the restricted and unrestricted models respectively, $q$ is the number of restrictions and $n-k-1$ is the degrees of freedom in the unrestricted model. 
+
+Having calculated the $F$ statistic, a critical value is defined for the desired significance level using an $F$ distribution with $df1 = q$ and $df2 = n-k-1$. If the $F$ statistic calulcated is greater than or equal to this critical value then the null can be rejected, i.e. it is possible to state that marijuana use _does_ have a statistically significant effect on wage. This is independant of an individual dosage of marijuana (i.e. light/medium/heavy) and instead considers the __joint effect__ of the three doses on wage.
+
+## 1e
+
+Some potential problems with drawing causal inferences using the survey data collected are self selection problems. It may be the case that people who use marijuana are less likely (or more likely) to respond to the survey, leading to a potentially biased sample. 
+
+Furthermore, there may be issues of multicollinearity between marijuana use and the other explanatory variables (for example it may be the case that men are more likely to use marijuana, or that people who use marijuana have lower levels of education on average).
+
+Moreoever, there may be many variables that are included in the error term that have a (high) correlation with marijuana use (e.g. socio-economic status, ethnicity) but that could have a significant impact on wage. By not explicitly including these in the model it is possible that the ZCM assumption will not hold and as such it could be hard to draw causal inferences from the data.
+
+***
 
