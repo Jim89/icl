@@ -33,6 +33,8 @@ Var(u|x) = Var(y|x) = P(y=1|x)[1-P(y=1|x)]
 
 I.e., MLR5 (homoskedasticity assumption) does not hold as the variance of the error term is seen to depend on $x$. This does _not_ cause estimation bias but it _does_ invalidate the standard error calculations.
 
+***
+
 ## Self-selection problems
 
 Typically, dummy variables are used when a _program effect_ is being investigated, e.g. the effectiveness of a drug, new job training etc. 
@@ -60,6 +62,8 @@ It is also known that $t_{n-k-1}$ approaches Normal(0, 1) as n increases. Theref
 __$t$ and $F$ testing, and confidence intervals can all be carried out exactly the same even when MLR6 does not hold__.
 
 (Note that even if normality in $u$ is not required, homoskedasticity still _is_ required.)
+
+***
 
 ## Functional forms: Log, Quadratic, Interactions
 
@@ -109,7 +113,35 @@ In this instance, if $\hat\beta_1 >0$ and $\hat\beta_2 <0$ then as x increases, 
 
 (If $\hat\beta_1 <0$ and $\hat\beta_2 >0$ then this pattern would be reversed and y would decrease with x at low x, before turning to increase with x at high x).
 
+### Interaction terms
 
+\begin{equation} \label{eq:interact}
+y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \beta_3 x_1 x_2 + u
+\end{equation}
+
+In the PRF given in \eqref{eq:interact} it is not possible to interpret $\beta_1$ alone as measuring how y varies with $x_1$. $\beta_3$ must be taken in to account, too. Taking derivatives, it is found that \eqref{eq:interact_deriv} describes how y changes with $x_1$.
+
+\begin{equation} \label{eq:interact_deriv}
+\Delta y = (\beta_1 + \beta_3 x_2)\Delta x_1
+\end{equation}
+
+Interpreting the coefficients in \eqref{eq:interact} can be tricky. Generally, a coefficient is interpreted as the change in $y$ given a 1-unit change in the independent variable assuming that the other variable included in the interaction has a zero-value (which may be practically absurb). For example from \eqref{eq:interact_deriv} it can be said that $\beta_1$ is the change in $y$ given a one unit change in $x_1$ when $x_2$ is zero (i.e. removing the second term of the brackets). The coefficient for the interaction term measures a change within a change, i.e. how does $x_1$ affect the value of $y$ conditional on the value of $x_2$.
+
+***
+
+## Model comparison - Adjusted R-Squared
+
+$R^2$ is the proportion of variance in $y$ that is explained by the model, i.e. by the combination of $x$ values. Recall, however, that $R^2$ always increases as more regressors are added to the model. Therefore, to compare different models using $R^2$ values, it is necessary to account for the __model size__ (the number of regressors).
+
+Given that $R^2 = 1 - SSR/SST$ and the degrees of freedom in SSR and SST are given by $n-k-1$ and $n-1$ respectively, it is possible to adjust the sums of squares based on the degrees of freedom in them.
+
+\begin{equation} \label{eq:r2_adjust}
+\bar{R}^2 = 1 - \dfrac{SSR/(n-k-1)}{SST/(n-1)}
+\end{equation}
+
+Equation \eqref{eq:r2_adjust} describes the __adjusted R-squared__ property of the model. This is routinely reported in OLS output. 
+
+Two models can be compared using the adjusted R-squared figure, as long as they have the __same outcome__, and that outcome is the the __same functional form__.
 
 
 
