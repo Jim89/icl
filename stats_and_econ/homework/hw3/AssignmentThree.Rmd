@@ -38,7 +38,11 @@ If it is assumed that:
 * gender is represented by a binary variable (named $female$) whereby a value of $1$ indicates female, and $0$ indicates male; and
 * education, experience and marijuana are purely quantitaive variables named as such
 
-then a simple equation such as \eqref{eq:1a} can be written to allow statements such as "Smoking marijuana five more times per month is estimated to change wage by x%". Note that the dummy variable $female$ contrasts the change in wage between genders (holding the other independant constant) with males as the base group.
+then a simple equation such as \eqref{eq:1a} can be written to allow statements such as "Smoking marijuana five more times per month is estimated to change wage by x%". 
+
+To do so using this model would require multiplying the $\beta_4$ coeficient by 5, and then by 100, which would provide the percentage change in wage if marijuana was smoked five more times per month.
+
+Note that the dummy variable $female$ contrasts the change in wage between genders (holding the other variables constant) with males as the base group.
 
 ## 1b
 
@@ -52,45 +56,32 @@ It would be possible to test that there are no differences in the effects of dru
 
 * $H_0:\delta_1 = 0$ and $\delta_2 = 0$, i.e. the wage is the same for men and women who have the same level of drug use.
 
-For this hypothesis, an $F$-statistic could be generated to test for exclusion restrictions. 
+For this hypothesis, an $F$-statistic could be generated to test for exclusion restrictions (see question 1d for a full discussion of this procedure).
 
 ## 1c
 
-
 \begin{equation} \label{eq:1c}
-log(wage) = \beta_0 + \delta_1marijuana + \beta_1 education + \beta_2 experience
-\end{equation}
-
-
-In this example gender is omitted (for simplicity's sake), as are interaction terms between marijuana use and the other variables. It is assumed that marijuana use is given by a categorical factor variable with four levels:
-
-1. nonuser (0 uses per month);
-1. light user (1 to 5 uses per month);
-2. moderate user (6 to 10 uses per month); and
-4. heavy user (greater than 10 uses per month).
-
-In the equation given by \eqref{eq:1c} the effect of marijuana use on wage is given by $\delta_1$. A fuller and more explicit regression function could also be given by:
-
-\begin{equation} \label{eq:1c_2}
 log(wage) = \beta_0 + \delta_0 light + \delta_1 medium + \delta_2 heavy + ... + u
 \end{equation}
 
-In equation \eqref{eq:1c_2}, the "..." term represents the other variables included in \eqref{eq:1c} but omitted here for brevity. In \eqref{eq:1c_2}, $\beta_0$ represents the estimated wage for nonusers holding the other variables constant, $\delta_0$ represents the change for light users, $\delta_1$ for medium users and $\delta_2$ for heavy users.
+In equation \eqref{eq:1c}, the "..." term represents the other variables available (education, experience, gender) but omitted here for brevity. No interaction terms are included for simplicity.
+
+In \eqref{eq:1c}, $\beta_0$ represents the estimated log wage for nonusers holding the other variables constant, $\delta_0$ represents the change for light users, $\delta_1$ for medium users and $\delta_2$ for heavy users.
 
 ## 1d
 
 To test the null hypothesis that marijuana usage has no effect on wage is done using an $F$ statistic. In this instance, _marijuana use_ is not well defined and as such it is assumed that this means that the null is that _any_ use of marijuana has no effect on wage. 
 
-As such, this is best understood using \eqref{eq:1c_2} to test for multiple linear restrictions in the $\delta$ parameters of the marijuana dummy variable. To do so, an __unrestricted__ model is defined (again, gender is omitted for simplicity's sake).
+As such, this is best understood using \eqref{eq:1c} to test for multiple linear restrictions in the $\delta$ parameters of the marijuana dummy variable. To do so, an __unrestricted__ model is defined.
 
 \begin{equation} \label{eq:1d_ur}
-log(wage) = \beta_0 + \delta_0 light + \delta_1 medium + \delta_2 heavy + \beta_1 education + \beta_2 experience + u
+log(wage) = \beta_0 + \delta_0 light + \delta_1 medium + \delta_2 heavy + \beta_1 education + \beta_2 experience + \delta_3 gender + u
 \end{equation}
 
 In order to test the null that marijuana usage has no effect on wage it is also necessary to construct the __restricted model__ that describes this.
 
 \begin{equation} \label{eq:1d_r}
-log(wage) = \beta_0 + \beta_1 edcuation + \beta_2 experience + u
+log(wage) = \beta_0 + \beta_1 edcuation + \beta_2 experience + \delta_3 gender + u
 \end{equation}
 
 The restricted model \eqref{eq:1d_r} will allow the null $H_0: \delta_0 = 0$ and $\delta_1 = 0$ and $\delta_2 = 0$ to be tested.
@@ -103,7 +94,7 @@ F = \dfrac{(SSR_r - SSR_{ur})/q}{SSR_{ur}/(n-k-1)}
 
 In \eqref{eq:1d_fstat} $SSR_r$ and $SSR_{ur}$ represent the sum of squared residuals from the restricted and unrestricted models respectively, $q$ is the number of restrictions and $n-k-1$ is the degrees of freedom in the unrestricted model. 
 
-Having calculated the $F$ statistic, a critical value is defined for the desired significance level using an $F$ distribution with $df1 = q$ and $df2 = n-k-1$. If the $F$ statistic calulcated is greater than or equal to this critical value then the null can be rejected, i.e. it is possible to state that marijuana use _does_ have a statistically significant effect on wage. This is independant of an individual dosage of marijuana (i.e. light/medium/heavy) and instead considers the __joint effect__ of the three doses on wage.
+Having calculated the $F$ statistic, a critical value is defined for the desired significance level using an $F$ distribution with $df_1 = q$ and $df_2 = n-k-1$. If the $F$ statistic calulcated is greater than or equal to this critical value then the null can be rejected, i.e. it is possible to state that marijuana use _does_ have a statistically significant effect on wage. This is independant of an individual dosage of marijuana (i.e. light/medium/heavy) and instead considers the __joint effect__ of the three doses on wage.
 
 ## 1e
 
@@ -124,11 +115,11 @@ In this section data concerning basketball statistics are provided and some line
 ```{r 2load}
 load("./data/nbasal.RData")
 
-# create a dummy variable with centre as reference level
+# create a dummy variable with center as reference level
 # and a clean married factor variable with pretty labels
 data %<>% mutate(pos = factor(ifelse(guard == 1, "guard", 
                               ifelse(forward == 1, "forward", "center")),
-                              levels = c("center", "forward", "guard")),
+                       levels = c("center", "forward", "guard")),
                  marr_fac = factor(marr, labels = c("unmarried", "married")))
 ```
 
@@ -158,12 +149,12 @@ points = `r round(fit_2a_tidy[1, 2], 3)` + `r round(fit_2a_tidy[2, 2], 3)`forwar
 
 ## 2b
 
-Using the output from the regression in 2a and the SRF given in \eqref{eq:2a}, holding experience fixed, a guard scores approximately `r round(fit_2a_tidy[3, 2], 3)` points more than a centre. This value is significant with a $p$ value of `r round(fit_2a_tidy[3, 5], 3)`.
+Using the output from the regression in 2a and the SRF given in \eqref{eq:2a}, holding experience fixed, a guard scores approximately `r round(fit_2a_tidy[3, 2], 3)` [`r round(confint(fit_2a)[3, 1], 3)`, `r round(confint(fit_2a)[3, 2], 3)`] points more than a center. This value is significant at the 5% level with a $p$ value of `r round(fit_2a_tidy[3, 5], 3)`.
 
 ## 2c
 
 ```{r 2c}
-# create a nicer looking marriage factor
+# fit the model and call summary
 fit_2c <- lm(points ~ pos + exper + expersq + marr_fac, data)
 fit_2c_summ <- fit_2c %>% summary
 fit_2c_tidy <- fit_2c %>% tidy
@@ -198,9 +189,9 @@ fit_2d_tidy %>% kable(caption = "Regression coefficients from linear model of po
 
 In addition to the above table of regression coefficients, the $R^2$ value for the fitted model is `r round(fit_2d_summ$r.squared, 2)` and the sample size is `r nrow(data)`.
 
-In this expanded model, the effect of marital status at a given level of experience is to add approximately `r round(fit_2d_tidy[7, 2], 3)` points per game. However, this value is not statistically significant with a $p$ value of `r round(fit_2d_tidy[7, 5], 3)`.
+In this expanded model, the effect of marital status at a given level of experience is to add approximately `r round(fit_2d_tidy[7, 2], 3)+round(fit_2d_tidy[8, 2], 3)` points per game (the combination of $exper:marr$ and $expersq:marr$). 
 
-Additionally, an $F$ statistic can be calulcated to determine if there is a statistically significant relationship between marrital status and points scored, inclusive of the interaction with experience.
+An $F$ statistic can be calulcated to determine if there is a statistically significant relationship between marrital status and points scored, inclusive of the interaction with experience.
 
 ```{r 2d_fstat}
 f_stat <- linearHypothesis(fit_2d, c("marr_facmarried = 0",
@@ -214,14 +205,10 @@ In this case, it appears again that there is _not_ strong evidence that marital 
 ## 2e 
 
 ```{r}
-# create a nicer looking marriage factor
+# fit the model and call summary
 fit_2e <- lm(assists ~ pos + exper + expersq + marr_fac, data)
 fit_2e_summ <- fit_2e %>% summary
 fit_2e_tidy <- fit_2e %>% tidy
-
-# compare effect of position
-fit_2c_fstat <- linearHypothesis(fit_2c, c("posforward = 0", "posguard = 0"))
-fit_2e_fstat <- linearHypothesis(fit_2e, c("posforward = 0", "posguard = 0"))
 
 # make a pretty table
 fit_2e_tidy %>% kable(caption = "Regression coefficients from linear model of assists regressed on position, experience and marital status")
@@ -237,18 +224,41 @@ points = `r round(fit_2e_tidy[1, 2], 3)` + `r round(fit_2e_tidy[2, 2], 3)`forwar
 \end{split}
 \end{equation}
 
-Looking at the individual coefficients for this model, it seems that when the relationship between _assists_ and position is assessed there is a statistically significant relationship, which was not present in the relationship between _points_ and position. 
+### Differences with _points_ (2c) model
 
-This is backed up by an $F$-statistic test for the two models (i.e. one for the points model and one for the assists model). 
+Looking at the individual coefficients for this model, it seems that when the relationship between _assists_ and the guard position is assessed there is a stronger and more highly statistically significant relationship than in the relationship for the _points_ model. 
 
-In the points model from 2c, it was found that position did _not_ have a statistically significant effect on points scored ($F$-statistic = `r round(fit_2c_fstat$F[2], 3)` and associated $p$-value = `r round(fit_2c_fstat$"Pr(>F)"[2], 3)`).
+The effect of experience on assists remains statistically significant (as it was for the points model), however the strength of this effect is reduced compared to the points model ($exper$ coefficient of `r round(fit_2e_tidy[4, 2], 3)` vs `r round(fit_2c_tidy[4, 2], 3)`). Similarly, the effect of marital status has only a small and statistically insignificant effect in both models.
 
-In the assists model from 2e, it was found that position _did_ have a statistically significant effect on points scored ($F$-statistic = `r round(fit_2e_fstat$F[2], 3)` and associated $p$-value = `r round(fit_2e_fstat$"Pr(>F)"[2], 3)`).
+Additionally, the intercept for these two models is very different. In the points model, the intercept (i.e. the expected points scored for an unmarried center) was `r round(fit_2c_tidy[1, 2], 2)`. In the assists model, this value has changed to `r round(fit_2e_tidy[1, 2], 2)`: the magnitude is much smaller _and_ the direction has reversed (and is no longer statistically signficant with a $p$ value of `r round(fit_2e_tidy[1, 5], 3)`). This is likely due to the nature of how basketball is played and the roles of the individual positions in scoring points vs. assisting others to do so (given the nature of the positions, centers are more likely to score a basket than to provide an assist). The two models reflect this distinction.
 
+### Effect of position
 
+Whilst the effect of the guard position is seem to have a larger and more highly statistically significant effect on assists than points, it is also necessary to understand the significance of the joint effect that position has on points and/or assists. To do so, exclusion restrictions are applied and $F$ statistics generated.  
 
+```{r 2e_pos}
+# compare effect of position on points and assists
+fit_2c_fstat_pos <- linearHypothesis(fit_2c, c("posforward = 0", "posguard = 0"))
+fit_2e_fstat_pos <- linearHypothesis(fit_2e, c("posforward = 0", "posguard = 0"))
+```
 
+In the points model from 2c, it was found that overll position did _not_ have a statistically significant (at the 5% level) effect on points scored ($F$-statistic = `r round(fit_2c_fstat_pos$F[2], 3)` and associated $p$-value = `r round(fit_2c_fstat_pos$"Pr(>F)"[2], 3)`).
 
+In the assists model from 2e, it was found that position _did_ have a statistically significant effect (even at the 1% level) on points scored ($F$-statistic = `r round(fit_2e_fstat_pos$F[2], 3)` and associated $p$-value = $`r fit_2e_fstat_pos$"Pr(>F)"[2]`$).
+
+This is of interest as it demonstrates that, overall, position does _not_ have a significant effect on points scored but _does_ have a significant effect on assists.
+
+### Effect of experience
+
+Given the reduction in the strength of effect of experience on assists relative to points a similar test was also performed to test the joint significance of experience in the quadratic form on assists and points.
+
+```{r 2e_exper}
+# compare effect of experience on points and assists
+fit_2c_fstat_exper <- linearHypothesis(fit_2c, c("exper = 0", "expersq = 0"))
+fit_2e_fstat_exper <- linearHypothesis(fit_2e, c("exper = 0", "expersq = 0"))
+```
+
+In both the points and assists models it was found that experience in the quadratic form has a statistially significant effect on the outcome. For the points model this corresponded to an $F$ statistic of `r round(fit_2c_fstat_exper$F[2], 3)` (associated $p$ value of $`r round(fit_2c_fstat_exper$"Pr(>F)"[2], 4)`$) and for the assists model the $F$ statistic was `r round(fit_2e_fstat_exper$F[2], 3)` (associated $p$ value of $`r round(fit_2e_fstat_exper$"Pr(>F)"[2], 5)`$). The assists model is _more_ significant, but with both models producing highly significant $p$ values, the difference is not of great importance.
 
 
 
