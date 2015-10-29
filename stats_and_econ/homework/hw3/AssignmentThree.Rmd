@@ -16,6 +16,7 @@ library(dplyr)
 library(magrittr)
 library(broom)
 library(knitr)
+library(car)
 ```
 
 ***
@@ -114,3 +115,97 @@ Moreoever, there may be many variables that are included in the error term that 
 
 ***
 
+\pagebreak
+
+# Section two
+
+In this section data concerning basketball statistics are provided and some linear models built to investigate relationships in the data. Firstly, the data are loaded and some preparation performed for later calculations.
+
+```{r 2load}
+load("./data/nbasal.RData")
+
+# create a dummy variable with centre as reference level
+data %<>% mutate(pos = factor(ifelse(guard == 1, "guard", 
+                              ifelse(forward == 1, "forward", "center")),
+                              levels = c("center", "forward", "guard")),
+                 marr_fac = factor(marr, labels = c("unmarried", "married")))
+```
+
+A quick exploration of the data was performed and it was found that missing values were present only in the $draft$ field. As this field will not be used for this assigment, no action was taken regarding this.
+
+## 2a
+
+```{r 2a_prep}
+# fit the model and call summary
+fit_2a <- lm(points ~ pos + exper + expersq, data)
+fit_2a_summ <- fit_2a %>% summary
+fit_2a_tidy <- fit_2a %>% tidy
+
+# make a pretty table
+fit_2a_tidy %>% kable(caption = "Regression coefficients from linear model of points regressed on position and experience")
+```
+
+
+In addition to the above table of regression coefficients, the $R^2$ value for the fitted model is `r round(fit_2a_summ$r.squared, 2)` and the sample size is `r nrow(data)`. This leads to the SRF:
+
+\begin{equation} \label{eq:2a}
+\begin{split}
+points = \beta_0 + \delta_0forward + \delta_1guard + \beta_1exper + \beta_2exper^2 +\hat{u} \\
+points = `r round(fit_2a_tidy[1, 2], 3)` + `r round(fit_2a_tidy[2, 2], 3)`forward + `r round(fit_2a_tidy[3, 2], 3)`guard + `r round(fit_2a_tidy[4, 2], 3)`exper + `r round(fit_2a_tidy[5, 2], 3)`exper^2 + \hat{u}
+\end{split}
+\end{equation}
+
+## 2b
+
+Using the output from the regression in 2a and the SRF given in \eqref{eq:2a}, holding experience fixed, a guard scores approximately `r round(fit_2a_tidy[3, 2], 3)` points more than a centre. This value is significant with a $p$ value of `r round(fit_2a_tidy[3, 5], 3)`.
+
+## 2c
+
+```{r 2c}
+# create a nicer looking marriage factor
+fit_2c <- lm(points ~ pos + exper + expersq + marr_fac, data)
+fit_2c_summ <- fit_2c %>% summary
+fit_2c_tidy <- fit_2c %>% tidy
+
+# make a pretty table
+fit_2c_tidy %>% kable(caption = "Regression coefficients from linear model of points regressed on position, experience and marital status")
+```
+
+In addition to the above table of regression coefficients, the $R^2$ value for the fitted model is `r round(fit_2c_summ$r.squared, 2)` and the sample size is `r nrow(data)`. This leads to the SRF:
+
+\begin{equation} \label{eq:2a}
+\begin{split}
+points = \beta_0 + \delta_0forward + \delta_1guard + \beta_1exper + \beta_2exper^2 + \delta_2married + \hat{u} \\
+points = `r round(fit_2c_tidy[1, 2], 3)` + `r round(fit_2c_tidy[2, 2], 3)`forward + `r round(fit_2c_tidy[3, 2], 3)`guard + `r round(fit_2c_tidy[4, 2], 3)`exper + `r round(fit_2c_tidy[5, 2], 3)`exper^2 + `r round(fit_2c_tidy[6, 2], 3)`married + \hat{u}
+\end{split}
+\end{equation}
+
+According to this regression, married players are more productive with an additional `r round(fit_2c_tidy[6, 2], 3)` points scored per game. However, this value is not statistically significant with a $p$ value of `r round(fit_2c_tidy[6, 5], 3)`. As such it is not possible to conclude, with certainty, that married players are more productive at a statistically significant level.
+
+\pagebreak
+
+## 2d
+
+```{r 2d}
+fit_2d <- lm(points ~ pos + exper + expersq + marr_fac + exper:marr_fac + expersq:marr_fac, data)
+fit_2d_summ <- fit_2d %>% summary
+fit_2d_tidy <- fit_2d %>% tidy
+fit_2d_tidy %>% kable(caption = "Regression coefficients from linear model of points regressed on position, experience and marital status, with an interaction between experience and marital status")
+```
+
+
+
+In addition to the above table of regression coefficients, the $R^2$ value for the fitted model is `r round(fit_2d_summ$r.squared, 2)` and the sample size is `r nrow(data)`.
+
+In this expanded model, the effect of marital status at a given level of experience is to add approximately `r round(fit_2d_tidy[7, 2], 3)` points per game. However, this value is not statistically significant with a $p$ value of `r round(fit_2d_tidy[7, 5], 3)`.
+
+Additionally, an $F$ statistic can be calulcated to determine if there is a statistically significant relationship between marrital status and points scored, inclusive of the interaction with experience.
+
+```{r 2d_fstat}
+f_stat <- linearHypothesis(fit_2d, c("marr_facmarried = 0",
+                                     "exper:marr_facmarried = 0",
+                                     "expersq:marr_facmarried = 0"))
+
+```
+
+In this case, it appears again that there is _not_ strong evidence that marital status affects points scored per game, with a $F$ statistic of `r round(f_stat$F[2], 3)` and an associated $p$ value of `r round(f_stat$"Pr(>F)"[2], 3)`.
