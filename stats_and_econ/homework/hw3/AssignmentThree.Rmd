@@ -125,6 +125,7 @@ In this section data concerning basketball statistics are provided and some line
 load("./data/nbasal.RData")
 
 # create a dummy variable with centre as reference level
+# and a clean married factor variable with pretty labels
 data %<>% mutate(pos = factor(ifelse(guard == 1, "guard", 
                               ifelse(forward == 1, "forward", "center")),
                               levels = c("center", "forward", "guard")),
@@ -173,7 +174,7 @@ fit_2c_tidy %>% kable(caption = "Regression coefficients from linear model of po
 
 In addition to the above table of regression coefficients, the $R^2$ value for the fitted model is `r round(fit_2c_summ$r.squared, 2)` and the sample size is `r nrow(data)`. This leads to the SRF:
 
-\begin{equation} \label{eq:2a}
+\begin{equation} \label{eq:2c}
 \begin{split}
 points = \beta_0 + \delta_0forward + \delta_1guard + \beta_1exper + \beta_2exper^2 + \delta_2married + \hat{u} \\
 points = `r round(fit_2c_tidy[1, 2], 3)` + `r round(fit_2c_tidy[2, 2], 3)`forward + `r round(fit_2c_tidy[3, 2], 3)`guard + `r round(fit_2c_tidy[4, 2], 3)`exper + `r round(fit_2c_tidy[5, 2], 3)`exper^2 + `r round(fit_2c_tidy[6, 2], 3)`married + \hat{u}
@@ -209,3 +210,45 @@ f_stat <- linearHypothesis(fit_2d, c("marr_facmarried = 0",
 ```
 
 In this case, it appears again that there is _not_ strong evidence that marital status affects points scored per game, with a $F$ statistic of `r round(f_stat$F[2], 3)` and an associated $p$ value of `r round(f_stat$"Pr(>F)"[2], 3)`.
+
+## 2e 
+
+```{r}
+# create a nicer looking marriage factor
+fit_2e <- lm(assists ~ pos + exper + expersq + marr_fac, data)
+fit_2e_summ <- fit_2e %>% summary
+fit_2e_tidy <- fit_2e %>% tidy
+
+# compare effect of position
+fit_2c_fstat <- linearHypothesis(fit_2c, c("posforward = 0", "posguard = 0"))
+fit_2e_fstat <- linearHypothesis(fit_2e, c("posforward = 0", "posguard = 0"))
+
+# make a pretty table
+fit_2e_tidy %>% kable(caption = "Regression coefficients from linear model of assists regressed on position, experience and marital status")
+```
+
+
+In addition to the above table of regression coefficients, the $R^2$ value for the fitted model is `r round(fit_2e_summ$r.squared, 2)` and the sample size is `r nrow(data)`. This leads to the SRF given below:
+
+\begin{equation} \label{eq:2e}
+\begin{split}
+assists = \beta_0 + \delta_0forward + \delta_1guard + \beta_1exper + \beta_2exper^2 + \delta_2married + \hat{u} \\
+points = `r round(fit_2e_tidy[1, 2], 3)` + `r round(fit_2e_tidy[2, 2], 3)`forward + `r round(fit_2e_tidy[3, 2], 3)`guard + `r round(fit_2e_tidy[4, 2], 3)`exper + `r round(fit_2e_tidy[5, 2], 3)`exper^2 + `r round(fit_2e_tidy[6, 2], 3)`married + \hat{u}
+\end{split}
+\end{equation}
+
+Looking at the individual coefficients for this model, it seems that when the relationship between _assists_ and position is assessed there is a statistically significant relationship, which was not present in the relationship between _points_ and position. 
+
+This is backed up by an $F$-statistic test for the two models (i.e. one for the points model and one for the assists model). 
+
+In the points model from 2c, it was found that position did _not_ have a statistically significant effect on points scored ($F$-statistic = `r round(fit_2c_fstat$F[2], 3)` and associated $p$-value = `r round(fit_2c_fstat$"Pr(>F)"[2], 3)`).
+
+In the assists model from 2e, it was found that position _did_ have a statistically significant effect on points scored ($F$-statistic = `r round(fit_2e_fstat$F[2], 3)` and associated $p$-value = `r round(fit_2e_fstat$"Pr(>F)"[2], 3)`).
+
+
+
+
+
+
+
+
