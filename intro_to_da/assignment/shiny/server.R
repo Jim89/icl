@@ -27,22 +27,19 @@ nodes <- people %>%
 create_diagram <- function(links_data, nodes_data) {
   
   # set up the graph data frame properly
-  links_graph <- graph.data.frame(links_data) 
-  V(links_graph)$name <- 1:57
-  links <- as.data.frame(get.edgelist(links_graph))
-  links$V1<-as.numeric(as.character(links$V1))
-  links$V2<-as.numeric(as.character(links$V2))
-  colnames(links)<-c("source","target")  
-  link_list<-(links)
+  links_data_cln <- links_data %>% 
+    mutate(rater_id = as.numeric(rater_id) - 1,
+           rated_id = as.numeric(rated_id) - 1,
+           rating = as.numeric(rating))
+  
+  nodes_cln <- nodes_data %>% select(id, group)
   
   # make basic diagram 
-  forceNetwork(Links = link_list, Nodes = nodes, Source = "source",
-               Target = "target", NodeID = "id",
-               Group = "group", opacity = .8, legend = TRUE, zoom = TRUE)
+  forceNetwork(Links = links_data_cln, Nodes = nodes_cln, 
+               Source = "rater_id", Target = "rated_id", Value = "rating", 
+               NodeID = "id", Group = "group", 
+               zoom = T, opacity = .8, legend = TRUE)
 }
-
-
-
 
 
 # Define server logic  ---------------------------------------------------------

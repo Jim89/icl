@@ -1,6 +1,4 @@
-# etwork Data Exploration Shiny Application ---------------------------------------
-
-
+# Network Data Exploration Shiny Application ---------------------------------------
 # set up -----------------------------------------------------------------------
 # load packages that will be used for the application
 library(shiny)
@@ -10,9 +8,15 @@ library(igraph)
 library(readxl)
 library(dplyr)
 library(magrittr)
+library(markdown)
 
 # Set up the application ui
 shinyUI(navbarPage("Social network data explorer",
+                   
+tabPanel("Intro",
+         includeMarkdown("./md/intro.md"),
+         hr()),
+         
                    
 tabPanel("3779",
   sidebarLayout(
