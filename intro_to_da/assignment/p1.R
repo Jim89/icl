@@ -1,24 +1,35 @@
 
 # load packages ----------------------------------------------------------------
+  library(MASS)
+  library(lsa)
   library(igraph)
   library(readxl)
   library(dplyr)
   library(magrittr)
   library(tidyr)
-  library(MASS)
+  
 
 # read in the data and set up variables ----------------------------------------
 # read in the data
-groups <- read_excel("./data/BA_Anonymised.xlsx", sheet = "Overview") %>% .[1:12, 1:2]
-people <- read_excel("./data/BA_Anonymised.xlsx", sheet = "Attributes")
-albert_hall_links <- read_excel("./data/BA_Anonymised.xlsx", sheet = "relation 3780")
-workshop_links <- read_excel("./data/BA_Anonymised.xlsx", sheet = "relation 3782")
-weekly_meeting_links <- read_excel("./data/BA_Anonymised.xlsx", sheet = "relation 3781")
-urgent_meeting_links <- read_excel("./data/BA_Anonymised.xlsx", sheet = "relation 3779")
+  groups                <- read_excel("./data/BA_Anonymised.xlsx", sheet = "Overview") %>% .[1:12, 1:2]
+  people                <- read_excel("./data/BA_Anonymised.xlsx", sheet = "Attributes")
+  albert_hall_links     <- read_excel("./data/BA_Anonymised.xlsx", sheet = "relation 3780")
+  workshop_links        <- read_excel("./data/BA_Anonymised.xlsx", sheet = "relation 3782")
+  weekly_meeting_links  <- read_excel("./data/BA_Anonymised.xlsx", sheet = "relation 3781")
+  urgent_meeting_links  <- read_excel("./data/BA_Anonymised.xlsx", sheet = "relation 3779")
+
+# clean up crap excel imports
+  albert_hall_links %<>% apply(2, as.numeric) %>% data.frame() %>% tbl_df()
+  workshop_links %<>% apply(2, as.numeric) %>% data.frame() %>% tbl_df()
+  weekly_meeting_links %<>% apply(2, as.numeric) %>% data.frame() %>% tbl_df()
+  urgent_meeting_links %<>% apply(2, as.numeric) %>% data.frame() %>% tbl_df()
 
 # define key variables
-back_bone <- 1:57
-dat <- list(albert_hall_links, workshop_links, weekly_meeting_links, urgent_meeting_links)
+  back_bone <- 1:57
+  dat <- list(albert_hall_links, 
+              workshop_links, 
+              weekly_meeting_links, 
+              urgent_meeting_links)
 
 
 # data wrangling and extraction ------------------------------------------------
@@ -71,4 +82,44 @@ dat <- list(albert_hall_links, workshop_links, weekly_meeting_links, urgent_meet
   fit_pop_to_imp_nb <- glm.nb(implementation ~ popularity, ordered_degrees)  
   fit_pop_to_adv_nb <- glm.nb(advocacy ~ popularity, ordered_degrees)
 
+# develop response to q2 -------------------------------------------------------
+  picks <- data_frame(id = rep(1:57, each = 57), pick = rep(1:57, 57)) %>% 
+            left_join(albert_hall_links, by = c("id" = "rater_id", 
+                                                "pick" = "rated_id")) %>% 
+            rename(popularity = rating) %>% 
+            left_join(workshop_links, by = c("id" = "rater_id", 
+                                             "pick" = "rated_id")) %>% 
+            rename(design = rating) %>%
+            left_join(weekly_meeting_links, by = c("id" = "rater_id", 
+                                             "pick" = "rated_id")) %>% 
+            rename(implementation = rating) %>%
+            left_join(urgent_meeting_links, by = c("id" = "rater_id", 
+                                             "pick" = "rated_id")) %>% 
+            rename(advocacy = rating)
+  
+  picks[is.na(picks)] <- 0
+  
+# extract responses
+  get_similarities <- function (data, id) {
+      data %>% 
+          filter(id == id) %>% 
+          select(-c(1, 2)) %>% 
+          as.matrix() %>% 
+          cosine
+  }
+  
+  similarities <- lapply(seq_along(1:max(picks$id)), 
+                         function(x) get_similarities(picks, x))
+  
+  
+  
+  
+      
+      
+  
+ 
+  
+  
 
+  
+  
