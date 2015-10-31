@@ -1,5 +1,4 @@
-
-# load packages ----------------------------------------------------------------
+# load packages --------------------------------------------
   library(MASS)
   library(lsa)
   library(igraph)
@@ -8,35 +7,10 @@
   library(magrittr)
   library(tidyr)
   library(ggplot2)
-  
-# read in the data and set up variables ----------------------------------------
-# read in the metadata about individuals and groups
-  groups                <- read_excel("./data/BA_Anonymised.xlsx", sheet = "Overview") %>% .[1:12, 1:2]
-  people                <- read_excel("./data/BA_Anonymised.xlsx", sheet = "Attributes")
 
-# read in network data
-  albert_hall_links     <- read_excel("./data/BA_Anonymised.xlsx", sheet = "relation 3780")
-  workshop_links        <- read_excel("./data/BA_Anonymised.xlsx", sheet = "relation 3782")
-  weekly_meeting_links  <- read_excel("./data/BA_Anonymised.xlsx", sheet = "relation 3781")
-  urgent_meeting_links  <- read_excel("./data/BA_Anonymised.xlsx", sheet = "relation 3779")
-
-# read in quiz responses
-  guest_list            <- read_excel("./data/BA_Anonymised.xlsx", sheet = "multiple_choice 1056")
-  style                 <- read_excel("./data/BA_Anonymised.xlsx", sheet = "multiple_choice 1055")
-  option1               <- read_excel("./data/BA_Anonymised.xlsx", sheet = "multiple_choice 1054")
-  option2               <- read_excel("./data/BA_Anonymised.xlsx", sheet = "multiple_choice 1053")  
-
-# clean up crap excel imports
-  people %<>% apply(2, as.numeric) %>% data.frame() %>% tbl_df()
-  albert_hall_links %<>% apply(2, as.numeric) %>% data.frame() %>% tbl_df()
-  workshop_links %<>% apply(2, as.numeric) %>% data.frame() %>% tbl_df()
-  weekly_meeting_links %<>% apply(2, as.numeric) %>% data.frame() %>% tbl_df()
-  urgent_meeting_links %<>% apply(2, as.numeric) %>% data.frame() %>% tbl_df()
-  guest_list %<>% apply(2, as.numeric) %>% data.frame() %>% tbl_df()
-  style %<>% apply(2, as.numeric) %>% data.frame() %>% tbl_df()
-  option1 %<>% apply(2, as.numeric) %>% data.frame() %>% tbl_df()
-  option2 %<>% apply(2, as.numeric) %>% data.frame() %>% tbl_df()
-  
+# get the data and source functions
+  source("./001_get_data.R")
+    
 # data wrangling and extraction ------------------------------------------------
 
 # define key variables
@@ -54,22 +28,21 @@
           left_join(option2, by = c("id" = "rater")) %>% rename(option2 = item)
 
 
-# get network properties -------------------------------------------------------
-# define formulae to extract properties from a dataframe
-
-# extract in degree centrality
+# network properties -----------------------------------------------------------
+# helper functions
+  # extract in degree centrality
   get_indegrees <- function (data) {
     graph <- graph.data.frame(data, directed = TRUE)
     indegrees <- degree(graph, v = V(graph), mode = "in", loops = FALSE)
     return(indegrees)
   }
   
-# extract betweenness
+  # extract betweenness
   get_betweenness <- function(data) {
     graph <- graph.data.frame(data, directed = TRUE)
     betweenness <- betweenness(graph, v = V(graph), directed = TRUE)
-  } 
-
+  }
+  
   
 # get centrality  
   indegrees <- lapply(seq_along(dat), function(x) get_indegrees(dat[x]))
@@ -83,6 +56,8 @@
 # get betweenness
   betweenness <- lapply(seq_along(dat), function(x) get_betweenness(dat[x]))
 
+  
+  
   
 # extract in centrality in node order (1:57) for easier comparisons
   extract_in_order <- function (degrees_obj) {
@@ -158,7 +133,7 @@
 # ------------------------------------------------------------------------------
 # create base table with vp scores
   # create base table
-  base %<>% left_join(vp, by = C("id" = "id"))
+  base %<>% left_join(vp, by = "id")
   write.csv(base, file = "./data/base_table.csv", row.names = F)
   
       
