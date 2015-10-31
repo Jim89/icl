@@ -163,15 +163,51 @@
                 setNames(c("id", "flex")) %>% 
                 tbl_df() %>% 
                 mutate(z = (flex - mean(flex, na.rm = TRUE))/sd(flex, na.rm = TRUE)) %>% 
-                arrange(flex)
+                arrange(flex) %>% 
+                apply(2, as.numeric) %>% 
+                data.frame %>% tbl_df
   
 # develop response to q3 -------------------------------------------------------
+  # add other info to flex score table
+  flex_score %<>% left_join(base, by = "id") # may want to add other criteria - to discuss
   
-      
-      
+# develop response to q4 -------------------------------------------------------
   
+# extract all network properties -----------------------------------------------
+  # extract in degree centrality
+  get_degrees <- function (data, type = c("in", "out")) {
+    graph <- graph.data.frame(data, directed = TRUE)
+    indegrees <- degree(graph, v = V(graph), mode = type, loops = FALSE)
+    return(indegrees)
+  }
+  
+  # extract betweenness
+  get_betweenness <- function(data) {
+    graph <- graph.data.frame(data, directed = TRUE)
+    betweenness <- betweenness(graph, v = V(graph), directed = TRUE)
+    return(betweenness)
+  }  
+
+# get eigen centrality
+  get_eig <- function(data) {
+    graph <- graph.data.frame(data, directed = TRUE)
+    eig_cent <- eigen_centrality(graph, directed = TRUE)$vector
+    return(eig_cent)
+  }
+      
+# get closeness    
+  get_closeness <- function(data) {
+    graph <- graph.data.frame(data, directed = TRUE)
+    close <- closeness(graph, vids = V(graph), mode = "in")
+    return(close)
+  }  
  
-  
+# get properties
+  indegrees   <- lapply(seq_along(dat), function(x) get_degrees(dat[x], type = "in"))
+  outdegrees  <- lapply(seq_along(dat), function(x) get_degrees(dat[x], type = "out"))
+  betweenness <- lapply(seq_along(dat), function(x) get_betweenness(dat[x]))
+  eigen_cent  <- lapply(seq_along(dat), function(x) get_eig(dat[x]))
+  closeness   <- lapply(seq_along(dat), function(x) get_closeness(dat[x]))
   
 
   
