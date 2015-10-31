@@ -156,8 +156,16 @@
                           function(x) get_cosines(similarities[x]))
   
 # aggregate and simplify to give flexiblity score (median cosine value)
-  flex_score <- lapply(seq_along(cosine_values), 
-                       function(x) median(cosine_values[[x]]))
+  flex_score <- sapply(seq_along(cosine_values), 
+                       function(x) median(cosine_values[[x]])) %>% 
+                data.frame() %>%
+                add_rownames() %>% 
+                setNames(c("id", "flex")) %>% 
+                tbl_df() %>% 
+                mutate(z = (flex - mean(flex, na.rm = TRUE))/sd(flex, na.rm = TRUE)) %>% 
+                arrange(flex)
+  
+# develop response to q3 -------------------------------------------------------
   
       
       
