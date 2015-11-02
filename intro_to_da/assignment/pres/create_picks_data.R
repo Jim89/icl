@@ -75,6 +75,12 @@ convert_stat_to_df <- function(stat){
     apply(2, as.numeric) %>% data.frame %>% tbl_df
 }
 
+normalise <- function(field){
+  mean <- mean(field, na.rm = TRUE)
+  sd <- sd(field, na.rm = TRUE)
+  value <- (field - mean) / sd
+}
+
 vp <- convert_stat_to_df(indegrees[[1]]) %>% rename(vp = stat)
 
 # create base table
@@ -88,7 +94,10 @@ des_close <- convert_stat_to_df(closeness[[2]])
 design <- base %>% 
           left_join(des_bet, by = "id") %>% rename(bet = stat) %>% 
           left_join(des_eig, by = "id") %>% rename(eig = stat) %>% 
-          left_join(des_close, by = "id") %>% rename(close = stat)
+          left_join(des_close, by = "id") %>% rename(close = stat) %>% 
+          mutate(bet = normalise(bet),
+                 eig = normalise(eig),
+                 close = normalise(close))
 
 # implementation - grab network properites and then create tbl
 imp_bet <- convert_stat_to_df(betweenness[[3]])
@@ -98,7 +107,10 @@ imp_close <- convert_stat_to_df(closeness[[3]])
 implement <- base %>% 
             left_join(imp_bet, by = "id") %>% rename(bet = stat) %>% 
             left_join(imp_eig, by = "id") %>% rename(eig = stat) %>% 
-            left_join(imp_close, by = "id") %>% rename(close = stat)
+            left_join(imp_close, by = "id") %>% rename(close = stat) %>% 
+            mutate(bet = normalise(bet),
+                   eig = normalise(eig),
+                   close = normalise(close))
 
 # advocacy - grab network properites and then create tbl
 adv_bet <- convert_stat_to_df(betweenness[[4]])
@@ -108,7 +120,10 @@ adv_close <- convert_stat_to_df(closeness[[4]])
 advocacy <- base %>% 
   left_join(adv_bet, by = "id") %>% rename(bet = stat) %>% 
   left_join(adv_eig, by = "id") %>% rename(eig = stat) %>% 
-  left_join(adv_close, by = "id") %>% rename(close = stat)
+  left_join(adv_close, by = "id") %>% rename(close = stat) %>% 
+  mutate(bet = normalise(bet),
+         eig = normalise(eig),
+         close = normalise(close))
 
 # write files to excel ---------------------------------------------------------
   library(xlsx)
