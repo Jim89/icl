@@ -1,0 +1,140 @@
+---
+title: "Picking for Success"
+author: "Hoa Giang, Han Mao, Niccolo Valerio, Neha Sharma, Jim Leach"
+logo: ./logo/msc_logo.PNG
+output: 
+  ioslides_presentation:
+    css: ./css/styles.css
+    widescreen: true
+---
+
+## Intro + agenda
+
+```{r packages, echo = FALSE, warning=FALSE, message=FALSE}
+  library(readxl)
+  library(dplyr)
+  library(magrittr)
+  library(igraph)
+  library(networkD3)
+```
+
+> __"It's not _what_ you know, but _who_ you know..."__
+
+<br>
+
+1. Approach to picking
+2. The Royal Albert Hall
+3. Design
+4. Implementation
+5. Advocacy
+6. Questions
+
+# Approach to picking | And the Royal Albert Hall {#divider}
+
+## Approach to picking
+
+<br>
+
+* Visibility points
+
+<br>
+
+* Network and individual properties
+
+<br>
+
+* Sorting and picking
+
+## Royal Albert Hall {.flexbox .vcenter}
+
+The _"Royal Albert Hall"_ network - a proxy for popularity. 
+
+```{r albert_hall, echo = FALSE, message=FALSE, warning=FALSE, fig.align='center'}
+albert_hall_links     <- read_excel("./data/BA_Anonymised.xlsx", sheet = "relation 3780")
+people <- read_excel("./data/BA_Anonymised.xlsx", sheet = "Attributes")
+groups <- read_excel("./data/BA_Anonymised.xlsx", sheet = "Overview") %>% .[1:12, 1:2]
+albert_hall_links %<>% apply(2, as.numeric) %>% data.frame() %>% tbl_df()
+people %<>% apply(2, as.numeric) %>% data.frame() %>% tbl_df()
+groups %<>% apply(2, as.numeric) %>% data.frame() %>% tbl_df()
+
+nodes <- people %>% 
+          left_join(groups, by = c("group" = "group_id")) %>% 
+          mutate(id = as.numeric(id) -1)
+
+# create a function for plotting the graph -------------------------------------
+create_diagram <- function(links_data, nodes_data) {
+
+# set up the graph data frame properly
+  links_graph <- graph.data.frame(links_data) 
+  V(links_graph)$name <- 1:57
+  links <- as.data.frame(get.edgelist(links_graph))
+  links$V1<-as.numeric(as.character(links$V1))
+  links$V2<-as.numeric(as.character(links$V2))
+  colnames(links)<-c("source","target")  
+  link_list<-(links-1)
+  
+# make basic diagram 
+  forceNetwork(Links = link_list, Nodes = nodes, Source = "source",
+               Target = "target", NodeID = "id",
+               Group = "group", opacity = .8, legend = FALSE, zoom = TRUE)
+}
+
+create_diagram(albert_hall_links, nodes_data = nodes)
+
+```
+
+# The picks | Design, Implementation, Advocacy
+
+## Design
+
+Two-day workshop to create the plan
+
+<br>
+
+* Creativity
+
+<br>
+
+* Betweenness
+
+## Design picks
+
+
+
+## Implementation
+
+Meets weekly to refine the details
+
+<br>
+
+* Tighness
+
+<br>
+
+* Cohesion
+
+<br>
+
+* Closeness
+
+## Implementation Picks
+
+## Advocacy
+
+Meets as needed to overcome roadblocks and resolve issues
+
+<br>
+
+* Influence
+
+<br>
+
+* Betweenness
+
+<br>
+
+* Exclusivity
+
+## Advocacy picks
+
+# Questions
