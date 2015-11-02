@@ -209,6 +209,46 @@
   eigen_cent  <- lapply(seq_along(dat), function(x) get_eig(dat[x]))
   closeness   <- lapply(seq_along(dat), function(x) get_closeness(dat[x]))
   
+  
+# create tables for picking from -----------------------------------------------
+# create function for turning stats objects in to tidy df
+  convert_stat_to_df <- function(stat){
+    stat %>% 
+    data.frame() %>%
+    add_rownames() %>% 
+    setNames(c("id", "stat")) %>% 
+    apply(2, as.numeric) %>% data.frame %>% tbl_df
+  }
+  
+  
+# design - grab the network properties and then create a tidy table
+  des_bet <- convert_stat_to_df(betweenness[[2]])
+  des_eig <- convert_stat_to_df(eigen_cent[[2]])
+  des_close <- convert_stat_to_df(closeness[[2]])
+  
+  design <- base %>% 
+            left_join(des_bet, by = "id") %>% rename(bet = stat) %>% 
+            left_join(des_eig, by = "id") %>% rename(eig = stat) %>% 
+            left_join(des_close, by = "id") %>% rename(close = stat)
 
+# implementation - grab network properites and then create tbl
+  imp_bet <- convert_stat_to_df(betweenness[[3]])
+  imp_eig <- convert_stat_to_df(eigen_cent[[3]])
+  imp_close <- convert_stat_to_df(closeness[[3]])
+  
+  implement <- base %>% 
+              left_join(imp_bet, by = "id") %>% rename(bet = stat) %>% 
+              left_join(imp_eig, by = "id") %>% rename(eig = stat) %>% 
+              left_join(imp_close, by = "id") %>% rename(close = stat)
+  
+# advocacy - grab network properites and then create tbl
+  adv_bet <- convert_stat_to_df(betweenness[[4]])
+  adv_eig <- convert_stat_to_df(eigen_cent[[4]])
+  adv_close <- convert_stat_to_df(closeness[[4]])
+  
+  advocacy <- base %>% 
+    left_join(adv_bet, by = "id") %>% rename(bet = stat) %>% 
+    left_join(adv_eig, by = "id") %>% rename(eig = stat) %>% 
+    left_join(adv_close, by = "id") %>% rename(close = stat)
   
   
