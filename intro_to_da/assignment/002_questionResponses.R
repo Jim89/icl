@@ -28,7 +28,7 @@
           left_join(option2, by = c("id" = "rater")) %>% rename(option2 = item)
 
 
-# network properties -----------------------------------------------------------
+# q1 ---------------------------------------------------------------------------
 # helper functions
   # extract in degree centrality
   get_indegrees <- function (data) {
@@ -36,34 +36,19 @@
     indegrees <- degree(graph, v = V(graph), mode = "in", loops = FALSE)
     return(indegrees)
   }
-  
-  # extract betweenness
-  get_betweenness <- function(data) {
-    graph <- graph.data.frame(data, directed = TRUE)
-    betweenness <- betweenness(graph, v = V(graph), directed = TRUE)
-  }
-  
-  
-# get centrality  
-  indegrees <- lapply(seq_along(dat), function(x) get_indegrees(dat[x]))
-  # specific centrality to get popularity points
-  vp <- get_indegrees(albert_hall_links) %>% 
-        data.frame() %>%
-        add_rownames() %>% 
-        setNames(c("id", "vp")) %>% 
-        apply(2, as.numeric) %>% data.frame %>% tbl_df
 
-# get betweenness
-  betweenness <- lapply(seq_along(dat), function(x) get_betweenness(dat[x]))
+# convert network stat to data frame
+  convert_stat_to_df <- function(stat){
+    stat %>% 
+      data.frame() %>%
+      add_rownames() %>% 
+      setNames(c("id", "stat")) %>% 
+      apply(2, as.numeric) %>% data.frame %>% tbl_df
+  }   
   
-  # add vp scores to base table
-  base %<>% left_join(vp, by = "id")
-  write.csv(base, file = "./data/base_table.csv", row.names = F)
-  rm(vp)
+  # get properties
+  indegrees   <- lapply(seq_along(dat), function(x) get_indegrees(dat[x]))
 
-  
-  
-# question one - popularity as predictor of picks ------------------------------  
 # extract in centrality in node order (1:57) for easier comparisons
   extract_in_order <- function (degrees_obj) {
    sapply(seq_along(back_bone), function(x) degrees_obj[as.character(x)]) 
@@ -83,13 +68,13 @@
   ordered_degrees[is.na(ordered_degrees)] <- 0
 
 # exploratory plots  
-  gather(ordered_degrees[, -1]) %>% 
-    ggplot(aes(x = value)) +
-    geom_histogram(aes(fill = key), colour = "white", binwidth = 1) +
-    facet_grid(key ~ .) +
-    xlab("In-Degree node centrality") +
-    ylab("Count") +
-    theme(legend.position = "bottom")
+plot <- gather(ordered_degrees[, -1]) %>% 
+        ggplot(aes(x = value)) +
+        geom_histogram(aes(fill = key), colour = "white", binwidth = 1) +
+        facet_grid(key ~ .) +
+        xlab("In-Degree node centrality") +
+        ylab("Count") +
+        theme(legend.position = "bottom")
   
 # means & variances
   means <- apply(ordered_degrees[, -1], 2, mean)
@@ -97,7 +82,7 @@
   diff <- variances > means
   diffs <- variances / means # variances much higher - therefore use negative binomial regression
   
-# create models ----------------------------------------------------------------
+# create models 
 # OLS linear models
   fit_pop_to_des <- lm(design ~ popularity, ordered_degrees)  
   fit_pop_to_imp <- lm(implementation ~ popularity, ordered_degrees)  
@@ -109,8 +94,8 @@
   fit_pop_to_adv_nb <- glm.nb(advocacy ~ popularity, ordered_degrees)
   
   
-
 # develop response to q2 -------------------------------------------------------
+# set up picks data frame  
   picks <- data_frame(id = rep(1:57, each = 57), pick = rep(1:57, 57)) %>% 
             left_join(albert_hall_links, by = c("id" = "rater_id", 
                                                 "pick" = "rated_id")) %>% 
@@ -127,7 +112,8 @@
   
   picks[is.na(picks)] <- 0
   
-  picks_split <- split(picks, as.factor(id))
+# split picks by ID  
+#  picks_split <- split(data.frame(picks), as.factor(id))
   
 # function to get cosine similarity for an id
   get_similarities <- function (data, node) {
@@ -137,6 +123,7 @@
           as.matrix() %>% 
           cosine
   }
+  
 # apply for all ids (returns list of lists)
   similarities <- lapply(seq_along(1:max(picks$id)), 
                          function(x) get_similarities(picks, x))
@@ -168,87 +155,11 @@
                 data.frame %>% tbl_df
   
 # develop response to q3 -------------------------------------------------------
+  # use excel of picks to select most flexible leader in each team
   # add other info to flex score table
   flex_score %<>% left_join(base, by = "id") # may want to add other criteria - to discuss
   
 # develop response to q4 -------------------------------------------------------
-  
-# extract all network properties -----------------------------------------------
-  # extract in degree centrality
-  get_degrees <- function (data, type = c("in", "out")) {
-    graph <- graph.data.frame(data, directed = TRUE)
-    indegrees <- degree(graph, v = V(graph), mode = type, loops = FALSE)
-    return(indegrees)
-  }
-  
-  # extract betweenness
-  get_betweenness <- function(data) {
-    graph <- graph.data.frame(data, directed = TRUE)
-    betweenness <- betweenness(graph, v = V(graph), directed = TRUE)
-    return(betweenness)
-  }  
+# use dev/imp/adv score as "benefit" for each network and cost = vp's
 
-# get eigen centrality
-  get_eig <- function(data) {
-    graph <- graph.data.frame(data, directed = TRUE)
-    eig_cent <- eigen_centrality(graph, directed = TRUE)$vector
-    return(eig_cent)
-  }
-      
-# get closeness    
-  get_closeness <- function(data) {
-    graph <- graph.data.frame(data, directed = TRUE)
-    close <- closeness(graph, vids = V(graph), mode = "in")
-    return(close)
-  }  
- 
-# get properties
-  indegrees   <- lapply(seq_along(dat), function(x) get_degrees(dat[x], type = "in"))
-  outdegrees  <- lapply(seq_along(dat), function(x) get_degrees(dat[x], type = "out"))
-  betweenness <- lapply(seq_along(dat), function(x) get_betweenness(dat[x]))
-  eigen_cent  <- lapply(seq_along(dat), function(x) get_eig(dat[x]))
-  closeness   <- lapply(seq_along(dat), function(x) get_closeness(dat[x]))
-  
-  
-# create tables for picking from -----------------------------------------------
-# create function for turning stats objects in to tidy df
-  convert_stat_to_df <- function(stat){
-    stat %>% 
-    data.frame() %>%
-    add_rownames() %>% 
-    setNames(c("id", "stat")) %>% 
-    apply(2, as.numeric) %>% data.frame %>% tbl_df
-  }
-  
-  
-# design - grab the network properties and then create a tidy table
-  des_bet <- convert_stat_to_df(betweenness[[2]])
-  des_eig <- convert_stat_to_df(eigen_cent[[2]])
-  des_close <- convert_stat_to_df(closeness[[2]])
-  
-  design <- base %>% 
-            left_join(des_bet, by = "id") %>% rename(bet = stat) %>% 
-            left_join(des_eig, by = "id") %>% rename(eig = stat) %>% 
-            left_join(des_close, by = "id") %>% rename(close = stat)
-
-# implementation - grab network properites and then create tbl
-  imp_bet <- convert_stat_to_df(betweenness[[3]])
-  imp_eig <- convert_stat_to_df(eigen_cent[[3]])
-  imp_close <- convert_stat_to_df(closeness[[3]])
-  
-  implement <- base %>% 
-              left_join(imp_bet, by = "id") %>% rename(bet = stat) %>% 
-              left_join(imp_eig, by = "id") %>% rename(eig = stat) %>% 
-              left_join(imp_close, by = "id") %>% rename(close = stat)
-  
-# advocacy - grab network properites and then create tbl
-  adv_bet <- convert_stat_to_df(betweenness[[4]])
-  adv_eig <- convert_stat_to_df(eigen_cent[[4]])
-  adv_close <- convert_stat_to_df(closeness[[4]])
-  
-  advocacy <- base %>% 
-    left_join(adv_bet, by = "id") %>% rename(bet = stat) %>% 
-    left_join(adv_eig, by = "id") %>% rename(eig = stat) %>% 
-    left_join(adv_close, by = "id") %>% rename(close = stat)
-  
   
