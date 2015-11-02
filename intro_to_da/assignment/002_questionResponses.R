@@ -29,8 +29,7 @@
 
 
 # q1 ---------------------------------------------------------------------------
-# helper functions
-  # extract in degree centrality
+# helper function to extract in degree centrality
   get_indegrees <- function (data) {
     graph <- graph.data.frame(data, directed = TRUE)
     indegrees <- degree(graph, v = V(graph), mode = "in", loops = FALSE)
@@ -46,7 +45,7 @@
       apply(2, as.numeric) %>% data.frame %>% tbl_df
   }   
   
-  # get properties
+# get properties
   indegrees   <- lapply(seq_along(dat), function(x) get_indegrees(dat[x]))
 
 # extract in centrality in node order (1:57) for easier comparisons
@@ -157,9 +156,64 @@ plot <- gather(ordered_degrees[, -1]) %>%
 # develop response to q3 -------------------------------------------------------
   # use excel of picks to select most flexible leader in each team
   # add other info to flex score table
-  flex_score %<>% left_join(base, by = "id") # may want to add other criteria - to discuss
+# get team info
+  teams <- read_excel("./pres/picks_tbls/analysis_normalised_20151101_ver2.xlsx", 
+                      sheet = "tot") %>% 
+            tbl_df %>% 
+            filter(des_pick == 1 | imp_pick == 1 | adv_pick == 1) %>% 
+            select(id, des_pick, imp_pick, adv_pick)
+
+# join on to flexibility scores    
+  flex_score_leaders <- flex_score %>% 
+                        left_join(base, by = "id") %>% 
+                        left_join(teams, by = "id") %>% 
+                        mutate(additional_flex = ifelse(option1 != 0 & 
+                                                        option1 != style, 1, 0)) %>% 
+                        select(id, flex, z, additional_flex, option2, 
+                               des_pick, imp_pick, adv_pick)
+# find team leaders  
+  des_lead <- flex_score_leaders %>% 
+              filter(des_pick == 1) %>% 
+              mutate(score_adj = flex + additional_flex + option2) %>% 
+              filter(score_adj == min(score_adj, na.rm = TRUE))
   
+  imp_lead <- flex_score_leaders %>% 
+    filter(imp_pick == 1) %>% 
+    mutate(score_adj = flex + additional_flex + option2) %>% 
+    filter(score_adj == min(score_adj, na.rm = TRUE))
+  
+  adv_lead <- flex_score_leaders %>% 
+    filter(adv_pick == 1) %>% 
+    mutate(score_adj = flex + additional_flex + option2) %>% 
+    filter(score_adj == min(score_adj, na.rm = TRUE))
+  
+leaders <-   bind_rows(des_lead, imp_lead, adv_lead) %>% 
+              mutate(Team = c("Design", "Implementation", "Advocacy")) %>% 
+              rename(ID = id, Flex = flex, Z = z) %>% 
+              select(Team, ID, Flex, Z)
+    
 # develop response to q4 -------------------------------------------------------
 # use dev/imp/adv score as "benefit" for each network and cost = vp's
+# design
+  design <- read_excel("./pres/picks_tbls/design.xlsx") %>% 
+            mutate(score = 0.6 * bet + 0.3 * eig + 0.1 * close,
+                   ratio = score / vp) %>% 
+            select(id, score) %>% 
+            rename(ID = id, Score = score) %>% 
+            arrange(-Score)
 
+# impelementation
+implementation <- read_excel("./pres/picks_tbls/implementation.xlsx") %>% 
+                  mutate(score = 0.1 * bet + 0.3 * eig + 0.6 * close,
+                         ratio = score / vp) %>% 
+                  select(id, score) %>% 
+                  rename(ID = id, Score = score) %>% 
+                  arrange(-Score)
   
+# advocacy
+advocacy <- read_excel("./pres/picks_tbls/advocacy.xlsx") %>% 
+                mutate(score = 0.4 * bet + 0.4 * eig + 0.2 * close,
+                       ratio = score / vp) %>% 
+                select(id, score) %>% 
+                rename(ID = id, Score = score) %>% 
+                arrange(-Score)
