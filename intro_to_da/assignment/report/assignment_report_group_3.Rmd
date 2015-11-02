@@ -1,0 +1,47 @@
+---
+title: "Introduction to Business Analytics Assignment Report"
+author: "Hoa Giang, Han Mao, Niccolo Valerio, Neha Sharma, Jim Leach"
+date: "2 November 2015"
+output: pdf_document
+---
+
+# People picking
+
+## Problem
+
+For this assignment the group was tasked wit using network data collected from the Business Analytics course to pick three, five-person teams for (1) design; (2) advocacy; and (3) implementation of graduation week plans.
+
+### The catch
+
+The picks were subject to two constraints:
+
+* _Capacity_: Each team must have only five people, and the same individual could not be in more than one team; and
+* _Chemistry_: The picks came with a budget. Each team could only use a maximum of 30 "visibility points" (referred to as VPs). These VPs were a proxy for popularity and were derived from a network set up to mimic the social structure of the students.
+
+## Picking teams and this document
+
+The team-picking exercise was carried out and the results presented to the rest of the course. This document, therefore, presents the results of some more detailed analysis that was conducted as part of the assignment. 
+
+Four questions were assigned that facilitated further exploration and understanding of the networks. The responses to these questions are presented in this document.
+
+***
+
+## Assignment Responses
+
+The assignment was competed using the R language. As part of this, a number of additional packages were used for this assignment, these were:
+
+```{r load_packages, message=FALSE, warning=FALSE}
+  library(MASS)
+  library(lsa)
+  library(igraph)
+  library(readxl)
+  library(dplyr)
+  library(magrittr)
+  library(tidyr)
+  library(ggplot2)
+```
+
+
+### 1 - Regressions
+
+
