@@ -7,6 +7,7 @@
   library(magrittr)
   library(tidyr)
   library(ggplot2)
+  library(stringdist)
 
 # get the data and source functions
   source("./001_get_data.R")
@@ -222,42 +223,63 @@ advocacy <- read_excel("./pres/picks_tbls/advocacy.xlsx") %>%
 # alternative would be picks vs total possible picks
 
 possible_picks <- 6
-calculate_flex_op1 <- function (data, node,  max_picks = 6) {
+get_picks_over_poss <- function (data, node,  max_picks = 6) {
   tmp <- data %>% 
     filter(id == node) %>%
-    select(-c(id, pick)) %>% 
+    dplyr::select(-c(id, pick)) %>% 
     apply(2, sum)
   tmp / possible_picks
 }
 
-similarities_op1 <- lapply(seq_along(1:max(picks$id)), 
-                       function(x) calculate_flex_op1(picks, x, possible_picks))
+picks_over_poss <- lapply(seq_along(1:max(picks$id)), 
+                       function(x) get_picks_over_poss(picks, x, possible_picks))
 
-flex_op1 <- sapply(seq_along(similarities_op1), function(x)
-                    mean(similarities_op1[[x]])) %>% 
-            data.frame() %>%
-            add_rownames() %>% 
-            setNames(c("id", "flex")) %>% 
-            tbl_df() %>% 
-            mutate(z = (flex - mean(flex, na.rm = TRUE))/sd(flex, na.rm = TRUE)) %>% 
-            arrange(flex) %>% 
-            apply(2, as.numeric) %>% 
-            data.frame %>% tbl_df
+avg_picks_over_poss <- sapply(1:57, function(x) 
+                                    mean(picks_over_poss[[x]], na.rm = T)) %>% 
+                        data.frame() %>% 
+                        add_rownames() %>% 
+                        apply(2, as.numeric) %>% 
+                        data.frame() %>% tbl_df() %>% 
+                        setNames(c("id", "picks_over_poss"))
 
-tmp1 <- albert_hall_links %>% 
-  select(-rating) %>% 
-  filter(rater_id == 1) %>% 
-  select(rated_id) %>% unlist %>% 
-  as.integer()
 
-tmp2 <- workshop_links %>% 
-  select(-rating) %>% 
-  filter(rater_id == 1) %>% 
-  select(rated_id) %>% unlist %>% 
-  as.integer()
 
-seq_sim(tmp1, tmp2, method = "jaccard")
+get_jaccard <- function ( data1, data2, data3, data4, node) {
+  tmp1 <- data1 %>% dplyr::select(-rating) %>%  filter(rater_id == node) %>% dplyr::select(rated_id) %>% unlist %>% as.numeric()
+  tmp2 <- data2 %>% dplyr::select(-rating) %>%  filter(rater_id == node) %>% dplyr::select(rated_id) %>% unlist %>% as.numeric()
+  tmp3 <- data3 %>% dplyr::select(-rating) %>%  filter(rater_id == node) %>% dplyr::select(rated_id) %>% unlist %>% as.numeric()
+  tmp4 <- data4 %>% dplyr::select(-rating) %>%  filter(rater_id == node) %>% dplyr::select(rated_id) %>% unlist %>% as.numeric()
   
+  one_four <- seq_sim(tmp1, tmp4, method = "jaccard")
+  one_three <- seq_sim(tmp1, tmp3, method = "jaccard")
+  one_two <- seq_sim(tmp2, tmp2, method = "jaccard")
+  
+  two_four <- seq_sim(tmp2, tmp4, method = "jaccard")
+  two_three <- seq_sim(tmp3, tmp3, method = "jaccard")
+  
+  three_four <- seq_sim(tmp3, tmp4, method = "jaccard")
+  
+  return(mean(c(one_four, one_three, one_two, two_four, two_three, three_four)
+              , na.rm = T))
+          
+}
+
+jaccards <- sapply(1:57, function(x) 
+                  get_jaccard(albert_hall_links, workshop_links,
+                              urgent_meeting_links, weekly_meeting_links, x)) %>% 
+            data.frame() %>% 
+            add_rownames() %>% 
+            apply(2, as.numeric) %>% 
+            data.frame %>% tbl_df %>% setNames(c("id", "mean_jaccard"))
+
+flex_bonus <- jaccards %>% 
+              left_join(avg_picks_over_poss, by = "id") %>% 
+              mutate(flex_score = mean_jaccard * picks_over_poss,
+                     flex_score = ifelse(mean_jaccard == 0 & picks_over_poss == 0,
+                                         NA, flex_score),
+                     flex_score_adj = 1 - flex_score,
+                     z = (flex_score_adj - mean(flex_score_adj, na.rm = T))/sd(flex_score_adj, na.rm = T)) %>% 
+              dplyr::arrange(-flex_score_adj)
 
 
 
