@@ -9,7 +9,7 @@ output: pdf_document
 
 ## Problem
 
-For this assignment the group was tasked wit using network data collected from the Business Analytics course to pick three, five-person teams for (1) design; (2) advocacy; and (3) implementation of graduation week plans.
+For this assignment the group was tasked with using network data collected from the Business Analytics course students to pick three, five-person teams for (1) design; (2) advocacy; and (3) implementation of graduation week plans.
 
 ### The catch
 
@@ -20,17 +20,19 @@ The picks were subject to two constraints:
 
 ## Picking teams and this document
 
-The team-picking exercise was carried out and the results presented to the rest of the course. This document, therefore, presents the results of some more detailed analysis that was conducted as part of the assignment. 
+The team-picking exercise was carried out and the results presented to the students on the course. This document, therefore, presents the results of some more detailed analysis that was conducted as part of the assignment. 
 
 Four questions were assigned that facilitated further exploration and understanding of the networks. The responses to these questions are presented in this document.
 
+The assignment was competed using the R language. The data were read in to R and the `igraph` package (amongst others) was used to perform the network analysis.
+
 ***
+
+\pagebreak
 
 ## Assignment Responses
 
-The assignment was competed using the R language. As part of this, a number of additional packages were used for this assignment:
-
-```{r load_packages, message=FALSE, warning=FALSE}
+```{r load_packages, message=FALSE, warning=FALSE, echo=FALSE}
   library(MASS)
   library(lsa)
   library(igraph)
@@ -62,11 +64,9 @@ The assignment was competed using the R language. As part of this, a number of a
           left_join(option2, by = c("id" = "rater")) %>% rename(option2 = item)
 ```
 
-The data were read in to R and combined in to a list of data frames for ease of computation.
-
 ### 1 - Regressions
 
-Initially, two functions were defined to aid the extraction of the necessary statistics. The first was used to extract the in-degrees centrality value for all nodes in a network, and the second converted the resulting list object to a [tidy](https://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html) data frame for ease of processing.
+The relationship between the in-degree centrality of each node in the Royal Albert Hall network (the "visibility points") and the in-degree centrality in the remaining three networks was assessed to determine if and how popularity (visibility points) affects the likelihood of being picked elsewhere.
 
 ```{r q1_define_functions, echo=FALSE}
 # helper function to extract in-degree centrality
@@ -86,8 +86,6 @@ Initially, two functions were defined to aid the extraction of the necessary sta
   }   
 ```
 
-Next, using these functions, the in-degrees centrality was calculated for each of the four networks and the results combined in to a tidy data frame.
-
 ```{r q2_calculate_statistics, echo=FALSE}
 # get properties
   indegrees   <- lapply(seq_along(dat), function(x) get_indegrees(dat[x]))
@@ -104,39 +102,39 @@ Next, using these functions, the in-degrees centrality was calculated for each o
                         tbl_df() %>% 
                         add_rownames() %>% 
                         setNames(c("id",
-                                   "popularity", 
+                                   "vp", 
                                    "design", 
                                    "implementation", 
                                    "advocacy"))
   ordered_degrees[is.na(ordered_degrees)] <- 0  # set missing values (i.e. no pick) to 0
 ```
 
-An exploratory plot was created to understand the distributions of the in-degrees centrality accross the four networks (see Appendix 1). It was determined that negative binomial regression (a special form of Poisson regression) would probably be most suitable for the problem (as the conditional variances of the distributions were much larger than the conditional means). The models were created and the regression coefficients summarised below.
+An exploratory plot was created to understand the distributions of the in-degrees centrality for each network (see Appendix 1). It was determined that negative binomial regression (a special form of Poisson regression) would probably be most suitable for the problem (as the conditional variances of the distributions were much larger than the conditional means). The models were created and the regression coefficients summarised (please note that OLS linear regression was also performed and the results summarised in Appendix 2):
 
 ```{r q1_fit, echo=FALSE}
 # negative binomial models
-  fit_pop_to_des_nb <- glm.nb(design ~ popularity, ordered_degrees)
-  fit_pop_to_imp_nb <- glm.nb(implementation ~ popularity, ordered_degrees)
-  fit_pop_to_adv_nb <- glm.nb(advocacy ~ popularity, ordered_degrees)
+  fit_pop_to_des_nb <- glm.nb(design ~ vp, ordered_degrees)
+  fit_pop_to_imp_nb <- glm.nb(implementation ~ vp, ordered_degrees)
+  fit_pop_to_adv_nb <- glm.nb(advocacy ~ vp, ordered_degrees)
   
 # create presentation objects
   base_caption1 <- "Regression coefficients from negative binomial regression of"
-  base_caption2 <- "on social popularity"
+  base_caption2 <- "on visibility points (vp)"
   col_name <- c("Term", "Estimate", "Std. Error", "Statistic", "p-value")
   
   des_table <- fit_pop_to_des_nb %>% 
                 tidy %>% 
-                kable(caption = paste(base_caption1, "design picks", base_caption2),
+                kable(caption = paste(base_caption1, "design in-degree centrality", base_caption2),
                       col.names = col_name)
   
   imp_table <- fit_pop_to_imp_nb %>% 
               tidy %>% 
-              kable(caption = paste(base_caption1, "implementation picks", base_caption2),
+              kable(caption = paste(base_caption1, "implementation in-degree centrality", base_caption2),
                     col.names = col_name)
   
   adv_table <- fit_pop_to_adv_nb %>% 
               tidy %>% 
-              kable(caption = paste(base_caption1, "advocacy picks", base_caption2),
+              kable(caption = paste(base_caption1, "advocacy in-degree centrality", base_caption2),
                     col.names = col_name)  
   
 ```
@@ -147,13 +145,17 @@ An exploratory plot was created to understand the distributions of the in-degree
 
 `r adv_table`
 
-It was seen that in all three models there is a statistically significant (at the 1% level) relationship between the in-degrees centrality in the Albert Hall network (a proxy for general popularity) and the in-degrees centrality in the other three networks.
+In all three models there was a statistically significant (at the 1% level) relationship between visibility points and the in-degrees centrality in the other three networks.
 
-The _Albert Hall popularity_ coefficient in each regression value can be interpretted as:
+The _vp_ coefficient can be interpreted as the expected change in the log count of in-degree centrality in the other network(s) given a one-unit change in _vp_. 
 
-* For the _design_ network: a one-unit increase in in-degree centrality in the Albert Hall network resulted in an increase in the expected log count of the design in-degrees centrality by `r round(fit_pop_to_des_nb$coefficients[2], 3)` [`r round(confint(fit_pop_to_des_nb)[2, 1], 3)`, `r round(confint(fit_pop_to_des_nb)[2, 2], 3)`];
-* For the _implementation_ network: a one-unit increase in in-degree centrality in the Albert Hall network resulted in an increase in the expected log count of the implementaion in-degrees centrality by `r round(fit_pop_to_imp_nb$coefficients[2], 3)` [`r round(confint(fit_pop_to_imp_nb)[2, 1], 3)`, `r round(confint(fit_pop_to_imp_nb)[2, 2], 3)`]; and
-* For the _advocacy_ network: a one-unit increase in in-degree centrality in the Albert Hall network resulted in an increase in the expected log count of the advocacy in-degrees centrality by `r round(fit_pop_to_adv_nb$coefficients[2], 3)` [`r round(confint(fit_pop_to_adv_nb)[2, 1], 3)`, `r round(confint(fit_pop_to_adv_nb)[2, 2], 3)`].
+* For _design_ this value was `r round(fit_pop_to_des_nb$coefficients[2], 3)` [`r round(confint(fit_pop_to_des_nb)[2, 1], 3)`, `r round(confint(fit_pop_to_des_nb)[2, 2], 3)`];
+* For _implementation_ this value was `r round(fit_pop_to_imp_nb$coefficients[2], 3)` [`r round(confint(fit_pop_to_imp_nb)[2, 1], 3)`, `r round(confint(fit_pop_to_imp_nb)[2, 2], 3)`]; and
+* For _advocacy_ this value was `r round(fit_pop_to_adv_nb$coefficients[2], 3)` [`r round(confint(fit_pop_to_adv_nb)[2, 1], 3)`, `r round(confint(fit_pop_to_adv_nb)[2, 2], 3)`].
+
+It can be seen that in all three networks there was a positive relationship between _vp_ and in-degree centrality, i.e. a higher popularity results in a higher likelihood of being picked elsewhere.
+
+\pagebreak
 
 ### 2 - Cosine Similarity and flexibility
 
@@ -176,7 +178,7 @@ picks <- data_frame(id = rep(1:57, each = 57), pick = rep(1:57, 57)) %>%
 picks[is.na(picks)] <- 0
 ```
 
-Cosine similarity can be used to measure the similarity between two (or more) vectors of 0's and 1's. Treating each individuals' picks in a given network in this way allows the similarity of their picks accross the four networks to be determined. Extended from this, a _flexibility score_ has been developed.
+Cosine similarity can be used to measure the similarity between two (or more) vectors of 0's and 1's. Treating each individuals' picks in a given network in this way allows the similarity of their picks across the four networks to be determined. Extended from this, a _flexibility score_ has been developed.
 
 ```{r q2_calc_cosine, echo = FALSE}
 # function to get cosine similarity for an id
@@ -207,16 +209,16 @@ Cosine similarity can be used to measure the similarity between two (or more) ve
                           function(x) get_cosines(similarities[x]))
 ```  
   
-Given the four "pick-vectors" for each individual accross each network, the cosine similarity between all combinations of these vectors has been determined (i.e. vector 1 with vectors 2, 3, and 4; vector 2 with vectors 1, 3, and 4 etc). 
+Given the four "pick-vectors" for each individual across each network, the cosine similarity between all combinations of these vectors has been determined (i.e. vector 1 with vectors 2, 3, and 4; vector 2 with vectors 1, 3, and 4 etc). 
 
 After doing this (and ignoring the comparison of a pick vector with itself), the average (mean) value of the cosine similarity score was calculated to give an approximate, single-value measure for each individual.
 
-It should be noted that given that the `cosine` function measures _similarity_, a lower value actually represents a higher flexibility. Therefore, the cosine similarity was subtracted from one to give an overall flexibility score where a higher value indicates a more flexible individual. As such, the flexiblity is simply one minus the mean cosine similarity for all pick-vector to pick-vector comparisons for each individual.
+It should be noted that given that the `cosine` function measures _similarity_, a lower value actually represents a higher flexibility. Therefore, the cosine similarity was subtracted from one to give an overall flexibility score where a higher value indicates a more flexible individual. As such, the flexibility is simply one minus the mean cosine similarity for all pick-vector to pick-vector comparisons for each individual.
 
 ```{r q2_aggregate, echo = FALSE}
 # aggregate and simplify to give flexiblity score (median cosine value)
   flex_score <- sapply(seq_along(cosine_values), 
-                       function(x) median(cosine_values[[x]])) %>% 
+                       function(x) mean(cosine_values[[x]])) %>% 
                 data.frame() %>%
                 add_rownames() %>% 
                 setNames(c("id", "flex")) %>%
@@ -270,13 +272,13 @@ leaders <-   bind_rows(des_lead, imp_lead, adv_lead) %>%
               select(Team, ID, Flex, Z)
 ```
 
-After assigning five individuals to each team (see supporting presentation material for a description of how this was performed) it was also necessary to pick a team leader. As well as the flexiblity score developed above, additional information was used to assign each member of the team extra flexibility.
+After assigning five individuals to each team (see supporting presentation material for a description of how this was performed) it was also necessary to pick a team leader. As well as the flexibility score developed above, additional information was used to assign each member of the team extra flexibility.
 
 Using data from the personality quiz, an individual was assigned:
 
-* one additional point on the flexiblity score for choosing to host a party using two different invitation methods;
-* one additional point on the flexiblity score for choosing to use a mix of invitation methods weighted in favour of their preferred method; and
-* two additional points on the flexiblity score for choosing to use a 50/50 split mix of invitation methods from their first and second preferences.
+* one additional point on the flexibility score for choosing to host a party using two different invitation methods;
+* one additional point on the flexibility score for choosing to use a mix of invitation methods weighted in favour of their preferred method; and
+* two additional points on the flexibility score for choosing to use a 50/50 split mix of invitation methods from their first and second preferences.
 
 After performing this process, the following three IDs were selected to be the lead member of each team.
 
@@ -315,7 +317,7 @@ advocacy <- read_excel("./data/advocacy.xlsx") %>%
 To produce a "cost-benefit" ratio for each network (where the cost is defined as the in-degrees centrality for each node on the Albert Hall network) the picking scores were used. These scores are defined as follows:
 
 * $Design = 0.6 Betweenness + 0.3 Eigenvector centrality + 0.1 Closeness$
-* $Implementaion = 0.1 Betweenness + 0.3 Eigenvector centrality + 0.6 Closeness$
+* $Implementation = 0.1 Betweenness + 0.3 Eigenvector centrality + 0.6 Closeness$
 * $Advocacy = 0.4 Betweenness + 0.4 Eigenvector centrality + 0.2 Closeness$
 
 Having defined these formulae, the tables below present each ID in each network, along with the associated measure-of-value (which is defined as $\frac{score}{visibility}$).
@@ -326,6 +328,8 @@ kable(implementation, caption = "Implementation network measure of value")
 kable(advocacy, caption = "Advocacy network measure of value")
 ```
 
+***
+
 \pagebreak
 
 ## Appendices
@@ -334,7 +338,7 @@ kable(advocacy, caption = "Advocacy network measure of value")
 
 ```{r appendix1, echo = FALSE}
 ordered_degrees[, -1] %>% 
-  rename(Popularity = popularity,
+  rename(Popularity = vp,
          Design = design,
          Implementation = implementation,
          Advocacy = advocacy) %>% 
@@ -351,3 +355,39 @@ ordered_degrees[, -1] %>%
             panel.grid.major.x = element_blank())
             
 ```  
+
+\pagebreak
+
+### Appendix Two - OLS Linear Regression Results
+```{r appendix2, echo=FALSE}
+# OLS linear models
+  fit_pop_to_des <- lm(design ~ vp, ordered_degrees)  
+  fit_pop_to_imp <- lm(implementation ~ vp, ordered_degrees)  
+  fit_pop_to_adv <- lm(advocacy ~ vp, ordered_degrees)
+  
+# create presentation objects
+  lm_base_caption1 <- "Regression coefficients from linear regression of"
+  lm_base_caption2 <- "on visibility points (vp)"
+  col_name <- c("Term", "Estimate", "Std. Error", "Statistic", "p-value")
+  
+  des_table_lm <- fit_pop_to_des %>% 
+                tidy %>% 
+                kable(caption = paste(lm_base_caption1, "design picks", base_caption2),
+                      col.names = col_name)
+  
+  imp_table_lm <- fit_pop_to_imp %>% 
+              tidy %>% 
+              kable(caption = paste(lm_base_caption1, "implementation picks", base_caption2),
+                    col.names = col_name)
+  
+  adv_table_lm <- fit_pop_to_adv %>% 
+              tidy %>% 
+              kable(caption = paste(lm_base_caption1, "advocacy picks", base_caption2),
+                    col.names = col_name)   
+```
+
+`r des_table_lm`
+
+`r imp_table_lm`
+
+`r adv_table_lm`
