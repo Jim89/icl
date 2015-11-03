@@ -43,6 +43,7 @@ The assignment was competed using the R language. The data were read in to R and
   library(ggplot2)
   library(knitr)
   library(broom)
+  library(stringdist)
 ```
 
 ```{r load_data, echo=FALSE}
@@ -65,8 +66,6 @@ The assignment was competed using the R language. The data were read in to R and
 ```
 
 ### 1 - Regressions
-
-The relationship between the in-degree centrality of each node in the Royal Albert Hall network (the "visibility points") and the in-degree centrality in the remaining three networks was assessed to determine if and how popularity (visibility points) affects the likelihood of being picked elsewhere.
 
 ```{r q1_define_functions, echo=FALSE}
 # helper function to extract in-degree centrality
@@ -109,7 +108,7 @@ The relationship between the in-degree centrality of each node in the Royal Albe
   ordered_degrees[is.na(ordered_degrees)] <- 0  # set missing values (i.e. no pick) to 0
 ```
 
-An exploratory plot was created to understand the distributions of the in-degrees centrality for each network (see Appendix 1). It was determined that negative binomial regression (a special form of Poisson regression) would probably be most suitable for the problem (as the conditional variances of the distributions were much larger than the conditional means). The models were created and the regression coefficients summarised (please note that OLS linear regression was also performed and the results summarised in Appendix 2):
+Negative binomial regression is most suitable for the problem as the data are count data and have variances greater than their means (Appendix 1). The models were created and the regression coefficients found to be:
 
 ```{r q1_fit, echo=FALSE}
 # negative binomial models
@@ -145,15 +144,11 @@ An exploratory plot was created to understand the distributions of the in-degree
 
 `r adv_table`
 
-In all three models there was a statistically significant (at the 1% level) relationship between visibility points and the in-degrees centrality in the other three networks.
+The _vp_ coefficient can be interpreted as the expected change in the log count of in-degree centrality in the other network(s) given a one-unit change in _vp_ (visibility points). 
 
-The _vp_ coefficient can be interpreted as the expected change in the log count of in-degree centrality in the other network(s) given a one-unit change in _vp_. 
+In all three models there was a positive and statistically significant (at the 1% level) relationship between visibility points and the in-degrees centrality in the other three networks. I.e. increased popularity resulted in an increased likelihood of being picked elsewhere.
 
-* For _design_ this value was `r round(fit_pop_to_des_nb$coefficients[2], 3)` [`r round(confint(fit_pop_to_des_nb)[2, 1], 3)`, `r round(confint(fit_pop_to_des_nb)[2, 2], 3)`];
-* For _implementation_ this value was `r round(fit_pop_to_imp_nb$coefficients[2], 3)` [`r round(confint(fit_pop_to_imp_nb)[2, 1], 3)`, `r round(confint(fit_pop_to_imp_nb)[2, 2], 3)`]; and
-* For _advocacy_ this value was `r round(fit_pop_to_adv_nb$coefficients[2], 3)` [`r round(confint(fit_pop_to_adv_nb)[2, 1], 3)`, `r round(confint(fit_pop_to_adv_nb)[2, 2], 3)`].
-
-It can be seen that in all three networks there was a positive relationship between _vp_ and in-degree centrality, i.e. a higher popularity results in a higher likelihood of being picked elsewhere.
+(OLS regression was also performed - Appendix 2).
 
 \pagebreak
 
@@ -177,8 +172,6 @@ picks <- data_frame(id = rep(1:57, each = 57), pick = rep(1:57, 57)) %>%
 
 picks[is.na(picks)] <- 0
 ```
-
-Cosine similarity can be used to measure the similarity between two (or more) vectors of 0's and 1's. Treating each individuals' picks in a given network in this way allows the similarity of their picks across the four networks to be determined. Extended from this, a _flexibility score_ has been developed.
 
 ```{r q2_calc_cosine, echo = FALSE}
 # function to get cosine similarity for an id
@@ -209,11 +202,11 @@ Cosine similarity can be used to measure the similarity between two (or more) ve
                           function(x) get_cosines(similarities[x]))
 ```  
   
-Given the four "pick-vectors" for each individual across each network, the cosine similarity between all combinations of these vectors has been determined (i.e. vector 1 with vectors 2, 3, and 4; vector 2 with vectors 1, 3, and 4 etc). 
+The cosine similarities for each ID's picks were calculated. 
 
-After doing this (and ignoring the comparison of a pick vector with itself), the average (mean) value of the cosine similarity score was calculated to give an approximate, single-value measure for each individual.
+The mean value for each ID was calculated, giving a single-value flexiblity score.
 
-It should be noted that given that the `cosine` function measures _similarity_, a lower value actually represents a higher flexibility. Therefore, the cosine similarity was subtracted from one to give an overall flexibility score where a higher value indicates a more flexible individual. As such, the flexibility is simply one minus the mean cosine similarity for all pick-vector to pick-vector comparisons for each individual.
+A higher cosine _similarity_ represents a lower flexibility. Therefore the similarity was subtracted from one to give a score where a higher value indicates more flexibility. I.e. flexibility is simply one minus the mean cosine similarity for all pick-vector to pick-vector comparisons for each individual.
 
 ```{r q2_aggregate, echo = FALSE}
 # aggregate and simplify to give flexiblity score (median cosine value)
@@ -233,7 +226,9 @@ It should be noted that given that the `cosine` function measures _similarity_, 
         col.names = c("ID", "Flexibility", "Z"))  
 ```  
 
-#### 3 - Determining group leaders
+\pagebreak
+
+### 3 - Determining group leaders
 
 ```{r q3, echo = FALSE}
   teams <- read_excel("./data/analysis_normalised_20151101_ver2.xlsx", 
@@ -272,60 +267,62 @@ leaders <-   bind_rows(des_lead, imp_lead, adv_lead) %>%
               select(Team, ID, Flex, Z)
 ```
 
-After assigning five individuals to each team (see supporting presentation material for a description of how this was performed) it was also necessary to pick a team leader. As well as the flexibility score developed above, additional information was used to assign each member of the team extra flexibility.
+After assigning five individuals to each team, leaders were picked. Qualitative information was used to enhance the flexibility score.
 
 Using data from the personality quiz, an individual was assigned:
 
-* one additional point on the flexibility score for choosing to host a party using two different invitation methods;
-* one additional point on the flexibility score for choosing to use a mix of invitation methods weighted in favour of their preferred method; and
-* two additional points on the flexibility score for choosing to use a 50/50 split mix of invitation methods from their first and second preferences.
+* one additional flexibility point if they chose to host a party using different invitation methods;
+* one additional flexiblity point if they chose to use a weighted mix of invitation methods; and
+* two additional flexiblity points if they chose a 50/50 split mix of invitation methodss.
 
-After performing this process, the following three IDs were selected to be the lead member of each team.
+The following three IDs were selected to be the lead member of each team. They are the individuals with the highest flexibility in each pre-picked team.
 
 ```{r q3_leaders, echo = FALSE}
 kable(leaders, caption = "Team leaders based on flexibility scores", 
-      col.names = c("Team", "ID", "Flexiblity Score", "Z"))
+      col.names = c("Team", "ID", "Adjusted Flexiblity Score", "Original Z"))
 ```
 
-#### 4 ID Rankings
+\pagebreak
+
+### 4 ID Rankings
 
 ```{r q4_prep, echo=FALSE}
 design <- read_excel("./data/design.xlsx") %>% 
             mutate(score = 0.6 * bet + 0.3 * eig + 0.1 * close,
                    ratio = score / vp) %>% 
-            select(id, score) %>% 
-            rename(ID = id, Score = score) %>% 
-            arrange(-Score)
+            select(id, score, vp, ratio) %>% 
+            arrange(-ratio)
 
 # impelementation
 implementation <- read_excel("./data/implementation.xlsx") %>% 
                   mutate(score = 0.1 * bet + 0.3 * eig + 0.6 * close,
                          ratio = score / vp) %>% 
-                  select(id, score) %>% 
-                  rename(ID = id, Score = score) %>% 
-                  arrange(-Score)
+                  select(id, score, vp, ratio) %>% 
+                  arrange(-ratio)
   
 # advocacy
 advocacy <- read_excel("./data/advocacy.xlsx") %>% 
                 mutate(score = 0.4 * bet + 0.4 * eig + 0.2 * close,
                        ratio = score / vp) %>%  
-                select(id, score) %>% 
-                rename(ID = id, Score = score) %>% 
-                arrange(-Score)
+                select(id, score, vp, ratio) %>% 
+                arrange(-ratio)
 ```
 
-To produce a "cost-benefit" ratio for each network (where the cost is defined as the in-degrees centrality for each node on the Albert Hall network) the picking scores were used. These scores are defined as follows:
+To produce a "cost-benefit" ratio for each network (where the cost is defined as visibility points: the in-degrees centrality on the Albert Hall network) the design, implementation and advocacy scores were used. These scores are defined as:
 
 * $Design = 0.6 Betweenness + 0.3 Eigenvector centrality + 0.1 Closeness$
 * $Implementation = 0.1 Betweenness + 0.3 Eigenvector centrality + 0.6 Closeness$
 * $Advocacy = 0.4 Betweenness + 0.4 Eigenvector centrality + 0.2 Closeness$
 
-Having defined these formulae, the tables below present each ID in each network, along with the associated measure-of-value (which is defined as $\frac{score}{visibility}$).
+Note that to make these three network properties comparable, they were mean-centered and standard-deviation-scaled. As such the combined score values range from small positive values to small negative values.
+
+Having defined these formulae, the tables below present each ID in each network, along with the associated measure-of-value (which is defined as $score/visibility$).
 
 ```{r q4_tables, echo = FALSE}
-kable(design, caption = "Design network measure of value")
-kable(implementation, caption = "Implementation network measure of value")
-kable(advocacy, caption = "Advocacy network measure of value")
+col_names <- c("ID", "Network Score", "Visibility Points", "Measure of Value (cost-benefit)")
+kable(design, caption = "Design network measure of value", col.names = col_names)
+kable(implementation, caption = "Implementation network measure of value", col.names = col_names)
+kable(advocacy, caption = "Advocacy network measure of value", col.names = col_names)
 ```
 
 ***
@@ -346,7 +343,7 @@ ordered_degrees[, -1] %>%
       ggplot(aes(x = value)) +
       geom_histogram(aes(fill = key), colour = "white", binwidth = 1) +
       facet_grid(key ~ .) +
-      xlab("In-Degree node centrality") +
+      xlab("In-Degree centrality") +
       ylab("Count") +
       theme(legend.position = "none",
             strip.background = element_rect(fill = "gray80"),
@@ -355,6 +352,8 @@ ordered_degrees[, -1] %>%
             panel.grid.major.x = element_blank())
             
 ```  
+
+As the data are count date, and the conditional variances of the distributions were much larger than the conditional means, negative binomial regression was chosen as the most suitable method for this regression problem.
 
 \pagebreak
 
@@ -391,3 +390,5 @@ ordered_degrees[, -1] %>%
 `r imp_table_lm`
 
 `r adv_table_lm`
+
+Linear models all reveal a statistically significant, positive relationship between visibility points and picks elsewhere. These models were assessed with data of size `r nrow(ordered_degrees)` and have $R^2$ values of `r round(summary(fit_pop_to_des)$r.squared, 3)`, `r round(summary(fit_pop_to_imp)$r.squared, 3)`, `r round(summary(fit_pop_to_adv)$r.squared, 3)` respectively.

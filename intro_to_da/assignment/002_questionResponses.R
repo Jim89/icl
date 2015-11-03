@@ -217,3 +217,49 @@ advocacy <- read_excel("./pres/picks_tbls/advocacy.xlsx") %>%
                 select(id, score) %>% 
                 rename(ID = id, Score = score) %>% 
                 arrange(-Score)
+
+# develop response to bonus question -------------------------------------------
+# alternative would be picks vs total possible picks
+
+possible_picks <- 6
+calculate_flex_op1 <- function (data, node,  max_picks = 6) {
+  tmp <- data %>% 
+    filter(id == node) %>%
+    select(-c(id, pick)) %>% 
+    apply(2, sum)
+  tmp / possible_picks
+}
+
+similarities_op1 <- lapply(seq_along(1:max(picks$id)), 
+                       function(x) calculate_flex_op1(picks, x, possible_picks))
+
+flex_op1 <- sapply(seq_along(similarities_op1), function(x)
+                    mean(similarities_op1[[x]])) %>% 
+            data.frame() %>%
+            add_rownames() %>% 
+            setNames(c("id", "flex")) %>% 
+            tbl_df() %>% 
+            mutate(z = (flex - mean(flex, na.rm = TRUE))/sd(flex, na.rm = TRUE)) %>% 
+            arrange(flex) %>% 
+            apply(2, as.numeric) %>% 
+            data.frame %>% tbl_df
+
+tmp1 <- albert_hall_links %>% 
+  select(-rating) %>% 
+  filter(rater_id == 1) %>% 
+  select(rated_id) %>% unlist %>% 
+  as.integer()
+
+tmp2 <- workshop_links %>% 
+  select(-rating) %>% 
+  filter(rater_id == 1) %>% 
+  select(rated_id) %>% unlist %>% 
+  as.integer()
+
+seq_sim(tmp1, tmp2, method = "jaccard")
+  
+
+
+
+
+  
