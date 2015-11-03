@@ -277,7 +277,7 @@ flex_bonus <- jaccards %>%
               mutate(flex_score = mean_jaccard * picks_over_poss,
                      flex_score = ifelse(mean_jaccard == 0 & picks_over_poss == 0,
                                          NA, flex_score),
-                     flex_score_adj = flex_score,
+                     flex_score_adj = 1-flex_score,
                      z = (flex_score_adj - mean(flex_score_adj, na.rm = T))/sd(flex_score_adj, na.rm = T)) %>% 
               select(id, flex_score_adj, z) %>% 
               left_join(flex_score %>% mutate(rank = row_number(-flex)), by = "id") %>% 
