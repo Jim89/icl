@@ -264,7 +264,7 @@ I.e: Flexibility is simply one minus the mean similarity for all pick-vector to 
 leaders <-   bind_rows(des_lead, imp_lead, adv_lead) %>% 
               mutate(Team = c("Design", "Implementation", "Advocacy")) %>% 
               rename(ID = id, Flex = flex, Z = z) %>% 
-              select(Team, ID, Flex, Z)
+              select(Team, ID, score_adj, Z)
 ```
 
 Qualitative information was used to enhance the flexibility score.
