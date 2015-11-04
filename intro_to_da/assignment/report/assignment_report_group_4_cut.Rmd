@@ -245,21 +245,37 @@ I.e: Flexibility is simply one minus the mean similarity for all pick-vector to 
                                                         option1 != style, 1, 0)) %>% 
                         select(id, flex, z, additional_flex, option2, 
                                des_pick, imp_pick, adv_pick)
-# find team leaders  
-  des_lead <- flex_score_leaders %>% 
+# get tables
+  des_tbl <- flex_score_leaders %>% 
               filter(des_pick == 1) %>% 
               mutate(score_adj = flex + additional_flex + option2) %>% 
+              select(id, flex, z, additional_flex, option2, score_adj) %>% 
+              rename(mix_invite = additional_flex,
+                     mix_prop = option2)
+  
+  imp_tbl <- flex_score_leaders %>% 
+              filter(imp_pick == 1) %>% 
+              mutate(score_adj = flex + additional_flex + option2) %>% 
+              select(id, flex, z, additional_flex, option2, score_adj) %>% 
+              rename(mix_invite = additional_flex,
+                     mix_prop = option2)
+  
+  adv_tbl <- flex_score_leaders %>% 
+              filter(adv_pick == 1) %>% 
+              mutate(score_adj = flex + additional_flex + option2) %>% 
+              select(id, flex, z, additional_flex, option2, score_adj) %>% 
+              rename(mix_invite = additional_flex,
+                     mix_prop = option2)  
+  
+# find team leaders  
+  des_lead <- des_tbl %>% 
               filter(score_adj == max(score_adj, na.rm = TRUE))
   
-  imp_lead <- flex_score_leaders %>% 
-    filter(imp_pick == 1) %>% 
-    mutate(score_adj = flex + additional_flex + option2) %>% 
-    filter(score_adj == max(score_adj, na.rm = TRUE))
+  imp_lead <- imp_tbl %>% 
+              filter(score_adj == max(score_adj, na.rm = TRUE))
   
-  adv_lead <- flex_score_leaders %>% 
-    filter(adv_pick == 1) %>% 
-    mutate(score_adj = flex + additional_flex + option2) %>% 
-    filter(score_adj == max(score_adj, na.rm = TRUE))
+  adv_lead <- adv_tbl %>% 
+              filter(score_adj == max(score_adj, na.rm = TRUE))
   
 leaders <-   bind_rows(des_lead, imp_lead, adv_lead) %>% 
               mutate(Team = c("Design", "Implementation", "Advocacy")) %>% 
@@ -267,16 +283,31 @@ leaders <-   bind_rows(des_lead, imp_lead, adv_lead) %>%
               select(Team, ID, score_adj, Z)
 ```
 
-Qualitative information was used to enhance the flexibility score.
+Personalities also affect flexibility.
 
-An individual was assigned one additional flexibility point if they chose to:
+Individual were assigned additional flexibility points based on their personality quiz responses:
 
-* host a party using different invitation methods;
-* use a weighted mix of invitation methods;
+```{r add_points_tbl, echo = FALSE}
+extra <- data.frame(Choice = c("Host a party with different invitation methods",
+                               "Use preferred method of invitation",
+                               "Use a 50/50 split of invitation methods"),
+                    AddPoints = c(1, 1, 2))
+kable(extra, caption = "Additional flexiblity point awards", 
+      col.name = c("Criteria", "Bonus points awarded"))
+```
 
-and two points if they chose a 50/50 split mix of invitation methods.
+The adjusted scores for each team were:
 
-Three IDs were selected to be the team leaders. They have the highest flexibility in each team.
+```{r kable_adjusted_scores, echo = FALSE}
+fields <- c("ID", "Original Flexibility", "Z", "Mixed Invite Bonus", "Mix Proportion Bonus", "Adjusted Flexiblity")
+kable(des_tbl, col.names = fields, caption = "Design team flexiblity scores and adjustments", digits = 3)
+kable(imp_tbl, col.names = fields, caption = "Implementation team flexiblity scores and adjustments", digits = 3)
+kable(adv_tbl, col.names = fields, caption = "Advocacy team flexiblity scores and adjustments", digits = 3)
+```
+
+\pagebreak
+
+The three IDs with the highest flexibility in each team were selected to be leaders:
 
 ```{r q3_leaders, echo = FALSE}
 kable(leaders, caption = "Team leaders based on flexibility scores", 
@@ -398,9 +429,13 @@ avg_picks_over_poss <- sapply(1:57, function(x)
                         setNames(c("id", "picks_over_poss"))
 ```
 
-This was then combined with the Jaccard distance scores and an overall flexibility score derived by multiplying the mean Jaccard distance for each ID's picks by the mean "picks proportion score" derived above. In this way, ID's were penalised for choosing fewer picks in each network. 
+This was then combined with the Jaccard distance scores and an overall flexibility score derived by multiplying the mean Jaccard distance for each ID's picks by the mean "picks proportion score" derived above \eqref{eq:j_flex}. In this way, ID's were penalised for choosing fewer picks in each network. 
 
-This was done as, for two IDs with the same mean Jaccard distance, a higher flexibility score should be assigned to the ID that made 6 picks in each network than the ID that made 1 pick in each network.
+\begin{equation} \label{eq:j_flex}
+Flexiblity_{Jaccard} = mean(d_j (A, b)) * mean(\dfrac{picks}{possible picks}) 
+\end{equation}
+
+This was done as, for two IDs with the same mean Jaccard distance, a higher flexibility score should be assigned to the ID that made 6 picks in each network than the ID that made 1 pick in each network (i.e. not picking does not equate to more flexiblity!).
 
 ```{r bonus_combine_picks_with_jaccard, echo = FALSE}
 flex_bonus <- jaccards %>% 
@@ -432,7 +467,9 @@ When ID 4's pick vectors were compared with cosine similarity, the all-0 vectors
 
 However when using the Jaccard similarity to compare the differences in the _sets_ of picks (as opposed to the (0, 1) pick _vectors_) the sets where no picks were made (equivalent to the all-0 vectors in the cosine method) did not cause any degeneracy and returned a Jaccard similarity of 0. Therefore, when taking the mean, the no-pick sets came in to play. They simply down-weighted the Jaccard similarity score for ID 4. Using the formula in \eqref{eq:j_dist}, this generated a mean Jaccard distance of `r 1-round(get_jaccard(albert_hall_links, workshop_links, urgent_meeting_links, weekly_meeting_links, 4), 3)`, which seemed high. However this "artificial inflation" was accounted for using the number of picks weighting. Given that ID 4 had an average "picks proportion"  of `r round(mean(c(3/6, 0/6, 3/6, 0/6)), 3)`, the overall Jaccard-based flexibility score was dropped to just `r round(flex_bonus[flex_bonus$id == 4, 2], 3)`.
 
-In this way the two methods are relatively similar. Whilst the weighting for the "picks proportion" is qualitatively sensible, it does not have a significant impact on the quantitative results and does not necessarily constitute a "better" result.
+In this way the two methods are relatively similar. Whilst the weighting for the "picks proportion" is qualitatively sensible, it does not have a significant impact on the quantitative results.
+
+It is possible that in the presence of an all-0 pick vector, the Jaccard method produces better results. As was discussed above, when using the cosine method, all-0 pick vectors result in degeneracy problems that do not occur with the Jaccard method. However, this is a data completeness issue (in this instance) and, were additional data collected, would not necessarily be a factor in distinguishing the superior method. It is therefore not possible to conclude, with certainty, the either method is "better" than the other. 
 
 \pagebreak
 
