@@ -1,5 +1,5 @@
 ---
-title: "Introduction to Business Analytics Assignment Report"
+title: "Introduction to Business Analytics: Assignment Report"
 author: "Hoa Giang, Han Mao, Niccolo Valerio, Neha Sharma, Jim Leach"
 date: "2 November 2015"
 output: pdf_document
@@ -326,13 +326,13 @@ kable(advocacy, caption = "Advocacy network measure of value", col.names = col_n
 
 ### 5 - Bonus
 
-Cosine similarity is just one method for developing a flexibility score. An alternative is to use the _Jaccard similarity_ given by \eqref{eq:jaccard}.
+Cosine similarity is just one method for developing a flexibility score. An alternative is to use the _Jaccard similarity_ which can be used to compare the similarity between two potentially overlapping sets. The Jaccard similarity score is given by \eqref{eq:jaccard}. 
 
 \begin{equation} \label{eq:jaccard}
 J(A, B) = \dfrac{|A\cap B|}{|A \cup B|}
 \end{equation}
 
-In \eqref{eq:jaccard} it is seen that the similarity of two sets can be compared by comparing the relative differences in their [intersection](https://en.wikipedia.org/wiki/Intersection_%28set_theory%29) and [union](https://en.wikipedia.org/wiki/Union_%28set_theory%29). 
+In \eqref{eq:jaccard} it is seen that the similarity of two sets can be calculated by comparing the relative difference in their [intersection](https://en.wikipedia.org/wiki/Intersection_%28set_theory%29) and [union](https://en.wikipedia.org/wiki/Union_%28set_theory%29). 
 
 As with cosine similarity, to represent flexibility in picks, it is more desirable to represent how _dissimilar_ two sets of picks are. This can be performed using the _Jaccard Distance_ \eqref{eq:j_dist} which is simply one minus the Jaccard Similarity.
 
@@ -340,7 +340,7 @@ As with cosine similarity, to represent flexibility in picks, it is more desirab
 d_{j}(A,B) = 1 - J(A, B) = \dfrac{|A\cup B| - |A\cap B|}{|A\cup B|}
 \end{equation}
 
-Treating each individuals' picks on each network as a different set of picks, the Jaccard distance was calculated for each possible combination (e.g. popularity with design, implementation, and advocacy; design with implementation and advocacy etc).
+It should be noted that the Jaccard similarity can be adjusted to also compute differences between (0, 1) vectors, however this was not done in this case. Treating each individuals' picks on each network as a different set, the Jaccard distance was calculated for each possible combination (e.g. popularity with design, implementation, and advocacy; design with implementation and advocacy etc).
 
 ```{r bonus_get_jaccards, echo = FALSE, warning=FALSE}
 get_jaccard <- function ( data1, data2, data3, data4, node) {
@@ -374,7 +374,7 @@ jaccards <- sapply(1:57, function(x)
 
 To give a single-value "score" for each ID, the mean value of the Jaccard distance between their pick sets was taken.
 
-Additionally, the flexiblity score was transformed using the average number of picks made by each ID in each network, relative to the the total number of picks possible in each network. The total possible picks for an ID in each network was 6. Therefore, for each network the proportion of selected picks was calculated using $picks / possible picks$. For example this would return a value of `r 4/6` for an individual who selected four picks out of a possible six. Again, to return a single-value score, the mean "pick proportion" across the four networks was calculated for each ID.
+Additionally, the Jaccard-based   flexibility score was transformed using the average number of picks made by each ID in each network, relative to the the total number of picks possible in each network. The total possible picks for an ID in each network was 6. Therefore, for each network the proportion of selected picks was calculated using $picks / possible picks$. For example this would return a value of `r 4/6` for an individual who selected four picks out of a possible six. Again, to return a single-value score, the mean "pick proportion" across the four networks was calculated for each ID.
 
 ```{r bonus_get_proportions, echo = FALSE}
 possible_picks <- 6
@@ -400,7 +400,7 @@ avg_picks_over_poss <- sapply(1:57, function(x)
 
 This was then combined with the Jaccard distance scores and an overall flexibility score derived by multiplying the mean Jaccard distance for each ID's picks by the mean "picks proportion score" derived above. In this way, ID's were penalised for choosing fewer picks in each network. 
 
-This was done as, for two IDs with the same mean Jaccard distance, a higher flexiblity score should be assigned to the ID that made 6 picks in each network than the ID that made 1 pick in each network.
+This was done as, for two IDs with the same mean Jaccard distance, a higher flexibility score should be assigned to the ID that made 6 picks in each network than the ID that made 1 pick in each network.
 
 ```{r bonus_combine_picks_with_jaccard, echo = FALSE}
 flex_bonus <- jaccards %>% 
@@ -408,7 +408,7 @@ flex_bonus <- jaccards %>%
               mutate(flex_score = mean_jaccard * picks_over_poss,
                      flex_score = ifelse(mean_jaccard == 0 & picks_over_poss == 0,
                                          NA, flex_score),
-                     flex_score_adj = 1-flex_score,
+                     flex_score_adj = (1-flex_score) * picks_over_poss,
                      z = (flex_score_adj - mean(flex_score_adj, na.rm = T))/sd(flex_score_adj, na.rm = T)) %>% 
               select(id, flex_score_adj, z) %>% 
               left_join(flex_score %>% mutate(rank = row_number(-flex)), by = "id") %>% 
@@ -422,21 +422,29 @@ flex_bonus <- jaccards %>%
               arrange(-new_flex)
 ```
 
-Having developed this new, alternative score the previous flexiblity score calculated using cosine similarity was compared. The results are presented below.
+The previous flexibility score calculated using cosine similarity was then compared with the score derived with the Jaccard method. The results are presented overleaf (note that only IDs that actually made picks are shown).
+
+Some similarities and some differences in the score are observed. Some IDs remain relatively unchanged in their flexibility, for example, ID 29 remained in second place having chosen different sets of IDs in each network. ID 44, however, increased it's rank from 4 to 1. This is due to the fact that in the cosine model developed earlier, no weighting for the number of picks was used. ID 44 picked 6 different individuals in each team whereas ID 29 picked only five members for the Royal Albert Hall and for implementation. Hence in the Jaccard scoring method the score for ID 29 was down-weighted pulling it below ID 44. 
+
+Some further similarities can be observed for IDs that made very few picks, again based on the weighting for number of picks made. For example, ID 4 made just 3 picks in the Royal Albert Hall network, 0 picks for design, 3 picks for implementation and 0 picks for advocacy. 
+
+When ID 4's pick vectors were compared with cosine similarity, the all-0 vectors generated by the design and popularity picks caused the distances to degenerate and the resulting cosine similarity is returned as `NaN`, i.e. "not a number" (reference [here](http://stats.stackexchange.com/a/30008)). The 3 picks for the Royal Albert Hall and for popularity were the same (cosine similarity of 1). When calculating the mean cosine similarity, the `NaN` values were ignored and therefore ID 4 generated a mean cosine similarity of 1, and hence a very low flexibility score.
+
+However when using the Jaccard similarity to compare the differences in the _sets_ of picks (as opposed to the (0, 1) pick _vectors_) the sets where no picks were made (equivalent to the all-0 vectors in the cosine method) did not cause any degeneracy and returned a Jaccard similarity of 0. Therefore, when taking the mean, the no-pick sets came in to play. They simply down-weighted the Jaccard similarity score for ID 4. Using the formula in \eqref{eq:j_dist}, this generated a mean Jaccard distance of `r 1-round(get_jaccard(albert_hall_links, workshop_links, urgent_meeting_links, weekly_meeting_links, 4), 3)`, which seemed high. However this "artificial inflation" was accounted for using the number of picks weighting. Given that ID 4 had an average "picks proportion"  of `r round(mean(c(3/6, 0/6, 3/6, 0/6)), 3)`, the overall Jaccard-based flexibility score was dropped to just `r round(flex_bonus[flex_bonus$id == 4, 2], 3)`.
+
+In this way the two methods are relatively similar. Whilst the weighting for the "picks proportion" is qualitatively sensible, it does not have a significant impact on the quantitative results and does not necessarily constitute a "better" result.
 
 \pagebreak
 
 ```{r bonus_present, echo = FALSE}
 flex_bonus %>% 
-  na.omit %>% 
-  kable(caption = "Cosine and Jaccard flexibility scores and Z-values",
+na.omit %>% 
+  kable(caption = "Cosine and Jaccard flexibility scores and Z-values for IDs which made picks",
         col.names = c("ID", "Jaccard Flexibility", "Jaccard Z",
                       "Cosine Flexiblity", "Cosine Z",
                       "Cosine rank", "Jaccard Rank", "Shift"),
         digits = 3)
 ```
-
-TODO: explain differences in score - degeneracy in cosine sim vs. nature of jaccard giving different scores
 
 ***
 
@@ -472,7 +480,7 @@ kable(caption = "Means and variances for in-degrees centrality accross the four 
             
 ```  
 
-As the data are count date, and the conditional variances of the distributions were much larger than the conditional means, negative binomial regression was chosen as the most suitable method for this regression problem.
+As the data are count data, and the conditional variances of the distributions were much larger than the conditional means, negative binomial regression was chosen as the most suitable method for this regression problem.
 
 \pagebreak
 
