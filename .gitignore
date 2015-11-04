@@ -1,28 +1,21 @@
 admin/
-databases/docs/Database Management Systems 3Rd Edition.pdf
-induction/statsIntro/docs/maths_and_data_analysis.pdf
-induction/statsIntro/docs/Tutorial Basic Statistics and Probability using R.pdf
-optimisation/docs/intro_to_or.pdf
+databases/docs/*.pdf
+induction/statsIntro/docs/*.pdf
+optimisation/docs/*.pdf
 preStudy/accounting_primer/bal_pnl_income.xlsx
-stats_and_econ/docs/Jeffrey M. Wooldridge-Introductory Econometrics_ A Modern Approach-South-Western College Pub (2012).pdf
+stats_and_econ/docs/*.pdf
 .Rproj.user
-induction/statsIntro/docs/Mathematical Statistics and Data Analysis.pdf
-induction/statsIntro/docs/Mathematical Statistics and Data Analysis_k2opt.pdf
-stats_and_econ/docs/Jeffrey M. Wooldridge-Introductory Econometrics_ A Modern Approach-South-Western College Pub (2012)_k2opt.pdf
+induction/statsIntro/docs/*.pdf
 stats_and_econ/lectures/*.pdf
 stats_and_econ/notes/*.pdf
-databases/docs/
-databases/notes/L0001.pdf
-databases/lectures/
-intro_to_da/notes/L0001.pdf
-stats_and_econ/docs/lectures/
+databases/notes/*.pdf
+intro_to_da/notes/*.pdf
+stats_and_econ/docs/lectures/*.pdf
 stats_and_econ/homework/*.pdf
 stats_and_econ/homework/*/*.pdf
-intro_to_da/cases/case1_reading.pdf
-intro_to_da/cases/case1_reading_k2opt.pdf
+intro_to_da/cases/*.pdf
 intro_to_da/artciles/*.pdf
 intro_to_da/notes/*.pdf
-stats_and_econ/docs/Statistical Tables.pdf
 intro_to_da/articles/*.pdf
 databases/assigments/*/*.pdf
 intro_to_da/lectures/*.pdf
