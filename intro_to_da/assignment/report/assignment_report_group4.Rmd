@@ -340,7 +340,7 @@ advocacy <- read_excel("./data/advocacy.xlsx") %>%
                 arrange(-ratio)
 ```
 
-The "benefit" in each network were the design, implementation and advocacy scores used for picking:
+The "benefit" in each network were the design, implementation and advocacy scores used for picking. This measure was chosen as it best represents each node's value in that network, as chosen by its peers.
 
 * $Design = 0.6 Betweenness + 0.3 Eigenvector centrality + 0.1 Closeness$
 * $Implementation = 0.1 Betweenness + 0.3 Eigenvector centrality + 0.6 Closeness$
