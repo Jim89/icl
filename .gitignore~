@@ -1,24 +1,36 @@
+# ignore for admin 
 admin/
+
+# ignore for vldm course
 databases/docs/*.pdf
+databases/notes/*.pdf
+databases/assigments/*/*.pdf
+
+# ignore for induction courses
 induction/statsIntro/docs/*.pdf
-optimisation/docs/*.pdf
 preStudy/accounting_primer/bal_pnl_income.xlsx
-stats_and_econ/docs/*.pdf
-.Rproj.user
 induction/statsIntro/docs/*.pdf
+
+# ignore for optimisation class
+optimisation/docs/*.pdf
+
+# ignore for stats class
+stats_and_econ/docs/*.pdf
 stats_and_econ/lectures/*.pdf
 stats_and_econ/notes/*.pdf
-databases/notes/*.pdf
-intro_to_da/notes/*.pdf
 stats_and_econ/docs/lectures/*.pdf
 stats_and_econ/homework/*.pdf
 stats_and_econ/homework/*/*.pdf
-intro_to_da/cases/*.pdf
-intro_to_da/artciles/*.pdf
+
+# ignore for R project files
+.Rproj.user
+
+# ignore for intro to da
 intro_to_da/notes/*.pdf
-stats_and_econ/docs/Statistical Tables.pdf
+intro_to_da/cases/*.pdf
+intro_to_da/notes/*.pdf
 intro_to_da/articles/*.pdf
-databases/assigments/*/*.pdf
+
 intro_to_da/lectures/*.pdf
 *.Rhistory
 intro_to_da/assignment/*.docx
