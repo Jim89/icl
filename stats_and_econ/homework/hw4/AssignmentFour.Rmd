@@ -17,6 +17,8 @@ library(magrittr)
 library(broom)
 library(knitr)
 library(car)
+library(lmtest)
+library(sandwich)
 ```
 
 ***
@@ -29,3 +31,163 @@ In this section, some educational data from the [Michigan Department of Educatio
 load("./data/meap00_01.RData")
 ```
 
+## 1a
+
+```{r 1a}
+fit_1a <- lm(math4 ~ lunch + log(enroll) + log(exppp), data)
+fit_1a_summary <- fit_1a %>% summary
+fit_1a_tidy <- fit_1a %>% tidy
+```
+
+\begin{equation} \label{eq:1a}
+math4 = \beta_0 + \beta_1 lunch + \beta_2 log(enroll) + \beta_3 log(exppp) + u
+\end{equation}
+
+The population regression function in \eqref{eq:1a} was estimated using OLS and the following sample regression function was found.
+
+\begin{equation} \label{eq:1a_srf}
+math4 = `r round(fit_1a_tidy[1, 2], 3)` + `r round(fit_1a_tidy[2, 2], 3)`lunch + `r round(fit_1a_tidy[3, 2], 3)`log(enroll) + `r round(fit_1a_tidy[4, 2], 3)`log(exppp) + \hat{u}
+\end{equation}
+
+The model had an $R^2$ value of `r round(fit_1a_summary$r.squared, 3)` on a sample size of `r nrow(data)`.
+
+The OLS regression coefficient estimates, along with their standard errors, $t$-statistics and $p$-values are given below.
+
+```{r 1a_standard_se}
+fit_1a_tidy %>% kable(caption = "OLS coefficient estimates and standard errors", 
+                      col.names = c("Coefficient", "Estimate", "Std. Error",
+                                    "t-Statisic", "p-Value"))
+```
+
+Additionally, the robust standard errors have been calculated for SRF given by \eqref{eq:1a_srf} and are reported below.
+
+```{r 1a_robust_se}
+vcov_1a <- fit_1a %>% vcovHC(type = "HC1")
+robust_se_1a <- fit_1a %>% coeftest(vcov = vcov_1a)
+robust_se_1a_tidy <- robust_se_1a %>% tidy
+robust_se_1a_tidy %>% kable(caption = "OLS coefficient estimates and robust standard errors",
+                            col.names = c("Coefficient", "Estimate", "Robust Std. Error",
+                                          "t-Statistic", "p-Value"))
+```
+
+Generally, the robust standard errors are slightly larger than the usual standard errors, resulting slightly larger $p$-values. As expected, the point-estimates of the coefficients remain identical.
+
+## 1b
+
+The White test for heteroskedasticity follows the following steps:
+
+1. Conduct "usual" OLS regression (as done in part 1a);
+2. Save the residuals and the fitted values;
+
+```{r 1b_get_resids_and_fits}
+resids <- fit_1a$residuals
+resids_sqr <- resids^2
+
+fitted <- fit_1a$fitted.values
+fitted_sqr <- fitted^2
+```
+
+3. Estimate the model $\hat{u}^2 = \delta_0 + \delta_1\hat{y} + \delta_2\hat{y}^2 + error$ and save the $R^2$ value, $R_{\hat{u}^2}^2$;
+
+```{r 1b_fit}
+fit_1b <- lm(resids_sqr ~ fitted + fitted_sqr)
+fit_1b_rs <- summary(fit_1b)$r.squared
+```
+
+4. Compute the test statistic given by $F = \dfrac{R_{\hat{u}^2}^2 / 2}{(1-R_{\hat{u}^2}^2)/n-3} \textasciitilde F_{2, n-3}$
+
+```{r 1b_get_f_manual}
+f_manual <- (fit_1b_rs/2)/((1-fit_1b_rs)/(nrow(data)-3))
+p_manual <- pf(f_manual, 2, (nrow(data)-3), lower.tail = FALSE)
+```
+
+The value of the $F$ statistic was calculated to be `r f_manual`. The corresponding $p$ value of $`r p_manual`$ was significant even below the 1% level. 
+
+Given the null $H_0: \delta_0 = \delta_1 = \delta_2 = 0$, it was possible to reject the null and conclude that there is a relationship between the errors and the original variables in the model - i.e. that there is evidence of heteroskedasticity. 
+
+The F-statisic can also be computed using the `linearHypothesis` function from the `car` package to assess the significance of the $\delta_1$ and $\delta_2$ coefficients.
+
+```{r 1b_get_f_auto}
+test_1b <- linearHypothesis(fit_1b, c("fitted = 0" , "fitted_sqr = 0"))
+f_auto <- test_1b$F[2]
+p_auto <- test_1b$"Pr(>F)"[2]
+```
+
+This returns an F-statistic of `r f_auto` and a corresponding $p$-value of $`r round(p_auto, 3)`$, i.e. the same values as those calculated manually.
+
+## 1c
+
+The following SRF was estimated.
+
+\begin{equation} \label{1c_srf}
+log(\hat{u}_i^2) = \alpha_0 + \delta_1\widehat{math4_i} + \delta_2\widehat{math4_i^2}
+\end{equation}
+
+```{r 1c_fit_init}
+fit_1c <- lm(log(resids_sqr) ~ fitted + fitted_sqr)
+```
+
+The fitted values, $\hat{g}_i$ were saved and used to obtain the weights via $\hat{h}_i = exp(\hat{g}_i)$.
+
+```{r 1c_get_weights}
+gi_1c <- fit_1c$fitted.values
+hi_1c <- exp(gi_1c)
+```
+
+These weights were then used to obtain the WLS estimates for the PRF given in \eqref{eq:1a}.
+
+```{r 1c_wls}
+fit_1c_wls <- lm(math4 ~ lunch + log(enroll) + log(exppp), data, weights = (1/hi_1c))
+fit_1c_wlc_summary <- fit_1c_wls %>% summary
+fit_1c_wlc_tidy <- fit_1c_wls %>% tidy
+fit_1c_wlc_tidy %>% kable(caption = "Weighted-Least-Squares estimates of regression of math4 on lunch, log(enroll) and log(exppp)",
+                          col.names = c("Coefficient", "Estimate", "Std. Error",
+                                        "t-Statistic", "p-Value"))
+```
+
+This leads to the weighted-least-squares SRF of:
+
+\begin{equation} \label{eq:1c_srf}
+math4 = `r round(fit_1c_wlc_tidy[1, 2], 3)` + `r round(fit_1c_wlc_tidy[2, 2], 3)`lunch + `r round(fit_1c_wlc_tidy[3, 2], 3)`log(enroll) + `r round(fit_1c_wlc_tidy[4, 2], 3)`log(exppp) + \hat{u}
+\end{equation}
+
+The model had an $R^2$ value of `r round(fit_1c_wlc_summary$r.squared, 3)` on a sample size of `r nrow(data)`.
+
+The estimates from OLS are similar but not identical to those obtained from WLS. For example, the coefficient for $lunch$ remains very similar with a value of approximately `r round(fit_1c_wlc_tidy[2, 2], 1)` in both OLS and WLS. More significant changes are observed for the $enroll$ and $exppp$ coefficients. $enroll$ decreased in magnitude from `r round(fit_1a_tidy[3, 2], 3)` to `r round(fit_1c_wlc_tidy[3, 2], 3)`, and $exppp$ increased in magnitude from `r round(fit_1a_tidy[4, 2], 3)` to `r round(fit_1c_wlc_tidy[4, 2], 3)`. Additionally, the $exppp$ coefficient is statistically significant at the 1% level in the WLS model, which was not the case for OLS.
+
+## 1d
+
+The robust standard errors for the WLS model (which allow for some misspecification of the variance function) were calculated.
+
+```{r 1d_rse}
+vcov_1d <- fit_1c_wls %>% vcovHC(type = "HC1")
+robust_se_1d <- fit_1c_wls %>% coeftest(vcov = vcov_1d)
+robust_se_1d_tidy <- robust_se_1d %>% tidy
+robust_se_1d_tidy %>% kable(caption = "WLC coefficient estimates and robust standard errors",
+                            col.names = c("Coefficient", "Estimate", "Robust Std. Error",
+                                          "t-Statistic", "p-Value"))
+```
+
+These values do no differ greatly from the usual WLS errors. However, using the robust standard errors, the WLS coefficient for $enroll$ is no longer statistically significant at the 1% level (it remains so at the 2% level, though).
+
+## 1e
+
+For estimating the effect of spending (given by the $exppp$ model) on $math4$, it would appear that the weighted-least-squares model is more precise. Considering the robust standard errors for both OLS and WLS, the former, OLS, has a value of `r round(robust_se_1a_tidy[4, 3], 3)` whereas the latter, WLS, has a value of `r round(robust_se_1d_tidy[4, 3], 3)`.
+
+> Precision: the quality, condition, or fact of being exact and accurate ([ref](https://www.google.co.uk/search?client=ubuntu&channel=fs&q=precision&ie=utf-8&oe=utf-8&gfe_rd=cr&ei=wyw7VpjSI9PH8gfA4ZaYAg))
+
+Given the definition of precision and the relation of standard error with the standard deviation (which helps to describe the width of a distribution), it is fair to say that WLS is more precise. Given the smaller standard error associated with WLS, the confidence interval for the $exppp$ estimate will be smaller (given by $interval \approx exppp \pm 1.96SE_{exppp}$) and hence the WLS estimate is more precise.
+
+***
+
+\pagebreak
+
+# Section 2
+
+In this section, some educational data from the [Michigan Department of Education](www.michigan.gov/mde) are provided. Relationships between some of the key variables in this data are explored and some models created.
+
+```{r 2load}
+load("./data/jtrain.RData")
+```
+
+## 2a
