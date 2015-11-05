@@ -2,9 +2,9 @@
 admin/
 
 # ignore for vldm course
-databases/docs/*.pdf
-databases/notes/*.pdf
-databases/assigments/*/*.pdf
+vldm/docs/*.pdf
+vldm/notes/*.pdf
+vldm/assigments/*/*.pdf
 
 # ignore for induction courses
 induction/statsIntro/docs/*.pdf

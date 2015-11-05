@@ -24,15 +24,14 @@ stats_and_econ/homework/*/*.pdf
 
 # ignore for R project files
 .Rproj.user
+*.Rhistory
 
 # ignore for intro to da
 intro_to_da/notes/*.pdf
 intro_to_da/cases/*.pdf
 intro_to_da/notes/*.pdf
 intro_to_da/articles/*.pdf
-
 intro_to_da/lectures/*.pdf
-*.Rhistory
 intro_to_da/assignment/*.docx
 intro_to_da/assignment/shiny/data/.~lock.BA_Anonymised.xlsx#
 intro_to_da/assignment/*.pdf
