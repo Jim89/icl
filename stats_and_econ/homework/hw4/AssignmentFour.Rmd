@@ -191,3 +191,136 @@ load("./data/jtrain.RData")
 ```
 
 ## 2a
+
+\begin{equation} \label{eq:2a}
+log(scrap) = \beta_0 + \beta_1grant + u
+\end{equation}
+
+Considering the PRF given by \eqref{eq:2a} there are several reasons why unobserved factors in $u$ might be correlated with $grant$ (a dummy variable indicating if the firm received a grant). Such reasons could include, but are not strictly limited to:
+
+* The firm's performance (either or otherwise) may be tied to whether it receives a training grant;
+* If the firm received a training  grant previously, it may be more or less likely to do so again;
+* Training grants may be awarded based on the firm's size (e.g. number of employeers);
+* Training grants may only be awarded to firms in unions, or only those that are not unionised; and
+* Training grants may be dependent on the total hours of training conducted by the firm in the past.
+
+## 2b
+
+The PRF in \eqref{eq:2a} was estimated using OLS and the results reported:
+
+```{r 2b_fit}
+fit_2b_data <- data %>% filter(d88 == 1) %>% select(lscrap, grant, lscrap_1) %>% na.omit
+fit_2b <- lm(lscrap ~ grant, data = fit_2b_data)
+fit_2b_summary <- fit_2b %>% summary()
+fit_2b_tidy <- fit_2b %>% tidy
+fit_2b_tidy %>% kable(caption = "OLS estimates of regression of the log of scrap rate on grant status for the year 1988",
+                      col.names = c("Coefficient", "Estimate", "Robust Std. Error",
+                                          "t-Statistic", "p-Value"))
+```
+
+Therefore the SRF is given by \eqref{eq:2b}
+
+\begin{equation} \label{eq:2b}
+log(scrap) = `r round(fit_2b_tidy[1, 2], 3)` + `r round(fit_2b_tidy[2, 2], 3)`grant + \hat{u}
+\end{equation}
+
+Additionally, the $R^2$ value for this model was $`r fit_2b_summary$r.squared`$ on a sample size of `r nrow(fit_2b_data)`.
+
+Looking at the SRF given by \eqref{eq:2b}, it appears that receiving a training grant does not significantly lower a firm's scrap rate, for the year 1988. 
+
+## 2c
+
+The explanatory variable $log(scrap_{87})$ was added to the model.
+
+```{r 2c_fit}
+fit_2c <- update(fit_2b, . ~ . + lscrap_1)
+fit_2c_summary <- fit_2c %>% summary
+fit_2c_tidy <- fit_2c %>% tidy
+grant_coef <- fit_2c_tidy[2, 2]
+grant_se <- fit_2c_tidy[2, 3]
+fit_2c_tidy %>% kable(caption = "OLS estimates of regression of the log of scrap rate on grant status for the year 1988, and scrap rate for the year 1987",
+                      col.names = c("Coefficient", "Estimate", "Robust Std. Error",
+                                          "t-Statistic", "p-Value"))
+```
+
+Therefore the SRF is given by \eqref{eq:2c}
+
+\begin{equation} \label{eq:2c}
+log(scrap) = `r round(fit_2c_tidy[1, 2], 3)`  `r round(fit_2c_tidy[2, 2], 3)`grant + `r round(fit_2c_tidy[3, 2], 3)`log(scrap_{87}) + \hat{u}
+\end{equation}
+
+Additionally, the $R^2$ value for this model was $`r fit_2c_summary$r.squared`$ on a sample size of `r nrow(fit_2b_data)`.
+
+The estimated effect of grant has changed. It is now _negative_ (indicating that having a grant lowers the scrap rate) with a value of `r round(fit_2c_tidy[2, 2], 3)`. The interpretation of this coefficient (using information sourced [here](http://davegiles.blogspot.co.uk/2011/03/dummies-for-dummies.html))  is that, when $grant$ switches from 0 to 1 (i.e. when a firm receives a grant), the expected percentage change in the scrap rate is given by \eqref{eq:2c_dummy} and has a value of `r round(100*(exp(grant_coef)-1), 2)`%.
+
+\begin{equation} \label{eq:2c_dummy}
+\begin{split}
+grant_{0\rightarrow 1};\quad \%\delta scrap = 100 * exp(grant)-1 \\
+grant_{1\rightarrow 0};\quad \%\delta scrap = 100 * exp(-grant)-1
+\end{split}
+\end{equation}
+
+```{r 2c_hyp}
+t <- grant_coef / grant_se
+p <- pt(t, fit_2c$df.residual)
+```
+
+It is seen that with a $t$ statistic of `r round(t, 2)` and a $p$-value of `r round(p, 3)`, the coefficient for $grant$ is significant at the 5% level using the one-sided alternative $H_1\quad:\quad\beta_{grant}<0$.
+
+## 2d
+
+The null hypothesis is given that $H_0:\beta_{log(scrap_{87})}=1$. In order to test this a two-sided $t$-test was performed.
+
+```{r 2d}
+t_scrap <- (fit_2c_tidy[3, 2] - 1) / fit_2c_tidy[3, 3]
+t_abs <- abs(t_scrap)
+c <- abs(qt(.05/2, fit_2c$df.residual))
+p_scrap <- pt(t_abs, fit_2c$df.residual, lower.tail = FALSE)
+```
+
+The $p$-value reported by the `pt` function when `lower.tail = FALSE` is $P[X > x]$. For a two-sided test, the null may be rejected when the _absolute value_ of $t$ is greater than some critical value. 
+
+The absolute value of the $t$ statistic for the $\beta_{log(scrap_{87})}$ parameter against the null that it is one was found to be `r round(t_abs, 3)`. Comparing this to the absolute of the critical value at the 5% signficance level in the two sided test of `r round(c, 3)`, it was found to be higher. Therefore the null hypothesis $H_0:\beta_{log(scrap_{87})}=1$ can be rejected at the 5% significane level.
+
+The associated $p$ value was found to be $`r round(p_scrap, 5)`$.
+
+The rejection of the null $H_0:\beta_{log(scrap_{87})}=1$ is backed up by the fact that the 95% confidence interval for $\beta_{log(scrap_{87})}$ does not contain the value 1 : [`r round(confint(fit_2c)[3, ], 3)`].
+
+## 2e 
+
+```{r 2e}
+vcov_2c <- fit_2c %>% vcovHC(type = "HC1")
+robust_se_2c <- fit_2c %>% coeftest(vcov = vcov_2c)
+robust_se_2c_tidy <- robust_se_2c %>% tidy
+grant_rse <- robust_se_2c_tidy[2, 3]
+robust_se_2c_tidy %>% kable(caption = "OLS coefficient estimates and robust standard errors",
+                            col.names = c("Coefficient", "Estimate", "Robust Std. Error",
+                                          "t-Statistic", "p-Value"))
+```
+
+As use of the robust standard errors does not change the point estimates of the coefficients, the SRF for this model remains that given by \eqref{eq:2c}. As such the interpretation of the $grant$ coefficient remains the same as in 2c.
+
+### $grant$ coefficient
+
+The robust standard error for the $grant$ variable remained relatively constant. Previously its value was `r round(grant_se, 3)` and it has changed only to `r round(grant_rse, 3)`. 
+
+To understand the exact effect that this has on the significant of a simple test can be performed as previously.
+
+```{r 2e_hyp}
+t_grant_rse <- grant_coef / grant_rse
+p_grant_rse <- pt(t_grant_rse, fit_2c$df.residual)
+```
+
+It is seen that with a $t$ statistic of `r round(t_grant_rse, 2)` and a $p$-value of `r round(p_grant_rse, 3)`, the coefficient for $grant$ is significant at the 5% level using the one-sided alternative $H_1\quad:\quad\beta_{grant}<0$, even when using robust standard errors.
+
+### $\beta_{log(scrap_{87})}$ coefficient
+
+```{r 2e_scrap}
+t_scrap_rse <- (robust_se_2c_tidy[3, 2] - 1) / robust_se_2c_tidy[3, 3]
+t_abs_rse <- abs(t_scrap_rse)
+c <- abs(qt(.05/2, fit_2c$df.residual))
+p_scrap_rse <- pt(t_abs_rse, fit_2c$df.residual, lower.tail = FALSE)
+```
+
+Performing the same analysis for the $\beta_{log(scrap_{87})}$ coefficient as was done in 2d, it is seen that the $\beta_{log(scrap_{87})}$ remains significant at the 5% level against the null $H_0:\beta_{log(scrap_{87})}=1$ with a $p$ value of `r round(p_scrap_rse, 3)`. Moreoever, the 95% confidence interval still does not contain the value 1: [`r round(robust_se_2c_tidy[3, 2] + c(-1, 1)*1.96*robust_se_2c_tidy[3, 3], 3)`].
+
