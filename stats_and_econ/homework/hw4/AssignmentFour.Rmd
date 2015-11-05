@@ -1,0 +1,31 @@
+---
+title: "Statistics and Econometrics - Assignment Four"
+author: "Jim Leach"
+date: "5 November 2015"
+output: pdf_document
+---
+
+# Document purpose
+
+The purpose of this document is to write up the response to the fourth assignment given as part of the _Statistics and Econometrics_ module. It is divided in to two sections, each covering a section of the assignment as given. Each major section is divided in to further subsections, one for each question in the assignment.
+
+A number of `R` packages have been used throughout this assignment. These are loaded before the responses are given:
+
+```{r load_pkg, echo = TRUE, message = FALSE}
+library(dplyr)
+library(magrittr)
+library(broom)
+library(knitr)
+library(car)
+```
+
+***
+
+# Section 1
+
+In this section, some educational data from the [Michigan Department of Education](www.michigan.gov/mde) are provided. Relationships between some of the key variables in this data are explored and some models created.
+
+```{r 1load}
+load("./data/meap00_01.RData")
+```
+
