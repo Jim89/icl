@@ -13,7 +13,6 @@ A number of `R` packages have been used throughout this assignment. These are lo
 
 ```{r load_pkg, echo = TRUE, message = FALSE}
 library(dplyr)
-library(magrittr)
 library(broom)
 library(knitr)
 library(car)
@@ -33,15 +32,15 @@ load("./data/meap00_01.RData")
 
 ## 1a
 
+\begin{equation} \label{eq:1a}
+math4 = \beta_0 + \beta_1 lunch + \beta_2 log(enroll) + \beta_3 log(exppp) + u
+\end{equation}
+
 ```{r 1a}
 fit_1a <- lm(math4 ~ lunch + log(enroll) + log(exppp), data)
 fit_1a_summary <- fit_1a %>% summary
 fit_1a_tidy <- fit_1a %>% tidy
 ```
-
-\begin{equation} \label{eq:1a}
-math4 = \beta_0 + \beta_1 lunch + \beta_2 log(enroll) + \beta_3 log(exppp) + u
-\end{equation}
 
 The population regression function in \eqref{eq:1a} was estimated using OLS and the following sample regression function was found.
 
@@ -105,7 +104,7 @@ The value of the $F$ statistic was calculated to be `r f_manual`. The correspond
 
 Given the null $H_0: \delta_0 = \delta_1 = \delta_2 = 0$, it was possible to reject the null and conclude that there is a relationship between the errors and the original variables in the model - i.e. that there is evidence of heteroskedasticity. 
 
-The F-statisic can also be computed using the `linearHypothesis` function from the `car` package to assess the significance of the $\delta_1$ and $\delta_2$ coefficients.
+The F-statistic can also be computed using the `linearHypothesis` function from the `car` package to assess the significance of the $\delta_1$ and $\delta_2$ coefficients.
 
 ```{r 1b_get_f_auto}
 test_1b <- linearHypothesis(fit_1b, c("fitted = 0" , "fitted_sqr = 0"))
@@ -184,7 +183,7 @@ Given the definition of precision and the relation of standard error with the st
 
 # Section 2
 
-In this section, some educational data from the [Michigan Department of Education](www.michigan.gov/mde) are provided. Relationships between some of the key variables in this data are explored and some models created.
+In this section, some data regarding scrap rates and training grants are provided for a number of firms over years 1987, 1988 and 1989. Relationships between some of the key variables in this data are explored and some models created.
 
 ```{r 2load}
 load("./data/jtrain.RData")
@@ -198,9 +197,9 @@ log(scrap) = \beta_0 + \beta_1grant + u
 
 Considering the PRF given by \eqref{eq:2a} there are several reasons why unobserved factors in $u$ might be correlated with $grant$ (a dummy variable indicating if the firm received a grant). Such reasons could include, but are not strictly limited to:
 
-* The firm's performance (either or otherwise) may be tied to whether it receives a training grant;
+* The firm's performance (either financial or otherwise) may be tied to whether it receives a training grant;
 * If the firm received a training  grant previously, it may be more or less likely to do so again;
-* Training grants may be awarded based on the firm's size (e.g. number of employeers);
+* Training grants may be awarded based on the firm's size (e.g. number of employees);
 * Training grants may only be awarded to firms in unions, or only those that are not unionised; and
 * Training grants may be dependent on the total hours of training conducted by the firm in the past.
 
@@ -239,7 +238,7 @@ fit_2c_tidy <- fit_2c %>% tidy
 grant_coef <- fit_2c_tidy[2, 2]
 grant_se <- fit_2c_tidy[2, 3]
 fit_2c_tidy %>% kable(caption = "OLS estimates of regression of the log of scrap rate on grant status for the year 1988, and scrap rate for the year 1987",
-                      col.names = c("Coefficient", "Estimate", "Robust Std. Error",
+                      col.names = c("Coefficient", "Estimate", "Std. Error",
                                           "t-Statistic", "p-Value"))
 ```
 
@@ -275,12 +274,12 @@ The null hypothesis is given that $H_0:\beta_{log(scrap_{87})}=1$. In order to t
 t_scrap <- (fit_2c_tidy[3, 2] - 1) / fit_2c_tidy[3, 3]
 t_abs <- abs(t_scrap)
 c <- abs(qt(.05/2, fit_2c$df.residual))
-p_scrap <- pt(t_abs, fit_2c$df.residual, lower.tail = FALSE)
+p_scrap <- pt(t_abs, fit_2c$df.residual, lower.tail = FALSE)*2
 ```
 
 The $p$-value reported by the `pt` function when `lower.tail = FALSE` is $P[X > x]$. For a two-sided test, the null may be rejected when the _absolute value_ of $t$ is greater than some critical value. 
 
-The absolute value of the $t$ statistic for the $\beta_{log(scrap_{87})}$ parameter against the null that it is one was found to be `r round(t_abs, 3)`. Comparing this to the absolute of the critical value at the 5% signficance level in the two sided test of `r round(c, 3)`, it was found to be higher. Therefore the null hypothesis $H_0:\beta_{log(scrap_{87})}=1$ can be rejected at the 5% significane level.
+The absolute value of the $t$ statistic for the $\beta_{log(scrap_{87})}$ parameter against the null that it is one was found to be `r round(t_abs, 3)`. Comparing this to the absolute of the critical value at the 5% significance level in the two sided test of `r round(c, 3)`, it was found to be higher. Therefore the null hypothesis $H_0:\beta_{log(scrap_{87})}=1$ can be rejected at the 5% significance level.
 
 The associated $p$ value was found to be $`r round(p_scrap, 5)`$.
 
@@ -319,8 +318,8 @@ It is seen that with a $t$ statistic of `r round(t_grant_rse, 2)` and a $p$-valu
 t_scrap_rse <- (robust_se_2c_tidy[3, 2] - 1) / robust_se_2c_tidy[3, 3]
 t_abs_rse <- abs(t_scrap_rse)
 c <- abs(qt(.05/2, fit_2c$df.residual))
-p_scrap_rse <- pt(t_abs_rse, fit_2c$df.residual, lower.tail = FALSE)
+p_scrap_rse <- pt(t_abs_rse, fit_2c$df.residual, lower.tail = FALSE)*2
 ```
 
-Performing the same analysis for the $\beta_{log(scrap_{87})}$ coefficient as was done in 2d, it is seen that the $\beta_{log(scrap_{87})}$ remains significant at the 5% level against the null $H_0:\beta_{log(scrap_{87})}=1$ with a $p$ value of `r round(p_scrap_rse, 3)`. Moreoever, the 95% confidence interval still does not contain the value 1: [`r round(robust_se_2c_tidy[3, 2] + c(-1, 1)*1.96*robust_se_2c_tidy[3, 3], 3)`].
+Performing the same analysis for the $\beta_{log(scrap_{87})}$ coefficient as was done in 2d, it is seen that the $\beta_{log(scrap_{87})}$ remains significant at the 5% level against the null $H_0:\beta_{log(scrap_{87})}=1$ with a $p$ value of `r round(p_scrap_rse, 3)` (although it is now no longer significant at the 1% level, which it was before). Moreover, the 95% confidence interval still does not contain the value 1: [`r round(robust_se_2c_tidy[3, 2] + c(-1, 1)*1.96*robust_se_2c_tidy[3, 3], 3)`].
 
