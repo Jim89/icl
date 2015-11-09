@@ -143,6 +143,61 @@ Equation \eqref{eq:r2_adjust} describes the __adjusted R-squared__ property of t
 
 Two models can be compared using the adjusted R-squared figure, as long as they have the __same outcome__, and that outcome is the the __same functional form__.
 
+***
 
+## Confidence Intervals for Prediction
+
+Given a regression model, it is often desirable to develop a confidence interval for _predictions_ made with that model (as well as for the parameters). However, care must be taken to also account for the error term of the regression. I.e., it is not possible to simply substitute $x$ values in to the SRF and calcualte a $y$ value. 
+
+\begin{equation} \label{eq:theta}
+\hat\theta_0 = \hat\beta_0 + \hat\beta_1 c_1 + ... + \hat\beta_k c_k
+\end{equation}
+
+Where $\theta_0 = E(y|x_1 = c_1, ..., x_k = c_k)$
+
+If this is done, the standard error of the predicted value ($\hat\theta_0$) will not be accurate.
+
+It is possible to rewrite \eqref{eq:theta} to give $\beta_0 = \theta_0 - \beta_1 c_1 - ... \beta_k c_k$. Using this in the SRF to obtain $y$ gives:
+
+\begin{equation}
+y = \theta_0 + \beta_1(x_1 - c_1) + ... + \beta_k(x_k - c_k) + u
+\end{equation}
+
+Now, the OLS estimator of $\theta_0$ and its standard error are the intercept and its standard error when regressing $y_i$ on $(x_{i1} - c_1), ..., (x_{ik} - c_k)$.
+
+For a single estimate of $y$, it is usual to take values for $c_i$ that are equivalent to the _average_ values of the corresponding $x_i$.
+
+### Predicting $y$ vs. Predicting $E(y|x)$
+
+The standard error for the average value of y (i.e. that described above) is not the same as the standard error for a particular outcome of y. When predicting a particular outcome, the variance in the unobserved error term must be accounted for. 
+
+Defining the prediction error as $\hat{e}$, under CLM the standard error is given by \eqref{eq:se_e}
+
+\begin{equation} \label{eq:se_e}
+se(\hat{e}) = [se(\hat\theta_0)^2 + \hat\sigma^2]^{1/2}
+\end{equation}
+
+Following this, the 95% interval for prediction (for a large sample) is given by \eqref{eq:se_pred}
+
+\begin{equation} \label{eq:se_pred}
+\hat\theta_0 \pm 1.96 . [se(\hat\theta_0)^2 + \hat\sigma^2]^{1/2}
+\end{equation}
+
+
+### Prediction $y$ in a log model
+
+In the log-level model, is is possible to write that $logy\equiv log(y)$. Given this, the predicted value of $\hat{y}$ needs to be scaled accordingly by an estimate of the expected value of $exp(u)$ (as $\hat{y}\neq exp(\widehat{logy})$).
+
+Knowing that $u$ ~ Normal(0, $\sigma^2$) then $E(exp(u)) = exp(\sigma^2 / 2)$. As such, the prediction of $y$ is given by \eqref{eq:y_log_p}
+
+\begin{equation} \label{eq:y_log_p}
+\hat{y} = exp(\hat\sigma^2 / 2)exp(\widehat{logy})
+\end{equation}
+
+If u is _not_ normally distributed, then $n^{-1} \sum_{i=1}^nexp(\hat{u_i})$ is used as a sample estimate of E(exp(u)) and therefore:
+
+\begin{equation}
+\hat{y} = n^{-1} \sum_{i=1}^nexp(\hat{u_i})exp(\widehat{logy})
+\end{equation}
 
 
