@@ -26,7 +26,7 @@ Similar to a white test, the _squared_ and _cubed_ fitted values (which are func
 Following from this, the following is the procedure of the RESET test:
 
 1. OLS the original model and save the fitted values, $\hat{y}$;
-2. Test $H_0 : \delta_1 = 0, \delta_2 = 0$ in the expanded model $y = \beta_0 + \beta_1 x_1 + ... _ \delta_1 \hat{y}^2 + \delta_2 \hat{y}^3 + error$. The F-stat follows an $F_{2, n-k-3}$ distribution under the null;
+2. Test $H_0 : \delta_1 = 0, \delta_2 = 0$ in the expanded model $y = \beta_0 + \beta_1 x_1 + ... + \delta_1 \hat{y}^2 + \delta_2 \hat{y}^3 + error$. The F-stat follows an $F_{2, n-k-3}$ distribution under the null;
 3. Reject $H_0$ when F > c ($F_{2, n-k-3}$ critical value)
 
 Note that when testing more than one model at once with RESET, it is possible that RESET rejects both models, or neither.
@@ -52,10 +52,10 @@ y = \beta_0 + \beta_1 log(x_1) + \beta_2 log(x_2) + u
 The comprehensive model is written as:
 
 \begin{equation} \label{eq:comprehensive}
-y = \gamme_0 + \gamma_1 x_1 + \gamma_2 x_2 + \gamma_3 log(x_1) + \gamma_4 log(x_2) = u
+y = \gamma_0 + \gamma_1 x_1 + \gamma_2 x_2 + \gamma_3 log(x_1) + \gamma_4 log(x_2) = u
 \end{equation}
 
-The acceptance of the null $H_0 : \gamma_1 = \gamma_2 = 0$ suppports \eqref{eq:log} whereas the acceptance of the null $H_0 : \gamma_3 = \gamme_4 = 0$ supports the first model.
+The acceptance of the null $H_0 : \gamma_1 = \gamma_2 = 0$ suppports \eqref{eq:log} whereas the acceptance of the null $H_0 : \gamma_3 = \gamma_4 = 0$ supports the first model.
 
 ### Davidson-MacKinnon Test
 
@@ -69,6 +69,52 @@ y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \theta h + u
 
 __A clear winner may not emerge.__
 
+## Proxy Variables
+
+A model may also be misspecified due to the absence of data on an important x variable. The omitted variable bias can be reduced by using a _proxy_ variable.
+
+A good proxy must be related to the unobserved variable. For example, in the model $y = \beta_0 + \beta_2 x_2^* + u$ $x_2^*$ is unobserved. However, a proxy variable, $x_2$ may be available whereby $x_2^* = \delta_0 + \delta_2 x_2 + v_2$. Substituting for $x_2$, is is necessary to define the conditions under which $\beta_1$ will still be an unbiased estimator.
+
+A valid proxy is one for which:
+
+1. ZCM holds for observed, unobserved and the proxy, i.e. $E(u | x_1, x_2^*, x_2) = 0$; and
+2. If $x_2$ is controlled for, the conditional mean of $x_2^*$ does not depend on $x_1$, i.e. $E(x_2^* | x_1, x_2) = E(x_2^* | x_2) = \delta_0 + \delta_2 x_2$.
+
+That is, u is uncorrelated with any of the x terms, and $v$ is uncorrelated with $x_1$ and $x_2$. Moreover, condition 2 implies that $z_2^* = \delta_0 + \delta_2 x_2 + v_3$ and thus:
+
+\begin{equation}
+y = (\beta_0 + \beta_2\delta_0) + \beta_1 x_1 + \beta_2\delta_2 x_2 + (u + \beta_2 v_2)
+\end{equation}
+
+The OLS estimators are unbiased as long as conditions 1 and 2 hold true. Without these conditions, biased estimators can result. The bias will depend on the signs of $\beta_j$ and $\delta_j$ and may, however, still be smaller than the omitted variable bias, though.
+
+### Lagged dependent variables
+
+If there are unobserved variables that cannot be reasonably proxied, it may be possible to include lagged dependent variables to account for omitted variables taht contributed to both past and current levels of y. However (obviously) past and current $y$ must be related for this to make sense (e.g. a model that predicts crime rate might use historic crime rate(s) as a lagged dependent variable).
+
+***
+
+## Data Issues
+
+### Missing data
+
+If any observation is missing data on one or more variable, it cannot be used. If this "missing-ness" is random, then the 1-5 Gauss Markov assumptions are not violated and the only consequence is a reduction in the sample size. 
+
+Problems can arise if the data are missing in a systematic way as then the sample is potentially __nonrandom__ which violates the second Gauss-Markov assumption. 
+
+### Non-random samples
+
+__Exogenous sample selection__ - if the sample data are chosen based on an explanatory variable then the OLS estimators will still be unbiased under MLR1, 3 and 4. Whilsts the data may be non-random, assumption 4  (ZCM) still holds as $E(u | x_j) = 0$ for any subset of $x_j$
+
+__Endogenous sample selection__ - if the sample is chosen based on a dependant variable, y, the OLS estimators will be biased. This is because not only is the data non-random, but $E(y | x_j > c) \neq E(y | x_j \leq c)$ (where c is a value used to sample on the dependent variable.) As such, MLR4 (ZCM) fails.
+
+### Outliers
+
+Outliers are "unusual" observations that are far from the "centre" of the data. OLS is generally sensiitive to outliers as large residuals, once squared, add weight to SSR.
+
+Outliers may be simple data entry issues, so it is advised to check summary stats alongside domain-knowledge and common sense. It is not unreasonable to "fix" or exclude observations that are confirmed outliers. 
+
+It is often advised to report OLS results with and without suspected outliers in order to demonstrate their effect(s).
 
 
 
