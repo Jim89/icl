@@ -5,4 +5,109 @@ date: "09 November 2015"
 output: pdf_document
 ---
 
-# 
+# Heteroskedasticity
+
+## A definition
+
+Recall the Gauss-Markov assumptions:
+
+1. Linear (in parameter) model;
+2. Random sample;
+3. No perfect-collinearity;
+4. ZCM;
+5. _Homoskedasticity_, $Var(u_i | x_i) = \sigma^2$ for all $i$.
+
+I.e., conditional on all the $x$'s, the variance of the unobserved error, u, is _constant_.
+
+If that is __not__ true (i.e. if the variance of _u_ is different for different $x$ values), then the errors are __heteroskedastic__.
+
+### Issues
+
+Recall that even if homoskedasticity is not assumed, the OLS estimators are unbiased. MLR5 (homoskedasticity) is only required for the formula of the OLS estimator variances. This, however, _is_ important (for inference) and, as such, if there is heteroskedasticity in the data, then the _standard errors_ for the estimates _are_ biased. If the standard errors are biased, then the usual $t$ and $F$ statistical tests cannot be used to draw inferences.
+
+## Heteroskedasticity-Robust Inference
+
+It is possible to adjust OLS estimate standard errors to ensure the $t$ of $F$ stat is valid even with heteroskedasticty. This is knows as the __heteroskedasticity-robust procedure__.
+
+The term "robust" is used as the $t$/$F$ stat is valid regardless of the _type_ of heteroskedasticity present in the sample (including no heteroskedasticity).
+
+### Variance with Heteroskedasticty
+
+For the simple regression $y_i = \beta_0 + \beta_1 x_i + u_i$ is is known that $\hat\beta_1 = \beta_1 + \dfrac{\sum_{i=1}^n (x_i - \bar{x_i})}{\sum_{i=1}^n (x_i - \bar{x_i})^2}$, and $Var(\beta_1) = \dfrac{\sum_{i=1}^n (x_i - \bar{x_i})^2 \sigma_{i}^2}{SST_{x}^2}$
+
+When $\sigma_{i}^2 \neq \sigma^2$ then a valid esimator for the variance term is given by $Var(\beta_1) = \dfrac{\sum_{i=1}^n (x_i - \bar{x_i})^2 \hat{u_{i}^2}}{SST_{x}^2}$
+
+Generalising to multiple linear regression with $k$ parameters, a valid estimator of $Var(\hat\beta_j)$ is given by \eqref{eq:var_robust}
+
+\begin{equation} \label{eq:var_robust}
+\widehat{Var}(\hat\beta_j) = \dfrac{\sum_{i=1}^2 \hat{r}_{ij}^2 \hat{u_{i}^2}}{SSR_j^2}
+\end{equation}
+
+Here, $\hat{r_{ij}}$ is the $i_{th}$ residual from regressing $x_j$ on all other independant variables, and $SSR_j$ is the sum of squared residuals from such a regression.
+
+
+
+### Robust Standard Errors
+
+The robust standard erros, r.se($\hat\beta_j$) is given by the square root of the estimate of variance. 
+
+The _robust t stat_ is given by \eqref{eq:r_t}
+
+\begin{equation} \label{eq:r_t}
+t = \dfrac{\hat\beta_j - a_j}{rse(\hat\beta_j)}
+\end{equation}
+
+It should be noted that robust standard errors only have asymptotic justification, i.e. with small sample sizes, robust $t$ statistics will not have a distribution close to $t$ and inferences will not be correct. 
+
+The $robust F stat$ must be computed using a formula different from the original one. This is easily obtained using `linearHypothesis` in `R`.
+
+## Testing for Heteroskedasticty
+
+It is important to test for heteroskedasticity as:
+
+* Robust standard errors have only asymptotic justifcation (so testing is important with small samples);
+* OLS estimates are no longer BLUEs in the its presence;
+* Other estimators (i.e. non-OLS) are better when the form of it is known.
+
+A hypothesis can be tested such that $H_0 : Var(u|x_1, x_2, ..., x_k) = \sigma^2$ which is equivalent to $H_0 : E(u^2|x_1, x_2, ..., x_k) = E(u^2) = \sigma^2$.
+
+### The Breusch-Pagan Test
+
+In this test, it is assumed that there is a linear relationship between $u^2$ and $x_j$, i.e.
+
+\begin{equation}
+u^2 = \delta_0 + \delta_1 x_1 + \delta_k x_k + v
+\end{equation}
+
+The null of homoskedsaticity is that $H_0 : \delta_1 = \delta_2 = \delta_k = 0$
+
+The Breush-Pagan test is performed as follows:
+
+1. Run OLS on $y = \beta_0 + \beta_1 x_1 + ... + \beta_k x_k +u$ and save the squared residuals, $u_i^2$;
+2. OLS $u_i^2 = \delta_0 + \delta_1 x_1 + ... + \delta_k x_k$ and save the R-squared value, $R_{\hat{u^2}}^2$;
+3. Compute the test-statistic:
+
+\begin{equation} \label{eq:bp_f}
+F = \dfrac{R_{\hat{u^2}}^2 / k}{(1 - R_{\hat{u^2}}^2)/(n-k-1)}
+\end{equation}
+
+4. Reject the null if the $F$ given by \eqref{eq:bp_f} is too large (or has too small a p-value)
+
+### The White Test
+
+The Breusch-Pagan test will detect linear forms of heteroskedasticty. The White test allows for nonlinearites by using squares and crossproducts of the independent variables. 
+
+To perform the White test:
+
+1. OLS $y = \beta_0 + \beta_1 x_1 + ... + \beta_k x_k +u$ and save the residuals, $u_i$, and the fitted values $\hat{y}$;
+2. OLS $u_i^2 = \delta_0 + \delta_1 \hat{y} + \delta_2 \hat{y}^2$ and save the R-squared, $R_{\hat{u^2}}^2$;
+3. Compute the test stat given by \eqref{eq:white_f}
+
+\begin{equation} \label{eq:white_f}
+F = \dfrac{R_{\hat{u^2}}^2 / 2}{(1 - R_{\hat{u^2}}^2)/(n-3)}
+\end{equation}
+
+4. Reject the null if the $F$ given by \eqref{eq:white_f} is too large (or has too small a p-value)
+
+
+
