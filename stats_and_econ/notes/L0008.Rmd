@@ -109,5 +109,50 @@ F = \dfrac{R_{\hat{u^2}}^2 / 2}{(1 - R_{\hat{u^2}}^2)/(n-3)}
 
 4. Reject the null if the $F$ given by \eqref{eq:white_f} is too large (or has too small a p-value)
 
+## Weighted Least Squares
 
+If the specific form of the heteroskedastictity is known, then more efficient estimates can be obtained than through "usual" OLS.
 
+This is known as __weighted least squares__ in which homoskedastic error are used. 
+
+To derive this, consider a special case where the heterskedasticty is a positive multiplicative factor, h(x): $Var(u|x) = \sigma^2 h(x)$. All that is needed is to understand what $h(x_i)\equiv h_i$ looks like. 
+
+It is the case that $E(u_i / \sqrt{h_i}|x_i) = 0$ as $h_i$ is only a function of $x_i$ and Var($u_i / \sqrt{h_i}|x_i$) = $\sigma^2$
+
+Hence if the whole regession equation is divided by by $\sqrt{h_i}$ then a homoskedastic model is fitted.
+
+### WLS Example
+
+Consider the regession given by $y = \beta_0 + \beta_1 x_{i1} + ... + \beta_k x_{ik} + u_i$
+
+The WLS model, regaining homoskedasticity is given by $y/\sqrt{h_i} = \beta_0/\sqrt{h_i} + \beta_1 x_{i1}/\sqrt{h_i} + ... + \beta_k x_{ik}/\sqrt{h_i} + u_i/\sqrt{h_i}$ which satisfies the Gauss-Markov assumptions 1 to 5. 
+
+The process for WLS without intercept is to regress $y/\sqrt{h_i}$ on {$1/\sqrt{h_i}, x_{i1}/\sqrt{h_i}, ..., x_{ik}/\sqrt{h_i}$}.
+
+Estimating the transformed equation with OLS is an example of __generalised least squares__ where each residual is weighted by $1/\sqrt{h_i}$. The GLS estimates will be BLUE, and all that is needed is to know $h_i$.
+
+### Feasible GLS (FGLS)
+
+Feasible GLS estimates h(x) in order to make GLS possible (and feasible).
+
+Typically, it is assumed that the model is flexible, i.e. Var(u|x) = $\sigma^2 exp(\delta_0 + \delta_1 x_1 + ... + \delta_k x_k)$.
+
+The flexiblity assumption implies that $u^2 = \sigma^2 exp(\delta_0 + \delta_1 x_1 + ... + \delta_k x_k).v$ where E(v|x) = 1 and is assumed to be independent of x. 
+
+Taking the log gives $log(u^2) = \alpha_0 + \delta_1 x_1 + ... + \delta_k x_k + e$ where E(e|x) = 0 and is independent of x. 
+
+This can be estimated with OLS using $\hat{u}$ as an esimate of u. 
+
+### FGLS Procedure
+
+1. OLS $y_i = \beta_0 + \beta_1 x_1 + ... + \beta_k x_k + u_i$ and save the residuals, $\hat{u}_i$;
+2. OLS $log(\hat{u}^2) = \alpha_0 + \delta_1 x_1 + ... + \delta_k x_k + e$ and save the fitted values, $\hat{g}_i$;
+3. Set $\hat{h}_i = exp(\hat{g}_i)$ and estimate the regression using WLS weights 1/$\hat{h}_i$
+
+### FGLS Estimates
+
+The FGLS estimates still estimate the original parameters in the OLS model, $\beta_j$ and so the interpretation remains the same. Recall that OLS is still unbiased, it is just that FGLS is used for efficiency. 
+
+The associated $t$ and $F$ statistics have the same distribution(s) under FGLS when using large enough samples. 
+
+If the h(x) function is wrong then it can be sensible to combine FGLS with robust standard errors. Indeed it is often bettwe to use FGLS with an incorrect h(x) than to ignore heterskedasticty all together.
