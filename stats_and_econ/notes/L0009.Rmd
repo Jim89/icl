@@ -19,3 +19,56 @@ However, if the misspecification is caused by omitting a non-linear function of 
 
 ### REgression Specification Error Test (RESET)
 
+The key idea of the RESET test is that when the model $y = \beta_0 + \beta_1 x_1 + ...$ is correct (i.e. it satisfies ZCM), no functions of the x's should be significant when added to the model. 
+
+Similar to a white test, the _squared_ and _cubed_ fitted values (which are functions of x) should be insignificant. 
+
+Following from this, the following is the procedure of the RESET test:
+
+1. OLS the original model and save the fitted values, $\hat{y}$;
+2. Test $H_0 : \delta_1 = 0, \delta_2 = 0$ in the expanded model $y = \beta_0 + \beta_1 x_1 + ... _ \delta_1 \hat{y}^2 + \delta_2 \hat{y}^3 + error$. The F-stat follows an $F_{2, n-k-3}$ distribution under the null;
+3. Reject $H_0$ when F > c ($F_{2, n-k-3}$ critical value)
+
+Note that when testing more than one model at once with RESET, it is possible that RESET rejects both models, or neither.
+
+## Tests against Non-nested models
+
+If it can be said that Model B is a restricted version of Model A, then Model A "nests" Model B. Nested models can be tested using the standard exclusion F tests. However, for non-nested models this is not possible.
+
+There are two tests for testing non-nested models:
+
+### Comperehensive Model
+
+In this approach, a __comprehensive model__ is created that nests both of the two non-nested models. This approach may be used if it is uncertain whether x variables should be in log-form or not, creating two competing models:
+
+\begin{equation} \label{eq:non_log}
+y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + u
+\end{equation}
+
+\begin{equation} \label{eq:log}
+y = \beta_0 + \beta_1 log(x_1) + \beta_2 log(x_2) + u
+\end{equation}
+
+The comprehensive model is written as:
+
+\begin{equation} \label{eq:comprehensive}
+y = \gamme_0 + \gamma_1 x_1 + \gamma_2 x_2 + \gamma_3 log(x_1) + \gamma_4 log(x_2) = u
+\end{equation}
+
+The acceptance of the null $H_0 : \gamma_1 = \gamma_2 = 0$ suppports \eqref{eq:log} whereas the acceptance of the null $H_0 : \gamma_3 = \gamme_4 = 0$ supports the first model.
+
+### Davidson-MacKinnon Test
+
+Here, the competing models are also given by \eqref{eq:non_log} and \eqref{eq:log}. In this instance, the fitted values from these two models are termed $g$ and $h$ respectively. 
+
+If the first model \eqref{eq:non_log} is correct then $h$ should be insignificant in \eqref{eq:dm}. I.e. rejecting $H_0 : \theta = 0$ is a rejection of the first model, \eqref{eq:non_log}.
+
+\begin{equation} \label{eq:dm}
+y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \theta h + u
+\end{equation}.
+
+__A clear winner may not emerge.__
+
+
+
+
