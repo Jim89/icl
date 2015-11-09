@@ -5,4 +5,17 @@ date: "09 November 2015"
 output: pdf_document
 ---
 
-# 
+# Model Specification and Data Issues
+
+## Functional form misspecification
+
+It is possible for non-linear relationships to be modelled using a linear regression, e.g. level-log models, quadratics, and interactions.
+
+A regression is termed _misspecified_ if the functional form is incorrect and it fails to properly account for the relationship between the dependent and explanatory variables. Misspecification __causes bias__.
+
+Sometimes it is simply possible to use common sense/interpretation to identify misspecification, e.g. whether or not x should affect y in percentage (log) or absolute (level) terms, or for the derivative of $x_i$ to vary with x (quadratic) or with $x_2$ (interactions), or to be fixed. 
+
+However, if the misspecification is caused by omitting a non-linear function of one or more of the regressors then a specific test can be performed.
+
+### REgression Specification Error Test (RESET)
+
