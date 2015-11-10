@@ -1,0 +1,48 @@
+---
+title: "Statistics and Econometrics - Lecture 10"
+author: "Jim Leach"
+date: "10 November 2015"
+output: pdf_document
+---
+
+# Limited Dependent Variables
+
+## Binary dependant variables
+
+Recall that binary dependant variables can be modelled using a linear probability model (LPM) where y either equals 0 or 1, $P(y = 1 | x) = E(y|x) = \beta_0 + ...$
+
+The LPM has several drawbacks including the fact that predicted values are not constrained from 0 to 1, it violates the assumption of homoskedasticity, and it assumes there is a constant marginal effect of the independant variables.
+
+As such, an alternative to the LPM is to use a probability _function_ to describe the data, __G(z)__ (where $z = \beta_0 + \beta_1x_1 + ... + \beta_kx_k$). Such a function is bounded [0, 1], i.e. $0\leq G(z) \leq 1$.
+
+### Logit model
+
+In the logit model, the __logistic function__ is used, which is the cumulative distribution function for a standard logistic ramdon variable.
+
+\begin{equation} \label{eq:logit}
+G(z) = \dfrac{exp(z)}{1+exp(z)}
+\end{equation}
+
+### Probit model
+
+In the probit model, a function is used which describes the __standard normal__ cumulative distribution function.
+
+\begin{equation} \label{eq:probit}
+G(z) = \Phi(z) = \int_{-\inf}^z \dfrac{1}{\sqrt{2\pi}}exp(-\dfrac{v^2}{2})dv
+\end{equation}
+
+Both of these functions have similar shapes, they increaseing in z, most quickly around 0. They are both _nonlinear_ and require __maximum likelihood estimation (MLE)__ to solve. There is no reason to prefer one over the other (they return similar answers), however the logit model is computationally more simple.
+
+## Latent variables
+
+Binary models can be thought of as being motivated by _latent variables_. In this setting, it is imagined that there is an underlying (latent) variable, $y^*$ that can be modelled as $y^* = \beta_0 + \beta_1x_1 + ... + \beta_kx_k + u$ but for which we only _observe_ $y=1$ if $y^* > 0$ and $y=0$ if $y^*\leq 0$. 
+
+Using logit or probit, u has either a standard logistic or standard normal distribution, respectively. In either case, u is symmetrically distributed about zero, which leads to \eqref{eq:equality} for an real all real number, z.
+
+\begin{equation} \label{eq:equality}
+1-G(-z) = G(z)
+\end{equation}
+
+Following from \eqref{eq:equality}, it is possible to define the probability for y:
+
+\begin{equation} \label{eq:prob}
