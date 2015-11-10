@@ -31,6 +31,8 @@ Following from this, the following is the procedure of the RESET test:
 
 Note that when testing more than one model at once with RESET, it is possible that RESET rejects both models, or neither.
 
+In R, RESET tests can be performed using `lmtest::resettest(model, type = "fitted")`.
+
 ## Tests against Non-nested models
 
 If it can be said that Model B is a restricted version of Model A, then Model A "nests" Model B. Nested models can be tested using the standard exclusion F tests. However, for non-nested models this is not possible.
@@ -68,6 +70,8 @@ y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \theta h + u
 \end{equation}.
 
 __A clear winner may not emerge.__
+
+In R, DM tests can be performed using `lmtest::jtest(model1, model2)`.
 
 ## Proxy Variables
 
@@ -114,7 +118,11 @@ Outliers are "unusual" observations that are far from the "centre" of the data. 
 
 Outliers may be simple data entry issues, so it is advised to check summary stats alongside domain-knowledge and common sense. It is not unreasonable to "fix" or exclude observations that are confirmed outliers. 
 
+A good rule of thumb for determining outliers is if the value is in the range $3sd_{below} \leq x \leq 3sd_{above}$.
+
 It is often advised to report OLS results with and without suspected outliers in order to demonstrate their effect(s).
+
+
 
 
 
