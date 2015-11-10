@@ -46,3 +46,131 @@ Using logit or probit, u has either a standard logistic or standard normal distr
 Following from \eqref{eq:equality}, it is possible to define the probability for y:
 
 \begin{equation} \label{eq:prob}
+\begin{split}
+P(y = 1 | x) = P(y^* > 0) \\
+= P(\beta_0 + \beta_1x_1 + ... + \beta_kx_k + u > 0) \\
+= P(u > -(\beta_0 + \beta_1x_1 + ... + \beta_kx_k)) \\
+= 1-G[-(\beta_0 + \beta_1x_1 + ... + \beta_kx_k)] \\
+= G(\beta_0 + \beta_1x_1 + ... + \beta_kx_k)
+\end{split}
+\end{equation}
+
+### Maximum Likelihood Estimation
+
+Recalling that $P(y=1|x) = G(z)$ and that $P(y=0|x) = 1-G(z)$ a _function_ of $y_i$ is written to describe its density:
+
+\begin{equation} \label{eq:f_y}
+f(y|x_i; \beta) = [G(z_i)]^{y_i}.[1-G(z_i)]^{1-y_i}
+\end{equation}
+
+In \eqref{eq:f_y}, if $y_i = 1$ then the right hand term cancels, if $y_i = 0$ then the left hand term cancels and the orignal formulae for P(y=1|x) and P(y=0|x) are returned. 
+
+In order to simplify this slightly, a __log-likelihood__ function is obtained by taking the log of \eqref{eq:f_y}, using the rules of $log(ab) = log(a) + log(b)$ and $log(x)^2 = 2log(x)$.
+
+\begin{equation} \label{eq:ll}
+l_i(\beta) = y_i log[G(z_i)] + (1-y_i)[1-G(z_i)]
+\end{equation}
+
+The log-likelihood function for a _sample_ is obtained by summing  \eqref{eq:ll} accross all observations: $L(\beta) = \sum_{i=1}^n l_i(\beta)$.
+
+The MLE of $\beta$, denoted $\hat\beta$ is that which __maximises__ $L(\beta)$. The MLE is asymptotically normal and efficient (minimised variance): $\dfrac{\hat\beta_j - a_j}{se(\hat\beta_j)}$ under the null $H_0: \beta_j = a_j$
+
+## Interpretation of Logits and Probits
+
+The effect of $x_j$ on the response probability is roughly given by \eqref{eq:effect}.
+
+\begin{equation} \label{eq:effect}
+\Delta\hat{P}(y=1|x)\approx[g(\hat\beta_0 + \hat\beta_1x_1 + ... + \hat\beta_kx_k)\hat\beta_j]\Delta{x_j}
+\end{equation}
+
+It is usually handy to have a single scale factor, g(z) that can be used to multiply each $\hat\beta_j$ by to get the effect of $x_j$ on y. This can be one of a few things:
+
+#### Partial Effect at Average (PEA): 
+
+Each explanatory variable is replaced with its sample average, giving a partial effect of $g(\hat\beta_0 + \hat\beta_1\bar{x_1} + ... + \hat\beta_k\bar{x_k})\hat\beta_j$.
+
+#### Average partial effect (APE):
+
+The individual partial effects can also be averaged accross the sample, giving a partial effect of; $n^{-1}\sum_{i=1}^n g(\hat\beta_0 + \hat\beta_1x_{i1} + ... + \hat\beta_kx_{ik})\hat\beta_j$
+
+## Likelihood Ratio Test
+
+In the logit and probit models, the usual $F$ test for exclusion restrictions no longer applies. Instead a __likelihood ratio test__ is needed.
+
+It is known that MLE will always produce a log-likelihood $l_i(\hat\beta)$. Therefore, just as in an $F$ test the restricted and unrestricted models are calculated and a likelihood ratio statistic developed:
+
+\begin{equation} \label{eq:llr}
+LR = 2(L_{ur} - L{r}) 
+\end{equation}
+
+The LR given in \eqref{eq:llr} should follow a $\chi^2$ distribution with $q$ degrees of freedom. Therefore, a simple null is established - $H_0 : \beta_{k-q+1} = 0, ..., \beta_k = i$ if $LR > c(\chi_q^2)$ (the Chi-squared critical value).
+
+## Goodness of fit
+
+### Pseudo R-squared
+
+In LPM $R^2$ is used to assess fit. For logit and probit models is possible to use the ___pseudo R-squared__:
+
+\begin{equation} \label{eq:psr}
+1 - \dfrac{L_{ur}}{L_r}
+\end{equation}
+
+Here, $L_{ur}$ represents the log-likelihood of the estimated model and $L_r$ is the log-likelihood in the model using only the intercept. 
+
+### Percentage correctly predicted
+
+On observation is correctly predicted if:
+
+* $y_i$ = 1 and G(z) $\geq$ .5 or;
+* $y_i$ = 0 and G(z) < .5 or;
+
+The percentage of observations that are correctly predicted is then used as a measure of fit. It should be noted, however, that for highly skewed samples this metric is imperfect. For example if 99% of observations have y = 0. To compensate for this, the value of G(z) that is used as a threshold to predict y can be changed to be the relative frequency of that value in the data. For example if on 1% of observations have y = 1 then it might be reasonable to predict y = 1 if G(z) $\geq$ .01
+
+### Akaike Information Criterion (AIC)
+
+The AIC is a measure of the _relative_ quality of statistical models (i.e., it is _not_ an absolute measure of fit and can only be used to compare two or more models). AIC is defined as:
+
+\begin{equation} \label{eq:aic}
+AIC = 2(k+1) - 2L
+\end{equation}
+
+In \eqref{eq:aic}, $k$ is the number of regressors, and L is the log-likelihood for the model. Given a set of models, the one that is preferred is that with the minimum value of AIC.
+
+Note that AIC has no restriction on comparing nested vs. unnested models (which the likelihood ratio does - it only works for nested models).
+
+## Estimating in R
+
+In R the `glm` command is used to fit logit and probit models:
+
+`glm(formula, family(link), data, weights, ...)`
+
+There are three common choices of family and link function:
+
+\begin{center}
+  \begin{tabular}{c c c}
+   Family & Link & Model \\ \hline
+   gaussian & identity & linear regression\\
+   binomial & logit, probit & logit, probit model\\
+   poisson & log & poisson model
+  \end{tabular}
+\end{center}
+
+The `family` indicates the conditional distribution of the dependant variable, y, and the `link` describes the function used to related y to x: $f(E(y|x)) = \beta_0 + \beta_1...$
+
+### Deviance
+
+The _deviance_ from a logit model is a counterpart to the SSR in linear regression. 
+
+\begin{equation} \label{eq:dev}
+-2L(\hat\beta) + c
+\end{equation}
+
+Where $c$ is a constant (and is taken to be 0 for the logit and probit models).
+
+Deviance can be used to test for the overall significance of a model ($H_0 : \beta_1 = ... = \beta_k = 0$). The restricted model is a model with only an intercept and its deviance is termed the __null deviance__. The deviance of the unrestricted model is given by the __residual deviance__. The likelihood ratio is then calculated:
+
+\begin{equation} \label{eq:signif}
+LR = 2(L_{ur} - L_r) = deviance_{null} - deviance_{residual}
+\end{equation}
+
+If the $\chi^2$ value that results from \eqref{eq:signif} is greater than some critical value from the $\chi^2$ distribution then the null can be rejected and it can be said that the unrestricted model has some overall significance.
