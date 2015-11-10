@@ -183,7 +183,6 @@ Following this, the 95% interval for prediction (for a large sample) is given by
 \hat\theta_0 \pm 1.96 . [se(\hat\theta_0)^2 + \hat\sigma^2]^{1/2}
 \end{equation}
 
-
 ### Prediction $y$ in a log model
 
 In the log-level model, is is possible to write that $logy\equiv log(y)$. Given this, the predicted value of $\hat{y}$ needs to be scaled accordingly by an estimate of the expected value of $exp(u)$ (as $\hat{y}\neq exp(\widehat{logy})$).
@@ -194,10 +193,12 @@ Knowing that $u$ ~ Normal(0, $\sigma^2$) then $E(exp(u)) = exp(\sigma^2 / 2)$. A
 \hat{y} = exp(\hat\sigma^2 / 2)exp(\widehat{logy})
 \end{equation}
 
-If u is _not_ normally distributed, then $n^{-1} \sum_{i=1}^nexp(\hat{u_i})$ is used as a sample estimate of E(exp(u)) and therefore:
+If u is _not_ normally distributed, then $n^{-1} \sum_{i=1}^nexp(\hat{u_i})$ is used as a sample estimate of E[exp(u)] and therefore:
 
 \begin{equation}
 \hat{y} = n^{-1} \sum_{i=1}^nexp(\hat{u_i})exp(\widehat{logy})
 \end{equation}
+
+Note that the R function `predict` does not automatically account for E[(exp(u))] and so the answers must be manually adjusted using the RSE from the `lm` output. 
 
 

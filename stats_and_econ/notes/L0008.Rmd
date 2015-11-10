@@ -59,7 +59,9 @@ t = \dfrac{\hat\beta_j - a_j}{rse(\hat\beta_j)}
 
 It should be noted that robust standard errors only have asymptotic justification, i.e. with small sample sizes, robust $t$ statistics will not have a distribution close to $t$ and inferences will not be correct. 
 
-The $robust F stat$ must be computed using a formula different from the original one. This is easily obtained using `linearHypothesis` in `R`.
+In R, the robust standard errors can be computed using the `vcovHC` function from the `sandwich` package. The `coeftest` function from `lmtest` package can then be used to perform inference on the robust standard errors returned by `vcovHC`.
+
+The $robust F stat$ must be computed using a formula different from the original one. This is easily obtained using `linearHypothesis` in `R` with the `white.adjust` option specified.
 
 ## Testing for Heteroskedasticty
 
@@ -93,6 +95,8 @@ F = \dfrac{R_{\hat{u^2}}^2 / k}{(1 - R_{\hat{u^2}}^2)/(n-k-1)}
 
 4. Reject the null if the $F$ given by \eqref{eq:bp_f} is too large (or has too small a p-value)
 
+The BP test can be performed in R using `lmtest::bptest(model)` - note that it returns $\chi^2$ values, not F statistics, but the $p$ value is still useful.
+
 ### The White Test
 
 The Breusch-Pagan test will detect linear forms of heteroskedasticty. The White test allows for nonlinearites by using squares and crossproducts of the independent variables. 
@@ -108,6 +112,8 @@ F = \dfrac{R_{\hat{u^2}}^2 / 2}{(1 - R_{\hat{u^2}}^2)/(n-3)}
 \end{equation}
 
 4. Reject the null if the $F$ given by \eqref{eq:white_f} is too large (or has too small a p-value)
+
+The White test can be performed in R using `lmtest::bptest(model, ~ fitted_values + I(fitted_values^2))` - note that it returns $\chi^2$ values, not F statistics, but the $p$ value is still useful.
 
 ## Weighted Least Squares
 
