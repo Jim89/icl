@@ -82,5 +82,54 @@ Commonly:
 * Stars and snowflakes (a slowflake occurs when there are "chains" of dimensions in a heirarchy e.g. sales (fact) -> store (dim) -> city(dim) -> region(dim)); and
 * Cubes
 
+## Aggregates in Warehousing
+
+In SQL there are many ways to aggregate using `GROUP BY`. When aggregation is performed, it is often termed a "roll up". The reverse, returning to detailed data, is termed a "drill down".
+
+### The Cube
+
+One form of rollup that is useful is the cube, a form of multi-dimensional rollup. The cube can be made of more than 2 dimensions, extending in to 3 or higher. For example, a cube could be used to assess sales as a function of product, month and region in a multi-dimensional cube.
+
+Within a cube there are also multiple "cuboids" that represent individual sections of the overall cube. For example, to extend the sales analogy, there could be 2D cuboids that represent a combination of month and region, product and region or product and month. Similarly there are 1D cuboids of sales by product, region, or month. And there is a 0D ("apex") cuboid that is simply total sales.
+
+In this way, cubes can be transformed in multiple ways to rollup to increasingly higher levels of aggregation, or "unpacked" to drill down in different ways.
+
+Effectively, a cube is a pivot table, but the advantage of using on in an onlne setting is that more than 2 dimensions can be accomodated easily.
+
+In SQL, the syntax for the `CUBE` operator is as follows:
+
+```
+SELECT [fields]
+FROM [table]
+WHERE  [clause]
+GOUP BY CUBE(dim1, dim2, dim3)
+```
+
+This cube will compute the union of 8 different groupings:
+
+1. dim1, dim2, dim3;
+2. dim1, dim2;
+3. dim1, dim3;
+4. dim2, dim3;
+5. dim1;
+6. dim2;
+7. dim3.
+
+Cubes can be combined with the usual aggregate functions (e.g. `sum`, `count`, `max` etc) as well as the `having` clause.
+
+## Data Warehouse Implementation
+
+When warehouses are implemented several concepts are important:
+
+* Monitoring - sending data to/from sources and how this will be done;
+* Integrating - ETL - what is the process?;
+* Processing - queries, indexing;
+* Managing - metadata, design
+
+Data sources can be other relational systems, flat files, IMS, VSAM, IDMS, WWW, news-wire etc. They must be incoporated on either an incremental or refresh basic.
+
+
+
+
 
 
