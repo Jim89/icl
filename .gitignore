@@ -5,6 +5,7 @@ admin/
 vldm/docs/*.pdf
 vldm/notes/*.pdf
 vldm/assigments/*/*.pdf
+vldm/lectures/*.pdf
 
 # ignore for induction courses
 induction/statsIntro/docs/*.pdf
@@ -41,3 +42,4 @@ intro_to_da/assignment/pres/deprecated/*.html
 intro_to_da/assignment/pres/*.html
 intro_to_da/assignment/pres/group4_presentation.html
 intro_to_da/assignment/team4Assignment.zip
+
