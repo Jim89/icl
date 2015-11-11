@@ -1,0 +1,340 @@
+---
+title: "Very Large Data Management Lecture 3-4"
+author: "Jim Leach"
+date: "11 November 2015"
+output: pdf_document
+---
+
+# Basics of SQL
+
+## Vocabulary
+
+* Relation = table;
+* Relational expression = View;
+* Tuple = row;
+* Attribute = column;
+* Domain = type.
+
+Need to be aware of the various data types possible, "gotchas" when moving between implementations, how nulls are handled and simple boolean logic.
+
+## Basic queries
+
+Include:
+
+* `SELECT`: what data is desired;
+* `FROM`: from which relation(s) to source the data;
+* `WHERE`: filtering restrictions;
+* `ORDER BY`: how to sort the results
+
+## Simple joins
+
+### Natural/Cartesian join
+
+```
+SELECT *
+FROM
+  TBL1 JOIN TBL2
+```
+
+```
+SELECT *
+FROM
+  TBL1, TBL2
+```
+
+Performs the cartesian product of the two tables where all rows from table 1 are joined with all rows from table 2.
+
+### Theta join
+
+Using an `on` condition.
+
+```
+SELECT *
+FROM
+  TBL1
+JOIN
+  TBL2
+ON TBL1.FIELD1 = TBL2.FIELD1
+```
+
+Alternatively
+
+```
+SELECT *
+FROM
+  TBL1
+JOIN
+  TBL2
+USING(FIELD1)
+```
+
+Can rename tables during the join for ease of specification, and do multi-table joins.
+
+Can also do `LEFT/RIGHT JOIN`, `INNER JOIN`, and `FULL OUTER JOIN`.
+
+## Union, Intersection, Difference
+
+All three remove duplicates, use `[FUNCTION] ALL` to keep them. Can also use `DISTINCT` to do this, but it may be a costly operation.
+
+### Intersect
+
+```
+(
+  SELECT FIELD1, FIELD2
+  FROM
+    TBL1
+)
+INTERSECT
+(
+  SELECT FIELD1, FIELD4
+  FROM
+    TBL2
+  WHERE FIELD3 = VALUE
+)
+```
+
+Returns the overlap between two tables or subqueries.
+
+## Aggregates
+
+```
+SUM
+COUNT
+AVG
+MIN
+MAX
+
+GROUP BY...
+HAVING...
+```
+
+Group by dictates how to partition the data for aggregation, having allows filtering by aggregates.
+
+## Subqueries
+
+* Scalar - returns a single value;
+* Set - produces a set of distinct values (a single column)
+* Relation - produce a new relation/table
+
+Can be used as alternatives to joins. The use of `IN`, `ANY`, and `SOME` can be used to filter on set relationships (i.e. `%in%`). For relation subqueires, the functions `EXISTS` and `NOT EXISTS` are better alternatives.
+
+## Data Definition
+
+### Creating a table
+
+```
+CREATE TABLE TBL1 (
+   FIELD1  DATA_TYPE
+  ,FIELD2  DATA_TYPE
+PRIMARY KEY (FIELD1)
+)
+```
+Easy to define a table and what its primary key(s) is/are. Use `DROP` to remove a table.
+
+### Altering tables
+
+```
+ALTER TABLE TBL1
+ADD FIELD3 DATA_TYPE
+```
+
+### Primary key
+
+Used to uniquely identify each row of a relation. Use to enforce foreign key constraints. Only one primary key permitted per relation. Best to choose keys that will be updated never/rarely or those with few attributes. Other candidate keys can be defined using a `UNIQUE` constraint.
+
+Primary keys have the following constraints:
+
+1. not null
+2. unique
+
+Any operation that violates these constraints will fail (e.g. inserting a null value).
+
+### Unique constraints
+
+```
+CREATE TABLE TBL1 (
+   FIELD1 DATA_TYPE1
+  ,FIELD2 DATA_TYPE2
+  ,FIELD3 DATA_TYPE3
+PRIMARY KEY (FIELD1, FIELD2)
+UNIQUE(FIELD3)
+)
+```
+
+Unique constraints ensure no two tuples have the same values for the listed attributes. 
+
+### Not-null constraints
+
+```
+CREATE TABLE TBL1 (
+   FIELD1 DATA_TYPE1
+  ,FIELD2 DATA_TYPE2
+  ,FIELD3 DATA_TYPE3 NOT NULL
+PRIMARY KEY (FIELD1, FIELD2)
+UNIQUE(FIELD3)
+)
+```
+
+States that a particular field may not have a NULL value.
+
+### Check constraints
+```
+CREATE TABLE TBL1 (
+   FIELD1 DATA_TYPE1
+  ,FIELD2 DATA_TYPE2
+  ,FIELD3 DATA_TYPE3 NOT NULL
+PRIMARY KEY (FIELD1, FIELD2)
+UNIQUE(FIELD3)
+CHECK(FIELD2 IN ('VALUE1', 'VALUE2'))
+)
+```
+
+Add additional constraints for what values a field may take. Check constraints can include subqueries on other tables.
+
+### Assertions
+```
+CREATE ASSERTION ASSERTION_1 CHECK (
+  NOT EXISTS (
+    SELECT FIELD1
+    FROM
+      TBL1
+    JOIN 
+      TBL2
+    ON TBL1.FIELD3 = TBL2.FIELD3
+    WHERE TBL2.VALUE < 10
+  )
+)
+```
+
+Assertions define check constraints over data in several relations. They are powerful features but hard to implement efficiently. Triggers are a better alternative.
+
+### Naming constraints
+
+It is sensible to name a constraint.
+
+```
+CREATE TABLE TBL1 (
+   FIELD1 DATA_TYPE1
+  ,FIELD2 DATA_TYPE2
+  ,FIELD3 DATA_TYPE3 NOT NULL
+PRIMARY KEY (FIELD1, FIELD2)
+UNIQUE(FIELD3)
+CONSTRAINT CONSTRAINT_NAME CHECK(FIELD2 IN ('VALUE1', 'VALUE2'))
+)
+```
+In this way it is possible to drop a constraint using alter table and also clarifies error messages related to constraint violation.
+
+### Foreign key constraints
+
+Specify the value of one or more attribute must match values of a primary key in another relation. This is termed referential integrity.
+
+```
+CREATE TABLE TBL2 (
+   FIELD1   DATA_1
+  ,FIELD2   DATA_2
+  ,FIELD3   DATA_3
+FOREIGN KEY (FIELD3) REFERENCES TBL1(FIELD1)
+)
+```
+### Cascades
+
+The default policy when referential integrity is violated is an error and the modification is rejected. However, cascades can be used to defined how to change multiple tables to preserve integrity.
+
+```
+CREATE TABLE TBL2 (
+ FIELD1 DATA_TYPE1
+,FIELD2 DATA_TYPE2
+,FIELD3 DATA_TYPE3
+FOREIGN KEY (FIELD3) REFERENCES TBL1(FIELD1)
+  ON UPDATE CASCADE
+  ON DELETE CASCADE
+)
+```
+
+In this way, on change to the foreign keys from TBL1 will be cascaded to change the values in TBL2, too.
+
+It is possible to define other processes that can be run (as opposed to a cascade) when a foreign key is changed, e.g.
+
+```
+ON DELETE SET NULL
+ON UPDATE SET DEFAULT
+```
+
+This can lead to unmatched tuples though. An value can be specified after the `SET` operation.
+
+## Views
+
+Relations defined using a query that are not physically stored on disk unless they are materialised.
+
+```
+CREATE VIEW VIEW1 AS
+[query...]
+```
+
+Changes in the underlying relation are reflected in the view and when views are used in a query they are treated as a subquery.
+
+They are useful for declaring commonly used subqueries, declaring relations over several others using joins, declare relations over calculated values or aggregated data, partition data (e.g. by year), or restrict access to a relation.
+
+Materialised views are a good idea if they are computationally expensive. Their maintainance can be expensive, however and therefore to do so is a trade off between storage and computation cost. Materialised views can be updated "lazily" meaning that they are only updated when accessed.
+
+Some views (but not many) are updateable, within the rules that:
+
+1. Only one relation is in the from clause of the update statement;
+2. Only attributes can be presen the select of the update, no expressions or aggregates;
+3. Any attribute not specified in the selection must allow null values;
+4. No group by/having clauses; and
+5. No subqueries
+
+## Indexes
+
+```
+CREATE INDEX INDEX_NAME ON TABLE(FIELD)
+```
+
+Indexes are copies of an attributes data that are maintained by the RDBMS but can be searched quickly. There is a tradeoff between the space needed for an index and the cost of maintaining it vs. the greater access speed they provide to the data. 
+
+## Insertion
+
+```
+INERT INTO TABLE(FIELD1, FIELD2, FIEL3)
+VALUES  (VALUE1, VALUE2, VALUE3),
+        (VALUE1, VALUE2, VALUE3)
+```
+
+Missing attributes not specified in the insert will be set to null (unless that is prohibited). An insertion that violates a constraint will result in an error.
+
+Insertion can also be performed using a sub-query.
+
+```
+INSERT INTO TABLE1(FIELD1)
+SELECT FIELD2
+FROM
+  TABLE2
+WHERE FIELD3 = SOME_VALUE
+```
+
+## Deletion
+
+`DELETE` is used to remove one or more tuples.
+
+```
+DELETE FROM TBL1
+WHERE
+  FIELD_X > SOME_VALUE
+```
+
+Remember to include the `WHERE` clause or all data will be deleted!
+
+## Updating attributes
+
+Is done using `SET`:
+
+```
+UPDATE TABLE1
+SET FIELD3 = SOME_VALUE
+WHERE SOME_CONDITION
+```
+
+Again, the use of the `WHERE` clause is crucial.
+
+
