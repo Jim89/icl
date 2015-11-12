@@ -97,6 +97,14 @@ plm::plm(y ~ x, data, index = c("group", "time"), model = "within")
 plm::plm([formula], data, index = c(["i"], ["t""]), model = "[fixed effects]")
 ```
 
+Robust standard errors can be computed:
+
+```
+vcovHC(panel.model, type = "HC1", cluster = "group")
+```
+
+This allows variance to be different accross groups, but not within a group.
+
 ### First-Difference vs. Fixed Effects
 
 When T=2, the first-difference and fixed effects estimators will be exactly the same.
