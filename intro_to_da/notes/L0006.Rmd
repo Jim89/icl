@@ -1,0 +1,77 @@
+---
+title: "Introduction to Data Analytics Lecture 6"
+author: "Jim Leach"
+output: pdf_document
+---
+
+# Data and Marketing Analytics
+
+## Background
+
+Previously 3 pillars of marketing: accounts (handled clients), creative (created the material) and media (placed the material). Now it's more complex.
+
+## Theory
+
+We are attracted by things that make us go "hmmm...". 
+
+A good framework is "sensemaking":
+
+1. We notice something that comes as a surprise or doesn't quite fit;
+2. The discrepant clues are spotted when we review our elapsed experience;
+3. We generate (or try to) plausible explanations; and
+4. We make speculations about what is going on, and publish/share them.
+
+Category meaning is ongoing:
+
+X is not a thing $\xrightarrow{Abduction}$ I think X is a thing $\xrightarrow{Hypothesis, translation}$ X is a thing $\xrightarrow{Evaluation}$ X is not a thing...
+
+Categories that emerge do real work for us:
+
+* To _compete_ we must be _seen_ by the relevant buyers as a player in the category;
+* To _spot_ emerging positoins, we must _analyse_ market sensemaking in public discourse;
+* To _shape_ categories we must use what is _resonating_ to inform our offerings.
+
+There are two sorts of analysis we can do to build views of categories:
+
+1. Extensional analysis - examine the distribution of co-occurrence links among entities a lable is applied to and examine the distribution of distances from graph centre to see stability - looking for agreement about application of a label; or
+2. Intensional analysis - examine distribution of co-occurrence links among potential concepts and see resource partions and emergence of separate foci in graph - comparing items within a system based on the sets of selected attributes that they share.
+
+## Method
+
+1. Define labels that describe a thing;
+2. Collect a corpus of media that mention the labels;
+3. Develop an _ontology_ that relates labels to text patterns for all potential instances of the thing, and all potential attributes of the thing;
+4. Select a lexical scoping rule (e.g. within story, paragraph, word);
+5. Index the corpus for mentions of attributes and instances;
+6. Create metadata for the graph - mentions + data on date, source etc;
+7. Query meta data to show:
+    * extensional - how instances are related;
+    * intensional - how attributes are related; and
+    * corss - how instances are related to attributes
+    
+## 5 C Framework
+
+* Coherence - intentional: quantisation of centrality vectors, extensional: scale-free link distribution;
+* Currencies - intentional: compare centrality vectors;
+* Competition - extensional: densification $\rightarrow$ consolidation;
+* Communities - extensional: look for clusters; and
+* Change - both: examine centrality trajectories and shifts
+
+## Implications
+
+> "The best predictor of future behaviour is past behaviour"
+
+Yes, but:
+
+> "People change"
+
+What prompts change:
+
+* technologies
+* movements
+* markets
+* fashions
+
+Common denominator - social influence of crowds.
+
+

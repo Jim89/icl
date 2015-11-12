@@ -7,3 +7,149 @@ output: pdf_document
 
 # Data Meets Culture
 
+## On culture
+
+Culture is often seen as the "ultimate asset", but it can also be a serious constraint (for example if it prevents something new and/or valuable being done).
+
+It is possible to think along the following lines:
+
+* Culture = brain's hardware. It provides the cognitive heuristics and biases. It is (relatively) fixed.
+* How we think = brain's software. It is possible to change this over time.
+
+> "Culture is a set of assumptions, beliefs and/or practices common to a setting or people, built up by history and suported by social and legal structures."
+
+## Pros and cons
+
+On the upside, culture can provide:
+
+* delegation with control - i.e. people will behave in an expected way;
+* consistency - generally things will be the same; and
+* voluntary compliance - people do not feel coerced in to doing things in a set "way"
+
+On the downside, ingrained cultures can make change very hard.
+
+## Development
+
+Culture is developed through a set of formal rules, social norms and our individual congnitive schemas (a good example is the use of cuttlery when eating in England).
+
+Formal rules (either legal or organisational) are clear statements of culture, social norms are informal, but may be widely shared, and the cognitive schema is simply how we think and what we believe.
+
+"Getting" a culture almost always requires immersion in to it, wherease observing it almost always involves getting out of it.
+
+Changing the situational definition can change how people behave and act (cf. Sherif 1935 with bright dot on dark wall and correct vs. incorrect confederate answer).
+
+## Relation to data
+
+All of our data is collected within a framework of a social system. For example, crimes are more or less likely to be reported depending on many societal factors present or absent in each region. 
+
+It is important to recognise these social and cultural factors when performing an analysis, as well as the technical aspects. Our analysese rely on the data we _have_, and how it was collected.
+
+## Some examples
+
+* __Sherfif, 1935__: participants asked how far a (stationary) dot of light moves in a darkened room. Participants supplied wrong answers by a member of the research team and then were seen to use that as a frame of reference, centered on the average answer provided by the research team. __Conclusion__: social factors affect perception.
+
+* __Asch, 1951__: Participants were asked to compare 3 bars on a chart to one single bar on a separate chart and say which one matched. Answer was obvious but (planted) members of the group suppplied subsequent (but consistent) wrong answers. The participants then provided the correct answer only 30% of the time. __Conclusion__: Group pressure can affect judgements.
+
+* __Milgram, 1961__: Participants helped to wire up another individual and then instructed to flip switches on a box. Implication was that switches were administering an electric shock (actor was screaming). In 65% of cases, the participant would proceed to administer shocks labelled on the bos as "dangerous". __Conclusion__: authority and instruction go a long way.
+
+* __Zimbardo, 1971__: Infamous prison experiment. Conflict erupted and escalated rapidly. __Conclusion__: group pressure severely affects individual judgement.
+
+* __Zucker, 1977__: Update on Sheriff. Participants given an initial wrong answer to a simple question by researcher who then left. New participant entered and same question asked. First participant left and new one joined. Wrong answers persisted over time, with some dependency on exactly how the question had been framed. __Conclusion__: Founders have an effect over time - "the done thing" persists and will last way beyond the departure of whom- or whatever started it.
+
+## Culture and persistence
+
+Culture carries a history forward, so the past is important. Situational definitions invoke historic heuristics and should be used strategically. E.g. when playing a simple game:
+* is it competitive, or participation-focussed?
+* is cheating allowed or permitted?
+
+Or when in a meeting:
+* is it one in which you speak up, or stay quiet;
+* is it time to tell the whole truth, or just part of it?
+
+Zucker's experiments reveal that even slight non-historical tendencies will persist with time. Therefore even very young companies have cultures, it's just not observed yet!
+
+Persistence can be positive:
+
+* Behaviour reliable and predictable;
+* Managerial delegation without control is maintained;
+* It provides "light-touch" direction
+
+Or negative:
+
+* Harmful behaviour will be reproduced;
+* Contradictory managerial direction will be thwarted - i.e. hard to do something new;
+* It is hard to question what is taken for granted.
+
+__Duality__: Culture both enables _and_ constrains
+
+## Organisational culture
+
+> "Organisations can 'define the situation' for their employees" - Sorenson
+
+All of the above, plus:
+
+A set of basic, internalised operational beliefs, values and practices for an organisation. Developed as an organisation tries to adapt to internal and external problems. 
+
+Helps define "how things are done" by defining a normal baseline for decisions. A high/strong adoption of culture tends to produce high performance and less volatile/more consistent performance. This is tied to:
+
+1. Better social control within the firm;
+2. Enhanced goal alignment; and
+3. Enhanced motivation thorugh perception that behaviour is freely chosen
+
+A strong culture can be built by selecting the "right" staff (which can be hard and expensive) or by socialising and training staff with/in the the culture from peers and leaders.
+
+Cultures will persist if they are tied to visual symbols, practices, values etc, i.e. if they are __institutionalised__.
+
+## Implementing culture
+
+> "But ultimately, culture answers to the physical"
+
+Rationality is shaped by two sources:
+
+1. Logic that is independant of history, even if our ideas change, we can theorise about them. Hardware.
+2. _Logics_ for solving particular problems that _do_ depend on history and received wisdom. Software.
+
+## Changing culture
+
+> "Knowledge of what needs to be done frequently fails to result in action or behaviour consistent with that knowledge"
+
+I.e. just knowing what to do won't get it done. Action is the solution. Knowledge that is _implemented_ is more likely to be acquired from learning than by doing. Taking action will generate experiences from which to learn, and spending time in "thoughful action" is valuable - act, and then learn from the results.
+
+To solve the "knowing-doing" problem it is important to realise and examine the belief-experience gaps.
+
+When presented with something that is inconsistent with our beliefs we react either by disregarding the data, or by updating our beliefs. Based on this, contraditions/inconsistencies can help us change - they contradict our view of how things work. These can be calls to action - identify unconfirmed beliefs and test them _or_ beliefs to update - identify wisdom disconfirmed by evidence and assess if the evidence calls for a change of belief.
+
+This approach can be structured in to two streams:
+
+__Learning__ (experience $\rightarrow$ beliefs):
+
+1. Identify legacy beliefs (that hold us back); and
+2. Identity disconfirming experiences;
+    * is the evidence strong;
+    * is it widely observed;
+    * has our belief updated, should it?
+    
+__Experimentation__ (beliefs $\rightarrow$ experience):
+
+1. identify beliefs _not_ confirmed by evidence;
+2. identify evidence required for confirmation
+  * what is considered strong evidence;
+  * how widely spread should it be;
+  * what is the tipping point for embracing new beliefs?
+    
+We approach a situation through three questions:
+1. What is the situation;
+2. What kind of person am I; and
+3. What does a person like me do in a situation like this?
+
+> "Can do is the key to know-how"
+
+# Cultural persistence and performance management
+
+We have seen how culture creates and solves problems of persistence. Companies bear their founders imprints. This links to cultures of:
+
+* attachment - why people stay with the company (e.g. work, money, love);
+* selection - how are people chosen to join the firm, ability to do a task, potential to do future tasks, values they hold;
+* control - how is the firm managed - leaders, peers, professional standards
+
+Combined, these factors can help to describe patterns of work that can define the "right" sort of organisation for an individual.
