@@ -101,5 +101,14 @@ plm::plm([formula], data, index = c(["i"], ["t""]), model = "[fixed effects]")
 
 When T=2, the first-difference and fixed effects estimators will be exactly the same.
 
+When T > 2:
+
+* Both are unbiased and consistent;
+* The efficiency is determined by the serial correlation in $u_{it}$:
+    * When they are serially uncorrelated, fixed effects is more efficient;
+    * However this correlation is hard to test!
+    
+
+
 
 
