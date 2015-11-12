@@ -148,6 +148,8 @@ In R the `glm` command is used to fit logit and probit models:
 
 `glm(formula, family(link), data, weights, ...)`
 
+It uses iteratively reweighted least squares to solve for the parameters.
+
 There are three common choices of family and link function:
 
 \begin{center}
@@ -178,3 +180,42 @@ LR = 2(L_{ur} - L_r) = deviance_{null} - deviance_{residual}
 \end{equation}
 
 If the $\chi^2$ value that results from \eqref{eq:signif} is greater than some critical value from the $\chi^2$ distribution then the null can be rejected and it can be said that the unrestricted model has some overall significance.
+
+### Dispersion
+
+The dispersion parameter of a binary dependant variable model is a measure of how the standard deviation is changed relatvie to the mean. It is a multiplicative factor. $\sigma = \mu x$ where x is the dispersion.
+
+### Model comparisons
+
+Two (or more) nested models can be compared in R with a likelihood ratio test. This can be done using `anova(fit1, fit2, test = "chisq")`.
+
+Assessing the importance of individual variables can also be done: `anova(fit1, test = "Chisq")` will add variables one by one (sequentially) to assess if they add significant information to the model.
+
+Similarly, `drop1(fit, test = "Chisq")` can be used to test a model with all specified variables and then performs a likelihood ratio where one variable is dropped each time (independantly, not sequentially) to assess its significance.
+
+`linearHypothesis()` and `confint()` also both work on `glm()` outputs, as does `predict()` which can be used with `type = "reponse"` to obtain P(y = 1 | x) or `type = "link"` to estimate the fitted values.
+
+## Partial effects in a logit model
+
+It was seen in \eqref{eq:effect} that some form of single scale factor is needed to understand the partial effect of each independant variable on the outcome. This can be represented as:
+
+\begin{equation}
+\begin{split}
+\Delta\hat{P} = g(\hat\beta_0 + \hat\beta_1x_2 + ... + \hat\beta_kx_k)\hat\beta_j \\
+g(\hat\beta_0 + \hat\beta_1x_2 + ... + \hat\beta_kx_k) \quad is \quad replaced \quad with \quad \frac{1}{n}\sum_{i=1}^ng(z) \\
+G = \dfrac{exp(z)}{1+exp(z)} \\
+g = G(z).(1-G(z)) \\
+g = \dfrac{exp(z)}{1+exp(z)}.\dfrac{1}{1+exp(z)} \\
+\frac{1}{n}\sum_{i=1}^ng(z) = \frac{1}{n}\sum_{i=1}^nG(z).(1-G(z))
+\end{split}
+\end{equation}
+
+In `R` this is obtained from the fitted values:
+
+```
+mean(fit$fitted.values * 1-fit$fitted.values) * fit$coefficients
+```
+
+This will return the estimated change in P(y = 1 | x) for a one unit change in $x_k$.
+
+
