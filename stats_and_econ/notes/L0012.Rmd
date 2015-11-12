@@ -7,3 +7,99 @@ output: pdf_document
 
 # Panel Data
 
+## What is panel data
+
+Data that has both cross-sectional and a time-series dimension. It is collected by following the __same individuals__ (or the same [identifier]) over a number of time periods.
+
+It is possible to use panel data just like cross-sections, but more can be done. Panel data allows issues related to unobserved factors (which are difficult to handle with purely cross sectional data) to be dealt with.
+
+## Two-period panel data
+
+An alternative way to use panel data is to consider a model that has omitted variables. Using panel data, if these variables are fixed over time then the error can be composed in to two parts: factors that vary over time and those that do not. 
+
+This is termed the __fixed effects__ model and can be written as \eqref{eq:fix}.
+
+\begin{equation} \label{eq:fix}
+y_{it} = \beta_0 + \delta_0d2_t + \beta_1x_{it1} + ... + \beta_kx_{itk} + a_i + u_{it} 
+\end{equation}
+
+In \eqref{eq:fix}, $i$ is an identifier for the individual/group/ID that is measured accross the time periods, which are denoted by $t$. $d2_t$ is a dummy variable indicating the second time period. 
+
+The error term has been __decomposed__ in to: $v_{it} = a_i + u_{it}$. 
+
+$a_i$ is termed the __fixed effect__ (invariant to $t$) that represents factors specific to each $i$ that do not depend on time. Such factors are allowed to be correlated with $x_{it}$.
+
+$u_{it}$ is the __idiosyncratic error__ that represents unobserved factors that vary both over time and accross sections, typically it is assumed to be uncorrelated with $x_{it}$.
+
+## Methods for using panel data
+
+### First-Differenced Estimation
+
+Rather than trying to consider a single formula to describe the data, it is possible to write separate models for each time period \eqref{eq:fd_1}.
+
+\begin{equation} \label{eq:fd_1}
+\begin{split}
+y_{i1} = \beta_0 + \delta_0.0 + \beta_1x_{i11} + ... + \beta_kx_{i1k} + a_i + u_{i1},\quad (t = 1)\\
+y_{i2} = \beta_0 + \delta_0.1 + \beta_1x_{i21} + ... + \beta_kx_{i2k} + a_i + u_{i2},\quad (t = 2)
+\end{split}
+\end{equation}
+
+Subtracting the first equation from the second gives a new, first-differenced equation \eqref{eq:fd_2}.
+
+\begin{equation} \label{eq:fd_2}
+\Delta{y_i} = \delta_0 + \beta_1\Delta x_{i1} + ... + \beta_k\Delta x_{ik} + \Delta u_{i}
+\end{equation}
+
+This model is now free of $a_i$. When $u_{it}$ is uncorrelated with the regressors in both periods then:
+
+* there is no correlation between $\Delta x$ and $\Delta u$; and
+* OLS will be consisten and unbiased.
+
+Often is it reasonable to assume that $\Delta u$ is uncorrelated with $\Delta x$ as the "fixed effects" have been removed. However if there is something in the error term that is not necessarily fixed accross groups then it may be needed to include it in the model.
+
+#### Panel data with more than two periods
+
+For a panel data with T periods:
+
+1. Subtract period 1 from period 2;
+2. Subtract period 2 from period 3; ...
+3. Subtract period (T - 1) from period T;
+4. Obtain (T-1) observations per individual/unit;
+5. Estimate by OLS
+
+The key assumption is that $Cov(x_{itj}, u_{is}) = 0$, i.e that the regressors are uncorrelated with the idiosyncratic error.
+
+This process also makes an assumption that $\Delta u_{it}$ is uncorrelated over time, for example that $Corr(\Delta u_{i1}, \Delta u_{i2}) = 0$ or $Corr(\Delta u_{i2}, \Delta u_{i3}) = 0$. This assumption _must_ hold for the usual standard errors and test statistics to be valid. To deal with serial correlation in $\Delta u$, GLS may be used.
+
+#### Implementation
+
+```
+plm::plm(y ~ x, data, index = c("group", "time"), model = "fd")
+plm::plm([formula], data, index = c(["i"], ["t""]), model = "[first difference]")
+```
+
+Ideally there is variation in the differences otherwise good estimates are hard to obtain.
+
+### Fixed Effects Estimation
+
+An alternative to first differences. 
+
+Consider $y_{it} = \beta_0 + \beta_1x_{it} + a_i + u_{it}$. Averaging over time for an individual gives $\bar{y}_i = \beta_0 + \beta_1\bar{x}_i + a_i + \bar{u}_i$.
+
+The average of $a_i$ will be $a_i$, therefore it is possible to subtract the average from each value, giving: $y_{it} - \bar{y}_i = \beta_1(x_{it} - \bar{x}_i) + (u_{it} - \bar{u}_i)$.
+
+In this model, each individual is __de-meaned__ for all variables, eliminating the fixed effects.
+
+#### Implementation
+
+```
+plm::plm(y ~ x, data, index = c("group", "time"), model = "within")
+plm::plm([formula], data, index = c(["i"], ["t""]), model = "[fixed effects]")
+```
+
+### First-Difference vs. Fixed Effects
+
+When T=2, the first-difference and fixed effects estimators will be exactly the same.
+
+
+
