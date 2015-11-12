@@ -6,3 +6,144 @@ output: pdf_document
 ---
 
 # Instrumental Variables
+
+## Why use Instrumental Variables
+
+There are several ways to deal with omitted variable bias including ignoring it and using proxies. An alternative is __independant variables (IVs)__.
+
+As a simple example, consider $y = \beta_0 + \beta_1x + u$. If it is thought that $x$ and $u$ are correlated (i.e. the zero conditional mean assumption does not hold) then the OLS estimators are biased.
+
+### Consistency
+
+Under the Gauss-Markov assumptions the OLS estimators are BLUEs (best linear unbiased estimators). However at times it will not be possible for them to be truly _unbiased_. 
+
+In those cases, it may be acceptable to settle for estimators that are __consistent__, i.e. as the sample size increases, the distribution of the estimator collapses to that of the true parameter value. This is consistency. 
+
+#### Consistency theorem:
+
+Under MLR1 to MLR4, the OLS estimator $\hat\beta_j$ is consistent for $\beta_j$ for all j = 0, 1, ..., k.
+
+Instrumental variables can help to produce estimators that are consistent.
+
+## What is an instrumental variable
+
+A good instrumental variable, $z$, for the endogenous (i.e. correlated with the error term) variable, $x$ is:
+
+* $z$ is uncorrelated with u, i.e. Cov(z, u) = 0; and
+* $z$ is correlated with x, i.e. Cov(z, x) $\neq$ 0.
+
+It is the case that Cov(z, u) cannot be tested generally and as such, common sense and domain knowledge should be used to decide if it makes sense. However it is possible to test Cov(z, x):
+
+1. Estimate the simple regression between $x$ and $z$: $x = \pi_0 + \pi_1z + v$;
+2. If $x$ and $z$ are correlated it will be possible to reject the null $H_0 : \pi_1 = 0$
+
+This process is often termed the first stage regression.
+
+## Using an instrumental variable
+
+Once it has been determined that $z$ is a valid instrument for $x$ then it can be seen that:
+
+\begin{equation}
+\begin{split}
+Cov(z, y) = Cov(z, \beta_0 + \beta_1x_ + u)\\
+Cov(z, y) = Cov(z, \beta_0) + Cov(z, \beta_1x) + Cov(z, u) \\
+Cov(z, y) = \beta_1Cov(z, x) + Cov(z, u) \rightarrow \beta_1 = \dfrac{Cov(z, y)}{Cov(z, x)}
+\end{split}
+\end{equation}
+
+This is the estimation using population quantities. Extending this to samples gives \eqref{eq:beta_iv}.
+
+\begin{equation} \label{eq:beta_iv}
+\hat\beta_{1, IV} = \dfrac{\sum_{i=1}^n(z_i - \bar{z})(y_i - \bar{y})}{\sum_{i=1}^n(z_i - \bar{z})(x_i - \bar{x})}
+\end{equation}
+
+Further, the IV estimator for $\beta_0$ is given by: $\hat\beta_{0,IV} = \bar{y} - \hat\beta_1\bar{x}$
+
+## IV vs. OLS Estimators
+
+It is known that the IV estimator is consistent whilst the OLS estimator is inconsistent when Cov(x, u) $\neq$ 0. 
+
+The (asymptotic) standard error of the IV estimator is given by \eqref{eq:iv_se}.
+
+\begin{equation} \label{eq:iv_se}
+se(\hat\beta_{1, IV}) = \dfrac{\hat\sigma^2}{SST_xR^2_{x, z}} = \dfrac{se(\hat\beta_{1, OLS})}{R^2_{x, z}}
+\end{equation}
+
+In \eqref{eq:iv_se}, $R^2_{x, z}$ is the R-squared from regressing x on z. Given that R-squared is always between 0 and 1, it is possible to say that the IV estimator will _always_ have a standard error larger than that for the OLS estimator. However, the stronger the correlation between z and x, the smaller the IV standard error (as the associated R-squared value will be larger).
+
+## The effect of a poor instrument
+
+If Cov(z, u) $\neq$ 0 then the IV estimator will also be inconsistent, too. The probability limits for the IV estimator are given by \eqref{eq:limits}.
+
+\begin{equation} \label{eq:limits}
+\begin{split}
+\hat\beta_{1, IV} \rightarrow \beta_1 + \dfrac{Corr(z, u)}{Corr(z, x)}.\dfrac{\sigma_u}{\sigma_x}\\
+\hat\beta_{OLS} \rightarrow \beta_1 + Corr(z, u).\dfrac{\sigma_u}{\sigma_x}
+\end{split}
+\end{equation}
+
+Therefore, if $|Corr(z, u)/Corr(z, x)|$ < $|Corr(x, u)|$ then the IV estimator is preferred over OLS. This provided a good rule of thumb: only use an instrument if Corr(z, x) is sufficiently "high".
+
+## Difference between IV and proxy
+
+With IV, the unobserved variable is left in the error term but the estimation method accounts for its presence. With a proxy, the aim is to remove to unobserved variable from the error term.
+
+## Two-Stage Least Squares (2LS)
+
+### Multiple regression
+
+Consider the case where $y_1 = \beta_0 + \beta_1y_2 + \beta_2z_1 + u$ where $y_2$ is endogenous and $z_1$ is exogenous. 
+
+Given two instruments, $z_2$ and $z_3$ for the endogenous variable either _could_ be used. However, the _best_ instrument is a linear combination of all the exogeneous variables: $y_2^* = \pi_0 + \pi_1z_1 + \pi_2z_2 + \pi_3z_3$. $y_2^*$ can be easily estimated by regressing $y_2$ on $z_{1, 2, 3}$. Then $\hat{y_2}$ can be substituted in to the model to get the IV estimates.
+
+### 2LS Procedure
+
+#### Stage 1 - Regress $y_2$ on $z_1, z_2, z_3$: 
+
+$y_2 = \pi_0 + \pi_1z_1 + \pi_3z_3 + v$
+
+Obtain the fitted values from this regression, $\hat{y_2}$ and test the null $H_0 : \pi_2 = \pi_3 = 0$ using an F-statistic.
+
+#### Stage 2 - Regress $y_1$ on $\hat{y_2}$ and $z_1$:
+
+$y_1 = \beta_0 + \beta_1\hat{y_2} + \beta_2z_1 + error$
+
+Obtain the estimates for $\hat\beta_j$
+
+This method extends to multiple endogeous variables, it is just necessary to have at least as many instruments as the number of endogeous variables.
+
+### Implementation 
+
+In `R`, IV estimation can be performed with the `AER` package:
+
+```
+AER::ivreg(y ~ x, ~ z1 + z2 + z3, data)
+AER::ivreg([normal formula], ~ [instruments and exogenous variables], data)
+```
+`ivreg` will regress all endogenous variables on the instruments to find the linear combination of all the exogenous variables and provide the best instrument. 
+
+### A note on $R^2$
+
+After IV estimation, the R-squared value can be negative. This is due to how R-squared is calculated. Recalling that $R^2 = 1 - \dfrac{SSR}{SST} = 1 - \dfrac{\sum_{i=1}^n(y_i - \hat{y}_i)^2}{\sum_{i=1}^n(y_i - \bar{y}_i)^2}$ it is possible that SSR can be larger than SST, resulting in a negative R-squared value.
+
+This is because, when the instrument is used, the $\hat\beta_j$ variable has been estimated using $\hat{x}$ (i.e. the fitted values from the first stage of 2LS) and not $x$ (i.e. the endogenous variable). As such, the predicted response variable $\hat{y}$ is not exactly the same as it would have been and so $(y - \hat{y})^2$ can be greater than $(y - \bar{y})^2$.
+
+In short, when performing IV estimation, do not use the R-squared value.
+
+## Testing for endogeneity
+
+Without endogeneity problems OLS is preferred over IV due to the smaller standard errors. Endogeneity can be tested with a __Hausman__ test.
+
+Consider the model $y_1 = \beta_0 + \beta_1y_2 + \beta_2z_1 + u$ with two instruments $z_2$ and $z_3$.
+
+Recalling the first stage of 2LS where $y_2$ is regressed on all exogeneous variables with an error term, $v$. If $y_2$ is exogenous, then v and u will be uncorrelated.
+
+This can be tested by writing $u = \delta_1v + e$ and plugging that in to the original model: $y_1 = \beta_0 + \beta_1y_2 + \beta_2z_1 + \delta_1v + e$ where the null is that $\delta_1 = 0$.
+
+v is not directly observed, but can be estimated from $\hat{v}$ (the residuals). Therefore the testing procedure is:
+
+1. OLS $y_2 = \pi_0 + \pi_1z_1 + \pi_3z_3 + v$ and obtain the residuals, $\hat{v}$;
+2. OLS $y_1 = \beta_0 + \beta_1y_2 + \beta_2z_1 + \delta_1\hat{v} + e$ and test for significance of $\hat{v}$s; and
+3. Conclude that $y_2$ is indeed endogenous if $\delta_1$ is statistically different from 0.
+
+
