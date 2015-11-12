@@ -68,7 +68,11 @@ In \eqref{eq:f_y}, if $y_i = 1$ then the right hand term cancels, if $y_i = 0$ t
 In order to simplify this slightly, a __log-likelihood__ function is obtained by taking the log of \eqref{eq:f_y}, using the rules of $log(ab) = log(a) + log(b)$ and $log(x)^2 = 2log(x)$.
 
 \begin{equation} \label{eq:ll}
+\begin{split}
+log(f(y|x_i, \beta)) = log[(G(z_i))^{y_i}.(1-G(z_i))^{1-y_i}] \\
+l_i(\beta) = log[G(z_i)^{y_i}] + log[(1-G(z_i))^{1-y_i}] \\
 l_i(\beta) = y_i log[G(z_i)] + (1-y_i)[1-G(z_i)]
+\end{split}
 \end{equation}
 
 The log-likelihood function for a _sample_ is obtained by summing  \eqref{eq:ll} accross all observations: $L(\beta) = \sum_{i=1}^n l_i(\beta)$.
