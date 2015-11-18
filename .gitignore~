@@ -33,6 +33,7 @@ intro_to_da/cases/*.pdf
 intro_to_da/notes/*.pdf
 intro_to_da/articles/*.pdf
 intro_to_da/lectures/*.pdf
+intro_to_da/lectures/*.pptx
 intro_to_da/assignment/*.docx
 intro_to_da/assignment/toHandIn/
 intro_to_da/assignment/shiny/data/.~lock.BA_Anonymised.xlsx#
@@ -43,3 +44,6 @@ intro_to_da/assignment/pres/*.html
 intro_to_da/assignment/pres/group4_presentation.html
 intro_to_da/assignment/team4Assignment.zip
 
+# ignore for networks course
+networks/docs/*/*.pdf
+networks/hw/*/*.pdf
