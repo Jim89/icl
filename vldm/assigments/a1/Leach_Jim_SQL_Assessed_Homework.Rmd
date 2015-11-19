@@ -1,0 +1,141 @@
+---
+title: "Very Large Data Management - Assignment One"
+author: "Jim Leach"
+date: "19 November 2015"
+output: word_document
+---
+
+# Document purpose
+
+The purpose of this document is to write up the response to the first assigment give as part of the _Very Large Data Management or Databases and Distributed Systems_ module. It is divided in to sections, each covering a section of the assigment as given. 
+
+# Data description
+
+Data from the	Air	Traffic	Administration	of	Bureau	of	Air	and	Space	Events (BASE) were provided as a 	database dump. They	contained information	about aircraft accidents	and	incidents, related data about the airport and operating airline for each incident, and information about individuals within each airline.
+
+# The assignment
+
+Five questions were asked of the data. `SQL` queries were written to address these quetsions and the responses given below.
+
+# Results
+
+## Question One
+
+> Count	all events	that	happened	between	1.1.2005 and	1.1.2006.		
+
+### Query
+
+```
+SELECT COUNT(DISTINCT ID) AS EVENTS 
+FROM 
+	EVENT
+WHERE DATE BETWEEN '2005-01-01' AND '2006-01-01'
+```
+
+### Result
+
+> 662
+
+\pagebreak
+
+## Question Two
+
+> Count	all	events	for	operators	whose	name	contains	an	“S”.
+
+### Query
+
+```
+SELECT COUNT(DISTINCT BK.ID) AS EVENTS
+FROM 
+	EVENT BK
+LEFT JOIN
+	OPERATOR LK
+ON BK.OPERATOR_CODE = LK.CODE
+WHERE LK.NAME LIKE '%S%'
+```
+
+### Result
+
+> 1850
+
+\pagebreak
+
+## Query Three
+
+> Count	all	events	for	operators	whose	owner’s name	contains	a	“T”.
+
+### Query
+
+```
+SELECT COUNT(DISTINCT EV.ID) AS EVENTS
+FROM
+	EVENT EV
+INNER JOIN
+-- Subquery to return all owners with a 'T' in either their first or last name
+(
+	SELECT DISTINCT OPERATOR_CODE
+	FROM	-- Select all individuals
+		PERSON PERS
+	LEFT JOIN -- Linking table to position code
+		PERSON_POSITION LINK
+	ON PERS.ID = LINK.PERSON_ID
+	LEFT JOIN -- Return the position
+		POSITION POS
+	ON LINK.POSITION_ID = POS.ID
+	-- Take only 'owners' with a 'T' in their first or last name
+	WHERE POS.DESCRIPTION = 'OWNER'
+	AND (FIRST_NAME LIKE '%T%' OR LAST_NAME LIKE '%T%')
+) OWNERS_T
+ON EV.OPERATOR_CODE = OWNERS_T.OPERATOR_CODE
+```
+
+### Result
+
+> 47
+
+\pagebreak
+
+## Question 4
+
+> Count	all events	where	the	pilot's	flight	hours	are	between	1000 and 2000
+of	hours.		
+
+### Query
+
+```
+SELECT COUNT(DISTINCT ID) AS EVENTS
+FROM 
+	EVENT BK
+WHERE PILOT_HOURS BETWEEN 1000 AND 2000
+```
+
+### Result
+
+> 4041
+
+\pagebreak
+
+## Query 5
+
+> Count	 all events	 that	 happened	 to	 an	 aircraft	 coming	 from	 an	 airport	
+located	in	Greece.		
+
+### Query
+
+```
+SELECT COUNT(DISTINCT BK.ID) AS EVENTS
+FROM
+	EVENT BK
+LEFT JOIN -- Return aiport information
+	AIRPORT LK
+ON BK.AIRPORT_ID = LK.ID
+WHERE LK.COUNTRY = 'GR'
+-- (GR = ISO 3166-1 alpha-2 code for Greece)
+```
+
+### Result
+
+> 1
+
+
+***
