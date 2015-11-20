@@ -1,0 +1,83 @@
+---
+title: "Optimisation and Decision Models - Assigment One"
+author: "Jim Leach"
+date: "20 November 2015"
+output: pdf_document
+---
+
+# Document purpose
+
+The purpose of this document is to write up the response to the first assigment give as part of the _Optimistaion and Decision Models_ module. It is divided in to two sections, each covering a section of the assigment as given. Each major section is divided in to further subsections, one for each question in the assigment.
+
+***
+
+# Section One - Primo Insurance Company
+
+In this section it is posited that the Primo Insurance company is introducing two new products: special risk insurance and mortgages. They expect to make £5 per sale on special risk insurance and £2 per sale on a mortage. They wish to establish the right mix of these new products in order to maximise their products within the confines of a set of work requirements, given by the below table:
+
+```{r 3_requirements, echo = FALSE}
+library(knitr)
+wr <- data.frame(dept = c("Underwriting", "Admin", "Claims"),
+                 sr = c(3, 0, 2),
+                 m = c(2, 1, 0),
+                 wh = c(2400, 800, 1200))
+kable(wr, caption = "Work-hours per unit", col.names = c("Department", "Special Risk", "Mortage", "Work-hours available"))
+```
+
+## A - Formulation of a linear program for this problem
+
+The linear program for this problem can be defined as follows:
+
+### i. Decision variables
+
+* __SR__ : sales quota of special risk insurance; and
+* __M__ : sales quota of mortages
+
+### ii. Objective function
+
+\begin{equation} \label{eq:3a_of}
+max \quad Profit = 5.SR + 2.M
+\end{equation}
+
+### iii. Constraints
+
+\begin{equation} \label{eq:3a_const}
+\begin{split}
+Underwriting:\quad 3.SR + 2M \leq 2400 \\
+Admin: \quad 0.SR + 1.M \leq 800 \\
+Claims: \quad 2.SR + 0.M \leq 1200 \\
+Nonnegativity: \quad SR,  M \geq 0
+\end{split}
+\end{equation}
+
+## B - Graphical Method to solve the problem
+
+The graphical method was used to solve the problem and is submitted as part of this homework in the file `hw1q3plot.jpg`.
+
+```{r set_vals, echo = FALSE}
+sr = 600
+m = 300
+optim = 3600
+```
+
+Using the graphical method, the optimal solution was found to be SR = `r sr`; M = `r m` which returns an objective value of `r optim`. At the optimal solution, the values of the contraints are:
+
+* Underwriting = `r 3*sr + 2*m`, i.e. the underwriting constaint is _binding_;
+* Admin = `r m`, i.e. the admin constaint is _not binding_; 
+* Claims = `r 2*sr`, i.e. the claims constraint is _binding_; and
+* Non-negativity: given that neither SR nor M are 0 in the optimal solution, this constraint is _not binding_.
+
+## C Algebraic Solution to Simultaneous Equations
+
+## D Solve the model with the Excel solver
+
+The model was solved using the Excel solver add-in. It has been submitted as part of this homework in the file `q3_solve.xlsx`.
+
+Using the solver, the same optimal solution as for the graphical method was found.
+
+***
+
+\pagebreak
+
+# Section Two - Nature's best Frozen Foods
+
