@@ -81,3 +81,75 @@ Using the solver, the same optimal solution as for the graphical method was foun
 
 # Section Two - Nature's best Frozen Foods
 
+In this section it is posited that "Natures's Best Frozen Foods" is trying to decide the right mix of four products that it produces in order to maximise its overall earnings. The four products use a similar set of ingredients, described by the table below:
+
+```{r 4_requirements, echo = FALSE}
+library(knitr)
+ingred <- data.frame(ing = c("Carrots", "Mushrooms", "Green peppers",
+                             "Broccoli", "Corn"),
+                     sf = c(0.0625, 0.075, 0.0625, 0.05, 0.0),
+                     b = c(0.05, 0.0, 0.05, 0.075, 0.075),
+                     hm = c(0.0, 0.1, 0.075, 0.075, 0.0),
+                     vc = c(0.0625, 0.0, 0.0625, 0.0625, 0.0625),
+                     ms = c(3750, 2000, 3375, 3500, 3750))
+kable(ingred, caption = "Mixes (volumes given in kg)", col.names = c("Ingredients", "Stir Fry", "Barbeque", "Heart mushrooms", "Veggie Crunch", "Montly ingredient supply"))
+```
+
+
+## A - Formulation of a linear program for this problem
+
+### i. Decision Variables
+
+* __SF__ : sales of stir fry product;
+* __B__ : sales of barbeque product;
+* __HM__ : sales of hearty mushroom product; and
+* __VC__ : sales of veggie crunch product
+
+### ii. Objective Function
+
+
+\begin{equation} \label{eq:4a_of}
+max \quad Earnings = 0.22SF + 0.20B + 0.18HM + 0.18VC
+\end{equation}
+
+### iii. Constraints:
+
+\begin{equation} \label{eq:4a_const}
+\begin{split}
+Carrots: 0.0625SF + 0.05B + 0.0625VC \leq 3750 \\
+Mushrooms: 0075SF + 0.1HM \leq 2000 \\
+Green peppers: 0.0625SF + 0.05B + 0.075HM + 0.0625VC \leq 3375 \\
+Broccoli: 0.05SF + 0.075B + 0.075HM + 0.0625VC \leq 3500 \\
+Corn: 0.075B + 0.0625VC \leq 3750 \\
+Nonnegativity: \quad SF,  B, HM, VC \geq 0
+\end{split}
+\end{equation}
+
+## B - Solve the linear program using AMPL
+
+The linear program was formulated as an AMPL model with the following form:
+
+```
+# set up decision variables
+var sf;
+var b;
+var hm;
+var vc;
+
+# set up function
+maximize earnings: 0.22*sf + 0.2*b + 0.18*hm + 0.18*vc;
+
+# add constraints
+subject to carrots: 0.0625*sf + 0.05*b + 0.0625*vc <= 3750;
+subject to mushrooms: 0.075*sf + 0.1*hm <= 2000;
+subject to green_peppers: 0.0625*sf + 0.05*b + 0.075*hm + 0.0625*vc <= 3375;
+subject to broccoli: 0.05*sf + 0.075*b + 0.075*hm + 0.0625*vc <= 3600;
+subject to corn: 0.075*b + 0.0625*vc <= 3750;
+
+# add non-neg constrains
+subject to sf_nn: sf >= 0;
+subject to b_nn: b >= 0;
+subject to hm_nn: hm >= 0;
+subject to vc_nn: vc >= 0;
+```
+
