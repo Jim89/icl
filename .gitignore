@@ -14,6 +14,8 @@ induction/statsIntro/docs/*.pdf
 
 # ignore for optimisation class
 optimisation/docs/*.pdf
+optimisation/docs/*/*.pdf
+optimisation/hw/hw1/*.pdf
 
 # ignore for stats class
 stats_and_econ/docs/*.pdf
@@ -48,7 +50,4 @@ intro_to_da/assignment/team4Assignment.zip
 networks/docs/*/*.pdf
 networks/hw/*/*.pdf
 
-# ignore for optimisation course
-optimisation/docs/*/*.pdf
 
-optimisation/hw/hw1/Exercises 1.pdf
