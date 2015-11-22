@@ -11,7 +11,7 @@ maximize earnings: 0.22*sf + 0.2*b + 0.18*hm + 0.18*vc;
 subject to carrots: 0.0625*sf + 0.05*b + 0.0625*vc <= 3750;
 subject to mushrooms: 0.075*sf + 0.1*hm <= 2000;
 subject to green_peppers: 0.0625*sf + 0.05*b + 0.075*hm + 0.0625*vc <= 3375;
-subject to broccoli: 0.05*sf + 0.075*b + 0.075*hm + 0.0625*vc <= 3600;
+subject to broccoli: 0.05*sf + 0.075*b + 0.075*hm + 0.0625*vc <= 3500;
 subject to corn: 0.075*b + 0.0625*vc <= 3750;
 
 # add non-neg constrains
