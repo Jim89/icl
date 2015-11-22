@@ -14,7 +14,16 @@ data = pd.read_table("../data/HW1_3.txt",
                      names = ["vx", "vy", "weights"])
                      
 # initialise graph
-graph = nx.MultiDiGraph()
-for row in range(14):
-    graph.add_weighted_edges_from(tuple(data.iloc[row, ]))                     
+graph = nx.edgelist()
+
+# %%
+for row in range(len(data)):
+    weighted_edge =  tuple(data.iloc[row, ])
+    graph.add_edge(u = weighted_edge[0],
+                   v = weighted_edge[1],
+                   key = None,
+                   attr_dic = None,
+                   weight = weighted_edge[2])
+                   
+tree = nx.minimum_spanning_tree(graph)                  
                      
