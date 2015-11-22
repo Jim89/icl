@@ -119,4 +119,9 @@ Using this algorithm, the shortest path from vertex 1 to 6 was found to be from 
 
 # Questions 5 and 6
 
-The max-cost spanning tree and Dijkstra algorithms were programmed in Python. The code is presented here, and is also found in the two attached files `max_cost_st.py` and `dijkstra.py`.
+The max-cost spanning tree and Dijkstra algorithms were programmed in Python. For brevity's sake, the code is not presented here, and is found in the two attached files `max_cost_st.py` and `dijkstra.py`.
+
+# Questions 7 and 8
+
+The `NetworkX` package was used to perform the same analyses as for questions 5 and 6. 
+
