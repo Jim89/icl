@@ -11,7 +11,9 @@ The purpose of this document is to write up the response to the first assigment 
 
 ***
 
-# 1a
+# Question One
+
+## 1a
 
 A graph is often denoted as $G = (V, E)$, that is a set of vertices (V) and edges (E). Writing the number of edges as _m_, is is possible to show that \eqref{eq:1a} is true, where $deg(v)$ is the _degree_ of a vertex, $v$. The degree of a vertex is the number of connections it has (both incoming and outgoing connections are included).
 
@@ -21,7 +23,7 @@ A graph is often denoted as $G = (V, E)$, that is a set of vertices (V) and edge
 
 The result presented in \eqref{eq:1a} is possible due to the __Handshake principal__:
 
-In an undirected graph, each edge (_m_) connects two nodes. 
+In an undirected graph, each edge (_m_) connects two vertices. 
 
 Any given edge, $m_i$, connects two vertices $v_x$ and $v_y$ (i.e. $m_i = (v_x, v_y)$). For edge $m_i$, the degree of $v_x$ will be increased by one (as it has a connection with $v_y$). Similarly, the degree of $v_y$ will _also_ be increased (as it has a connection with $v_x$) by one. 
 
@@ -29,7 +31,92 @@ Therefore edge $m_i$ has increased the _total_ degree of the graph by 2 (as both
 
 Given that  the number of edges, $m$, is equivalent to the cardinality/size of the set of edges, $|E|$ (i.e $m$ = $|E|$) it is therefore possible to write \eqref{eq:1a}.
 
-# 1b
+## 1b
 
+For a _directed_ graph (digraph), G, is is possible to show that \eqref{eq:1b} is true. This follows a similar logic to that presented for question 1a above. In a directed graph, the _indegree_ value of a vertex is the number of edges/arcs that are inwards/pointing to that vertex. Similarly the _outdegree_ is the number of edges/arcs that begin at that vertex and point to another vertex.
 
+\begin{equation}\label{eq:1b}
+\sum_{v\epsilon V} indegree(v) = \sum_{v\epsilon V} outdegree(v) = |E|
+\end{equation}
 
+In a directed graph, each edge/arc _starts_ and one vertex and _ends_ at another vertex. 
+
+Any given edge, $m_i$, connects two vertices $v_x$ and $v_y$. Arbitrarily, it is the case that edge $m_i$ begins at $v_x$ and ends and $v_y$.
+
+$m_i$ increases the outdegree of $v_x$ by one (as the connection begins here) and increases the indegree of $v_y$ by one (as the connection ends here). The indegree of $v_x$ and the outdegree of $v_y$ are unchanged by $m_i$. 
+
+Therefore each new edge in a directed graph will add one unit of indegrees to one node, and one unit of outdegrees to _another_ node. Therefore, it is the case that \eqref{eq:1b} is true.
+
+# Question Two
+
+## 2a
+
+The incidence matrix of this graph is given by:
+
+```{r 2a_incidence, echo = FALSE}
+library(knitr)
+tbl <- data.frame(vertex = paste0("v", 1:6), 
+                  e1 = c(1, 1, 0, 0, 0, 0),
+                  e2 = c(0, 1, 1, 0, 0, 0),
+                  e3 = c(0, 0, 1, 1, 0, 0),
+                  e4 = c(0, 0, 0, 1, 1, 0),
+                  e5 = c(0, 0, 1, 0, 1, 0),
+                  e6 = c(0, 0, 1, 0, 0, 1),
+                  e7 = c(0, 0, 1, 0, 0, 1),
+                  e7 = c(1, 0, 1, 0, 0, 0))
+kable(tbl, caption = "Incidence matrix of graph A", col.names = c("", paste0("e", 1:8)))
+```
+
+## 2b
+
+The incidence matrix of this graph is given by:
+
+```{r 2b_incidence, echo = FALSE}
+library(knitr)
+tbl <- data.frame(vertex = c("a", "b", "c", "d", "e"), 
+                  ab = c(1, -1, 0, 0, 0),
+                  ad = c(1, 0, 0, -1, 0),
+                  bc = c(0, 1, -1, 0, 0),
+                  be = c(0, 1, 0, 0, -1),
+                  cd = c(0, 0, 1, -1, 0),
+                  db = c(0, -1, 0, 1, 0),
+                  de = c(0, 0, 0, 1, -1))
+kable(tbl, caption = "Incidence matrix of graph B", 
+      col.names = c("", "(a,b)", "(a,d)", "(b,c)", "(b,e)", "(c,d)",
+                    "(d,b)","(d,e)"))
+```
+
+# Question 3
+
+To find the __max__-cost spanning tree of the graph presented in this question the following steps were taken:
+
+1. List all edges in order of _decreasing_ weight, i.e. (14, 11, 10, 9, ...);
+2. The highest cost edge was selected first, followed by the second highest cost and then the third and so on until all edges had been selected with the restriction that picking that edge would not create a cycle.
+
+The resulting __max__-cost spanning tree was drawn and is attached to this assignment as file `networks_a1q3_max_cost_tree.jpg`.
+
+# Question 4
+
+Dijkstra's algorithm was used to find the shortest path from vertex 1 to 6 in the provided graph.
+
+The iteration table from performing this exercise is provided below:
+
+```{r q4_dijkstra, echo = FALSE}
+library(knitr)
+dijk <- data.frame(iteration = c("Inititalise", 1:5),
+                       N = c("{1}", "{1,5}", "{1,5,2}", "{1,5,2,3}", "{1,5,2,3,4}",
+                             "{1,2,3,4,5,6}"),
+                       D2 = rep(8, 6),
+                       D3 = c(Inf, Inf, rep(8, 4)),
+                       D4 = c(Inf, rep(10, 5)),
+                       D5 = rep(2, 6),
+                       D6 = c(rep(Inf, 4), 13, 13))
+kable(dijk, caption = "Dijkstra iteration table",
+      col.names = c("Iteration", "N", "D2", "D3", "D4", "D5", "D6"))
+```
+
+Using this algorithm, the shortest path from vertex 1 to 6 was found to be from vertex 1 to vertex 5, to vertex 4, to vertex 6 with a cost of 13. 
+
+# Questions 5 and 6
+
+The max-cost spanning tree and Dijkstra algorithms were programmed in Python. The code is presented here, and is also found in the two attached files `max_cost_st.py` and `dijkstra.py`.
