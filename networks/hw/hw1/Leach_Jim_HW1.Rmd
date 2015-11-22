@@ -1,0 +1,35 @@
+---
+title: "Network Analytics - Assignment One"
+author: "Jim Leach"
+date: "22 November 2015"
+output: pdf_document
+---
+
+# Document Purpose
+
+The purpose of this document is to write up the response to the first assigment give as part of the _Network Analytics_ module. It is divided in to several sections, each covering a section of the assigment as given. 
+
+***
+
+# 1a
+
+A graph is often denoted as $G = (V, E)$, that is a set of vertices (V) and edges (E). Writing the number of edges as _m_, is is possible to show that \eqref{eq:1a} is true, where $deg(v)$ is the _degree_ of a vertex, $v$. The degree of a vertex is the number of connections it has (both incoming and outgoing connections are included).
+
+\begin{equation} \label{eq:1a}
+\sum_{v \epsilon V} deg(v) = 2m = 2|E|
+\end{equation}
+
+The result presented in \eqref{eq:1a} is possible due to the __Handshake principal__:
+
+In an undirected graph, each edge (_m_) connects two nodes. 
+
+Any given edge, $m_i$, connects two vertices $v_x$ and $v_y$ (i.e. $m_i = (v_x, v_y)$). For edge $m_i$, the degree of $v_x$ will be increased by one (as it has a connection with $v_y$). Similarly, the degree of $v_y$ will _also_ be increased (as it has a connection with $v_x$) by one. 
+
+Therefore edge $m_i$ has increased the _total_ degree of the graph by 2 (as both $v_x$ _and_ $v_y$ have their degree increased by one).
+
+Given that  the number of edges, $m$, is equivalent to the cardinality/size of the set of edges, $|E|$ (i.e $m$ = $|E|$) it is therefore possible to write \eqref{eq:1a}.
+
+# 1b
+
+
+
