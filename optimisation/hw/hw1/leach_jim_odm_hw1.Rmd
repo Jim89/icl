@@ -60,7 +60,7 @@ m = 300
 optim = 3600
 ```
 
-Using the graphical method, the optimal solution was found to be SR = `r sr`; M = `r m` which returns an objective value of `r optim`. At the optimal solution, the values of the contraints are:
+Using the graphical method, the optimal solution was found to be SR = `r sr`; M = `r m` (the point labelled * in the attached diagram) which returns an objective value of `r optim`. At the optimal solution, the values of the contraints are:
 
 * Underwriting = `r 3*sr + 2*m`, i.e. the underwriting constaint is _binding_;
 * Admin = `r m`, i.e. the admin constaint is _not binding_; 
@@ -68,6 +68,36 @@ Using the graphical method, the optimal solution was found to be SR = `r sr`; M 
 * Non-negativity: given that neither SR nor M are 0 in the optimal solution, this constraint is _not binding_.
 
 ## C Algebraic Solution to Simultaneous Equations
+
+The optimal solution from part B occurs at the vertex of the feasible region that is described by the intersection of the _underwriting_ and the _claims_ constraint lines (see attached diagram). Therefore the simultanenous equations to be solved algebraically are given by \eqref{eq:q3_sim}.
+
+\begin{equation} \label{eq:q3_sim}
+\begin{split}
+Underwriting: \quad 3.SR + 2.M \leq 2400 \\
+Claims: \quad 2.SR \leq 1200 \\
+Claims: \quad   SR \leq 600
+\end{split}
+\end{equation}
+
+Solving these equations was performed:
+
+\begin{equation} \label{eq:q3_sim_solve}
+\begin{split}
+3.SR + 2.M \leq 2400 \\
+2SR \leq 1200 \\
+\therefore SR \leq 600 \\
+\\
+Perform\quad subsitution\quad and\quad solve\quad for\quad M: \\
+3*(600) + 2.M \leq 2400 \\
+1800 + 2M \leq 2400 \\
+2M \leq 600 \\
+M \leq 300 \\
+\\
+\therefore SR = 600, \quad M = 300
+\end{split}
+\end{equation}
+
+Therefore the solution found by algebraically solving the simulatenous equations \eqref{eq:q3_sim_solve} is that M = `r m` and SR = `r sr`, returning an objective value of `r optim`, i.e. identical to that found using the graphical method and that found using the Excel solver (question D).
 
 ## D Solve the model with the Excel solver
 
@@ -95,6 +125,7 @@ ingred <- data.frame(ing = c("Carrots", "Mushrooms", "Green peppers",
 kable(ingred, caption = "Mixes (volumes given in kg)", col.names = c("Ingredients", "Stir Fry", "Barbeque", "Heart mushrooms", "Veggie Crunch", "Montly ingredient supply"))
 ```
 
+The four products, Stir Fry, Barbeque, Hearty Mushroom and Veggie Crunch contribute £0.22, £0.20, £0.18 and £0.18 to earnings, respectively. 
 
 ## A - Formulation of a linear program for this problem
 
@@ -127,7 +158,7 @@ Nonnegativity: \quad SF,  B, HM, VC \geq 0
 
 ## B - Solve the linear program using AMPL
 
-The linear program was formulated as an AMPL model with the following form:
+The linear program was formulated as an AMPL model with the following form (note that the attached `q4_natures_best.mod` file also contains the full script).
 
 ```
 # set up decision variables
@@ -153,3 +184,46 @@ subject to hm_nn: hm >= 0;
 subject to vc_nn: vc >= 0;
 ```
 
+Loading this model in to `AMPL` and running the `model` and `solve` commands, the optimal solution is given by the following:
+
+```{r q4_set, echo = FALSE}
+sf <-  26666.7
+b <- 22333.3
+hm <- 0
+vc <- 9466.67
+q4_optim <- 12037.33333
+```
+
+* Sales of stir fry (SF): $`r format(sf, scientific = FALSE)`$;
+* Sales of barbeque (B): $`r format(b, scientific = FALSE)`$;
+* Sales of hearty mushroom (HM): $`r format(hm, scientific = FALSE)`$;
+* Sales of veggie crunch (VC): $`r format(vc, scientific = FALSE)`$.
+
+The objective value at optimal solution was found to be £$`r format(round(q4_optim, 2), scientific = FALSE)`$. Running the `display` command on the constraint parameters in the model, it would appear that the Carrots and Corn contraints were both binding at the optimal solution, the other contraints were not.
+
+## C - The value of an extra 100g green peppers
+
+To understand what the "value" of an extra 100g of green peppers is, it is necessary to increase the availability of green peppers, recalculate the optimal solution and report the results. 
+
+In doing so, the linear program developed earlier was relatively unchanged. The decision variables remained the same, the objective function \eqref{eq:4a_of} remained the same, only one of the constraints was changed.  The Green Peppers contraint was now \eqref{eq:q4_gp_const_c}.
+
+\begin{equation} \label{eq:q4_gp_const_c}
+Green peppers: 0.0625SF + 0.05B + 0.075HM + 0.0625VC \leq 3475
+\end{equation}
+
+Adjusting the model and re-evaluating it, also using AMPL (the attached `q4_natures_best_extra_pepper.mod` file contains the full script), returned the following results:
+
+```{r 4c_set, echo = FALSE}
+sf_4c <-  26666.7
+b_4c <- 18333.3
+hm_4c <- 0
+vc_4c <- 14266.7
+q4_optim_4c <- 12101.33333
+```
+
+* Sales of stir fry (SF): $`r format(sf_4c, scientific = FALSE)`$;
+* Sales of barbeque (B): $`r format(b_4c, scientific = FALSE)`$;
+* Sales of hearty mushroom (HM): $`r format(hm_4c, scientific = FALSE)`$;
+* Sales of veggie crunch (VC): $`r format(vc_4c, scientific = FALSE)`$.
+
+The new optimal value was found to be £$`r format(round(q4_optim_4c, 2), scientific = FALSE)`$, meaning that the extra 100g of green peppers had a value of approximately £$`r format(round(q4_optim_4c, 2)-round(q4_optim, 2), scientific = FALSE)`$ (i.e. the difference between the new and the original objective values at the optimal solution).
