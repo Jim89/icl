@@ -6,7 +6,7 @@ This is a temporary script file.
 """
 
 #%% set working directory
-cd /media/jim/Storage/Documents/gdrive/Imperial/course/networks/hw/hw1
+# cd /media/jim/Storage/Documents/gdrive/Imperial/course/networks/hw/hw1
 
 
 #%% load the first network

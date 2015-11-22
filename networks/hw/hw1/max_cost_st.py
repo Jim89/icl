@@ -51,7 +51,7 @@ rows = len(data.index)
 # set up empty containers
 edges = []
 vertices = []
-edgelist = pd.DataFrame()
+
 
 # iterate over rows of data
 for row in range(rows):
@@ -60,8 +60,6 @@ for row in range(rows):
         pass
     else:
         edges.append(datum[2])
-        edgelist.iloc[row, 0] = datum[0]
-        edgelist.iloc[row, 0] = datum[0]
         if datum[0] not in vertices:
             vertices.append(datum[0])
         if datum[1] not in vertices:
