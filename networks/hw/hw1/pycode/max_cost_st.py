@@ -3,14 +3,13 @@
 Title: Max-Cost Spanning Tree
 Author: Jim Leach
 Date: 2015-11-22
-References: https://www.python.org/doc/essays/graphs/ (for finding path in graph)
 """
 
 #%% set working directory
 # cd /media/jim/Storage/Documents/gdrive/Imperial/course/networks/hw/hw1
 
 # %% define function to find path(s) in a graph
-# sourced on 2015-11-22 from: https://www.python.org/doc/essays/graphs/ 
+# referenced on 2015-11-22 from: https://www.python.org/doc/essays/graphs/ 
 def find_path(graph, start, end, path = []):
     """
     A new function to find paths in a graph. The user provides a dictionary-based
@@ -89,7 +88,7 @@ for row in range(rows):
             if datum[1] not in vertices:
                 vertices.append(datum[1])
                 
-            # update the graph structure
+            # update the graph structure that is used to test for paths
             # if the graph already has a key for that vertex    
             if graph.has_key(int(datum[0])):
                 # add the new vertex as a new connection
@@ -106,7 +105,7 @@ for row in range(rows):
                 graph[int(datum[1])] = [int(datum[0])]                
             
     
-# if the two vertices are not both already present they can be added safely    
+# if the two vertices are not both already present they can be added   
     else:
         # if there is any path between them, adding the edge would create loop
         if find_path(graph, int(datum[0]), datum[1], path = []) is not None:
@@ -125,7 +124,7 @@ for row in range(rows):
             if datum[1] not in vertices:
                 vertices.append(datum[1])
                 
-            # update the graph structure
+            # update the graph structure that is used to test for paths
             # if the graph already has a key for that vertex    
             if graph.has_key(int(datum[0])):
                 # add the new vertex as a new connection
