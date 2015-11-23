@@ -20,7 +20,7 @@ data = pd.read_table("./data/HW1_4.txt",
 # %% use network x to prepare dictionary structure which can be fed in to the 
 # dijkstra function
 import networkx as nx
-graph = nx.from_pandas_dataframe(data, 'x', 'y', 'weight')
+graph = nx.from_pandas_dataframe(data, 'vx', 'vy', 'weight')
 graph_nodes = graph.nodes()
 graph_dict = nx.to_dict_of_dicts(graph)
     
@@ -57,6 +57,8 @@ def dijkstra(graph_dict, start, end):
     """
     distances = {} # empty dict for distances
     predecessors = {} # list of vertices in path to current vertex
+    
+    to_assess = graph_nodes
 
     # set all initial distances to infinity and no predecessors
     for node in graph_dict:
