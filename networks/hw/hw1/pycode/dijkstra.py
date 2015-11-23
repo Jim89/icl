@@ -141,7 +141,7 @@ def dijkstra(graph, start, end, visit = [], dist = {}, pre_vis = {}):
     # then (and only then) will the function terminate
     return dijkstra(graph, closest, end, visit, dist, pre_vis)
     
-dijkstra(graph, start = 1, end = 6)    
+shortest_path = dijkstra(graph, start = 1, end = 6)    
 
 
             
