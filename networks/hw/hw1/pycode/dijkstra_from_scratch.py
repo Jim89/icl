@@ -17,10 +17,10 @@ graph = nx.from_pandas_dataframe(data, 'x', 'y', 'weight')
 graph_nodes = graph.nodes()
 graph_dict = nx.to_dict_of_dicts(graph)
 
-# %% implement dijkstra
-
 start = 1
 end = 6
+
+# %% implement dijkstra
 
 # set up
 sp_set = [] # vertices who's shortest path from source already found
@@ -36,15 +36,28 @@ for node in graph:
 for node in graph:
     predecessors[node] = None
     
-    
+  
 # set distance for starting node   
 distances[start] = 0
 
+while len(sp_set) < len(to_assess):
+
+# find closest node to current start (it will be the start)    
+closest_to_current = min(distances, key = distances.get)
+   
+# add start to sp_set
+sp_set.append(start)
+
 
 #%%  relaxation - update the cost of all vertices connected to vertex under assessment
-adjacent = graph[start]
-for node in adjacent:
-    if distances[node] > distances[start] + graph[start][node]['weight']:
-        distances[node] = distances[start] + graph[start][node]['weight']
-        predecessors[node] = start
+def relax(adjacent_nodes):
+    for node in adjacent_nodes:
+        if distances[node] > distances[start] + graph[start][node]['weight']:
+            distances[node] = distances[start] + graph[start][node]['weight']
+            predecessors[node] = start
+            
+relax(graph[closest_to_current])
 
+# nodes_left = [{key: value} for key, value in distances.items() if key not in sp_set]
+
+distances = { node: distances[node] for node in [node for node in to_assess if node not in sp_set] }
