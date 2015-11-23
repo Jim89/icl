@@ -3,26 +3,12 @@
 Title: Dijkstra's Shortest Path
 Author: Jim Leach
 Date: 2015-11-23
-References:
+References: https://www.cs.auckland.ac.nz/software/AlgAnim/dijkstra.html
+References (2): https://www.cs.auckland.ac.nz/software/AlgAnim/dij-op.html
 """
 
 #%% set working directory
 # cd /media/jim/Storage/Documents/gdrive/Imperial/course/networks/hw/hw1
-
-       
-#%% read in data - use a pandas dataframe just for convenience
-import pandas as pd
-data = pd.read_table("./data/HW1_4.txt",
-                     sep = " ",
-                     header = None, 
-                     names = ['vx', 'vy', 'weight'])
-
-# %% use network x to prepare dictionary structure which can be fed in to the 
-# dijkstra function
-import networkx as nx
-graph = nx.from_pandas_dataframe(data, 'vx', 'vy', 'weight')
-graph_nodes = graph.nodes()
-graph_dict = nx.to_dict_of_dicts(graph)
     
 # %%
 # 1. initialise d and pi to empty
@@ -88,13 +74,34 @@ def dijkstra(graph_dict, start, end):
     return path[::-1], distances[end]
 
 # %%
-# test cases to ensure it works
-print 'Shortest path from node 1 to 6 ' + str(dijkstra(graph_dict, 1, 6))
-print 'Shortest path from node 1 to 6 ' + str(dijkstra(graph_dict, 5, 5))
-print 'Shortest path from node 1 to 6 ' + str(dijkstra(graph_dict, 6, 5))
-print 'Shortest path from node 1 to 6 ' + str(dijkstra(graph_dict, 2, 5))
+# function to get _all_ dijkstra shortest paths
+def dijkstra_all(graph_dict):
+    ans = []
+    for start in graph_dict.keys():
+        for end in graph_dict.keys():
+            ans.append(dijkstra(graph_dict, start, end))
+    return ans            
 
 
 
+       
+#%% read in data - use a pandas dataframe just for convenience
+import pandas as pd
+data = pd.read_table("./data/HW1_4.txt",
+                     sep = " ",
+                     header = None, 
+                     names = ['vx', 'vy', 'weight'])
+
+# %% use network x to prepare dictionary structure which can be fed in to the 
+# dijkstra function
+import networkx as nx
+graph = nx.from_pandas_dataframe(data, 'vx', 'vy', 'weight')
+graph_nodes = graph.nodes()
+graph_dict = nx.to_dict_of_dicts(graph)
+
+# %% run the functions
+
+dijkstra(graph_dict, 1, 6)
+# dijkstra_all(graph_dict)
             
         
