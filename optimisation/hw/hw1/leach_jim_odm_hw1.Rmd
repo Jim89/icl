@@ -215,10 +215,10 @@ Adjusting the model and re-evaluating it, also using AMPL (the attached `q4_natu
 
 ```{r 4c_set, echo = FALSE}
 sf_4c <-  26666.7
-b_4c <- 14333.3
+b_4c <- 18329.3
 hm_4c <- 0
-vc_4c <- 17466.7
-q4_optim_4c <- 11877.33333
+vc_4c <- 12671.5
+q4_optim_4c <- 11813.39733
 ```
 
 * Sales of stir fry (SF): $`r format(sf_4c, scientific = FALSE)`$;
