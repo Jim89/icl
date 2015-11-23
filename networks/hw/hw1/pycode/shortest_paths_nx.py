@@ -27,6 +27,10 @@ graph = nx.from_pandas_dataframe(data,
                                  edge_attr = "weight")
 
 # get the dijkstra shortest path
-path = nx.dijkstra_path(graph, 1, 6)
+path_dijkstra = nx.all_pairs_dijkstra_path(graph)
+path_1_6_dijkstra = path_dijkstra[1][6]
 
+# get the all-pairs shortest path
+path_all_pairs = nx.all_pairs_shortest_path(graph)
+path_1_6_all_pairs =  path_all_pairs[1][6]
 
