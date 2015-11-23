@@ -208,7 +208,7 @@ To understand what the "value" of an extra 100g of green peppers is, it is neces
 In doing so, the linear program developed earlier was relatively unchanged. The decision variables remained the same, the objective function \eqref{eq:4a_of} remained the same, only one of the constraints was changed.  The Green Peppers contraint was now \eqref{eq:q4_gp_const_c}.
 
 \begin{equation} \label{eq:q4_gp_const_c}
-Green peppers: 0.0625SF + 0.05B + 0.075HM + 0.0625VC \leq 3475
+Green peppers: 0.0625SF + 0.05B + 0.075HM + 0.0625VC \leq 3375.1
 \end{equation}
 
 Adjusting the model and re-evaluating it, also using AMPL (the attached `q4_natures_best_extra_pepper.mod` file contains the full script), returned the following results:
