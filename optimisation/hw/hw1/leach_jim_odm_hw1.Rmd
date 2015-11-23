@@ -1,5 +1,5 @@
 ---
-title: "Optimisation and Decision Models - Assigment One"
+title: "Optimisation and Decision Models - Assignment One"
 author: "Jim Leach"
 date: "20 November 2015"
 output: pdf_document
@@ -7,13 +7,13 @@ output: pdf_document
 
 # Document purpose
 
-The purpose of this document is to write up the response to the first assigment give as part of the _Optimistaion and Decision Models_ module. It is divided in to two sections, each covering a section of the assigment as given. Each major section is divided in to further subsections, one for each question in the assigment.
+The purpose of this document is to write up the response to the first assignment give as part of the _Optimistaion and Decision Models_ module. It is divided in to two sections, each covering a section of the assignment as given. Each major section is divided in to further subsections, one for each question in the assignment.
 
 ***
 
 # Section One - Primo Insurance Company
 
-In this section it is posited that the Primo Insurance company is introducing two new products: special risk insurance and mortgages. They expect to make £5 per sale on special risk insurance and £2 per sale on a mortage. They wish to establish the right mix of these new products in order to maximise their products within the confines of a set of work requirements, given by the below table:
+In this section it is posited that the Primo Insurance company is introducing two new products: special risk insurance and mortgages. They expect to make £5 per sale on special risk insurance and £2 per sale on a mortgage. They wish to establish the right mix of these new products in order to maximise their products within the confines of a set of work requirements, given by the below table:
 
 ```{r 3_requirements, echo = FALSE}
 library(knitr)
@@ -31,7 +31,7 @@ The linear program for this problem can be defined as follows:
 ### i. Decision variables
 
 * __SR__ : sales quota of special risk insurance; and
-* __M__ : sales quota of mortages
+* __M__ : sales quota of mortgages
 
 ### ii. Objective function
 
@@ -60,16 +60,16 @@ m = 300
 optim = 3600
 ```
 
-Using the graphical method, the optimal solution was found to be SR = `r sr`; M = `r m` (the point labelled * in the attached diagram) which returns an objective value of `r optim`. At the optimal solution, the values of the contraints are:
+Using the graphical method, the optimal solution was found to be SR = `r sr`; M = `r m` (the point labelled * in the attached diagram) which returns an objective value of `r optim`. At the optimal solution, the values of the constraints are:
 
-* Underwriting = `r 3*sr + 2*m`, i.e. the underwriting constaint is _binding_;
-* Admin = `r m`, i.e. the admin constaint is _not binding_; 
+* Underwriting = `r 3*sr + 2*m`, i.e. the underwriting constraint is _binding_;
+* Admin = `r m`, i.e. the admin constraint is _not binding_; 
 * Claims = `r 2*sr`, i.e. the claims constraint is _binding_; and
 * Non-negativity: given that neither SR nor M are 0 in the optimal solution, this constraint is _not binding_.
 
 ## C Algebraic Solution to Simultaneous Equations
 
-The optimal solution from part B occurs at the vertex of the feasible region that is described by the intersection of the _underwriting_ and the _claims_ constraint lines (see attached diagram). Therefore the simultanenous equations to be solved algebraically are given by \eqref{eq:q3_sim}.
+The optimal solution from part B occurs at the vertex of the feasible region that is described by the intersection of the _underwriting_ and the _claims_ constraint lines (see attached diagram). Therefore the simultaneous equations to be solved algebraically are given by \eqref{eq:q3_sim}.
 
 \begin{equation} \label{eq:q3_sim}
 \begin{split}
@@ -87,7 +87,7 @@ Solving these equations was performed:
 2SR \leq 1200 \\
 \therefore SR \leq 600 \\
 \\
-Perform\quad subsitution\quad and\quad solve\quad for\quad M: \\
+Perform\quad substitution\quad and\quad solve\quad for\quad M: \\
 3*(600) + 2.M \leq 2400 \\
 1800 + 2M \leq 2400 \\
 2M \leq 600 \\
@@ -97,7 +97,7 @@ M \leq 300 \\
 \end{split}
 \end{equation}
 
-Therefore the solution found by algebraically solving the simulatenous equations \eqref{eq:q3_sim_solve} is that M = `r m` and SR = `r sr`, returning an objective value of `r optim`, i.e. identical to that found using the graphical method and that found using the Excel solver (question D).
+Therefore the solution found by algebraically solving the simultaneous equations \eqref{eq:q3_sim_solve} is that M = `r m` and SR = `r sr`, returning an objective value of `r optim`, i.e. identical to that found using the graphical method and that found using the Excel solver (question D).
 
 ## D Solve the model with the Excel solver
 
@@ -111,7 +111,7 @@ Using the solver, the same optimal solution as for the graphical method was foun
 
 # Section Two - Nature's best Frozen Foods
 
-In this section it is posited that "Natures's Best Frozen Foods" is trying to decide the right mix of four products that it produces in order to maximise its overall earnings. The four products use a similar set of ingredients, described by the table below:
+In this section it is posited that "Nature's Best Frozen Foods" is trying to decide the right mix of four products that it produces in order to maximise its overall earnings. The four products use a similar set of ingredients, described by the table below:
 
 ```{r 4_requirements, echo = FALSE}
 library(knitr)
@@ -125,14 +125,14 @@ ingred <- data.frame(ing = c("Carrots", "Mushrooms", "Green peppers",
 kable(ingred, caption = "Mixes (volumes given in kg)", col.names = c("Ingredients", "Stir Fry", "Barbeque", "Heart mushrooms", "Veggie Crunch", "Montly ingredient supply"))
 ```
 
-The four products, Stir Fry, Barbeque, Hearty Mushroom and Veggie Crunch contribute £0.22, £0.20, £0.18 and £0.18 to earnings, respectively. 
+The four products, Stir Fry, Barbecue, Hearty Mushroom and Veggie Crunch contribute £0.22, £0.20, £0.18 and £0.18 to earnings, respectively. 
 
 ## A - Formulation of a linear program for this problem
 
 ### i. Decision Variables
 
 * __SF__ : sales of stir fry product;
-* __B__ : sales of barbeque product;
+* __B__ : sales of barbecue product;
 * __HM__ : sales of hearty mushroom product; and
 * __VC__ : sales of veggie crunch product
 
@@ -195,17 +195,17 @@ q4_optim <- 11813.33333
 ```
 
 * Sales of stir fry (SF): $`r format(sf, scientific = FALSE)`$;
-* Sales of barbeque (B): $`r format(b, scientific = FALSE)`$;
+* Sales of barbecue (B): $`r format(b, scientific = FALSE)`$;
 * Sales of hearty mushroom (HM): $`r format(hm, scientific = FALSE)`$;
 * Sales of veggie crunch (VC): $`r format(vc, scientific = FALSE)`$.
 
-The objective value at optimal solution was found to be £$`r format(round(q4_optim, 2), scientific = FALSE)`$. Running the `display` command on the constraint parameters in the model, it would appear that the Carrots and Corn contraints were both binding at the optimal solution, the other contraints were not.
+The objective value at optimal solution was found to be £$`r format(round(q4_optim, 2), scientific = FALSE)`$. Running the `display` command on the constraint parameters in the model, it would appear that the Carrots and Corn constraints were both binding at the optimal solution, the other constraints were not.
 
 ## C - The value of an extra 100g green peppers
 
 To understand what the "value" of an extra 100g of green peppers is, it is necessary to increase the availability of green peppers, recalculate the optimal solution and report the results. 
 
-In doing so, the linear program developed earlier was relatively unchanged. The decision variables remained the same, the objective function \eqref{eq:4a_of} remained the same, only one of the constraints was changed.  The Green Peppers contraint was now \eqref{eq:q4_gp_const_c}.
+In doing so, the linear program developed earlier was relatively unchanged. The decision variables remained the same, the objective function \eqref{eq:4a_of} remained the same, only one of the constraints was changed.  The Green Peppers constraint was now \eqref{eq:q4_gp_const_c}.
 
 \begin{equation} \label{eq:q4_gp_const_c}
 Green peppers: 0.0625SF + 0.05B + 0.075HM + 0.0625VC \leq 3375.1
@@ -222,7 +222,7 @@ q4_optim_4c <- 11813.39733
 ```
 
 * Sales of stir fry (SF): $`r format(sf_4c, scientific = FALSE)`$;
-* Sales of barbeque (B): $`r format(b_4c, scientific = FALSE)`$;
+* Sales of barbecue (B): $`r format(b_4c, scientific = FALSE)`$;
 * Sales of hearty mushroom (HM): $`r format(hm_4c, scientific = FALSE)`$;
 * Sales of veggie crunch (VC): $`r format(vc_4c, scientific = FALSE)`$.
 
