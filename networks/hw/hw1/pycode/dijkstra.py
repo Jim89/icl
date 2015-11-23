@@ -31,6 +31,33 @@ graph = nx.to_dict_of_dicts(graph)
 
 # %% define dijkstra function
 def dijkstra(graph, start, end, visit = [], dist = {}, pre_vis = {}):
+    """
+    This is a recursive function that implements Dijkstra's Shortest Path
+    algorithm.
+    
+    It takes as its inputs:
+        i. a graph represnted by a dictionary structure;
+        ii. a starting node from that graph; and
+        iii. an ending node from that graph
+        
+    It then performs the following steps:
+            i. For the intial starting node, set the label to 0 (i.e. the distance
+            from start - start is 0);
+            ii. For all neighbours of the starting node, if that node has not 
+            been previously visited, the the distance between it and the start 
+            node is found and added to the set of distances (as long as the 
+            distance is less than Infinity (i.e. as long as there is a path);
+            iii. the starting node is then added to the list of visited nodes;
+            iv. then from all nodes adjacent to the start node that have not been
+            visited, the minimum distance from the start node is found; and
+            v. the node at the end of the shortest path becomes the new 'start'
+            and the function recurses until the user-defined "end" node is the
+            start.
+            
+            When the start is the same as the end (i.e. the path has been found)
+            then the function terminates and the shortest path (and it's cost)
+            is returned
+    """
     
     # if the end node is start node, the function is complete
     # i.e. either user-input start is the same as the user-input end, or
@@ -52,15 +79,24 @@ def dijkstra(graph, start, end, visit = [], dist = {}, pre_vis = {}):
     
     # check if it is the first time through:
     if not visit:
-        # if it is the first point in the algorithm loop, set the distance to 0
-        # (i.e. set the permanent label on the starting node to 0)
+        # set the permanent label on the starting node to 0, note that this is
+        # the user-defined starting node as when the function recurses, "visit"
+        # will no longer be empty (as at least one node will have been visited)
         dist[start] = 0
         
     # check each neighbouring node of the starting node
+    # this works as long as the input data is a dictionary of the form:
+    # {node: neighbour1, neighbour2, ...,}
     for neighbour_node in graph[start]:
         # check if that node has been visited before        
         if neighbour_node not in visit:
-            # set up the temporary distance measure            
+            # set up the temporary distance measure
+            # get the current distance from the start and add the new node's
+            # distance to it (for the first node this distance is 0, for
+            # subsequent nodes, this distance may have an existing value)
+            # this only works if the graph is structures as a dictionary thus:
+            # {node: {neighbour1: {'weight': value}, neighbour2: {'weight':}, ...},
+            #  node2: {neighbour1: {'weight': value}, ...}, ...}
             temp_dist = dist[start] + graph[start][neighbour_node]['weight']
             # check if the temporary distance is closer than that already
             # present, or infinity            
@@ -105,6 +141,7 @@ def dijkstra(graph, start, end, visit = [], dist = {}, pre_vis = {}):
     # then (and only then) will the function terminate
     return dijkstra(graph, closest, end, visit, dist, pre_vis)
     
+dijkstra(graph, start = 1, end = 6)    
 
 
             
