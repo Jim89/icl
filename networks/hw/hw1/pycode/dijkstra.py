@@ -10,8 +10,7 @@ References (2): https://www.cs.auckland.ac.nz/software/AlgAnim/dij-op.html
 #%% set working directory
 # cd /media/jim/Storage/Documents/gdrive/Imperial/course/networks/hw/hw1
     
-# %%
-# 1. initialise d and pi to empty
+# %% define the dijkstra function
 def dijkstra(graph_dict, start, end):
     """
     This is a recursive function that implements Dijkstra's Shortest Path
@@ -44,33 +43,44 @@ def dijkstra(graph_dict, start, end):
     distances = {} # empty dict for distances
     predecessors = {} # list of vertices in path to current vertex
     
-    to_assess = graph_nodes
+    to_assess = graph_dict.keys() # get all the nodes in the graph that need to be assessed
 
-    # set all initial distances to infinity and no predecessors
+    # set all initial distances to infinity and no predecessor for any node
     for node in graph_dict:
         distances[node] = float('inf')
         predecessors[node] = None
     
-    # 2. set s to empty
+    # set the intial collection of permanently labelled nodes to be empty
     sp_set = []
+    # set the distance from the start node to be 0
     distances[start] = 0
-
+    
+    # as long as there are still nodes to assess:
     while len(sp_set) < len(graph_nodes):
+        # chop out any nodes with a permament label
         still_in = { node: distances[node] for node in [node for node in to_assess if node not in sp_set] }
+        # find the closest node to the current node
         closest = min(still_in, key = distances.get)
+        # and add it to the set of permanently labelled nodes
         sp_set.append(closest)
         
+        # then for all the neighbours of the closest node (that was just added)
+        # to the permanent set
         for node in graph_dict[closest]:
-            # print node, distances[node]
+            # if a shorter path to that node can be found
             if distances[node] > distances[closest] + graph[closest][node]['weight']:
+                # update the distance with that shorter distance; and
                 distances[node] = distances[closest] + graph[closest][node]['weight']
+                # set the predecessor for that node
                 predecessors[node] = closest
                 
-    # JUST NEED WAY TO EXTRACT THE PATH
+    # once the loop is complete the final path needs to be calculated - this can
+    # be done by backtracing through the predecessors set
     path = [end]
     while start not in path:
         path.append(predecessors[path[-1]])
     
+    # return the path in order start -> end, and it's cost
     return path[::-1], distances[end]
 
 # %%
@@ -87,7 +97,7 @@ def dijkstra_all(graph_dict):
        
 #%% read in data - use a pandas dataframe just for convenience
 import pandas as pd
-data = pd.read_table("./data/HW1_4.txt",
+data = pd.read_table("../data/HW1_4.txt",
                      sep = " ",
                      header = None, 
                      names = ['vx', 'vy', 'weight'])
@@ -101,7 +111,7 @@ graph_dict = nx.to_dict_of_dicts(graph)
 
 # %% run the functions
 
-dijkstra(graph_dict, 1, 6)
-# dijkstra_all(graph_dict)
+path = dijkstra(graph_dict, 1, 6)
+all_paths = dijkstra_all(graph_dict)
             
         
