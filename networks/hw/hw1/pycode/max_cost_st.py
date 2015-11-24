@@ -3,9 +3,11 @@
 Title: Max-Cost Spanning Tree
 Author: Jim Leach
 Date: 2015-11-22
+Requires: pandas, networkx
+References: https://www.python.org/doc/essays/graphs/ 
 """
 
-#%% set working directory
+# %% set working directory
 # cd /media/jim/Storage/Documents/gdrive/Imperial/course/networks/hw/hw1
 
 # %% define function to find path(s) in a graph
@@ -70,6 +72,26 @@ def is_path(graph, start, end, path = []):
         return False
       
 def spanning_tree(edgelist_data, ascending = False):
+    """ 
+    This function takes as its input a representation of a graph in the following,
+    dataframe-based form (i.e. an edgelist):
+
+    node1, node2, weight,
+    node1, node3, weight,
+    node2, node1, weight,
+    ...        
+     
+    Using this it sorts the edgelist by increasing/decreasing weight (depending)
+    on if the max-cost or min-cost tree is sought then.
+    
+    It then iterates over all the rows of the sorted edgelist, taking one row at a
+    time and adding the edge to the spanning tree as long as it would not form
+    a loop in the resulting tree. It determines if a loop would be formed using
+    the "is_path()" function defined above to determine if there is already a 
+    path between the nodes in the new edge.
+    
+    In this way it builds the min/max-cost spanning tree for a given edgelist.      
+    """     
 # set up some containers for use a loop that assesses all edges in a graph
     edges = []          # to keep track of edges added with each iteration
     vertices = []       # to keep track of unique vertices added with each iteration
@@ -88,7 +110,7 @@ def spanning_tree(edgelist_data, ascending = False):
     
     # if the two vertices are included in the current mst:
         if (datum[0] and datum[1] in vertices): 
-            # if there is any path between them, adding the edge would create loop
+            # if there is already a path between them, adding the edge would create loop
             if is_path(graph, int(datum[0]), int(datum[1]), path = []) is True:
                 # so pass - do not add the edge
                 pass
@@ -168,11 +190,9 @@ def spanning_tree(edgelist_data, ascending = False):
     return spanning_tree
 
 
-
-
-#%% read in data - use a pandas data frame just for convenience
+# %% read in data - use a pandas data frame just for convenience
 import pandas as pd
-data = pd.read_table("./data/HW1_3.txt",
+data = pd.read_table("../data/HW1_3.txt",
                      sep = " ",
                      header = None, 
                      names = ['vx', 'vy', 'weight'])
