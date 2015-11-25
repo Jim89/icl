@@ -11,11 +11,13 @@ vldm/lectures/*.pdf
 induction/statsIntro/docs/*.pdf
 preStudy/accounting_primer/bal_pnl_income.xlsx
 induction/statsIntro/docs/*.pdf
+induction/intro_to_linear_algebra/*.pdf
 
 # ignore for optimisation class
 optimisation/docs/*.pdf
 optimisation/docs/*/*.pdf
 optimisation/hw/hw1/*.pdf
+optimisation/notes/*.pdf
 
 # ignore for stats class
 stats_and_econ/docs/*.pdf
@@ -51,4 +53,4 @@ networks/docs/*/*.pdf
 networks/hw/*/*.pdf
 
 
-induction/intro_to_linear_algebra/*.pdf
+
