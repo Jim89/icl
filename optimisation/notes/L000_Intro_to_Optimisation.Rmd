@@ -1,0 +1,111 @@
+---
+title: "Optimisation and Decision Models Module 1"
+author: "Jim Leach"
+date: "25 November 2015"
+output:
+  pdf_document
+---
+
+# An Introduction to Optimisation and Decision Models
+
+## Defining an Optimisation Problem:
+
+> "... nothing at all takes place in the universe in which some rule of maxium or minimum does not appear" - __Leonhard Euler__
+
+Or in other words: "_everything is an optimisation problem_"
+
+## A generic problem and definitions
+
+For an optimisation problem, a generic form is \eqref{eq:gen}.
+
+\begin{equation} \label{eq:gen}
+\begin{split}
+minimise\quad f_0(x) \\
+subject \quad to: x \in \chi
+\end{split}
+\end{equation}
+
+In \eqref{eq:gen} the following definitions are true:
+
+* $x$ is a vector of __decision variables__ ($\in\mathbb{R}^n$). These reflect the decisions that can be made;
+* $f_0$ is the __objective function__. It converts the decision variables in to an __objective value__ that is either minimised or maximised by the program. ($\mathbb{R}^n\rightarrow\mathbb{R}^1$);
+* $\chi\subseteq\mathbb{R}^n$ is the __feasible region__. It defines all the possible values of $x$. 
+
+Typically, the _feasible region_ is expressed through a set of __constraints__:
+
+* $f_i(x) \leq 0 \quad \forall i = 1, ..., m$ Contraints where some function of the decision variables must be less than 0; or
+* $h_i(x) = 0 \quad \forall i = 1, ..., m$ Constraints where the some function of the decision variables must be equal to zero.
+
+Note that $f_i,\quad, h_i: \mathbb{R}^n \rightarrow \mathbb{R}^1$ (i.e. each constraint converts the decision variables to a single value).
+
+## More terminology
+
+### Feasible solutions and minimisers
+
+For the generic program \eqref{eq:gen}:
+
+* $x$ is said to be _feasible_ if it satisfies all of the constraints simultaneously (i.e. if it lies within the feasible region, $x \in \chi$
+
+* $x^*$ is a __(global) minimiser__ if $x^*$ is both feasible and $f_0(x^*) \leq f_0(x)$ for any other feasible solution, $x$. Similarly, $f_0(x^*)$ is termed the _(global) minimum_.
+
+* $x^*$ is a __local minimiser__ if $x^*$ is both feasible and $f_0(x^*) \leq f_0(x)$ for any other feasible solution, $x$ that is "close to" $x^*$. Similarly, $f_0(x^*)$ is termed the _local minimum_.
+
+Put formally, this is:
+
+\begin{equation}
+\exists\delta > 0 \quad such \quad that \quad f_0(x^*) \leq f_0(x)\quad \forall \quad x \in \chi \quad with \quad ||x-x^*||_2\leq\delta
+\end{equation}
+
+Written in words, this says "there exists ($\exists$) some value ($\delta$) that is greater than 0 such that the objective value at $x^*$ is less than the objective value at $x$ for all ($\forall$) values of $x$ in the feasible region ($\chi$) where the Euclidian distance between $x$ and $x^*$ ($||x-x^*||_2$) is less than some value ($\delta$)"
+
+### Near-Optimal Solutions
+
+$\epsilon$ (any small, positive value) is defined as the "tolerance" that the solution may lie within.
+
+For $\epsilon > 0$, $x^*$ is called an $\epsilon$-_(global) minimiser_ if $x^*$ is both feasible and $f_0(x^*) \leq f_0(x) + \epsilon$ for any other feasible solution, $x$.
+
+$x^*$ is called an $\epsilon$-_local minimiser_ if $x^*$ is both feasible and $f_0(x^*) \leq f_0(x) + \epsilon$ for any other feasible solution that is "close to" $x^*$.
+
+### General terms:
+
+An optimisation problem can be:
+
+* _infeasible_ if the feasible region ($\epsilon$) is empty;
+        
+    * e.g. $max\quad x$ subject to $x\leq 1, x \geq 2$
+        
+* _feasible_ and _solvable_ if it has at least _one_ minimiser;
+* _feasbile_ and _unbounded_ if for every value, $\theta$ there is a solution, $x$ that satisfies $f(x)\leq\theta$; or
+        
+    * e.g.$max\quad x$ subject to $x\geq 1$
+        
+* _feasbile_ and _bounded_ but _not solvable_ if for every feasible solution, $x$, there is another feasible solution, $x^{'}$ such that $f_0(x^{'}) < f_0(x)$.
+        
+    * e.g. $min \quad x$ subject to $x.y \geq 1, x, y \geq 0$
+    * This is bounded (0 is the minimum value)
+    * However there are an infifinite number of possiblities for x given the non-zero constraint on y, e.g. x = 1/2, y = 2; x = 1/5, y = 5; x = 1/4, y = 4; ...
+    
+## Remember - optimistion is hard (in general)    
+
+A good example of the complexity of optimisation problems is calculating the number of operations needed to solve a "simple" problem of the form:
+
+\begin{equation}
+\begin{split}
+minimise \quad f_0(x) \\
+s.t.\quad x \in [0, 1]^n
+\end{split}
+\end{equation}
+
+Where $f_0(x)$ is a Lipschitz-continuous ([https://en.wikipedia.org/wiki/Lipschitz_continuity](https://en.wikipedia.org/wiki/Lipschitz_continuity))function with Lipschitz constant, L. The constant, L, describes how rapidly f changes (L = 0 $\rightarrow$ flat).
+
+Given a small problem with L = 2, n = 10, $\epsilon$ = 0.01 (i.e. a very simple and small problem), it can be proved that $([\dfrac{2}{2*0.01}])^10 = 10^20$ evaluations!
+
+Assuming each evaluation requires 10 arithmetic operations and the computer can process $10^6$ per second, this works out to be ~31, 000,000 years
+
+### Doing better
+
+In general, computation _will_ not take this long as long as:
+
+1. The objective function is convex - i.e. local minima are global minima;
+2. Derivatives of the objective function are available - to help find the local minima; and
+3. Sparsity - each constrain only involves a few variables, making the algebraic operations fast.
