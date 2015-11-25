@@ -25,3 +25,64 @@ In this _linear program_, all the functions, $f_i$, $h_i$ are defined as __affin
 f_i (x) = a_{i1}x_1 + ... + a_{in}x_n + b_i = \sum_{j=1}^n a_{ij}x_j + b_j = a_i^Tx + b_i
 \end{equation}
 
+Affine functions ([http://mathworld.wolfram.com/AffineFunction.html](http://mathworld.wolfram.com/AffineFunction.html)) are linear in their parameters and the coefficients can either be scalars or sparse matrices. The constant (here, $b$) is either scalar or a column vector.
+
+That is, for the generic form of the optimisation problem \eqref{eq:generic_opt} all the contraints are affine and hence linear. 
+
+Affine (linear) contraint examples:
+
+* $5x-3y$
+* $-y$
+* $x+5$
+* 0
+* $-x+y$
+
+Non-affine (non-linear) constraints:
+
+* $3xy$
+* $\sin{x}$
+* $1/x$
+* $x/y$
+* $x^2$
+* $2^x$
+
+## Solving linear programs
+
+When solving linear programs, there are some simple and obvious steps that can be followed.
+
+An example is to use heuristics - focus on whichever single element will min/max $f_0(x)$ the most. Wwe could calculate the bottleneck constraint, i.e. the one that is most limiting and use that to min/max $f_0(x)$. This is easy to do, but not necessarily optimal. 
+
+Therefore, when solving a linear program, we need to come up with the right _model_. This can be challening. 
+
+### An example:
+
+The Gemstone Tool Company (GTC) produces wrenches and pliers. Both tools are made from steel, and the production requires (i) a molding machine and (ii) an assembly machine.
+
+GTC wants to determine the daily production of wrenches and pliers so as to maximise their contribution to earnings, subject to the daily demand limits.
+
+```{r show_limits, echo = FALSE}
+library(knitr)
+limits = data.frame(limit = c("Steel required (lbs.)",
+                              "Modling machine time (hrs)",
+                              "Assembly machine time (hrs)",
+                              "Demand limit (units)",
+                              "Contribution to earnings ($/unit)"),
+                    wrenches = c(1.5, 1, 0.3, 15000, 0.13),
+                    pliears = c(1, 1, 0.5, 16000, 0.1),
+                    avail = c(27000, 21000, 9000, NA, NA))
+kable(limits, col.names = c("", "Wrenches", "Pliers", "Availability"), format.args = list(scientific = F))
+```
+
+3 steps are needed to define the model:
+
+1. Define the decision variables;
+2. Define the objective function; and
+3. Define the constraints.
+
+### Decision variables
+
+For this problem, the decision variables are:
+
+W = number of wrenches produced per day; and
+P = number of pliers produced per day
+
