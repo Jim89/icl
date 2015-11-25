@@ -1,0 +1,27 @@
+---
+title: "Optimisation and Decision Models Module 1"
+author: "Jim Leach"
+date: "25 November 2015"
+output:
+  pdf_document
+---
+
+# An Introduction to Linear Programs
+
+It is possible to define a _generic_ optimisation program:
+
+\begin{equation} \label{eq:generic_opt}
+\begin{split}
+    minimise \quad f_0(x) \\
+    subject\quad to: \quad \\
+    \quad f_i(x) \leq 0 \quad \forall i = 1, ..., m \\
+    \quad h_i(x) = 0 \quad \forall i = 1, ..., p
+\end{split}
+\end{equation}
+
+In this _linear program_, all the functions, $f_i$, $h_i$ are defined as __affine__:
+
+\begin{equation} \label{eq:aff}
+f_i (x) = a_{i1}x_1 + ... + a_{in}x_n + b_i = \sum_{j=1}^n a_{ij}x_j + b_j = a_i^Tx + b_i
+\end{equation}
+
