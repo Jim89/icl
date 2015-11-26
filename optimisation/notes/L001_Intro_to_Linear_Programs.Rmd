@@ -86,3 +86,181 @@ For this problem, the decision variables are:
 W = number of wrenches produced per day; and
 P = number of pliers produced per day
 
+### Objective function
+
+For this problem, the objective function is:
+
+\begin{equation}
+maximise \quad 0.13W + 0.13P
+\end{equation}
+
+### Constraints
+
+There are several contraints in this linear program:
+
+* Steel: $1.5W + 1.0P \leq 27000$;
+* Molding machine: $1.0W + 1.0P \leq 21000$;
+* Assembly machine: $0.3W + 0.5P \leq 9000$;
+* Demand limits: $W\leq 15000$, $P\leq16000$; and
+* Non-negativity (cannot produce negative amounts!): $W, P\geq 0$
+
+Solving this linear program, the _optimal solution_ is found to be $W = 12000$ and $P = 9000$ to give an objective value of $2,460
+
+## More complex examples
+
+Sometimes, the constraints at work in the system will be more complex than those in the simple GTC model. For example: New Bedford Steel:
+
+NBS produces coking coal to produce steel, they have the following bids from 8 coal suppliers:
+
+```{r show_nbs, echo = FALSE}
+nbm <- data.frame(desc = c("Price ($/mt", "Union?", "Transport", "Volatility",
+                           "Capacity (mt/yr)"),
+                  a = c(49500, "Yes", "Rail", 15, 300),
+                  b = c(50000, "Yes", "Truck", 16, 600),
+                  c = c(61000, "No", "Rail", 18, 510),
+                  d = c(63500, "Yes", "Truck", 20, 655),
+                  e = c(66500, "No", "Truck", 21, 575),
+                  f = c(71000, "Yes", "Truck", 22, 680),
+                  g = c(72500, "No", "Rail", 23, 450),
+                  h = c(80000, "No", "Rail", 25, 490))
+library(knitr)
+kable(nbm, col.names = c("", "Ashley", "Bedford", "Consol", "Dunby", "Earlam",
+                         "Florence", "Gaston", "Hopt"))
+```
+
+NBS needs 1,225 mt of coking coal with an average volatility of at least 19%. At least 50% of the coal should come from union mines. At most, 650mt can be carried by rail, and at most 720mt by truck. 
+
+How can they minimise costs? __A linear optimistaion__
+
+### Decision variables
+
+* A, B, C, D, E, F, G, H - the amount to purchase from Ashley, Bedford, Consol, ...
+
+### Objective function
+
+\begin{equation}
+min \quad 49500*A + 50000*B + 61000*C + ... + 80000*H
+\end{equation}
+
+### Constraints:
+
+* Unions: $\dfrac{A+B+D+F}{A+B+C+D+E+F+G+H} \geq 0.5$ - but this is not linear. So rearrange to give $A+B+D+F \geq 0.5*(A+B+C+D+E+F+G+H)$. It can also be rewritten as: $A + B + D + F \geq C + E + G + H$;
+
+* Transport: Rail: $A+C+G+H \leq 650$; Trucks: $B+D+E+F\leq720$;
+
+* Total requirements: $A+B+C+D+E+F+G+H \geq 1225$;
+
+* Volatility: $\dfrac{0.15*A + 0.15*B + ... + 0.25*H}{A+B+C+...+H}\geq 0.19$ - again, non-linear so rearrange.
+
+* Individual capacities: $A\leq300$, $B\leq600$, ...
+
+* Non-negativity $A, B, C, ... \geq 0$
+
+This problem can also be solved, it will just require more than simple heuristics or the graphical method (see later).
+
+### A note of caution
+
+When using variables without a non-negativity constraint, the sign of the inequality may change when re-writing equations in to linear form. 
+
+For example $7/3 \geq 2$ can be rearranged to give $7 \geq 2*3$ but $7/-3 \geq 2$ rearranges to $7\leq 2*(-3)$ (which i snot true! Care must be taken. 
+
+In the constraint $x/y \geq z$, if y is not restricted to non-negative values, then cross-multiplication _cannot_ be performed without changing the sign of the inequality. 
+
+## Linear Programs in Standard Form:
+
+A linear program can be defined in standard form \eqref{eq:sf}.
+
+\begin{equation}\label{eq:sf}
+\begin{split}
+maximise \quad \sum_{j=1}^n c_j x_j \\
+s.t: \quad \sum_{j=1}^n a_{ij} x_k \leq b_i \quad \quad \forall i = 1, ..., m \\
+x_1, ..., x_n \geq 0
+\end{split}
+\end{equation}
+
+This itself can be expressed in matrix form \eqref{eq:sf_m}
+
+\begin{equation}\label{eq:sf_m}
+\begin{split}
+maximise\quad c^Tx \\
+s.t: Ax \leq b \\
+x \in \mathbb{R}_+^n
+\end{split}
+\end{equation}
+
+In \eqref{eq:sf_m}, $c$, $x$ and $A$ are matrices of the form:
+
+
+\[
+C=
+  \begin{bmatrix}
+    c_1 \\
+    . \\
+    . \\
+    . \\
+    c_n
+  \end{bmatrix}
+\]
+
+
+\[
+X = 
+\begin{bmatrix}
+    x_1 \\
+    . \\
+    . \\
+    . \\
+    x_n
+\end{bmatrix}
+\]
+
+\[
+A = 
+\begin{bmatrix}
+    a_{11} & ... & a_{1n}\\
+    \vdots & \ddots & \vdots \\
+    a_{m1} & ... & a_{mn}
+\end{bmatrix}
+\]
+
+### Constants in the objective function, or constraint LHS's
+
+Constants in the objective function do __not__ affect the optimal $x$ and hence can be ignored during optimisation. Constants in the constraint LHS can be absorbed in the RHS:
+
+\begin{equation}
+\sum_{j=1}^n a_{ij}x_j + d \leq b_i \Leftrightarrow \sum_{j=1}^n a_{ij}x_j \leq (b_i - d)
+\end{equation}
+
+### Minimisation objective
+
+A minimisation objective can be easily changed in to a maximisation by multiplying the objective function by -1. Once the linear program is solved, the optimal value of the objective function has to multiplied with -1 again (but not the optimal $x$).
+
+### $\geq$ - Inequalities and Equality Constraints
+
+A greater-than-or-equal to constraint can be replaced with a less-than-or-equal-to constraint by multiplying by -1.
+
+\begin{equation}
+\sum_{j=1}^n a_{ij}x_j \geq b_i \Leftrightarrow -\sum_{j=1}^n x_{ij}x_j \leq -b_i \Leftrightarrow \sum_{j=1}^n -a_{ij}x_j \leq -b_i
+\end{equation}
+
+Similarly, an equality constraint can be replaced with _two_ inequalities:
+
+\begin{equation}
+\sum_{j=1}^n a_{ij} x_j = b_i \Leftrightarrow 
+    \begin{cases} 
+        \sum_{j=1}^n a_{ij}x_j \leq b_i, \\ 
+        \sum_{j=1}^n a_{ij}x_j \geq b_i 
+    \end{cases}
+\end{equation}
+
+### Unrestricted Variables
+
+Unrestrricted variables can be converted in to the difference between two non-negative variables:
+
+\begin{equation}
+\begin{split}
+max \sum_{j=1, ..., n, j \neq \hat{j}} c_{ij} x_j + c_j x_{\hat{j}} \\
+s.t: \sum_{j=1, ..., n, j \neq \hat{j}} a_{ij} x_j + a_{\hat{ij}}x_{\hat_j} \leq b_i \forall i \\
+x_1, ..., x_{\hat{j}-1}, x_{\hat{j}+1}, ... x_n \geq 0
+\end{split}
+\end{equation}
