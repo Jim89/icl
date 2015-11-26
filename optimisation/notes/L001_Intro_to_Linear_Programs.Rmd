@@ -260,7 +260,43 @@ Unrestrricted variables can be converted in to the difference between two non-ne
 \begin{equation}
 \begin{split}
 max \sum_{j=1, ..., n, j \neq \hat{j}} c_{ij} x_j + c_j x_{\hat{j}} \\
-s.t: \sum_{j=1, ..., n, j \neq \hat{j}} a_{ij} x_j + a_{\hat{ij}}x_{\hat_j} \leq b_i \forall i \\
+s.t: \sum_{j=1, ..., n, j\neq\hat{j}} a_{ij} x_j + a_{\hat{ij}} x_{\hat{j}}\leq b_i\forall i \\
 x_1, ..., x_{\hat{j}-1}, x_{\hat{j}+1}, ... x_n \geq 0
 \end{split}
 \end{equation}
+
+## Solving linear programs
+
+### The graphical method
+
+Solving linear programs with 2 or fewer decision variables can be done using the _graphical method_. A good example is the GTC tools optimisation from previously. 
+
+The basic steps for the graphical method are:
+
+1. Plot a line that defines the first constraint (e.g. Steel: $1.5W + 1.0P \leq 27000$) - hint - simply plug in 0 for W and P sequentially to find the two axis intercepts and join them;
+2. Determine which side of the line satisfies the constraints;
+3. Repeat this until all constraints have been visualised.
+4. The combination of all the constraint lines defines the _feasible region_ (n.b. there might not be one in which case there is no feasbile solution);
+5. Calculate the objective function at each vertex of the feasible region to find the optimal solution OR determine the objective function _isoquants_: all solutions that define a particular, fixed objective value. It is usual to plot 2 (they will be parallel) and then keep moving out/in until the solution is no longer feasible. The optimal solution will be found.
+
+### Graphical solution insights
+
+1. The feasible region forms a single, non-convex polygon;
+2. The optimal solution solves a system of _linear equations_ (i.e. a set of equations descrbing the vertex at which the optimal solution is found as the vertex will be defined by $\geq$ 2 constraints);
+3. At the optimal solution there can be: _binding_ constraints (i.e. the constraint is satisifed as an equality) or _nonbinding_ constraints (the constraint is satisfied by the inequality.)
+
+Additionally, a linear program can have:
+
+i. no optimal solution (because it is infeasible or unbounded);
+ii. _exactly_ one optimal solution (lying on a vertex of the feasible region); or
+iii. an _infinite_ number of optimal solutions (if the solution lies along an edge of the feasible region - i.e. two vertices have the same solution)
+
+Whenever there is an optimal solution their is _at least_ one optimal vertex solution.
+
+### Simplex and Interior Point
+
+Given that the graphical method is only feasible for 1 or 2 variables, automated alternatives are needed.
+
+The __Simplex__ solution moves from one vertex to antoher until no further improvement in the soltuion is possible. This requires an iterated solving of the simultaneous equations and each vertex and can be slow for very large problems.
+
+The __Interior Point__ method moves through the interior of the feasible region and (especially for complex problems) comes with better solution time guarentees than Simplex (due to a huge number of vertices).
