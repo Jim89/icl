@@ -223,6 +223,8 @@ A =
 \end{bmatrix}
 \]
 
+Tranformation to standard form can be important as it is required by some automated solvers.
+
 ### Constants in the objective function, or constraint LHS's
 
 Constants in the objective function do __not__ affect the optimal $x$ and hence can be ignored during optimisation. Constants in the constraint LHS can be absorbed in the RHS:
@@ -300,3 +302,4 @@ Given that the graphical method is only feasible for 1 or 2 variables, automated
 The __Simplex__ solution moves from one vertex to antoher until no further improvement in the soltuion is possible. This requires an iterated solving of the simultaneous equations and each vertex and can be slow for very large problems.
 
 The __Interior Point__ method moves through the interior of the feasible region and (especially for complex problems) comes with better solution time guarentees than Simplex (due to a huge number of vertices).
+
