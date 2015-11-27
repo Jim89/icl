@@ -6,6 +6,7 @@ vldm/docs/*.pdf
 vldm/notes/*.pdf
 vldm/assigments/*/*.pdf
 vldm/lectures/*.pdf
+vldm/assigments/aws_key/ec2key_frankfurt.pem
 
 # ignore for induction courses
 induction/statsIntro/docs/*.pdf
@@ -17,6 +18,7 @@ induction/intro_to_linear_algebra/*.pdf
 optimisation/docs/*.pdf
 optimisation/docs/*/*.pdf
 optimisation/hw/hw1/*.pdf
+optimisation/hw/*/*.pdf
 optimisation/notes/*.pdf
 optimisation/hw/*/*.pdf
 
@@ -52,7 +54,8 @@ intro_to_da/assignment/team4Assignment.zip
 # ignore for networks course
 networks/docs/*/*.pdf
 networks/hw/*/*.pdf
+networks/hw/*/*/*.pdf
 
 
 
-vldm/assigments/aws_key/ec2key_frankfurt.pem
+
