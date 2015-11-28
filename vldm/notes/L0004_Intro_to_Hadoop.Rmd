@@ -8,3 +8,143 @@ output: pdf_document
 # Introduction to Hadoop and MapReduce
 
 (Note, although formally they are different things, Hadoop and MapReduce may be user interchangably here).
+
+## Motivation
+
+Traditional analysis and storage methods cannot cope with the exploration, movement, or use of such large volumes of data.
+
+This is frequently due to the difficulties importing data in to a realational database - it is often simply not worth the effort to do so. 
+
+Typically, outside of a relational database, large-data problems often involve iterating over a large number of records, extracting something of interest, shuffling and sorting intermediate results, aggregating intermediate output and generating the final output.
+
+This is hard due to data homogeneity, scale and the challenges of computation (e.g. parallelisation).
+
+To solve this, we could leverage a large number of (cheap, off-the-shelf) computers and by implement a "divide and conquer" strategy when it comes to computation. 
+
+There are some challenges to this, however:
+
+* Parallelisation - how is should work be assigned, what if there are more work units than workers, what if sharing partial results is necessary, what if workers fail? These problems arise from difficulty of communication _between_ workers, and difficulty accessing shared resources.
+
+* Managing workers - hard as we don't know in what order they will run, how they interrupt each other, how they access data. We need a way to allow them to communicate with semaphores (lock/unlock), conditional variables (wait, notify, broadcast) and/or barriers between them. There are still lots of problems inherent to this (e.g. deadlock, race conditions), so care must be taken.
+
+* Concurrency - difficult to reason about, even more so at the data-centre scale in the presence of failure and in terms of multiple interacting services! In reality, this could mean lots of one-off solutions, custom code, dedicated libraries and a burden on the programmer.
+
+So how do we solve these problems?
+
+Define the "right level" of abstraction - hide the system-level details from the developers, separate the _what_ from the _how_.
+
+### Key ideas
+
+* Scale "out" not "up"
+* Move processing to the data (bandwidth is limited - don't move the data!)
+* Process data sequentially, avoid random reads (which are slow)
+
+## Enter: Apache Hadoop
+
+Scalable, fault-tolerant distributed systemfor big data storage, processing etc.
+
+Two main systems: Hadoop/MapReduce (disributed processing infrastructure) and HDFS (Hadoop distributed file system - fault-toleratnt, high-bandwidth + availability storage).
+
+## MapReduce - Big Data Processing
+
+MapReduce is _not_ fundamentally new, it is just a modern implementation of traditional ideas. Data is "mapped" (iterated over, extracting something of value), shuffled/sorted and then "reduced" (aggregated and output).
+
+A mapper takes keys and values and orders them. They are passed to reducers (each reducer getting _all_ key/value pairs for a single key) for aggregation and summarisation.
+
+The key idea of MR is to provide functional abstraction for these steps.
+
+### Programmers
+
+Need to specify two functions:
+
+__Map__ (k, v) $\rightarrow$ [(k', v')]
+
+__Reduce__((k', [v'])) $\rightarrow$ [(k', v')]
+
+The execution framework handles everything else. Nice.
+
+This came from an observation about most data mining algorithms, which utilise a loop over all the data to extract some info, and perform some process on it, before later summarising.
+
+### What is "everyhing else"?
+
+* Scheduling of work;
+* Data distribution (to the workers);
+* Synchronisation;
+* Error and fault handling;
+
+Programmers can also specify:
+* a __partition__ function (k', number of partition) $\rightarrow$ partiion for k'. Often simply a hadh of the key, dividing up the key space for parallel reduce operations; or
+* a __combine__ function (k', [v']) $\rightarrow$ [(k', v')] - a mini reducer that runs in-memory after a Map to help optimise the process and reduce network traffic. Can be thought of as a local aggregation for repeated keys produced by the same map. Works for associative operations like sum, count, max and decreases the intermediate data sizes.
+
+### Details
+
+There is a "barrier" between Map and Reduce - we must wait for _all_ mappers before we can start the reducers.
+
+The keys arrive at each reducer in sorted order - there is no enforced ordering _across_ reducers. 
+
+### Implementation and History
+
+Google has proprietary algo written in C++. Hadoop is an open-source equivalent in Java, developed at Yahoo and now an Apache project. 
+
+* Dec 2004 - Google publish paper;
+* Apr 2007 - Yahoo implement on 1000-node cluster;
+* Jan 2008 - becomes Apache top level project;
+* 2009 onwards - increasing projects build on Hadoop and increasingly large clusters built with it
+
+
+## File System
+
+## Distributed
+
+Don't move data to workers, move workers to the data - store data on the local disks of the cluster. Start workers where the data they need resides. 
+
+This defines a "distributed file system" that assumes:
+
+* commodity hardware;
+* high failure rate;
+* huge files are common;
+* files are write-once, read-many and mostly appended to if they are altered;
+* streaming more desirable than random access
+
+Therefore some design decisions:
+
+* files stored as chunks of 64MB;
+* replicate every file 3 times;
+* use one "master" to control and coordinate and store metadata;
+* don't cache data - stream it;
+* simplify the API;
+* single namespace ("directory" at the top level) for the _entire_ system
+
+### NameNode
+
+The centralised "master" that:
+
+* Stores meta-data in memory;
+* List of all files;
+* List of blocks containing each file;
+* List of all datanodes for each block;
+* List file attributes
+* Stores a transaction log (e.g. file creation etc)
+
+Single point of failure - therefore keep the transaction log in multiple directories on the local file system and on a remote system. 
+
+Responsible for managing the file system, coordination operations and maintaining system health.
+
+### DataNode
+
+A block server that stores data locally. Stores the meta-data of the block(s) it stores. Sends data and metadata to clients. Periodically provides a report to the namenode. Facilitates data pipelines by forwarding on data to other DataNodes if needed.
+
+### Data placement
+
+Replicate blocks:
+* Once locally,
+* Twice on a remote rack
+* Third time in a second place on the same remote rack;
+* Elsewhere at random
+
+Clients read from the nearest datanode.
+
+Checksums used to validate data.
+
+
+
