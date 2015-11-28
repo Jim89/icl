@@ -1,0 +1,195 @@
+---
+title: "Very Large Data Management Lecture 7"
+author: "Jim Leach"
+date: "28 November 2015"
+output: pdf_document
+---
+
+# Intro to Hive
+
+## What is Hive?
+
+A data warehouse built on top of Hadoop. It provides a SQL dialect called HiveQL for data analysts. It was developed by Facebook, starting in 2007 and is today an Apache project under Hadoop.
+
+It provides massive scale-out and fault tolerance, the ability to structure various data formats, a simple interface for ad-hoc analysis, easy access for SQL-familiar analysts, access to files on HDFS and custom functions and MR programs for sophisticated analyses.
+
+It does __not__ provide low-latency or real time queries due to the underlying MR execution - even querying a small amount of data takes time. It is designed for scalability and ease-of-use, not speed. 
+
+## Hive and Hadoop
+
+Hive translates HiveQL statements in to a set of MapReduce jobs which are executed on the cluster.
+
+It has three main interfaces:
+
+1. Command line / CLI (used for development and testing);
+2. Hive web interface - used for launching and monitoring batch jobs;
+3. JDBC connectivity
+
+It has a _Metastore_ which supports features like schema(s) and partitioning, and stores metadata in a relational database (Derby by default).
+
+It uses the concept of a _database_ as a set of tables, and a _table_ as a set of rows with the same columns.
+
+## Hive partitions
+
+To increase performance, Hive can partition data. The values of the partition key divide a table in to segements for efficient retrieval and querying. Each table can have one or more partition keys that determine _how_ data is stored. 
+
+Partitions must be properly _created_ by users: when inserting data a partition _must_ be specified, but when executing queries Hive will use them automatically.
+
+## Hive buckets/clusters
+
+Buckets are similar to partitions and provide a mechanism to query and examine random samples of data. The data are broken in to sets of buckets based on a hash function of a "bucket column". The user must specify the number of buckets, and the column, but Hive will do the rest and will try to ensure a similar number of tuples in each bucket, with the guarentee that _all_ tuples with the same hash bucket column value will be in the _same_ bucket. 
+
+## Types
+
+Hive supports the standard primitive types (int, boolean, float, string, ...) as well as more complex types:
+
+* Structs - e.g. `c: STRUCT {a INT; b INT}` which can be selected with dot syntax, e.g. `c.a`;
+* Maps (key value tuples) e.g. `M: 'group' -> gid` which can be selected with [] syntax, e.g. `M['group'] = gid`; and
+* Arrays (indexable lists)
+
+## Running Hive
+
+On a cluster/AWS we can run Hive in interactive mode for testing and develping scripts or batch mode for running and tracking a developed and tested job. Hive on a local instance is not encouraged. 
+
+## Built in operators
+
+* Relational - A>B, A=B, A LIKE B
+* Arithmetic, A+B, A%B
+* Logical, A&&B, A||B
+* Operators on complex types, e.g. Map[key], STRUCT.key
+
+## Built in functions
+
+As expected:
+
+* `concat`, `regexp_replace`, `count`, `sum`, `avg`, `min`, `max`,...
+
+## Hive DDL
+
+### Create a table
+
+```
+CREATE TABLE tbl(field1 <type>, field2 <type>)
+COMMENT 'Add a comment'
+PARTITIONED BY (field3 <type>, field4 <type>) -- this will add these fields, too
+STORED AS <storage method>
+ROW FORMAT DELIMTED -- tell Hive how to expect data to arrive
+  FIELDS TERMINATED BY '<termination_character>'
+  COLECTION ITEMS TERMINDATED BY 'char'
+  MAP ITEMS TERMINATED BY 'char'
+CLUSTER BY (field) INTO <#> BUCKETS
+SORTED BY (field);
+```
+
+ALL STATEMENTS MUST END WITH A ;
+
+Comments can be attached at column and table level. Paritioning columns are different from data columns as they are identifiers of storage unit, e.g. files. There are default delimiters.
+
+Row delimted cannot be changed once set (field can). Fields/collection/map delimiters set how "normal"/complex fields are delimited (e.g. integers/arrays within fields).
+
+## Browsing tables
+
+```
+SHOW TABLES;
+SHOW TABLES 'PAGE.*'; -- pattern match specific tables
+SHOW PARTIIONS tbl;
+DESCRIBE tbl;
+DESCRIBE EXTENDED tbl;
+```
+
+## Altering data
+
+```
+ALTER TABLE old RENAME TO new;
+ALTER TABLE old REPLACE COLUMN (col1 <type>, ...);
+ALTER TABLE old ADD COLUMNS (col <type>, ...);
+```
+
+## Dropping tables
+
+```
+DROP TABLE tbl;
+ALTER TABLE tbl DROP PARTITION (partition_name = 'value') -- just drop specific paritions
+```
+
+## Loading data
+
+There are several ways to load data in to Hive:
+
+1. from HDFS
+
+```
+LOAD DATA INPATH '/path/to/hdfs/file/location' OVERWRITE INTO TABLE tbl;
+```
+
+2. Load data from local file system
+
+```
+LOAD DATA LOCAL INPATH 'path/to/file' OVERWRITE INTO TABLE tbl;
+```
+
+In both cases, the file is copied from the provided location in to /users/hive/warehouse/
+
+Copying from HDFS is much faster, so external tools can be used to parallel load files from local in to HDFS first. Therefore if the file is very large - parallel load to HDFS and then load in to Hive from HDFS.
+
+Loading in to partitioned tables is similar:
+
+```
+LOAD DATA LOCAL INPATH 'path/to/file_1' OVERWRITE INTO TABLE tbl PARITION(partition_name = 'value_1')
+
+LOAD DATA LOCAL INPATH 'path/to/file_2' OVERWRITE INTO TABLE tbl PARITION(partition_name = 'value_2')
+```
+Each file is loaded in to a separate partition.
+
+### An alternative
+
+Specify the HDFS location when creating the table:
+
+```
+CREATE EXTERNAL TABLE tbl(field1 <type>, field2 <type>)
+ROW FORMAT DELIMTED
+FIELDS TERMINATED BY '<char>'
+STORED AS TEXTFILE
+LOCATION '/path/to/file';
+```
+
+This will set to NULL any value that violates the schema.
+
+## Simple queries
+
+The full HiveQL syntax will not be presented here, instead know that we usually need to insert the results of our query in to a table during batch execution:
+
+```
+INSERT OVERWRITE TABLE new_tabl
+SELECT *
+FROM
+  OLD_TABLE
+WHERE CONDITION = VALUE;
+```
+
+Without insertion, the result of the query will be written to a temporary file and displayed on the CLI.
+
+Hive will use partitions to speed up queries if it can. It will automatically determine which ones to use based on the `where` condition.
+
+Several `join` expressions are possible, the results of which can also be used in place of single tables in a `FROM` clause. Note, however, that only equi-joins are supported (i.e. we cannot join on an inequality).
+
+The output of queries can be sent to multiple tables or files:
+
+```
+FROM tbl
+INSERT OVERWRITE TABLE tbl2
+SELECT *
+WHERE CONDITION1
+
+INSERT OVERWRITE TABLE tbl3
+SELECT *
+WHERE CONDITION2
+```
+
+
+
+
+
+
+
+
