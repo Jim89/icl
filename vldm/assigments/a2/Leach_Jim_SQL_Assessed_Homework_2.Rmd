@@ -1,0 +1,363 @@
+---
+title: "Very Large Data Management - Assignment Two"
+author: "Jim Leach"
+date: "28 November 2015"
+output: pdf_document
+---
+
+# Document purpose
+
+The purpose of this document is to write up the response to the second assigment give as part of the _Very Large Data Management or Databases and Distributed Systems_ module. It is divided in to sections, each covering a section of the assigment as given. 
+
+# Data description
+
+Data from a DVD rental business were provided. The data contained information on customers, stores and the films that the customers rented. The data were provided as a database backup file which was loaded in to a simple _PostgreSQL_ database for the assignment.
+
+# The assignment
+
+Six questions were asked of the data. `SQL` queries were written to address these quetsions and the responses given below.
+
+# Results
+
+## Question One
+
+> Find all films not in the inventory and count them
+
+### Query
+
+```
+SELECT
+	COUNT(DISTINCT F.FILM_ID) AS MISSING_FILMS
+FROM
+	FILM F
+LEFT JOIN
+	INVENTORY I
+ON F.FILM_ID = I.FILM_ID
+WHERE I.FILM_ID IS NULL
+```
+
+### Result
+
+> 42
+
+\pagebreak
+
+## Question Two
+
+> Count	the	number	of	transactions	each	staff	has	been	processing	and	find	
+the	 staff	 member	 (id)	 with	 the	 biggest	 number	 of	 transactions	 and	 also	
+the	staff	member	with	the	biggest	sum	of	the	transaction	value.	
+
+For this question, it should be noted that there are several transactions listed in the _rental_ table that do not have an associated amount in the _payment_ table. For this purposes of this question, these transactions were included and so contribute to the total number of transactions, but not the overall value. Additionally, there is one transaction with multiple payments (ID 4591).
+
+### Query
+
+```
+SELECT
+	 STAFF_ID
+	,COUNT(DISTINCT RENTAL_ID) AS TRANSACTIONS
+	,SUM(AMOUNT) AS TOTAL_TRANSACTION_VALUE
+FROM
+(
+	SELECT
+		 R.RENTAL_ID
+		,R.STAFF_ID
+		,S.AMOUNT
+	FROM
+		RENTAL R
+	LEFT JOIN
+		PAYMENT S
+	ON R.RENTAL_ID = S.RENTAL_ID
+)_
+GROUP BY
+	STAFF_ID
+```
+
+### Result
+
+```{r show_result2, echo = FALSE}
+library(knitr)
+res2 <- data.frame(id = c(1, 2), trans = c(8040, 8004), amt = c(30498.71, 30813.33))
+kable(res2, col.names = c("Staff ID", "Transactions", "Total Transaction Value"))
+```
+
+As such, ID 1 has more transactions, but ID 2 has a larger sum of the transaction values.
+
+\pagebreak
+
+## Query Three
+
+> Find	all	stores	with	more	than	300	customers.	Report	the	ID	of	the	store.			
+
+### Query
+
+```
+SELECT
+	 STORE_ID
+	,COUNT(DISTINCT CUSTOMER_ID) AS CUSTOMERS
+FROM
+	CUSTOMER CUST
+GROUP BY STORE_ID
+HAVING COUNT(DISTINCT CUSTOMER_ID) >= 300
+```
+
+### Result
+
+> Store ID: 1, customers: 326
+
+\pagebreak
+
+## Question 4
+
+> Find	 all	 customers	 who	 spent	 more	 than	 200.	 Report	 the	 ID	 of	 the	
+customer	as	well	as	the	sum	spent.				
+
+### Query
+
+```
+SELECT
+	 CUSTOMER_ID
+	,SUM(AMOUNT)
+FROM
+	PAYMENT
+GROUP BY 
+	CUSTOMER_ID
+HAVING SUM(AMOUNT) >= 200
+```
+
+### Result
+
+```{r show_res4, echo = FALSE}
+res4 <- data.frame(id = c(526, 148), amt = c(208.58, 211.55))
+kable(res4, col.names = c("Customer ID", "Amount Spent"))
+```
+
+\pagebreak
+
+## Query 5
+
+> Find	the	films	whose	rental	rate	is	higher	than	the	average	rental	rate.	Use	
+a	subquery	and	count	the	number	of	films.	
+
+For this question, note that some films were rented for multiple prices. As such this returns
+all films with at least one rental cost greater than the average rental cost and counts the distinct set of these films.
+
+### Query
+
+```
+SELECT COUNT(DISTINCT I.FILM_ID) AS FILMS
+FROM
+	RENTAL R
+LEFT JOIN
+	INVENTORY I
+ON R.INVENTORY_ID = I.INVENTORY_ID
+LEFT JOIN
+	PAYMENT P
+ON R.RENTAL_ID = P.RENTAL_ID
+WHERE P.AMOUNT >= (SELECT AVG(AMOUNT) AS AVG_COST FROM PAYMENT)
+```
+
+### Result
+
+> 798
+
+
+\pagebreak
+
+## Query 6
+
+> Find	 films	 that	 have	 return	 date	 between	 2005-05-29	 and	 2005-05-30	
+and	report	the	movie	titles.	Use	a	subquery.	
+
+### Query
+
+```
+SELECT DISTINCT
+	TITLE
+FROM
+	FILM
+WHERE FILM_ID IN
+(
+	SELECT DISTINCT FILM_ID
+	FROM
+		RENTAL R
+	LEFT JOIN
+		INVENTORY I
+	ON R.INVENTORY_ID = I.INVENTORY_ID
+	WHERE CAST(RETURN_DATE AS DATE) BETWEEN '2005-05-29' AND '2005-05-30'
+)
+```
+
+### Result
+
+There are 164 films returned by this query. They are listed below:
+
+```{r show_res_6, echo = FALSE, message = FALSE}
+library(dplyr)
+res4 <- data.frame(film = c(
+ 'Lucky Flying'
+,'Center Dinosaur'
+,'Jaws Harry'
+,'Borrowers Bedazzled'
+,'Doom Dancing'
+,'Giant Troopers'
+,'Chasing Fight'
+,'Everyone Craft'
+,'Early Home'
+,'Muscle Bright'
+,'Baked Cleopatra'
+,'Garden Island'
+,'Lesson Cleopatra'
+,'Northwest Polish'
+,'Submarine Bed'
+,'Dracula Crystal'
+,'Sagebrush Clueless'
+,'Trouble Date'
+,'Downhill Enough'
+,'Sunrise League'
+,'Beach Heartbreakers'
+,'Wedding Apollo'
+,'Mallrats United'
+,'Disturbing Scarface'
+,'Caribbean Liberty'
+,'Closer Bang'
+,'Jingle Sagebrush'
+,'Shane Darkness'
+,'Caddyshack Jedi'
+,'Clueless Bucket'
+,'Galaxy Sweethearts'
+,'Tootsie Pilot'
+,'Gangs Pride'
+,'Song Hedwig'
+,'Falcon Volume'
+,'Wait Cider'
+,'Breaking Home'
+,'Destiny Saturday'
+,'Lebowski Soldiers'
+,'Harold French'
+,'Rush Goodfellas'
+,'Mars Roman'
+,'Midsummer Groundhog'
+,'Dorado Notting'
+,'Jumping Wrath'
+,'Curtain Videotape'
+,'Remember Diary'
+,'Fargo Gandhi'
+,'Notting Speakeasy'
+,'Whale Bikini'
+,'Stagecoach Armageddon'
+,'Runaway Tenenbaums'
+,'Cabin Flash'
+,'Brotherhood Blanket'
+,'Grit Clockwork'
+,'Knock Warlock'
+,'Mask Peach'
+,'Patriot Roman'
+,'Voyage Legally'
+,'Exorcist Sting'
+,'Swarm Gold'
+,'Drumline Cyclone'
+,'Massacre Usual'
+,'Celebrity Horn'
+,'Halloween Nuts'
+,'Nightmare Chill'
+,'Driving Polish'
+,'Sea Virgin'
+,'Straight Hours'
+,'Network Peak'
+,'Attraction Newton'
+,'Donnie Alley'
+,'Disciple Mother'
+,'Gunfight Moon'
+,'Videotape Arsenic'
+,'Factory Dragon'
+,'National Story'
+,'Rocketeer Mother'
+,'Witches Panic'
+,'Eagles Panky'
+,'Feud Frogmen'
+,'Hanky October'
+,'Packer Madigan'
+,'Weekend Personal'
+,'Lola Agent'
+,'Bucket Brotherhood'
+,'Roxanne Rebel'
+,'Conquerer Nuts'
+,'Outbreak Divine'
+,'Amadeus Holy'
+,'Dozen Lion'
+,'Drop Waterfront'
+,'Island Exorcist'
+,'Pizza Jumanji'
+,'Superfly Trip'
+,'Airport Pollock'
+,'Connecticut Tramp'
+,'Games Bowfinger'
+,'Scorpion Apollo'
+,'Army Flintstones'
+,'Backlash Undefeated'
+,'Detective Vision'
+,'Talented Homicide'
+,'Labyrinth League'
+,'Fellowship Autumn'
+,'Goldfinger Sensibility'
+,'Loser Hustler'
+,'Timberland Sky'
+,'Betrayed Rear'
+,'Blues Instinct'
+,'Seabiscuit Punk'
+,'Tourist Pelican'
+,'Suspects Quills'
+,'Trojan Tomorrow'
+,'Show Lord'
+,'Banger Pinocchio'
+,'Pacific Amistad'
+,'Wash Heavenly'
+,'Voice Peach'
+,'Wife Turn'
+,'Bride Intrigue'
+,'Scalawag Duck'
+,'Coma Head'
+,'Illusion Amelie'
+,'Easy Gladiator'
+,'Range Moonwalker'
+,'Expendable Stallion'
+,'Zorro Ark'
+,'Confessions Maguire'
+,'Pirates Roxanne'
+,'Papi Necklace'
+,'Ballroom Mockingbird'
+,'Coast Rainbow'
+,'Fury Murder'
+,'Microcosmos Paradise'
+,'Prejudice Oleander'
+,'Fish Opus'
+,'Hobbit Alien'
+,'Pluto Oleander'
+,'Rugrats Shakespeare'
+,'English Bulworth'
+,'Jerk Paycheck'
+,'Details Packer'
+,'Murder Antitrust'
+,'Secret Groundhog'
+,'Virginian Pluto'
+,'Fantasy Troopers'
+,'Gandhi Kwai'
+,'Lady Stage'
+,'Chariots Conspiracy'
+,'Trading Pinocchio'
+,'King Evolution'
+,'Alter Victory'
+,'Dream Pickup'
+,'Insider Arizona'
+,'Jeepers Wedding'
+,'Drifter Commandments'
+,'Dynamite Tarzan'
+,'Escape Metropolis'
+,'Bingo Talented'
+,'Wardrobe Phantom'
+,'Watch Tracy'
+,'Alien Center'
+,'Chainsaw Uptown'
+))
+kable(arrange(res4, film), col.names = "Film")
