@@ -1,0 +1,89 @@
+---
+title: "Very Large Data Management Lecture 6"
+author: "Jim Leach"
+date: "28 November 2015"
+output: pdf_document
+---
+
+# MapReduce and databases
+
+Imagine we have two tables, user demographics and user visits. 
+
+Each MapReduce instance runs a database with these tables allowing us to:
+
+* select
+* join
+* union/diff
+* rename
+* filter
+* group by/aggregate
+
+## Secondary sorting
+
+What if we want to sort by values, not keys?
+
+Just invert the (k, v) pair and treat the value as the key!
+
+## Selection in MapReduce
+
+Easy - run the same select on each node and then combine the results (e.g. union). In MR terminology we: map tuples, emit new tuples with appropriate attributes.
+
+No reducers are needed, unless for re-grouping or re-sorting. 
+
+The only limit is HDFS streaming speeds.
+
+## Group By
+
+* Map over tupes, emit value, keyed by grouping variable.
+
+MR automatically groups values by key so this is easy for MR. We can optimise the process with combiners if necessary.
+
+## Relational Joins
+
+A bit harder so we have three options:
+
+### i. Reduce side:
+
+1. Produce key-value pairs in map (where k is join attribute);
+2. Send all the same keys to one reducer to perform the join.
+
+We map over both sets of tuples (i.e. from table A and table B) and emit a tuple as a vlue with the join key as the intermediate key. The framework then combines tuples sharing the same key and the reducer performs the join. 
+
+This works well for one-to-one joins, but for one-to-many or many-many joins, we don't want to widen the data, we want to make it longer. 
+
+Therefore we can use a V-to-K conversion, each time we encounter a new value (now our temporary key) in the reducer, we hold it in memory and cross it with records from the other table (lengthen the data), we we encounter the next value (key), we carry on.
+
+### ii. Map side:
+
+As long as the datasets are sorted by join key, the join can be accomplished by a scan over both datasets (merge-join in database terminology).
+
+This can be accomplished in parallel by partitioning and sorting in the same manner. 
+
+May need to perform the sort as part of the map - don't assume it!
+
+### iii. In-memory join:
+
+Load one data set in to memory and stream over the other data set. This works if one dataset will actually fit in memory. Called a "hash join" in database terminology. 
+
+In MapReduce, this sends one dataset to _all_ nodes. The other dataset is then mapped over, with each mapper loading the first table in to memory. For each tuple in the second table, the key is looked up in the in-memory table. No reducer necessary (unless for regrouping/resorting)
+
+There is a variant called "striped" if the table is too large to fit in to memory, whereby it is striped in to parts that are loaded in to memory sequentially, before the results are unioned together. 
+
+### Which join?
+
+In terms of speed in-memory > map-side > reduce-side
+
+However in-memory is limted to RAM size, map-side requires sorted data, making reduce-side a bit more general purpose. 
+
+## Data manipulation and high level languages
+
+The fact that MapReduce can perform the manipulations we need is great, but writing custom MR jobs is time consuming, so higher level languages are needed. 
+
+One is Hive (see later), the other is Pig.
+
+Hive is a data warehousing application built on Hadoop with a SQL-dialect langauge. 
+
+Pig is a large-scale data processing system with a data-flow langauge syntax. 
+
+They both provide higher-level languages to facilitate data processing, which "compile down" to MapReduce jobs.
+
