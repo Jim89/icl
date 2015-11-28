@@ -7,3 +7,312 @@ output:
 ---
 
 # Duality
+
+The concept of duality can be a little tricky.
+
+## Definition
+
+Every linear program can be thought of as a __primal__ problem. Every _primal_ is either a maximisation or a minimisation problem. 
+
+For _every_ linear program, it is possible to define a __dual__ problem, which is simply the "other" form of the program. 
+
+If the _primal_ is a maximisation, then the _dual_ is a minimisation. And if the _primal_ is a minimisation, the _dual_ is a maximisation. 
+
+Therefore the two can be assocaited thus:
+
+### Primal problem
+
+\begin{equation}\label{eq:primal}
+\begin{split}
+    \text{maximise} \\
+        c^Tx \\
+    \text{subject to} \\ 
+            Ax \leq b \\
+            x \in \mathbb{R}_{+}^{n} \\
+            \Updownarrow            
+\end{split}
+\end{equation}
+
+
+### Dual Problem
+
+\begin{equation}\label{eq:dual}
+\begin{split}
+    \Updownarrow \\
+    \text{minimise} \\
+        b^Ty \\
+    \text{subject to} \\
+        A^Ty \geq c \\
+        y \in \mathbb{R}_+^m
+\end{split}
+\end{equation}
+
+
+Therefore explicitly, the dual problem becomes:
+
+\begin{equation}
+\begin{split}
+    \text{minimise} \sum_{i=1}^m b_iy_i \\
+    \text{subject to} \sum_{i=1}^m a_{ij} y_i \geq c_j \quad \forall j=1,...n \\
+    y_1, ..., y_m \geq 0
+\end{split}
+\end{equation}
+
+## Duality Properties
+
+The primal and dual problems together satisfy:
+
+### 1. Weak Duality:
+
+If $x$ is a feasible solution to the _primal_ problem, and $y$ is a feasible solution to the _dual_ problem, then:
+
+\begin{equation}
+c^Tx\leq b^Ty
+\end{equation}
+
+This can be proved from the defintions given in \eqref{eq:primal} and \eqref{eq:dual} above:
+
+\begin{equation}\label{eq:proof}
+\begin{split}
+    \text{It is known from the dual that: } c \leq A^Ty \\
+    \\
+    \therefore\quad \text{substituting this in: } c^Tx \leq (A^Ty)^Tx \\
+    \\
+    \text{this gives:} \\
+    c^Tx \leq y^TAx \\
+    \\
+    \text{(given that } (A^T)^T = A \text{ and } (AB)^T = A^TB^T \text{)}\\
+    \\
+    \text{We also know that: }Ax \leq b \text{ (from the primal)} \\
+    \therefore\quad c^Tx \leq y^Tb \\
+    \therefore\quad c^Tx \leq b^Ty
+\end{split}
+\end{equation}
+
+### 2. Strong Duality
+
+Similar to the weak form, if $x^*$ is an _optimal_ solution to the _primal_, and $y^*$ is an _optimal_ solution to the _dual_ then:
+
+\begin{equation}\label{eq:strong}
+c^Tx^* = b^Ty^*
+\end{equation}
+
+I.e. the optimal solutions of the primal and the dual are _equivalent_.
+
+## Duality Theorem
+
+For any primal/dual pair, __exactly one__ of the following cases holds:
+
+### 1. Both problems are feasible and unbounded
+
+This follows the strong form of duality, i.e. $\text{max } c^Tx = c^Tx^* = b^Ty^* = \text{min } b^Ty$.
+
+### 2. One problem is feasible and unbounded, the other is infeasible
+
+This occurs if $\text{max } c^Tx \rightarrow +\infty$ or $\text{min } b^Ty \rightarrow - \infty$. For example, if the primal maximisation is unbounded then we cannot get a value greater than it, which weak duality says we will for the dual minimisation.
+
+### 3. Both problems are infeasible
+
+## Interpreting the Dual
+
+### A specific example:
+
+For example, returning again to the GTC problem (simplified with no demand bounds):
+
+#### The primal:
+
+\begin{equation}
+\begin{split}
+\text{max } 0.13W + 0.10P \\
+\text{subject to:}\\
+1.5W + 1.0P \leq 27000 \\
+1.0W + 1.0P \leq 21000 \\
+0.3W + 0.5P \leq 9000 \\
+W, P \geq 0
+\end{split}
+\end{equation}
+
+#### The dual:
+
+\begin{equation}
+\begin{split}
+\text{min } 27000S + 21000M + 9000A \\
+\text{subject to:} \\
+1.5S + 1.0M + 0.3A \geq 0.13 \\
+1.0S + 1.0M + 0.5A \geq 0.10 \\
+S, M, A, \geq 0
+\end{split}
+\end{equation}
+
+The interpretation is that S, M and A represent the profit contributions of one unit of steel, modling and assembly respectively. The objective is to find the "worst" profit contributions of each one, with the constraint that we must account for all the production options (and the option to produce nothing at all).
+
+Solving these two problems, it is interesting to note that the optimal solution to the dual problem gives the shadow prices of the primal!
+
+### The generic problem:
+
+Considering a primal problem in the standard form:
+
+\begin{equation}\label{eq:primal2}
+\begin{split}
+    \text{maximise} \\
+        c^Tx \\
+    \text{subject to} \\ 
+            Ax \leq b \\
+            x \in \mathbb{R}_{+}^{n}
+\end{split}
+\end{equation}
+
+We take the following steps to get the dual:
+
+#### 1. Relax the problem by removing the constraints, but penalise violating them:
+
+\begin{equation} \label{eq:relax}
+U(p) = \begin{split} \text{max } c^Tx + p^T(b-Ax) \\ \text{s.t. } x \in \mathbb{R}_+^n \end{split}
+\end{equation}
+
+\eqref{eq:relax} is valid for _any_ $p \geq 0$ (i.e. any vector that is element-wise non-negative) and for any feasible x it is the case that $c^Tx + p^T(b-Ax)\geq c^Tx$ (as both p _and_ b-Ax are non-negative). I.e., this solution will be at _least_ as good as the one in the initial primal form. 
+
+#### 2. Find the "tighest" (lowest) upper bound
+
+Finding the "lowest" something is a minimisation problem, i.e. find the smallest p.
+
+\begin{equation} \label{eq:min_up}
+\begin{split}
+\text{minimise } U(p) \\
+\text{s.t. } p\in\mathbb{R}_+^m
+\end{split}
+\end{equation}
+
+In \eqref{eq:min_up}, U(p) refers to:
+
+\begin{equation}
+\begin{split}
+U(p) = \text{maximise } c^Tx + p^T(b - Ax) \\
+\\
+= \text{maximise } p^Tb + (c - A^Tp)^Tx \\
+\text{ (As neither p nor b directly depend on x)} \\
+\\
+= p^Tb + \text{maximise } (c - A^Tp)^Tx \\
+= \begin{cases} 
+        p^Tb\text{ if }c-A^Tp \leq 0 \\ 
+        + \infty \text{ otherwise} 
+    \end{cases}
+\end{split}
+\end{equation}
+
+I.e., if _any_  component of $c-A^Tp$ is positive then the solution is unbounded. 
+
+Given that we do not want an unbounded solution, this allows us to explicitly define U(p) and the dual of the problem:
+
+#### 3 Explicit formulation of U(p):
+
+\begin{equation}
+\begin{split}
+\text{minimse } b^Tp \\
+\text{s.t. } \\
+A^Tp \geq c \\
+p\in\mathbb{R}_+^m
+\end{split}
+\end{equation}
+
+Where the points, p, with an objective value of $+\infty$ are interpreted as infeasible.
+
+N.b. that $p^Tb = b^Tp$ (simple linear algebra transformation - use dimensionality to confirm).
+
+Replacing $p$ with $y$, we can see that we have derived the dual problem!
+
+## Deriving the Dual of a Linear Program
+
+There are two methods for deriving the dual of a linear program, the direct and the indirect method.
+
+### Indirect method
+
+The indirect method is slightly more long-winded than the direct and the procedure depends on whether the primal is maximisation or minimisation:
+
+#### Maximisation Primal
+
+1. Bring the problem in to the form:
+
+\begin{equation}
+\begin{split}
+\text{maximise } c^Tx \\
+\text{s.t.} \\
+    Ax\leq b \\
+    x \in \mathbb{R}_+^n
+\end{split}\end{equation}
+
+2. Replace equality (=) constrains with $\geq$/$\leq$ constraints;
+3. Replace $\geq$ constraints with $leq$; 
+4. Replace unrestricted variables with restricted variables; and
+5. Convert to dual (using definitions of c, A and b) and simplify equations.
+
+#### Minimisation Primal
+
+1. Bring the problem in to the form:
+
+\begin{equation}
+\begin{split}
+\text{minimise } b^Ty \\
+\text{s.t.} \\
+    A^Ty \geq c \\
+    y \in \mathbb{R}_+^n
+\end{split}\end{equation}
+
+2. Replace equality (=) constrains with $\geq$/$\leq$ constraints;
+3. Replace $\leq$ constraints with $geq$; 
+4. Replace unrestricted variables with restricted variables; and
+5. Convert to dual (using definitions of c, A and b) and simplify equations.
+
+### Direct Method
+
+The direct method is a shortcut and follows the following form for either a max. _or_ min. primal:
+
+#### 1. Correspondance variables $\Leftrightarrow$ constraints:
+
+* For every _primal constraint_ create a _dual variable_; and
+* For every _primal variable_ create a _dual constraint_.
+
+#### 2. Constraint matrix, objective function and RHS's:
+
+* Transpose the primal constraint matrix to get the dual constraint matrix;
+* The primal objective coefficients, c, become the dual right-hand-side coefficients; and
+* The primal right-hand-side coefficients, b, become the dual objective coefficients.
+
+#### 3. Objective & constraint directions, variable ranges
+
+Defining constraint directions and variable constraints follows a "sensible, odd, bizare" structure:
+
+__Maximisation Primal:__
+
+\begin{tabular}{c c c}
+ i-th primal constraint & i-th dual variable & SOB \\ \hline
+ $a_i^Tx\leq b_i$ & $y_i \geq 0$ & sensible - we expect we can only take values "up to" something\\
+ $a_i^Tx = b_i$ & $y_i \text{ unrestricted}$ & odd \\
+ $a_i^Tx\geq b_i$ & $y_i \leq 0$ & bizarre - we're maximising something that can go up to $+\infty$
+\end{tabular}
+
+\begin{tabular}{c c c}
+ i-th primal variable & i-th dual constraint & SOB \\ \hline
+ $x_i \geq 0$ & $a_j^Ty \geq c_j$ & sensible - we expect non-negative values in maximisation\\
+ $x_i \text{unrestricted}$ & $a_j^Ty = c_j$ & odd \\
+ $x_i \leq 0$ & $a_j^Ty \leq c_j$ & bizarre - we dont't expect negative values in maximisation
+\end{tabular}
+
+
+
+
+__Minimisation Primal:__
+
+\begin{tabular}{c c c}
+ i-th primal constraint & i-th dual variable & SOB \\ \hline
+ $a_i^Tx\geq b_i$ & $y_i \geq 0$ & sensible - we expect we can only take values above something\\
+ $a_i^Tx = b_i$ & $y_i \text{ unrestricted}$ & odd \\
+ $a_i^Tx\leq b_i$ & $y_i \leq 0$ & bizarre - we're minimising something that can go down to $-\infty$
+\end{tabular}
+
+\begin{tabular}{c c c}
+ i-th primal variable & i-th dual constraint & SOB \\ \hline
+ $x_i \geq 0$ & $a_j^Ty \leq c_j$ & sensible - we expect non-negative values\\
+ $x_i \text{unrestricted}$ & $a_j^Ty = c_j$ & odd \\
+ $x_i \leq 0$ & $a_j^Ty \geq c_j$ & bizarre - we're minimising something that can go down to $-\infty$
+\end{tabular}
