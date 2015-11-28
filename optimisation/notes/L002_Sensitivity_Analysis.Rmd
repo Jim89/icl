@@ -8,3 +8,54 @@ output:
 
 # Sensitivity Analysis
 
+In general, linear programs make several assumptions about one or more of the variables or constraints. One of these assumptions is that they are fixed, whereas in reality one or more of them may be variable and subject to uncertainty. 
+
+It is therefore desireable to understand how _sensitive_ the optimal solution is to changes in each of the varialbes. In order to do this it is necessary to perform __sensitivity analysis__. 
+
+This involves making changes to the related constraints, which will shift the feasible region. The new optimal solution is then determined. To find the result of a 1-unit shift in each variable, the change in the optimal value is divided by the change that was made to give the change in the objective value per unit change in the altered variable. 
+
+This can go both ways, i.e. the change can be both positive or negative. 
+
+Analytically, this can be solved using a system of linear equations at the solution vertex (as seen previously). 
+
+### Non-binding constraints
+
+Note that changing the amount for a non-binding constraint will have __no effect__ on the optimal solution. A non-binding constraint still has some "wiggle room" as not all of it has been "used up", so changing the value will have no effect. 
+
+## Shadow Prices
+
+It turns out that there is a name for this "effect on the optimal solution for a one-unit change in a variable": __the shadow price__.
+
+Concretely, the shadow price is defined as _the change in the value of the objective function, given a one-unit change in the right hand side of a constraint, holding all other constraints constant._
+
+Therefore, each constraint has a shadow price (although remember that for non-binding constraints it will be zero), and the units of the shadow price are equivalent to the units of the objective function divided by the units of the constraint. 
+
+Shadow prices are only relevant within a certain range. If we keep adjusting the value of the constraint, eventually it will leave the feasible region that is described by the remaining constraints. As such changing it further would have no effect on the objective value. 
+
+In order to find what the shadow prices are outside of this range, it is necessary to re-fit the model using a value for the constraint that is outside of this range (which may mean the constraint is no longer binding).
+
+Analytically, the optimal solution is defined by a set of linear equations in two or more of the constraints. As such, changing the RHS of one of these equations (the one describing the constraint being altered) and re-solving the system will return the new solution.
+
+This highlights _why_ non-binding constraints have a shadow price of 0 - they do _not_ form part of the system of linear equations that return the the optimal solution, and so changing their values has no effect!
+
+## An example
+
+Returning to the Gemstone Tool Company example from earlier (manufacturing wrenches and pliers), we can calculate the effect that extra 1,000lbs./day in steel would have on GTC's earnings.
+
+Recalling that previously steel was constrained to 27,000lbs./day (i.e. that was the value of the _steel_ constraint) we can adjust this to 28,000lbs./day to assess the impact. 
+
+Adjusting the constraint in this way, and recalculating the objective value returns a new value of $2,520 (previously it was $2,460). I.e. an extra 1,000lbs./day of steel increases daily earnings by $60 (or $0.06 per lbs./day).
+
+From this it is possible for GTC to decide that they will purchase more steel, as they have seen that they can increase their daily earnings by doing so. Using the shadow price of $0.06, we can see that GTC should spend no more than $0.06 for each extra lbs. of steel that they purchase (as anything above this would negate the increased objective value).
+
+This logic works in the other direction: the objective value would _decrease_ bu $0.06 for each lbs. of steel _less_ that GTC made available to manufacture wrenches and pliers. Therefore GTC could also sell steel, but for _at least_ $0.06/lbs. and still increase their daily earnings.
+
+## Getting to Shadow Prices
+
+### Excel
+
+Using the Excel solver, if the Simplex method is selected (or in older versions of Excel, the "Assume linear solution" option selected) and the "Sensitivty report" generated from the Solver, the shadow prices will be returned. (Note that they work only for the RHS of the constraint variables).
+
+### AMPL
+
+In AMPL some new syntax is needed. Before the model is generated, use `> option solver cplex;` to force the shadow prices to be calculated by the solver. Then run the model as normal. Using `> displace constraint1` will then return the shadow price for `constraint`. Using `> displace constraint.down, constraint.current, constraint.up` will displace the range the shadow price is valid at (`.down` and `.up`), as well as the current value of the constraint (`.current`).
