@@ -307,10 +307,346 @@ This is the dual of the primal linear program program presented in the question.
 
 \begin{equation} \label{eq:3b_raw}
 \begin{split}
-\text{maxomise } x_1 - x_3 \\
+\text{maximise } x_1 - x_3 \\
 \text{subject to}\\
 x_1 + x_2 = 4 \\
-x_3 \leq 2
+x_3 \leq 2 \\
 x_1, x_2 \leq 0, x_3 \in \mathbb{R}
 \end{split}
 \end{equation}
+
+### Step 0 - state the objective and the constraints explicitly
+
+Similar to part A, in the primal linear program provided in the question \eqref{eq:3b_raw} not all constraints list all the decision variables. Therefore it is sensible to re-write the program to be more explicit. Each constraint is given a label for reference. Thus:
+
+\begin{equation} \label{eq:3b_explicit}
+\begin{split}
+\text{maximise } x_1 + 0x_2 - x_3 \\
+\text{subject to}\\
+x_1 + x_2 + 0x_3 = 4 \\
+0x_1 + 0x_2 + x_3 \leq 2 \\
+x_1, x_2 \leq 0, x_3 \in \mathbb{R}
+\end{split}
+\end{equation}
+
+### Step 1 - Define the matrices
+
+\begin{equation} \label{eq:max_typ}
+\begin{split}
+\text{maximise } c^Tx \\
+\text{subject to} \\
+Ax \geq b \\
+x \in \mathbb{R}_+^m
+\end{split}
+\end{equation}
+
+The program given by \eqref{eq:3b_explicit} can be interpreted in the typical form of the minimisation problem given by \eqref{eq:max_typ}.
+
+Doing so gives the matrices:
+
+\[
+c = 
+\begin{bmatrix}
+    1 \\
+    0 \\
+    -1
+\end{bmatrix}
+\]
+
+\[
+x = 
+\begin{bmatrix}
+    x_1 \\
+    x_2 \\
+    x_3 
+\end{bmatrix}
+\]
+
+\[
+A = 
+\begin{bmatrix}
+    1 & 1 & 0 \\
+    0 & 0 & 1
+\end{bmatrix}
+\]
+
+\[
+b = 
+\begin{bmatrix}
+    4 \\
+    2
+\end{bmatrix}
+\]
+
+### Step 2 - Convert to the dual
+
+\begin{equation} \label{eq:min_typ2}
+\begin{split}
+\text{minimise } b^Ty \\
+\text{subject to} \\
+A^Ty \geq c \\
+y \in \mathbb{R}_+^m
+\end{split}
+\end{equation}
+
+Given the typical form of the minimisation program in \eqref{eq:min_typ2} and using the matrices aboce, the minimisation dual can be described thus:
+
+#### Minimise:
+\[ \left( \begin{array}{c}
+4 \\
+2
+\end{array} \right)^T
+%
+\left( \begin{array}{c}
+y_1 \\
+y_2 \\
+\end{array} \right)
+\]
+
+#### Subject To:
+
+\[
+\begin{pmatrix}
+  1 & 0 \\
+  1 & 0 \\
+  0 & 1
+\end{pmatrix}
+\begin{pmatrix}
+  y_1 \\ 
+  y_2
+\end{pmatrix}
+\quad\quad
+\begin{pmatrix}
+  1 \\ 
+  0 \\
+  -1
+\end{pmatrix}
+\]
+
+Note that in the dual there are two decision variables, $y_1$ and $y_2$ as there were two constraints in the primal. Also note that the sign of the (in)equality for each constraint has not yet been defined as this is the next step.
+
+### Step 3 - Define the sign in each dual constraint
+
+When using the direct method to "dualise" a primal linear program, the sign of the (in)equality for the i-th dual constraint is defined by the sign of the (in)equality on the i-th variable in the primal. Thus given that in the primal $x_1, x_2 \leq 0$ and $x_3 \in \mathbb{R}$ this produces the following linear program:
+
+\begin{equation} \label{eq:3b_dual_raw}
+\begin{split}
+\text{minimise } 4y_1 + 2y_2 \\
+\text{subject to} \\
+1y_1 + 0y_1 \geq 1 \\
+1y_1 + 0y_2 \geq 0 \\
+0y_1 + 1y_2 = -1
+\end{split}
+\end{equation}
+
+### Step 4 - Define the allowable values for the new decision variables
+
+When using the direct method to "dualise" a primal linear program, the sign of the (in)equality for the i-th dual variable is defined by the sign of the (in)equality on the i-th primal constraint. Thus given that in the primal the constraints are an equality and a $\leq$:
+
+\begin{equation} \label{eq:3b_dual_raw_with_constr}
+\begin{split}
+\text{minimise } 4y_1 + 2y_2 \\
+\text{subject to} \\
+1y_1 + 0y_1 \geq 1 \\
+1y_1 + 0y_2 \geq 0 \\
+0y_1 + 1y_2 = -1 \\
+y_1 \in \mathbb{R}, y_2 \geq 0
+\end{split}
+\end{equation}
+
+### Step 5 - Define the dual
+
+Now all necessary steps have been taken to dualise the primal given in the question: the matrix form of the problem was found and rearranged to give the dual, the sign on each dual constraint has been determined, and the sign of the allowable values for each dual variable has been found. Thus (cleaning up \eqref{eq:3b_dual_raw_with_constr} slightly) the dual can be written as:
+
+\begin{equation} \label{eq:3b_dual_clean}
+\begin{split}
+\text{minimise } 4y_1 + 2y_2 \\
+\text{subject to} \\
+1y_1 \geq 1 \\
+1y_1 \geq 0 \\
+1y_2 = -1 \\
+y_1 \in \mathbb{R}, y_2 \geq 0
+\end{split}
+\end{equation}
+
+It is interesting to note that the dual form of the problem is _infeasible_ as $y_2$ is simultaneously restricted to have a value of -1, and also to be greater than 0. 
+
+This shows that for this primal/dual pair, the 2nd case of duality theorem (one form is feasible and unbounded, the other is infeasible) holds.
+
+The primal can be seen to be feasible and unbounded as it seeks to maximise a variance, $x_3$ which can take any value (i.e. $x_3\in\mathbb{R}$). Given that $x_3$ is subtracted from the value of the objective function, the optimal value is $-\infty$ and as such the primal in this problem is unbounded. It is otherwise feasible and as such it is expected that the dual is infeasible. This was found to be the case, nicely demonstrating the 2nd form of duality theory.
+
+***
+
+\pagebreak
+
+# Question 4
+
+In this question, data are provided on CEO salaries as they relate to a number of other variables. The relationship between salary and these other variables is desired, and so a regression will be perfomed.
+
+## Part A
+
+> Formulate the 1-norm regression problem for this data set (you may ignore the intercept, $\beta_0$)
+
+The general form of 1-norm regression is:
+
+\begin{equation} \label{eq:1_norm_general}
+\text{minimise } ||y - X\beta||_1
+\end{equation}
+
+Where in \eqref{eq:1_norm_general} $y$ is the vector of the outcome/dependent variable, $X$ is the vectr/matrix of independent variables/parameters and $\beta$ represents the regression coefficients, or in linear programming terminology, the decision variables. 
+
+Re-writing this for the CEO salary problem in the question and performing some expansion of the $X$ and $\beta$ terms gives:
+
+\begin{equation} \label{eq:1n_basic}
+\text{minimise }||y - \beta_{years}*years - \beta_{stock}*changestock - \beta_{sales}*changesales - \beta_{mba}*mba||_1
+\end{equation}
+
+Given that there are many values for each of the parameters/independent variables, \eqref{eq:1n_basic} can be rewritten to be indexed against each of these values, using the index $i$:
+
+\begin{equation} \label{eq:1n_idx}
+\text{minimise } \sum_{i=1}^n ||y_i- \beta_{years}*years_i - \beta_{stock}*changestock_i - \beta_{sales}*changesales_i - \beta_{mba}*mba_i||_1
+\end{equation}
+
+Given the general definition of the 1-norm: $||a||_1 = |a|$ (i.e. the absolute value), \eqref{eq:1n_idx} can be rewritten as:
+
+\begin{equation} \label{eq:1n}
+\text{minimise } \sum_{i=1}^n |y_i- \beta_{years}*years_i - \beta_{stock}*changestock_i - \beta_{sales}*changesales_i - \beta_{mba}*mba_i|
+\end{equation}
+
+This minimisation problem does not look particularly "nice" (it does not look linear) so some "neatening up" needs doing:
+
+#### 1. Introduce auxiliary variables
+
+We can replace the "messy" $|y_i - \beta_{years}*years - ...|$ term in \eqref{eq:1n} with a new parameter, $\theta$, and then constrain that parameter. Thus:
+
+\begin{equation} \label{eq:1n_aux}
+\begin{split}
+\text{minimise } \sum_{i=1}^n \theta_i \\
+\text{subject to } \\
+\theta_i = |y_i- \beta_{years}*years_i - \beta_{stock}*changestock_i - \beta_{sales}*changesales_i - \beta_{mba}*mba_i| \\ 
+\forall i = 1, ..., n
+\end{split}
+\end{equation}
+
+#### 2. Equivalent reformulation
+
+Given that we seek to minimise there, the equality constraint can be relaxed to a greater than or equal to constraint. This will still resolve to an equality as if we pick _any_ theta that is greater than $|y_i - \beta_{years}*years - ... |$ then there is another value of theta that _will_ improve the solution, and so this still resolves to an equality. Thus:
+
+\begin{equation} \label{eq:1n_aux_relax}
+\begin{split}
+\text{minimise } \sum_{i=1}^n \theta_i \\
+\text{subject to } \\
+\theta_i \geq |y_i- \beta_{years}*years_i - \beta_{stock}*changestock_i - \beta_{sales}*changesales_i - \beta_{mba}*mba_i| \\ 
+\forall i = 1, ..., n
+\end{split}
+\end{equation}
+
+#### 3. Remove absolute value operator
+
+The final step is to remove the absolute value operator from the constraint. This is because it does not look like a truly linear constraint, and because it can be easily rewritten as two individual constraints. Thus:
+
+\begin{equation} \label{eq:1n_aux_final}
+\begin{split}
+\text{minimise } \sum_{i=1}^n \theta_i \\
+\text{subject to } \\
+\theta_i \geq y_i- \beta_{years}*years_i - \beta_{stock}*changestock_i - \beta_{sales}*changesales_i - \beta_{mba}*mba_i \\ 
+\theta_i \geq -(y_i- \beta_{years}*years_i - \beta_{stock}*changestock_i - \beta_{sales}*changesales_i - \beta_{mba}*mba_i) \\ 
+\forall i = 1, ..., n
+\end{split}
+\end{equation}
+
+This is now a true linear program and is the representation of the 1-norm regression for this data set as a linear program.
+
+## Part B
+
+An `AMPL` model was created for the regression problem defined in A. The model was defined as:
+
+```
+# set the company number as ordered ID
+set NUM ordered;
+
+# set the other parameters
+param comp {NUM}; # compensation
+param years {NUM}; #yrs in position
+param change_stock {NUM}; # % change stock prices
+param change_sales {NUM}; # % change sales
+param mba {NUM}; # yes/no [1/0]
+
+# load the data
+data CEO_Comp.dat;
+
+# set the underlying decision variables (i.e. the betas)
+var beta_years;
+var beta_change_stock;
+var beta_change_sales;
+var beta_mba;
+
+# set the theta decision variable
+var theta {NUM};
+
+# set the objective function
+minimize obj: sum{i in NUM} theta[i];
+
+# set the constraints
+subject to c1 {i in NUM}: 
+    theta[i] >= comp[i] - (beta_years * years[i] + 
+                            beta_change_stock * change_stock[i] + 
+                            beta_change_sales * change_sales[i] + 
+                            beta_mba * mba[i]);
+                         
+subject to c2 {i in NUM}: 
+    theta[i] >= - comp[i] + (beta_years * years[i] + 
+                                beta_change_stock * change_stock[i] +
+                                beta_change_sales * change_sales[i] + 
+                                beta_mba * mba[i]);
+```
+
+(Note that it is also provided in the attached file `4b_1_norm.mod`).
+
+## 4c
+
+## 4d
+
+An `AMPL` model was created for the regression problem defined in B. The model was defined as:
+
+```
+# set the company number as ordered ID
+set NUM ordered;
+
+# set the other parameters
+param comp {NUM}; # compensation
+param years {NUM}; #yrs in position
+param change_stock {NUM}; # % change stock prices
+param change_sales {NUM}; # % change sales
+param mba {NUM}; # yes/no [1/0]
+
+# load the data
+data CEO_Comp.dat;
+
+# set the underlying decision variables (i.e. the betas)
+var beta_years;
+var beta_change_stock;
+var beta_change_sales;
+var beta_mba;
+
+# set the theta decision variable
+var theta;
+
+# set the objective function
+minimize obj: theta;
+
+# set the constraints
+subject to c1 {i in NUM}: 
+    theta >= comp[i] - (beta_years * years[i] + 
+                        beta_change_stock * change_stock[i] + 
+                        beta_change_sales * change_sales[i] + 
+                        beta_mba * mba[i]);
+                        
+subject to c2 {i in NUM}: 
+    theta >= - comp[i] + (beta_years * years[i] + 
+                            beta_change_stock * change_stock[i] + 
+                            beta_change_sales * change_sales[i] + 
+                            beta_mba * mba[i]);
+```
+
+(Note that it is also provided in the attached file `4d_inf_norm.mod`).
