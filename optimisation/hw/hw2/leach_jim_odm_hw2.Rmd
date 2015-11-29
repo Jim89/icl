@@ -530,7 +530,7 @@ We can replace the "messy" $|y_i - \beta_{years}*years - ...|$ term in \eqref{eq
 
 #### 2. Equivalent reformulation
 
-Given that we seek to minimise there, the equality constraint can be relaxed to a greater than or equal to constraint. This will still resolve to an equality as if we pick _any_ theta that is greater than $|y_i - \beta_{years}*years - ... |$ then there is another value of theta that _will_ improve the solution, and so this still resolves to an equality. Thus:
+Given that we seek to minimise theta, the equality constraint can be relaxed to a greater than or equal to constraint. This will still resolve to an equality as if we pick _any_ theta that is greater than $|y_i - \beta_{years}*years - ... |$ then there is another value of theta that _will_ improve the solution, and so this still resolves to an equality. Thus:
 
 \begin{equation} \label{eq:1n_aux_relax}
 \begin{split}
@@ -604,6 +604,73 @@ subject to c2 {i in NUM}:
 (Note that it is also provided in the attached file `4b_1_norm.mod`).
 
 ## 4c
+
+The general form of the $\infty$-norm is given by:
+
+\begin{equation} \label{eq:inf_norm}
+||a||_{\infty} = \max_{i}|a_i|
+\end{equation}
+
+I.e, for a vector of values, a, the $\infty$ norm is equivalent to the _maximum_ value of the absolute value of each item in the vector, $a_i$,
+
+As this is a regression, we are attmepting to minmise the infinity norm $||y - X\beta||_{\infty}$, hence:
+
+\begin{equation}
+\min_{\beta}\quad  \max_i|y_i - x_{i}^T\beta|
+\end{equation}
+
+Expanding $y_i - x_i^T\beta$ for the CEO salary problem in the question, this can be rewritten as:
+
+\begin{equation}
+\min_{\beta}\quad  \max_{i} |y_i - \beta_{years}*years_i - \beta_{stock}*changestock_i - \beta_{sales}*changesales_i - \beta_{mba}*mba_i|\quad  \forall i = 1, ..., n
+\end{equation}
+
+Using similar logic as previously, this can be simplified.
+
+#### 1. Introduce auxiliary variables
+
+We can replace the "messy" $|y_i - \beta_{years}*years - ...|$ term in \eqref{eq:1n} with a new parameter, $\theta$, and then constrain that parameter. Thus:
+
+\begin{equation} \label{eq:4c_aux}
+\begin{split}
+\min \theta \\
+\text{subject to } \\
+\theta = max_i \quad |y_i- \beta_{years}*years_i - \beta_{stock}*changestock_i - \beta_{sales}*changesales_i - \beta_{mba}*mba_i| \\ 
+\forall i = 1, ..., n
+\end{split}
+\end{equation}
+
+Note that now the auxiliary variable is simply $\theta$ and _not_ $\theta_i$. This occurs because $\max_i |y_i - ... |$ returns a single value. Again, the constraint on theta is not linear, so it can be reformulated, first as an inequality.
+
+#### 2. Equivalent reformulation
+
+As before, we seek to minimise theta. Therefore the equality constraint can be relaxed to a greater than or equal to constraint. This will _still_ resolve to an equality as (as before) if we pick _any_ theta that is greater than $max_i \quad |y_i - \beta_{years}*years_i - ... |$ then there is another value of theta that _will_ improve the solution, and so this still resolves to an equality. Thus:
+
+\begin{equation} \label{eq:1n_aux_relax}
+\begin{split}
+\min \theta \\
+\text{subject to } \\
+\theta \geq \max_i \quad |y_i- \beta_{years}*years_i - \beta_{stock}*changestock_i - \beta_{sales}*changesales_i - \beta_{mba}*mba_i| \\ 
+\forall i = 1, ..., n
+\end{split}
+\end{equation}
+
+#### 3. Remove absolute value operator
+
+Again, the final step is to remove the absolute value operator from the constraint. This is because it does not look like a truly linear constraint, and because it can be easily rewritten as two individual constraints. Thus:
+
+\begin{equation} \label{eq:1n_aux_final}
+\begin{split}
+\min \theta \\
+\text{subject to } \\
+\theta \geq y_i- \beta_{years}*years_i - \beta_{stock}*changestock_i - \beta_{sales}*changesales_i - \beta_{mba}*mba_i \\ 
+\theta \geq -(y_i- \beta_{years}*years_i - \beta_{stock}*changestock_i - \beta_{sales}*changesales_i - \beta_{mba}*mba_i) \\ 
+\forall i = 1, ..., n
+\end{split}
+\end{equation}
+
+The two constraints provide that $\theta$ is _at least_ as large as $\max_i |y_i - \beta_{years}*years...|$. Since we try to _minimise_ $\theta$, this results in it's value being taken down to $\max_i |y_i - \beta_{years}*years...|$. Hence this solution works as the overal objective, given by \eqref{eq:inf_norm} is to minimise the infinity norm for this regression and that is what these two constraints guarentee.
+
 
 ## 4d
 
