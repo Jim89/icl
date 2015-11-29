@@ -11,3 +11,306 @@ The purpose of this document is to write up the response to the second assignmen
 
 ***
 
+# Question 3
+
+## Part A
+
+> Using the “indirect method”, find the dual to the linear program:
+
+\begin{equation} \label{eq:3a_raw}
+\begin{split}
+\text{minimise } 3x_1 + 5x_2 - x_3 \\
+\text{subject to}\\
+x_1 + x_3 = 4 \\
+x_2 - 2x_3 \leq 2 \\
+x_1, x_2 \geq 0, x_3 \in \mathbb{R}
+\end{split}
+\end{equation}
+
+### Step 0 - state the objective and the constraints explicitly
+
+In the primal linear program provided in the question \eqref{eq:3a_raw} not all constraints list all the decision variables. Therefore it is sensible to re-write the program to be more explicit. Each constraint is given a label for reference. Thus:
+
+\begin{equation} \label{eq:3a_explicit}
+\begin{split}
+\text{minimise } 3x_1 + 5x_2 - x_3 \\
+\text{subject to}\\
+\text{(i) }x_1 + 0x_2 + x_3 = 4 \\
+\text{(ii) }0x_1 + x_2 - 2x_3 \leq 2 \\
+x_1, x_2 \geq 0, x_3 \in \mathbb{R}
+\end{split}
+\end{equation}
+
+### Step 1 - Restrict unrestricted variables
+
+The unrestricted variable in \eqref{eq:3a_explicit} can be written as the _sum_ of two restricted variables, i.e. $x_3 = x_3^+ - x_3^-$. Doing so and substituting in to \eqref{eq:3a_explicit} allows it to be transformed thus:
+
+\begin{equation} \label{eq:3a_i}
+\begin{split}
+\text{minimise } 3x_1 + 5x_2 - x_3^+ + x_3^- \\
+\text{subject to}\\
+\text{(i) }x_1 + 0x_2 + x_3^+ - x_3^- = 4 \\
+\text{(ii) }0x_1 + x_2 - 2x_3^+ + 2x_3^- \leq 2 \\
+x_1, x_2, x_3^+, x_3^- \geq 0
+\end{split}
+\end{equation}
+
+(Note that when performing this substitution, the sign (+/-) in front of the variable is important, and is the reason that the sign in front of either $x_3^+$ or $x_3^-$ in \eqref{eq:3a_i} may not be what was expected, given that $x_3 = x_3^+ - x_3^-$.)
+
+### Step 2 - Convert Equalities
+
+The next step in the process is to convert the equality constraint ($i$) in \eqref{eq:3a_i} in to two _inequalities_. Thus:
+
+\begin{equation} \label{eq:3a_ii}
+\begin{split}
+\text{minimise } 3x_1 + 5x_2 - x_3^+ + x_3^- \\
+\text{subject to}\\
+\text{(i) }x_1 + 0x_2 + x_3^+ - x_3^- \geq 4 \\
+\text{(ii) }x_1 + 0x_2 + x_3^+ - x_3^- \leq 4 \\
+\text{(iii) }0x_1 + x_2 - 2x_3^+ + 2x_3^- \leq 2 \\
+x_1, x_2, x_3^+, x_3^- \geq 0
+\end{split}
+\end{equation}
+
+(Note that the previous $ii$ constraint has now become constraint $iii$).
+
+### Step 3 - Convert $\leq$ to $\geq$
+
+As the primal problem is a minimisation, the next step is to convert all constraints that are of the $\leq$ form in to those of the $\geq$ form (by multiplying by -1). Thus constraints $ii$ and $iii$ are transformed:
+
+\begin{equation} \label{eq:3a_iii}
+\begin{split}
+\text{minimise } 3x_1 + 5x_2 - x_3^+ + x_3^- \\
+\text{subject to}\\
+\text{(i) }x_1 + 0x_2 + x_3^+ - x_3^- \geq 4 \\
+\text{(ii) }-x_1 - 0x_2 - x_3^+ + x_3^- \geq -4 \\
+\text{(iii) }0x_1 - x_2 + 2x_3^+ - 2x_3^- \geq -2 \\
+x_1, x_2, x_3^+, x_3^- \geq 0
+\end{split}
+\end{equation}
+
+### Step 4 - Bring the solution in to matrix form
+
+\begin{equation} \label{eq:min_typ}
+\begin{split}
+\text{minimise } b^Ty \\
+\text{subject to} \\
+A^Ty \geq c \\
+y \in \mathbb{R}_+^m
+\end{split}
+\end{equation}
+
+The program given by \eqref{eq:3a_iii} can be interpreted in the typical form of the minimisation problem given by \eqref{eq:min_typ}.
+
+Doing so gives the matrices:
+
+\[
+b = 
+\begin{bmatrix}
+    3 \\
+    5 \\
+    -1 \\
+    1
+\end{bmatrix}
+\]
+
+\[
+y = 
+\begin{bmatrix}
+    x_1 \\
+    x_2 \\
+    x_3^+ \\
+    x_3^-
+\end{bmatrix}
+\]
+
+\[
+A^T = 
+\begin{bmatrix}
+    1 & 0 & 1 & -1 \\
+   -1 & 0 & -1 & 1 \\
+    0 & -1 & 2 & -2
+\end{bmatrix}
+\]
+
+\[
+c = 
+\begin{bmatrix}
+    4 \\
+    -4 \\
+    -2
+\end{bmatrix}
+\]
+
+### Step 5 - Convert to the dual
+
+\begin{equation} \label{eq:max_typ}
+\begin{split}
+\text{maximise } c^Tx \\
+\text{subject to} \\
+Ax \geq b \\
+x \in \mathbb{R}_+^m
+\end{split}
+\end{equation}
+
+Using the matrices defined in step 4, the problem can converted in to the typical form of the maximisation problem given by \eqref{eq:max_typ}. In this case, the maximisation problem is the dual (as the primal was a minimisation). Thus:
+
+#### Maximise:
+\[ \left( \begin{array}{c}
+4 \\
+-4 \\
+-2
+\end{array} \right)^T
+%
+\left( \begin{array}{c}
+x_1 \\
+x_2 \\
+x_3
+\end{array} \right)
+\]
+
+#### Subject To:
+
+\[
+\begin{pmatrix}
+  1 & -1 & 0 \\ 
+  0 & 0 & -1 \\
+  1 & -1 & 2 \\
+  -1 & 1 & -2
+\end{pmatrix}
+\begin{pmatrix}
+  x_1 \\ 
+  x_2 \\
+  x_3
+\end{pmatrix}
+\leq
+\begin{pmatrix}
+  3 \\ 
+  5 \\
+  -1 \\
+  1
+\end{pmatrix}
+; x_1, x_2, x_3 \geq 0
+\]
+
+Note that $x_1, x_2, x_3$ refer to a new set of 3 decision variables (as there were 3 constraints in the primal form).
+
+Having defined these matrices, a new linear program can be written thus: 
+
+\begin{equation} \label{eq:dual_raw}
+\begin{split}
+\text{maximise }4x_1 - 4x_2 - 2x_3 \\
+\text{subject to} \\
+\text{(i) }x_1 - x_2 + 0x_3 \leq 3 \\
+\text{(ii) }0x_1 + 0x_2 - x_3 \leq 5 \\
+\text{(iii) }x_1 - x_2 + 2x_3 \leq -1 \\
+\text{(iv) }-x_1 + x_2 -2x_3 \leq 1 \\
+x_1, x_2, x_3 \geq 0
+\end{split}
+\end{equation}
+
+This is the dual form of the primal given in \eqref{eq:3a_raw}. It can now be simplified further.
+
+### Step 6 - Simplify
+
+The equation in \eqref{eq:dual_raw} can be simplified in a few ways.
+
+#### Create an equality
+
+Contraints $iii$ and $iv$ in \eqref{eq:dual_raw} both look very similar, and can in fact be transformed to produce an equality constraint. The first step in doing so is to multiply contraint $iv$ by -1. Thus:
+
+\begin{equation} \label{eq:dual_i}
+\begin{split}
+\text{maximise }4x_1 - 4x_2 - 2x_3 \\
+\text{subject to} \\
+\text{(i) }x_1 - x_2 + 0x_3 \leq 3 \\
+\text{(ii) }0x_1 + 0x_2 - x_3 \leq 5 \\
+\text{(iii) }x_1 - x_2 + 2x_3 \leq -1 \\
+\text{(iv) }x_1 - x_2 +2x_3 \geq -1 \\
+x_1, x_2, x_3 \geq 0
+\end{split}
+\end{equation}
+
+The linear program presented in \eqref{eq:dual_i} can then be simplified to contain an _equality_ constraint by combining contraints $iii$ and $iv$:
+
+\begin{equation} \label{eq:dual_ii}
+\begin{split}
+\text{maximise }4x_1 - 4x_2 - 2x_3 \\
+\text{subject to} \\
+\text{(i) }x_1 - x_2 + 0x_3 \leq 3 \\
+\text{(ii) }0x_1 + 0x_2 - x_3 \leq 5 \\
+\text{(iii) }x_1 - x_2 + 2x_3 = -1 \\
+x_1, x_2, x_3 \geq 0
+\end{split}
+\end{equation}
+
+#### Combine variables
+
+Looking at the transformed equation in \eqref{eq:dual_ii}, it can be seen that both the objective function and all the constraints contain the value $x_1 - x_2$. (Technically, constraint $ii$ does _not_ contain this term, but as both $x_1$ and $x_2$ are 0 in this constraint, it makes no difference). 
+
+Thus it is possible define a new variable which is a combination of $x_1$ and $x_2$. I.e. Let $x_1^{'} = x_1 - x_2$ (noting that this will make the _new_ $x_1^{'}$ an unrestricted variable). Thus:
+
+\begin{equation} \label{eq:dual_iii}
+\begin{split}
+\text{maximise }4x_1^{'} - 2x_3 \\
+\text{subject to} \\
+\text{(i) }x_1^{'} + 0x_3 \leq 3 \\
+\text{(ii) }0x_1^{'} - x_3 \leq 5 \\
+\text{(iii) }x_1^{'} + 2x_3 = -1 \\
+x_1^{'} \in \mathbb{R},  x_3 \geq 0
+\end{split}
+\end{equation}
+
+#### Rationalise the constraints
+
+Looking at constraint $ii$ in \eqref{eq:dual_iii} it looks a little odd, in that the constraint specifies a _negative_ value of the $x_3$ variable must be less than 5. 
+
+To rationalise this to look a little more sensible, it is possible to define a new variable, $x_2^{'}$ which is simply equivalent to $-x_3$, i.e. let $x_2^{'} = -x_3$. 
+
+Replacing $x_3$ in \eqref{eq:dual_iii} with the new value, $x_2^{'}$ gives a more sensible looking program:
+
+\begin{equation} \label{eq:dual}
+\begin{split}
+\text{maximise }4x_1^{'} + 2x_2^{'} \\
+\text{subject to} \\
+\text{(i) }x_1^{'} + 0x_2^{'} \leq 3 \\
+\text{(ii) }0x_1^{'} + x_2^{'} \leq 5 \\
+\text{(iii) }x_1^{'} - x_2^{'} = -1 \\
+x_1^{'} \in \mathbb{R},  x_2^{'} \geq 0
+\end{split}
+\end{equation}
+
+It is the case that the solution presented in \eqref{eq:dual} is the dual linear program to the primal presented in the question \eqref{eq:3a_raw}. Tidying this up slightly to give remove $0x_i$ terms in constraints gives:
+
+#### The Dual:
+
+\begin{equation} \label{eq:dual_clean}
+\begin{split}
+\text{maximise }4x_1^{'} + 2x_2^{'} \\
+\text{subject to} \\
+\text{(i) }x_1^{'} \leq 3 \\
+\text{(ii) }x_2^{'} \leq 5 \\
+\text{(iii) }x_1^{'} - x_2^{'} = -1 \\
+x_1^{'} \in \mathbb{R},  x_2^{'} \geq 0
+\end{split}
+\end{equation}
+
+This is the dual of the primal linear program program presented in the question. (And confirmed by perfoming the same _dualisation_ using the direct method (see appendices)).
+
+***
+
+\pagebreak
+
+## Part B
+
+> Using the “direct method”, find the dual to the linear program:
+
+\begin{equation} \label{eq:3b_raw}
+\begin{split}
+\text{maxomise } x_1 - x_3 \\
+\text{subject to}\\
+x_1 + x_2 = 4 \\
+x_3 \leq 2
+x_1, x_2 \leq 0, x_3 \in \mathbb{R}
+\end{split}
+\end{equation}
