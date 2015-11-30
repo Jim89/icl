@@ -469,12 +469,6 @@ y_1 \in \mathbb{R}, y_2 \geq 0
 \end{split}
 \end{equation}
 
-It is interesting to note that the dual form of the problem is _infeasible_ as $y_2$ is simultaneously restricted to have a value of -1, and also to be greater than 0. 
-
-This shows that for this primal/dual pair, the 2nd case of duality theorem (one form is feasible and unbounded, the other is infeasible) holds.
-
-The primal can be seen to be feasible and unbounded as it seeks to maximise a variance, $x_3$ which can take any value (i.e. $x_3\in\mathbb{R}$). Given that $x_3$ is subtracted from the value of the objective function, the optimal value is $-\infty$ and as such the primal in this problem is unbounded. It is otherwise feasible and as such it is expected that the dual is infeasible. This was found to be the case, nicely demonstrating the 2nd form of duality theory.
-
 ***
 
 \pagebreak
