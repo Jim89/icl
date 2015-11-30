@@ -597,6 +597,15 @@ subject to c2 {i in NUM}:
 
 (Note that it is also provided in the attached file `4b_1_norm.mod`).
 
+Fitting this model using AMPL returned an objective value of 14652.83 and coefficients given by:
+
+* $\beta_{years}$ : 169.274
+* $\beta_{stock}$ : 2.41
+* $\beta_{sales}$ : -0.1425
+* $\beta_{mba}$ : 382.5
+
+I.e., both years experience and having an MBA appear to have a positive impact on CEO salary.
+
 ## 4c
 
 The general form of the $\infty$-norm is given by:
@@ -711,3 +720,12 @@ subject to c2 {i in NUM}:
 ```
 
 (Note that it is also provided in the attached file `4d_inf_norm.mod`).
+
+Fitting this model using AMPL returned an objective value of 805.537 and coefficients given by:
+
+* $\beta_{years}$ : 221.052
+* $\beta_{stock}$ : 4.94059
+* $\beta_{sales}$ : 0.101485
+* $\beta_{mba}$ : 261.955
+
+I.e., again both years experience and having an MBA appear to have a positive impact on CEO salary.
