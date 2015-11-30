@@ -48,40 +48,35 @@ WHERE I.FILM_ID IS NULL
 the	 staff	 member	 (id)	 with	 the	 biggest	 number	 of	 transactions	 and	 also	
 the	staff	member	with	the	biggest	sum	of	the	transaction	value.	
 
-For this question, it should be noted that there are several transactions listed in the _rental_ table that do not have an associated amount in the _payment_ table. For this purposes of this question, these transactions were included and so contribute to the total number of transactions, but not the overall value. Additionally, there is one transaction with multiple payments (ID 4591).
-
 ### Query
 
 ```
+WITH STAFF_TO_TRANSAC AS
+(
 SELECT
 	 STAFF_ID
-	,COUNT(DISTINCT RENTAL_ID) AS TRANSACTIONS
-	,SUM(AMOUNT) AS TOTAL_TRANSACTION_VALUE
+	,COUNT(DISTINCT PAYMENT_ID) AS TRANSACTIONS
+	,SUM(AMOUNT) AS TOTAL_TRANSACTIONS
 FROM
-(
-	SELECT
-		 R.RENTAL_ID
-		,R.STAFF_ID
-		,S.AMOUNT
-	FROM
-		RENTAL R
-	LEFT JOIN
-		PAYMENT S
-	ON R.RENTAL_ID = S.RENTAL_ID
-)_
+	PAYMENT
 GROUP BY
 	STAFF_ID
+)
+
+SELECT * 
+FROM 
+	STAFF_TO_TRANSAC
+WHERE TRANSACTIONS = (SELECT MAX(TRANSACTIONS) FROM STAFF_TO_TRANSAC)
+AND TOTAL_TRANSACTIONS = (SELECT MAX(TOTAL_TRANSACTIONS) FROM STAFF_TO_TRANSAC)
 ```
 
 ### Result
 
 ```{r show_result2, echo = FALSE}
 library(knitr)
-res2 <- data.frame(id = c(1, 2), trans = c(8040, 8004), amt = c(30498.71, 30813.33))
+res2 <- data.frame(id = 2, trans = 7304, amt = 31059.92)
 kable(res2, col.names = c("Staff ID", "Transactions", "Total Transaction Value"))
 ```
-
-As such, ID 1 has more transactions, but ID 2 has a larger sum of the transaction values.
 
 \pagebreak
 
@@ -139,27 +134,18 @@ kable(res4, col.names = c("Customer ID", "Amount Spent"))
 > Find	the	films	whose	rental	rate	is	higher	than	the	average	rental	rate.	Use	
 a	subquery	and	count	the	number	of	films.	
 
-For this question, note that some films were rented for multiple prices. As such this returns
-all films with at least one rental cost greater than the average rental cost and counts the distinct set of these films.
-
 ### Query
 
 ```
-SELECT COUNT(DISTINCT I.FILM_ID) AS FILMS
-FROM
-	RENTAL R
-LEFT JOIN
-	INVENTORY I
-ON R.INVENTORY_ID = I.INVENTORY_ID
-LEFT JOIN
-	PAYMENT P
-ON R.RENTAL_ID = P.RENTAL_ID
-WHERE P.AMOUNT >= (SELECT AVG(AMOUNT) AS AVG_COST FROM PAYMENT)
+SELECT COUNT(DISTINCT FILM_ID) AS FILMS
+FROM 
+	FILM
+WHERE RENTAL_RATE > (SELECT AVG(RENTAL_RATE) FROM FILM)
 ```
 
 ### Result
 
-> 798
+> 659
 
 
 \pagebreak
