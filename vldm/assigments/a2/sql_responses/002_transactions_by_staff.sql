@@ -1,29 +1,21 @@
-﻿/*
-Count	the	number	of	transactions	each	staff	has	been	processing	and	find	
-the	 staff	 member	 (id)	 with	 the	 biggest	 number	 of	 transactions	 and	 also	
-the	staff	member	with	the	biggest	sum	of	the	transaction	value.		
-*/
-
+﻿WITH STAFF_TO_TRANSAC AS
+(
 SELECT
 	 STAFF_ID
-	,COUNT(DISTINCT RENTAL_ID) AS TRANSACTIONS
-	,SUM(AMOUNT) AS TOTAL_TRANSACTION_VALUE
+	,COUNT(DISTINCT PAYMENT_ID) AS TRANSACTIONS
+	,SUM(AMOUNT) AS TOTAL_TRANSACTIONS
 FROM
-(
-	SELECT
-		 R.RENTAL_ID
-		,R.STAFF_ID
-		-- ,R.STAFF_ID
-		,S.AMOUNT
-	FROM -- SELECT * FROM
-		RENTAL R
-	LEFT JOIN -- SELECT * FROM
-		PAYMENT S
-	ON R.RENTAL_ID = S.RENTAL_ID
-	--WHERE AMOUNT IS NOT NULL
-)_
+	PAYMENT
 GROUP BY
 	STAFF_ID
+)
+
+SELECT * 
+FROM 
+	STAFF_TO_TRANSAC
+WHERE TRANSACTIONS = (SELECT MAX(TRANSACTIONS) FROM STAFF_TO_TRANSAC)
+AND TOTAL_TRANSACTIONS = (SELECT MAX(TOTAL_TRANSACTIONS) FROM STAFF_TO_TRANSAC)
+
 
 
 
