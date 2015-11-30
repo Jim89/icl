@@ -20,7 +20,7 @@ x_cb = LpVariable("x_cb", 0, 5, LpInteger)
 x_cd = LpVariable("x_cd", 0, 2, LpInteger)
 x_ce = LpVariable("x_ce", 0, 2, LpInteger)
 
-x_dt = LpVariable("x_dt", 0, 10, LpInteger)
+x_dt = LpVariable("x_dt", 0, 5, LpInteger)
 
 x_ed = LpVariable("x_ed", 0, 9, LpInteger)
 x_et = LpVariable("x_et", 0, 10, LpInteger)
@@ -28,7 +28,7 @@ x_et = LpVariable("x_et", 0, 10, LpInteger)
 f = LpVariable("f", 0, float('inf'), LpInteger)
 
 # define the problem
-prob = LpProblem("problem", LpMaximize)
+prob = LpProblem("max_flow", LpMaximize)
 
 # define constraints
 prob += x_sa + x_sb + x_sc -f == 0
@@ -43,7 +43,6 @@ prob += -1*x_dt - x_et + f == 0
 prob += f
 
 # %%
-LpSolverDefault.msg = 1
-status = prob.solve(GLPK_CMD())
+prob.solve()
 
  
