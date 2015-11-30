@@ -6,5 +6,240 @@ output:
   pdf_document
 ---
 
-# More Complex Algorithms
+# Linear Programs, Equilbria and Paradoxes, and Graph Analytics
 
+## Linear Programming
+
+Returning to the shortest path, we can see that we can actually formulate this as a linear program. 
+
+For example with the graph defined by:
+
+```{r shortest_path_eg, echo = FALSE}
+library(knitr)
+edge_list <- data.frame(start = c("a", "b", "c", "c", "d"),
+                        end = c("d", "d", "a", "b", "c"),
+                        weight = c(8, 7, 2, 3, 1.4))
+kable(edge_list, col.names = c("Tail", "Head", "Weight"))
+```
+
+The following incidence matrix can be defined:
+
+```{r shortest_path_eg_inc_mat, echo = FALSE}
+library(knitr)
+inc_mat <- data.frame(row.names = c("a", "b", "c", "d"),
+                      ca = c(-1, 0, 1, 0),
+                      ad = c(1, 0, 0, -1),
+                      cb = c(0, -1, 1, 0),
+                      db = c(0, 1, 0, -1),
+                      dc = c(0, 0, -1, 1))
+kable(inc_mat, col.names = c("c, a", "a, d", "c, b", "d, b", "d, c"))
+```
+
+Finding the shortest path from (say) c to d can be formulated as the linear program:
+
+\begin{equation}
+\begin{split}
+\min_x 2x_{c,a} + 8x_{a,d} + 3x_{c,b} + 7x_{b,d} + 1.4x_{d,c} \\
+\text{subject to} \\
+Inc*X = (0, 0, 1, -1) \\
+0 \leq x_{c,a}, x_{a,d}, x_{c,b}, x_{b,d}, x_{d,c} \leq 1
+\end{split}
+\end{equation}
+
+Where Inc indicates the incidence matrix presented above and X is a vector of the decision variables $x_{c,a}, ..., x_{d, c}$. 
+
+From this linear program, if the decision variable $x_{i, j}$ is equal to 1, then that edge is used in the shortest path. If it is equal to 0 it is not. In the constraint, we set up the equality condition such that it represents the start and end point of the path (so in this instance, a = 0, b = 0, c = 1 i.e. the start, and d = -1 i.e. the end). The constraint can be thought of as incidence (i.e. the possible paths) x choices = path. 
+
+This _will_ give the optimal solution (see later as to why).
+
+## Max-flow & Min-cost flow
+
+A directed network can be though of as having capacities on all the edges (e.g. a network of oil pipes). The max-flow problem seeks to identify the maximum flow that can be sent from a start node, s, to an end node, t. 
+
+The Min-cost flow problem is similar and relies on each of the capacities having a cost/unit flow. So we seek to find the min-cost way of sending f units of flow from s to t. 
+
+Shortest path can be thought of as a special case of this where we seek to send 1 unit of flow from start to end.
+
+Remember, the capacities are not added together, so if we can only send 20 from the start node to its neighbours, we will never be able to send any more (even if the capacities later on are larger).
+
+### Solution
+
+#### Max Flow
+
+The solution can be defined by a linear program, similar to that presented for the shortest path, e.g.
+
+\begin{equation}
+\max f
+\end{equation}
+
+Subject to:
+
+\[
+\begin{pmatrix}
+  1 & 1 & 0 & 0 & 0 \\
+  -1 & 0 & 1 & 1 & 0 \\
+  0 & -1 & 0 & -1 & 1 \\
+  0 & 0 & -1 & 0 & -1
+\end{pmatrix}
+\begin{pmatrix}
+  x_{s,u} \\ 
+  x_{s,y} \\
+  x_{u,t} \\
+  x_{u, v} \\
+  x_{v, t}
+\end{pmatrix}
+=
+\begin{pmatrix}
+  f \\ 
+  0 \\
+  0 \\
+  -f
+\end{pmatrix}
+\]
+
+$0 \leq x_{s, y} \leq capacity_{s, u}$, 
+$0 \leq x_{s, v} \leq capacity_{s, v}$, 
+$0 \leq x_{u, v} \leq capacity_{u, v}$,  ...
+
+
+#### Min-cost Flow
+
+The solution can be defined by a linear program, similar to that presented for the shortest path, e.g.
+
+\begin{equation}
+\min \quad \text{cpu}.x_{s, u} + \text{cpu}.x_{s,v} + \text{cpu}.x_{u, v} + ...
+\end{equation}
+
+(where $cpu$ = cost per unit for that edge).
+
+Subject to:
+
+\[
+\begin{pmatrix}
+  1 & 1 & 0 & 0 & 0 \\
+  -1 & 0 & 1 & 1 & 0 \\
+  0 & -1 & 0 & -1 & 1 \\
+  0 & 0 & -1 & 0 & -1
+\end{pmatrix}
+\begin{pmatrix}
+  x_{s,u} \\ 
+  x_{s,y} \\
+  x_{u,t} \\
+  x_{u, v} \\
+  x_{v, t}
+\end{pmatrix}
+=
+\begin{pmatrix}
+  f \\ 
+  0 \\
+  0 \\
+  -f
+\end{pmatrix}
+\]
+
+$0 \leq x_{s, y} \leq capacity_{s, u}$, 
+$0 \leq x_{s, v} \leq capacity_{s, v}$, 
+$0 \leq x_{u, v} \leq capacity_{u, v}$,  ...
+
+It can be seen that the shortest path would be a special case of this with $f = 1$.
+
+### Some remarkable facts
+
+For a directed graph incidence matrix, the linear programs presented above have _integer_ optimal extreme-point solutions (which are basic-feasible using the Simplex method). This is due the structure of the incidence matrix of a directed graph where each column has exactly one +1 and exactly one -1. This makes it a totall-unimodule matrix (a special type of matrix). 
+This (integer optimal extreme point solutions) also holds true for the max-flow problem as long as the capacities are integer. 
+
+Similarly, for the min-cost flow problem, if $f$ is an integer and the capacities are integer, again the optimal solution will also be all integers. 
+
+#### Min-Cut Theorem
+
+A second remarkable fact is the min-cut theorem. This theorem states that:
+
+$\max$ s-t flow = $\min$ s-t cut
+
+Here, an s-t cut is a partition of all vertices in to two disjointed sets (labelled S and T respectively) with s in one set (S), and t in the other (T).
+
+The _capacity_ of a cut, Cap(S, T) is the sum of the capacities of edges _from_ S _to_ T, i.e. the cut capacity is the capacity of all edges going _out_ of a cut. 
+
+The _flow_ of a cust, Flow(S, T) is the net flow out of S, i.e. the sum of capacities _outwards_ from S - sum of capacities _inwards_ to S. 
+
+It is therefore obvious that Flow(S, T) $\leq$ Cap(S, T).
+
+Among all possible partitions in the graph, the min s-t cut is the partition with the lowest capacity. Given the max-flow/min-cut theorem, the capacity of the min-cut is exactly equal to the value of maximum flow.
+
+This is due to linear programming duality! We can recover the min-cut from the dual of the max-flow linear program. (This is important as min-cut is used in community detection)
+
+## Equilibrium Concepts
+
+Returning to the shortest path, let us assume that we know all distances (weights). In theory we can can calculate the shortest path easily, but we have assumed only 1 agent is moving, and that there is no "congestion" on the routes. This does _not_ occur in reality, and the travel time (shortest path) will be affected by who _else_ is using that path, i.e. our shortest path is influenced by the density of use and therefore the _flow_.
+
+### Nash Equilibrium
+
+The Nash equilibrium says that each agent is seeking to optimise for itself. Given a set of choices, the agent asks, "do I change my decision if I think the other(s) will chose x/y/z".
+
+The equilibrium occurs when there is a set of decisions/strategies such that no single agent would have a reason to change their decision/strategy. 
+
+The classic example is the prisoners dilema:
+
+```{r show_prison, echo = FALSE}
+prison <- data.frame(row.names = c("Deny", "Confess"),
+                    Deny = c("-1, -1", "0, -10"),
+                    Confess = c("-10, 0", "-4, -4"))
+kable(prison)
+```
+
+This table represents the classic prisoners dilema. Prisoner 1 is the rows and prisoner 2 is the columns. The cells represent the "payoff" (or downside) of making that choice for prisoner1, prisoner2.
+
+So, for example, if prisoner 1 denies the crime and so does prisoner 2, both receive a pay-off of -1. However, it doesn't make sense for prisoner 1 to deny the crime, because if prisoner 2 confesses, prisoner 1 gets a payoff of -10 and prisoner 2 gets 0 (the same is true when the roles are reversed).
+
+The _equilibrium_ strategy is for both prisoners to confess. They will both receive a penalty/payoff of -4, however this can _only_ be improved by the other prisoner denying. As such, both confessing is the most rational choice for self-optimisation, as all the other choices (i.e. deny) leave the prisoner open to a _worse_ situation. 
+
+Note that there is _no_ communication or coopertation between agents (prisoners).
+
+Equilibrium occurs when the agent makes a choice that they would not be willing to change given knowledge of the other agents' choice. 
+
+### Braess Paradox
+
+This paradox states that adding a new, low-cost, route from start to finish might actually be inefficient. For example, consider a simple road network where travel time is a function of the number of users on a road. 
+
+Individuals can go A -> C -> B (where A-C is users/100 minutes and C-B is 45 minutes fixed) or from A -> D -> B (where A-C is 45 minutes fixed and C-B is users/100 minutes).
+
+The Nash equilibrium occurs when half go A-C-B and half go A-D-B. In this scenario, if anyone switched they would end up with a longer journey (as x would increase on the branch they switch to).
+
+Suppose a new route C-D was added with 0 cost. The new equilibrum is now for everyone to go A-C-D-B. However this now results in everyone using A-C (x/100) and D-B (x/100), which actually results in a _less_ efficient solution (longer travel time).
+
+This paradox relates to the concept of negative and positive _externalities_. These are things that decrease/increase the value of a certain choice based on others making the same choice.
+
+For example, new technologies like email, WhatsApp, Slack have positive externalities: the more people use them the more valuable they are. However, in the traffic situation, a journey choice has a negative externality: the more people that use the same journey the worse it is. 
+
+## Graph Analytics
+
+Typically when analysing graphs we have some (accessible) data that we feed to tools and models to generate predictions, insight, simulations or decisions. However, there is a huge volume of data that we _don't_ have that we might like (depending on the context). Often, therefore, we may need to infer this from network properties of the data we _do_ have. 
+
+Examples might be using the graph data to try to determine the best model to explain its formation, or other properties to infer about the importance or power of the nodes. 
+
+We might also ask questions of the graph:
+
+* is random graph model empirically correct for the data (N nodes, each edge exists with prob, p);
+* how does the graph form and grow;
+* how does information spread on the network
+
+This translates to the power-law (scale-free) graph phenomenon, the "rich-get-richer"/small-world/preferential attachment phenomenon.
+
+To answer these questions we can look at structural properties such as the degree distribution. This may be Binomial, Poisson or perhaps Normal. All of these are possible in random graph models.
+
+#### Power-Law
+
+However they are not widely observed "in the wild". Instead, many networks have a scale-free or power-law degree distribution. I.e. $p(x) = Cx^{-\alpha}$ (C ensures probabilities sum to 1).
+
+This is known as scale-free if $f(ax) = Af(x)$, i.e. the form/shape of the function does not change by scaling it. A power law is the only distribution with this property. 
+
+A power-law/scale-free distribution means that fat tails are observed in the degree distribution, i.e. there is a good probability of seeing a few nodes with very high degrees (termed "hubs").
+
+This is observed in many real-world networks.
+
+#### Other features of large networks
+
+* Small world phenomena: average geodesic distance (shortest path) is small;
+* Strength of weak ties - there is an increased likelihood for nodes to connect if they are already connected by a mutual neighbour. 
+
+Random networks do _not_ explain this very well. A popular model to do so is __preferential attachment__: The probability of a new node connecting to an existing node is proportional to the degree of the existing node, i.e. nodes with a high degree are more likely to form even more connections and increase their degree further. Termed "rich get richer".
