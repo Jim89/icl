@@ -242,7 +242,7 @@ The indirect method is slightly more long-winded than the direct and the procedu
 \end{split}\end{equation}
 
 2. Replace equality (=) constrains with $\geq$/$\leq$ constraints;
-3. Replace $\geq$ constraints with $leq$; 
+3. Replace $\geq$ constraints with $\leq$; 
 4. Replace unrestricted variables with restricted variables; and
 5. Convert to dual (using definitions of c, A and b) and simplify equations.
 
@@ -259,7 +259,7 @@ The indirect method is slightly more long-winded than the direct and the procedu
 \end{split}\end{equation}
 
 2. Replace equality (=) constrains with $\geq$/$\leq$ constraints;
-3. Replace $\leq$ constraints with $geq$; 
+3. Replace $\leq$ constraints with $\geq$; 
 4. Replace unrestricted variables with restricted variables; and
 5. Convert to dual (using definitions of c, A and b) and simplify equations.
 
