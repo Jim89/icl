@@ -144,7 +144,7 @@ c =
 
 ### Step 5 - Convert to the dual
 
-\begin{equation} \label{eq:max_typ}
+\begin{equation} \label{eq:3a_max_typ}
 \begin{split}
 \text{maximise } c^Tx \\
 \text{subject to} \\
@@ -153,7 +153,7 @@ x \in \mathbb{R}_+^m
 \end{split}
 \end{equation}
 
-Using the matrices defined in step 4, the problem can converted in to the typical form of the maximisation problem given by \eqref{eq:max_typ}. In this case, the maximisation problem is the dual (as the primal was a minimisation). Thus:
+Using the matrices defined in step 4, the problem can converted in to the typical form of the maximisation problem given by \eqref{eq:3a_max_typ}. In this case, the maximisation problem is the dual (as the primal was a minimisation). Thus:
 
 #### Maximise:
 \[ \left( \begin{array}{c}
@@ -275,8 +275,8 @@ Replacing $x_3$ in \eqref{eq:dual_iii} with the new value, $x_2^{'}$ gives a mor
 \text{subject to} \\
 \text{(i) }x_1^{'} + 0x_2^{'} \leq 3 \\
 \text{(ii) }0x_1^{'} + x_2^{'} \leq 5 \\
-\text{(iii) }x_1^{'} - x_2^{'} = -1 \\
-x_1^{'} \in \mathbb{R},  x_2^{'} \geq 0
+\text{(iii) }x_1^{'} - 2x_2^{'} = -1 \\
+x_1^{'} \in \mathbb{R},  x_2^{'} \leq 0
 \end{split}
 \end{equation}
 
@@ -290,8 +290,8 @@ It is the case that the solution presented in \eqref{eq:dual} is the dual linear
 \text{subject to} \\
 \text{(i) }x_1^{'} \leq 3 \\
 \text{(ii) }x_2^{'} \leq 5 \\
-\text{(iii) }x_1^{'} - x_2^{'} = -1 \\
-x_1^{'} \in \mathbb{R},  x_2^{'} \geq 0
+\text{(iii) }x_1^{'} - 2x_2^{'} = -1 \\
+x_1^{'} \in \mathbb{R},  x_2^{'} \leq 0
 \end{split}
 \end{equation}
 
@@ -340,7 +340,7 @@ x \in \mathbb{R}_+^m
 \end{split}
 \end{equation}
 
-The program given by \eqref{eq:3b_explicit} can be interpreted in the typical form of the minimisation problem given by \eqref{eq:max_typ}.
+The program given by \eqref{eq:3b_explicit} can be interpreted in the typical form of the maximisation problem given by \eqref{eq:max_typ}.
 
 Doing so gives the matrices:
 
@@ -389,7 +389,7 @@ y \in \mathbb{R}_+^m
 \end{split}
 \end{equation}
 
-Given the typical form of the minimisation program in \eqref{eq:min_typ2} and using the matrices aboce, the minimisation dual can be described thus:
+Given the typical form of the minimisation program in \eqref{eq:min_typ2} and using the matrices above, the minimisation dual can be described thus:
 
 #### Minimise:
 \[ \left( \begin{array}{c}
@@ -433,8 +433,8 @@ When using the direct method to "dualise" a primal linear program, the sign of t
 \begin{split}
 \text{minimise } 4y_1 + 2y_2 \\
 \text{subject to} \\
-1y_1 + 0y_1 \geq 1 \\
-1y_1 + 0y_2 \geq 0 \\
+1y_1 + 0y_1 \leq 1 \\
+1y_1 + 0y_2 \leq 0 \\
 0y_1 + 1y_2 = -1
 \end{split}
 \end{equation}
@@ -447,8 +447,8 @@ When using the direct method to "dualise" a primal linear program, the sign of t
 \begin{split}
 \text{minimise } 4y_1 + 2y_2 \\
 \text{subject to} \\
-1y_1 + 0y_1 \geq 1 \\
-1y_1 + 0y_2 \geq 0 \\
+1y_1 + 0y_1 \leq 1 \\
+1y_1 + 0y_2 \leq 0 \\
 0y_1 + 1y_2 = -1 \\
 y_1 \in \mathbb{R}, y_2 \geq 0
 \end{split}
@@ -462,8 +462,8 @@ Now all necessary steps have been taken to dualise the primal given in the quest
 \begin{split}
 \text{minimise } 4y_1 + 2y_2 \\
 \text{subject to} \\
-1y_1 \geq 1 \\
-1y_1 \geq 0 \\
+1y_1 \leq 1 \\
+1y_1 \leq 0 \\
 1y_2 = -1 \\
 y_1 \in \mathbb{R}, y_2 \geq 0
 \end{split}
