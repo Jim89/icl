@@ -103,7 +103,7 @@ I.e. the optimal solutions of the primal and the dual are _equivalent_.
 
 For any primal/dual pair, __exactly one__ of the following cases holds:
 
-### 1. Both problems are feasible and unbounded
+### 1. Both problems are feasible and bounded
 
 This follows the strong form of duality, i.e. $\text{max } c^Tx = c^Tx^* = b^Ty^* = \text{min } b^Ty$.
 
