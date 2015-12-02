@@ -5,9 +5,13 @@ Created on Tue Dec  1 10:32:36 2015
 @author: jim
 """
 
+# get auto-floating point division as I'm in Py 2.7
+from __future__ import division    
+
+
 # %% import the data and turn in to weights matrix
 import pandas as pd
-data = pd.read_table("./data/q3_simple.txt",
+data = pd.read_table("../data/q3_simple.txt",
                      header = None,
                      names = ['vx', 'vy', 'weight'])
                      
@@ -22,9 +26,7 @@ for row in range(len(data)):
     col = datum[1]-1
     mat[row][col]=1
 
-
-# get auto-floating point division as I'm in Py 2.7
-from __future__ import division      
+  
 
 weights = mat/mat.sum(axis = 1, keepdims = True)
 
@@ -33,7 +35,6 @@ weights = mat/mat.sum(axis = 1, keepdims = True)
 def norm(x):
     x = x/x.sum()
     return x
-
 # set non-zero, random values for r
 r = norm(np.array(np.random.rand(4)))
 
@@ -57,7 +58,7 @@ for i in range(10000000):
 # %% attempt networkx soln
 import networkx as nx    
 graph = nx.from_pandas_dataframe(data, source = 'vx',
-                                 target = 'vy')
+                                 target = 'vy', edge_attr = 'weight')
                                  
 
 # %% pagerank with while
