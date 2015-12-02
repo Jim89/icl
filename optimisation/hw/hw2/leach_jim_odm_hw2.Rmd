@@ -618,13 +618,13 @@ I.e, for a vector of values, a, the $\infty$ norm is equivalent to the _maximum_
 
 As this is a regression, we are attmepting to minmise the infinity norm $||y - X\beta||_{\infty}$, hence:
 
-\begin{equation}
+\begin{equation} \label{eq:inf_norm_reg}
 \min_{\beta}\quad  \max_i|y_i - x_{i}^T\beta|
 \end{equation}
 
 Expanding $y_i - x_i^T\beta$ for the CEO salary problem in the question, this can be rewritten as:
 
-\begin{equation}
+\begin{equation} \label{eq:in}
 \min_{\beta}\quad  \max_{i} |y_i - \beta_{years}*years_i - \beta_{stock}*changestock_i - \beta_{sales}*changesales_i - \beta_{mba}*mba_i|\quad  \forall i = 1, ..., n
 \end{equation}
 
@@ -632,7 +632,7 @@ Using similar logic as previously, this can be simplified.
 
 #### 1. Introduce auxiliary variables
 
-We can replace the "messy" $|y_i - \beta_{years}*years - ...|$ term in \eqref{eq:1n} with a new parameter, $\theta$, and then constrain that parameter. Thus:
+We can replace the "messy" $|y_i - \beta_{years}*years - ...|$ term in \eqref{eq:in} with a new parameter, $\theta$, and then constrain that parameter. Thus:
 
 \begin{equation} \label{eq:4c_aux}
 \begin{split}
@@ -672,7 +672,13 @@ Again, the final step is to remove the absolute value operator from the constrai
 \end{split}
 \end{equation}
 
-The two constraints provide that $\theta$ is _at least_ as large as $\max_i |y_i - \beta_{years}*years...|$. Since we try to _minimise_ $\theta$, this results in it's value being taken down to $\max_i |y_i - \beta_{years}*years...|$. Hence this solution works as the overal objective, given by \eqref{eq:inf_norm} is to minimise the infinity norm for this regression and that is what these two constraints guarentee.
+The two constraints provide that $\theta$ is _at least_ as large as $\max_i |y_i - \beta_{years}*years...|$. This is because, for any value of $\theta$ that is not _at least_ as large as the largest value of $|y_i - \beta_{years}*years_i...|$ then it is necessary to choose a larger value for $\theta$ until it is at least as large as $\max_i |y_i - \beta_{years}*years_i...|$.
+
+Furthermore, since we try to _minimise_ $\theta$, this results in its value being taken down to be exactly equal to $\max_i |y_i - \beta_{years}*years_i...|$: If we choose a $\theta$ that is smaller than $\max_i |y_i - \beta_{years}*years_i...|$ then (by the logic in the previous paragraph) we will need to increase it until it is at least as large as $\max_i |y_i - \beta_{years}*years_i...|$. 
+
+Doing so, if we select a $\theta$ that is strictly _greater than_ the $\max_i |y_i - \beta_{years}*years_i...|$ then (given the minimisation objective) we can find a $\theta$ value that is smaller and that still satisfies the constraints. In this way, we can continue to decrease until $\theta$ is _exactly equal_ to $\max_i |y_i - \beta_{years}*years_i...|$.
+
+Hence this is the solution for regression using the infinity norm \eqref{eq:inf_norm_reg}: the two constraints guarentee it.
 
 
 ## 4d
