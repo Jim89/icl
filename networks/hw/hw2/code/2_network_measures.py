@@ -7,7 +7,7 @@ Created on Tue Dec  1 10:23:20 2015
 
 # %% read in the data
 import pandas as pd
-data = pd.read_table("./data/HW2_data.txt",
+data = pd.read_table("../data/HW2_data.txt",
                      sep = "\t",
                      header = None,
                      names = ['vx', 'vy'])
