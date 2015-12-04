@@ -1,3 +1,6 @@
+# option solver cplex;
+# option cplex_options 'sensitivity'
+
 # set decision variables
 var f;
 var xsa;
