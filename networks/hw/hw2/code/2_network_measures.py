@@ -20,16 +20,20 @@ graph = nx.from_pandas_dataframe(data,
                                  
 # %% get 3 measures
 
-# get graph degree distribution
+# order (# vertices) and size (# edges)
+order = graph.order()
+size = graph.size()
+ 
+                          
+# degree distribution
 degrees = nx.degree(graph)
 degrees_data = pd.DataFrame(degrees.items(), columns = ["node", "degree"])
 # degrees_data.to_csv("../data/HW2_data_degree_dist.csv")
 
-# get the density
+# density
 density = nx.density(graph)
 
-# get the diameter (longest of the shortest path lengths)
-diameter = nx.diameter(graph)
+# 
 
 
                                  
