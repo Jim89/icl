@@ -1,0 +1,255 @@
+---
+title: "Network Analytics - Assignment Two"
+author: "Jim Leach"
+date: "04 December 2015"
+output: pdf_document
+---
+
+# Document Purpose
+
+The purpose of this document is to write up the response to the second assigment give as part of the _Network Analytics_ module. It is divided in to several sections, each covering a section of the assigment as given. 
+
+***
+
+# Question 1
+
+## 1a
+
+Some graphs/networks may represent the ability to send units of "flow" between nodes in the graph. This could be representative of a many processes (e.g. an oil pipeline or data transfer on network cables). To find the _maximum_ flow that can be send from some starting node, $s$ to a target node, $t$, it is possible to define a linear program that will provide the solution. 
+
+The general form of this linear program is given by \eqref{eq:linear_gen}.
+
+\begin{equation} \label{eq:linear_gen}
+\begin{split}
+\max f \\
+\text{s.t:} \\
+I * x = flow \\
+0 \leq x_{ij} \leq cap_{x_{ij}}
+\end{split}
+\end{equation}
+
+In \eqref{eq:linear_gen}: 
+
+* $f$ refers to flow; 
+* $I$ refers to the _incidence matrix_ for the network;
+* $x$ represents a vector of all the edges in the graph;
+* $flow$ represents a vector of length equivalent to the number of nodes in the graph which takes a values of $f$ in the position corresponding to the start node ($s$), $-f$ in the position corresponding to the end node ($t$), and 0 everywhere else.;
+* $x_i$ is a variable representing the edge from node $i$ to node $j$; and
+* $cap_{x_{ij}}$ represents the capacity of the edge between nodes $i$ and $j$
+
+For the graph presented in the question, this can be written explicitly as follows (note the nodes in the graph were labelled a-e moving from the top left of the graph to the bottom right):
+
+\pagebreak
+
+#### Objective
+
+$\max f$
+
+#### Subject to
+
+\setcounter{MaxMatrixCols}{20}
+\[
+\begin{pmatrix}
+    & x_{s,a} & x_{s,b} & x_{s,c} & x_{a,d} & x_{b,e} & x_{c,a} & x_{c,b} & x_{c,d} & x_{c,e} & x_{d,t} & x_{e,d} & x_{e,t} \\
+  s & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+  a & -1 & 0 & 0 & 1 & 0 & -1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+  b & 0 & -1 & 0 & 0 & 1 & 0 & -1 & 0 & 0 & 0 & 0 & 0 \\
+  c & 0 & 0 & -1 & 0 & 0 & 1 & 1 & 1 & 1 & 0 & 0 & 0 \\
+  d & 0 & 0 & 0 & -1 & 0 & 0 & 0 & -1 & 0 & 1 & -1 & 0 \\
+  e & 0 & 0 & 0 & 0 & -1 & 0 & 0 & 0 & -1 & 0 & 1 & 1 \\
+  t & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & -1 & 0 & -1 
+\end{pmatrix}
+\begin{pmatrix}
+  x_{s,a} \\ 
+  x_{s,b} \\
+  x_{s,c} \\
+  x_{a,d} \\
+  x_{b,e} \\
+  x_{c,a} \\
+  x_{c,b} \\
+  x_{c,d} \\
+  x_{c,e} \\
+  x_{d,t} \\
+  x_{e,d} \\
+  x_{e,t}
+\end{pmatrix}
+=
+\begin{pmatrix}
+  f \\
+  0 \\
+  0 \\
+  0 \\
+  0 \\
+  0 \\
+  -f
+\end{pmatrix}
+\]
+
+\begin{equation*}
+\begin{split}
+0 \leq x_{s,a} \leq 5 \\
+0 \leq x_{s,b} \leq 3 \\
+0 \leq x_{s,c} \leq 13 \\
+0 \leq x_{a,d} \leq 3 \\
+0 \leq x_{b,e} \leq 4 \\
+0 \leq x_{c,a} \leq 7 \\
+0 \leq x_{c,b} \leq 5 \\
+0 \leq x_{c,d} \leq 2 \\
+0 \leq x_{c,e} \leq 2 \\
+0 \leq x_{d,t} \leq 5 \\
+0 \leq x_{e,d} \leq 9 \\
+0 \leq x_{e,t} \leq 10
+\end{split}
+\end{equation*}
+
+\pagebreak
+
+## 1b
+
+The problem was solved using a linear programming solver. 2 alternate versions were produce. One using the `AMPL` modelling language and one using `PULP`, a Python package for linear programs.
+
+### AMPL Solution
+
+```
+# set decision variables
+var f;
+var xsa;
+var xsb;
+var xsc;
+var xad;
+var xbe;
+var xca;
+var xcb;
+var xcd;
+var xce;
+var xdt;
+var xed;
+var xet;
+
+# set up function
+maximize flow: f;
+
+# add flow constraints
+subject to fc1: f - xsa - xsb - xsc == 0;
+subject to fc2: xad - xsa - xca == 0;
+subject to fc3: xbe - xsb - xcb == 0;
+subject to fc4: xca + xcb + xcd + xce - xsc == 0;
+subject to fc5: xdt - xad - xcd - xed == 0;
+subject to fc6: xed + xet - xbe - xce == 0;
+subject to fc7: f -xdt - xet == 0;
+
+# add non-neg constrains
+subject to nn1: xsa >= 0;
+subject to nn2: xsb >= 0;
+subject to nn3: xsc >= 0;
+subject to nn4: xad >= 0;
+subject to nn5: xbe >= 0;
+subject to nn6: xca >= 0;
+subject to nn7: xcb >= 0;
+subject to nn8: xcd >= 0;
+subject to nn9: xce >= 0;
+subject to nn10: xdt >= 0;
+subject to nn11: xed >= 0;
+subject to nn12: xet >= 0;
+
+# add capacity constraints
+subject to c1: xsa <= 5;
+subject to c2: xsb <= 3;
+subject to c3: xsc <= 13;
+subject to c4: xad <= 3;
+subject to c5: xbe <= 4;
+subject to c6: xca <= 7;
+subject to c7: xcb <= 5;
+subject to c8: xcd <= 2;
+subject to c9: xce <= 2;
+subject to c10: xdt <= 5;
+subject to c11: xed <= 9;
+subject to c12: xet <= 10;
+```
+
+### The solution
+
+Running either of these models gives the same result of $f$ = 11. I.e. the maximum flow possible through this network from start to finish is 11 units of flow.
+
+\pagebreak
+
+### PULP Solution
+
+```
+from pulp import *
+
+# define variables (also provides constraints on capacities)
+x_sa = LpVariable("x_sa", 0, 5)
+x_sb = LpVariable("x_sb", 0, 3)
+x_sc = LpVariable("x_sc", 0, 13)
+x_ad = LpVariable("x_ad", 0, 3)
+x_be = LpVariable("x_be", 0, 4)
+x_ca = LpVariable("x_ca", 0, 7)
+x_cb = LpVariable("x_cb", 0, 5)
+x_cd = LpVariable("x_cd", 0, 2)
+x_ce = LpVariable("x_ce", 0, 2)
+x_dt = LpVariable("x_dt", 0, 5)
+x_ed = LpVariable("x_ed", 0, 9)
+x_et = LpVariable("x_et", 0, 10)
+f = LpVariable("f", 0)
+
+# define the problem
+prob = LpProblem("max_flow", LpMaximize)
+
+# define constraints
+prob += f - x_sa - x_sb - x_sc == 0
+prob += x_ad - x_sa - x_ca == 0
+prob += x_be - x_sb - x_cb == 0
+prob += x_ca + x_cb + x_cd + x_ce - x_sc == 0
+prob += x_dt - x_ad - x_cd - x_ed == 0
+prob += x_ed + x_et - x_be - x_ce == 0
+prob += f - x_dt - x_et == 0
+
+# define function to maximise
+prob += f, "Objective function"
+
+# solve the problem
+prob.solve()
+
+# access the results
+value(f)
+```
+
+### The solution
+
+Running either of these models gives the same result of $f$ = 11. I.e. the maximum flow possible through this network from start to finish is 11 units of flow.
+
+\pagebreak
+
+## 1c
+
+From the max-flow min-cut theorem, the dual solution to the max-flow linear program is defined as the solution to the linear program that finds the minimum-capacity cut in the network.
+
+The dual solution was found using 'AMPL'. This was done by specifying the following options prior to solving the linear program:
+
+* `option solver cplex;` 
+* `option cplex_options 'sensitivity';`
+
+This ensures that the linear program returns the _shadow prices_ for the constraints, which are the optimal solution(s) to the dual program. Doing this returned the following values:
+
+\begin{equation*}
+\begin{split}
+x_{s,a} = 0 \\ 
+x_{s,b} = 0 \\ 
+x_{s,c} = 0 \\ 
+x_{a,d} = 1 \\ 
+x_{b,e} = 1 \\ 
+x_{c,a} = 0 \\ 
+x_{c,b} = 0 \\ 
+x_{c,d} = 1 \\ 
+x_{c,e} = 1 \\ 
+x_{d,t} = 0 \\ 
+x_{e,d} = 0 \\ 
+x_{e,t} = 0  
+\end{split}
+\end{equation*}
+
+This says that for each unit we increase the capacity of edges $x_{a,d}, x_{b,e}, x_{c,d}, x_{c,e}$ by, the value of the objective function ($\max f$) increases by one unit. Hence, as these are the _only_ edges that have an effect on the optimal solution, they are the edges which are the "bottlneck" in the network and are those that can be broken to define the minimum capacity cut. 
+
+Hence the minimum capacity cut is defined by breaking the edges between nodes: a and d, c and d, c and e, and b and e. Looking at the capacities on these edges of 3, 2, 2, and 4 respectively, it can be seen that the minimum capacity cut (11) is _exactly_ equal to the maximum flow, neatly demonstrating the max-flow min-cut theorem.
+
