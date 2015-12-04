@@ -30,59 +30,21 @@ for row in range(len(data)):
 
 weights = mat/mat.sum(axis = 1, keepdims = True)
 
-# %% pagerank
-# utility functin to normalise
+# %% utility functin to normalise
 def norm(x):
     x = x/x.sum()
     return x
-# set non-zero, random values for r
-r = norm(np.array(np.random.rand(4)))
-
-
-# grab the starting value, just for comparison
-r_start = r
-
-# formula is r = W^t r
-for i in range(10000000):
-    new_r = norm(np.dot(weights.T, r))
-    if np.mean(np.round(new_r, 10) == np.round(r, 10)) == 1:
-        r = new_r
-        break
-    else:
-        r = new_r
-        
-# normalise to get r to sum to 1
-# r = r/r.sum()        
     
-    
-# %% attempt networkx soln
-import networkx as nx    
-graph = nx.from_pandas_dataframe(data, source = 'vx',
-                                 target = 'vy', edge_attr = 'weight')
-                                 
-
 # %% pagerank with while
-# utility functin to normalise
-def norm(x):
-    x = x/x.sum()
-    return x
-
 # set non-zero, random values for r
 r = norm(np.array(np.random.rand(4)))
 
+threshold = 1E-30
+error = 1000
 
-# grab the starting value, just for comparison
-r_start = r
-
-idx = 0
 # formula is r = W^t r
-while np.mean(np.round(new_r, 10) == np.round(r, 10)) != 1:
-    r = norm(np.dot(weights.T, r))
-    idx += 1
-    print idx
+while error > threshold:
+    new_r = norm(np.dot(weights.T, r))
+    error = sum(np.square(new_r - r))
+    r = new_r
     
-#    if np.mean(np.round(new_r, 10) == np.round(r, 10)) == 1:
-#        r = new_r
-#        break
-#    else:
-#        r = new_r
