@@ -42,8 +42,7 @@ subject to nn10: xdt >= 0;
 subject to nn11: xed >= 0;
 subject to nn12: xet >= 0;
 
-
-# add varaible constraints
+# add capacity constraints
 subject to c1: xsa <= 5;
 subject to c2: xsb <= 3;
 subject to c3: xsc <= 13;
