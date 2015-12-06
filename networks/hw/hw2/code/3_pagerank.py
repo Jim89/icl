@@ -3,31 +3,34 @@ Created on Tue Dec 1 2015
 
 @author: Jim Leach
 """
-# load packages and get auto-floating point division as I'm in Py 2.7
-from __future__ import division    
+# get auto-floating point division (as I'm in Py 2.7)
+from __future__ import division
+
+# load numpy for matrix structures and pandas for DataFrames
 import numpy as np
 import pandas as pd
 
-#  import the data
+#  import the data as a DataFrame
 data = pd.read_table("../data/q3_simple.txt",
                      header = None,
                      names = ['vx', 'vy', 'weight'])
                      
-# create weights matrix                     
-# create all zeros matrix                     
-mat = np.zeros(shape=(max(data['vx']), max(data['vy'])))
+# create an all zeros matrix the same size as the adjacency matrix will be
+mat = np.zeros(shape = (max(data['vx']), max(data['vy'])))
 
 # fill in 1's to make adjaceny matrix
 for row in range(len(data)):
+    # grab the data from the DataFrame
     datum = data.iloc[row, ]
     row = datum[0]-1
     col = datum[1]-1
-    mat[row][col]=1
+    # fill in the matrix
+    mat[row][col] = 1
 
 # convert to stochastic weights matrix (all rows sum to 1)
 weights = mat/mat.sum(axis = 1, keepdims = True)
 
-# define a utility functin to normalise the vector r
+# define a utility function to normalise the vector r
 def norm(x):
     x = x/x.sum()
     return x
