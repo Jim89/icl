@@ -431,9 +431,12 @@ It can be seen that the estimated partitions have higher densities than those fo
 
 Again, this highlights some of the challenges of community detection - two methods have returned results that do not match the ground truth for this network. It is possible that other methods could be found that would return the ground truth communities.
 
+It should be noted that `igraph` was also used to detect partitions in the network using a number of methods^3^, each of which produced similar results, i.e. the ground-truth community was _not_ detected using the basic settings for these functions.
+
 ***
 
 # References
 
 1. [Louvain method](https://perso.uclouvain.be/vincent.blondel/research/louvain.html):  https://perso.uclouvain.be/vincent.blondel/research/louvain.html
 2. Defining and Evaluating Network Communities based on Ground-truth, Yang & Leskovec: [https://cs.stanford.edu/people/jure/pubs/comscore-icdm12.pdf](https://cs.stanford.edu/people/jure/pubs/comscore-icdm12.pdf)
+3. igraph Documentation - [https://pypi.python.org/pypi/louvain/](https://pypi.python.org/pypi/louvain/)
