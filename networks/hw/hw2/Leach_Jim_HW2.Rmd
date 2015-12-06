@@ -102,11 +102,11 @@ $\max f$
 \end{split}
 \end{equation*}
 
-\pagebreak
+***
 
 ## 1b
 
-The problem was solved using a linear programming solver. 2 alternate versions were produce. One using the `AMPL` modelling language and one using `PULP`, a Python package for linear programs.
+The problem was solved using a linear programming solver. Two alternate versions were produced, one using the `AMPL` modelling language and one using `PULP`, a Python package for linear programs.
 
 ### AMPL Solution
 
@@ -219,7 +219,7 @@ value(f)
 
 Running either of these models gives the same result of $f$ = 11. I.e. the maximum flow possible through this network from start to finish is 11 units of flow.
 
-\pagebreak
+***
 
 ## 1c
 
@@ -253,3 +253,187 @@ This says that for each unit we increase the capacity of edges $x_{a,d}, x_{b,e}
 
 Hence the minimum capacity cut is defined by breaking the edges between nodes: a and d, c and d, c and e, and b and e. Looking at the capacities on these edges of 3, 2, 2, and 4 respectively, it can be seen that the minimum capacity cut (11) is _exactly_ equal to the maximum flow, neatly demonstrating the max-flow min-cut theorem.
 
+***
+
+# Question 2
+
+(Please note that the Python script for this question is provided in `2_nework_measures.py`).
+
+Zachary's Karate Club network was loaded in to a Python environment using the `NetworkX` package and the `karate_club_graph()` function. 
+
+Several network measures were calculated and these are reported below.
+
+## Properties & values:
+
+### Global Properties
+
+* _size_ (number of edges): 78;
+* _order_ (number of nodes): 34;
+* _diameter_ (the longest of the shortest paths): 5; and
+* _density_ (a ratio of edges to nodes): 0.139.
+
+### Node-Properties
+
+Several properties were calculated for each node and these are reported in the table below:
+
+```{r get_properties, echo = FALSE, message = FALSE}
+library(readr)
+library(knitr)
+library(dplyr)
+library(stringdist)
+properties <- read_csv("./data/measures.csv") %>% setNames(c("node", "degree", "bet", "flow", "eig")) %>% mutate(node = node+1)
+kable(properties, col.names = c("Node", "Degree", "Betweenness", "Flow", "Eigenvector"),
+      caption = "Centrality Measures")
+```
+
+## Discussion:
+
+### Global
+
+* Density: This is simply $\dfrac{2m}{n(n-1)}$ where $m$ is the number of edges (the size) and $n$ is the number of nodes (the order);
+
+* Diameter: This is defined as the _maximum eccentricity_ of any node in the graph, where the _eccentricity_ of a node is is the longest of its shortest paths to all other nodes. For example, if node A had shortest paths to nodes B, C and D of lengths 1, 7 and 5 respectively (and no paths to any other nodes), then its eccentricity would be 7.  The diameter of the graph is the maximum eccentricity accross all nodes and so represents the longest shortest path in the network. It is a measure of how wide a graph is and can be calcualted by enumerating all shortest paths for all nodes, and finding the maximum accross the whole network.
+
+### Node-level
+
+* Degree centrality: This is simply a measure of the number of edges that are incident on each node.
+
+* Betweenness centrality: This is a measure for each node that represents how many _other_ nodes are connected directly through that node on their shortest path. For example if the shortest path from node A to node C includes node B, then the betweenness value for B will be at least 1 (as there is one shortest path that goes through B). The formula is given as $C_{B}(i) = \sum_{j<k}g_{ik}(i)/g_{jk}$ where $g_{jk}$ is the number of shortest paths connecting $j$ and $k$, and $g_{jk}(i)$ is the number that include node i. Algorithmically, this can be found by enumerating all shortest paths for all nodes in the graph, then, for each node, counting how many paths go through it.
+
+* Flow centrality is similar to betweenness but now rather than considering how many _shortest_ paths go through each node it is simply how many paths _of any length_ go through that node. It is calculated in a similar manner to betweenness centrality, but considers paths of any length, not just shortest paths. 
+
+* Eigenvector centrality is a measure of a node's centrality that is based on not only how _many_ nodes it is connected to, but how important _those_ nodes are. I.e. $x_i \propto x_j + x_k$ where $x_i$ is the importance of node $i$. However, the importance of $j$ is calculated in the same way, so this becomes a recursive definition. It can be calculated using the adjacency matrix for the graph and its eigenvalues and respective eigenvectors. Due to the structure of the adjacency matrix, it is the case that the largest eigenvalue will have a corresponding eigenvector which contains the centrality scores for each node in the graph. Compuationally this can be solved using power iteration.
+
+Looking at these global and local measures of the graph, it can be seen that it is a small network (only 34 nodes) with a small average number of connections on each node (as there are only 78 edges in total). This gives rise to its low density of just 0.139. Similarly, the small diameter of 5 also indicates that the network is small.
+
+Looking at the local measures of the graph, it is clear that there are a few highly important nodes in the graph. At a simple level, nodes 1, 3, 33 and 34 account for `r paste0(round(100*sum(16, 10, 12, 17)/78, 2), '%')` of the edges in the graph with a high degree centrality on each one. Digging in to the more rigourous centrality measures, it is the case that nodes 1 and 34 appear to be the most important. They both have high betweenness and 
+flow centrality measures, and the highest eigenvector centralities out of all the other nodes. 
+Given what is known about this particular network (Zachary's Karate Club), this is expected, however it is nice to see that the anaytical results support the established, "real-world" properties of this network.
+
+***
+
+# Question 3
+
+The code for power iteration is presented below and is also submitted in the `3_pagerank.py` file. 
+
+```
+# get auto-floating point division (as I'm in Py 2.7)
+from __future__ import division
+
+# load numpy for matrix structures and pandas for DataFrames
+import numpy as np
+import pandas as pd
+
+#  import the data as a DataFrame
+data = pd.read_table("../data/q3_simple.txt",
+                     header = None,
+                     names = ['vx', 'vy', 'weight'])
+                     
+# create an all zeros matrix the same size as the adjacency matrix will be
+mat = np.zeros(shape = (max(data['vx']), max(data['vy'])))
+
+# fill in 1's to make adjaceny matrix
+for row in range(len(data)):
+    # grab the data from the DataFrame
+    datum = data.iloc[row, ]
+    row = datum[0]-1
+    col = datum[1]-1
+    # fill in the matrix
+    mat[row][col] = 1
+
+# convert to stochastic weights matrix (all rows sum to 1)
+weights = mat/mat.sum(axis = 1, keepdims = True)
+
+# define a utility function to normalise the vector r
+def norm(x):
+    x = x/x.sum()
+    return x
+    
+# set up pagerank using while loop
+# set non-zero, random values for r
+r = norm(np.array(np.random.rand(4)))
+
+# set some threshold and an initial error value that is a long way above it
+threshold = 1E-30
+error = 1000
+
+# while the error is greater than the threshold, keep doing power iteration
+while error > threshold:
+    # calculate the new r using r = W^Tr
+    new_r = norm(np.dot(weights.T, r))
+    # get the sum of L2 norm error (i.e. sum of squares)
+    error = sum(np.square(new_r - r))
+    # set the r to be the new r
+    r = new_r
+```
+
+***
+
+# Question 4
+
+(Please note that the Python script for this question is provided in `2_nework_measures.py`)
+
+Communities were detected in the Karate Club network using the `community` package, which is an extension to `NetworkX`. 
+
+This package uses modularity based community detection, optimised with the Louvain^1^ method. In modularity based detection, the cut/partition that _maximises_ the modularity is sought.
+
+The modularity of a cut is defined as $Q$:
+
+\begin{equation*}
+Q = \dfrac{1}{2m} \sum_{vw}[A_{vw} - \dfrac{k_v k_w}{2m}]\delta(c_v, c_w)
+\end{equation*}
+
+In this equation, $A_{vw}$ is the adjacency matrix for the graph and $\dfrac{k_v k_w}{2m}$ is the expected number of edges in a random graph model of the same size. $\delta(c_v, c_w)$ is 1 if both $v$ and $w$ are in the cut/partition (or its complement) and 0 otherwise. 
+
+The modularity defines how "suitable" the cut is to define a community in the network structure. Maximisation of the modularity is where the Louvain method is used. The Louvain method attempts to optimise this problem by initially defining small communities within the network using local modularity. These are then "grown" by repeated iteration until the maximum modularity is obtained, hence defining the communities.
+
+Using this method, communities were detected and are presented (along with the ground-truth) in the table below:
+
+```{r show_communities, echo = FALSE}
+comms <- read_csv("./data/partitions.csv")
+kable(comms[, 2:4], caption = "Ground truth vs. Communities detected", 
+      col.names = c("Node", "Ground truth community", "Estimated community"))
+```
+
+## Comparison with Ground-Truth
+
+Looking down this list, it is clear that modularity-based detection with the Louvain method has not returned the same set of communities as the ground truth. In the ground truth there are just 2 communities in this network, the modularity-based Louvain method developed with `community` and `NetworkX` returns 4 communities. 
+
+Performing a strict binary comparison, the estimated communities are only `r paste0(100*round(mean(as.logical(comms$compare)), 2), '%')` the same. However it is interesting to note that the nodes that fall in to the first ground truth community tend to have an estimated community of 1 or 2 and those in the second ground truth community have an esimated community of 3 or 4. 
+
+### Modularity-based comparisons
+
+It is possible to compute the modularity of the partitions of the ground truth with those found by the Louvain method. This was performed using the `modularity` function from the `community` package and the following results found:
+
+* Ground-truth modularity: 0.358;
+* Computed modularity: 0.419
+
+The ground truth modularity is lower (hence why the computation returns different results). This highlights the challenges of community detection: the analytical method returns the "best" results for this network, but these are _not_ the same as those for the ground truth.
+
+### Density-based comparisons
+
+An alternate measure of partition "goodness" proposed by Yang and Leskovec^2^ is the internal denstity of each partition (i.e. rather than seeking the maximise partition modularity, partition density would be maximised instead). The intuition behind this being that highly connected (i.e. dense) partitions would be representative of real-life communities in the network. A full density-maximising community detection has _not_ been performed. However, the densities of the partitions for the ground truth and the estimates from the modularity-based approach have been determined as proxies for this. The results are:
+
+```{r show_densities, echo = FALSE}
+dens <- data.frame(cluster = "Density",
+                   g1 = 0.257, 
+                   g2 = 0.245, 
+                   e1 = 0.364,
+                   e2 = 0.6,
+                   e3 = 0.364,
+                   e4 = 0.466)
+kable(dens, caption = "Partition Densities",
+      col.names = c("Partitions", "Ground-Truth 1", "Ground Truth 3", paste("Estimate", 1:4)))
+    
+```
+
+It can be seen that the estimated partitions have higher densities than those for the ground truth (and as such it is likely that a density-based approach would yield similar results to that found for modularity).
+
+Again, this highlights some of the challenges of community detection - two methods have returned results that do not match the ground truth for this network. It is possible that other methods could be found that would return the ground truth communities.
+
+***
+
+# References
+
+1. [Louvain method](https://perso.uclouvain.be/vincent.blondel/research/louvain.html):  https://perso.uclouvain.be/vincent.blondel/research/louvain.html
+2. Defining and Evaluating Network Communities based on Ground-truth, Yang & Leskovec: [https://cs.stanford.edu/people/jure/pubs/comscore-icdm12.pdf](https://cs.stanford.edu/people/jure/pubs/comscore-icdm12.pdf)
