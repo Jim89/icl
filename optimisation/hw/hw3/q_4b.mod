@@ -14,6 +14,12 @@ minimize cost: 10000*dcw + 2500*cw + 20000*dnm + 2450*nm + 0*dafd + 2510*afd + 1
 
 # set constraints
 subject to cap: cw + nm + afd + lac >= 2000;
+
+subject to cw_bid: cw <= 1000;
+subject to nm_bid: nm <= 1200;
+subject to afd_bid: afd <= 800;
+subject to lac_bid: lac <= 1100;
+
 subject to cw_dec: cw <= 1000000*dcw;
 subject to nm_dec: nm <= 1000000*dnm;
 subject to afd_dec: afd <= 1000000*dafd;
