@@ -11,9 +11,7 @@ def read_mapper_output(file, separator = '\t'):
         
 def main(separator = '\t'):
     data = read_mapper_output(sys.stdin, separator = separator)
-#    print data
     for artist_song, group in groupby(data, itemgetter(0)):
-        #print artist_song, group
         try:
             artist = artist_song.split(',')[0]
             song = artist_song.split(',')[1]

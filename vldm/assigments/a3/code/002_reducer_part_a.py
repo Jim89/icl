@@ -11,7 +11,6 @@ def read_mapper_output(file, separator = '\t'):
         
 def main(separator = '\t'):
     data = read_mapper_output(sys.stdin, separator = separator)
-#    print data
     for artist, group in groupby(data, itemgetter(0)):
         try:
             total_count = sum(int(mentions) for artist, mentions in group)
