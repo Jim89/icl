@@ -12,10 +12,7 @@ def read_data_input(file, separator = '\t'):
 def main(separator = '\t'):
     data = read_data_input(sys.stdin, separator)
     for words in data:
-        if words[2].lower() == 'u2':
-            print '%s%s%d' % (words[2], separator, 1)
-        else:
-            pass
+        print '%s%s%d' % (words[2].lower(), separator, 1)
             
 # ensure THIS function runs and not something else
 if __name__ == '__main__':
