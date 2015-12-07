@@ -2,7 +2,6 @@
 
 # import system functions
 import sys
-import re
 
 # utility function to split up input file
 def read_data_input(file, separator = '\t'):
