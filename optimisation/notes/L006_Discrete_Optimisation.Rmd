@@ -8,5 +8,193 @@ output:
 
 # Discrete Optimisation
 
+Discrete optimisation is a very powerful extension to linear optimisation that can increase both the modelling power (i.e we can model more things) and the solution power (i.e. we can generate more powerful solutions).
+
+Up until now, we have always considered that $x_i \in \mathbb{R}_{(+)}$ (i.e. $x$ was any real number). We will now extend this to cases where $x_i \in \mathbb{Z}$, i.e. $x$ has to be an _integer_.
+
+Thinking back to the graphical method, the feasible region is now no longer defined by a polygon in which there are (potentially) an infinite number of feasible solutions. It is instead represented by discrete dots at integer values of the decision variable(s) and so there is a potentially finite number of feasible solutions.
+
+## Types
+
+When considering discrete optimisation, there are 3 broad types that can occur:
+
+### Integer linear programs
+
+These occur when the objective function and all constraints are linear and _all_ decision variables are required to be integers (whole numbers).
+
+### Binary linear programs
+
+These occur when the objective function and constraints are linear and _all_ decision variables are required to be binary (zero or one).
+
+### Mixed-Integer linear programs
+
+These occur when the objective function and constraints are linear and _some_ of the decision variables are integer _or_ binary, and other decision variables are continuous.
+
+## Nesting
+
+It can be seen that several of these types of program can be thought of as special cases of another. In this way, _all_ types can be though of a mixed-integer linear programs (it just may be the case that no variables are integer or binary!).
+
+Within this, integer linear programs are a subset of mixed-integer linear programs. Similarly, binary linear programs are a subset of integer linear programs. 
+
+Mixed-binary linear programs are also subset of mixed-integer linear programs (with some overlap with integer linear programs).
+
+Linear programs are a subset of mixed-binary linear programs. 
+
+By subset, we mean that each a program of that type can be thought of as a special case of it's "parent". For example, a linear program can be thought of as a special mixed-binary program with no binary constraints, but not the other way around.
+
+## Simple example
+
+In this example, consider a medium-sized construction management company, Kearns and Associates. They can invest in four possible projects in the coming year, each requiring an up-front payment but returning profit over the year:
+
+```{r tbl1, echo = FALSE}
+library(knitr)
+tbl1 <- data.frame(cat = c("Investment (£ mill)", "Profit (£ mill)"),
+                   p1 = c(8, 12),
+                   p2 = c(6, 8), 
+                   p3 = c(5, 7), 
+                   p4 = c(4, 6))
+kable(tbl1, col.names = c("", paste("Project", 1:4)))
+```
+
+The budget is £15 million and they would like to maximise total profits. This leads to the following linear program:
+
+#### Decision variabes
+
+\begin{equation*}
+x_i = \begin{cases}
+      1 & \text{ if project i is chosen}\\
+      0 & \text{otherwise}
+    \end{cases}
+\quad \forall i = 1, ..., 4
+\end{equation*}
+
+#### Objective
+
+\begin{equation*}
+\max Profit = 12x_1 + 8x_2 + 7x_3 + 6_4
+\end{equation*}
+
+#### Subject to
+
+\begin{equation*}
+\begin{split}
+8x_1 + 6x_2 + 5x_3 + 4x_4 \leq 15 \\
+x_i \in \{0, 1\} \rightarrow x_i \geq 0, x_i \leq 1
+\end{split}
+\end{equation*}
+
+We can also apply some additional constraints, such as:
+
+* Only two projects can be invested in; $x_1 + x_2 + x_3 + x_4 \leq 2$;
+* Project 2 can only be undertaken if project 1 is also selected: $x_2 \leq x_1$;
+* Projects 2 and 3 cannot simultaneously be invested in: $x_2 + x_3 \leq 1$
+
+The tip for determining if the constraints work, it to write out the truth table (i.e. 0's and 1's) for every possible combination and see if the mathematial constraint will satisfy the "real-world" example. 
+
+The steps taken in this example were as follows:
+
+1. Identify the decision variables - what must be decided to solve the problem;
+2. Identify the objective function - here, maximising profits (revenues - costs); and
+3. Identify the constraints - here, budgets and no fractional projects.
+
+## Using binary decision variables and constraints
+
+Binary decision variables are also powerful when introducing new constraints on to a problem:
+
+### Either-Or
+
+It is often the case that we will be constraint by _either_ constraint 1, _or_ constraint 2 (and perhaps both). In this case, we can use binary decision variables to model this.
+
+We can introduce a binary _switching_ variable to turn the constraints "on" or "off" depending on the status of the switching variable.
+
+For example, and investment bank can choose from amongst five projects. They are required to choose at least one of 1, 2, 3 _or_ at least two of 2, 4, 5 (or both).
+
+We can write the constraints such that:
+
+\begin{equation*}
+\begin{split}
+x_1 + x_2 + x_3 \geq 1 \\
+x_2 + x_4 + x_5 \geq 2
+\end{split}
+\end{equation*}
+
+However we now need to combine these in to an _either or_ style. This can be done using "big M" notation and the new switching variable $y$. M is some sufficiently large number. This leads to:
+
+\begin{equation*}
+\begin{split}
+\text{(i) }x_1 + x_2 + x_3 \geq 1 - My \\
+\text{(ii) }x_2 + x_4 + x_5 \geq 2 - M(1-y)
+\end{split}
+\end{equation*}
+
+The optimiser (i.e. the software) will choose a $y\in\{0, 1\}$ that returns the best result, but we can review the logic behind it. If $y=1$ then the first constraint (i) will require that $x_1 + x-2 + x_3$ is greater than some very large negative number, whereas (ii) will only require that $x_2 + x_4 + x_5$ is greater than 2. This allows for either (i) or (ii) or both. A similar logic can be applied when $y=0$.
+
+Note that when the constraint is a $\leq$ constraint, then M is _added_ to the RHS, rather than being subtracted from it. e.g.
+
+\begin{equation*}
+\begin{split}
+\text{(i) }x_1 + x_2 + x_3 \leq 1 + My \\
+\text{(ii) }x_2 + x_4 + x_5 \leq 2 + M(1-y)
+\end{split}
+\end{equation*}
+
+Following a simlar logic as above, if $y=0$ then $x_1+x_2+x_3$ must be less than 1 whereas $x_2 + x_4 + x_5$ must be less than a very large number. This similarly allows _either_ (i) _or_ (ii) or both to be resolved.
+
+### K-out-of-N constraints
+
+This time, we can imagine that we have a number (N) of inequalities and we need at least some of them (K) to be satisfied.
+
+For example. a manufacturer has 5 production plants. They need to make 10,000 things per month, and at least 3 of the plants should produce 2,500 each.
+
+To resolve this we can also turn to binary decision variables and big-M notation:
+
+\begin{equation*}
+\begin{split}
+x_1 + x_2 + x_3 + x_4 + x_5 \geq 10000 \\
+x_i \geq 2500 - My_i \\
+\sum_{i}y_i \leq 2 \\
+y_i \in \{0, 1\}
+\end{split}
+\end{equation*}
+
+By setting $x_i \leq 2500 - My_i$ for the binary decision $y_i$ and $\sum y_i \leq 2$ we state that at most, 2 of the plants can produce less than 2500 (as $2500 - My_i$ will be a very large negative number when $y_i = 1$)
+
+### N Possible values
+
+A related constraint might occur when we have a decision variable that can only take on a set number of values.
+
+For example, a production company can hire more temporary staff to increase production, but they can only hire 30, 75 or 90, i.e.
+
+\begin{equation*}
+x = \begin{cases}
+      30 & \text{ or}\\
+      75 & \text{ or}\\
+      90 & 
+    \end{cases}
+\end{equation*}
+
+This can be formulated as a choice using binary variables and a constraint:
+
+\begin{equation*}
+\begin{split}
+x = 30y_1 + 75y_2 + 90y_3 \\
+y_1 + y_2 + y_3 = 1 \\
+y_i \in \{0, \}
+\end{split}
+\end{equation*}
+
+In this way, only one of the choices is possible!
+
+### Fixed-Charge problem
+
+It is often the case that there will be fixed charges and variable charges (or returns) in a linear proble. For example it may be that the toal cost is some fixed cost + a variable cost per unit.
+
+Again, binary decision variables can be used to model this. For example, when employing temporary workers, we pay a fee of £1,000 per worker and a fixed fee of £2,500.
+
+Let $x$ be the number of workers to employ and $cost = \begin{cases} 2500 + 1000x & \text{ if > 0} \\ 0 & \text{ if x =0}\end{cases}$
+
+Using this, we can define an additional constraint $x \leq My$ where y is a binary decision varible, and M is a large number. 
+
+This constraint will ensure that $y=1$ if $x>0$ which will then "switch on" the fixed cost part of the cost (or fixed-revenue part of a related problem).
 
 
