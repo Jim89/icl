@@ -1,88 +1,54 @@
-# -*- coding: utf-8 -*-
 """
-Created on Tue Dec  1 10:32:36 2015
+Created on Tue Dec 1 2015
 
-@author: jim
+@author: Jim Leach
 """
+# get auto-floating point division (as I'm in Py 2.7)
+from __future__ import division
 
-# get auto-floating point division as I'm in Py 2.7
-from __future__ import division    
-
-
-# %% import the data and turn in to weights matrix
+# load numpy for matrix structures and pandas for DataFrames
+import numpy as np
 import pandas as pd
+
+#  import the data as a DataFrame
 data = pd.read_table("../data/q3_simple.txt",
                      header = None,
                      names = ['vx', 'vy', 'weight'])
                      
-# %% create weights matrix                     
-import numpy as np
+# create an all zeros matrix the same size as the adjacency matrix will be
+mat = np.zeros(shape = (max(data['vx']), max(data['vy'])))
 
-mat = np.zeros(shape=(max(data['vx']), max(data['vy'])))
-
+# fill in 1's to make adjaceny matrix
 for row in range(len(data)):
+    # grab the data from the DataFrame
     datum = data.iloc[row, ]
     row = datum[0]-1
     col = datum[1]-1
-    mat[row][col]=1
+    # fill in the matrix
+    mat[row][col] = 1
 
-  
-
+# convert to stochastic weights matrix (all rows sum to 1)
 weights = mat/mat.sum(axis = 1, keepdims = True)
 
-# %% pagerank
-# utility functin to normalise
+# define a utility function to normalise the vector r
 def norm(x):
     x = x/x.sum()
     return x
+    
+# set up pagerank using while loop
 # set non-zero, random values for r
 r = norm(np.array(np.random.rand(4)))
 
+# set some threshold and an initial error value that is a long way above it
+threshold = 1E-30
+error = 1000
 
-# grab the starting value, just for comparison
-r_start = r
-
-# formula is r = W^t r
-for i in range(10000000):
+# while the error is greater than the threshold, keep doing power iteration
+while error > threshold:
+    # calculate the new r using r = W^Tr
     new_r = norm(np.dot(weights.T, r))
-    if np.mean(np.round(new_r, 10) == np.round(r, 10)) == 1:
-        r = new_r
-        break
-    else:
-        r = new_r
-        
-# normalise to get r to sum to 1
-# r = r/r.sum()        
+    # get the sum of L2 norm error (i.e. sum of squares)
+    error = sum(np.square(new_r - r))
+    # set the r to be the new r
+    r = new_r
     
-    
-# %% attempt networkx soln
-import networkx as nx    
-graph = nx.from_pandas_dataframe(data, source = 'vx',
-                                 target = 'vy', edge_attr = 'weight')
-                                 
-
-# %% pagerank with while
-# utility functin to normalise
-def norm(x):
-    x = x/x.sum()
-    return x
-
-# set non-zero, random values for r
-r = norm(np.array(np.random.rand(4)))
-
-
-# grab the starting value, just for comparison
-r_start = r
-
-idx = 0
-# formula is r = W^t r
-while np.mean(np.round(new_r, 10) == np.round(r, 10)) != 1:
-    r = norm(np.dot(weights.T, r))
-    idx += 1
-    print idx
-    
-#    if np.mean(np.round(new_r, 10) == np.round(r, 10)) == 1:
-#        r = new_r
-#        break
-#    else:
-#        r = new_r

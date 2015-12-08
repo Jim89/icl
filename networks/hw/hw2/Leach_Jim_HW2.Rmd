@@ -1,0 +1,442 @@
+---
+title: "Network Analytics - Assignment Two"
+author: "Jim Leach"
+date: "04 December 2015"
+output: pdf_document
+---
+
+# Document Purpose
+
+The purpose of this document is to write up the response to the second assigment give as part of the _Network Analytics_ module. It is divided in to several sections, each covering a section of the assigment as given. 
+
+***
+
+# Question 1
+
+## 1a
+
+Some graphs/networks may represent the ability to send units of "flow" between nodes in the graph. This could be representative of a many processes (e.g. an oil pipeline or data transfer on network cables). To find the _maximum_ flow that can be send from some starting node, $s$ to a target node, $t$, it is possible to define a linear program that will provide the solution. 
+
+The general form of this linear program is given by \eqref{eq:linear_gen}.
+
+\begin{equation} \label{eq:linear_gen}
+\begin{split}
+\max f \\
+\text{s.t:} \\
+I * x = flow \\
+0 \leq x_{ij} \leq cap_{x_{ij}}
+\end{split}
+\end{equation}
+
+In \eqref{eq:linear_gen}: 
+
+* $f$ refers to flow; 
+* $I$ refers to the _incidence matrix_ for the network;
+* $x$ represents a vector of all the edges in the graph;
+* $flow$ represents a vector of length equivalent to the number of nodes in the graph which takes a values of $f$ in the position corresponding to the start node ($s$), $-f$ in the position corresponding to the end node ($t$), and 0 everywhere else.;
+* $x_i$ is a variable representing the edge from node $i$ to node $j$; and
+* $cap_{x_{ij}}$ represents the capacity of the edge between nodes $i$ and $j$
+
+For the graph presented in the question, this can be written explicitly as follows (note the nodes in the graph were labelled a-e moving from the top left of the graph to the bottom right):
+
+\pagebreak
+
+#### Objective
+
+$\max f$
+
+#### Subject to
+
+\setcounter{MaxMatrixCols}{20}
+\[
+\begin{pmatrix}
+    & x_{s,a} & x_{s,b} & x_{s,c} & x_{a,d} & x_{b,e} & x_{c,a} & x_{c,b} & x_{c,d} & x_{c,e} & x_{d,t} & x_{e,d} & x_{e,t} \\
+  s & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+  a & -1 & 0 & 0 & 1 & 0 & -1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+  b & 0 & -1 & 0 & 0 & 1 & 0 & -1 & 0 & 0 & 0 & 0 & 0 \\
+  c & 0 & 0 & -1 & 0 & 0 & 1 & 1 & 1 & 1 & 0 & 0 & 0 \\
+  d & 0 & 0 & 0 & -1 & 0 & 0 & 0 & -1 & 0 & 1 & -1 & 0 \\
+  e & 0 & 0 & 0 & 0 & -1 & 0 & 0 & 0 & -1 & 0 & 1 & 1 \\
+  t & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & -1 & 0 & -1 
+\end{pmatrix}
+\begin{pmatrix}
+  x_{s,a} \\ 
+  x_{s,b} \\
+  x_{s,c} \\
+  x_{a,d} \\
+  x_{b,e} \\
+  x_{c,a} \\
+  x_{c,b} \\
+  x_{c,d} \\
+  x_{c,e} \\
+  x_{d,t} \\
+  x_{e,d} \\
+  x_{e,t}
+\end{pmatrix}
+=
+\begin{pmatrix}
+  f \\
+  0 \\
+  0 \\
+  0 \\
+  0 \\
+  0 \\
+  -f
+\end{pmatrix}
+\]
+
+\begin{equation*}
+\begin{split}
+0 \leq x_{s,a} \leq 5 \\
+0 \leq x_{s,b} \leq 3 \\
+0 \leq x_{s,c} \leq 13 \\
+0 \leq x_{a,d} \leq 3 \\
+0 \leq x_{b,e} \leq 4 \\
+0 \leq x_{c,a} \leq 7 \\
+0 \leq x_{c,b} \leq 5 \\
+0 \leq x_{c,d} \leq 2 \\
+0 \leq x_{c,e} \leq 2 \\
+0 \leq x_{d,t} \leq 5 \\
+0 \leq x_{e,d} \leq 9 \\
+0 \leq x_{e,t} \leq 10
+\end{split}
+\end{equation*}
+
+***
+
+## 1b
+
+The problem was solved using a linear programming solver. Two alternate versions were produced, one using the `AMPL` modelling language and one using `PULP`, a Python package for linear programs.
+
+### AMPL Solution
+
+```
+# set decision variables
+var f;
+var xsa;
+var xsb;
+var xsc;
+var xad;
+var xbe;
+var xca;
+var xcb;
+var xcd;
+var xce;
+var xdt;
+var xed;
+var xet;
+
+# set up function
+maximize flow: f;
+
+# add flow constraints
+subject to fc1: f - xsa - xsb - xsc == 0;
+subject to fc2: xad - xsa - xca == 0;
+subject to fc3: xbe - xsb - xcb == 0;
+subject to fc4: xca + xcb + xcd + xce - xsc == 0;
+subject to fc5: xdt - xad - xcd - xed == 0;
+subject to fc6: xed + xet - xbe - xce == 0;
+subject to fc7: f -xdt - xet == 0;
+
+# add non-neg constrains
+subject to nn1: xsa >= 0;
+subject to nn2: xsb >= 0;
+subject to nn3: xsc >= 0;
+subject to nn4: xad >= 0;
+subject to nn5: xbe >= 0;
+subject to nn6: xca >= 0;
+subject to nn7: xcb >= 0;
+subject to nn8: xcd >= 0;
+subject to nn9: xce >= 0;
+subject to nn10: xdt >= 0;
+subject to nn11: xed >= 0;
+subject to nn12: xet >= 0;
+
+# add capacity constraints
+subject to c1: xsa <= 5;
+subject to c2: xsb <= 3;
+subject to c3: xsc <= 13;
+subject to c4: xad <= 3;
+subject to c5: xbe <= 4;
+subject to c6: xca <= 7;
+subject to c7: xcb <= 5;
+subject to c8: xcd <= 2;
+subject to c9: xce <= 2;
+subject to c10: xdt <= 5;
+subject to c11: xed <= 9;
+subject to c12: xet <= 10;
+```
+
+### The solution
+
+Running either of these models gives the same result of $f$ = 11. I.e. the maximum flow possible through this network from start to finish is 11 units of flow.
+
+\pagebreak
+
+### PULP Solution
+
+```
+from pulp import *
+
+# define variables (also provides constraints on capacities)
+x_sa = LpVariable("x_sa", 0, 5)
+x_sb = LpVariable("x_sb", 0, 3)
+x_sc = LpVariable("x_sc", 0, 13)
+x_ad = LpVariable("x_ad", 0, 3)
+x_be = LpVariable("x_be", 0, 4)
+x_ca = LpVariable("x_ca", 0, 7)
+x_cb = LpVariable("x_cb", 0, 5)
+x_cd = LpVariable("x_cd", 0, 2)
+x_ce = LpVariable("x_ce", 0, 2)
+x_dt = LpVariable("x_dt", 0, 5)
+x_ed = LpVariable("x_ed", 0, 9)
+x_et = LpVariable("x_et", 0, 10)
+f = LpVariable("f", 0)
+
+# define the problem
+prob = LpProblem("max_flow", LpMaximize)
+
+# define constraints
+prob += f - x_sa - x_sb - x_sc == 0
+prob += x_ad - x_sa - x_ca == 0
+prob += x_be - x_sb - x_cb == 0
+prob += x_ca + x_cb + x_cd + x_ce - x_sc == 0
+prob += x_dt - x_ad - x_cd - x_ed == 0
+prob += x_ed + x_et - x_be - x_ce == 0
+prob += f - x_dt - x_et == 0
+
+# define function to maximise
+prob += f, "Objective function"
+
+# solve the problem
+prob.solve()
+
+# access the results
+value(f)
+```
+
+### The solution
+
+Running either of these models gives the same result of $f$ = 11. I.e. the maximum flow possible through this network from start to finish is 11 units of flow.
+
+***
+
+## 1c
+
+From the max-flow min-cut theorem, the dual solution to the max-flow linear program is defined as the solution to the linear program that finds the minimum-capacity cut in the network.
+
+The dual solution was found using 'AMPL'. This was done by specifying the following options prior to solving the linear program:
+
+* `option solver cplex;` 
+* `option cplex_options 'sensitivity';`
+
+This ensures that the linear program returns the _shadow prices_ for the constraints, which are the optimal solution(s) to the dual program. Doing this returned the following values:
+
+\begin{equation*}
+\begin{split}
+x_{s,a} = 0 \\ 
+x_{s,b} = 0 \\ 
+x_{s,c} = 0 \\ 
+x_{a,d} = 1 \\ 
+x_{b,e} = 1 \\ 
+x_{c,a} = 0 \\ 
+x_{c,b} = 0 \\ 
+x_{c,d} = 1 \\ 
+x_{c,e} = 1 \\ 
+x_{d,t} = 0 \\ 
+x_{e,d} = 0 \\ 
+x_{e,t} = 0  
+\end{split}
+\end{equation*}
+
+This says that for each unit we increase the capacity of edges $x_{a,d}, x_{b,e}, x_{c,d}, x_{c,e}$ by, the value of the objective function ($\max f$) increases by one unit. Hence, as these are the _only_ edges that have an effect on the optimal solution, they are the edges which are the "bottlneck" in the network and are those that can be broken to define the minimum capacity cut. 
+
+Hence the minimum capacity cut is defined by breaking the edges between nodes: a and d, c and d, c and e, and b and e. Looking at the capacities on these edges of 3, 2, 2, and 4 respectively, it can be seen that the minimum capacity cut (11) is _exactly_ equal to the maximum flow, neatly demonstrating the max-flow min-cut theorem.
+
+***
+
+# Question 2
+
+(Please note that the Python script for this question is provided in `2_nework_measures.py`).
+
+Zachary's Karate Club network was loaded in to a Python environment using the `NetworkX` package and the `karate_club_graph()` function. 
+
+Several network measures were calculated and these are reported below.
+
+## Properties & values:
+
+### Global Properties
+
+* _size_ (number of edges): 78;
+* _order_ (number of nodes): 34;
+* _diameter_ (the longest of the shortest paths): 5; and
+* _density_ (a ratio of edges to nodes): 0.139.
+
+### Node-Properties
+
+Several properties were calculated for each node and these are reported in the table below:
+
+```{r get_properties, echo = FALSE, message = FALSE}
+library(readr)
+library(knitr)
+library(dplyr)
+library(stringdist)
+properties <- read_csv("./data/measures.csv") %>% setNames(c("node", "degree", "bet", "flow", "eig")) %>% mutate(node = node+1)
+kable(properties, col.names = c("Node", "Degree", "Betweenness", "Flow", "Eigenvector"),
+      caption = "Centrality Measures")
+```
+
+## Discussion:
+
+### Global
+
+* Density: This is simply $\dfrac{2m}{n(n-1)}$ where $m$ is the number of edges (the size) and $n$ is the number of nodes (the order);
+
+* Diameter: This is defined as the _maximum eccentricity_ of any node in the graph, where the _eccentricity_ of a node is is the longest of its shortest paths to all other nodes. For example, if node A had shortest paths to nodes B, C and D of lengths 1, 7 and 5 respectively (and no paths to any other nodes), then its eccentricity would be 7.  The diameter of the graph is the maximum eccentricity accross all nodes and so represents the longest shortest path in the network. It is a measure of how wide a graph is and can be calcualted by enumerating all shortest paths for all nodes, and finding the maximum accross the whole network.
+
+### Node-level
+
+* Degree centrality: This is simply a measure of the number of edges that are incident on each node.
+
+* Betweenness centrality: This is a measure for each node that represents how many _other_ nodes are connected directly through that node on their shortest path. For example if the shortest path from node A to node C includes node B, then the betweenness value for B will be at least 1 (as there is one shortest path that goes through B). The formula is given as $C_{B}(i) = \sum_{j<k}g_{ik}(i)/g_{jk}$ where $g_{jk}$ is the number of shortest paths connecting $j$ and $k$, and $g_{jk}(i)$ is the number that include node i. Algorithmically, this can be found by enumerating all shortest paths for all nodes in the graph, then, for each node, counting how many paths go through it.
+
+* Flow centrality is similar to betweenness but now rather than considering how many _shortest_ paths go through each node it is simply how many paths _of any length_ go through that node. It is calculated in a similar manner to betweenness centrality, but considers paths of any length, not just shortest paths. 
+
+* Eigenvector centrality is a measure of a node's centrality that is based on not only how _many_ nodes it is connected to, but how important _those_ nodes are. I.e. $x_i \propto x_j + x_k$ where $x_i$ is the importance of node $i$. However, the importance of $j$ is calculated in the same way, so this becomes a recursive definition. It can be calculated using the adjacency matrix for the graph and its eigenvalues and respective eigenvectors. Due to the structure of the adjacency matrix, it is the case that the largest eigenvalue will have a corresponding eigenvector which contains the centrality scores for each node in the graph. Compuationally this can be solved using power iteration.
+
+Looking at these global and local measures of the graph, it can be seen that it is a small network (only 34 nodes) with a small average number of connections on each node (as there are only 78 edges in total). This gives rise to its low density of just 0.139. Similarly, the small diameter of 5 also indicates that the network is small.
+
+Looking at the local measures of the graph, it is clear that there are a few highly important nodes in the graph. At a simple level, nodes 1, 3, 33 and 34 account for `r paste0(round(100*sum(16, 10, 12, 17)/78, 2), '%')` of the edges in the graph with a high degree centrality on each one. Digging in to the more rigourous centrality measures, it is the case that nodes 1 and 34 appear to be the most important. They both have high betweenness and 
+flow centrality measures, and the highest eigenvector centralities out of all the other nodes. 
+Given what is known about this particular network (Zachary's Karate Club), this is expected, however it is nice to see that the anaytical results support the established, "real-world" properties of this network.
+
+***
+
+# Question 3
+
+The code for power iteration is presented below and is also submitted in the `3_pagerank.py` file. 
+
+```
+# get auto-floating point division (as I'm in Py 2.7)
+from __future__ import division
+
+# load numpy for matrix structures and pandas for DataFrames
+import numpy as np
+import pandas as pd
+
+#  import the data as a DataFrame
+data = pd.read_table("../data/q3_simple.txt",
+                     header = None,
+                     names = ['vx', 'vy', 'weight'])
+                     
+# create an all zeros matrix the same size as the adjacency matrix will be
+mat = np.zeros(shape = (max(data['vx']), max(data['vy'])))
+
+# fill in 1's to make adjaceny matrix
+for row in range(len(data)):
+    # grab the data from the DataFrame
+    datum = data.iloc[row, ]
+    row = datum[0]-1
+    col = datum[1]-1
+    # fill in the matrix
+    mat[row][col] = 1
+
+# convert to stochastic weights matrix (all rows sum to 1)
+weights = mat/mat.sum(axis = 1, keepdims = True)
+
+# define a utility function to normalise the vector r
+def norm(x):
+    x = x/x.sum()
+    return x
+    
+# set up pagerank using while loop
+# set non-zero, random values for r
+r = norm(np.array(np.random.rand(4)))
+
+# set some threshold and an initial error value that is a long way above it
+threshold = 1E-30
+error = 1000
+
+# while the error is greater than the threshold, keep doing power iteration
+while error > threshold:
+    # calculate the new r using r = W^Tr
+    new_r = norm(np.dot(weights.T, r))
+    # get the sum of L2 norm error (i.e. sum of squares)
+    error = sum(np.square(new_r - r))
+    # set the r to be the new r
+    r = new_r
+```
+
+***
+
+# Question 4
+
+(Please note that the Python script for this question is provided in `2_nework_measures.py`)
+
+Communities were detected in the Karate Club network using the `community` package, which is an extension to `NetworkX`. 
+
+This package uses modularity based community detection, optimised with the Louvain^1^ method. In modularity based detection, the cut/partition that _maximises_ the modularity is sought.
+
+The modularity of a cut is defined as $Q$:
+
+\begin{equation*}
+Q = \dfrac{1}{2m} \sum_{vw}[A_{vw} - \dfrac{k_v k_w}{2m}]\delta(c_v, c_w)
+\end{equation*}
+
+In this equation, $A_{vw}$ is the adjacency matrix for the graph and $\dfrac{k_v k_w}{2m}$ is the expected number of edges in a random graph model of the same size. $\delta(c_v, c_w)$ is 1 if both $v$ and $w$ are in the cut/partition (or its complement) and 0 otherwise. 
+
+The modularity defines how "suitable" the cut is to define a community in the network structure. Maximisation of the modularity is where the Louvain method is used. The Louvain method attempts to optimise this problem by initially defining small communities within the network using local modularity. These are then "grown" by repeated iteration until the maximum modularity is obtained, hence defining the communities.
+
+Using this method, communities were detected and are presented (along with the ground-truth) in the table below:
+
+```{r show_communities, echo = FALSE}
+comms <- read_csv("./data/partitions.csv")
+kable(comms[, 2:4], caption = "Ground truth vs. Communities detected", 
+      col.names = c("Node", "Ground truth community", "Estimated community"))
+```
+
+## Comparison with Ground-Truth
+
+Looking down this list, it is clear that modularity-based detection with the Louvain method has not returned the same set of communities as the ground truth. In the ground truth there are just 2 communities in this network, the modularity-based Louvain method developed with `community` and `NetworkX` returns 4 communities. 
+
+Performing a strict binary comparison, the estimated communities are only `r paste0(100*round(mean(as.logical(comms$compare)), 2), '%')` the same. However it is interesting to note that the nodes that fall in to the first ground truth community tend to have an estimated community of 1 or 2 and those in the second ground truth community have an esimated community of 3 or 4. 
+
+### Modularity-based comparisons
+
+It is possible to compute the modularity of the partitions of the ground truth with those found by the Louvain method. This was performed using the `modularity` function from the `community` package and the following results found:
+
+* Ground-truth modularity: 0.358;
+* Computed modularity: 0.419
+
+The ground truth modularity is lower (hence why the computation returns different results). This highlights the challenges of community detection: the analytical method returns the "best" results for this network, but these are _not_ the same as those for the ground truth.
+
+### Density-based comparisons
+
+An alternate measure of partition "goodness" proposed by Yang and Leskovec^2^ is the internal denstity of each partition (i.e. rather than seeking the maximise partition modularity, partition density would be maximised instead). The intuition behind this being that highly connected (i.e. dense) partitions would be representative of real-life communities in the network. A full density-maximising community detection has _not_ been performed. However, the densities of the partitions for the ground truth and the estimates from the modularity-based approach have been determined as proxies for this. The results are:
+
+```{r show_densities, echo = FALSE}
+dens <- data.frame(cluster = "Density",
+                   g1 = 0.257, 
+                   g2 = 0.245, 
+                   e1 = 0.364,
+                   e2 = 0.6,
+                   e3 = 0.364,
+                   e4 = 0.466)
+kable(dens, caption = "Partition Densities",
+      col.names = c("Partitions", "Ground-Truth 1", "Ground Truth 3", paste("Estimate", 1:4)))
+    
+```
+
+It can be seen that the estimated partitions have higher densities than those for the ground truth (and as such it is likely that a density-based approach would yield similar results to that found for modularity).
+
+Again, this highlights some of the challenges of community detection - two methods have returned results that do not match the ground truth for this network. It is possible that other methods could be found that would return the ground truth communities.
+
+It should be noted that `igraph` was also used to detect partitions in the network using a number of methods^3^, each of which produced similar results, i.e. the ground-truth community was _not_ detected using the basic settings for these functions.
+
+***
+
+# References
+
+1. [Louvain method](https://perso.uclouvain.be/vincent.blondel/research/louvain.html):  https://perso.uclouvain.be/vincent.blondel/research/louvain.html
+2. Defining and Evaluating Network Communities based on Ground-truth, Yang & Leskovec: [https://cs.stanford.edu/people/jure/pubs/comscore-icdm12.pdf](https://cs.stanford.edu/people/jure/pubs/comscore-icdm12.pdf)
+3. igraph Documentation - [https://pypi.python.org/pypi/louvain/](https://pypi.python.org/pypi/louvain/)
