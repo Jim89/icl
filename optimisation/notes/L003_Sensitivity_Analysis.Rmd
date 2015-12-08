@@ -38,6 +38,12 @@ Analytically, the optimal solution is defined by a set of linear equations in tw
 
 This highlights _why_ non-binding constraints have a shadow price of 0 - they do _not_ form part of the system of linear equations that return the the optimal solution, and so changing their values has no effect!
 
+### Things to remember
+
+It is possible for the shadow price to be zero even if the constraint is binding. This occurs when there are more than 2 binding constraints in place at the optimal solution. As such, the shadow price of one of them is zero, as changing its value will not affect the others and, therefore, the optimal solution.
+
+Generally, if we _expand_ the feasible region, the objective value will either increase, or stay the same. Conversely, if we _reduce_ the size of the feasible region (for example by reducing an $\leq$ constraint, or increasing a $\geq$) then the value of the objective function can only decrease or stay the same. 
+
 ## An example
 
 Returning to the Gemstone Tool Company example from earlier (manufacturing wrenches and pliers), we can calculate the effect that extra 1,000lbs./day in steel would have on GTC's earnings.
