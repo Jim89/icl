@@ -8,3 +8,62 @@ output:
 
 # Linear Optimisation Additional Examples
 
+This section of notes covers some more esoteric/complex examples of linear programs, and how they can be applied to a range of problems.
+
+## Example 1 - Personnel Scheduling
+
+Imagine an airline that wants to staff its customer service agents on a shift pattern. Ideally, they would like to minimise the overall daily costs, whilst ensuring a satisfactory level of service (as dictated by minimum requirements for agents at various times of the day).
+
+This problem can be represented by the following table:
+
+```{r tbl1, echo = FALSE}
+library(knitr)
+tbl1 <- data.frame(timeperiod = c("6-8 am", "8-10 am", "10-12 am", "12-2 pm",
+                                  "2-4 pm", "4-6 pm", "6-8 pm", "8-10 pm", "10-12 pm",
+                                  "12-6 am", "Daily agent cost"),
+                   shift1 = c(rep("x",4 ), rep("",6), 170),
+                   shift2 = c("", rep("x",4 ), rep("",5), 160),
+                   shift3 = c(rep("",3),rep("x",4 ), rep("",3), 175),
+                   shift4 = c(rep("", 5), rep("x",4 ), "", 180),
+                   shift5 = c(rep("", 8), rep("x",2), 195),
+                   agents = c(48, 79, 65, 87, 64, 73, 82, 43, 52, 15, ""))
+kable(tbl1, col.names = c("Time Period", "Shift 1", "Shift 2", "Shift3", "Shift 4",
+                          "Shift 5", "Agents Required"))
+```
+
+Assuming a non-integer solution, this problem can summarised thus:
+
+#### Decision variables
+
+\begin{equation*}
+S_i = \text{ Number of staff working shift, i}
+\end{equation*}
+
+#### Objective
+
+\begin{equation*}
+\min 170S_1 + 160S_2 + ... + 195S_5
+\end{equation*}
+
+#### Subject to
+
+\begin{equation*}
+\begin{split}
+S_1 \geq 48 \\
+S_1 + S_2 \geq 79 \\
+S_1 + S_2 + S_3 \geq 65 \\
+S_2 + S_3 \geq 64 \\
+S_3 + S_4 \geq 73 \\
+S_3 + S_4 \geq 82 \\
+S_4 \geq 43 \\
+S_4 + S_5 \geq 52 \\
+S_5 \geq 15 \\
+S_i \geq 0
+\end{split}
+\end{equation*}
+
+This is easily solved in most linear programming software and returns optimal values for each shift.
+
+## Example 2 - Investment Management
+
+
