@@ -1,0 +1,342 @@
+---
+title: "Optimisation and Decision Models - Assignment Three"
+author: "Jim Leach"
+date: "29 November 2015"
+output: pdf_document
+---
+
+# Document purpose
+
+The purpose of this document is to write up the response to the third assignment give as part of the _Optimistaion and Decision Models_ module. It is divided in to two sections, each covering a section of the assignment as given. Each major section is divided in to further subsections, one for each question in the assignment.
+
+***
+
+# Question 3
+
+For this question, it is imagined that the R&D division of a company has developed four new product lines, and now the company must decide which one(s) to proceed with. There is a substantial cost associated with launching the product lines and there are limits to how many of each product the company can sell, presented in the table below. The company is seeking to maximise their profit from launching these new products, defined as revenues less costs. 
+
+### Table 1 - Product Line information
+
+```{r tbl3a, echo = FALSE}
+library(knitr)
+tbl <- data.frame(cat = c("Start up costs (£)", "Net Revenues/unit sold (£)",
+                          "Maximum demand (units)"),
+                  line1 = c(50000, 80, 1000),
+                  line2 = c(40000, 60, 15000),
+                  line3 = c(70000, 90, 12500),
+                  line4 = c(60000, 80, 9000))
+kable(tbl, col.names = c("", paste("Product Line ", 1:4)))
+```
+
+The plan is also restricted by the following considerations:
+
+1. At most two of the product lines should be produced;
+2. Product three can only be produced if either product one or product two are produced; and
+3. Either the cumulative production of products one and two are below 20,000 or the cumulative production quantities of products three and four are below 20,000.
+
+## Section A - formulate an optimisation model that determines the profit-maximising mix
+
+### Decision variables
+
+\begin{equation*}
+\begin{split}
+d_1, d_2, d_3, d_4\quad \text{Binary decision variables to launch products 1, 2, 3, 4}\\
+x_1, x_2, x_3, x_4 \quad \text{Quantity of each product to produce}\\
+y\quad\text{Auxiliary switching variable}
+\end{split}
+\end{equation*}
+
+### Objective function
+
+\begin{equation*}
+\max\quad Profit = (70x_1 + 60x_2 + 90x_3 + 80x_4) - (50000d_1 + 40000d_2 + 70000d_3 + 60000d_4)
+\end{equation*}
+
+### Constraints
+
+\begin{equation*}
+\begin{split}
+\text{Non-negativity and binary constraints:} \\
+x_1, x_2, x_3, x_4 \geq 0 \\
+d_1, d_2, d_3, d_4, y \in \{0, 1\} \\
+\\
+\text{Ensure that fixed costs are paid} \\
+x_1 \leq M*d_1 \\
+x_2 \leq M*d_2 \\
+x_3 \leq M*d_3 \\
+x_4 \leq M*d_4 \\
+\\
+\text{Enforce demand constraints} \\
+x_1 \leq 10000 \\
+x_2 \leq 15000 \\
+x_3 \leq 12500 \\
+x_4 \leq 9000 \\
+\\
+\text{At most two product lines} \\
+d_1 + d_2 + d_3 + d_4 \leq 2 \\
+\\
+\text{Can only produce line 3 if line 2 or line 3 is produced} \\
+d_3 \leq d_1 + d_2 \\
+\\
+\text{Either product lines 1 and 2 are less than 20000 or lines 3 and 4 are} \\
+x_1 + x_2 \leq 20000 + M*y \\
+x_3 + x_4 \leq 20000 + M*(1-y) \\
+\\
+\text{Where M is some very large number}
+\end{split}
+\end{equation*}
+
+## Section B - Profit maximising mix
+
+The problem was solved using Excel (see attached workbook, `hw3_3b.xlsx`) and the optimal solution found to be:
+
+* Profit = 1,915,000
+* Quantity of 1: 0
+* Quantity of 2: 15,000
+* Quantity of 3: 12,500
+* Quantity of 4: 0
+
+
+***
+
+# Question 4
+
+In this question, an office manager is seeking to purchase new office furniture. The firm requires 2000 new furniture sets and has received bids from a number of suppliers as follows:
+
+1. Caroline Woodwords will supply up to 1000 sets at a cost of £2,500 per set with a delivery charge of £10,000;
+2. Nashawtuc Millworks will supply up to 1200 sets at a cost of £2,450 per set with a delivery charge of £20,000;
+3. Adrondack Furnishing Designs will supply up to 800 sets at a cost of £2,510 per set with no delivery charge; and
+4. Lancaster Artisan Company will supply up to 1,100 sets at a cost of £2,470 per set with a delivery charge of £13,000
+
+## Section A - Forumulate an optimisation problem that minimises costs:
+
+### Decison variables
+
+\begin{equation*}
+\begin{split}
+dCW, dNM, dAFD, dLAC: \text{ Binary decision variables to purchase from that supplier} \\
+CW, NM, AFD, LAC: \text{ Amount to purchase from each supplier}
+\end{split}
+\end{equation*}
+
+### Objective Function
+
+\begin{equation*}
+\min Cost = 10000dCW + 2500CW + 20000dNM + 2450NM + 0dAFD + 2510AFD + 13000dLAC + 2470LAC
+\end{equation*}
+
+### Constraints
+
+\begin{equation*}
+\begin{split}
+\text{Requirements:}\\
+CW + NM + AFD + LAC \geq 2000\\
+\\
+\text{Capacity restrictions}\\
+CW \leq 1000 \\
+NM \leq 1200 \\
+AFD \leq 800 \\
+LAC \leq 1100 \\
+\\
+\text{Ensure delivery charges are paid!} \\
+CW \leq M*dCW \\
+NM \leq M*dNM \\
+AFD \leq M*dAFD \\
+LAC \leq M*dLAC \\
+\\
+\text{Non-negativity and binary constraints} \\
+dCW, dNM, dAFD, dLAC \in \text{{0, 1}} \\
+CW, NM, AFD, LAC \geq 0 \\
+\text{Where M is some very large number}
+\end{split}
+\end{equation*}
+
+## Section B - Solve the problem in AMPL
+
+The solution to this problem was found using the AMPL code presented below. Note that 'M' was set to 1,000,000.
+
+At optimality the objective function was $4,949,000 and the values of the decision variables were:
+
+* CW: 0
+* NM: 1200
+* AFD: 0
+* LAC: 800
+
+#### 4b AMPL Model
+
+```
+### set up decision variables ------------------------------------------------------------------------------------------
+# binary choices for each supplier
+var dcw binary;
+var dnm binary;
+var dafd binary;
+var dlac binary;
+
+# amount to purchase from each supplier
+var cw;
+var nm;
+var afd;
+var lac;
+
+# set up objective ------------------------------------------------------------------------------------------
+minimize cost: 10000*dcw + 2500*cw + 20000*dnm + 2450*nm + 0*dafd + 2510*afd + 13000*dlac + 2470*lac;
+
+### set constraints ------------------------------------------------------------------------------------------
+# total furniture requirement
+subject to requirements: cw + nm + afd + lac >= 2000;
+
+# bid/capacity limits (each producer can only send so much)
+subject to cw_bid: cw <= 1000;
+subject to nm_bid: nm <= 1200;
+subject to afd_bid: afd <= 800;
+subject to lac_bid: lac <= 1100;
+
+# fixed charge problem - need to ensure that binary decision variable = 1 if that supplier is bought from 
+subject to cw_dec: cw <= 1000000*dcw;
+subject to nm_dec: nm <= 1000000*dnm;
+subject to afd_dec: afd <= 1000000*dafd;
+subject to lac_dec: lac <= 1000000*dlac;
+
+# can't have negative purchasing!
+subject to nn_cw: cw >= 0;
+subject to nn_nm: nm >= 0;
+subject to nn_afd: afd >= 0;
+subject to nn_lac: lac >= 0; 
+```
+
+## Section C - A new supplier
+
+In this section it is the case that there is now a fifth supplier, Delaware Mills. They can provide up to 1,000 furniture sets at a cost of £2,530 per set with a delivery cost of £9,000. However, if 1,000 sets are bought from Delaware Mills then they will supply an additional up to 500 sets at a cost of £2,430 per set an an additional delivery fee of £7,000. This information was incorporated in to the model giving the following form.
+
+(Note that DM refers to the base Delaware mills offer, and DM2 refers to their additional offer of up to 500 units at a reduced price).
+
+
+### Decison variables
+
+\begin{equation*}
+\begin{split}
+\text{ Binary decision variables to purchase from that supplier} \\
+dCW, dNM, dAFD, dLAC, dDM, dDM2 \\
+\\
+\text{ Amount to purchase from each supplier}\\
+CW, NM, AFD, LAC, DM, DM2 
+\end{split}
+\end{equation*}
+
+### Objective Function
+
+\begin{equation*}
+\begin{split}
+\min Cost = 10000dCW + 2500CW + 20000dNM + 2450NM + 0dAFD + 2510AFD + 13000dLAC + 2470LAC + \\ 9000dDM + 2530DM + 7000dDM2 + 2430DM2
+\end{split}
+\end{equation*}
+
+### Constraints
+
+\begin{equation*}
+\begin{split}
+\text{Requirements:}\\
+CW + NM + AFD + LAC + DM + DM2 \geq 2000\\
+\\
+\text{Capacity restrictions}\\
+CW \leq 1000 \\
+NM \leq 1200 \\
+AFD \leq 800 \\
+LAC \leq 1100 \\
+DM \leq 1000 \\
+DM2 \leq 500 \\
+\\
+\text{Ensure delivery charges are paid!} \\
+CW \leq M*dCW \\
+NM \leq M*dNM \\
+AFD \leq M*dAFD \\
+LAC \leq M*dLAC \\
+DM \leq M*dDM \\
+DM2 \leq M*dDM2 \\
+\\
+\text{Non-negativity and binary constraints} \\
+dCW, dNM, dAFD, dLAC, dDM, dDM2 \in \text{{0, 1}} \\
+CW, NM, AFD, LAC, DM, DM2 \geq 0 \\
+\\
+\text{Add constraints to ensure that DM2 can only be chosen if 1000 units are bought from DM} \\
+dDM2 \leq dDM \\
+1000*dDM2 \leq DM \\
+\text{Where M is some very large number}
+\end{split}
+\end{equation*}
+
+The solution to this problem was found using the AMPL code presented below. Note that 'M' was set to 1,000,000.
+
+At optimality the objective function was $4,949,000 and the values of the decision variables were:
+
+* CW: 0
+* NM: 1200
+* AFD: 0
+* LAC: 800
+* DM: 0
+* DM2 : 0
+
+(I.e. the new offer from Delaware Mills does not appear to have had an effect on the optimal solution).
+
+#### 4c AMPL Model
+
+```
+### set up decision variables ------------------------------------------------------------------------------------------
+# binary choices for each supplier
+var dcw binary;
+var dnm binary;
+var dafd binary;
+var dlac binary;
+var ddm binary;
+var ddm2 binary;
+
+# amount to purchase from each supplier
+var cw;
+var nm;
+var afd;
+var lac;
+var dm;		# new variable for DM supplier
+var dm2;	# new variable for DM supplier extra supply
+
+# set up objective ------------------------------------------------------------------------------------------
+minimize cost: 	10000*dcw + 2500*cw + # costs for CW
+				20000*dnm + 2450*nm + # costs for NM
+				0*dafd + 2510*afd + 	# costs for AFD
+				13000*dlac + 2470*lac + # costs for LAC
+				9000*ddm + 2530*dm + 	# costs for DM (base level)
+				7000*ddm2 + 2430*dm2;	# costs for DM (at extra purchase)
+
+### set constraints ------------------------------------------------------------------------------------------
+# total furniture requirement
+subject to cap: cw + nm + afd + lac + dm + dm2 >= 2000;
+
+# bid/capacity limits (each producer can only send so much)
+subject to cw_bid: cw <= 1000;
+subject to nm_bid: nm <= 1200;
+subject to afd_bid: afd <= 800;
+subject to lac_bid: lac <= 1100;
+subject to dm_bid: dm <= 1000;
+subject to dm2_bid: dm2 <= 500;
+
+# fixed charge problem - need to ensure that binary decision variable = 1 if that supplier is bought from
+subject to cw_dec: cw <= 1000000*dcw;
+subject to nm_dec: nm <= 1000000*dnm;
+subject to afd_dec: afd <= 1000000*dafd;
+subject to lac_dec: lac <= 1000000*dlac;
+subject to dm_dec: dm <= 1000000*ddm;
+subject to dm2_dec: dm2 <= 1000000*ddm2;
+
+# Extra capacity from DM (i.e. dm2) is only available if 1000 units are purchased at the "base" cost (i.e. dm)
+# can only purchase the extra if the base costs are paid
+subject to dm2_only_if_dm: ddm2 <= ddm;
+# further restriction - can only purchase the extra if 1000 units are purchased from DM 
+subject to dm_2_only_if_1000_dm: 1000*ddm2 <= dm;
+
+# can't have negative purchasing!
+subject to nn_cw: cw >= 0;
+subject to nn_nm: nm >= 0;
+subject to nn_afd: afd >= 0;
+subject to nn_lac: lac >= 0; 
+subject to nn_dm: dm >= 0;
+subject to nn_dm2: dm2 >= 0;
+```
