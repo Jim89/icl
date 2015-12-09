@@ -408,11 +408,11 @@ It is possible to compute the modularity of the partitions of the ground truth w
 * Ground-truth modularity: 0.358;
 * Computed modularity: 0.419
 
-The ground truth modularity is lower (hence why the computation returns different results). This highlights the challenges of community detection: the analytical method returns the "best" results for this network, but these are _not_ the same as those for the ground truth.
+The ground truth modularity is lower (hence why the computation returns different results). This highlights the challenges of community detection: the analytical method returns some "sensible" results for this network, but these are _not_ the same as those for the ground truth.
 
 ### Density-based comparisons
 
-An alternate measure of partition "goodness" proposed by Yang and Leskovec^2^ is the internal denstity of each partition (i.e. rather than seeking the maximise partition modularity, partition density would be maximised instead). The intuition behind this being that highly connected (i.e. dense) partitions would be representative of real-life communities in the network. A full density-maximising community detection has _not_ been performed. However, the densities of the partitions for the ground truth and the estimates from the modularity-based approach have been determined as proxies for this. The results are:
+An alternate measure of partition "goodness" proposed by Yang and Leskovec^2^ is the internal denstity of each partition (i.e. rather than seeking the maximise partition modularity, partition density would be maximised instead). The intuition behind this being that highly connected (i.e. dense) partitions would be representative of real-life communities in the network. Density-maximising community detection was only performed briefly, using the `igraph` package. As a proxy for a more thorough density based approach, the densities of the partitions for the ground truth and the estimates from the modularity-based approach have been determined. The results are:
 
 ```{r show_densities, echo = FALSE}
 dens <- data.frame(cluster = "Density",
