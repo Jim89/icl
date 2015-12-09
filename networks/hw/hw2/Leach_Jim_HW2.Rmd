@@ -433,6 +433,21 @@ Again, this highlights some of the challenges of community detection - two metho
 
 It should be noted that `igraph` was also used to detect partitions in the network using a number of methods^3^, each of which produced similar results, i.e. the ground-truth community was _not_ detected using the basic settings for these functions.
 
+## Spectral Methods
+
+Spectral clustering was also applied to this problem using the `numpy` and `scipy` packages for the necessary matrix manipulations and eigenvalue/vector calculations (see attached code file `4_spectral_method.py`. 
+
+In performing this method, the Laplacian matrix was formed by subtracting the (diagonal) degree matrix from the adjacency matrix for the graph. Having done so, eigenvalues and the corresponding eigenvectors were found for the Laplacian. The second-smallest eigenvalue and its associated eigenvector were extracted, and the sign ($+/-$) on the $i$^th^ element of the eigenvector used to assign nodes to either partition 1 or partition 2. 
+
+The results of this clustering method are presented below.
+
+```{r spectral, echo = FALSE}
+spectral <- read_csv("./data/spectral_to_truth.csv")
+kable(spectral[, 2:4], col.names = c("Node", "Spectral Method", "Ground Truth"))
+```
+
+This has enabled splitting the network in to two clusters (as was desired) which compare nicely with the ground truth, with an accuracy of `r paste0(100*round(mean(spectral$partition == spectral$groundtruth), 2),'%')` to the ground-truth assignments.
+
 ***
 
 # References
