@@ -7,7 +7,7 @@ output: pdf_document
 
 # Document Purpose
 
-The purpose of this document is to write up the response to the second assigment give as part of the _Network Analytics_ module. It is divided in to several sections, each covering a section of the assigment as given. 
+The purpose of this document is to write up the response to the second assignment give as part of the _Network Analytics_ module. It is divided in to several sections, each covering a section of the assignment as given. 
 
 ***
 
@@ -249,7 +249,7 @@ x_{e,t} = 0
 \end{split}
 \end{equation*}
 
-This says that for each unit we increase the capacity of edges $x_{a,d}, x_{b,e}, x_{c,d}, x_{c,e}$ by, the value of the objective function ($\max f$) increases by one unit. Hence, as these are the _only_ edges that have an effect on the optimal solution, they are the edges which are the "bottlneck" in the network and are those that can be broken to define the minimum capacity cut. 
+This says that for each unit we increase the capacity of edges $x_{a,d}, x_{b,e}, x_{c,d}, x_{c,e}$ by, the value of the objective function ($\max f$) increases by one unit. Hence, as these are the _only_ edges that have an effect on the optimal solution, they are the edges which are the "bottleneck" in the network and are those that can be broken to define the minimum capacity cut. 
 
 Hence the minimum capacity cut is defined by breaking the edges between nodes: a and d, c and d, c and e, and b and e. Looking at the capacities on these edges of 3, 2, 2, and 4 respectively, it can be seen that the minimum capacity cut (11) is _exactly_ equal to the maximum flow, neatly demonstrating the max-flow min-cut theorem.
 
@@ -292,7 +292,7 @@ kable(properties, col.names = c("Node", "Degree", "Betweenness", "Flow", "Eigenv
 
 * Density: This is simply $\dfrac{2m}{n(n-1)}$ where $m$ is the number of edges (the size) and $n$ is the number of nodes (the order);
 
-* Diameter: This is defined as the _maximum eccentricity_ of any node in the graph, where the _eccentricity_ of a node is is the longest of its shortest paths to all other nodes. For example, if node A had shortest paths to nodes B, C and D of lengths 1, 7 and 5 respectively (and no paths to any other nodes), then its eccentricity would be 7.  The diameter of the graph is the maximum eccentricity accross all nodes and so represents the longest shortest path in the network. It is a measure of how wide a graph is and can be calcualted by enumerating all shortest paths for all nodes, and finding the maximum accross the whole network.
+* Diameter: This is defined as the _maximum eccentricity_ of any node in the graph, where the _eccentricity_ of a node is is the longest of its shortest paths to all other nodes. For example, if node A had shortest paths to nodes B, C and D of lengths 1, 7 and 5 respectively (and no paths to any other nodes), then its eccentricity would be 7.  The diameter of the graph is the maximum eccentricity across all nodes and so represents the longest shortest path in the network. It is a measure of how wide a graph is and can be calculated by enumerating all shortest paths for all nodes, and finding the maximum across the whole network.
 
 ### Node-level
 
@@ -302,11 +302,11 @@ kable(properties, col.names = c("Node", "Degree", "Betweenness", "Flow", "Eigenv
 
 * Flow centrality is similar to betweenness but now rather than considering how many _shortest_ paths go through each node it is simply how many paths _of any length_ go through that node. It is calculated in a similar manner to betweenness centrality, but considers paths of any length, not just shortest paths. 
 
-* Eigenvector centrality is a measure of a node's centrality that is based on not only how _many_ nodes it is connected to, but how important _those_ nodes are. I.e. $x_i \propto x_j + x_k$ where $x_i$ is the importance of node $i$. However, the importance of $j$ is calculated in the same way, so this becomes a recursive definition. It can be calculated using the adjacency matrix for the graph and its eigenvalues and respective eigenvectors. Due to the structure of the adjacency matrix, it is the case that the largest eigenvalue will have a corresponding eigenvector which contains the centrality scores for each node in the graph. Compuationally this can be solved using power iteration.
+* Eigenvector centrality is a measure of a node's centrality that is based on not only how _many_ nodes it is connected to, but how important _those_ nodes are. I.e. $x_i \propto x_j + x_k$ where $x_i$ is the importance of node $i$. However, the importance of $j$ is calculated in the same way, so this becomes a recursive definition. It can be calculated using the adjacency matrix for the graph and its eigenvalues and respective eigenvectors. Due to the structure of the adjacency matrix, it is the case that the largest eigenvalue will have a corresponding eigenvector which contains the centrality scores for each node in the graph. Computationally this can be solved using power iteration.
 
 Looking at these global and local measures of the graph, it can be seen that it is a small network (only 34 nodes) with a small average number of connections on each node (as there are only 78 edges in total). This gives rise to its low density of just 0.139. Similarly, the small diameter of 5 also indicates that the network is small.
 
-Looking at the local measures of the graph, it is clear that there are a few highly important nodes in the graph. At a simple level, nodes 1, 3, 33 and 34 account for `r paste0(round(100*sum(16, 10, 12, 17)/78, 2), '%')` of the edges in the graph with a high degree centrality on each one. Digging in to the more rigourous centrality measures, it is the case that nodes 1 and 34 appear to be the most important. They both have high betweenness and 
+Looking at the local measures of the graph, it is clear that there are a few highly important nodes in the graph. At a simple level, nodes 1, 3, 33 and 34 account for `r paste0(round(100*sum(16, 10, 12, 17)/78, 2), '%')` of the edges in the graph with a high degree centrality on each one. Digging in to the more rigorous centrality measures, it is the case that nodes 1 and 34 appear to be the most important. They both have high betweenness and 
 flow centrality measures, and the highest eigenvector centralities out of all the other nodes. 
 Given what is known about this particular network (Zachary's Karate Club), this is expected, however it is nice to see that the anaytical results support the established, "real-world" properties of this network.
 
@@ -399,7 +399,7 @@ kable(comms[, 2:4], caption = "Ground truth vs. Communities detected",
 
 Looking down this list, it is clear that modularity-based detection with the Louvain method has not returned the same set of communities as the ground truth. In the ground truth there are just 2 communities in this network, the modularity-based Louvain method developed with `community` and `NetworkX` returns 4 communities. 
 
-Performing a strict binary comparison, the estimated communities are only `r paste0(100*round(mean(as.logical(comms$compare)), 2), '%')` the same. However it is interesting to note that the nodes that fall in to the first ground truth community tend to have an estimated community of 1 or 2 and those in the second ground truth community have an esimated community of 3 or 4. 
+Performing a strict binary comparison, the estimated communities are only `r paste0(100*round(mean(as.logical(comms$compare)), 2), '%')` the same. However it is interesting to note that the nodes that fall in to the first ground truth community tend to have an estimated community of 1 or 2 and those in the second ground truth community have an estimated community of 3 or 4. 
 
 ### Modularity-based comparisons
 
@@ -412,7 +412,7 @@ The ground truth modularity is lower (hence why the computation returns differen
 
 ### Density-based comparisons
 
-An alternate measure of partition "goodness" proposed by Yang and Leskovec^2^ is the internal denstity of each partition (i.e. rather than seeking the maximise partition modularity, partition density would be maximised instead). The intuition behind this being that highly connected (i.e. dense) partitions would be representative of real-life communities in the network. Density-maximising community detection was only performed briefly, using the `igraph` package. As a proxy for a more thorough density based approach, the densities of the partitions for the ground truth and the estimates from the modularity-based approach have been determined. The results are:
+An alternate measure of partition "goodness" proposed by Yang and Leskovec^2^ is the internal density of each partition (i.e. rather than seeking the maximise partition modularity, partition density would be maximised instead). The intuition behind this being that highly connected (i.e. dense) partitions would be representative of real-life communities in the network. Density-maximising community detection was only performed briefly, using the `igraph` package. As a proxy for a more thorough density based approach, the densities of the partitions for the ground truth and the estimates from the modularity-based approach have been determined. The results are:
 
 ```{r show_densities, echo = FALSE}
 dens <- data.frame(cluster = "Density",
