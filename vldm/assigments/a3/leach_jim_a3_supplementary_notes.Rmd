@@ -1,0 +1,14 @@
+---
+title: "Very Large Data Management Assignment 3 Notes"
+author: "Jim Leach"
+date: "11 December 2015"
+output: pdf_document
+---
+
+# Supplementary Notes
+
+This document has been written to provide some supplementary notes for assignment 3 of the _Very Large Data Management_ course.
+
+During the course of the first part of this assignment (a), it was discovered that there were several artists that contained the text 'u2' (such as U2 performing duets with others). Professor Heinis informed me that counting _any_ mention of 'u2' was acceptable for the purposes of the assignment and as such this is what was performed in the map stage of the first part of the assignment.
+
+For the second part of this assignment (b), no cleaning of artist or track name was performed beyond enforcing lower-case for artist name. Furthermore, no work was performed to ensure that the fields remained in a consistent format throughout the whole data file. This was also discussed with Professor Heinis who informed me, again, that this was an acceptable solution. 
