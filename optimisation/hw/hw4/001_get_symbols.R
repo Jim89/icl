@@ -3,6 +3,7 @@
 library(quantmod)
 library(dplyr)
 library(magrittr)
+library(ggplot2)
 
 # get data----------------------------------------------------------------------
 # symbols <- c("RDSA", "HSBA", "BP", "VOD", "GSK", "BTI", "SAB", "DGE", "BG", "RIO")
@@ -24,34 +25,68 @@ library(magrittr)
 # calculate weekly returns
     objects <- list(`RDS-A`, HSBA.L, BP.L, VOD.L, GSK.L, BTI, SAB.L, DGE.L, BG.L, RIO.L)
     returns <- lapply(objects, weeklyReturn)
+    
+# combine in to single data frame with tidy names    
     returns_data <- lapply(returns, data.frame) %>% 
                     bind_cols %>% 
                     setNames(symbols)
     names(returns_data) <- make.names(names(returns_data))
     
-    rdsa_wr <- weeklyReturn(`RDS-A`)
-    hsba_wr <- weeklyReturn(HSBA.L)
-    bp_wr <- weeklyReturn(BP.L)
-    vod_wr <- weeklyReturn(VOD.L)
-    gsk_wr <- weeklyReturn(GSK.L)
-    bti_wr <- weeklyReturn(BTI)
-    sab_wr <- weeklyReturn(SAB.L)
-    dge_wr <- weeklyReturn(DGE.L)
-    bg_wr <- weeklyReturn(BG.L)
-    rio_wr <- weeklyReturn(RIO.L)
+# calculate mean returns  
+    avg_returns <- apply(returns_data, 2, mean)
     
-# combine in to table
-    returns <- data_frame(rdsa = rdsa_wr %>% as.numeric(),
-                          hsba = hsba_wr %>% as.numeric(),
-                          bp = bp_wr %>% as.numeric(),
-                          vod = vod_wr %>% as.numeric(),
-                          gsk = gsk_wr %>% as.numeric(),
-                          bti = bti_wr %>% as.numeric(),
-                          sab = sab_wr %>% as.numeric(),
-                          dge = dge_wr %>% as.numeric(),
-                          bg = bg_wr %>% as.numeric(),
-                          rio = rio_wr %>% as.numeric())    
+# calcuate return covariances
+    covars <- cov(returns_data)
     
+# Markovitz problems -----------------------------------------------------------    
+# define a utlity function to normalise a vector
+    norm <- function(vector){
+        return(vector/sum(vector))
+    }
+    
+# define a function to calculate expected variance and return
+    get_return_and_variance <- function(n_stocks, expected_returns, covariances){
+        # generate a set of random choices in matrix form
+        choices <- seq(0, 1, by = 0.01) %>% sample(n_stocks) %>% norm %>% matrix
+        
+        # calculate portfolio variance
+        var <- t(choices) %*% covariances %*% choices
+        
+        # calculate expected returns
+        ret <- t(expected_returns) %*% choices
+        
+        return(list("variance" = var, "returns" = ret))
+}
+    
+n_stocks <- ncol(returns_data)
+expected_returns <- matrix(avg_returns)
+covariances <- covars
 
-    avg_returns <- apply(returns, 2, mean)
+iters <- 10000
+
+sims <- sapply(1:iters, 
+               function(x) get_return_and_variance(n_stocks, 
+                                                   expected_returns, 
+                                                   covariances)) %>% 
+        t %>% 
+        data.frame() %>% 
+        apply(2, as.numeric) %>% 
+        data.frame()
+
+# plot efficient frontier
+    ggplot(sims, aes(x = variance, y = returns)) +
+        geom_point() +
+        xlab("Risk") +
+        ylab("Return")
+
+   
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
