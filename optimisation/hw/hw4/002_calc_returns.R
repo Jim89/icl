@@ -1,7 +1,6 @@
 # load packages define some utility functions and get the data------------------
 library(dplyr)
-library(magrittr)
-library(ggplot2)
+library(quadprog)
 
 
 # define a utlity function to normalise a vector
