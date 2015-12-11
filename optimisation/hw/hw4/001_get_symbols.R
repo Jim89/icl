@@ -35,9 +35,10 @@ library(ggplot2)
 # prepare data -----------------------------------------------------------------    
 # calculate weekly returns
     objects <- list(`RDS-A`, HSBA.L, BP.L, VOD.L, GSK.L, BTI, SAB.L, DGE.L, BG.L, RIO.L)
-    weekly <- lapply(objects, to.weekly)
-    weekly_dfs <- lapply(weekly, data.frame)
-    returns <- lapply(weekly_dfs, get_returns)
+     returns <- lapply(objects, weeklyReturn)
+#     weekly <- lapply(objects, to.weekly)
+#     weekly_dfs <- lapply(weekly, data.frame)
+#     returns <- lapply(weekly_dfs, get_returns)
     
 
 # combine in to single data frame with tidy names    
