@@ -56,7 +56,7 @@ def dijkstra(graph_dict, start, end):
     distances[start] = 0
     
     # as long as there are still nodes to assess:
-    while len(sp_set) < len(graph_nodes):
+    while len(sp_set) < len(to_assess):
         # chop out any nodes with a permament label
         still_in = { node: distances[node] for node in [node for node in to_assess if node not in sp_set] }
         # find the closest node to the current node
@@ -106,7 +106,7 @@ data = pd.read_table("../data/HW1_4.txt",
 # dijkstra function
 import networkx as nx
 graph = nx.from_pandas_dataframe(data, 'vx', 'vy', 'weight')
-graph_nodes = graph.nodes()
+# graph_nodes = graph.nodes()
 graph_dict = nx.to_dict_of_dicts(graph)
 
 # %% run the functions
