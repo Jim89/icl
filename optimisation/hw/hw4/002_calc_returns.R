@@ -1,3 +1,28 @@
+# load packages define some utility functions and get the data------------------
+library(dplyr)
+library(magrittr)
+library(ggplot2)
+
+
+# define a utlity function to normalise a vector
+    norm <- function(vector){
+        return(vector/sum(vector))
+    }
+
+# define function to calculate returns using only adjusted close
+    get_returns <- function(fin_data){
+        closes <- fin_data[, 6]
+        closes <- as.numeric(closes)
+        periods <- length(closes)
+        returns <- sapply(2:periods, 
+                          function(x) (closes[x] - closes[x-1])/closes[x-1])
+        return(returns)
+    }     
+
+stocks <- list("RDS-A", "HSBA.L", "BP.L", "VOD.L", "GSK.L", "BTI", "SAB.L", "DGE.L", "BG.L", "RIO.L")    
+if (sum(stocks %in% ls()) != length(stocks)) {
+    source("hw/hw4/001_get_symbols.R")
+}
 
 # prepare data -----------------------------------------------------------------    
 # calculate weekly returns
@@ -21,10 +46,7 @@ avg_returns <- apply(returns_data, 2, mean)
 covars <- cov(returns_data)
 
 # Markovitz problems -----------------------------------------------------------    
-# define a utlity function to normalise a vector
-norm <- function(vector){
-    return(vector/sum(vector))
-}
+
 
 # define a function to calculate expected variance and return
 get_return_and_variance <- function(n_stocks, expected_returns, covariances){
