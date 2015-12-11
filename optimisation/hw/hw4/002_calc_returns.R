@@ -27,16 +27,16 @@ if (sum(stocks %in% ls()) != length(stocks)) {
 # prepare data -----------------------------------------------------------------    
 # calculate weekly returns
 objects <- list(`RDS-A`, HSBA.L, BP.L, VOD.L, GSK.L, BTI, SAB.L, DGE.L, BG.L, RIO.L)
-returns <- lapply(objects, weeklyReturn)
-#     weekly <- lapply(objects, to.weekly)
-#     weekly_dfs <- lapply(weekly, data.frame)
-#     returns <- lapply(weekly_dfs, get_returns)
+# returns <- lapply(objects, weeklyReturn)
+    weekly <- lapply(objects, to.weekly)
+    weekly_dfs <- lapply(weekly, data.frame)
+    returns <- lapply(weekly_dfs, get_returns)
 
 
 # combine in to single data frame with tidy names    
 returns_data <- lapply(returns, data.frame) %>% 
     bind_cols %>% 
-    setNames(symbols)
+    setNames(stocks)
 names(returns_data) <- make.names(names(returns_data))
 
 # calculate mean returns  
@@ -46,8 +46,6 @@ avg_returns <- apply(returns_data, 2, mean)
 covars <- cov(returns_data)
 
 # Markovitz problems -----------------------------------------------------------    
-
-
 # define a function to calculate expected variance and return
 get_return_and_variance <- function(n_stocks, expected_returns, covariances){
     # generate a set of random choices in matrix form
