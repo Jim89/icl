@@ -20,12 +20,26 @@ library(ggplot2)
                  "RIO.L")
 # get them    
     getSymbols(symbols, from = "2013-01-01")
+    
+    
+# define function to calculate returns using only adjusted close
+    get_returns <- function(fin_data){
+        closes <- fin_data[, 6]
+        closes <- as.numeric(closes)
+        periods <- length(closes)
+        returns <- sapply(2:periods, 
+                          function(x) (closes[x] - closes[x-1])/closes[x-1])
+        return(returns)
+    }        
 
 # prepare data -----------------------------------------------------------------    
 # calculate weekly returns
     objects <- list(`RDS-A`, HSBA.L, BP.L, VOD.L, GSK.L, BTI, SAB.L, DGE.L, BG.L, RIO.L)
-    returns <- lapply(objects, weeklyReturn)
+    weekly <- lapply(objects, to.weekly)
+    weekly_dfs <- lapply(weekly, data.frame)
+    returns <- lapply(weekly_dfs, get_returns)
     
+
 # combine in to single data frame with tidy names    
     returns_data <- lapply(returns, data.frame) %>% 
                     bind_cols %>% 
@@ -81,8 +95,8 @@ sims <- sapply(1:iters,
 
    
     
-    
-    
+
+
     
     
     
