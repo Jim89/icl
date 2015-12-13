@@ -124,6 +124,8 @@ covars %>%
 
 ## Section C - The Efficient Frontier
 
+(Note that all the code used to perform the analyses discussed here can be found in the attached file `efficient_frontier.R`)
+
 The Markowitz problem can be interpretted as a specific case of the more general class of _quadratic program_ problems^1, 2^. In quadratic programming, the objective function is a convex quadratic equation that is subject to _linear_ constraints. 
 
 The "classic" Markowitz problem for finding the minimum variance portfolio is given by \eqref{eq:mark}.
@@ -182,7 +184,12 @@ The matrices for $\mu$ and $\Sigma$ have been defined in section B (they are the
 
 Performing the necessary matrix multiplication it can be seen that these matrices would enforce the constraints as listed. 
 
-Using a generic quadratic problem solver in `R`, a series of Markowitz problems were solved for this collection of 10 stocks. Having done so, the return/risk efficient frontier curve was plotted for a range of portfolio compositions and is presented below.
+A generic quadratic problem solver in the `R` package `quadprog` can be used to solve this program. However it is also necessary to generate an efficient frontier, which requires evaluating the solution to this program at a range of $\underline{R}$ values. i.e. for a range of desired returns. In order to do so, the vector of expected returns $\mu$ can be multiplied by some factor that models this. For example, if $\mu$ is multiplied by 0 then the first term \eqref{eq:quad} dissapears, and the solver will simply return the minimum risk portfolio. Similarly, if $\mu$ is multiplied by some very large number, then the solver will return a higher-risk portfolio. 
+
+This was performed in R using an iterative approach, solving the quadratic program a number of times in order to find the portfolio for a range of returns values. The multiplication factor of $\mu$  ranged from 0 (i.e. finding the minimum risk portfolio) to 10 (finding a portfolio with much higher returns) using increments of 0.001. In all this represents 10,001 possible portfolio combinations.
+
+Having found the optimal solution for each of these 10,001 returns values, the return/risk efficient frontier curve was plotted for a range of portfolio compositions and is presented below. Note that Portfolio risk is measured by the variance of the portfolio, $x^T\Sigma x$ and both return and risk are weekly values.
+
 
 ```{r c_solve, echo = FALSE, fig.height=6, fig.width=10}
 source("../code/002_calc_returns.R")
