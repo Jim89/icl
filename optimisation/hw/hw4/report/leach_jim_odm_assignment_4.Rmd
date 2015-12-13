@@ -11,7 +11,7 @@ The purpose of this document is to write up the response to the fourth assignmen
 
 ### Supplementary Note
 
-The optimisation step of this assignment was solved using a generic quadratic programming solver available in the R language (`solve.QP`). I discussed using R with Professor Weisemann and he said it was acceptable as long as I was using a generic solver and not a bespoke function for the Markovitz model. As I have used a generic solver, I have adhered to this restriction.
+The optimisation step of this assignment was solved using a generic quadratic programming solver available in the R language (`solve.QP`). I discussed using R with Professor Weisemann and he said it was acceptable as long as I was using a generic solver and not a bespoke function for the Markovitz model. As I have used a generic solver (as opposed to a pre-built mean-variance portfolio solver) I have adhered to this restriction.
 
 ***
 ```{r load_pckgs, echo=FALSE, message=FALSE}
@@ -59,9 +59,9 @@ stocks <- data.frame(co = c("Royal Dutch Shell",
 kable(stocks, col.names = c("Company Name", "Ticker", "Sector"))
 ```
 
-Data were extracted going back to 2014-01-01 (i.e. the last two years of data) and it was ensured that the "Adjusted Close" data were extracted in order to account for dividends and stock splits. These data are presented as tables in Appendix 1.
+Data were extracted going back to 2013-01-01 (i.e. the last two years of data) and it was ensured that the "Adjusted Close" data were extracted in order to account for dividends and stock splits. These data are presented as tables in Appendix 1.
 
-```{r A_get_prices, echo = FALSE, message = FALSE, cache = FALSE}
+```{r A_get_prices, echo = FALSE, message = FALSE}
 source("../code/001_get_symbols.R")
 ```
 
@@ -124,11 +124,115 @@ covars %>%
 
 ## Section C - The Efficient Frontier
 
-```{r c_solve, echo = FALSE, fig.height=6, fig.width=6}
+The Markowitz problem can be interpretted as a specific case of the more general class of _quadratic program_ problems^1, 2^. In quadratic programming, the objective function is a convex quadratic equation that is subject to _linear_ constraints. 
+
+The "classic" Markowitz problem for finding the minimum variance portfolio is given by \eqref{eq:mark}.
+
+\begin{equation} \label{eq:mark}
+\begin{split}
+\min x^T\Sigma x \\
+\text{s.t:} \\
+e^T x = 1 \\
+\mu^T x \geq \underline{R} \\
+x \geq 0
+\end{split}
+\end{equation}
+
+This equation can be reformulated to the general quadratic program \eqref{eq:quad}.
+
+\begin{equation} \label{eq:quad}
+\begin{split}
+\min -\mu^T x + \frac{1}{2}x^T\Sigma x \\
+\text{s.t:} \\
+A^T x \geq b_0
+\end{split}
+\end{equation}
+
+In these equation, $x$ is the vector of the decision variables - i.e. the proportion of each stock to purchase, $\mu$ is a vector of expected returns for each stock, $\Sigma$ is a matrix of the covariance of the returns between all stocks, $A$ is a matrix defining the constraints and $b_0$ is a vector that defines the right-hand-side of the constraints. 
+
+Given that there are ten stocks to be chosen from: $\mu$ has dimensions $10x1$ (1 expected return for each stock) and $\Sigma$ has dimensions $10x10$ (each stocks' returns against the others, including itself). 
+
+The constraints are such that the proportions of each stock purchased must sum to 1 (referred to as the "proportionality constraint") and additionally we cannot short sell (i.e. we cannot have a negative amount of a stock in our portfolio). Therefore the matrix $A$ has dimensions $10x11$ (1 row for each stock, 1 column that defines the proportionality constraint and 10 columns that define the no short selling constraints). The vector $b_0$ is of length 11 (1 value for the proportionality constraint and 10 values for no-short-selling on each stock)
+
+The matrices for $\mu$ and $\Sigma$ have been defined in section B (they are the mean weekly returns and the covariances, respectively). The constraint matrix and vector, $A$ and $b_0$ are defined as:
+
+#### A
+
+\setcounter{MaxMatrixCols}{20}
+\[
+\begin{pmatrix}
+1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0  \\
+1 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0  \\
+1 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0  \\
+1 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0  \\
+1 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0  \\
+1 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0  \\
+1 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0  \\
+1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0  \\
+1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0  \\
+1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1  
+\end{pmatrix}
+\]
+
+#### $b_0$
+
+\[
+\begin{pmatrix} 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \end{pmatrix}
+\]
+
+Performing the necessary matrix multiplication it can be seen that these matrices would enforce the constraints as listed. 
+
+Using a generic quadratic problem solver in `R`, a series of Markowitz problems were solved for this collection of 10 stocks. Having done so, the return/risk efficient frontier curve was plotted for a range of portfolio compositions and is presented below.
+
+```{r c_solve, echo = FALSE, fig.height=6, fig.width=10}
 source("../code/002_calc_returns.R")
 source("../code/003_plots.R")
 frontier
 ```
+
+From the results set, 3 portfolios were then selected (and are additionally marked on the efficient frontier graph). These portfolios are as follows:
+
+### Low-Risk, Low-Return
+
+Presented below is a low-risk, low-return portfolio composition with its associated variance (risk) and return. The values of each stock show the percentage volume of that stock in the portfolio.
+
+```{r show_low, echo = FALSE, fig.height=6, fig.width=10}
+cbind(round(low[, 1:10]*100, 2), low[, 11], low[, 12]) %>% 
+kable(col.names = c(names(low)[1:10], "Variance (Risk)", "Returns"), 
+      digits = 5)
+low_plot
+```
+
+### Medium-Risk, Medium-Return
+
+Presented below is a medium-risk, medium-return portfolio composition with its associated variance (risk) and return. The values of each stock show the percentage volume of that stock in the portfolio.
+
+```{r show_med, echo = FALSE, fig.height=6, fig.width=10}
+cbind(round(med[, 1:10]*100, 2), med[, 11], med[, 12]) %>% 
+kable(col.names = c(names(low)[1:10], "Variance (Risk)", "Returns"), 
+      digits = 5)
+med_plot
+```
+
+
+### High-Risk, High-Return
+
+Presented below is a high-risk, high-return portfolio composition with its associated variance (risk) and return. The values of each stock show the percentage volume of that stock in the portfolio.
+
+```{r show_high, echo = FALSE, fig.height=6, fig.width=10}
+cbind(round(high[, 1:10]*100, 2), high[, 11], high[, 12]) %>% 
+kable(col.names = c(names(low)[1:10], "Variance (Risk)", "Returns"), 
+      digits = 5)
+high_plot
+```
+
+## Section D - Limited allocations per sector
+
+If the portfolio was limited to allow only one stock to be chosen from each sector, then it would be necessary to add a further constraint to this model. This can be modelled by \eqref{eq:limit}.
+
+\begin{equation} \label{eq:limit}
+\underline{x}_J \leq \sum_{i \in J}x_i \leq \bar{x}_J
+\end{equation}
 
 # Appendices
 
@@ -219,3 +323,9 @@ kable(weekly_dfs[10], col.names = c("Open", "High", "Low", "Close", "Volume", "A
 ```{r app_b_weekly_returns, echo = FALSE, message = FALSE}
 kable(returns_data, digits = 4)
 ```
+
+# References
+
+1. http://www.princeton.edu/~rvdb/542/lectures/lec17.pdf - sourced 2015-12-13
+2. http://www.rinfinance.com/RinFinance2009/presentations/yollin_slides.pdf  - sourced 2015-12-13
+3. http://www.javaquant.net/papers/GoldfarbIdnani.pdf - sourced 2015-12-13 
