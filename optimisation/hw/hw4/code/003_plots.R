@@ -8,7 +8,7 @@ if ( !("results" %in% ls()) ) {
 
 # grab 3 portfolios ------------------------------------------------------------
 low <- results %>% filter(returns == min(results$returns))
-med <- results %>% slice(75)
+med <- results %>% slice(100)
 high <- results %>% filter(returns == max(results$returns))
 
 # make some plots --------------------------------------------------------------
@@ -25,9 +25,9 @@ show_proportions <- function(data) {
               text=element_text(color = "black"))
 }    
 
-low_plot <- show_proportions(low[, 1:10]) + ylim(0, 25)
-med_plot <- show_proportions(med[, 1:10]) + ylim(0, 45)
-high_plot <- show_proportions(high[, 1:10]) + ylim(0, 60)
+low_plot <- show_proportions(low[, 1:10]) 
+med_plot <- show_proportions(med[, 1:10]) 
+high_plot <- show_proportions(high[, 1:10]) 
 
 frontier <- ggplot(results, aes(x = variance, y = returns)) + 
             geom_point(alpha = .35, color = "steelblue") +
@@ -35,25 +35,38 @@ frontier <- ggplot(results, aes(x = variance, y = returns)) +
                                             to = max(results$variance),
                                             by = 0.00005)) +
             # add low risk point
-            geom_point(data = low, aes(x = variance, y = returns), size = 3.5, colour = "firebrick") +
+            geom_point(data = low, 
+                       aes(x = variance, y = returns), 
+                       size = 3.5, 
+                       colour = "firebrick",
+                       alpha = .75) +
             annotate(geom = "text",
                      label = "Min-Risk/Min-Return\n Portfolio", 
-                      x = low$variance + 0.00004,
-                      y = low$returns - 0.00001) +
+                      x = low$variance + 0.000125,
+                      y = low$returns + 0.0001) +
             # add medium risk point
-            geom_point(data = med, aes(x = variance, y = returns), size = 3.5, colour = "firebrick") +
+            geom_point(data = med, 
+                       aes(x = variance, y = returns), 
+                       size = 3.5, 
+                       colour = "firebrick",
+                       alpha = .75) +
             annotate(geom = "text",
                      label = "Medium-Risk/\nMedium-Return\n Portfolio", 
-                     x = med$variance + 0.000015,
+                     x = med$variance + 0.000095,
                      y = med$returns - 0.00035) +    
             # add high risk point
-            geom_point(data = high, aes(x = variance, y = returns), size = 3.5, colour = "firebrick") +
+            geom_point(data = high, 
+                       aes(x = variance, y = returns), 
+                       size = 3.5, 
+                       colour = "firebrick",
+                       alpha = .75) +
             annotate(geom = "text",
                      label = "High-Risk/\nHigh-Return\n Portfolio", 
-                     x = high$variance - 0.000015,
-                     y = high$returns - 0.00035) +
+                     x = high$variance - 0.000025,
+                     y = high$returns - 0.0005) +
             ggtitle("Efficient Frontier") +
             labs(x="Portfolio Risk", y = "Portfolio Return") +
             theme(panel.background=element_rect(fill="white"),
                   text=element_text(color = "black"),
-                  plot.title=element_text(size=24, color="black"))
+                  plot.title=element_text(size=24, color="black"),
+                  axis.text.x = element_text(angle = -90))
