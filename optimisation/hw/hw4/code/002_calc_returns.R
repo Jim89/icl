@@ -18,14 +18,14 @@ library(quadprog)
         return(returns)
     }     
 
-stocks <- list("RDS-A", "HSBA.L", "BP.L", "VOD.L", "GSK.L", "BTI", "SAB.L", "DGE.L", "BG.L", "RIO.L")    
+stocks <- list("RDSA.L", "HSBA.L", "BP.L", "VOD.L", "GSK.L", "BATS.L", "SAB.L", "DGE.L", "BG.L", "RIO.L")    
 if (sum(stocks %in% ls()) != length(stocks)) {
     source("hw/hw4/001_get_symbols.R")
 }
 
 # prepare data -----------------------------------------------------------------    
 # calculate weekly returns
-objects <- list(`RDS-A`, HSBA.L, BP.L, VOD.L, GSK.L, BTI, SAB.L, DGE.L, BG.L, RIO.L)
+objects <- list(RDSA.L, HSBA.L, BP.L, VOD.L, GSK.L, BATS.L, SAB.L, DGE.L, BG.L, RIO.L)
 # returns <- lapply(objects, weeklyReturn)
     weekly <- lapply(objects, to.weekly)
     weekly_dfs <- lapply(weekly, data.frame)

@@ -29,7 +29,7 @@ low_plot <- show_proportions(low[, 1:10]) + ylim(0, 25)
 med_plot <- show_proportions(med[, 1:10]) + ylim(0, 45)
 high_plot <- show_proportions(high[, 1:10]) + ylim(0, 60)
 
-fontier <- ggplot(results, aes(x = variance, y = returns)) + 
+frontier <- ggplot(results, aes(x = variance, y = returns)) + 
             geom_point(alpha = .35, color = "steelblue") +
             scale_x_continuous(breaks = seq(from = 0, 
                                             to = max(results$variance),
