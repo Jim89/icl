@@ -7,7 +7,215 @@ output: pdf_document
 
 # Document Purpose
 
-
-
+The purpose of this document is to write up the response to the fourth assignment give as part of the _Optimistaion and Decision Models_ module. It is divided in to sections, one for each question in the assignment.
 
 ### Supplementary Note
+
+The optimisation step of this assignment was solved using a generic quadratic programming solver available in the R language (`solve.QP`). I discussed using R with Professor Weisemann and he said it was acceptable as long as I was using a generic solver and not a bespoke function for the Markovitz model. As I have used a generic solver, I have adhered to this restriction.
+
+***
+```{r load_pckgs, echo=FALSE, message=FALSE}
+library(quantmod)
+library(dplyr)
+library(knitr)
+```
+
+# Markovitz Portfolio Optimisation
+
+## Section A - Weekly price data
+
+Price data for the following 10 stocks was downloaded from Yahoo finance using the `quantmod` package for R. 
+
+```{r A_show_stocks, echo = FALSE}
+stocks <- data.frame(co = c("Royal Dutch Shell",
+                            "HSBC",
+                            "BP",
+                            "Vodafone Group",
+                            "GlaxoSmithKline",
+                            "British American Tobacco",
+                            "SABMiller",
+                            "Diageo",
+                            "BG Group",
+                            "Rio Tinto Group"),
+                     ticker = c("RDSA",
+                                "HSBA",
+                                "BP",
+                                "VOD",
+                                "GSK",
+                                "BTI",
+                                "SAB",
+                                "DGE",
+                                "BG",
+                                "RIO"),
+                     sector = c("Oil & Gas",
+                                "Banking",
+                                "Oil & Gas",
+                                "Telecomms",
+                                "Pharmaceuticals",
+                                "Tobacco",
+                                rep("Beverages",2),
+                                "Oil & Gas",
+                                "Mining"))
+kable(stocks, col.names = c("Company Name", "Ticker", "Sector"))
+```
+
+Data were extracted going back to 2014-01-01 (i.e. the last two years of data) and it was ensured that the "Adjusted Close" data were extracted in order to account for dividends and stock splits. These data are presented as tables in Appendix 1.
+
+```{r A_get_prices, echo = FALSE, message = FALSE, cache = FALSE}
+source("../code/001_get_symbols.R")
+```
+
+***
+
+## Section B - Weekly Returns
+
+The weekly returns were calculated from adjusted closing price using \eqref{eq:returns}.
+
+\begin{equation} \label{eq:returns}
+Return = \dfrac{Close_i - Close_{i-1}}{Close_{i-1}}
+\end{equation}
+
+Where $Close_i$ represents the adjusted (weekly) closing price in week $i$. A full set of the weekly returns data is presented in Appendix B.
+
+The mean weekly returns were calculated for each stock and the results are presented below.
+
+```{r A_mean_returns, echo = FALSE, message = FALSE}
+get_returns <- function(fin_data){
+    closes <- fin_data[, 6]
+    closes <- as.numeric(closes)
+    periods <- length(closes)
+    returns <- sapply(2:periods, 
+                      function(x) (closes[x] - closes[x-1])/closes[x-1])
+    return(returns)
+}  
+
+objects <- list(RDSA.L, HSBA.L, BP.L, VOD.L, GSK.L, BATS.L, SAB.L, DGE.L, BG.L, RIO.L)
+# returns <- lapply(objects, weeklyReturn)
+    weekly <- lapply(objects, to.weekly)
+    weekly_dfs <- lapply(weekly, data.frame)
+    returns <- lapply(weekly_dfs, get_returns)
+stocks <- list("RDSA.L", "HSBA.L", "BP.L", "VOD.L", "GSK.L", "BATS.L", "SAB.L", "DGE.L", "BG.L", "RIO.L") 
+
+# combine in to single data frame with tidy names    
+returns_data <- lapply(returns, data.frame) %>% 
+    bind_cols %>% 
+    setNames(stocks)
+names(returns_data) <- make.names(names(returns_data))
+
+# calculate mean returns  
+avg_returns <- apply(returns_data, 2, mean)
+avg_returns %>% 
+    data.frame() %>% 
+    # t() %>% 
+    kable(row.names = NA, digits = 6, format.args = list(scientific = FALSE),
+          col.names = "Mean Weekly Return")
+```
+
+Similarly, the covariances of the returns between all pairs of stocks were calculated, and the results are presented below.
+
+```{r B_cov, echo = FALSE}
+covars <- cov(returns_data)
+covars %>% 
+    data.frame() %>% 
+    kable(digits = 5)
+```
+
+***
+
+## Section C - The Efficient Frontier
+
+```{r c_solve, echo = FALSE, fig.height=6, fig.width=6}
+source("../code/002_calc_returns.R")
+source("../code/003_plots.R")
+frontier
+```
+
+# Appendices
+
+## Appendix One - Weekly Price Data
+
+### Royal Dutch Shell
+
+```{r show_rds, echo = FALSE}
+kable(weekly_dfs[1], col.names = c("Open", "High", "Low", "Close", "Volume", "Adjusted Close"))
+```
+
+***
+
+### HSBC
+
+```{r show_hsbc, echo = FALSE}
+kable(weekly_dfs[2], col.names = c("Open", "High", "Low", "Close", "Volume", "Adjusted Close"))
+```
+
+***
+
+### BP
+
+```{r show_bp, echo = FALSE}
+kable(weekly_dfs[3], col.names = c("Open", "High", "Low", "Close", "Volume", "Adjusted Close"))
+```
+
+***
+
+### Vodafone
+
+```{r show_vod, echo = FALSE}
+kable(weekly_dfs[4], col.names = c("Open", "High", "Low", "Close", "Volume", "Adjusted Close"))
+```
+
+***
+
+### GlaxoSmithKline
+
+```{r show_gsk, echo = FALSE}
+kable(weekly_dfs[5], col.names = c("Open", "High", "Low", "Close", "Volume", "Adjusted Close"))
+```
+
+***
+
+### British American Tobacco
+
+```{r show_bti, echo = FALSE}
+kable(weekly_dfs[6], col.names = c("Open", "High", "Low", "Close", "Volume", "Adjusted Close"))
+```
+
+***
+
+### SABMiller
+
+```{r show_sab, echo = FALSE}
+kable(weekly_dfs[7], col.names = c("Open", "High", "Low", "Close", "Volume", "Adjusted Close"))
+```
+
+***
+
+### Diageo
+
+```{r show_diag, echo = FALSE}
+kable(weekly_dfs[8], col.names = c("Open", "High", "Low", "Close", "Volume", "Adjusted Close"))
+```
+
+***
+
+### BG Group
+
+```{r show_bg, echo = FALSE}
+kable(weekly_dfs[9], col.names = c("Open", "High", "Low", "Close", "Volume", "Adjusted Close"))
+```
+
+***
+
+### Rio Tinto
+
+```{r show_rio, echo = FALSE}
+kable(weekly_dfs[10], col.names = c("Open", "High", "Low", "Close", "Volume", "Adjusted Close"))
+```
+
+***
+
+## Appendix B - Weekly Returns
+
+```{r app_b_weekly_returns, echo = FALSE, message = FALSE}
+kable(returns_data, digits = 4)
+```
