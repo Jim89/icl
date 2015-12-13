@@ -59,7 +59,7 @@ Amat <- cbind(1, diag(n))
 bvec <- c(1, rep(0, n))
 
 # set parameters
-risk_upper_bound <- 1
+risk_upper_bound <- 10
 risk_increment <- 0.001
 
 # combinations for return risk premium
