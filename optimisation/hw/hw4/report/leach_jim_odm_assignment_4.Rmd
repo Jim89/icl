@@ -59,7 +59,7 @@ stocks <- data.frame(co = c("Royal Dutch Shell",
 kable(stocks, col.names = c("Company Name", "Ticker", "Sector"))
 ```
 
-Data were extracted going back to 2013-01-01 (i.e. the last two years of data) and it was ensured that the "Adjusted Close" data were extracted in order to account for dividends and stock splits. These data are presented as tables in Appendix 1.
+Data were extracted going back to 2013-12-01 (i.e. the last two years of data) and it was ensured that the "Adjusted Close" data were extracted in order to account for dividends and stock splits. These data are presented as tables in Appendix 1.
 
 ```{r A_get_prices, echo = FALSE, message = FALSE}
 source("../code/001_get_symbols.R")
@@ -126,7 +126,7 @@ covars %>%
 
 (Note that all the code used to perform the analyses discussed here can be found in the attached file `efficient_frontier.R`)
 
-The Markowitz problem can be interpretted as a specific case of the more general class of _quadratic program_ problems^1, 2^. In quadratic programming, the objective function is a convex quadratic equation that is subject to _linear_ constraints. 
+The Markowitz problem can be interpretted as a specific case of the more general class of _quadratic program_ problems^1^^,^^2^. In quadratic programming, the objective function is a convex quadratic equation that is subject to linear constraints. 
 
 The "classic" Markowitz problem for finding the minimum variance portfolio is given by \eqref{eq:mark}.
 
@@ -184,7 +184,9 @@ The matrices for $\mu$ and $\Sigma$ have been defined in section B (they are the
 
 Performing the necessary matrix multiplication it can be seen that these matrices would enforce the constraints as listed. 
 
-A generic quadratic problem solver in the `R` package `quadprog` can be used to solve this program. However it is also necessary to generate an efficient frontier, which requires evaluating the solution to this program at a range of $\underline{R}$ values. i.e. for a range of desired returns. In order to do so, the vector of expected returns $\mu$ can be multiplied by some factor that models this. For example, if $\mu$ is multiplied by 0 then the first term \eqref{eq:quad} dissapears, and the solver will simply return the minimum risk portfolio. Similarly, if $\mu$ is multiplied by some very large number, then the solver will return a higher-risk portfolio. 
+A generic quadratic problem solver in the `R` package `quadprog` can be used to solve this program. However it is also necessary to generate an efficient frontier, which requires evaluating the solution to this program at a range of $\underline{R}$ values (or in the case of the quadratic program, at a range of $\mu$ values), i.e. for a range of desired returns. 
+
+In order to do so, the vector of expected returns $\mu$ can be multiplied by some factor that models this. For example, if $\mu$ is multiplied by 0 then the first term \eqref{eq:quad} dissapears, and the solver will simply return the minimum risk portfolio. Similarly, if $\mu$ is multiplied by some very large number, then the solver will return a higher-risk portfolio. 
 
 This was performed in R using an iterative approach, solving the quadratic program a number of times in order to find the portfolio for a range of returns values. The multiplication factor of $\mu$  ranged from 0 (i.e. finding the minimum risk portfolio) to 10 (finding a portfolio with much higher returns) using increments of 0.001. In all this represents 10,001 possible portfolio combinations.
 
@@ -194,7 +196,7 @@ Having found the optimal solution for each of these 10,001 returns values, the r
 ```{r c_solve, echo = FALSE, fig.height=6, fig.width=10}
 source("../code/002_calc_returns.R")
 source("../code/003_plots.R")
-frontier
+frontier_with_ports
 ```
 
 From the results set, 3 portfolios were then selected (and are additionally marked on the efficient frontier graph). These portfolios are as follows:
@@ -231,6 +233,14 @@ cbind(round(high[, 1:10]*100, 2), high[, 11], high[, 12]) %>%
 kable(col.names = c(names(low)[1:10], "Variance (Risk)", "Returns"), 
       digits = 5)
 high_plot
+```
+
+### Single-Stock Portfolios
+
+Additionally, the efficient frontier can also be plotted with ten additional points showing the return/risk profile for portfolios containing a single stock. It can be seen that all but one of the stocks (SABMiller) are dominated by the efficient frontier.
+
+```{r show_eff_with_single_stock, echo = FALSE, fig.height=6, fig.width=10}
+frontier_with_stocks
 ```
 
 ## Section D - Limited allocations per sector
