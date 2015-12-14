@@ -34,11 +34,11 @@ There are many models of matching that are possible:
 * Matching with preferences - each side ranks the other in terms of preference and we seek a "stable" matching;
 * Online matching (stochastic) - matching where each node on the other side appears one after the other, e.g. ad-matching in real time.
 
-## Bipartite graphs and simple matching
+## Bipartite graphs and matching
 
 We generally will seek to find an optimial assignment or "matching". In this case, each node $i$ in one side of the graph has an edge to a node on the other side $j$ with some weight/value, denoted $v_{ij}$
 
-One possible solution to this problem is to use linear programming (or other combinatorial algorithm). If $A$ is the node-edge incidence matrix of a bipartite graph then we can formulate this as:
+One possible solution to this problem is to use linear programming (or other combinatorial algorithm). If $A$ is the node-edge incidence matrix of a bipartite graph then we can formulate this as an optimisation program where we seek to maximise the sum of the weights on the edges.
 
 \begin{equation}
 \begin{split}
@@ -60,4 +60,7 @@ This can also be seen as a min-cost flow problem. If:
 
 Then the min-cost flow problem can be solved using the weights on the edges ($v_{ij}$) to send n-unit(s) of flow from the source to the sink node (where n is the number of nodes on each side of the bipartite graph).
 
+## Simple matching - finding the maximum size matching
+
+Often we might seek to find a maximum-size matching
 
