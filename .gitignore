@@ -5,8 +5,10 @@ admin/
 vldm/docs/*.pdf
 vldm/notes/*.pdf
 vldm/assigments/*/*.pdf
+vldm/assigments/*/*/*.pdf
 vldm/lectures/*.pdf
 vldm/assigments/a3/aws_key/ec2key_frankfurt.pem
+vldm/assigments/a4/aws_key/ec2key_frankfurt.pem
 
 # ignore for induction courses
 induction/statsIntro/docs/*.pdf
