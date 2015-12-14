@@ -18,16 +18,16 @@ get_returns <- function(fin_data){
 
 # get data----------------------------------------------------------------------
 # set up list of symbols to get
-symbols <- c("RDSA.L", 
-             "HSBA.L", 
-             "BP.L", 
-             "VOD.L", 
-             "GSK.L", 
-             "BATS.L", 
-             "SAB.L", 
-             "DGE.L", 
-             "BG.L", 
-             "RIO.L")
+symbols <- c("RDSA.L", # Royal Dutch Shell
+             "HSBA.L", # HSBC
+             "BP.L",   # BP
+             "VOD.L",  # Vodafone
+             "GSK.L",  # GlaxoSmithKline
+             "BATS.L", # British American Tobacco
+             "SAB.L",  # SABMiller
+             "DGE.L",  # Diageo
+             "BG.L",   # BG Group
+             "RIO.L")  # Rio Tinto
 # get them    
 getSymbols(symbols, from = "2014-01-01", src = "yahoo")
 
@@ -43,7 +43,7 @@ returns <- lapply(weekly_dfs, get_returns) # use defined function to get returns
 # combine in to single data frame with tidy names    
 returns_data <- lapply(returns, data.frame) %>% 
                 bind_cols() %>% 
-                setNames(stocks)
+                setNames(symbols)
 names(returns_data) <- make.names(names(returns_data))
 
 # calculate mean returns (i.e. mu) 
@@ -74,7 +74,7 @@ premiums <- seq(from = 0, to = risk_upper_bound, by = risk_increment)
 results <- matrix(nrow = length(premiums), ncol = n + 2) 
 
 # set the names on the results tbl
-colnames(results) <- c(stocks, "variance", "returns")
+colnames(results) <- c(symbols, "variance", "returns")
 
 # counter to keep track of iterations
 iter <- 1
@@ -109,9 +109,32 @@ for (i in premiums) {
 results <- data.frame(results)
  
 # grab 3 portfolios ------------------------------------------------------------
-low <- results %>% filter(returns == min(results$returns))  # low risk/return
+low <- results %>% filter(returns >= 0) %>% slice(1) # low risk/return
 med <- results %>% slice(100)                               # med risk/return
 high <- results %>% filter(returns == max(results$returns)) # high risk/return
+
+# get individual stock results -------------------------------------------------
+# set up structure to hold results
+single_stocks <- matrix(nrow = length(avg_returns), ncol = 3)
+colnames(single_stocks) <- c("stock", "var", "ret")
+
+# find returns for single-stock portfolios
+for (stock in seq_along(avg_returns)){
+    # set up choices vector
+    choices <- rep(0, 10) %>% matrix
+    choices[stock] <- 1.0
+    
+    # get variance and returns for that stock
+    var <- t(choices) %*% covars %*% choices
+    ret <- avg_returns %*% choices
+    single_stocks[stock, 1] <- names(avg_returns)[stock]
+    single_stocks[stock, 2] <- var
+    single_stocks[stock, 3] <- ret
+}
+# convert to data frame    
+single_stocks <- data.frame(single_stocks, stringsAsFactors = FALSE)
+single_stocks$var <- as.numeric(single_stocks$var)
+single_stocks$ret <- as.numeric(single_stocks$ret)
 
 # create plots --------------------------------------------------------------
 # define function to present (graphically) the portfolio contributions
@@ -137,42 +160,59 @@ high_plot <- show_proportions(high[, 1:10])
 # plot the efficient frontier from the results
 frontier <- ggplot(results, aes(x = variance, y = returns)) + # create the plot
             geom_point(alpha = .35, color = "steelblue") + # add the points
-            scale_x_continuous(breaks = seq(from = 0, # set the scale
-                                            to = max(results$variance),
-                                            by = 0.00005)) +
-            # add low risk point with annotation
-            geom_point(data = low, 
-                       aes(x = variance, y = returns), 
-                       size = 3.5, 
-                       colour = "firebrick",
-                       alpha = .75) +
-            annotate(geom = "text",
-                     label = "Min-Risk/Min-Return\n Portfolio", 
-                     x = low$variance + 0.000125,
-                     y = low$returns + 0.0001) +
-            # add medium risk point with annotation
-            geom_point(data = med, 
-                       aes(x = variance, y = returns), 
-                       size = 3.5, 
-                       colour = "firebrick",
-                       alpha = .75) +
-            annotate(geom = "text",
-                     label = "Medium-Risk/\nMedium-Return\n Portfolio", 
-                     x = med$variance + 0.000095,
-                     y = med$returns - 0.00035) +    
-            # add high risk point with annotation
-            geom_point(data = high, 
-                       aes(x = variance, y = returns), 
-                       size = 3.5, 
-                       colour = "firebrick",
-                       alpha = .75) +
-            annotate(geom = "text",
-                     label = "High-Risk/\nHigh-Return\n Portfolio", 
-                     x = high$variance - 0.000025,
-                     y = high$returns - 0.0005) +
             ggtitle("Efficient Frontier") + # add plot title
             labs(x="Portfolio Risk", y = "Portfolio Return") + # add axis labels
             theme(panel.background=element_rect(fill="white"), # make it pretty
                   text=element_text(color = "black"),
                   plot.title=element_text(size=24, color="black"),
                   axis.text.x = element_text(angle = -90))
+
+# add portfolios
+frontier_with_ports <- frontier +
+                        # add low risk point with annotation
+                        geom_point(data = low, 
+                                   aes(x = variance, y = returns), 
+                                   size = 3.5, 
+                                   colour = "firebrick",
+                                   alpha = .75) +
+                        annotate(geom = "text",
+                                 label = "Low-Risk/Low-Return\n Portfolio", 
+                                 x = low$variance + 0.000125,
+                                 y = low$returns + 0.0001) +
+                        # add medium risk point with annotation
+                        geom_point(data = med, 
+                                   aes(x = variance, y = returns), 
+                                   size = 3.5, 
+                                   colour = "firebrick",
+                                   alpha = .75) +
+                        annotate(geom = "text",
+                                 label = "Medium-Risk/\nMedium-Return\n Portfolio", 
+                                 x = med$variance + 0.000095,
+                                 y = med$returns - 0.00035) +    
+                        # add high risk point with annotation
+                        geom_point(data = high, 
+                                   aes(x = variance, y = returns), 
+                                   size = 3.5, 
+                                   colour = "firebrick",
+                                   alpha = .75) +
+                        annotate(geom = "text",
+                                 label = "High-Risk/\nHigh-Return\n Portfolio", 
+                                 x = high$variance - 0.000025,
+                                 y = high$returns - 0.0005) +
+                        scale_x_continuous(breaks = seq(from = 0, # set the scale
+                                                        to = max(results$variance),
+                                                        by = 0.00005)) 
+
+# display single stock portfolios
+frontier_with_stocks <- frontier +
+                        geom_line() +
+                        geom_point(data = single_stocks,
+                                   aes(x = var, y = ret, colour = stock),
+                                   size = 3.5,
+                                   alpha = 1) +
+                        scale_colour_brewer(palette="Paired")+
+                        theme(legend.position = "bottom",
+                              legend.title = element_blank()) +
+                        ggtitle("Efficient Frontier with Individual Stock Portfolios")
+
+

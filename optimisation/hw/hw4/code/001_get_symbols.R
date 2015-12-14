@@ -16,5 +16,5 @@ library(quantmod)
                  "BG.L", 
                  "RIO.L")
 # get them    
-    getSymbols(symbols, from = "2014-01-01")
+    getSymbols(symbols, from = "2013-12-01")
    

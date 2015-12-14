@@ -20,7 +20,7 @@ library(quadprog)
 
 stocks <- list("RDSA.L", "HSBA.L", "BP.L", "VOD.L", "GSK.L", "BATS.L", "SAB.L", "DGE.L", "BG.L", "RIO.L")    
 if (sum(stocks %in% ls()) != length(stocks)) {
-    source("hw/hw4/001_get_symbols.R")
+    source("./hw/hw4/code/001_get_symbols.R")
 }
 
 # prepare data -----------------------------------------------------------------    
@@ -99,3 +99,32 @@ for (i in premiums) {
 }
 
 results <- data.frame(results)
+
+
+# grab 3 portfolios ------------------------------------------------------------
+low <- results %>% filter(returns >= 0) %>% slice(1) # low risk/return
+med <- results %>% slice(100)                               # med risk/return
+high <- results %>% filter(returns == max(results$returns)) # high risk/return
+
+# get individual stock results -------------------------------------------------
+# set up structure to hold results
+single_stocks <- matrix(nrow = length(avg_returns), ncol = 3)
+colnames(single_stocks) <- c("stock", "var", "ret")
+
+# find returns for single-stock portfolios
+for (stock in seq_along(avg_returns)){
+    # set up choices vector
+    choices <- rep(0, 10) %>% matrix
+    choices[stock] <- 1.0
+    
+    # get variance and returns for that stock
+    var <- t(choices) %*% covars %*% choices
+    ret <- avg_returns %*% choices
+    single_stocks[stock, 1] <- names(avg_returns)[stock]
+    single_stocks[stock, 2] <- var
+    single_stocks[stock, 3] <- ret
+}
+# convert to data frame    
+single_stocks <- data.frame(single_stocks, stringsAsFactors = FALSE)
+single_stocks$var <- as.numeric(single_stocks$var)
+single_stocks$ret <- as.numeric(single_stocks$ret)
