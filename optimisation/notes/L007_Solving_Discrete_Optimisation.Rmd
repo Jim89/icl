@@ -8,3 +8,36 @@ output:
 
 # Solving Discrete Optimisation
 
+Theoretically, a binary optimisation problem could be solved by calculating all possible permutations and finding the best possiblity. However, for $n$ decisicion variance there are 2^n^ possible permutations, so this gets hard very quickly. 
+
+If a binary solver is not available, we could also try solving the system as a continuous problem and then "rounding" to the nearest integer/binary values. Sometimes in practice this will work, however it can also often lead to non-optimal binary/integer solutions.
+
+Instead, we must use a discrete solver and consider the new geometry of the feasible region.
+
+## Geometry of integer programs
+
+Recall that for a standard linear program the feasible region is a continuous polygon. For discrete optimisation (i.e. with integer constraints) the feasible region is similar, but is now "points" within the old feasible region, where the points are the allowable integer values.
+
+It may be the case that the optimal solution for the integer program lies close to that for the linear program, but this is _not_ always the case. Now, the feasible region is _not_ a polyhedron (it is an array of points) and it is _not_ at a boundary of constraint lines. Therefore we _cannot_ use either Simplex or the Interior Point method to solve the system.
+
+Instead we can use a class of algorithms known as branch-and-bound:
+
+### Branch-And-Bound Algorithms
+
+These algorithms are a common approach to solving discrete optimisation programs and use the following steps:
+
+1. Ignore all integer/discrete restrictions and solve the resulting linear program (termed _relaxation_);
+2. If the values of all integer-constrained variables _are_ integers then terminate - the optimal solution has been found; otherwise
+3. If the value of at least one of the integer-constrained variables is _not_ and integer then the algorithm _branches_ in to two subproblems;
+    i. Non-integer variables are split in to two new feasible regions using $\geq$ and $\leq$ procesess (depending on where the non integer solution lay, e.g. if it is was 7.3 we would split in to the value $\leq 7$ and $\geq 8$);
+    ii. Repeat steps 1 and 2 for the subproblems, creating further subproblems in step 3 if necessary.
+
+The algorithm stops this process when/if:
+
+* The solution is not feasible (i.e. at a particular point in the tree if it is not feasible then do not perform more splits from that point); or
+* There is a feasible solution elsewhere which is better than the one calculated; or
+* The solution is integer and feasible - in which case the entire algorithm will terminate
+    
+This is repeated for many levels of branching until an optimal solution is found. In order to determine which of the variables to perform this split on, we typically pick that with a value that is _farthest_ from the nearest integers (e.g. 7.5 is further from 7 and 8 than is 7.1).
+    
+    
