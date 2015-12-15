@@ -1,5 +1,5 @@
 ---
-title: "Optimisation and Decision Models Assignement Four"
+title: "Optimisation and Decision Models Assignment Four"
 author: "Jim Leach"
 date: "13 December 2015"
 output: pdf_document
@@ -11,7 +11,7 @@ The purpose of this document is to write up the response to the fourth assignmen
 
 ### Supplementary Note
 
-The optimisation step of this assignment was solved using a generic quadratic programming solver available in the R language (`solve.QP`). I discussed using R with Professor Weisemann and he said it was acceptable as long as I was using a generic solver and not a bespoke function for the Markovitz model. As I have used a generic solver (as opposed to a pre-built mean-variance portfolio solver) I have adhered to this restriction.
+The optimisation step of this assignment was solved using a generic quadratic programming solver available in the R language (`solve.QP`). I discussed using R with Professor Weisemann and he said it was acceptable as long as I was using a generic solver and not a bespoke function for the Markowitz model. As I have used a generic solver (as opposed to a pre-built mean-variance portfolio solver) I have adhered to this restriction.
 
 ***
 ```{r load_pckgs, echo=FALSE, message=FALSE}
@@ -126,7 +126,7 @@ covars %>%
 
 (Note that all the code used to perform the analyses discussed here can be found in the attached file `efficient_frontier.R`)
 
-The Markowitz problem can be interpretted as a specific case of the more general class of _quadratic program_ problems^1^^,^^2^. In quadratic programming, the objective function is a convex quadratic equation that is subject to linear constraints. 
+The Markowitz problem can be interpreted as a specific case of the more general class of _quadratic program_ problems^1^^,^^2^. In quadratic programming, the objective function is a convex quadratic equation that is subject to linear constraints. 
 
 The "classic" Markowitz problem for finding the minimum variance portfolio is given by \eqref{eq:mark}.
 
@@ -188,7 +188,7 @@ A generic quadratic problem solver in the `R` package `quadprog` can be used to 
 
 However it is also necessary to generate an efficient frontier, which requires evaluating the solution to this program at a range of $\underline{R}$ values (or in the case of the quadratic program, at a range of $\mu$ values), i.e. for a range of desired returns. 
 
-In order to do so, the vector of expected returns $\mu$ can be multiplied by some factor that models this. For example, if $\mu$ is multiplied by 0 then the first term \eqref{eq:quad} dissapears, and the solver will simply return the minimum risk portfolio. Similarly, if $\mu$ is multiplied by some very large number, then the solver will return a higher-risk portfolio. 
+In order to do so, the vector of expected returns $\mu$ can be multiplied by some factor that models this. For example, if $\mu$ is multiplied by 0 then the first term \eqref{eq:quad} disappears, and the solver will simply return the minimum risk portfolio. Similarly, if $\mu$ is multiplied by some very large number, then the solver will return a higher-risk portfolio. 
 
 This was performed in R using an iterative approach, solving the quadratic program a number of times in order to find the portfolio for a range of returns values. The multiplication factor of $\mu$  ranged from 0 (i.e. finding the minimum risk portfolio) to 10 (finding a portfolio with much higher returns) using increments of 0.001. In all this represents 10,001 possible portfolio combinations.
 
@@ -259,7 +259,7 @@ Such constraints can be though of as a special case of the cardinality constrain
 
 In the general form the cardinality-constrained problem, we can only invest in a certain number of assets ($K$ in \eqref{eq:card}). Now, we can only invest in a certain number of assets _within_ a certain sector, and so this constraint is changed slightly. 
 
-Writing \eqref{eq:mark} more explicitly, including invididual variables as opposed to the matrix representations gives \eqref{eq:general_opt}, with the general form of the cardinality-constrained program given by \eqref{eq:card_opt} where $z$ is a binary variable that indicates if that asset/stock has been purchased (1) or not (0).
+Writing \eqref{eq:mark} more explicitly, including individual variables as opposed to the matrix representations gives \eqref{eq:general_opt}, with the general form of the cardinality-constrained program given by \eqref{eq:card_opt} where $z$ is a binary variable that indicates if that asset/stock has been purchased (1) or not (0).
 
 #### General Markowitz
 
