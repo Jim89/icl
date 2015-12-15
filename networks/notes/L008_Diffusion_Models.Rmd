@@ -7,3 +7,31 @@ output:
 ---
 
 # Diffusion Models
+
+Diffusion models can be used to understand how things spread. Often there is no explicit network in the model, in which case we refer to it as a "population model", i.e. we presume a 100% connected network. If there _is_ a network then we would refer to it as a network-topology based model. 
+
+## Motivation
+
+The movtivation is to understand the adoption of a new product or idea over time. Often this will be affected by externalities (either positive or negative). Recall that externalities are things which are not part of the product but which might affect it or its success (e.g. the number of people using a new social network). In general, there is some critical mass for a product to reach or it will fail. 
+
+Recall that externalities can be positive or negative. They can also be forced (e.g. _everyone_ is on WhatsApp, so I need WhatsApp) or choice-based (e.g. "jumping on the bandwagon" or the inverse - snobbery - "Facebook is only cool with my mum and dad, I'm not interested").
+
+We must model these things with ituitive, common sense features as we rarely have physical tests that we can perform to verify our results.
+
+## Demand curves
+
+Often we will need to use _demand curves_:
+
+```{r plot_demand, echo = FALSE}
+library(ggplot2)
+x <- seq(from = 0, to = 1, by = 0.01)
+y <- 1 - x + rep(rnorm(1), 101)
+ggplot(data = NULL, aes(x = x, y = y)) + geom_line()
+```
+
+
+A demand curve plots price on the y-axis and demand ($x$) on the x-axis. Demand is the fraction of the market that would purchase the product.
+
+The (strictly decreasing) line is termed $r(x)$ and represents the fraction of consumers that would be captured by selling the product at price, p (or lower).
+
+$r(x)$ represents the maximum willingness of a consumer to pay at point x. The graph orders customers in decreasing order of willingness to pay and therefore the fraction who _do_ purchase is termed $r^{'}(x)$. 
