@@ -56,7 +56,7 @@ The size of the constricted set (S) is greater than (>) the size of the over-dem
 
 ### Rescaling
 
-If the smallest price is greater than (>) 0 then we need to rescale, i.e. reduce the seller prices by this amount to make the smallest price = 0. Note that adding/removing a constant from _all_ sellers' prices does not change the potential energy and does not change buyer's indeference edges (i.e. it does not change the graph). This ensures every buys maximim net valuation is always $\gew$ 0 and thus that potential energy is always $\geq$ 0. 
+If the smallest price is greater than (>) 0 then we need to rescale, i.e. reduce the seller prices by this amount to make the smallest price = 0. Note that adding/removing a constant from _all_ sellers' prices does not change the potential energy and does not change buyer's indeference edges (i.e. it does not change the graph). This ensures every buys maximim net valuation is always $\geq$ 0 and thus that potential energy is always $\geq$ 0. 
 
 ### Another reason it works
 
@@ -84,3 +84,28 @@ x \geq 0
 \end{equation*}
 
 Solving this linear program will find the perfect matching and has the additional note that the prices are the optimal dual variables to this linear program. 
+
+## Stable matching
+
+In stable matching we are generally dealing with a preference-listed bipartite graph (i.e. nodes on one side have preferences for nodes on the other). 
+
+_Stability_ is reached when a better (i.e. more preferred) matching is not possible, i.e. there is no node pair who prefer each other more than they prefer their current partner.
+
+Note that there can be many stable matchings for a given graph. 
+
+Formally, if (m', w') $\in$ M and (m'', w'') $\in$ M then m' prefers w' to w'' or w'' prefers m'' to m'.
+
+When dealing with scenarious like this, we have as out input a preference list for one side of the graph, ${m_1, m_2, m_3, ..., m_n}$ and for the other ${w_1, w_2, w_3, ..., w_n}$. 
+
+The algorithm is then as follows:
+
+* m proposes to w;
+* if w is unmatched, w accepts;
+* if w is matched; then
+    * if w prefers m to $m_2$, w accepts m and dumps $m_2$ (i.e dumps its current match);
+    * if w prefers $m_2$ to m, w rejects m
+* An unmatched m proposes to the highest-ranked w on its preference list _that it has not already proposed to_
+
+This algorithm takes at most n^2^ steps to resolve and the end result is _always_ stable.
+
+Note that the results will be different depending on who proposes. If m proposes to w then the algorithm is termed m-optimal and m get "better" (for them) results than if w propose to m. Therefore the stable match is not necessarily "fair" - it depends on which side proposes. 
