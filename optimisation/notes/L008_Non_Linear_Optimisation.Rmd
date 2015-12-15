@@ -7,3 +7,147 @@ output:
 ---
 
 # Non-linear Optimisation
+
+In non-linear optimisation we typically have continuous variables (although not always!) but _non-linear_ objective functions and _non-linear_ constraints.
+
+Sometimes we can model binary/integer constraints as non-linear constraints, e.g. $x\in\{0, 1\} \rightarrow x^2 = x$ (for modelling binary varaibles) or $x\in\mathbb{Z}\rightarrow \sin(\pi x) = 0$ (for modelling integer constraints).
+
+However, in order to make these problems solvable we need to exploit the shape of objective the function - __convexity__.
+
+A convex function has to "bend upwards", i.e. it has to have global minima. We then seek to minimise the function. Alternatively, if we seek to maximise a problem, then we need a _concave_ function with global maxima.
+
+Linear functions are a special case in that they are _both_ concave _and_ convex.
+
+We additionally require that the feasible region is singluar (i.e continuous) and does not have "inward" regions (i.e. ideally no local minima above the global minimum). We term such feasible regions as being in a "convex set".
+
+## An example - GTC
+
+Recall the Gemstone Tool Company from earlier notes, producing wrenches and pliers. Previously, GTC were "price-takers". That is their offering did not affect prices for either product and they could either sell their entire production at or below market price or sell nothing at a price above the market. 
+
+However, now imagine that GTC are price _setters_, that is, the prices for wrenches or pliers depend on their production.
+
+$D_w = 39000 - 19000*P_w$ (demand for wrenches dependant on the price we set for wrenches) and $D_p = 39000 - 19000*P_p$ (-"- pliers).
+
+In addition to these new demand constrains, we also specificy that GTC faces variable production costs of £1 per wrench and £1.20 per plier. 
+
+The new optimisation problem then becomes:
+
+\begin{equation*}
+\begin{split}
+\text{Profits = quantity * price: }\\
+\max W.(P_w - 1.0) + P.(P_P - 1.20) \\
+s.t: \\
+1.5W + 1.0P \leq 27000 \\
+1.0W + 1.0P \leq 21000 \\
+0.3W + 0.5P \leq 9000  \\
+\text{(Quantities must not exceed demand)} \\
+W \leq 39000-19000*P_W \\
+P \leq 39000-19000*P_P \\
+W, P, P_W, P_P \geq 0
+\end{split}
+\end{equation*}
+
+It turns out, however, that this function is _not_ concave. Instead we can set prices so that the entire production is sold:
+
+\begin{equation*}
+39000 - 19000P_W = W \leftrightarrow P_W = \dfrac{39000 - W}{19000}
+\end{equation*}
+
+(with a similar manipulation for $P_P$) and substitute this in to the objective function:
+
+\begin{equation*}
+\max W.(\dfrac{39000 - W}{19000} - 1.0) + P.(\dfrac{39000 - P}{19000} - 1.2)
+\end{equation*}
+
+(Note that the demand constraints are now lifted). This problem is now _entirely_ in $W$ and $P$ and is concave - hence we can solve it using non-linear programming. 
+
+## A second example - portfolio optimisation
+
+A classic and hugely used non-linear optimisation problem is in portfolio optimisation - i.e. stock/investment selection methods. 
+
+Such methods are highly desired by investment banks and hedge funds to select assets so as to maximise expected returns whilst minimising the risks. Typically, however, these goals are in conflict. 
+
+In practice, it is common to use the _Markowitz Model_ (or variations thereof).
+
+### An example
+
+Imagine there are 100 stocks we could invest in and 1 share of _any_ of these stocks costs £90 today. In one week, the price of these stocks is uncertain ($\chi_i \~ N(100, 10)$ i.e. normal with mean 100 and variance 10). We assume that the prices of the stocks are _independant_.
+
+How should we invest?
+
+Let's pick two options, (a) and (b). 
+
+
+If we pick (a) we invest all our money in to one stock. Out expected return is given by $\mathbb{E}(100 \chi_1) = 100 \mathbb{E} ( \chi_1) = 10000$ (the expected value of a constant * a random variable is the constant * the expected value of the random variable) with variance given by $Var(100\chi_1) = 100^2Var(\chi_1) = 100000$ (the variance of a constant * a random variable is given by constant^2^ x variance of random variable).
+
+If we pick (b) we buy 1 share of each stock. The return is then $\mathbb{E} (\sum_{i=1}^{100} \chi_i) = \sum_{i=1}^{100}\mathbb{E}[\chi_i] = 10000$ with variance given by $Var(\sum_{i=1}^{100}\chi_i) = \sum_{i=1}^{100}\sum{j=1}^{100}Cov(\chi_i, \chi_j) = \sum_{i=1}^{100} Var(\chi_i) = 100*10 = 1000$ (the variance of a sum of random variables is the sum of all covariances between all pairs of random variables, since the variables are independant, we can set $Cov(\chi_i, \chi_j)= 0$).
+
+It looks like option (b) is a _lot_ better. We get the same return but for _much_ less risk. However, true independance is not often seen in the market place (some exampes, however, include gold and equities, oil future and airlines). Therefore we _must_ consider correlations between out variables.
+
+### Portfolio Optimisation - the data
+
+Assuming we want to select among $i = 1, ..., n$ assets with prices then we have $X_i$ (today's price) and we want $\hat{Y_i}$ (the price in the next period - random). We're interestd in the _rate of return_ for those assets:
+
+\begin{equation*}
+\hat{r_i} = \dfrac{\hat{Y_i} - Xi}{X_i} \in [-1, \infty]
+\end{equation*}
+
+(this assumes we cannot loose more than the asset's value - often not the case).
+
+We assume that we have:
+
+* expected asset return rates: $\mu_i = \mathbb{E}[\hat{r_i}]$; and
+* covariances of asset return rates: $\sigma_{ij} = \mathbb{C}ov[\hat{r_i}, \hat{r_j}] = \mathbb{E}[(\hat{r_i} - \mu_i)(\hat{r_j} - \mu_j)]$
+
+### The measures
+
+Assuming that we invest a fraction of our total in to each stock $x_i \in [0, 1]$ in to each asset $i = 1, ..., n$ then we measure:
+
+* Expected portfolio return: $\mathbb{E}{\sum_{i=1}^n\hat{r_i}x_i} = \sum_{i=1}^n\mathbb{E}[\hat{r_i}]x_i = \mu^Tx$ (where $\mu$ is a vector holding our expected asset return rates, and $x$ is a vector holding the fraction of each asset in the portfolio); and
+* Portfolio variance (risk): $\mathbb{V}ar[\sum_{i=1}^n\hat{r_i}x_i] = \sum{i=1}^n\sum_{j=1}^n\mathbb{C}ov[\hat{r_i}x_i, \hat{r_j}x_j] = \sum{i=1}^n\sum_{j=1}^n\mathbb{C}ov[\hat{r_i}, \hat{r_j}] x_i x_j = x^T\Sigma x$ (where $\Sigma$ is an $i$ by $j$ matrix of covariances between returns for asset $i$ and $j$).
+
+### The models
+
+Typically once these data are sourced we then solve one of the following models:
+
+\begin{equation*}
+\begin{split}
+\max \mu^Tx \text{ maximise returns} \\
+\\
+s.t: \\
+\text{budget constraint (e is a vector of all 1's)} \\
+e^Tx = 1 \\
+\\
+\text{ maximum acceptable risk} \\
+x^T\Sigma x \leq \bar{R} \\
+\\
+\text{ no short selling} \\
+x \geq 0 
+\end{split}
+\end{equation*}
+
+OR
+
+\begin{equation*}
+\begin{split}
+\min x^T\Sigma x \text{ minimise risk} \\
+\\
+s.t: \\
+\text{budget constraint (e is a vector of all 1's)} \\
+e^Tx = 1 \\
+\\
+\text{ min acceptable return} \\
+\mu^Tx \geq \underline{R} \\
+\\
+\text{ no short selling} \\
+x \geq 0 
+\end{split}
+\end{equation*}
+
+### The efficient frontier
+
+Typically, we do not have values for either $\bar{R}$ or $\underline{R}$. Therefore we solve either model parametically in these values and plot an _efficient frontier_ of returns vs. risks. Portfolios that fall below the efficient frontier are inferior and are said to be _dominated_ by the alternatives that lie on the frontier. Risk/return profiles that lie above the efficient fronter are unattainable. 
+
+
+
+
