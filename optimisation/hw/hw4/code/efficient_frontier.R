@@ -29,7 +29,7 @@ symbols <- c("RDSA.L", # Royal Dutch Shell
              "BG.L",   # BG Group
              "RIO.L")  # Rio Tinto
 # get them    
-getSymbols(symbols, from = "2014-01-01", src = "yahoo")
+getSymbols(symbols, from = "2013-12-01", src = "yahoo")
 
 # prepare data -----------------------------------------------------------------
 objects <- list(RDSA.L, HSBA.L, BP.L, VOD.L, GSK.L, BATS.L, SAB.L, DGE.L, BG.L, RIO.L)
