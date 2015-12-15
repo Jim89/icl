@@ -1,4 +1,13 @@
+#################################################################################################################
+'''
+Very Large Data Management Assignment 4 - Spark
+Student: Jim Leach
+Date: 2015-12-15
 
+This document presents the submission for assignment 4 of the very large data management module. As per the instructions,
+code snippets have been added where required and some comments have been added for clarity.
+'''
+#################################################################################################################
 # coding: utf-8
 
 # ####This coursework will demonstrate how easy it is to perform web server log analysis with Apache Spark.
@@ -159,6 +168,10 @@ parsed_logs, access_logs, failed_logs = parseLogs()
 
 # TODO: Replace <FILL IN> with appropriate code
 
+'''
+Create new Regex - problem was due to extra spaces in first line of request string. 
+This was solved by adding a 0-or-more spaces identifier which facilitates parsing all lines.
+'''
 APACHE_ACCESS_LOG_PATTERN = '^(\S+) (\S+) (\S+) \[([\w:/]+\s[+\-]\d{4})\] "(\S+) (\S+)\s*(\S*)\s*" (\d{3}) (\S+)'
 
 parsed_logs, access_logs, failed_logs = parseLogs()
@@ -254,16 +267,11 @@ assert topEndpoints == [(u'/images/NASA-logosmall.gif', 59737), (u'/images/KSC-l
 # You are welcome to structure your solution in a different way, so long as
 # you ensure the variables used in the next Test section are defined (ie. endpointSum, topTenErrURLs).
 
-not200 = access_logs.filter(lambda log: log.response_code != 200)
-
-endpointCountPairTuple = not200.map(lambda log: (log.endpoint, 1))
-
-endpointSum = endpointCountPairTuple.reduceByKey(lambda a, b: a + b)
-
-topTenErrURLs = endpointSum.takeOrdered(10, lambda s: -1 * s[1])
-
-print('Top Ten failed URLs: ', topTenErrURLs)
-
+not200 = access_logs.filter(lambda log: log.response_code != 200) 	# filter access logs to select all non-200 responses
+endpointCountPairTuple = not200.map(lambda log: (log.endpoint, 1)) 	# map the key endpoints with the value 1
+endpointSum = endpointCountPairTuple.reduceByKey(lambda a, b: a + b) 	# sum up the values (thereby counting the appearances of each endpoint)
+topTenErrURLs = endpointSum.takeOrdered(10, lambda s: -1 * s[1]) 	# get the first 10
+print('Top Ten failed URLs: ', topTenErrURLs) 				# print them out
 
 # TEST Top ten error endpoints (3a)
 Test.assertEquals(endpointSum.count(), 7689, 'incorrect count for endpointSum')
@@ -272,19 +280,14 @@ Test.assertEquals(topTenErrURLs, [(u'/images/NASA-logosmall.gif', 8761), (u'/ima
 
 # #### **(3b) Exercise: Number of Unique Hosts**
 # ####How many unique hosts are there in the entire log?
-#  
 # ####Think about the steps that you need to perform to count the number of different hosts in the log.
-
-
 # TODO: Replace <FILL IN> with appropriate code
 # HINT: Do you recall the tips from (3a)? Each of these <FILL IN> could be an transformation or action.
 
-hosts = access_logs.map(lambda log: log.host)
-
-uniqueHosts = hosts.distinct()
-
-uniqueHostCount = uniqueHosts.count()
-print('Unique hosts: ', uniqueHostCount)
+hosts = access_logs.map(lambda log: log.host) 	# get the host from the access log
+uniqueHosts = hosts.distinct() 			# chop down to distinct values
+uniqueHostCount = uniqueHosts.count() 		# count the number of lines - this is total unique hosts
+print('Unique hosts: ', uniqueHostCount) 	# print it out
 
 
 # TEST Number of unique hosts (3b)
@@ -293,23 +296,18 @@ Test.assertEquals(uniqueHostCount, 54507, 'incorrect uniqueHostCount')
 
 # #### **(3c) Exercise: Number of Unique Daily Hosts**
 # ####For an advanced exercise, let's determine the number of unique hosts in the entire log on a day-by-day basis. This computation will give us counts of the number of unique daily hosts. We'd like a list sorted by increasing day of the month which includes the day of the month and the associated number of unique hosts for that day. Make sure you cache the resulting RDD `dailyHosts` so that we can reuse it in the next exercise.
-#  
 # ####Think about the steps that you need to perform to count the number of different hosts that make requests *each* day.
 # ####*Since the log only covers a single month, you can ignore the month.*
 
 
 
 # TODO: Replace <FILL IN> with appropriate code
-
-dayToHostPairTuple = access_logs.map(lambda log: (log.date_time.day, log.host)).distinct()
-
-dayGroupedHosts = dayToHostPairTuple.map(lambda log: (str(log[0]), 1))
-
-dayHostCount = dayGroupedHosts.reduceByKey(lambda a, b: a + b).map(lambda x: (int(x[0]), x[1]))
-
-dailyHosts = (dayHostCount.sortByKey().cache())
-dailyHostsList = dailyHosts.take(30)
-print('Unique hosts per day: ', dailyHostsList)
+dayToHostPairTuple = access_logs.map(lambda log: (log.date_time.day, log.host)).distinct() 	# get the distinct set of day, host tuples
+dayGroupedHosts = dayToHostPairTuple.map(lambda log: (str(log[0]), 1)) 				# remove the host and map key day to value 1 - sneaky way to count without grouping
+dayHostCount = dayGroupedHosts.reduceByKey(lambda a, b: a + b).map(lambda x: (int(x[0]), x[1])) # return number of unique hosts - map day values back to int for sorting
+dailyHosts = (dayHostCount.sortByKey().cache()) 						# sort by day and cache
+dailyHostsList = dailyHosts.take(30) 								# get the results
+print('Unique hosts per day: ', dailyHostsList) 						# print them out
 
 
 # TEST Number of unique daily hosts (3c)
@@ -321,12 +319,10 @@ Test.assertTrue(dailyHosts.is_cached, 'incorrect dailyHosts.is_cached')
 # #### **(3d) Exercise: Number of Unique Daily Hosts**
 # #### `daysWithHosts` should be a list of days and `hosts` should be a list of number of unique hosts for each corresponding day.
 # #### * How could you convert a RDD into a list? See the [`collect()` method](http://spark.apache.org/docs/latest/api/python/pyspark.html?highlight=collect#pyspark.RDD.collect)*
-
 # TODO: Replace <FILL IN> with appropriate code
 
-daysWithHosts = dict(dailyHosts.collect()).keys()
-hosts = dict(dailyHosts.collect()).values()
-
+daysWithHosts = dict(dailyHosts.collect()).keys() 	# collect the data, convert to a dictionary and grab the keys - the days
+hosts = dict(dailyHosts.collect()).values()		# collect the data, convert to a dictionary and grab the values - the numbers of hosts
 
 # TEST unique daily hosts (3d)
 test_days = range(1, 23)
@@ -343,19 +339,19 @@ Test.assertEquals(hosts, [2582, 3222, 4190, 2502, 2537, 4106, 4406, 4317, 4523, 
 # ####*Also to keep it simple, when calculating the approximate average use the integer value - you do not need to upcast to float*
 
 # TODO: Replace <FILL IN> with appropriate code
+
 # to start with grab TOTAL number of hosts per day
-dayAndHostTuple = access_logs.map(lambda log: (log.date_time.day, log.host))
-dayGroupedHosts = dayAndHostTuple.map(lambda log: (str(log[0]), 1))
-dayHostCount = dayGroupedHosts.reduceByKey(lambda a, b: a + b).map(lambda x: (int(x[0]), x[1]))
+dayAndHostTuple = access_logs.map(lambda log: (log.date_time.day, log.host))			# get map of day and host, non-distinct
+dayGroupedHosts = dayAndHostTuple.map(lambda log: (str(log[0]), 1))				# remove host and map day to value 1 - a sneaky way to count without grouping
+dayHostCount = dayGroupedHosts.reduceByKey(lambda a, b: a + b).map(lambda x: (int(x[0]), x[1])) # count hosts for each day and map days back to integer values for sorting
 
 # now need to join in the previous, distinct values
-joined = dayHostCount.join(dailyHosts).sortByKey()
+joined = dayHostCount.join(dailyHosts).sortByKey()						# use the data of unique host counts from 3c to join to total counts created above
 
-avgDailyReqPerHost = (joined.map(lambda x: (x[0], x[1][0]/x[1][1])).cache())
+avgDailyReqPerHost = (joined.map(lambda x: (x[0], x[1][0]/x[1][1])).cache())			# total/distinct to get averages - can be done in a map with indexing on values
 
-avgDailyReqPerHostList = avgDailyReqPerHost.take(30)
-print('Average number of daily requests per Hosts is: ', avgDailyReqPerHostList)
-
+avgDailyReqPerHostList = avgDailyReqPerHost.take(30)						# get the results
+print('Average number of daily requests per Hosts is: ', avgDailyReqPerHostList)		# print them out
 
 
 # TEST Average number of daily requests per hosts (3e)
@@ -366,10 +362,9 @@ Test.assertTrue(avgDailyReqPerHost.is_cached, 'incorrect avgDailyReqPerHost.is_c
 # #### **(3f) Exercise: Visualizing the Average Daily Requests per Unique Host**
 # #### `daysWithAvg` should be a list of days and `avgs` should be a list of average daily requests per unique hosts for each corresponding day.
 
-
 # TODO: Replace <FILL IN> with appropriate code
-daysWithAvg = dict(avgDailyReqPerHost.collect()).keys()
-avgs = dict(avgDailyReqPerHost.collect()).values()
+daysWithAvg = dict(avgDailyReqPerHost.collect()).keys() # collect the data, convert to a dictionary and grab the keys - the days
+avgs = dict(avgDailyReqPerHost.collect()).values()	# collect the data, convert to a dictionary and grab the values - the numbers of hosts
 
 
 # TEST Average Daily Requests per Unique Host (3f)
@@ -379,20 +374,14 @@ Test.assertEquals(avgs, [13, 12, 14, 12, 12, 13, 13, 14, 13, 14, 13, 13, 13, 13,
 
 
 # ### **Part 4: Exploring 404 Response Codes**
-#  
 # ####Let's drill down and explore the error 404 response code records. 404 errors are returned when an endpoint is not found by the server (i.e., a missing page or object).
-
 # #### **(4a) Exercise: Counting 404 Response Codes**
 # #### Create a RDD containing only log records with a 404 response code. Make sure you `cache()` the RDD `badRecords` as we will use it in the rest of this exercise.
-#  
 # #### How many 404 records are in the log?
-
-
 # TODO: Replace <FILL IN> with appropriate code
 
-badRecords = (access_logs.filter(lambda log: log.response_code == 404).cache())
-print('Found ',badRecords.count(),' 404 URLs')
-
+badRecords = (access_logs.filter(lambda log: log.response_code == 404).cache())		# get all records with 404 error codes
+print('Found ',badRecords.count(),' 404 URLs')						# count number of records and print it out
 
 # TEST Counting 404 (4a)
 Test.assertEquals(badRecords.count(), 6185, 'incorrect badRecords.count()')
@@ -404,16 +393,13 @@ Test.assertTrue(badRecords.is_cached, 'incorrect badRecords.is_cached')
 
 # TODO: Replace <FILL IN> with appropriate code
 
-badEndpoints = badRecords.map(lambda log: log.endpoint)
-
-badUniqueEndpoints = badEndpoints.distinct()
-
-badUniqueEndpointsPick40 = badUniqueEndpoints.take(40)
-print('404 URLS: ', badUniqueEndpointsPick40)
+badEndpoints = badRecords.map(lambda log: log.endpoint)		# for all 404 errors, grab the endpoint
+badUniqueEndpoints = badEndpoints.distinct()			# get the distinct values
+badUniqueEndpointsPick40 = badUniqueEndpoints.take(40)		# get 40 of them
+print('404 URLS: ', badUniqueEndpointsPick40)			# print them out
 
 
 # TEST Listing 404 records (4b)
-
 badUniqueEndpointsSet40 = set(badUniqueEndpointsPick40)
 Test.assertEquals(len(badUniqueEndpointsSet40), 40, 'badUniqueEndpointsPick40 not distinct')
 
@@ -424,13 +410,10 @@ Test.assertEquals(len(badUniqueEndpointsSet40), 40, 'badUniqueEndpointsPick40 no
 
 
 # TODO: Replace <FILL IN> with appropriate code
-
-badEndpointsCountPairTuple = badRecords.map(lambda log: (log.endpoint, 1))
-
-badEndpointsSum = badEndpointsCountPairTuple.reduceByKey(lambda a, b: a + b)
-
-badEndpointsTop20 = badEndpointsSum.takeOrdered(20, lambda s: -1 * s[1])
-print('Top Twenty 404 URLs: ', badEndpointsTop20)
+badEndpointsCountPairTuple = badRecords.map(lambda log: (log.endpoint, 1))	# for all 404 errors, get the endpoint and map to value 1
+badEndpointsSum = badEndpointsCountPairTuple.reduceByKey(lambda a, b: a + b)	# reduce by key (endpoint) and sum - counts errors per endpoint
+badEndpointsTop20 = badEndpointsSum.takeOrdered(20, lambda s: -1 * s[1])	# take the top 20, ordered by decreasing count
+print('Top Twenty 404 URLs: ', badEndpointsTop20)				# print them out
 
 
 # TEST Top twenty 404 URLs (4c)
@@ -442,18 +425,12 @@ Test.assertEquals(badEndpointsTop20, [(u'/pub/winvn/readme.txt', 633), (u'/pub/w
 
 
 # TODO: Replace <FILL IN> with appropriate code
-
-errHostsCountPairTuple = badRecords.map(lambda log: (log.host, 1))
-
-errHostsSum = errHostsCountPairTuple.reduceByKey(lambda a, b: a + b)
-
-errHostsTop25 = errHostsSum.takeOrdered(25, lambda s: -1 * s[1])
-print('Top 25 hosts that generated errors: ', errHostsTop25)
-
-
+errHostsCountPairTuple = badRecords.map(lambda log: (log.host, 1)) 	# for all 404 errors, get the host and map to value 1
+errHostsSum = errHostsCountPairTuple.reduceByKey(lambda a, b: a + b)	# reduce by key (host) and sum - counts errors per host
+errHostsTop25 = errHostsSum.takeOrdered(25, lambda s: -1 * s[1])	# take the top 25 ordered by decreasing count
+print('Top 25 hosts that generated errors: ', errHostsTop25)		# print them out
 
 # TEST Top twenty-five 404 response code hosts (4d)
-
 Test.assertEquals(len(errHostsTop25), 25, 'length of errHostsTop25 is not 25')
 Test.assertEquals(len(set(errHostsTop25) - set([(u'maz3.maz.net', 39), (u'piweba3y.prodigy.com', 39), (u'gate.barr.com', 38), (u'm38-370-9.mit.edu', 37), (u'ts8-1.westwood.ts.ucla.edu', 37), (u'nexus.mlckew.edu.au', 37), (u'204.62.245.32', 33), (u'163.206.104.34', 27), (u'spica.sci.isas.ac.jp', 27), (u'www-d4.proxy.aol.com', 26), (u'www-c4.proxy.aol.com', 25), (u'203.13.168.24', 25), (u'203.13.168.17', 25), (u'internet-gw.watson.ibm.com', 24), (u'scooter.pa-x.dec.com', 23), (u'crl5.crl.com', 23), (u'piweba5y.prodigy.com', 23), (u'onramp2-9.onr.com', 22), (u'slip145-189.ut.nl.ibm.net', 22), (u'198.40.25.102.sap2.artic.edu', 21), (u'gn2.getnet.com', 20), (u'msp1-16.nas.mr.net', 20), (u'isou24.vilspa.esa.es', 19), (u'dial055.mbnet.mb.ca', 19), (u'tigger.nashscene.com', 19)])), 0, 'incorrect errHostsTop25')
 
@@ -463,16 +440,11 @@ Test.assertEquals(len(set(errHostsTop25) - set([(u'maz3.maz.net', 39), (u'piweba
 # ####*Since the log only covers a single month, you can ignore the month in your checks.*
 
 # TODO: Replace <FILL IN> with appropriate code
-errDateCountPairTuple = badRecords.map(lambda log: (log.date_time.day, 1))
-
-errDateSum = errDateCountPairTuple.reduceByKey(lambda a, b: a + b)
-
-errDateSorted = (errDateSum.sortByKey().cache())
-
-errByDate = errDateSorted.collect()
-print('404 Errors by day: ', errByDate)
-
-
+errDateCountPairTuple = badRecords.map(lambda log: (log.date_time.day, 1)) 	# get the days on which 404 errors occured and map to value 1
+errDateSum = errDateCountPairTuple.reduceByKey(lambda a, b: a + b)		# reduce by key (day) and sum - counts total errors per day
+errDateSorted = (errDateSum.sortByKey().cache())				# sort by day and cache results
+errByDate = errDateSorted.collect()						# collect the results (returns list)
+print('404 Errors by day: ', errByDate)						# print the results out
 
 # TEST 404 response codes per day (4e)
 Test.assertEquals(errByDate, [(1, 243), (3, 303), (4, 346), (5, 234), (6, 372), (7, 532), (8, 381), (9, 279), (10, 314), (11, 263), (12, 195), (13, 216), (14, 287), (15, 326), (16, 258), (17, 269), (18, 255), (19, 207), (20, 312), (21, 305), (22, 288)], 'incorrect errByDate')
@@ -480,47 +452,33 @@ Test.assertTrue(errDateSorted.is_cached, 'incorrect errDateSorted.is_cached')
 
 
 # #### **(4f) Exercise: Visualizing the 404 Response Codes by Day**
-
 # TODO: Replace <FILL IN> with appropriate code
-
-daysWithErrors404 = dict(errDateSorted.collect()).keys()
-errors404ByDay = dict(errDateSorted.collect()).values()
+daysWithErrors404 = dict(errDateSorted.collect()).keys()	# grab results as list and get keys - i.e. the days
+errors404ByDay = dict(errDateSorted.collect()).values()		# grab results as list and get values - i.e. the number of errors
 
 # TEST Visualizing the 404 Response Codes by Day (4f)
 Test.assertEquals(daysWithErrors404, [1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22], 'incorrect daysWithErrors404')
 Test.assertEquals(errors404ByDay, [243, 303, 346, 234, 372, 532, 381, 279, 314, 263, 195, 216, 287, 326, 258, 269, 255, 207, 312, 305, 288], 'incorrect errors404ByDay')
 
 
-
 # #### **(4g) Exercise: Top Five Days for 404 Response Codes **
 # ####Using the RDD `errDateSorted` you cached in the part (4e), what are the top five days for 404 response codes and the corresponding counts of 404 response codes?
 
-
 # TODO: Replace <FILL IN> with appropriate code
-topErrDate = errDateSorted.takeOrdered(5, lambda errors: -1*errors[1])
-print('Top Five dates for 404 requests: ', topErrDate)
-
-
+topErrDate = errDateSorted.takeOrdered(5, lambda errors: -1*errors[1]) 	# sort errors per day by number of errors (decreasing) and take the top 5
+print('Top Five dates for 404 requests: ', topErrDate)			# print them out
 
 # TEST Five dates for 404 requests (4g)
 Test.assertEquals(topErrDate, [(7, 532), (8, 381), (6, 372), (4, 346), (15, 326)], 'incorrect topErrDate')
 
-
 # #### **(4h) Exercise: Hourly 404 Response Codes**
 # ####Using the RDD `badRecords` you cached in the part (4a) and by hour of the day and in decreasing order, create an RDD containing how many requests had a 404 return code for each hour of the day. Cache the resulting RDD hourRecordsSorted and print that as a list.
-
-
 # TODO: Replace <FILL IN> with appropriate code
-
-hourCountPairTuple = badRecords.map(lambda log: (log.date_time.hour, 1))
-
-hourRecordsSum = hourCountPairTuple.reduceByKey(lambda a, b: a + b)
-
-hourRecordsSorted = (hourRecordsSum.sortByKey().cache())
-errHourList = hourRecordsSorted.collect()
-print('Top hours for 404 requests: ', errHourList)
-
-
+hourCountPairTuple = badRecords.map(lambda log: (log.date_time.hour, 1))	# for all 404 errors, get the hour as key and map to value 1
+hourRecordsSum = hourCountPairTuple.reduceByKey(lambda a, b: a + b)		# reduce by key (hour) and sum value, counting total errors per hour
+hourRecordsSorted = (hourRecordsSum.sortByKey().cache())			# sort by hour of the day and cache results
+errHourList = hourRecordsSorted.collect()					# return the results (as a list)
+print('Top hours for 404 requests: ', errHourList)				# print the results out
 
 # TEST Hourly 404 response codes (4h)
 Test.assertEquals(errHourList, [(0, 175), (1, 171), (2, 422), (3, 272), (4, 102), (5, 95), (6, 93), (7, 122), (8, 199), (9, 185), (10, 329), (11, 263), (12, 438), (13, 397), (14, 318), (15, 347), (16, 373), (17, 330), (18, 268), (19, 269), (20, 270), (21, 241), (22, 234), (23, 272)], 'incorrect errHourList')
@@ -528,16 +486,11 @@ Test.assertTrue(hourRecordsSorted.is_cached, 'incorrect hourRecordsSorted.is_cac
 
 
 # #### **(4i) Exercise: the 404 Response Codes by Hour**
-
 # TODO: Replace <FILL IN> with appropriate code
 
-hoursWithErrors404 = dict(hourRecordsSorted.collect()).keys()
-errors404ByHours = dict(hourRecordsSorted.collect()).values()
+hoursWithErrors404 = dict(hourRecordsSorted.collect()).keys() 	# get the set of hours in which errors occured
+errors404ByHours = dict(hourRecordsSorted.collect()).values() 	# get the number of errors in each hour
 
 # TEST Visualizing the 404 Response Codes by Hour (4i)
 Test.assertEquals(hoursWithErrors404, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23], 'incorrect hoursWithErrors404')
 Test.assertEquals(errors404ByHours, [175, 171, 422, 272, 102, 95, 93, 122, 199, 185, 329, 263, 438, 397, 318, 347, 373, 330, 268, 269, 270, 241, 234, 272], 'incorrect errors404ByHours')
-
-
-
-
