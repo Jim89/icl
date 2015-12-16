@@ -1,5 +1,5 @@
 ---
-title: "Optimisation and Decision Models Assignement Four"
+title: "Optimisation and Decision Models Assignment Four"
 author: "Jim Leach"
 date: "13 December 2015"
 output: pdf_document
@@ -11,7 +11,7 @@ The purpose of this document is to write up the response to the fourth assignmen
 
 ### Supplementary Note
 
-The optimisation step of this assignment was solved using a generic quadratic programming solver available in the R language (`solve.QP`). I discussed using R with Professor Weisemann and he said it was acceptable as long as I was using a generic solver and not a bespoke function for the Markovitz model. As I have used a generic solver (as opposed to a pre-built mean-variance portfolio solver) I have adhered to this restriction.
+The optimisation step of this assignment was solved using a generic quadratic programming solver available in the R language (`solve.QP`). I discussed using R with Professor Weisemann and he said it was acceptable as long as I was using a generic solver and not a bespoke function for the Markowitz model. As I have used a generic solver (as opposed to a pre-built mean-variance portfolio solver) I have adhered to this restriction.
 
 ***
 ```{r load_pckgs, echo=FALSE, message=FALSE}
@@ -37,16 +37,16 @@ stocks <- data.frame(co = c("Royal Dutch Shell",
                             "Diageo",
                             "BG Group",
                             "Rio Tinto Group"),
-                     ticker = c("RDSA",
-                                "HSBA",
-                                "BP",
-                                "VOD",
-                                "GSK",
-                                "BTI",
-                                "SAB",
-                                "DGE",
-                                "BG",
-                                "RIO"),
+                     ticker = c("RDSA.L",
+                                "HSBA.L",
+                                "BP.L",
+                                "VOD.L",
+                                "GSK.L",
+                                "BATS.L",
+                                "SAB.L",
+                                "DGE.L",
+                                "BG.L",
+                                "RIO.L"),
                      sector = c("Oil & Gas",
                                 "Banking",
                                 "Oil & Gas",
@@ -56,7 +56,7 @@ stocks <- data.frame(co = c("Royal Dutch Shell",
                                 rep("Beverages",2),
                                 "Oil & Gas",
                                 "Mining"))
-kable(stocks, col.names = c("Company Name", "Ticker", "Sector"))
+kable(stocks, col.names = c("Company Name", "Yahoo Finance LSE Ticker", "Sector"))
 ```
 
 Data were extracted going back to 2013-12-01 (i.e. the last two years of data) and it was ensured that the "Adjusted Close" data were extracted in order to account for dividends and stock splits. These data are presented as tables in Appendix 1.
@@ -126,7 +126,7 @@ covars %>%
 
 (Note that all the code used to perform the analyses discussed here can be found in the attached file `efficient_frontier.R`)
 
-The Markowitz problem can be interpretted as a specific case of the more general class of _quadratic program_ problems^1^^,^^2^. In quadratic programming, the objective function is a convex quadratic equation that is subject to linear constraints. 
+The Markowitz problem can be interpreted as a specific case of the more general class of _quadratic program_ problems^1^^,^^2^. In quadratic programming, the objective function is a convex quadratic equation that is subject to linear constraints. 
 
 The "classic" Markowitz problem for finding the minimum variance portfolio is given by \eqref{eq:mark}.
 
@@ -152,7 +152,7 @@ A^T x \geq b_0
 
 In these equation, $x$ is the vector of the decision variables - i.e. the proportion of each stock to purchase, $\mu$ is a vector of expected returns for each stock, $\Sigma$ is a matrix of the covariance of the returns between all stocks, $A$ is a matrix defining the constraints and $b_0$ is a vector that defines the right-hand-side of the constraints. 
 
-Given that there are ten stocks to be chosen from: $\mu$ has dimensions $10x1$ (1 expected return for each stock) and $\Sigma$ has dimensions $10x10$ (each stocks' returns against the others, including itself). 
+Given that there are ten stocks to be chosen from: $\mu$ has dimensions $10x1$ (1 expected return for each stock) and $\Sigma$ has dimensions 10x10 (each stocks' returns against the others, including itself). 
 
 The constraints are such that the proportions of each stock purchased must sum to 1 (referred to as the "proportionality constraint") and additionally we cannot short sell (i.e. we cannot have a negative amount of a stock in our portfolio). Therefore the matrix $A$ has dimensions $10x11$ (1 row for each stock, 1 column that defines the proportionality constraint and 10 columns that define the no short selling constraints). The vector $b_0$ is of length 11 (1 value for the proportionality constraint and 10 values for no-short-selling on each stock)
 
@@ -184,13 +184,15 @@ The matrices for $\mu$ and $\Sigma$ have been defined in section B (they are the
 
 Performing the necessary matrix multiplication it can be seen that these matrices would enforce the constraints as listed. 
 
-A generic quadratic problem solver in the `R` package `quadprog` can be used to solve this program. However it is also necessary to generate an efficient frontier, which requires evaluating the solution to this program at a range of $\underline{R}$ values (or in the case of the quadratic program, at a range of $\mu$ values), i.e. for a range of desired returns. 
+A generic quadratic problem solver in the `R` package `quadprog` can be used to solve this program. Note that there is a parameter in this function that allows us to specify that the first constraint (the proportionality constraint) should be evaluated as an _equality_.
 
-In order to do so, the vector of expected returns $\mu$ can be multiplied by some factor that models this. For example, if $\mu$ is multiplied by 0 then the first term \eqref{eq:quad} dissapears, and the solver will simply return the minimum risk portfolio. Similarly, if $\mu$ is multiplied by some very large number, then the solver will return a higher-risk portfolio. 
+However it is also necessary to generate an efficient frontier, which requires evaluating the solution to this program at a range of $\underline{R}$ values (or in the case of the quadratic program, at a range of $\mu$ values), i.e. for a range of desired returns. 
+
+In order to do so, the vector of expected returns $\mu$ can be multiplied by some factor that models this. For example, if $\mu$ is multiplied by 0 then the first term \eqref{eq:quad} disappears, and the solver will simply return the minimum risk portfolio. Similarly, if $\mu$ is multiplied by some very large number, then the solver will return a higher-risk portfolio. 
 
 This was performed in R using an iterative approach, solving the quadratic program a number of times in order to find the portfolio for a range of returns values. The multiplication factor of $\mu$  ranged from 0 (i.e. finding the minimum risk portfolio) to 10 (finding a portfolio with much higher returns) using increments of 0.001. In all this represents 10,001 possible portfolio combinations.
 
-Having found the optimal solution for each of these 10,001 returns values, the return/risk efficient frontier curve was plotted for a range of portfolio compositions and is presented below. Note that Portfolio risk is measured by the variance of the portfolio, $x^T\Sigma x$ and both return and risk are weekly values.
+Having found the optimal solution for each of these 10,001 returns values, the return/risk efficient frontier curve was plotted for a range of portfolio compositions and is presented below. Note that Portfolio risk is measured by the variance of the portfolio, $x^T\Sigma x$ and both return and risk are weekly values.\newline
 
 
 ```{r c_solve, echo = FALSE, fig.height=6, fig.width=10}
@@ -243,17 +245,84 @@ Additionally, the efficient frontier can also be plotted with ten additional poi
 frontier_with_stocks
 ```
 
+***
+
 ## Section D - Limited allocations per sector
 
-If the portfolio was limited to allow only one stock to be chosen from each sector, then it would be necessary to add a further constraint to this model. This can be modelled by \eqref{eq:limit}.
+If the portfolio was limited to allow only one stock to be chosen from each sector, then it would be necessary to add further decision variables and further constraints to this model. These new decisions variables would need to be binary, that would indicate if a particular stock was purchased in the portfolio. We would then need to limit combinations of these binary decision variables within sectors.
 
-\begin{equation} \label{eq:limit}
-\underline{x}_J \leq \sum_{i \in J}x_i \leq \bar{x}_J
+Such constraints can be though of as a special case of the cardinality constrained program, with cardinality defined by \eqref{eq:card}
+
+\begin{equation} \label{eq:card}
+|\{i : x_i > 0\}| \leq K
 \end{equation}
+
+In the general form the cardinality-constrained problem, we can only invest in a certain number of assets ($K$ in \eqref{eq:card}). Now, we can only invest in a certain number of assets _within_ a certain sector, and so this constraint is changed slightly. 
+
+Writing \eqref{eq:mark} more explicitly, including individual variables as opposed to the matrix representations gives \eqref{eq:general_opt}, with the general form of the cardinality-constrained program given by \eqref{eq:card_opt} where $z$ is a binary variable that indicates if that asset/stock has been purchased (1) or not (0).
+
+#### General Markowitz
+
+\begin{equation} \label{eq:general_opt}
+\begin{split}
+\min \sum_{i=1}^n \sum_{j=1}^n x_i \sigma_{ij} x_j \\
+s.t: \\
+\sum_{i=1}^n x_i = 1 \\
+\sum_{i=1}^n x_i \mathbb{E}[\hat{r_i}] \geq \underline{R} \\
+x_i \in [0, 1], \forall i = 1, ..., n
+\end{split}
+\end{equation}
+
+#### General Cardinality-Constrained Markowitz
+
+\begin{equation} \label{eq:card_opt}
+\begin{split}
+\min \sum_{i=1}^n \sum_{j=1}^n z_i x_i \sigma_{ij} x_j z_j\\
+s.t: \\
+\sum_{i=1}^n z_i x_i = 1 \\
+\sum_{i=1}^n z_i \leq K \\
+\sum_{i=1}^n x_i \mathbb{E}[\hat{r_i}] \geq \underline{R} \\
+x_i \in [0, 1], \forall i = 1, ..., n \\
+z_i \in [0, 1], \forall i = 1, ..., n
+\end{split}
+\end{equation}
+
+We can change and extend \eqref{eq:card_opt} to include the constraints that we can only invest in one asset per sector. The first step is to add an additional label to the $x_i\ and\ z_i$ variables to denote which sector that asset falls in to. We then add a constraint for each of the sectors to state that we can buy at most 1 asset from that sector. This transformation is described by \eqref{eq:card_sect_1}. (Note that we have removed the original $\leq K$ constraint as it does not hold here). 
+
+#### Sector-constrained Markowitz
+
+\begin{equation} \label{eq:card_sect_1}
+\begin{split}
+\min \sum_{i=1}^n \sum_{j=1}^n z_{i, s_n} x_{i, s_n} \sigma_{ij} x_{j, s_n} z_{j, s_n}\\
+s.t: \\
+\sum_{i=1}^n z_i x_i = 1 \\
+\sum_{i=1}^n x_i \mathbb{E}[\hat{r_i}] \geq \underline{R} \\
+x_i \in [0, 1], \forall i = 1, ..., n \\
+z_i \in [0, 1], \forall i = 1, ..., n \\
+\text{Add limit 1 asset per sector constraints, 1 for each sector:} \\
+\text{Oil + gas: }\sum_{i=1}^n z_{i, OG} x_{i, OG} \leq 1 \\
+\text{Banking: }\sum_{i=1}^n z_{i, B} x_{i, B} \leq 1 \\
+\text{Telecomms: }\sum_{i=1}^n z_{i, T} x_{i, T} \leq 1 \\
+\text{Pharma: }\sum_{i=1}^n z_{i, P} x_{i, P} \leq 1 \\
+\text{Tobacco: }\sum_{i=1}^n z_{i, Tob} x_{i, Tob} \leq 1 \\
+\text{Beverages: }\sum_{i=1}^n z_{i, Bev} x_{i, Bev} \leq 1 \\
+\text{Mining: }\sum_{i=1}^n z_{i, M} x_{i, M} \leq 1 
+\end{split}
+\end{equation}
+
+The above model \eqref{eq:card_sect_1} applies specific limits on the number of stocks that can be purchased within a given sector, with the limit being 1. If we wanted to say, allow 2 stocks from oil and gas, but only 1 from any other sector, we could change the oil and gas constraint to reflect this. 
+
+The introduction of binary decision variables (extended the cardinality-constricted model) in this way allows us to change the model to limit our investment(s) to at most one company per sector.
+
+***
+
+\pagebreak
 
 # Appendices
 
-## Appendix One - Weekly Price Data
+## Appendix A - Weekly Price Data
+
+(Note that the first column in each table is the date of the Friday in each week)
 
 ### Royal Dutch Shell
 
@@ -338,7 +407,9 @@ kable(weekly_dfs[10], col.names = c("Open", "High", "Low", "Close", "Volume", "A
 ## Appendix B - Weekly Returns
 
 ```{r app_b_weekly_returns, echo = FALSE, message = FALSE}
-kable(returns_data, digits = 4)
+dates <- weekly_dfs[1] %>% data.frame %>% add_rownames %>% select(1) %>% slice(-1)
+dat <- cbind(dates, returns_data) %>% rename(Week = rowname)
+kable(dat, digits = 4)
 ```
 
 # References
