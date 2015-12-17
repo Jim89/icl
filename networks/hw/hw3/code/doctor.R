@@ -1,52 +1,54 @@
-library(readr)
+# set up and load packages -----------------------------------------------------
+# clear out working directory
+  rm(list = ls())
 
-doctor <- read_tsv("./hw/hw3/data/doctor.txt")
-names(doctor) <- tolower(names(doctor))
-doctor1 <- head(doctor, 4)
+# load packages   
+  library(readr)        # for reading data
+  library(dplyr)        # for data manipulations
+  library(magrittr)     # for pipelines
+  library(minpack.lm)   # for fitting Bass model
+  library(ggplot2)      # for plotting
 
-T79 <- doctor1$week
-Tdelt <- (1:100)/10
-Sales <- doctor1$revenues
-Cusales <- cumsum(Sales)
-Bass.nls <- nls(formula = Sales ~ M * (((P + Q)^2/P) * exp(-(P + Q) * T79))/(1 + (Q/P) * exp(-(P + Q) * T79))^2,
-                start = list(M = 5, P = 0.03, Q = 0.38))
-summary(Bass.nls)
+# get the data------------------------------------------------------------------
+# read in data and set names to lower case
+  doctor <- read_tsv("./hw/hw3/data/doctor.txt")
+  names(doctor) <- tolower(names(doctor))
+
+# add lagged cumulative sales which we'll need for the formula
+  doctor %<>% mutate(cs_lag = lag(cumulative_revenues))
+  doctor[is.na(doctor)] <- 0
+
+# get first 4 periods for predictions
+  doctor4 <- head(doctor, 4)
+
+# fit the model ----------------------------------------------------------------
+# forcast revenues F_t given by     (p+q(C_{t-1}/m)(m-C_{t-1})
+bass_fit <- nlsLM(formula = revenues ~ (p + q * (cs_lag/m))*(m - cs_lag),
+                  data = doctor4,
+                  start = list(m = 1, p = 1, q = 1))
+
+# get the fitted parameters
+  m <- coef(bass_fit)[1]
+  p <- coef(bass_fit)[2]
+  q <- coef(bass_fit)[3]
+
+  
+# calculate forcasted revenues in the whole data set
+# add empty field to fill
+  doctor$prediction <- 0
+
+  for (i in 1:nrow(doctor)) {
+    if (i == 1) {
+    prev_pred <- 0
+    doctor[i, "prediction"] <- (p + q * (prev_pred / m)) * (m - prev_pred)
+    } else {
+       prev_pred <- as.numeric(unlist(cumsum(doctor[1:i, "prediction"])))[i-1]
+       doctor[i, "prediction"] <- (p + q * (prev_pred / m)) * (m - prev_pred)
+    }
+  }    
 
 
-
-# get coefficient
-Bcoef <- coef(Bass.nls)
-m <- Bcoef[1]
-p <- Bcoef[2]
-q <- Bcoef[3]
-# setting the starting value for M to the recorded total sales.
-ngete <- exp(-(p + q) * Tdelt)
-
-# plot pdf
-Bpdf <- m * ((p + q)^2/p) * ngete/(1 + (q/p) * ngete)^2
-Bcdf <- m * (1 - ngete)/(1 + (q/p) * ngete)
-
-qplot(x = Tdelt, y = Bpdf) + geom_line()
-qplot(x = Tdelt, y = Bcdf) + geom_line() + geom_point(data = doctor, aes(x = week, y = cumulative_revenues))
-
-# this will work - need to check function, though!
-library(minpack.lm)
-fit <- nlsLM(formula = revenues ~ M * (((P + Q)^2/P) * exp(-(P + Q) * T79))/(1 + (Q/P) * exp(-(P + Q) * T79))^2,
-      data = doctor1,
-      start = list(M = 1, P = 1, Q = 1))
-
-Bcoef <- coef(fit)
-m <- Bcoef[1]
-p <- Bcoef[2]
-q <- Bcoef[3]      
-
-
-# setting the starting value for M to the recorded total sales.
-ngete <- exp(-(p + q) * Tdelt)
-
-# plot pdf
-Bpdf <- m * ((p + q)^2/p) * ngete/(1 + (q/p) * ngete)^2
-Bcdf <- m * (1 - ngete)/(1 + (q/p) * ngete)
-
-qplot(x = Tdelt, y = Bpdf) + geom_line()
-qplot(x = Tdelt, y = Bcdf) + geom_line() + geom_point(data = doctor, aes(x = week, y = cumulative_revenues))
+  pred <- function(prev_pred, m, p, q){
+    ans <- (p + q * (prev_pred / m)) * (m - prev_pred)
+    return(ans)
+  }
