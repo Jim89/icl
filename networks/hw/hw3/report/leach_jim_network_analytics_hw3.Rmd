@@ -1,0 +1,289 @@
+---
+title: "Network Analytics Assignment 3"
+author: "Jim Leach"
+date: "18 December 2015"
+output: pdf_document
+---
+
+# Document Purpose
+
+The purpose of this document is to write up the response to the third assignment give as part of the _Network Analytics_ module. It is divided in to several sections, each covering a section of the assignment as given. 
+
+***
+
+# Question 1
+
+## 1a
+
+A maximum matching can be found for a bipartite graph by converting it in to a weighted perfect matching problem. For the graph presented in the question, this involves several steps.
+
+The first is to add a dummy node to the right hand side such that there are four nodes on each side |U| = |V|. Next, valuations for the nodes on the right had side need to be set. For the three RHS nodes present in the original graph, an equal valuation is set for each of the nodes on the LHS, such as 1 for each node. For the dummy node, the valuation is set to 0 for each of the nodes on the LHS. Finally, prices must be set by the nodes on the LHS. These can _all_ be initialised to 0 and the perfect matching will still work. 
+
+
+## 1b
+
+Similarly, finding a matching bipartite graph can _also_ be thought of as a min-cost flow problem. This has been performed for the graph present in the question. Firstly, a "source" and a "target" node were added. The source to the left of the four LHS nodes and target to the right of the three RHS nodes. Note that the source was labelled "s", the four LHS nodes were labelled a, b, c and d, the three RHS nodes are labelled x, y, z, and the target node was labelled t.
+
+Edges were drawn between the source and the four LHS nodes, and between the three RHS nodes and the target. All edges were then directed, such that edges from the source were directed towards the LHS nodes, edges from the LHS nodes were exclusively directed towards the three RHS nodes, and edges from the RHS nodes were exclusively directed towards the target node. The capacity of all edges was set to be one, and the cost of using each edge was set to be: 0 for edges from the source to the LHS nodes, 1 for all edges linking the LHS nodes with the RHS nodes, and 0 for all edges linking the RHS nodes with the target. 
+
+Having done so, we can then write the optimisation program that would be necessary to solve this system.
+
+#### Objective function
+
+$\min 0x_{sa} + 0x_{sb} + 0x_{sc} + 0x_{sd} + 1x_{ax} + 1x_{ay} + 1x_{az} + ... + 0x_{xt} + 0x_{yt} + 0x_{zt}$
+
+(Where $...$ represents the other edges linking the LHS to the RHS).
+
+#### Constraints
+
+(Incidence matrix multiplied by vector of edges equals flow).
+
+\setcounter{MaxMatrixCols}{20}
+\[
+\begin{pmatrix}
+  1 & 1  & 1  & 1  & 0  & 0  & 0  & 0  & 0  & 0  & 0  & 0  & 0  & 0 & 0 & 0 & 0 & 0 & 0 \\
+  -1 & 0  & 0  & 0  & 1  & 1  & 1  & 0  & 0  & 0  & 0  & 0  & 0  & 0 & 0 & 0 & 0 & 0 & 0 \\
+  0 & -1 & 0  & 0  & 0  & 0  & 0  & 1  & 1  & 1  & 0  & 0  & 0  & 0 & 0 & 0 & 0 & 0 & 0 \\
+  0 & 0  & -1 & 0  & 0  & 0  & 0  & 0  & 0  & 0  & 1  & 1  & 1  & 0 & 0 & 0 & 0 & 0 & 0 \\
+  0 & 0  & 0  & -1 & 0  & 0  & 0  & 0  & 0  & 0  & 0  & 0  & 0  & 1 & 1 & 1 & 0 & 0 & 0 \\
+  0 & 0  & 0  & 0  & -1 & 0  & 0  & -1 & 0  & 0  & -1 & 0  & 0  & -1 & 0 & 0 & 1 & 0 & 0 \\
+  0 & 0  & 0  & 0  & 0  & -1 & 0  & 0  & -1 & 0  & 0  & -1 & 0  & 0 & -1 & 0 & 0 & 1 & 0 \\
+  0 & 0  & 0  & 0  & 0  & 0  & -1 & 0  & 0  & -1 & 0  & 0  & -1 & 0 & 0 & -1 & 0 & 0 & 1 \\
+  0 & 0  & 0  & 0  & 0  & 0  & 0  & 0  & 0  & 0  & 0  & 0  & 0  & 0 & 0 & 0 & -1 & -1 & -1 
+\end{pmatrix}
+\begin{pmatrix}
+  x_{sa} \\ 
+  x_{sb} \\
+  x_{sc} \\
+  x_{sd} \\
+  x_{ax} \\
+  x_{ay} \\
+  x_{az} \\
+  x_{bx} \\
+  x_{by} \\
+  x_{bz} \\
+  x_{cx} \\
+  x_{cy} \\
+  x_{cz} \\
+  x_{dx} \\
+  x_{dy} \\
+  x_{dz} \\
+  x_{xt} \\
+  x_{yt} \\
+  x_{zt}
+\end{pmatrix}
+=
+\begin{pmatrix}
+  f \\
+  0 \\
+  0 \\
+  0 \\
+  0 \\
+  0 \\
+  0 \\
+  0 \\
+  -f
+\end{pmatrix}
+\]
+
+\begin{equation*}
+\begin{split}
+\text{Restrict capacities to 1 for all edges:} \\
+0 \leq x_{ij} \leq 0 \\
+\\
+\text{Set up constraints to match edge-incidence requirements from problem: } \\
+x_{sa} - x_{ax} - x_{ay} - x_{az} \leq 1 \\
+x_{sb} - x_{bx} - x_{by} - x_{bz} = 1 \\
+x_{sc} - x_{cx} - x_{cy} - x_{cz} \leq 1 \\
+x_{sd} - x_{dx} - x_{dy} - x_{dz} \leq 2 \\
+x_{ax} + x_{bx} + x_{cx} + x_{dx} - x_{xt} = 2 \\
+x_{ay} + x_{by} + x_{cy} + x_{dy} - x_{yt} = 1 \\
+x_{az} + x_{bz} + x_{cz} + x_{dz} - x_{zt} \leq 1
+\end{split}
+\end{equation*}
+
+***
+
+# Question 2
+
+Given the following set of data for buyers' valuations for three items, a, b, and c it is possible to state what happens at each stage of the auction, and to find the market clearing prices.
+
+```{r show_data, echo = FALSE, message=FALSE}
+library(knitr)
+library(dplyr)
+data <- data.frame(item= c("a", "b", "c"), valx = c(3, 6, 4), valy = c(2, 8, 1), valz = c(1, 2, 3))
+kable(data, col.names = c("Buyer", "Valuation a", "Valuation b", "Valuation c"))
+```
+
+### Stage 1
+
+All three items, a, b and c are initialised to a price of 0.
+
+As such, the _net_ valuations for the each item for each of the three buyers, and therefore which items are picked by which buyers is as follows:
+
+```{r stage1, echo = FALSE}
+stage1 <- data %>% 
+          mutate(prices = c(0, 0, 0),
+               netx = valx - prices,
+               nety = valy - prices,
+               netz = valz - prices,
+               pick = c("", "x, y, z", "")) %>% 
+          select(1, 5:9)
+kable(stage1, col.names = c("Buyer", "Prices", "Net Valuation x", "Net Valuation y", "Net Valuation z", "Picked by"))
+```
+
+As can be seen, all three buyers pick item b. As such it forms an overdemanded set and its price is increased by one for stage 2.
+
+
+### Stage 2
+
+The new _net_ valuations for the each item for each of the three buyers, and therefore which items are picked by which buyers is as follows:
+
+```{r stage2, echo = FALSE}
+stage2 <- data %>% 
+          mutate(prices = c(0, 1, 0),
+               netx = valx - prices,
+               nety = valy - prices,
+               netz = valz - prices,
+               pick = c("", "x, y", "z")) %>% 
+          select(1, 5:9)
+kable(stage2, col.names = c("Buyer", "Prices", "Net Valuation a", "Net Valuation b", "Net Valuation c", "Picked by"))
+```
+
+Item b is _still_ an overdemanded set, and so its price is again increased.
+
+### Stage 3
+
+The new _net_ valuations for the each item for each of the three buyers, and therefore which items are picked by which buyers is as follows:
+
+```{r stage3, echo = FALSE}
+stage3 <- data %>% 
+          mutate(prices = c(0, 2, 0),
+               netx = valx - prices,
+               nety = valy - prices,
+               netz = valz - prices,
+               pick = c("", "x, y", "x, z")) %>% 
+          select(1, 5:9)
+kable(stage3, col.names = c("Buyer", "Prices", "Net Valuation a", "Net Valuation b", "Net Valuation c", "Picked by"))
+```
+
+Now, both items b _and_ c are overdemanded, so their prices _both_ increase by one.
+
+### Stage 4
+
+The new _net_ valuations for the each item for each of the three buyers, and therefore which items are picked by which buyers is as follows:
+
+```{r stage4, echo = FALSE}
+stage4 <- data %>% 
+          mutate(prices = c(0, 3, 1),
+               netx = valx - prices,
+               nety = valy - prices,
+               netz = valz - prices,
+               pick = c("x", "x, y", "x, z")) %>% 
+          select(1, 5:9)
+kable(stage4, col.names = c("Buyer", "Prices", "Net Valuation a", "Net Valuation b", "Net Valuation c", "Picked by"))
+```
+
+Now, there is no longer a constricted set of buyers, so a perfect matching can be found, which gives the market clearing prices.
+
+### Market clearing prices
+
+The market clearing prices are therefore:
+
+```{r mkt_clear, echo = FALSE}
+clear <- data.frame(item = c("a", "b", "c"), price = c(0, 3, 1), bought_by = c("x", "y", "z"))
+kable(clear, col.names = c("Item", "Price", "Bought by"))
+```
+
+***
+
+# Question 3
+
+In this question, we imagine that we are studying a product that has some network effects on its value. Consumers of this product are named using real numbers from 0 to 1. The _reservation price_ for a consumer, $x$, when a fraction $z$ of the population uses the product is given by the formula $r(x)f(z)$. In this formula $r(x) = 1-x$ and $f(z)=z$.
+
+## 3a
+
+If the product is sold at price = 0.25 then there are only two possible equilibrium values for z. In order to understant this, it is helpful to visualise price as a function of z for this model:
+
+```{r show_curve, echo = FALSE}
+library(ggplot2)
+z <- seq(0, 1, 0.01)
+qplot(x = z, y = (1-z)*z, geom = "line") + 
+  ylim(0, .5) + 
+  theme_minimal() +
+  xlab("z") +
+  ylab("Price") +
+  geom_hline(yintercept = 0.25, linetype = "dashed") + 
+  geom_vline(xintercept = 0.5, linetype = "dotted") +
+  geom_vline(xintercept = 0, linetype = "dotted")
+```
+
+The horizontal line shows the price of 0.25. There are only two equilibria (marked in this graph with dotted vertical lines). These occur when z = 0, or when z = 0.5, i.e. when either no one buys the product, or when 50% of people do. 
+
+At z = 0 no one expects the product to be bought, and (assuming f(0)=0) therefore no one places _any_ value on the product, and so no one buys it. 
+
+At z = 0.5, there is an expectation that 50% of people will buy the product. This equilibrium is _unstable_. If z turns out to be just _less_ than 0.5, then there will be people who purchased the product who value it less than they paid for it. This puts _downward pressure_ on further sales of the product, and eventually z will tend towards 0.
+
+## 3b
+
+If, however, the product is sold at price = 2/9 then there are more equilibria that are possible. Again, visualising this is helpful:
+
+```{r show_curve2, echo = FALSE}
+library(ggplot2)
+z <- seq(0, 1, 0.01)
+qplot(x = z, y = (1-z)*z, geom = "line") + 
+  ylim(0, .5) + 
+  theme_minimal() +
+  xlab("z") +
+  ylab("Price") +
+  geom_hline(yintercept = (2/9), linetype = "dashed") + 
+  geom_vline(xintercept = (2/3), linetype = "dotted") +
+  geom_vline(xintercept = (1/3), linetype = "dotted") +
+  geom_vline(xintercept = 0, linetype = "dotted")
+```
+
+The horizontal line shows the price of $\dfrac{2}{9}$. Now there are _three_ possible equilibria, again shown by the vertical dotted lines. These occur when z = 0, z = $\frac{1}{3}$ and z = $\frac{2}{3}$, i.e. when no one buys the product, when one third of people buy the product, or when two thirds of people buy the product. 
+
+As before at z = 0 no one expects the product to be bought, and (assuming f(0)=0) no one places _any_ value on the product, and so no one buys it. 
+
+At z = $\frac{1}{3}$, there is an expectation that 33.3% of people will buy the product. This equilibrium is _unstable_. If z turns out to be just _less_ than $\frac{1}{3}$, then there will be people who purchased the product who value it less than they paid for it. This puts _downward pressure_ on further sales of the product, and eventually z will tend towards 0. If z is just _greater than_ $\frac{1}{3}$ then there will be people who have purchased the product more cheaply than they value it. Therefore anyone who values it more highly than them will also do so. This puts _upward pressure_ on further sales of the product and eventually z will tend towards $\frac{2}{3}$.
+
+At z = $\frac{2}{3}$ there is an expectation that 66.6% of people will buy the product. This equilibrium is _stable_. Following the logic above, if z is just less than $\frac{2}{3}$ then there is upwards pressure towards $\frac{2}{3}$. Similarly if z is just greater than $\frac{2}{3}$ then there is downwards pressure, but only as far as z = $\frac{2}{3}$.
+
+## 3c
+
+These answers are qualitately different as at equilibrium it is the case that $p^*$ = r(z)f(z) (where $p^*$ is the equilibrium price). Given the parabolic shape of r(z)f(z) with a maximum at 0.25, this limits the range of equilibrium prices possible. If we set $p^*$ to be 0.25, then there is only one non-zero solution to the equation r(z)f(z), i.e. z = 0.5 (as we are at the maximium of the function). However, at $p^*$ = $\frac{2}{9}$ there are two non-zero solutions to the equation $p^*$ = r(z)f(z) and as such there are two values of z that satisfy the equilibrium, namely z = $\frac{1}{3}$ and z = $\frac{2}{3}$,
+
+## 3d
+
+As discussed above, from the equilibria found above, only those at z = 0 and z = $\frac{2}{3}$ are stable. z = 0 could be termed "trivially stable" as it is of no great interest to us if no one buys the product. The equilibria at $\frac{2}{3}$ is of more interest and it is stable for the reasons highligted in sections 3a and 3b.
+
+***
+
+# Question 4
+
+```{r doctor, echo = FALSE, message=FALSE}
+source("../code/doctor.R")
+```
+
+For this question, data for the film "The Doctor" were used to fit a Bass model following the article provided. 
+
+The model that was used to estimate the parameters was non-linear least squares using the `R` package `minpack.lm`. The function that was optimised was the least-squares difference between the actual observed ticket revenues and those predicted by the formula:
+
+\begin{equation*}
+(p + q(C_{t-1}/m) * (m - C_{t-1})
+\end{equation*}
+
+In this model, p and q are the innovation and immitation parameters from the Bass model. $C_{t-1}$ is the total revenues at time t-1 and m is the size of the market, i.e. the total number of people available to see the film.
+
+Having fit this model on the first four week's of data for "The Doctor", the followin parameters were found:
+
+* m: `r round(m, 2)`
+* p: `r round(p, 4)`
+* q: `r round(q, 4)`
+
+It is also possible to plot the predicted revenues for the first four weeks compared against those actually recorded:
+
+```{r show_plot, echo = FALSE}
+forecast
+```
