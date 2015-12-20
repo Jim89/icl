@@ -12,7 +12,7 @@
 
 # get the data------------------------------------------------------------------
 # read in data and set names to lower case
-  doctor <- read_tsv("./hw/hw3/data/doctor.txt")
+  doctor <- read_tsv("../data/doctor.txt")
   names(doctor) <- tolower(names(doctor))
 
 # add lagged cumulative sales which we'll need for the formula
