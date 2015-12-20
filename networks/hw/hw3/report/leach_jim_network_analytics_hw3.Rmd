@@ -15,12 +15,16 @@ The purpose of this document is to write up the response to the third assignment
 
 ## 1a
 
+Note: this graph was drawn and submitted as attachment `q1a.jpg`.
+
 A maximum matching can be found for a bipartite graph by converting it in to a weighted perfect matching problem. For the graph presented in the question, this involves several steps.
 
 The first is to add a dummy node to the right hand side such that there are four nodes on each side |U| = |V|. Next, valuations for the nodes on the right had side need to be set. For the three RHS nodes present in the original graph, an equal valuation is set for each of the nodes on the LHS, such as 1 for each node. For the dummy node, the valuation is set to 0 for each of the nodes on the LHS. Finally, prices must be set by the nodes on the LHS. These can _all_ be initialised to 0 and the perfect matching will still work. 
 
 
 ## 1b
+
+Note: this graph was drawn and submitted as attachment `q1b.jpg`.
 
 Similarly, finding a matching bipartite graph can _also_ be thought of as a min-cost flow problem. This has been performed for the graph present in the question. Firstly, a "source" and a "target" node were added. The source to the left of the four LHS nodes and target to the right of the three RHS nodes. Note that the source was labelled "s", the four LHS nodes were labelled a, b, c and d, the three RHS nodes are labelled x, y, z, and the target node was labelled t.
 
@@ -106,6 +110,8 @@ x_{az} + x_{bz} + x_{cz} + x_{dz} - x_{zt} \leq 1
 
 # Question 2
 
+Note: this graph was drawn and submitted as attachment `q2.jpg`.
+
 Given the following set of data for buyers' valuations for three items, a, b, and c it is possible to state what happens at each stage of the auction, and to find the market clearing prices.
 
 ```{r show_data, echo = FALSE, message=FALSE}
@@ -127,12 +133,12 @@ stage1 <- data %>%
                netx = valx - prices,
                nety = valy - prices,
                netz = valz - prices,
-               pick = c("", "x, y, z", "")) %>% 
+               pick = c("", "x, y", "z")) %>% 
           select(1, 5:9)
 kable(stage1, col.names = c("Buyer", "Prices", "Net Valuation x", "Net Valuation y", "Net Valuation z", "Picked by"))
 ```
 
-As can be seen, all three buyers pick item b. As such it forms an overdemanded set and its price is increased by one for stage 2.
+As can be seen, buyers x and y pick item b and buyer z picks item c. As such b forms an over-demanded set and its price is increased by one for stage 2.
 
 
 ### Stage 2
@@ -147,10 +153,10 @@ stage2 <- data %>%
                netz = valz - prices,
                pick = c("", "x, y", "z")) %>% 
           select(1, 5:9)
-kable(stage2, col.names = c("Buyer", "Prices", "Net Valuation a", "Net Valuation b", "Net Valuation c", "Picked by"))
+kable(stage2, col.names = c("Buyer", "Prices", "Net Valuation x", "Net Valuation y", "Net Valuation z", "Picked by"))
 ```
 
-Item b is _still_ an overdemanded set, and so its price is again increased.
+Item b is _still_ an over-demanded set, and so its price is again increased.
 
 ### Stage 3
 
@@ -164,10 +170,10 @@ stage3 <- data %>%
                netz = valz - prices,
                pick = c("", "x, y", "x, z")) %>% 
           select(1, 5:9)
-kable(stage3, col.names = c("Buyer", "Prices", "Net Valuation a", "Net Valuation b", "Net Valuation c", "Picked by"))
+kable(stage3, col.names = c("Buyer", "Prices", "Net Valuation x", "Net Valuation y", "Net Valuation z", "Picked by"))
 ```
 
-Now, both items b _and_ c are overdemanded, so their prices _both_ increase by one.
+Now, both items b _and_ c are over-demanded, so their prices _both_ increase by one.
 
 ### Stage 4
 
@@ -181,7 +187,7 @@ stage4 <- data %>%
                netz = valz - prices,
                pick = c("x", "x, y", "x, z")) %>% 
           select(1, 5:9)
-kable(stage4, col.names = c("Buyer", "Prices", "Net Valuation a", "Net Valuation b", "Net Valuation c", "Picked by"))
+kable(stage4, col.names = c("Buyer", "Prices", "Net Valuation x", "Net Valuation y", "Net Valuation z", "Picked by"))
 ```
 
 Now, there is no longer a constricted set of buyers, so a perfect matching can be found, which gives the market clearing prices.
@@ -203,7 +209,7 @@ In this question, we imagine that we are studying a product that has some networ
 
 ## 3a
 
-If the product is sold at price = 0.25 then there are only two possible equilibrium values for z. In order to understant this, it is helpful to visualise price as a function of z for this model:
+If the product is sold at price = 0.25 then there are only two possible equilibrium values for z. In order to understand this, it is helpful to visualise price as a function of z for this model:
 
 ```{r show_curve, echo = FALSE}
 library(ggplot2)
@@ -252,15 +258,17 @@ At z = $\frac{2}{3}$ there is an expectation that 66.6% of people will buy the p
 
 ## 3c
 
-These answers are qualitately different as at equilibrium it is the case that $p^*$ = r(z)f(z) (where $p^*$ is the equilibrium price). Given the parabolic shape of r(z)f(z) with a maximum at 0.25, this limits the range of equilibrium prices possible. If we set $p^*$ to be 0.25, then there is only one non-zero solution to the equation r(z)f(z), i.e. z = 0.5 (as we are at the maximium of the function). However, at $p^*$ = $\frac{2}{9}$ there are two non-zero solutions to the equation $p^*$ = r(z)f(z) and as such there are two values of z that satisfy the equilibrium, namely z = $\frac{1}{3}$ and z = $\frac{2}{3}$,
+These answers are qualitatively different as at equilibrium it is the case that $p^*$ = r(z)f(z) (where $p^*$ is the equilibrium price). Given the parabolic shape of r(z)f(z) with a maximum at 0.25, this limits the range of equilibrium prices possible. If we set $p^*$ to be 0.25, then there is only one non-zero solution to the equation r(z)f(z), i.e. z = 0.5 (as we are at the maximum of the function). However, at $p^*$ = $\frac{2}{9}$ there are two non-zero solutions to the equation $p^*$ = r(z)f(z) and as such there are two values of z that satisfy the equilibrium, namely z = $\frac{1}{3}$ and z = $\frac{2}{3}$,
 
 ## 3d
 
-As discussed above, from the equilibria found above, only those at z = 0 and z = $\frac{2}{3}$ are stable. z = 0 could be termed "trivially stable" as it is of no great interest to us if no one buys the product. The equilibria at $\frac{2}{3}$ is of more interest and it is stable for the reasons highligted in sections 3a and 3b.
+As discussed above, from the equilibria found above, only those at z = 0 and z = $\frac{2}{3}$ are stable. z = 0 could be termed "trivially stable" as it is of no great interest to us if no one buys the product. The equilibria at $\frac{2}{3}$ is of more interest and it is stable for the reasons highlighted in sections 3a and 3b.
 
 ***
 
 # Question 4
+
+Note: the code for this section can be found in the attached `doctor.R` file.
 
 ```{r doctor, echo = FALSE, message=FALSE}
 source("../code/doctor.R")
@@ -274,9 +282,9 @@ The model that was used to estimate the parameters was non-linear least squares 
 (p + q(C_{t-1}/m) * (m - C_{t-1})
 \end{equation*}
 
-In this model, p and q are the innovation and immitation parameters from the Bass model. $C_{t-1}$ is the total revenues at time t-1 and m is the size of the market, i.e. the total number of people available to see the film.
+In this model, p and q are the innovation and imitation parameters from the Bass model. These describe the rate at which people will spontaneously start using the product (or in this instance, see the film) and the rate at which people will use the product based on how many _other_ people are, respectively. $C_{t-1}$ is the total revenues at time t-1 and m is the size of the market, i.e. the total number of people available to see the film.
 
-Having fit this model on the first four week's of data for "The Doctor", the followin parameters were found:
+After implementing a 4-week rolling forecast model, the parameters for the first four weeks of data for "The Doctor" were found to be:
 
 * m: `r round(m, 2)`
 * p: `r round(p, 4)`
@@ -287,3 +295,33 @@ It is also possible to plot the predicted revenues for the first four weeks comp
 ```{r show_plot, echo = FALSE}
 forecast
 ```
+
+Whilst the fit of the predicted points is not perfect, they show a good approximation to the observed values. 
+
+Comparing the values found with those presented in the article, it is seen that whilst they are close, they are not the same. This is due to the fact that the values in the article are those obtained from using the _whole_ data set, rather than just the first four weeks of data. The value of $m$ obtained is smaller than that for the article, which is to be expected (given that less data were used) and the values of p and q are both larger than the article.
+
+***
+
+# Question 5
+
+## Part A
+
+The model presented in the article is one that is used to rationalise data observed for Tweets relating to the Higgs Boson, prior to the announcement of its discovery in 2012. They authors of the paper obtained Twitter messages ("tweets") from a period of several days prior to and after the official announcement of the Higgs' discovery and analysed the rate at which tweets spread throughout the resulting network of users over this period. The model that they used was similar to the Bass model in that they used the idea of users being "activated" during the time period, where activation was defined as having sent, replied to, or re-tweeted (sharing someone else's tweet) a message related to the Higgs (with a number of "hashtag" keywords used to identify such tweets).
+
+Moreover, the authors used the explicit network structure provided by the data to enhance their model. They assumed that the activation process was "driven by social reinforcement at the neighbourhood level", i.e. that people tweet when other people they are connected with also tweet. Having made this assumption, they used a graph degeneracy method known as _k-cores_ to assign influence scores to all nodes in the network, with a node's influence affecting how likely it was to activate other nodes in its neighbourhood once it is activated itself. They observed _cascading effects_ in the data, whereby the volume of tweets increased substantially once a certain threshold of tweets had been met, and if influential people were tweeting about the subject.
+
+There are several formulae that the authors used to describe how they modeled this process (not presented here) but in short they allowed for users to both become activated (i.e. by sending a tweet) and to "deactivate" by not tweeting a relevant tweet for a certain amount of time.
+
+## Part B
+
+The final point in the preceding paragraph demonstrates how this model differs substantially from the Bass model: it allows users to activate _and_ deactivate over time. 
+
+The original Bass model can be thought of as a "one way street", once a user has purchased a product (or been "activated" in the terminology of the article) they do not go back. This leads to a characteristic S-shaped curve of the number of active users against time when using the standard Bass model. 
+
+However in the model from this paper, users can become deactivated and re-activated over time. This means that the S-shaped curve may no longer be observed as users join the conversation, leave it, re-join it, drop out all together and/or remain constantly active. 
+
+Moreover, the explicit use of network topology is distinct from the Bass model, which is a _population model_. Modelling the node activation process as a function of a node's neighbours is also distinct from the original Bass model, and demonstrates a distinct difference in this approach.
+
+## Part C
+
+There are several potential business applications of this model. It could be used by a marketing team to understand _who_ to target in a group of users in order to spread the message about a new product (using the idea of node activation depending on a node's neighbours). Furthermore, the cascading effects highlighted in the article could give insight as to how many individuals a marketing team might need to reach in order to achieve such a cascade and trigger a mass discussion of their product. Similarly, understanding the shape of the "activation curve" for their product (perhaps by assessing that for similar products) could help a marketing team understand when and where their (limited) resources should be targeted, and may additionally help them to justify their efforts with their budget-setter.
