@@ -1,0 +1,103 @@
+---
+title: "Optimisation and Decision Models Module 3"
+author: "Jim Leach"
+date: "29 Decembber 2015"
+output:
+  pdf_document
+---
+
+# Convex Analysis
+
+## Why convexity
+
+Convexity is very important for non-linear optimisation. It helps us find a (global) minimum in the objective function. However, understanding how a multivariate function behaves globally (i.e. at all values of its parameters) is hard, and is impossible to visualise in more than 2 dimensions. However, we _can_ understand how a function behaves locally using derivatives. Using this knowledge we can start to make inferences about what it looks like globally. 
+
+### General approach to solving
+
+In non-linear optimisation, the general approach to solving the system is as follows:
+
+Given a current feasible solution, to to a solution that is still in the feasible region that is nearby, and has a better objective value. Repeat this until the current solution is the "best" within its neighbourhood. 
+
+Therefore, for this to work, we require a "nice" feasible region and a "nice" objective function - i.e. convex ones. 
+
+### "Nice" feasible regions
+
+In order for a feasible region to be "nice" we must be able to traverse it locally. I.e., we must be able to head in to the direction of optimality - we must be able to make this step whilst remaining feasible. Convexity ensures that this is the case. 
+
+### "Nice" objective functions
+
+A "nice" objective function must be decreasing in the direction of the optimal solution. I.e., if given a current soltuion and the optimal soltuion lies in a particular direction, then the objective function must improve when we take a step in that direction. 
+
+## Defining Convexity
+
+### Convex Sets
+
+> A set $C$ is convex if for all $\lambda \in [0, 1]$ we have that $x_1, x_2 \in C \Rightarrow \lambda x_1 + (1-\lambda)x_2 \in C$.
+
+I.e., for any two points $x_1$ and $x_2$ that are in the set; _any_ line vector between the two points (given by $\lambda x_1 + (1-\lambda)x_2$) must also be in the set, for _any_ value of $\lambda$. Generally speaking, this is tru for any polyhedron that has no "inward points". 
+
+### Convex Functions
+
+> A function $f: \mathbb{R}^n \rightarrow \mathbb{R}$ is convex is its domain $dom(f)$ is a convex set and for all $x_1, x_2 \in dom(f)$ and $\lambda \in [0, 1]$ we have $f(\lambda x_1 + [1-\lambda]x_2) \leq \lambda f(x_1) + [1-\lambda]f(x_2)$
+
+> A function $f: \mathbb{R}^n \rightarrow \mathbb{R}$  is concave if $-f$ is convex. 
+
+A function's _domain_ is the set of points for which the function is defined for us. Often $\mathbb{R}^n$. What this definition states is that for any two points $x_1$ and $x_2$, the function must lie _beneath_ the line that connects them. 
+
+These definitions are a little cumbersome, so we can use some pre-defined rules to help us recognise convexity.
+
+## Recognising Convexity
+
+### Convex Functions
+
+The following are _all_ examples of convex functions.
+
+#### In 1 variable:
+
+\begin{equation*}
+\begin{split}
+f(x) = ax + b \\
+f(x) = x^2 + bx + c \\
+f(x) = |x| \\
+f(x) = -ln(x)\text{ for } x>0 \\
+f(x) = \frac{1}{x}\text{ for } x>0 \\
+f(x) = e^x
+\end{split}
+\end{equation*}
+
+#### In $n$ variables
+\begin{equation*}
+\begin{split}
+f(x) = a^Tx + b \\
+f(x) = x^TMx + c^Tx \text{ where M is positive semi-definite} \\
+f(x) = ||x|| \text{ where ||.|| is any norm} \\
+f(x) = \sum_{i=1}^m -ln(b_i - a_i^Tx) \text{ for x satisfying } Ax <b
+\end{split}
+\end{equation*}
+
+### Convex operations
+
+#### Addition:
+
+If $f_1(x)$ and $f_2(x)$ are convext functions and a, b >0 then $f(x) := a.f(1)+b.f_2(x)$ is a convex function as well.
+
+#### Maximum
+
+If $f_i(x)$ are convext, $i = 1, 2, ...$ then $f(x) \max_i f_i(x)$ is convex as well.
+
+#### Composition
+
+If $f(x)$ is convex then $g(y) := f(Ay+b)$ is convex as well.
+
+### Convex sets
+
+If a set $C \subseteq \mathbb{R}^n$ can be represented by:
+
+\begin{equation*}
+C = \{ x \in \mathbb{R}^n: \begin{split} f_i(x) \leq 0 \forall i = 1, ..., m_1 \\
+                                      h_i(x) = 0 \forall i = 1, ..., m_2 \\    
+                        \end{split}
+\}
+\end{equation*}
+
+Where $f_i$ are convex in x and $h_i$ are affine in x (i.e. of the form $h_i(x) = a_i^Tx + b_i$) then set C is convex.
