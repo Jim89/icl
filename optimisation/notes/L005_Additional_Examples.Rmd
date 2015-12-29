@@ -64,6 +64,147 @@ S_i \geq 0
 
 This is easily solved in most linear programming software and returns optimal values for each shift.
 
+***
+
 ## Example 2 - Investment Management
 
+Imagine now that last year we purchased shares in five companies, $A, B, , C, D, E$ at prices $L_A, L_B, ..., L_E$. The _current_ prices are $T_A, T_B, ..., T_E$ and we expect next years' prices to be $N_A, ..., N_E$. We want to sell shares to generate cash $C$ whilst maximising next years value. Additionally, whenever we sell a share we pay a _transaction cost_ of 1% as well as capital gains tax of 30% on any capital gains at the time of sale. 
 
+We can formulate this as an optimisation problem:
+
+#### 1. Decision variables
+
+$x_A, x_E, ..., X_E$ - the number of shares of each stock to sell.
+
+#### 2. Objective function
+
+$\max N_A(A - x_A) + N_B(B - x_B) + ... + N_E(E - x_E)$
+
+(i.e. maximise next year's value by taking prices as a function of the amount we have now, less the amount we sell).
+
+#### 3. Constraints 
+
+__(1)__
+$(T_A x_A - 0.001 T_A x_A - 0.3 x_A \max (T_A - L_A, 0)) + ... + (T_E x_E - 0.001 T_E x_E - 0.3 x_E \max (T_E - L_E, 0)) \geq C$
+
+Note that if $T_A \leq L_A$ then capital gains is 0 and that $\max(T_A - L_A, 0)$ is still linear in the decision variables as it is simply a choice between constants.
+
+__(2)__
+
+$x_A, ..., x_E \geq 0$
+
+__(3)__
+$x_A \leq A, x_B \leq B, ..., x_E \leq E$
+
+***
+
+## Example 3 - Peformance Evaluation
+
+In this example we will use a technique called _data envelopment analysis_. Imagine that we are managing a football team as we want to assess the performance of our players.
+
+We could choose o measure the number of goals as a function of appearances (i.e. goals/appearances). However this is not entirely fair: more appearances leads to more fatigure (and therefore likely fewer goals). We could try to plot an efficient frontier of goals vs. appearances, however this is also unfair: defenders are expected to score fewer goals, but may have very high appearances.  
+
+A solution is to compare players' "outputs" with their "inputs". E.g. outputs could be # goals, # assists, # shots per game, # successful passes etc and inputs could be appearances, yellow/red cards, salary etc. 
+
+We then seek to minimise a players efficiency based on their inputs/putputs and those of the _other_ players.
+
+E.g. imagine three players with the following profiles:
+
+```{r show_players, echo = FALSE}
+tbl2 <- data.frame(players = c("A", "B", "C"), goals = c(11, 15, 9), assists = c(2, 1, 9),
+                   shots_per = c(3.3, 2.8, 2.6), passes = c(77.1, 81.9, 85.5),
+                   appearances = c(15, 29, 36), yellow = c(1, 2, 5), red = c(0, 0, 0),
+                   sal = c(12.2, 7.84, 7.28))
+kable(tbl2, col.names = c("Player", "Goals", "Assists", "Shots/Game", "Pass Success (%)",
+                          "Appearances", "Yellows", "Reds", "Salary (£m)"))
+```
+
+We then formulate a linear program for each player that minimises some measure of them:
+
+\begin{equation*}
+\begin{split}
+\min E \\
+\text{st:} \\
+11f_A + 15f_B + 9f_C \geq 11 \\
+2f_A + 1f_B + 9f_C \geq 2 \\
+3.3f_A + 2.8f_B + 2.6f_C \geq 3.3 \\
+77.1f_A + 81.9f_B + 85.5f_C \geq 77.1 \\
+\\
+15f_A + 29f_B + 36f_C \leq 15E \\
+1f_A + 2f_B + 5f_C \leq 1E \\
+12.1f_A + 7.84f_B + 7.28f_C \leq 12.1E \\
+\\
+f_i \geq 0
+\end{split}
+\end{equation*}
+
+In this instance, E (termed "efficiency") is measured between 0 (inefficient) and 1 (efficient). $f_i$ measures that "fraction" of each player that we have on the team. The value of E that we obtain from each player/individual can then be used to assess their performance. Each time, the value on the RHS of the constraint is changed to that value for _that_ player/individual in order that we are saying to find a mix of players that is at least as good/bad as the player in question.
+
+This type of analysis is no confined to sports analytics, it can also be used to evaluate the peformance of electric utlities (e.g. outputs are # customers, energy delivered, length of lines vs. inputs of man-hours, financial losses, capital bound in assets) or perhaps of police forces (e.g. outputs arrests, crimes solves vs. inputs number of crimes). 
+
+***
+
+## Example 4 - Regression
+
+The classic linear regression is given by:
+
+\begin{equation*}
+y_i = \beta_0 + \beta_1 x_{i1} + \beta_2 x_{i2} + ... + \beta_k x_{ik} + \epsilon_i
+\end{equation*}
+
+And the least-squares minimisation by:
+
+\begin{equation*}
+\min_{\beta} ||y - X\beta||_2^2
+\end{equation*}
+
+This, however, can be very sensitive to outliers, so we may wish to use the 1-Normal, i.e:
+
+\begin{equation*}
+\min_{\beta} ||y - X\beta||_1
+\end{equation*}
+
+Note that the 1-norm is simply the aboluste value, i.e. $||[x_1, ..., x_i]||_1 = |x_1| + ... + |x_n|$.
+
+To formulate this as a linear program we simply need to follow these steps:
+
+### 1. Introduce auxiliary varaiables:
+
+\begin{equation*}
+\begin{split}
+\min_{\beta, \theta} \theta_1 + ... + \theta_n \\
+\text{st:} \\
+\theta_i = |y_i - x_i^T\beta| \forall i = 1, ..., n
+\end{split}
+\end{equation*}
+
+Here, $x_i^T$ denotes the i-th row of the variable matrix, $X$.
+
+### 2. Equivalent reformulation
+
+We relax the equality constraints
+
+\begin{equation*}
+\begin{split}
+\min_{\beta, \theta} \theta_1 + ... + \theta_n \\
+\text{st:} \\
+\theta_i \geq |y_i - x_i^T\beta| \forall i = 1, ..., n
+\end{split}
+\end{equation*}
+
+This can be done as, as we are minimising, if we pick a value of $\theta$ that is greater than $|y_i - x_i^T\beta|$ then there is a smaller value of $\theta$ that will return a _better_ objective value. As such the constraint will still resolve as an equality. 
+
+### 3. Remove the absolute value operator
+
+\begin{equation*}
+\begin{split}
+\min_{\beta, \theta} \theta_1 + ... + \theta_n \\
+\text{st:} \\
+\theta_i \geq y_i - x_i^T\beta \forall i = 1, ..., n \\
+\theta_i \geq x_i^T\beta - y_i  \forall i = 1, ..., n
+\end{split}
+\end{equation*}
+
+This is done as the absolute value can be derived from a negative or a positive value (i.e. the _actual_ $y_i$ can be above or below the prediction line).
+
+A similar process can be followed for the infinity norm: $\min_{\beta} ||y - X\beta||_{\infty}$ where $||X||_{\infty} = \max |x_i|$
