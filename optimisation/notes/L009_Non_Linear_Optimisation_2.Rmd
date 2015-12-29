@@ -1,0 +1,17 @@
+---
+title: "Optimisation and Decision Models Module 3"
+author: "Jim Leach"
+date: "29 Decembber 2015"
+output:
+  pdf_document
+---
+
+# Non-linear Optimisation
+
+## Example 2 - SVM's
+
+Support Vector Machines (SVM's) are a common way to approach classification problems in machine learning. However they can also be thought of as optimisation problems. 
+
+If we assume that each characteristic can be assigned a number then we can plot the data in a multi-dimensional graph (although this is hard to do in more than 3 dimensions!). Focussing on linearly separable groups, we can then use either a line or a hyper-plane to separate the data in to groups for classification.
+
+The role of SVMs is in choosing _where_ to place the line/plane (assuming that there is one we can fit to the data). In doing so we seek to choose the line/plan that maximises the minimum distance between the points on either side of the line, these are termed the __margins__. The points that lie closest to the line (and $\therefore$ define the margins) are termed __support vectors__.
