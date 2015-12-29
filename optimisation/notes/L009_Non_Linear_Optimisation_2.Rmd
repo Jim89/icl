@@ -14,4 +14,106 @@ Support Vector Machines (SVM's) are a common way to approach classification prob
 
 If we assume that each characteristic can be assigned a number then we can plot the data in a multi-dimensional graph (although this is hard to do in more than 3 dimensions!). Focussing on linearly separable groups, we can then use either a line or a hyper-plane to separate the data in to groups for classification.
 
-The role of SVMs is in choosing _where_ to place the line/plane (assuming that there is one we can fit to the data). In doing so we seek to choose the line/plan that maximises the minimum distance between the points on either side of the line, these are termed the __margins__. The points that lie closest to the line (and $\therefore$ define the margins) are termed __support vectors__.
+The role of SVMs is in choosing _where_ to place the line/plane (assuming that there is one we can fit to the data). In doing so we seek to choose the line/plan that maximises the minimum distance between the points on either side of the line, these are termed the __margins__. The points that lie closest to the line (and $\therefore$ define the margins) are termed __support vectors__. 
+
+This is starting to sound like an optimisation problem. The decision variables are the points that define the line/plane that separates the data. The objective function is (as noted) the distance between the line/plane and the data, and we seek to maximise the minimal distance. We also add a _constraint_ that we want to find a _strict_ classifier, that is, one that the completely separates the data. 
+
+### Decision Variables - Defining the line
+
+Consider a simple 2-dimensional problem. To represent a line in two dimensions we need a slope and an intercept. If we let $c_1$ lie on the $x$ axis and $c_2$ lie on the $y$, then we have:
+
+\begin{equation*}
+w_1c_1 + w_2 c_2 + b = 0
+\end{equation*}
+
+In this equation, $w_1$ and $w_2$ represent the weights for the values, $c_1$ and $c_2$ and $b$ represents the intercept. $w$ and $b$ are the decision variables and we choose them such that all "yes" instances (or "group 1") lie on one side of our line/plane, and all "no" instances (or "group 2") lie on the other side (e.g. a perfect classifier). 
+
+I.e, for all "yes" instances, $w_1c_1 + w_2c_2 + b >0$ and for all "no" instances,  $w_1c_1 + w_2c_2 + b <0$. However we cannot model _strict_ inequalities, so we relax these slightly to  $w_1c_1 + w_2c_2 + b \geq \epsilon$ for all "yes" and  $w_1c_1 + w_2c_2 + b \leq -\epsilon$ for all "no". Here, $\epsilon$ is simply some small number. Note that is doesn't matter what value is chosen for $\epsilon$ as we can always divide both equations by $\epsilon$ to get $\geq 1$ or $\leq -1$ on the RHS's.
+
+The convention is the write these equations using 1 and -1 rather than $\epsilon$. They can be equivalently expressed as:
+
+\begin{equation*}
+\begin{split}
+w^Tx_i + b \geq 1 \\
+w^Tx_i + b \leq -1
+\end{split}
+\end{equation*}
+
+
+### Objective Function
+
+We have our decision variables ($w$ and $b$) and our constraints $w^Tx_i + b \geq 1$ for "yes" and $w^Tx_i + b \leq -1$ for "no", now we just need our objective function. Recall that we are seeking to maximise the distance between our points and our line/plane. We can define the distance between two hyperplanes that are parallel (i.e. $w^Tx+b1 = 0$ and $w^Tx + b_2 = 0$) as:
+
+\begin{equation*}
+\dfrac{|b_1 - b_2|}{||w||_2}
+\end{equation*}
+
+Therefore for $w^Tx_i + b = -1$ and $w^Tx_i + b = 1$ we define this margin as:
+
+\begin{equation*}
+\dfrac{2}{||w||_2}
+\end{equation*}
+
+#### Derivation
+
+The derivation for this is as follows:
+\begin{equation*}
+\begin{split}
+w^Tx_i + b = 1 \rightarrow w^Tx_i + (b-1) = 0, \quad (b-1) = b_1 \\
+w^Tx_i + b = -1 \rightarrow w^Tx_i + (b+1) = 0, \quad (b+1) = b_2  \\
+\\
+\dfrac{|b_1 - b_2|}{||w||_2} = \dfrac{|(b-1) - (b+1)|}{||w||_2} =  \dfrac{|-2|}{||w||_2} = \dfrac{2}{||w||_2}
+\end{split}
+\end{equation*}
+
+Therefore the program becomes:
+
+#### Objective
+
+\begin{equation*}
+\max \dfrac{2}{||w||_2)}
+\end{equation*}
+
+
+#### Constraints
+
+\begin{equation*}
+\begin{split}
+w^Tx_i + b \geq 1 \forall i:y_i = +1 \\
+w^Tx_i + b \leq -1 \forall i:y_i = -1
+\end{split}
+\end{equation*}
+
+This can be equivalently expressed as a _minimisation problem_:
+
+\begin{equation*}
+\begin{split}
+\min w^Tw \\
+\text{s.t} \\
+w^Tx_i + b \geq 1 \forall i:y_i = +1 \\
+w^Tx_i + b \leq -1 \forall i:y_i = -1
+\end{split}
+\end{equation*}
+
+
+This is possible as $\max \frac{2}{||w||_2} = \min ||w||_2 = \sqrt{w^Tw}$. The square root is simply omitted as a constant.
+
+This is good for us to do as the minimisation is a _convex_ program. $\min w^Tw = w_1^2 + w_2^2 + ... + w_n^2$ - each term is quadratic (which is convex) and the sum of quadratics is also quadratic and therefore convex. 
+
+### Non-separable cases
+
+The restriction that we must obtain a perfect classifier is useful for derivation, but often impossible in practice where the data are regularly not linearly separable. We have two broad options for dealing with such cases:
+
+1. Use a non-linear classifier (not presented here); or
+2. Use 'soft-margin' rules, i.e.:
+
+\begin{equation*}
+\begin{split}
+\min w^Tw + c.\sum_i \xi_i \\
+\text{st.} \\
+w^Tx_i + b \geq 1 - \xi_i \forall i:y_i = +1 \\
+w^Tx_i + b \leq -1 + \xi_i \forall i:y_i = -1
+\end{split}
+\end{equation*}
+
+Here, C is a positive parameter that allows the brade off between maximising the margin and allowing violations of the classifier and $\xi$ is non-negative and as small as possible and represents the penalty of violating the classifier. 
