@@ -149,5 +149,17 @@ x \geq 0
 Typically, we do not have values for either $\bar{R}$ or $\underline{R}$. Therefore we solve either model parametically in these values and plot an _efficient frontier_ of returns vs. risks. Portfolios that fall below the efficient frontier are inferior and are said to be _dominated_ by the alternatives that lie on the frontier. Risk/return profiles that lie above the efficient fronter are unattainable. 
 
 
+### Extensions to Markowitz
+
+There are a few extensions that are common to add to the Markowitz model. These are:
+
+* Max/min investment levels for individual assets;
+* Max/min investment levels for asset groups;
+
+* Transaction cost modelling - subtracted from returns using $\sum|x_i-x_i^0|$ to model the different between the new and current portfolio; and
+* Cardinality constraints - investing in at most $n$ number of assets.
+
+The former two extensions seek to promote diversification in the portfolio, with the latter two minimising transaction costs. 
+
 
 
