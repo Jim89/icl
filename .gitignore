@@ -63,6 +63,8 @@ networks/hw/*/*/*.pdf
 networks/hw/*/*/*.jpg
 networks/notes/*.pdf
 
+# ignore for workforce analytics
+workforce/docs/*.pdf
 
 
 
