@@ -1,0 +1,313 @@
+ITEM 1. BUSINESS 
+
+
+        We design, develop, manufacture and market a broad range of high-performance semiconductor solutions that help accelerate packet processing for advanced network services. Target markets for our products include: core, metro, access, enterprise, small office/home office (SOHO), data center, wireless and computing segments of the network. 
+
+        We market our products on a worldwide basis primarily to OEMs (original equipment manufacturers) through a variety of channels, including our direct sales force, distributors, CEMs (contract electronic manufacturers), and independent sales representatives. 
+
+        We seek to differentiate our products from competitors' offerings through advanced architectures and features designed to enhance the performance of our customers' systems, accelerate their product development cycles, and reduce their system costs. We fabricate substantially all of our semiconductor wafers using advanced complementary metal oxide silicon (CMOS) process technology in our own fabrication facility in Oregon. We assemble or package the majority of our products in manufacturing facilities that we own in Malaysia and the Philippines, where we also conduct product test operations. We complement our internal manufacturing with the use of foundry and assembly subcontractor resources. 
+
+        In fiscal 2003, we acquired Solidum Systems Corp. (Solidum), a privately held provider of classification and content inspection processing solutions. In fiscal 2002, we acquired Newave Semiconductor Corp. (Newave), a privately held designer and marketer of integrated circuits for the telecommunications markets. 
+
+        IDT was incorporated in California in 1980 and reincorporated in Delaware in 1987. The terms "the Company," "IDT," "our," "us" and "we" refer to Integrated Device Technology, Inc. and its consolidated subsidiaries. 
+
+PRODUCTS AND MARKETS 
+
+        We provide a broad portfolio of communications-oriented integrated circuits (ICs), including ICs focused on accelerating intelligent packet processing in next-generation network equipment. IDT serves 
+
+2
+
+
+--------------------------------------------------------------------------------
+
+
+
+
+equipment vendors by applying its advanced hardware, software and memory technologies to create flexible, highly integrated products that enhance the functionality and processing of network services. 
+
+        Examples of the markets that IDT products serve, to varying degrees include: 
+
+Core networks 
+
+•
+Core routers 
+
+
+•
+Wide area network (WAN) switches 
+Metro networks 
+
+•
+Multi-service switching platforms 
+
+
+•
+Edge routers 
+
+
+•
+Carrier-class media gateways 
+Access networks 
+
+•
+Aggregation and IP service equipment 
+
+
+•
+Digital subscriber line access multiplexers 
+
+
+•
+Cable modem termination systems 
+
+
+•
+Media gateways 
+
+
+•
+Central office switches 
+
+
+•
+Digital loop carriers and next-generation digital loop carriers 
+
+
+•
+Digital cross-connects 
+
+
+•
+Add-drop multiplexers 
+Enterprise networks 
+
+•
+Ethernet workgroup switches 
+
+
+•
+Ethernet Enterprise backbone switches 
+
+
+•
+Enterprise WAN access equipment 
+
+
+•
+Load balancers and content switches 
+
+
+•
+Virtual private networks (VPNs), firewalls and intrusion detection systems 
+
+
+•
+Intrusion detection systems and intrusion prevention systems 
+
+
+•
+Wireless access points (WAPs) 
+
+
+•
+Private branch exchanges (PBXes) and IP-PBXes 
+
+
+•
+Multi-service switches 
+Small office/Home Office 
+
+•
+Routers 
+
+
+•
+Wireless access points 
+
+
+•
+Intrusion detection systems and intrusion prevention systems 
+3
+
+
+--------------------------------------------------------------------------------
+
+
+•
+Phones 
+
+
+•
+PCs 
+
+
+•
+Gateways 
+Data center networks 
+
+•
+Monolithic (high-end) and modular (mid-range) disk arrays 
+
+
+•
+Network-attached storage 
+
+
+•
+Storage area network (SAN) switches—core and edge 
+Wireless networks 
+
+•
+Base transceiver stations 
+
+
+•
+Base station controllers 
+
+
+•
+Mobil switching centers 
+Computing 
+
+•
+Servers 
+
+
+•
+DIMM modules 
+        We operate in two business segments: 
+
+•
+Communications and High-Performance Logic 
+
+
+•
+SRAMs 
+        The Communications and High-Performance Logic segment includes network search engines, content inspection engines, integrated communications processors, flow-control management devices, FIFOs, multi-ports, telecommunications, clock management and digital logic products. The SRAMs segment is comprised of high-speed SRAMs (static random access memories). 
+
+        During both fiscal 2004 and 2003, the Communications and High-Performance Logic and SRAMs segments accounted for approximately 85% and 15%, respectively, of total IDT revenues of $345.4 and $343.9 million, respectively. These two segments represented 82% and 18%, respectively, of our total revenues of $379.8 million in fiscal 2002. 
+
+Communications and High-Performance Logic Segment 
+
+        Network Search Engines (NSEs):    We offer a family of network search engines based on the integration of content addressable memory (CAM) and high-performance logic. The IDT NSEs enable intelligent application management in next-generation networking equipment. We offer one of the industry's highest-performance NSE operating up to 250 MHz, and were the first vendor to introduce an NSE with an integrated look-aside processor (LA-1) interface. Our portfolio includes a family of custom devices, as well as families of NSEs with high-performance interfaces for ASICs, and glue-less interfaces to leading network processors, to accelerate packet classification and forwarding in core, metro and access networks. 
+
+        Content Inspection Engines (CIEs):    We offer a complete family of fully programmable, forward-compatible content inspection engines that offload the classification function from system processors. Our CIEs are capable of parsing and classifying data up to Layer 7, and are optimized for packet classification and content inspection in security and content-aware networking applications. Our content 
+
+4
+
+
+--------------------------------------------------------------------------------
+
+
+
+
+inspection engine portfolio includes devices optimized for Layer-7 content inspection and regular expression matching at OC-12 (PAX.port™ 1200 content inspection engine) and OC-48 (PAX.port 2500 content inspection engine) line rates. 
+
+        Integrated Communications Processors:    Our Interprise™ family of integrated communications processors offers a range of processors and development tools. In addition, we partner with industry-leading software and hardware vendors to deliver system platforms to communications customers. The devices are based on the MIPS® instruction set architecture (ISA) and target high-growth communications market segments such as Ethernet switches, enterprise gateways, and wireless local area networks (LANs), as well as emerging edge and access market areas, including fiber-to-the-home (FTTH) and WAPs. Our Interprise™ processors provide a unique combination of flexibility, performance and appropriate integration levels that enable customers to get to market quickly with cost-effective, flexible systems. 
+
+        Flow-Control Management (FCM) Devices:    We continue to evolve our distinctive competencies in the integration of advanced memory and logic architectures to create a new category of value-added semiconductor devices. Our FCM devices combine critical functions such as high-speed buffering, switching, multiplexing/de-multiplexing, domain transition, and random and sequential access. These devices meet the special requirements of system architects who need to solve data-flow-control issues in their communications equipment designs. These devices replace traditional methods of mixing multiple data streams at different data rates—typically accomplished with a multiplexer, multiple ASICs, field-programmable gate arrays (FPGAs) and external SRAM, dynamic random access memory (DRAM) or FIFOs. Our solutions allow our customers to minimize their design resources required to solve data-flow-control issues and focus them on the design elements where they differentiate their products from their competition. Our current portfolio consists of multiplexing, queuing and packet-exchange families of products. 
+
+        FIFOs:    We develop products and technologies to help designers solve inter-chip communications problems such as rate matching, data buffering, bus matching and data priority managing. We provide the most extensive product portfolio in the world with more than 350 synchronous, asynchronous and bi-directional FIFO offerings that address complex issues associated with high-performance networking applications, such as terabit routers, multi-service switching platforms, host bus adaptors and wireless base stations. 
+
+        Multi-ports:    Our multi-port products solve inter-chip communication problems by providing a shared memory that can be accessed independently by two or more high bandwidth ports. The 150+ device types in this product family include both asynchronous and synchronous dual-ports, as well as specialty multi-ports such as cost effective bank-switchable dual-port ICs and high performance FourPort™ devices. In wireless applications such as 3G and 3.5G basestation radio cards these products eliminate throughput bottlenecks. In data communication designs such as multi-protocol switches, storage networks and telecom switches, the multi-ports can handle both address and payload data at bandwidths that are unmatched by multiplexed SRAM or DRAM configurations. 
+
+        Telecom Products:    We offer a broad telecommunications semiconductor portfolio, including products for access and transport, time division multiplexing (TDM) switching and voice processing. The IDT SuperJET™ family of J1/E1/T1 transceivers includes the industry's first monolithic octal density device, to address next-generation universal line-card designs in communications applications. In addition, we provide best-in-class products for multiplexing, system synchronization, the widest selection of time slot interchange (TSI) switches and the industry's highest density voice CODEC. Our telecom products are used in a variety of communications applications, including multi-service aggregators and provisioning platforms, wireless base stations, enterprise routers and media gateways that are critical to enabling and accelerating the convergence of voice and data networks. 
+
+5
+
+
+--------------------------------------------------------------------------------
+
+
+
+
+        Clock Management Products:    Within clock management solutions for communications and computing applications, we offer a broad range of over 350 devices that focus on providing clock distribution and clock generation solutions. The company is one of a few suppliers in the industry that offers a clock management product portfolio consisting of programmable skew phase lock loop devices (PLLs), Zero-Delay PLLs, clock generators and clock fanout buffers. In addition, IDT has leveraged its expertise in communications-specific clocking technology to develop value-added devices for non-communications market segments, including a DDR2 PLL and register chip set for dual in-line memory modules (DIMM) and a family of PC clocks. 
+
+        Digital Logic:    We develop fast CMOS TTL-compatible (FCT), low-voltage CMOS (LVC), advanced low-voltage CMOS (ALVC), and complex logic devices, including the industry's broadest range of high-performance, 3.3-volt CMOS logic products. These products are developed for network switches and routers, wireless base stations, storage networks and servers. 
+
+SRAMs Segment 
+
+        With nearly two decades of SRAM experience, we develop innovative products and produce a broad line of high-speed, industry-standard SRAMs that are used in communications markets. We offer a wide range of products from 16-Kbit to 18-Mbit densities in both synchronous and asynchronous architectures. We invented the zero bus turnaround™ (ZBT®) technology, which has become the communications SRAM standard, and co-developed the quad data rate™ (QDR™) architecture. 
+
+Sales Channels 
+
+        We use a variety of sales channels, including a direct sales force, distributors, CEMs, and independent sales representatives. A significant percentage of our sales, including sales to Cisco and other large OEM customers, are through CEMs and distributors. One distributor, Avnet, represented 11%, 13% and 16% of our revenues for fiscal 2004, 2003 and 2002, respectively. One CEM, Celestica, represented approximately 14% and 15% of our revenues in fiscal 2004 and 2003. No CEM accounted for 10% or more of our revenues in fiscal 2002. 
+
+        We employ a direct sales force that operates out of field sales offices located in the United States and abroad. We also utilize three primary distributors, Avnet, Arrow Electronics and Insight Electronics, for sales in the United States. A significant percentage of our export sales are also made through global and regional distributors and CEMs in Europe, Asia Pacific and Japan. 
+
+        During fiscal 2004, 2003 and 2002, sales outside of the Americas represented approximately 71%, 63% and 52%, respectively, of our total revenues. 
+
+Customers 
+
+        We market our products on a worldwide basis primarily to OEMs in our two business segments. Products in the Communications and High-Performance Logic segment are targeted primarily to communications customers. Although products in the SRAMs segment are general purpose in nature, we also supply the majority of our products in this segment to our communications customers. Customers often purchase products from more than one of our product families. No OEM direct customer accounted for 10% or more of our revenues in fiscal 2004, 2003 or 2002. However, when sales through all channels are considered, we estimate that end-customer sales to Cisco represented between 20-25% of our fiscal 2004 and 2003 revenues and 13-15% of our fiscal 2002 revenues. 
+
+Manufacturing 
+
+        In fiscal 2004, we manufactured products that represented more than 90% of our revenue at our Hillsboro, Oregon wafer fabrication facility. This facility produces 200mm (8-inch) wafers from 
+
+6
+
+
+--------------------------------------------------------------------------------
+
+
+
+
+0.6-micron down to 0.12-micron process technologies. We use multiple wafer foundries for the balance of our production. We expect future production at wafer foundries to increase faster than that internally. 
+
+        In fiscal 2002, we announced plans to phase out production at our wafer fabrication facility located in Salinas, California. The decision to consolidate production at our Hillsboro facility was consistent with the continuing evolution of our manufacturing technologies toward more advanced, smaller-geometry technologies, but it was accelerated by poor industry business conditions during fiscal 2002. We phased out production at the Salinas facility and completed the transfer of production to our Hillsboro plant in the first quarter of fiscal 2003. 
+
+        We operate two component assembly and test facilities, a 145,000 square-foot facility in Penang, Malaysia and a 176,000 square-foot facility near Manila, the Philippines. Substantially all of our test operations and a majority of our assembly operations are performed at these two facilities. We also use subcontractors, principally in the Philippines and Korea, to perform certain assembly operations. In addition, we have limited test capabilities in Santa Clara and Salinas. 
+
+Backlog 
+
+        Our backlog (which we define as all confirmed, unshipped orders) as of March 28, 2004 was approximately $67.8 million, compared to $42.7 million as of March 30, 2003. We offer products with limited or no second sources, as well as industry-standard products. Sales are generally made pursuant to purchase orders, which are frequently revised by customers as their requirements change. We have also entered into master purchase agreements, which do not require minimum purchase quantities, with many of our OEM and CEM customers. We schedule product deliveries on receipt of purchase orders under the related customer agreements. Generally, these purchase orders and customer agreements, especially those for standard products, also allow customers to reschedule delivery dates and cancel purchase orders without significant penalties. In general, orders, especially for industry standard products, are often made with very short lead times and may be canceled, rescheduled, repriced or otherwise revised. In addition, distributor orders are subject to price adjustments both before and after shipment. Finally, orders placed by distributors or by consignment customers may reflect those customers' intent to adjust their inventory levels, rather than providing an indication of near-term revenue opportunities. Approximately 55% of our revenues currently occur through distribution and consignment customers, and, with few exceptions, we recognize revenues not upon shipment to fulfill their orders, but upon their selling through the product to the ultimate end customer. For all these reasons, we do not believe that our order backlog is a reliable indicator of future revenues. 
+
+Research and Development 
+
+        Our research and development efforts emphasize the development of proprietary and enhanced-performance products, and advanced CMOS processes. We believe that a continued high level of investment in research and development is necessary to maintain our competitive position. We operate research and development centers in Santa Clara, California; Hillsboro, Oregon; Atlanta, Georgia; Warren, N.J.; Ottawa, Canada; Shanghai, China and Sydney, Australia. Research and development expenses, as a percentage of revenues, were approximately 29%, 38%, and 34% in fiscal 2004, 2003 and 2002, respectively. 
+
+        Our product development activities are focused on the design of integrated circuits that provide new features and enhanced performance primarily for growing communications markets applications. Additionally, we are developing advanced manufacturing process technologies, including 0.12-micron semiconductor fabrication techniques. These process technologies are designed to enable cost and performance advantages and to support higher production volumes of integrated circuits and the continued growth of our communications products. 
+
+7
+
+
+--------------------------------------------------------------------------------
+
+
+
+
+Competition 
+
+        Intensely competitive, the semiconductor industry is characterized by rapid technological advances, cyclical market patterns, price erosion, evolving industry standards, occasional shortages of materials, intellectual property disputes, high capital equipment costs and uncertain availability of and control over manufacturing capacity. Many of our competitors have substantially greater technical, marketing, manufacturing and financial resources than we do. In addition, several foreign competitors receive financial assistance from their governments, which could give them a competitive advantage. We compete in different product areas, to varying degrees, on the basis of technical innovation and product performance, as well as product quality, availability and price. Products in the SRAM segment can generally be characterized as commodity-type items and tend to be most price sensitive. 
+
+        Our competitive strategy is to differentiate our products through high performance, innovative configurations, proprietary features and breadth of offerings. Price competition, introductions of new products by our competitors, delays in our own product introductions or other competitive factors could have a material adverse effect on our business and results of operations in the future. 
+
+        Our communications and high-performance logic products compete with similar products offered by such companies as Cypress Semiconductor (Cypress), Integrated Circuit Systems, NetLogic Microsystems, Texas Instruments, Pericom Semiconductor, Motorola, Toshiba, NEC, Infineon Technologies, PMC-Sierra (PMC), Legerity, Agere Systems, Zarlink Semiconductor, Exar, Intel,, and Maxim Integrated Products. 
+
+        In markets where we compete to sell SRAM products, market supply and pricing strategies of competitors significantly impact the price we receive for our products. Our competitors include U.S.-based companies such as Cypress, Giga Semiconductor and Integrated Silicon Solutions. International competitors include Samsung Electronics and various other companies based in Taiwan, Korea and elsewhere in Asia. 
+
+Intellectual Property and Licensing 
+
+        We believe that our intellectual property is a valuable corporate asset, and we continue to invest in intellectual property protection. We also intend to continue our efforts to increase the breadth of our patent portfolio. There can be no assurance that any patents issued to us will not be challenged, invalidated or circumvented, that the rights granted there under will provide competitive advantages to us or that our efforts generally to protect our intellectual property rights will be successful. 
+
+        In recent years, there has been a growing trend of companies resorting to litigation to protect their semiconductor technology from unauthorized use by others. In the past, we have been involved in patent litigation which adversely affected our operating results. Although we have obtained patent licenses from certain semiconductor manufacturers, we do not have licenses from a number of semiconductor manufacturers with broad patent portfolios. Our success will depend on our ability to obtain necessary intellectual property rights and protect our intellectual property rights. While we have filed patent applications, we cannot be certain that these applications will issue into patents that we will be able to obtain the necessary intellectual property rights or that other parties will not contest our intellectual property rights. 
+
+Environmental Regulation 
+
+        Various federal, state and local provisions regulate the use and discharge of certain hazardous materials used in semiconductor manufacturing. Failure to comply with environmental regulations in the future could subject us to substantial liability or cause our manufacturing operations to be interrupted. These regulations could also require us to procure costly equipment or incur significant remediation expenses. We believe we are fully compliant with all applicable environmental laws. 
+
+8
+
+
+--------------------------------------------------------------------------------
+
+
+
+Employees 
+
+        As of March 28, 2004, we employed approximately 3,150 people worldwide, including 900 and 785 in Malaysia and the Philippines, respectively. Our future success depends in part on our ability to attract and retain qualified personnel, particularly engineers, who are often in great demand. We have implemented policies enabling our employees to share in our success, including stock option, stock purchase and profit sharing programs, and bonus plans for key contributors. We have never had a work stoppage. None of our employees is currently represented by a collective bargaining agreement, and we consider our employee relations to be good. 
+
+Available Information 
+
+        We electronically file our annual reports on Form 10-K, quarterly reports on Form 10-Q and current reports on Form 8-K pursuant to Section 13(a) or 15(d) of the Securities Exchange Act of 1934 with the SEC. The public may read or copy any materials we file with the SEC at the SEC's Public Reference Room at 450 Fifth Street, NW, Washington, DC 20549. The public may obtain information on the operation of the Public Reference Room by calling the SEC at 1-800-SEC-0330. The SEC maintains an Internet site that contains reports, proxy and information statements, and other information regarding issuers that file electronically with the SEC. The address of that site is http://www.sec.gov. You may obtain a free copy of our annual reports on Form 10-K, quarterly reports on Form 10-Q and current reports on Form 8-K and amendments to those reports with the SEC on our website on the World Wide Web at http://www.idt.com, by contacting the Investor Relations Department at our corporate offices by calling (408) 654-6420 or by sending an e-mail message to ir@idt.com. 

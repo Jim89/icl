@@ -1,0 +1,437 @@
+Item 1 Business
+
+OVERVIEW
+
+We design, develop, manufacture and market proprietary radio frequency,
+microwave frequency and millimeter wave frequency integrated circuits and
+discrete semiconductors for wireless voice and data and broadband
+communications. The primary applications for our products include wireless
+handsets, wireless infrastructure and broadband communications equipment. We
+also produce integrated circuits, discrete components, electrical ceramics and
+ferrites used in wireless base station equipment, cable television, cable modems
+and other broadband applications, wireless local loop, wireless personal digital
+assistants and wireless local area networks.
+
+We offer a broad range of products, including integrated circuit (IC) switches
+and controls, power amplifiers, discrete semiconductors and multi-chip modules
+that comprise a significant part of the radio frequency devices used in wireless
+telephone handsets. We use a range of technologies, processes and materials to
+meet our customers' performance requirements, including gallium arsenide metal
+semiconductor field effect transistor (GaAs MESFET), gallium arsenide
+pseudomorphic high electron mobility transistor (GaAs PHEMT), silicon and
+electrical ceramic. Through our acquisition of Network Device, Inc. (NDI) in
+April 2000, we offer power amplifiers and other devices made with a gallium
+arsenide heterojunction bipolar transistor (GaAs HBT) process and an indium
+gallium phosphide HBT process (InGaP HBT). In May 2001, we announced the
+introduction of the world's first tri-band power amplifier module employing
+InGaP HBT process technology. The AP134 module is designed for use in existing
+dual-mode wireless handsets and is fully General Packet Radio Service (GPRS)
+compliant. We also announced the shipment of our first volume order of a new
+family of broadband amplifiers utilizing our InGaP HBT technology.
+
+During fiscal 2001, we announced the introduction of our Alpha Integration
+Platform(TM) (aiIP(TM)), a breakthrough manufacturing, packaging and design
+technique, combining various radio frequency (RF) components in a single
+module-based platform. The aiIP satisfies the market's demand for RF solutions
+that will reduce design complexity and improve the OEMs' overall time to market
+for new products. Utilizing this technique, we introduced state-of-the-art
+switch/filter technology for wireless handsets. These switch/filter products
+combine multiple functions in a single, module-based platform.
+
+We also announced the introduction of our Alpha-2(TM) multi-chip module
+packaging technology, which will dramatically reduce the cost of manufacturing
+high-speed and high-frequency data communications equipment. Alpha-2 technology
+provides the first surface-mounted package specifically designed for
+high-frequency and high-speed ICs. The Alpha-2 package is compatible with
+standard tape-and-reel manufacturing, making it ideal for use in high-speed data
+communications equipment.
+
+We divide our operations into two segments to address the distinct dynamics of
+different markets:
+
+<TABLE>
+<CAPTION>
+----------------------------------------------------------------------------------
+                         SEMICONDUCTOR PRODUCTS             CERAMIC PRODUCTS
+----------------------------------------------------------------------------------
+<S>                     <C>                              <C>
+Primary Products        GaAs Integrated Circuits         Electrical Ceramics
+                        Discrete Semiconductors          Ferrites
+                        Multi-Chip Modules
+----------------------------------------------------------------------------------
+Primary Markets         Wireless Handsets                Wireless Infrastructure
+                        Wireless Infrastructure          Broadband Communications
+                        Broadband Communications
+----------------------------------------------------------------------------------
+</TABLE>
+
+
+                                       2
+<PAGE>   3
+                                         ALPHA INDUSTRIES, INC. AND SUBSIDIARIES
+
+
+Our Semiconductor Products segment supplies GaAs integrated circuits and
+discrete semiconductors in high volume for wireless telephone handsets and
+wireless data applications. These products are used in equipment incorporating
+the leading digital standards, Global System for Mobile Communications, or GSM,
+Code Division Multiple Access, or CDMA (IS95), and Time Division Multiple
+Access, or TDMA (IS136).
+
+Our Ceramic Products segment uses electrical ceramic and ferrite technologies to
+supply resonators and filters, primarily for wireless base station equipment.
+
+Financial information about segments and geographic areas can be found in Note
+10 to the consolidated financial statements filed as part of this report.
+
+We were incorporated in 1962 under the laws of the state of Delaware.
+
+PRODUCTS AND APPLICATIONS
+
+We offer a broad array of radio frequency, microwave frequency and millimeter
+wave frequency products to the wireless and broadband markets, including GaAs IC
+switches and controls, GaAs integrated circuit power amplifiers, silicon
+discrete semiconductors, ceramic resonators and multi-chip modules. A typical
+end product for wireless communications, such as a handset, contains radio
+frequency, baseband and digital signal processing components. Radio frequency
+components convert, switch, process and amplify the high frequency signals that
+carry the information to be transmitted or received. Baseband components process
+signals into and from their original electrical form (low frequency voice or
+data). The digital components control the overall circuitry and process the
+voice or other data to be transmitted and received.
+
+The table below identifies the major product categories and markets we serve.
+
+<TABLE>
+<CAPTION>
+----------------------------------------------------------------------------------------------------------------------------
+                                 POWER       SMALL SIGNAL &                                                      MILLIMETER
+                               AMPLIFIER     MULTIFUNCTION                         DISCRETE        CERAMIC         WAVE
+        MARKETS                   ICS             ICS           SWITCH ICS      SEMICONDUCTORS     PRODUCTS      PRODUCTS
+----------------------------------------------------------------------------------------------------------------------------
+<S>                            <C>           <C>                <C>             <C>                <C>           <C>
+   WIRELESS VOICE & DATA
+     Handsets                      -                                 -                -
+     PDAs                          -                                 -                -
+     Infrastructure                -               -                 -                -                -             -
+----------------------------------------------------------------------------------------------------------------------------
+   BROADBAND
+     Wireless                                      -                 -                -                -             -
+     Cable TV & Modems             -               -                 -                -                -             -
+     Fiber                                         -                 -                -                -             -
+----------------------------------------------------------------------------------------------------------------------------
+</TABLE>
+
+
+                                       3
+<PAGE>   4
+ALPHA INDUSTRIES, INC. AND SUBSIDIARIES
+
+
+SEMICONDUCTOR PRODUCTS
+
+The diagram below illustrates the role of many of our Semiconductor Products in
+a dual band and dual mode wireless telephone handset.
+
+
+                     [DUAL BAND/DUAL MODE HANDSET DIAGRAM]
+
+
+Power Amplifiers. Wireless communications systems require amplification in
+receiving and transmitting signals. Relatively weak incoming signals must be
+amplified without adding background noise. GaAs power amplifiers are used in
+handsets because they use battery power more efficiently than silicon
+amplifiers, and battery life is a critical system feature in these portable
+applications. We have been a leader in innovative GaAs power amplifier ICs. We
+were the first merchant semiconductor company to offer a three volt,
+high-efficiency PHEMT power amplifier IC for GSM operating at three different
+frequencies. This product has been in continuous production for more than a
+year. We were also the first to deliver a three volt MESFET GaAs power amplifier
+IC, which has now been in continuous, high-volume production for more than three
+years. In addition, our acquisition of NDI has provided us with GaAs HBT process
+technology, which has opened new power amplifier opportunities and complements
+our strength in the GaAs PHEMT and GaAs MESFET processes.
+
+Integrated Circuit Switches and Controls. Switching and control functions route
+and adjust signal levels between the receiver and transmitter and other
+processing devices. The number of switching functions increases with the
+complexity of the handset design. In the dual band/dual mode handset
+illustrated, the switches perform three different routing functions, including:
+signal routing to transmitter or receiver; signal routing to cellular or PCS
+frequency; and signal routing to digital or analog mode.
+
+Our GaAs integrated circuit switches are used in handsets to provide lower
+signal loss and better signal isolation than comparable products. Our
+ultra-high-efficiency GaAs PHEMT switch ICs integrate logic elements, making
+their usage even easier for our OEM customers. The GaAs HBT process has not been
+suitable for switches.
+
+
+                                       4
+<PAGE>   5
+                                         ALPHA INDUSTRIES, INC. AND SUBSIDIARIES
+
+
+Discrete Semiconductors. Discrete semiconductors, especially diodes, are used
+for signal tuning and switching functions in the handset. We draw on our
+microwave frequency and millimeter wave frequency experience to produce diodes
+with better circuit performance. We manufacture these products in very high
+volumes for several handset OEMs.
+
+Multi-Chip Modules. Multi-chip modules combine various semiconductor processes,
+such as HBT, PHEMT and RF discrete semiconductors, in a single module-based
+platform. The result is an easy-to-manufacture solution that enables broadband
+and wireless OEMs to reduce design complexity and dramatically shorten their
+product development cycle.
+
+CERAMIC PRODUCTS
+
+Our ceramic products play a critical role in the signal selection, or filtering
+process, that is essential to processing communications signals. Ceramic
+materials allow improved power efficiency and miniaturization, and are being
+increasingly used in wireless communications infrastructure. Additionally,
+ceramic products are essential to the broadband market through their presence in
+point-to-point radios, fiber optics and CATV HFC (cable television hybrid fiber
+coax system) networks. Ceramic products are also critical in the
+frequency-determining portions of DBS/VSAT (digital broadcast satellite/very
+small aperture terminal) receivers, radar detectors and intrusion alarms.
+
+MARKETING AND DISTRIBUTION
+
+We sell our products through independent manufacturers' representatives and
+distribution partners, and through a direct sales staff. We sell through 12
+domestic and 19 international independent manufacturers' representative
+organizations. We also distribute product through a global organization that is
+franchised throughout portions of the world, and through two organizations that
+focus primarily on the North American market. Our field support management staff
+oversees our manufacturers' representatives and distributors and provides them
+with sales direction and support. Our direct sales staff manages key customer
+accounts and worldwide customer support and identifies and targets sales in
+emerging wireless and broadband markets.
+
+We maintain an internal marketing organization that is responsible for
+developing sales and advertising literature, such as product announcements,
+catalogs, brochures and magazine articles in trade and other publications. Our
+internal marketing organization also prepares technical presentations for
+industry conferences.
+
+We believe that the technical and complex nature of our products and markets
+demands an extraordinary commitment to close ongoing relationships with our
+customers. We strive to maintain close contact with our customers' design,
+engineering, manufacturing, purchasing and project management personnel. We
+employ a team approach in developing close relationships by combining the
+support of design and applications engineers, manufacturing personnel, sales and
+marketing staff and senior management. We believe that maintaining close contact
+with our customers improves their level of satisfaction, assists us in
+anticipating their future product needs and enhances our opportunities for
+design wins.
+
+RESEARCH AND DEVELOPMENT
+
+Our products and markets are subject to continued technological advances.
+Recognizing this, we maintain a high level of R&D activities to remain
+competitive in certain areas and to be an industry leader in other areas. We
+maintain close collaborative relationships with many of our customers to help us
+identify market demands and target our development efforts to meet those
+demands. We are focusing our development efforts on new products, design tools
+and manufacturing processes in our Semiconductor Products segment using our core
+technologies. We strive to improve existing product performance, improve design
+and manufacturing processes and reduce costs. The introduction of our aiIP
+technique and Alpha-2 multi-chip
+
+
+                                       5
+<PAGE>   6
+ALPHA INDUSTRIES, INC. AND SUBSIDIARIES
+
+
+module packaging technology during fiscal 2001 is evidence of our focus in this
+area. Further evidence of our commitment to R&D is our introduction of the
+world's first tri-band power amplifier module employing InGaP HBT process
+technology and the introduction of breakthrough switch/filter technology for
+wireless handsets. The switch/filter products combine multiple functions in a
+single, module-based platform and utilize our aiIP technique.
+
+GaAs HBT Capabilities. On April 24, 2000, we acquired NDI of Sunnyvale,
+California. The acquisition provided a production-ready InGaP HBT process,
+enabling the production of high efficiency HBT power amplifiers for wireless
+telephone handsets. GaAs HBT process technology works at higher frequencies and
+requires less power to transmit signals than traditional silicon semiconductors,
+and it provides greater efficiency and linearity than GaAs MESFET devices. For
+cellular telephones, this permits smaller handsets and longer talk-time between
+battery charges. HBT power amplifiers are also particularly well suited for use
+in the emerging wireless and broadband markets. The addition of a line of GaAs
+HBT products has complemented our existing GaAs PHEMT and GaAs MESFET devices,
+enabling us to offer our customers the full range of currently available GaAs
+processes for use in wireless telephone handsets, wireless data applications and
+broadband data applications.
+
+During the second quarter of fiscal 2001, we shipped our first volume order of a
+new family of broadband amplifiers, the first products based on our advanced
+InGap HBT technology, for use in a wide range of wireless and broadband
+applications.
+
+Our R&D expenditures for fiscal 2001, 2000 and 1999 were $36.0 million, $25.3
+million and $15.9 million, respectively.
+
+RAW MATERIALS
+
+Raw materials for our products and manufacturing processes are generally
+available from several sources. It is our policy not to depend on a sole source
+of supply. However, there are limited situations where we procure certain
+components and services for our products from single or limited sources. We
+purchase these materials and services on a purchase order basis. We do not carry
+significant inventories and have long-term supply contracts with only a limited
+number of our vendors.
+
+WORKING CAPITAL
+
+Our business is not seasonal, and there are no special practices with respect to
+working capital for us or the industry in general. We provide a limited warranty
+on our products against defects in material and workmanship. Payment terms are
+generally 30 days in the domestic market and 60 days in foreign markets.
+
+CUSTOMERS
+
+During fiscal 2001, Motorola, Inc. and Ericsson accounted for approximately 26%
+and 11%, respectively, of our total sales.
+
+COMPETITIVE CONDITIONS
+
+We compete on the basis of price, performance, quality, reliability, size,
+ability to meet delivery requirements and customer service and support. However,
+we experience intense competition worldwide from a number of multinational
+companies that offer a variety of competitive products and broader product
+lines, and which have substantially greater financial resources and production,
+marketing, manufacturing, engineering and other capabilities than we do. We also
+face competition from a number of smaller companies. In addition, our customers,
+particularly our largest customers, may have or could acquire the
+
+
+                                       6
+<PAGE>   7
+                                         ALPHA INDUSTRIES, INC. AND SUBSIDIARIES
+
+
+capability to develop or manufacture products competitive with those that have
+been or may be developed or manufactured by us.
+
+PATENTS AND TRADEMARKS
+
+We own certain patents and have other patent applications under preparation or
+pending. However, we believe that our technological position depends primarily
+on our ability to develop new innovative products through the technical
+competence of our engineering personnel.
+
+BACKLOG
+
+Our policy is to book only the next three months of commercial orders consistent
+with customer short-term requirements. Many commercial orders cover
+substantially more than three months of performance, but such orders can be
+easily modified or cancelled by the customer and we believe it is a better
+practice to limit bookings in this manner. On this basis, we believe all orders
+in our backlog to be firm. However, current market conditions make predictions
+about future operations particularly difficult. While we believe all orders in
+our backlog to be firm, our operating results have been materially and adversely
+affected in the past by deferral and cancellation of orders as a result of
+changes in customer requirements.
+
+We have backlog of undelivered orders on April 1, 2001 of approximately $38.7
+million compared with $55.7 million on April 2, 2000.
+
+ENVIRONMENTAL REGULATIONS
+
+In our opinion, compliance with federal, state, and local environmental
+protection regulations does not and will not have a material effect on our
+capital expenditures, earnings and competitive position.
+
+EXECUTIVE OFFICERS
+
+The following table sets forth certain information with respect to our executive
+officers during fiscal 2001:
+
+<TABLE>
+<CAPTION>
+      NAME                           AGE     POSITION
+
+<S>                                  <C>     <C>
+      George S. Kariotis             78      Chairman Emeritus and Director
+      Thomas C. Leonard              66      Chairman of the Board of Directors
+      David J. Aldrich               44      President, Chief Executive Officer and Director
+      Paul E. Vincent                53      Vice President, Treasurer, Secretary and Chief Financial Officer
+      Jean-Pierre Gillard            57      Vice President
+      Richard Langman                54      Vice President and President of Trans-Tech, Inc.
+      Bruce Nonnemaker               54      Vice President
+</TABLE>
+
+All officers serve until the next Board of Directors meeting following the
+Annual Meeting of Stockholders scheduled for September 10, 2001, or until their
+successors are elected and qualified. No officer was elected pursuant to any
+arrangement or understanding.
+
+George S. Kariotis was elected Chairman Emeritus in April 2000. Prior to this
+election, Mr. Kariotis served as Chairman of the Board and Chief Executive
+Officer from our inception in 1962 to 1978, and, from 1974 to 1978, he was also
+our Treasurer. From 1979 to 1983, Mr. Kariotis was the Secretary of Manpower
+Development and Economic Affairs for the Commonwealth of Massachusetts. He was
+re-elected Chairman
+
+
+                                       7
+<PAGE>   8
+ALPHA INDUSTRIES, INC. AND SUBSIDIARIES
+
+
+of the Board in 1983 and Chief Executive Officer in 1985. Mr. Kariotis resigned
+as Chief Executive Officer in July 1986 while he campaigned for public office.
+He resumed his position as Chief Executive Officer in November 1986, and served
+in that capacity until 1991. Mr. Kariotis served as Chairman of the Board since
+his re-election in 1983 up until his election to Chairman Emeritus in April
+2000. Mr. Kariotis has been a Director since 1962 and continues to serve in that
+capacity.
+
+Thomas C. Leonard was elected Chairman of the Board in April 2000. Prior to his
+election, Mr. Leonard served as Chief Executive Officer since July 1996. Mr.
+Leonard also served as our President from July 1996 to September 1999. In August
+1996, Mr. Leonard was elected a Director. Mr. Leonard joined us in 1992 as a
+division General Manager, and, in 1994, he was elected a Vice President. Mr.
+Leonard has over 30 years experience in the microwave industry, having held a
+variety of executive and senior level management and marketing positions at
+M/A-COM, Inc., Varian Associates, Inc. and Sylvania.
+
+David J. Aldrich was elected President, Chief Executive Officer and a member of
+the Board of Directors in April 2000. Mr. Aldrich joined us in 1995 as Vice
+President, Chief Financial Officer and Treasurer. He served as Vice President
+and General Manager of the Semiconductor Products segment until his election in
+September 1999 to President and Chief Operating Officer. From 1989 to 1995, Mr.
+Aldrich held senior management positions at M/A-COM, Inc., including Manager
+Integrated Circuits Active Products, Corporate Vice President Strategic
+Planning, Director of Finance and Administration, and Director of Strategic
+Initiatives with the Microelectronics Division.
+
+Paul E. Vincent joined us as Controller in 1979 and has been Vice President and
+Chief Financial Officer since January 1997. Mr. Vincent was elected Secretary in
+September 1999. Prior to joining us, Mr. Vincent worked at Applicon Incorporated
+and, prior to that, Arthur Andersen & Co. Mr. Vincent is a CPA.
+
+Richard Langman joined us in January 1997 as Vice President, and as President
+and General Manager of our Trans-Tech, Inc. subsidiary. Prior to joining us, Mr.
+Langman worked for Coors Ceramics Company for 23 years, holding senior executive
+positions in operations and sales.
+
+Jean-Pierre Gillard joined us in 1992 as Manager of GaAs integrated circuit
+operations and has been Vice President of Business Development since June 1996.
+Before 1992, he held a number of management positions at M/A-COM, Inc. in both
+marketing and sales.
+
+Bruce Nonnemaker joined us in 1997 as Director of Operations for the
+Semiconductor Products segment. Mr. Nonnemaker served in this capacity until his
+election to Vice President, Operations in September 1999. Prior to joining us,
+Mr. Nonnemaker held senior operations management positions at Digital Equipment
+Corporation. Before this, he held senior operations positions at Western
+Digital, Commodore Computer and Solid State Scientific.
+
+EMPLOYEES
+
+As of April 1, 2001, we employed approximately 1,120 persons, compared with
+1,090 persons as of April 2, 2000.

@@ -1,0 +1,713 @@
+Item 1. Business 
+
+ 
+
+Overview 
+
+ 
+
+We are a fabless semiconductor company that designs and markets high performance integrated circuits for the following key markets: (i) digital consumer electronics, (ii) networking, (iii) mobile communications and (iv) automotive electronics. Our primary products are high speed and low power SRAM and low and medium density DRAM. We also design and market EEPROM, Pseudo SRAM and multi-chip packages, and we are developing selected non-memory products focused on our key markets. We target high growth markets with our low cost, high quality semiconductor products and seek to build long-term relationships with our customers. We have been a committed long-term supplier of memory products, including lower density and smaller volume products, even through periods of tight manufacturing capacity. 
+
+ 
+
+Our outsourced manufacturing model is based upon a history of joint technology development relationships with key Asian foundries. For example, we had a technology development program for a 0.13 micron process with TSMC. We also make strategic equity purchases in selected foundries. For example, we have invested a total of $42.0 million in SMIC. Recently, we expanded our presence in the important Asian market by adding design groups in Shanghai, China and Hsinchu, Taiwan, where we now employ over 70 design and test engineers. Our design groups in China and Taiwan complement our core engineering and product management team located at our Santa Clara, California headquarters. 
+
+ 
+
+1 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+Our customers include leaders in each of our four target markets including Apex, ChangHong, D-Link, Samsung and Sony in consumer electronics; 3Com, Ambit, Askey, Cisco and Yahoo! Japan in networking; Bird, Ericsson, LG Electronics, Motorola and Nokia in mobile communications; and Bose, Delphi, Philips and Siemens in automotive electronics. Due to their significant size and market influence, these customers generally drive memory volumes in their market segments and help define the direction of future memory needs. 
+
+ 
+
+Company Background 
+
+ 
+
+We were incorporated in California in October 1988 and changed our state of incorporation to Delaware in August 1993. Our principal executive offices are located at 2231 Lawson Lane, Santa Clara, California 95054, and our telephone number is (408) 969-6600. On our Investor Relations web site, located at www.issi.com, we post the following filings as soon as reasonably practicable after they are electronically filed with or furnished to the Securities and Exchange Commission: our annual report on Form 10-K, our quarterly reports on Form 10-Q, our current reports on Form 8-K and any amendments to those reports filed or furnished pursuant to Section 13(a) or 15(d) of the Securities Exchange Act of 1934. All such filings on our Investor Relations web site are available free of charge. 
+
+ 
+
+Market Background 
+
+ 
+
+In recent years, the need for sophisticated semiconductor memory architecture has expanded beyond the PC market and into electronic systems in a wide variety of markets including digital consumer electronics, networking, mobile communications and automotive electronics. Advances in technology have allowed for increasingly complex digital consumer systems such as DVD players, set-top boxes, digital cameras and HDTVs. Increased memory content is required in these products to manage large amounts of data that create images and sounds in a digital format. As a result, virtually all digital consumer electronic systems incorporate semiconductor memory devices to enable and enhance system performance. 
+
+ 
+
+As more consumers and businesses utilize the internet and broadband communications networks, the demand for products that connect to these networks has accelerated. Consumers and businesses require high speed access to internet content and other services to transmit and receive large amounts of data, such as highly graphical web sites, mp3 audio files and streaming multimedia applications. The numerous and complex applications that facilitate connections within networking and broadband products such as modems, switches and routers require optimized high speed memory architectures to maximize bus bandwidth and speed data transfer. 
+
+ 
+
+Mobile communications products have gained broad acceptance among consumers. Applications for cellular communications, WLAN and GPS are increasingly able to access a range of data services, from internet connectivity to location detection, and are delivering information to consumers through mobile products. As the complexity and functionality of mobile communications products increases, so does the need for increased memory. These applications require the same memory performance as a non-mobile device, but the memory device must also conform to the mobile needs of low power and small footprint. 
+
+ 
+
+The complexity of automobile electronics is also increasing rapidly. The significant increase in automotive electronics systems has resulted in an increase in microcontrollers and memory responsible for delivering control and command functionality. Automobile designers are increasing semiconductor content in automobiles to allow for improved telematics, digital audio and video entertainment systems, and powertrain functions such as engine control and fuel efficiency management systems. These systems require memory devices that must meet the automotive industry’s high quality and reliability standards. 
+
+ 
+
+Integrated circuits that address the semiconductor memory market can be segmented into volatile memory, such as DRAM and SRAM, and non-volatile memory, such as Flash and EEPROM. Volatile memory loses the data if the electricity is turned off while non-volatile memory retains the data when the electricity is turned off. SRAM is used for applications that require very high speed access to stored data, and typically requires four to 
+
+ 
+
+2 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+six transistors to store each bit of data. DRAM uses only a single transistor to store each bit of data. This is why the storage capacity of DRAM tends to be much greater than that of SRAM. Because of these factors, SRAM is faster than DRAM, but more expensive on a cost per bit basis. The same equipment manufacturers that use high performance SRAM may also use low and medium density DRAM, and such products can be sold through the same channels. 
+
+ 
+
+According to a Gartner Group report published in September 2003, the total market for SRAM is estimated to be $3.1 billion in 2003. System designers use SRAM in the most performance sensitive portions of their memory architecture. High performance SRAM operates at either very high speed or very low power. High speed SRAM is used in applications such as base stations, bridges, routers, modems and peripherals. Low power SRAM is used in applications such as the wireless handheld and mobile phone markets. 
+
+ 
+
+The DRAM market can be segmented into high density devices (currently 256 Mb and above) and low and medium density devices (currently 128 Mb and below). High density DRAM is used in applications that require high capacity storage such as PCs and other high-end computing devices. Low and medium density DRAM is used in applications such as digital consumer electronics, networking, mobile communications and automotive electronics which require less memory capacity than PCs and high end computing applications. According to a Gartner Group report published in September 2003, the total market for DRAM at 128 Mb and below is estimated to be $4.4 billion in 2003. The semiconductor memory market is highly cyclical. During favorable up cycle conditions, large captive memory manufacturers tend to shift production to higher density DRAM devices, where the volumes are greater and manufacturing economies of scale can be optimized. Currently, these large manufacturers are generally focusing on 256 Mb DRAM and above because higher densities have higher volumes and economies of scale and many of these manufacturers have limited production of lower density DRAM, such as 4, 16 or 64 Mb devices. As a result, to the extent the large, captive memory manufacturers limit or cease production of low and medium density DRAM, customers may seek a new long-term, steady supply of these products. 
+
+ 
+
+An emerging memory technology in the volatile memory category is Pseudo SRAM. Pseudo SRAM combines the DRAM cell structure with the SRAM input/output architecture and is normally manufactured using DRAM process technology. In low power wireless applications, Pseudo SRAM offers much of the functionality of SRAM but with the higher density and lower cost of DRAM. The cost and performance of Pseudo SRAM falls between that of DRAM and SRAM. 
+
+ 
+
+Memory suppliers compete on the basis of speed, power consumption, density, reliability and cost, all of which are a function of process technology and design expertise. Success in the memory market is determined not only by the quality of the device design but also by the process through which the device can be fabricated. Process technology improvements allow design line widths to be reduced, which in turn allow the integrated circuit design to operate at faster speeds and increased memory density. To meet the demands for high performance memories, a memory supplier must also have a wafer fabrication strategy allowing it to migrate to the newest generations of process technology on a timely basis. Process technology shifts occur frequently and are developed in high end wafer fabrication facilities that typically cost over $1.0 billion. Although most of the large multinational memory companies fabricate their own semiconductor wafers, fabless suppliers rely on third-party wafer foundries. The fabless model is much less capital intensive, but requires strong relationships with foundries to secure wafer supply and access to advanced process technology. 
+
+ 
+
+The manufacturing of many products in the digital consumer electronics, networking and mobile communication markets is largely based in Asia. As a result, many semiconductor companies have increased their sales and design presence in Asia to be closer to key customers, and to obtain access to lower cost engineering and manufacturing resources. Semiconductor companies that have a strong Asian presence may have a competitive advantage in securing business from manufacturers located in this region. 
+
+ 
+
+The increasing demand for high performance memory products across a variety of end markets provides a substantial opportunity for a focused supplier of high performance memory integrated circuits. 
+
+ 
+
+3 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+Strategy 
+
+ 
+
+Since our inception in 1988, we have developed a broad range of SRAM products that enable designers to meet the demanding density, speed, cost, reliability and power consumption requirements of semiconductors used in high technology products. We have also established ourselves as a source of long-term supply for low and medium density DRAM products which are complementary to our SRAM products. Our customers are among the largest manufacturers in the digital consumer electronics, networking, mobile communications and automotive electronic markets. Unlike many other fabless semiconductor companies, we employ our own process development team to work collaboratively with our key foundry suppliers. From time to time we have also made equity purchases in selected wafer foundries. Our management has extensive experience working with Asian foundries. These factors allow us to build strong relationships with our foundry suppliers and facilitate access to leading edge process technology and wafer capacity. The key elements of our strategy are: 
+
+ 
+
+Build Collaborative Relationships with Leading Edge Foundries.    We work in a highly collaborative mode with our principal wafer foundries in developing leading edge process technology that is critical in advanced memories. We entered our first development program with TSMC in 1990 and with Chartered Semiconductor in 1994. Through this collaborative model, we have been able to repeatedly be in the forefront as process technology has advanced to 0.13 micron geometries. As part of our manufacturing strategy, we have also made strategic equity purchases in key foundries such as SMIC, and in the past, TSMC. We believe our collaborative development efforts and equity purchases have enabled us to have more secure access to wafer capacity even during industry up cycles. For example, during 2000, foundry wafers were generally on allocation but we were able to increase our wafer starts and grow our revenue on a quarterly basis. 
+
+ 
+
+Commit to Being a Long-Term Supplier of our Products.     We are a long-term supplier of products to many of our customers. Our fabless model provides us the flexibility to accommodate small volume production runs for products such as low and medium density memories. In contrast, many large captive suppliers will reduce or cease production of lower density products in periods of tight capacity as manufacturing such products is less attractive to them than making higher density memories which typically have higher volumes and greater economies of scale. As an example, we have been supplying Nokia with low density 4 Mb DRAM since 1997, while most large captive DRAM companies ceased production of such devices several years ago. 
+
+ 
+
+Continue to Develop and Offer High Performance Products.    We provide cost effective, high performance products including a complete family of SRAM products and a range of low and medium density DRAM products. We work with our customers to identify the memory requirements of their next generation products and then focus our development efforts on achieving high performance standards through advanced process technology, circuit density, high speed, reliability and optimized power consumption. Recent examples of our development efforts include our 18 Mb synchronous SRAM product targeting high-end networking applications, space saving multi-chip packages targeting the high growth mobile communications market and our 128 Mb DRAM product initially targeting the digital consumer electronics and networking markets. 
+
+ 
+
+Expand our Low Cost Asian-Based Development Teams Close to our Customers.    We intend to continue to capitalize on our extensive experience in Asia. We have established low cost engineering development teams close to our customers through our subsidiaries in Taiwan and China. As evidence of this strategy, we added design groups in Shanghai, China and Hsinchu, Taiwan, where we now employ over 70 design and test engineers. We now employ more individuals in Asia than in North America. 
+
+ 
+
+Further Penetrate Industry Leading Customers.    We leverage our expertise in producing high quality memory products to penetrate our target markets through industry leading accounts, such as Apex, ChangHong, D-Link, Samsung and Sony in digital consumer electronics; 3Com, Ambit, Askey, Cisco and Yahoo! Japan in networking; Bird, Ericsson, LG Electronics, Motorola and Nokia in mobile communications; and Bose, Delphi, Philips and Siemens in automotive electronics. We target these customers because we believe they drive high volumes in their markets and define the direction of future memory requirements. Our success with these market leaders enables us to attract other customers and diversify our customer base. 
+
+ 
+
+4 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+Develop Selected Non-Memory Products for Key Markets.    We are developing selected non-memory products for use in our key markets. Our goal is to increase product diversification and to offer products that are synergistic with our SRAM and DRAM expertise. Our initial non-memory products are expected to be Bluetooth and other wireless chipsets and logic-based memory controller chips. Most of the development work for our non-memory products is performed by our Taiwan and China design groups. We believe we can succeed in these markets by capitalizing on our experience in small die size design and low cost manufacturing. 
+
+ 
+
+Customers and Marketing 
+
+ 
+
+Over the years, we have established a strong customer base including industry leading accounts. Our key customers in each of our target markets are presented in the following table: 
+
+ 
+
+Digital
+
+Consumer Electronics
+
+--------------------------------------------------------------------------------
+   Networking
+
+--------------------------------------------------------------------------------
+   Mobile
+
+Communications
+
+--------------------------------------------------------------------------------
+   Automotive
+
+Electronics
+
+--------------------------------------------------------------------------------
+ 
+Apex
+   3Com   Bird   Bose 
+ChangHong
+   Alcatel   Ericsson   Delphi 
+D-Link
+   Ambit   LG Electronics   Philips 
+LG Electronics
+   Askey   Motorola   Siemens 
+Lexmark
+   Cisco   Nokia   Temic 
+NEC
+   Huawei   UTStarcom     
+Samsung
+   Nortel         
+Sharp
+   Yahoo! Japan         
+Sony
+   ZTE         
+
+ 
+
+Our sales and marketing efforts are directed from our Santa Clara headquarters. We market and sell our products in Asia, the U.S. and Europe through our direct sales force, independent sales representatives and distributors. We have distributors in North America and in many countries in Europe, including a Pan-European distributor. In Asia, we sell primarily through distributors who work closely with our Asian resident direct sales force. We have sales offices in the U.S., Europe, Taiwan, China, Hong Kong, Korea and India. Our marketing group focuses on product strategy, product development road maps, new product introduction, demand assessment and competitive analysis. The group also ensures that product launches, channel marketing programs, and ongoing demand and supply planning occur in a well-managed, timely basis. 
+
+ 
+
+The percentage of our revenues from customers located outside the U.S. was approximately 48%, 70% and 87% in fiscal 2001, 2002 and 2003, respectively. The increase in our revenues from Asia is due to our success in the digital consumer electronics market. We anticipate that sales to international customers will continue to represent a significant percentage of our net sales. The percentages of our revenues by region are set forth in the following table: 
+
+ 
+
+     Fiscal Year Ended
+September 30,
+
+--------------------------------------------------------------------------------
+ 
+     2001
+
+--------------------------------------------------------------------------------
+      2002
+
+--------------------------------------------------------------------------------
+      2003
+
+--------------------------------------------------------------------------------
+ 
+Asia
+    23%      56%      77% 
+Europe
+    25         14         10    
+U.S.
+    52         30         13    
+     
+--------------------------------------------------------------------------------
+      
+--------------------------------------------------------------------------------
+      
+--------------------------------------------------------------------------------
+ 
+Total
+    100%      100%      100% 
+     
+--------------------------------------------------------------------------------
+      
+--------------------------------------------------------------------------------
+      
+--------------------------------------------------------------------------------
+ 
+
+ 
+
+Our sales are generally made pursuant to standard purchase orders, which can be revised to reflect changes in the customer’s requirements. Generally, our purchase orders and OEM agreements allow customers to reschedule delivery dates and cancel purchase orders without significant penalties. For these reasons, we believe that our backlog, while useful for scheduling production, is not necessarily a reliable indicator of future revenues. 
+
+ 
+
+5 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+Markets and Products 
+
+ 
+
+Our memory products are used in a variety of specific applications within the digital consumer electronics, networking, mobile communications and automotive electronics markets. In particular, our SRAM products are used in cell phones, WLANs, base stations, networking switches and routers, DSL modems, LCD TVs, set-top boxes, GPS systems, instrumentation, engine control systems, telematics, audio and video equipment, satellite radio, POS terminals, fax machines, copiers, tape drives, and other applications. Our low and medium density DRAM products are used in base stations, DVD players, DSL modems, set-top boxes, digital cameras, flat panel TVs, LCD TVs, HDTVs, printers, audio equipment and other applications. Many of the same customers that purchase our SRAM products also purchase our DRAM products. 
+
+ 
+
+Historically, SRAM products have generated a majority of our revenue, largely for networking and telecommunications applications. However, in fiscal 2003, these markets remained relatively flat and, in the same period, we experienced rapid growth in the consumer electronics market for our low and medium density DRAM products. As a result, in fiscal 2003, we derived a majority of our revenue from DRAM products. 
+
+ 
+
+SRAM.    Our SRAM strategy is to offer a broad range of devices and be a complete supplier of a customer’s SRAM requirements. We offer advanced, leading-edge products, such as our new 18 Mb synchronous SRAM, and we also make long-term supply commitments on established SRAM products, such as a 32K x 8, 5 volt asynchronous SRAM. Our high performance SRAM products generally focus on either high speed or low power applications. 
+
+ 
+
+We offer both asynchronous and synchronous high speed SRAM products. Our high speed asynchronous SRAM products are used in applications such as LANs, telecommunication equipment and base stations, bridges, routers, modems, automotive electronics, multimedia products, peripherals, and industrial instrumentation. Driven by demand in the wireless handheld and mobile phone markets, we have developed a low power family of SRAM products for wireless applications. Our high speed synchronous SRAM products are used in a variety of networking and telecommunications applications such as high performance bridges and routers. 
+
+ 
+
+Additional SRAM products under development are expected to include performance-leading features in speed, configuration, power levels, density and packaging. We are also developing Pseudo SRAM products, which are higher density devices that utilize the DRAM cell structure and the SRAM input/output architecture. We recently started sampling our 16 Mb and 32 Mb Pseudo SRAM products, we are in the development stage of the 8 Mb Pseudo SRAM product, and in the design phase of a 64 Mb Pseudo SRAM product. 
+
+ 
+
+6 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+The following table illustrates our principal SRAM products and the markets in which they can be used: 
+
+ 
+
+Product Description   Configuration   Density   Digital
+Consumer
+Electronics   Networking   Mobile
+Communications   Automotive
+Electronics 
+
+--------------------------------------------------------------------------------
+ 
+Asynchronous SRAM
+                         
+
+--------------------------------------------------------------------------------
+ 
+High Speed 5 Volt (3.3 Volt)
+   128K x 8   1 Mb   ü   ü   ü   ü 
+
+--------------------------------------------------------------------------------
+ 
+High Speed 5 Volt (3.3 Volt)
+   64K x 16   1 Mb   ü   ü   ü   ü 
+
+--------------------------------------------------------------------------------
+ 
+High Speed (3.3 Volt)
+   128K x 16   2 Mb   ü   ü   ü   ü 
+
+--------------------------------------------------------------------------------
+ 
+High Speed (3.3 Volt)
+   256K x 16   4 Mb   ü   ü       ü 
+
+--------------------------------------------------------------------------------
+ 
+High Speed (3.3 Volt)
+   512K x 8   4 Mb   ü   ü         
+
+--------------------------------------------------------------------------------
+ 
+High Speed (3.3 Volt)
+   512K x 16   8 Mb   ü   ü         
+
+--------------------------------------------------------------------------------
+ 
+High Speed (3.3 Volt)
+   1M x 8   8 Mb   ü           ü 
+
+--------------------------------------------------------------------------------
+ 
+Low/Ultra Low Power
+   128K x 8   1 Mb   ü           ü 
+
+--------------------------------------------------------------------------------
+ 
+Low/Ultra Low Power
+   64K x 16   1 Mb   ü       ü   ü 
+
+--------------------------------------------------------------------------------
+ 
+Low/Ultra Low Power
+   128K x 16   2 Mb   ü             
+
+--------------------------------------------------------------------------------
+ 
+Low/Ultra Low Power
+   256K x 16   4 Mb   ü             
+
+--------------------------------------------------------------------------------
+ 
+Low/Ultra Low Power
+   512K x 8   4 Mb       ü   ü     
+
+--------------------------------------------------------------------------------
+ 
+Low/Ultra Low Power
+   1M x 8   8 Mb           ü   ü 
+
+--------------------------------------------------------------------------------
+ 
+Low/Ultra Low Power
+   512K x 16   8 Mb       ü         
+
+--------------------------------------------------------------------------------
+ 
+Synchronous SRAM
+                         
+
+--------------------------------------------------------------------------------
+ 
+Pipeline Burst/FlowThru
+   128K x 32/36   4 Mb   ü   ü       ü 
+
+--------------------------------------------------------------------------------
+ 
+Pipeline Burst/FlowThru
+   256K x 16/18   4 Mb       ü         
+
+--------------------------------------------------------------------------------
+ 
+Pipeline Burst/FlowThru/No Wait
+   256K x 32/36   9 Mb       ü         
+
+--------------------------------------------------------------------------------
+ 
+Pipeline Burst/FlowThru/No Wait
+   512K x 18   9 Mb       ü         
+
+--------------------------------------------------------------------------------
+ 
+Pipeline Burst/FlowThru/No Wait
+   256K x 72   18 Mb       ü         
+
+--------------------------------------------------------------------------------
+ 
+Pipeline Burst/FlowThru/No Wait
+   512K x 36   18 Mb       ü         
+
+--------------------------------------------------------------------------------
+ 
+Pipeline Burst/FlowThru/No Wait
+   1M x 18   18 Mb       ü         
+
+--------------------------------------------------------------------------------
+ 
+Pseudo SRAM
+                         
+
+--------------------------------------------------------------------------------
+ 
+Low Power
+   512K x 16   8 Mb           ü     
+
+--------------------------------------------------------------------------------
+ 
+Low Power
+   1M x 16   16 Mb           ü     
+
+--------------------------------------------------------------------------------
+ 
+Low Power
+   2M x 16   32 Mb           ü     
+
+ 
+
+DRAM.    Our DRAM strategy is to be a long-term supplier of low and medium density DRAM products. Our DRAM is not targeted at the main memory DRAM market and we do not compete in markets requiring the highest density DRAM products used in PCs and workstations. Instead, we provide 4, 16 and 64 Mb DRAM and, in the first quarter of fiscal 2004, we will begin selling our 128 Mb DRAM. Applications for our low and medium density DRAM include products such as DVD players, set-top boxes, DSL modems, digital still cameras, printers, automotive electronics, base stations, networking equipment, disk drives, tape drives and PDAs. Most of these applications do not require high density products, and our customers’ memory component strategy typically follows behind one or more generations the high density DRAM market. Additional DRAM products, including low power synchronous DRAM products, are under development. 
+
+ 
+
+7 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+The following table describes our principal DRAM products and the markets in which they can be used: 
+
+ 
+
+Product Description   Configuration   Density   Digital
+Consumer
+Electronics   Networking   Mobile
+Communications   Automotive
+Electronics 
+
+--------------------------------------------------------------------------------
+ 
+Synchronous 3.3 Volt
+   1M x 16   16 Mb   ü           ü 
+
+--------------------------------------------------------------------------------
+ 
+Synchronous 3.3 Volt
+   4M x 16   64 Mb   ü   ü   ü     
+
+--------------------------------------------------------------------------------
+ 
+Synchronous 3.3 Volt
+   2M x 32   64 Mb   ü   ü         
+
+--------------------------------------------------------------------------------
+ 
+Synchronous 3.3 Volt
+   16M x 8   128 Mb               ü 
+
+--------------------------------------------------------------------------------
+ 
+Synchronous 3.3 Volt
+   8M x 16   128 Mb   ü   ü   ü   ü 
+
+--------------------------------------------------------------------------------
+ 
+Synchronous 3.3 Volt
+   4M x 32   128 Mb   ü   ü         
+
+--------------------------------------------------------------------------------
+ 
+Low Power Synchronous 2.5 Volt
+   16M x 8   128 Mb           ü   ü 
+
+--------------------------------------------------------------------------------
+ 
+Low Power Synchronous 2.5 Volt
+   8M x 16   128 Mb           ü     
+
+--------------------------------------------------------------------------------
+ 
+Low Power Synchronous 2.5 Volt
+   4M x 32   128 Mb           ü     
+
+ 
+
+Multi-Chip Packages (MCPs).    MCPs combine memory chips into one package to save space in smaller form factor products such as cell phones. The proliferation of increasingly smaller and complex mobile phones has created an increased demand for more highly integrated and smaller footprint memory solutions. To address these needs, we currently combine our SRAM product with Flash memory that is supplied by Fujitsu to create MCPs for cell phone manufacturers in Asia, particularly China and Korea. In fiscal 2004, we expect to combine PseudoSRAM with Flash in some of our MCPs. 
+
+ 
+
+EEPROM and Other Memory Products.    Our other memory products include high performance serial EEPROM, embedded EEPROM products targeted at SmartCard applications, and voice recording chips. Applications for these products include pagers, networking systems, modems, telephone sets, security systems, video games, automobiles and other consumer products. To date, revenue from these products has been approximately 5% or less of our total annual revenue. 
+
+ 
+
+Product Warranty.    Consistent with semiconductor memory industry practice, we generally provide a limited warranty that our semiconductor memory devices are in compliance with specifications existing at the time of delivery. Liability for a stated warranty period is usually limited to replacement of defective items or return of amounts paid. 
+
+ 
+
+Manufacturing 
+
+ 
+
+We outsource our manufacturing operations including wafer fabrication, assembly and testing. Our wafer fabrication strategy is to build collaborative relationships with leading foundries and to purchase strategic equity interests in selected foundries. Because memory products are particularly well suited for the development of advanced process technology, we actively participate in developing and refining the process technology used to manufacture many of our products. We believe that this strategy gives us a competitive advantage and enables us to achieve the early introduction of smaller geometries for our memory products, which results in increased performance and lower manufacturing costs, as well as facilitates access to needed capacity. Historically, our principal manufacturing relationships have been with TSMC in Taiwan and with Chartered Semiconductor in Singapore. In fiscal 2002, we began production at SMIC in China and, in fiscal 2003, we began production at ProMOS and Powerchip in Taiwan. 
+
+ 
+
+In addition to building process technology development relationships, we are differentiated from many other fabless semiconductor companies because we have purchased strategic equity interests in selected foundries. For example, in fiscal 2000, we committed to purchase $40.0 million in equity in SMIC, the first 8-inch wafer foundry in China, located in the Shanghai/Pudong area near our China subsidiary. Our Chairman and Chief Executive Officer serves on SMIC’s board of directors. The majority of our DRAM wafers are produced at SMIC. As of September 30, 2003, we had purchased $42.0 million in equity in SMIC. Previously we held equity interests in TSMC and UMC. 
+
+ 
+
+8 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+The manufacturing of our products begins at independent wafer foundries. Once the foundry has completed wafer processing, the wafers are shipped to subcontractors for wafer testing. They are then cut into individual memory chips, assembled into final packages and tested at our third-party subcontractors in Taiwan, Singapore and China. Our operations groups in the U.S., China and Taiwan perform subcontractor management. We are certified under ISO 9001/2000 standards and our quality system is periodically reviewed and approved by both ISO certifiers and our customers. We plan to achieve certification for ISO/TS 16949:2002, the new automotive standard, and ISO 14001, the environmental standard, in 2004. 
+
+ 
+
+Each of our wafer suppliers also fabricates for other integrated circuit companies, including certain of our competitors. In addition, some of our wafer suppliers manufacture memories for their own account. Although we are allocated specific wafer capacity from our suppliers, we may not be able to obtain such capacity in periods of tight supply. There can be no assurance that the foundries we use will not encounter construction or production difficulties or that they will allocate sufficient wafer capacity to satisfy our wafer requirements, especially in times of wafer capacity shortages. Moreover, there can be no assurance that we would be able to qualify additional manufacturing sources for existing or new products in a timely manner or that such additional manufacturing sources would be able to produce an adequate supply of wafers. If we were unable to obtain an adequate supply of wafers from our current or any alternative sources in a timely manner, our business and operating results would be harmed. 
+
+ 
+
+Competition 
+
+ 
+
+The semiconductor market is intensely competitive and has been characterized by cyclical market conditions, an oversupply of product, price erosion, rapid technological change and short product life cycles. We compete primarily on the basis of the following factors: 
+
+ 
+
+  • the pricing of our products;  
+
+ 
+
+  • the supply and cost of wafers;  
+
+ 
+
+  • product design, functionality, performance and reliability;  
+
+ 
+
+  • successful and timely product development;  
+
+ 
+
+  • wafer manufacturing over or under capacity;  
+
+ 
+
+  • access to advanced process technologies at competitive prices; and  
+
+ 
+
+  • access to assembly and test capacity.  
+
+ 
+
+We may not be able to compete successfully in the future as to any of these factors and our failure to do so could harm our business. 
+
+ 
+
+In the market for SRAM products we compete with several domestic and international semiconductor companies including Alliance Semiconductor, Cypress, Etron, Giga Semiconductor, ICSI, Integrated Device Technology, NEC, Renesas Technology, Samsung and Sony. We also may face significant competition from other domestic and foreign integrated circuit manufacturers which have advanced technological capabilities but are not currently participating in the SRAM market sector. 
+
+ 
+
+In the low to medium density DRAM area we generally compete with Hynix, ICSI, Micron, Mosel-Vitelic, Nanya, Samsung, Oki and Winbond. In addition, there are several fabless Taiwanese companies that are competitors, including ESMT, Etron and G-Link. Other large DRAM manufacturers could address the low and medium density DRAM market in the future. 
+
+ 
+
+In the EEPROM market, our primary competitors include Atmel, Catalyst and STMicroelectronics. We also compete with many small to medium-sized companies in one or more segments of the market. Our MCPs are focused primarily on cell phones. Because this is a large and active target market, it has attracted numerous 
+
+ 
+
+9 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+suppliers, including AMD, Cypress, Fujitsu, Intel, Samsung and Toshiba. The Psuedo SRAM market is still emerging, and we expect to compete in this market with many of the same companies that compete with us in our SRAM and DRAM markets. 
+
+ 
+
+Certain of our competitors offer broader product lines and have greater financial, technical, marketing, distribution and other resources than us. In down cycles, they may be willing to sell below fully absorbed costs at prices we cannot match. We may not be able to compete successfully against any of these competitors. 
+
+ 
+
+The process technology used by our manufacturing sources, including process technology that we have developed jointly with our foundries, can be used by such foundries to produce products for other companies, including our competitors. Although we believe that our participation in the development of the processes provides us the advantage of early access to such processes, the knowledge of the wafer manufacturer may be used to benefit our competitors. 
+
+ 
+
+Research and Development 
+
+ 
+
+Rapid technological change and continuing price competition require research and development efforts on both new products and advanced processes employing smaller geometries. Our research and development activities are focused primarily on the development of new memory circuit designs at the smallest die size and utilization of advanced process technology with the smallest geometries. We currently design most of our high performance memory products and jointly develop advanced process technology with our manufacturing partners from our headquarters in Santa Clara, California and our design groups in Taiwan and China. Our research and development expenditures in fiscal 2003, 2002, and 2001, were $23.4 million, $29.8 million, and $25.3 million, respectively. As of November 30, 2003, we had over 100 employees in research and development, with over 70 in Taiwan and China. 
+
+ 
+
+New SRAM products in design include high speed 18, 32 and 36 Mb synchronous devices. We are developing 4, 8 and 64 Mb Pseudo SRAM products. We have new 64 Mb and 128 Mb DRAM devices under design. We are developing new products on industry leading 0.13, 0.14 and 0.15 micron process technologies. We are presently evaluating 90-nanometer process technology for our next generation products. In nonvolatile memory, our future products are expected to include 256K and 512K density serial EEPROM devices. 
+
+ 
+
+We plan to add selected non-memory products to diversify our product portfolio. Our non-memory products will be targeted at our key markets. Our wireless chipset product line is a non-memory product line. We acquired certain Bluetooth and wireless chipset rights and technology in connection with an equity investment in a development-stage company, Signia Technologies, and have formed a joint development program with them. Our Bluetooth and other wireless chipsets can be used for short distance wireless communication for applications such as cell phones, PDAs, PC peripherals, headsets and other consumer products. In 2004, we plan to begin the development of logic-based memory controller chips. Most of the development work for our non-memory products occurs is performed by our Taiwan and China design groups. Through fiscal 2003, there has been no revenue from our non-memory products, and we do not predict material revenue from such products in fiscal 2004. 
+
+ 
+
+Patents and Intellectual Property 
+
+ 
+
+As of September 30, 2003, we held 71 U.S. patents. These patents expire between 2010 and 2020. We have 12 additional patent applications pending and expect to continue to file patent applications where appropriate to protect our proprietary technologies. We do not currently hold any non-U.S. patents. Although patents are an important element of our intellectual property, we believe that our continued success depends primarily on factors such as the technological skills and innovation of our personnel rather than on our patents. The process of seeking patent protection can be expensive and time consuming. There can be no assurance that patents will be issued from pending or future applications or that, if patents are issued, they will not be challenged, invalidated 
+
+ 
+
+10 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+or circumvented, or that any rights granted thereunder will provide meaningful protection or other commercial advantage to us. Moreover, there can be no assurance that any patent rights will be upheld in the future or that we will be able to preserve any of our other intellectual property rights. 
+
+ 
+
+In the semiconductor industry, it is not unusual for companies to receive notices alleging infringement of patents or other intellectual property rights of others. We have been, and from time-to-time expect to be, notified of claims that we may be infringing patents, maskwork rights or copyrights owned by third parties. If it appears necessary or desirable, we may seek licenses under patents that we are alleged to be infringing. Although patent holders commonly offer such licenses, licenses may not be offered and the terms of any offered licenses may not be acceptable to us. The failure to obtain a license under a key patent or intellectual property right from a third party for technology used by us could harm our business. 
+
+ 
+
+From time to time, we license some of our SRAM and DRAM designs to and from ICSI and other companies. We also license certain designs from our foundries. 
+
+ 
+
+Employees 
+
+ 
+
+As of November 30, 2003, we had approximately 274 employees worldwide, including 112 employees in the U.S., 80 in China, 68 in Taiwan, 8 in Hong Kong, 2 in India, 2 in Europe and 2 in Korea. Our future success will largely be dependent on our ability to attract, retain and motivate highly qualified technical and management personnel. The employment market for such personnel is competitive and there can be no assurance that we will successfully staff all necessary positions. Our employees are not represented by any collective bargaining agreements, we have never experienced a work stoppage and we believe our employee relations are good. 
+
+ 
+
+Executive Officers 
+
+ 
+
+Our executive officers and their ages as of September 30, 2003 are as follows: 
+
+ 
+
+Name
+
+--------------------------------------------------------------------------------
+    Age
+
+--------------------------------------------------------------------------------
+    Position
+
+--------------------------------------------------------------------------------
+ 
+Jimmy S.M. Lee
+    48    Chairman, Chief Executive Officer, and Director 
+   
+Gary L. Fischer
+    52
+    President, Chief Operating Officer, Chief Financial Officer, and Director
+ 
+   
+Paul Song
+    48    Senior Vice President, Engineering 
+
+ 
+
+Set forth below is certain information relating to our executive officers. 
+
+ 
+
+Jimmy S.M. Lee has served as our Chairman, Chief Executive Officer and a director since he co-founded ISSI in October 1988. He also served as our President until May 2000. From 1985 to 1988, Mr. Lee was engineering manager at International CMOS Technology, a semiconductor company, and from 1983 to 1985, he was a design manager at Signetics Corporation, a semiconductor company. Previously, Mr. Lee was a project manager at Toshiba Semiconductor Corporation and a design engineer at National Semiconductor Corporation. Mr. Lee has served as a director of ICSI, a memory supplier, since September 1990; as a director of NexFlash Technologies, a flash memory semiconductor company, since October 1998; as a director of GetSilicon, a semiconductor supply chain management software company since April 2000; as a director of SMIC, a semiconductor foundry, since July 2000; as a director of Signia Technologies, a developer of wireless semiconductors, since July 2000; and as a director of E-CMOS, a peripheral interface device company, since September 2001. Mr. Lee holds an M.S. degree in electrical engineering from Texas Tech University and a B.S. degree in electrical engineering from National Taiwan University. 
+
+ 
+
+Gary L. Fischer has been with us since June 1993 and has served as our President and Chief Operating Officer since April 2001, and as Chief Financial Officer since November 2002. He also served as our Executive 
+
+ 
+
+11 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+Vice President and Chief Financial Officer from April 1995 to March 2001, and as Vice President and Chief Financial Officer from June 1993 to March 1995. From January 1989 to December 1992, Mr. Fischer was Chief Financial Officer of Synergy Semiconductor Corporation, a manufacturer of high performance SRAM and logic integrated circuits. From November 2001 to June 2003, he was a director of E-CMOS, a peripheral interface device company. Mr. Fischer holds an M.B.A. degree from the University of Santa Clara and a B.A. degree from the University of California, Santa Barbara. 
+
+ 
+
+Paul Song has been with us since July 1990 and has served as Senior Vice President, Engineering since April 2000. He served as Vice President, Engineering from April 1999 to April 2000, and as Vice President, Design Engineering from July 1996 to April 1999. He joined us as director, nonvolatile memory design engineering. Previously he held design engineering positions at Integrated Circuit Technology Corp., a user-programmable integrated circuits company; Exel Microelectronics, a supplier of EEPROM semiconductors; and Advanced Micro Devices, a supplier of logic and memory integrated circuits. Dr. Song holds a Ph.D. degree in electrical engineering from Stanford University, an M.S. degree in electrical engineering from the University of California, Santa Barbara, and a B.S. degree in electrical engineering from National Taiwan University. 
+
+ 
+
+Officers serve at the discretion of the Board and are appointed annually. There are no family relationships between the directors or officers of ISSI. 

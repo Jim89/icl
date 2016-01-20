@@ -1,0 +1,953 @@
+ITEM 1.    BUSINESS 
+
+ 
+
+Overview 
+
+ 
+
+ParthusCeva licenses to semiconductor companies and electronic equipment manufacturers complete, integrated intellectual property solutions that enable a wide variety of electronic devices. Our programmable DSP cores and application-level IP platforms power wireless devices, handheld devices, consumer electronics products, GPS devices, consumer audio products and automotive applications. ParthusCeva was formed in November 2002 through the combination of ParthusCeva (formerly known as Ceva), the former DSP cores licensing business of DSP Group, founded in 1991, and Parthus Technologies plc, a provider of platform-level IP for the consumer electronics market, founded in 1993. Our company was incorporated in Delaware in 1999. 
+
+ 
+
+A programmable DSP core is a special-purpose, software-controlled processor that, through complex mathematical calculations, analyzes, manipulates and enhances digital voice, audio and video signals. These chips are used in a wide variety of electronic devices, including digital cellular telephones, modems, disk drive controllers, MP3 players, voice-over packet products and digital cameras, and are critical to the performance of the electronic products in which they are used. A DSP core-based sub-system incorporates additional hardware blocks required as interfaces from the DSP core for the overall system. 
+
+ 
+
+Our portfolio of IP platforms spans broadband and local area wireless connectivity as well as key application IP including multimedia, location and smartphone/handheld technologies. The intellectual property we license can take the form of schematics and designs for silicon chips and circuitry and software to perform particular functions on those chips. In addition, we also sell finished modules (which we refer to as Hard IP). 
+
+ 
+
+We develop our integrated portfolio of open-licensable IP in three distinct areas: DSP cores, system-on-a-chip sub-systems and application-specific platform IP. 
+
+ 
+
+DSP Cores—ParthusCeva is the leading licensor of DSP cores with 69% market share in 2001, according to Gartner/Dataquest. Our family of SmartCores is targeted at high-volume wireless, multimedia, computing and telecommunication markets. We offer PalmDSPCore, Teak, TeakLite, and the recently introduced CedarDSPCore, and continue to earn royalties on our PineDSPCore and OakDSPCore. All are soft cores and thus can be manufactured at any foundry and are all complemented by a full set of development tools and software from third-party developers. 
+
+ 
+
+System-on-a-Chip Sub-Systems—ParthusCeva’s SoC offering is an integrated, DSP core-based subsystem incorporating a large set of system interfaces and peripheral components, together with a full set of software and hardware development tools. Seamlessly interfacing with any central processing unit (CPU), ParthusCeva’s SoC significantly lowers the complexity, cost of development, and time-to-market for SoC designs. 
+
+ 
+
+Application-specific Platforms:    ParthusCeva’s application-specific platforms consist of full, verified IP solutions in both hardware and software, pre-integrated with industry-standard processors (typically ParthusCeva’s DSP and ARM’s CPU). ParthusCeva’s comprehensive platform IP targets two key market segments: 
+
+ 
+
+  •   Communication Platforms—GPS, Bluetooth, 802.11a/b/g, 2.5G, 3G and Multi-Gigabit serial communications; and  
+
+ 
+
+  •   Consumer Electronic Platforms—Digital audio, PDAs and VoIP.  
+
+ 
+
+Industry Background 
+
+ 
+
+Semiconductors, the key building blocks of electronic products, are devices that permit the controlled flow of electronic signals. An integrated circuit is a semiconductor that combines a number of individual electronic 
+
+ 
+
+4 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+circuits, each of which performs a particular function. Continuous improvements in semiconductor design have led to smaller, more complex integrated circuits that perform a wide range of functions. As the performance of semiconductors has improved and their size, cost, and power consumption have decreased, they have been used in an increasing number of applications, including telecommunications systems, automotive electronics, audio and video devices and a range of other consumer electronics products. Rising consumer expectations have increased the demand for more frequent introductions of high-performance semiconductors with lower power consumption and enhanced functionality. 
+
+ 
+
+Systems-on-a-Chip 
+
+ 
+
+Semiconductor manufacturing processes have advanced significantly in recent years to allow a substantial increase in the number of circuits placed on a single chip. At the same time, requirements for increased product functionality, higher performance and lower cost have driven demand for such system-level integration. Through this integration, complete electronic systems containing both analog and digital functions are combined on a single silicon chip, known as a system-on-a-chip. A typical system-on-a-chip incorporates a processor (such as a DSP core or a general purpose processor), memory, input/output devices and other specific components, as well as software. 
+
+ 
+
+The increased complexity of system-on-a-chip design and manufacturing requires a high level of design resources to fully capitalize on the improvements in semiconductor manufacturing technology and to maximize functionality. Designers’ capabilities and semiconductor companies’ internal design resources have not kept pace with the advances in this technology. As a result, some chip manufacturers are facing a growing “design gap” between their increasing manufacturing potential and needs and their limited chip design capabilities. 
+
+ 
+
+Semiconductor Intellectual Property 
+
+ 
+
+To address this “design gap,” many semiconductor designers and manufacturers are increasingly choosing to license proven intellectual property components, such as processor cores and application-specific IP, from third parties, rather than to develop those technologies internally. By relying on third parties for the most advanced designs of specialized components, system-on-a-chip designers and manufacturers can create differentiated products while reducing their development costs, complexity, risk and time to market. 
+
+ 
+
+The creation of licensable, re-useable design components, which we refer to as third-party semiconductor intellectual property (SIP), is a relatively new and emerging trend in the semiconductor market. According to Gartner-Dataquest, the market for semiconductor intellectual property was $892 million in 2001, representing a 25% year-on-year growth from 2000. 
+
+ 
+
+Semiconductor intellectual property providers have traditionally delivered intellectual property blocks only for functions and only for individual components with a relatively narrow function, referred to as block-level IP. The continuing evolution of electronic products has created significant demand for semiconductor intellectual property providers that add greater value by offering complete digital systems, as well as software, which we refer to as platform-level IP. We believe that this approach provides semiconductor companies and electronic product manufacturers with several key advantages, including improved time to market and a reduction in the risks, costs and complexities in bringing new products and technologies to market. 
+
+ 
+
+Digital Signal Processor Cores 
+
+ 
+
+A key piece of semiconductor IP in the computer chips driving many electronic products is the DSP core, which processes the digital data derived from converted analog signals. Once a signal (such as the human voice) has been converted to digital form, a DSP core is used to analyze, manipulate and enhance the data. The signal can then be transmitted over a network (such as the cellular telephone network), compressed and stored (such as in answering machines) or recognized as a command (such as through voice recognition). Digital signal 
+
+ 
+
+5 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+processing is used in many fields, including telecommunications, speech and music processing, imaging, medicine and seismology. As the number of electronic devices that require the processing of digital data has grown, so has the demand for reliable DSP cores. 
+
+ 
+
+A DSP-based system-on-a-chip includes several components. The DSP core controls the processing of the chip and uses mathematical calculations to process information. Other parts of the system-on-a-chip include data memory components, which host the data before and after it is processed by the DSP core, and the program memory component, which stores the software used to operate the DSP core. A chip designer may add its own specific proprietary technology to provide differentiated functionality (such as special functions and input/output electronics, which control the transfer of data between the DSP core and other electronic devices that are connected to the chip). 
+
+ 
+
+Programmable DSP cores are instructed by software programs to process ultra-fast mathematical calculations, including addition, subtraction and multiplication. The math-intensive signal processing performed by the DSP core is generally used for data compression, error correction, voice recognition and security. 
+
+ 
+
+A programmable DSP-based design allows the same chip to be programmed and reprogrammed with different software and used for several generations and different applications of products, which reduces the internal development costs for manufacturers and allows them to differentiate their products through varying the software functionality. In addition, a programmable approach allows for “field upgrades” of the technology, such as replacement of software through remote downloading, rather than physical removal and replacement of the entire chip. 
+
+ 
+
+According to Forward Concepts, a market research firm, worldwide programmable DSP chip shipments increased to $6.1 billion in 2000 and then decreased to $4.3 billion in 2001, before increasing to $4.9 billion in 2002. Forward Concepts predicts that this market will grow at a compound annual rate of 24% from 2002 to 2007. 
+
+ 
+
+Licensable DSP cores are typically licensed to semiconductor companies or directly to system OEMs. By using licensable DSP cores, manufacturers of ASSPs (application-specific standard products, which are off-the-shelf chips targeted to a specific type of application for a broad range of system OEMs) and ASICs (application-specific integrated circuits, which are chips that are customized to meet a specific customer’s needs) have multiple sources of DSP technology, thereby enabling competition among their chip suppliers as well as a wider variety of more differentiated products. 
+
+ 
+
+The manufacturers of DSP-based system-on-a-chip technologies face a “make or buy” dilemma—whether to develop a given DSP chip design or to license it from a third party. Internal development of a DSP core requires considerable design resources and specialization, which many semiconductor companies do not have. In today’s rapidly evolving markets, it is usually not cost-effective for most semiconductor companies and designers to devote the engineering resources necessary to develop complicated components such as a programmable DSP core. Therefore, companies may concentrate on the integration of software, hardware and embedded memory, and rely on licensing other intellectual property, such as DSP cores, from third parties. 
+
+ 
+
+Licensing also offers a substantial time-to-market advantage, which in most cases is a crucial factor for a manufacturer’s competitive market positioning. Further, the licensee can choose the method and source of chip production. This is a significant advantage for the licensee, as a licensed chip can easily be produced by several manufacturers, eliminating its dependence upon a single source of chip production. 
+
+ 
+
+End Markets 
+
+ 
+
+Third-party semiconductor intellectual property is licensed and deployed by semiconductor companies and electronic equipment manufacturers serving a wide variety of high-volume end markets. These include the markets for: 
+
+ 
+
+6 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+ 
+
+  •   Second-generation (2G), “second-and-a-half”-generation (2.5G) and third-generation (3G) cellular telephones—cellular telephones that combine voice communications and high-speed data transmission capabilities, permitting access to the Internet and other advanced features;  
+
+ 
+
+  •   Internet-enabled personal digital assistants, or PDAs—hand-held devices that incorporate Internet audio, electronic calendars, address books and remote access to the Internet and other data networks;  
+
+ 
+
+  •   “Intelligent” pagers—personal paging devices that incorporate advanced data communications features, such as access to e-mail, news, weather and stock quotes;  
+
+ 
+
+  •   Global positioning system (GPS) devices—devices used in automobiles, wireless connections for personal computers and industrial controls accessed through wireless Internet connections;  
+
+ 
+
+  •   Optical and magnetic disk controllers—the devices which control the reading and writing of data for personal computers, DVDs and CD ROMs;  
+
+ 
+
+  •   Voice over packet gateways and clients—products for Voice-Over Internet Protocol (VoIP) and Voice-Over Broadband (VoB) applications;  
+
+ 
+
+  •   Wireline telecommunications applications—applications such as digital subscriber line (DSL) products;  
+
+ 
+
+  •   Personal computers—WLAN networking;  
+
+ 
+
+  •   Consumer audio devices—products such as MP3 players; and  
+
+ 
+
+  •   Digital still cameras.  
+
+ 
+
+Products such as these require state-of-the-art functionality, but generally must also be easy to use and convenient in terms of both size and battery life. Providers of semiconductor intellectual property help address these requirements by focusing on integrated circuit technology that: 
+
+ 
+
+  •   permits high-data-rate communications in conformity with industry standards;  
+
+ 
+
+  •   allows the integration of more advanced features at reasonable prices by combining functions on a single system-on-a-chip; and  
+
+ 
+
+  •   helps speed time to market by reducing product development time through design re-use.  
+
+ 
+
+The ParthusCeva Solution 
+
+ 
+
+We offer complete, open, integrated solutions for semiconductor manufacturers and OEMs, enabling wireless and wireline communications, applications and multimedia through our DSP processor cores and platform-level IP. Our IP licensing business model, including royalties, offers a scalable business with multiple revenue streams and solid gross margins. 
+
+ 
+
+Our designs of programmable DSP cores and platform-level IP are used in a wide variety of electronic devices, including digital cellular telephones, modems, disk drive controllers, MP3 players, personal computers, voice-over packet products and digital cameras, and are critical to the performance of the electronic products in which they are used. Our designs are independent of specific semiconductor manufacturing processes, and can therefore be used by a wide variety of customers. We market our technology and designs as well as a wide array of software and hardware development tools and technical support services. We license our DSP cores and platforms to leading semiconductor companies throughout the world. These companies incorporate our designs into application-specific chips or custom-designed chips that they manufacture, market and sell to OEMs of a variety of electronic products. We also license our designs to OEMs directly. 
+
+ 
+
+The key benefits we offer our licensees include: 
+
+ 
+
+  •   An extensive IP portfolio.    Our IP portfolio spans the bulk of wireless, application and multimedia technologies, including our suite of programmable DSP cores. This portfolio often allows us to provide 
+ 
+
+ 
+
+7 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+  a customer with the required solution with reduced development cost, complexity and risk, therefore reducing the customer’s time to market. 
+ 
+
+ 
+
+  •   The ability to deliver complete system solutions.    Our broad IP portfolio allows us to provide our customers with complete solutions at the system level, including application-specific IP platforms and general-purpose DSP cores. Our company combines the expertise of a provider of DSP architectures with the expertise of a supplier of complete platform-level IP solutions, which we believe strongly positions us to become a leading supplier of open-standard IP solutions to the industry.  
+
+ 
+
+  •   Flexible IP deployment and support.    To meet specific customer circumstances and requirements, we offer system-level solutions composed of our IP platforms built around our DSP cores, as well as our platforms and cores as stand-alone offerings. We make our solutions available in the form of licensed intellectual property rights, dedicated development projects, or “Hard IP” embodied in silicon chips or circuit boards. In addition, we offer our licensees specialized intellectual property integration support. We believe that this flexibility facilitates the adoption and integration of our intellectual property.  
+
+ 
+
+  •   Leading-edge technology.    Our licensing relationships with a number of leading semiconductor companies and OEMs, as well as our communications with potential customers, assist us in developing additional intellectual property that meets market requirements as they evolve. A number of our employees also participate actively in international standards-setting bodies in order to influence and learn about new technological developments.  
+
+ 
+
+  •   The ability to provide a production-ready solution.    We fully test and verify the platforms and DSP cores we provide so that they are ready for product integration. In addition, we utilize third-party foundries that manufacture chips to our design. These relationships allow us to provide our customers access to low-cost production.  
+
+ 
+
+  •   A diverse and experienced research and development staff.    We have approximately 180 employees engaged in product development in a broad range of areas, including analog, digital, software, mixed- signal and digital signal processing technology. We believe that the breadth of knowledge and experience of our workforce allow us to provide better and faster services to our customers, and to maintain and develop our core intellectual property efficiently.  
+
+ 
+
+Strategy 
+
+ 
+
+We believe that our recent combination with Parthus has positioned us to address two of the major converging trends in our industry. First, we believe that our industry is moving towards open-standard processor architectures and away from traditional proprietary solutions. Second, we believe that increased semiconductor product complexity and demands for reduced time-to-market have led more companies to decide to license complete platform-level IP solutions, rather than licensing individual components from multiple suppliers. ParthusCeva combines the expertise of a provider of DSP architectures with the expertise of a supplier of complete platform-level IP solutions. We believe ParthusCeva is well positioned to take full advantage of these major industry shifts as market conditions improve and to become a leading supplier of open-standard DSP solutions to the industry. To meet this goal we intend to: 
+
+ 
+
+  •   Provide an integrated solution.    We seek to maximize the competitive advantage provided by our ability to offer an integrated IP solution—such as multimedia IP built around our DSP processor core architectures. We believe that this integrated solution will favorably position us to capitalize on what we believe is the industry trend towards the licensing of open-standard IP architectures.  
+
+ 
+
+  •   Take advantage of the industry shift towards open-standard architectures.    We believe that the industry trend away from proprietary IP towards open-standard architectures creates an opportunity for providers of licensable DSP cores and platform-level IP. We intend to use our expertise in critical open standards fields, such as Bluetooth, 802.11, GPS and video, in order to position ourselves to take advantage of this trend. Towards this end, we have participated and intend to continue to participate in the development of industry standards in these and other emerging technology areas.  
+
+ 
+
+8 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+ 
+
+  •   Focus on a portfolio approach to the licensing of our IP platforms.    We seek to differentiate ourselves through the breadth of our IP offerings and our capability to integrate these offerings into a single solution built around our family of state-of-the-art DSP cores. We intend to continue to expand our technology portfolio in keys areas such as video, audio and GPS applications.  
+
+ 
+
+  •   Focus on convergence of technologies through an open architecture.    We seek to ensure that our platforms, as well as other third-party IP, can be rapidly integrated into a single integrated circuit through adherence to the specifications of our open, flexible and highly power-efficient architectures.  
+
+ 
+
+  •   Maximize our expertise.    We seek to maximize our expertise in DSP, analog, mixed-signal and radio frequency technology and to use that expertise to address critical customer demands. We intend to enhance our existing DSP cores and IP platforms with additional features and performance, while developing new offerings that will focus on other emerging applications across the range of end markets we serve.  
+
+ 
+
+  •   Target top-tier customers.    We seek to strengthen relationships and expand licensing and royalty arrangements with our existing customers and to extend our customer base with key industry companies in order to facilitate the development of our technology. We believe that we can achieve the best rate of return on our investment in technology by targeting our sales and marketing activities at high-volume semiconductor companies and leading electronic product manufacturers with a track record of successful end-user deployments. We have entered into license agreements with each of the world’s top ten semiconductor companies.  
+
+ 
+
+  •   Focus on large and growing markets.    We believe that our expertise in programmable DSP cores and platform-level IP favorably positions us to target growing segments within the consumer electronics market, such as wireless communications, mobile computing, automotive electronics, and consumer entertainment. We intend to strengthen our relationships and expand licensing and royalty arrangements with customers in those markets and to extend our customer base with key industry leaders within each of those segments. We believe that we can achieve the best results by targeting our sales activities at leaders within those markets.  
+
+ 
+
+  •   Establish, maintain and expand relationships with key technology providers.    We have established and seek to expand our close working relationships with:  
+
+ 
+
+  •   contract semiconductor companies, usually referred to as silicon foundries, in order to assure adequate supplies of chips for our customers who purchase our technology in chip form and in order to give OEMs a means of obtaining competitive manufacturing capabilities;  
+
+ 
+
+  •   third-party suppliers of block-level semiconductor intellectual property, in order to have access to their most current technologies; and  
+
+ 
+
+  •   developers of both application-level and system-level software so that we can continue to offer complete platform solutions.  
+
+ 
+
+In addition, we have and seek to expand relationships with companies that offer complementary technologies for designing system-on-a-chip applications based on our DSP core designs. We believe that these relationships will increase the markets for our products. 
+
+ 
+
+Products and Technology 
+
+ 
+
+SmartCores 
+
+ 
+
+A programmable DSP core is a special purpose, software-controlled processor that, through complex mathematical calculations, analyzes, manipulates and enhances digital voice, audio and video signals. The programmable DSP cores we design are used as the central processors in semiconductor chips made for specific applications. These chips are used in a wide variety of electronic devices, including digital cellular telephones, 
+
+ 
+
+9 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+modems, disk drive controllers, MP3 players, voice-over packet products and digital cameras, and are critical to the performance of the electronic products in which they are used. 
+
+ 
+
+Our SmartCores family of cores currently includes TeakLite, Teak, PalmDSPCore and the recently introduced CedarDSPCore. In addition, PineDSPCore and OakDSPCore still generate royalty revenues, although we no longer actively license them. By offering a range of performance, price and power consumption balances, our cores family addresses a wide range of applications, from low-end, high-volume applications, such as digital answering machines, disk drive controllers, low-speed modems and VoIP terminals, to high-performance applications such as 3G cellular communication devices, broadband modems, consumer multimedia and VoIP gateways. Our current offerings are: 
+
+ 
+
+ 
+
+  •   CedarDSPCore.    The CedarDSPCore is the sixth generation of our SmartCores family, designed to meet a broad range of performance and cost targets. The CedarDSPCore is a scalable and extendible architecture with various DSP core designs for different cost and performance metrics. It is targeted at a broad range of markets and applications requiring extensive processing power such as communications terminals—e.g., 2.5G and 3G smartphones, 802.11a/b/g terminals and access points and broadband modems; infrastructure—e.g., base-stations, media gateways and DSLAMS; and home entertainment—e.g., DVD recorders, personal video recorders and set-top boxes. A principal feature of CedarDSPCore is its extendibility: The architecture can be configured both for wired, high-performance environments and for low-power, portable environments such as 2G cellphones.  
+
+ 
+
+  •   TeakLite.    TeakLite is a “soft core” which significantly facilitates the incorporation of its design into a licensee’s chip and foundry specifications. TeakLite offers the same instruction set as OakDSPCore; it is superior to the OakDSPCore in terms of portability, operating speed and power consumption. TeakLite is primarily designed for 2G and 2.5G cellular telephones, modems, consumer multimedia (digital still cameras and audio appliances, including MP3 players), disk drive controllers and voice-over IP applications.  
+
+ 
+
+  •   Teak.    Like TeakLite, Teak is a “soft core” and is designed with a focus on power reduction features. Teak offers high performance, the ability to process multiple instructions in parallel and excellent code density, making it well suited for 2.5G and 3G cellular telephones, broadband modems and consumer multimedia applications.  
+
+ 
+
+  •   PalmDSPCore.    With faster processing capabilities and the ability to process multiple instructions in parallel, PalmDSPCore is a sub-family of three DSP soft cores designed to meet the high-performance, low-cost and low-power requirements of a range of applications. These include 2.5G cellular telephones, broadband modems, and voice-over packet network gateways, for which we offer a 16-bit core, and consumer audio and video applications, for which we offer 20-bit and 24-bit cores.  
+
+ 
+
+  •   OakDSPCore.    The OakDSPCore’s hardware units are operative through a set of soft cores known as an instruction set, which is a CPU-type instruction allowing the core to provide micro-control functionality. The small die size, low-power consumption and balance between cost and performance of our OakDSPCore make it well suited for second generation (2G) digital cellular telephones using GSM, TDMA and CDMA (code-division multiple access) standards, soft modems, voice-over packet network applications and Internet audio devices.  
+
+ 
+
+  •   PineDSPCore.    Introduced in 1991, the PineDSPCore was the first DSP core we developed. Due to its small die size and compact instruction code, it has been primarily used for low-end, high-volume applications, including digital answering machines, fax machines, low-speed modems and disk drive controllers. We currently generate revenues from the PineDSPCore, although we are no longer actively promoting it.  
+
+ 
+
+Our designs are independent of specific semiconductor manufacturing processes, and can therefore be used by a wide variety of customers. The DSP cores we design are appropriate for use in both current and emerging 
+
+ 
+
+10 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+applications requiring digital signal processing. We market our technology and designs as well as a wide array of software development tools and technical support services. We believe the following to be the key benefits of our DSP cores offerings: 
+
+ 
+
+  •   Low power consumption.    Our cores have been designed to satisfy low power consumption requirements—a key feature of products that rely on batteries, such as cell phones and portable audio products, or are sensitive to power dissipation, such as telecommunications equipment.  
+
+ 
+
+  •   Low cost.    Our technology is designed to address the cost requirements for high volume, highly competitive applications through reduced chip size (by carefully selecting the functions we offer and also by allowing multiple functions to be placed on one chip) and minimization of the size of required memory.  
+
+ 
+
+  •   Flexibility.    Our open, “soft-core” DSP architecture allows our licensees to differentiate their products, in particular through software. It allows the licensees to create diversified versions of their embedded intellectual property solutions, reuse the same chip design for multiple generations of products and select different physical library vendors or silicon suppliers. In addition, because of our “soft-core” architecture, our cores can be easily integrated across multiple semiconductor manufacturing processes with different geometry technologies.  
+
+ 
+
+  •   Improved time to market.    Our technology shortens the typical semiconductor design cycle and improves our customers’ time to market by shortening the process of porting the core design to physical hardware layout, and by providing an efficient environment for designing the software to be used in our core designs.  
+
+ 
+
+  •   Tightly coupled development tools and architecture.    We provide our licensees with both DSP cores and the related software development and hardware emulation tools to assist in product development, which speeds their development process.  
+
+ 
+
+Applications for our DSP Cores 
+
+ 
+
+Solutions using DSP cores technology are currently used in a wide variety of applications. We focus our efforts on the following selected high-volume, high-growth markets and applications: 
+
+ 
+
+Cellular telephone handsets.    The cellular handset market is currently the largest market for DSP cores technology. Cellular telephones use DSP cores for voice compression, by which the human voice is compressed after being digitized, and channel coding, by which DSP techniques are used to encode the information. Our DSP cores are currently used in all types of digital cellular telephones, and we believe they will continue to be used in the next generations of cellular telephones (2.5G and 3G). Many of these next-generation phones will incorporate video, audio and data features in addition to voice, extending the use of advanced DSP cores in their designs. Our OakDSPCore and TeakLite cores are widely used in current cellular telephones, and our Teak and Cedar offerings target the next generation of cellular telephones. 
+
+ 
+
+Optical and magnetic disk drives.    A disk drive controller is the chip that controls the mechanism that reads and writes data from a memory disk platter. The disk drive controller market is characterized by high volume and extreme price sensitivity. Programmable DSP cores are designed to meet the requirements of this market by providing flexibility in the adoption of advanced search algorithms within the controller, resulting in the capability to support higher density, lower cost disks. We believe that the compact code size, heat dissipation characteristics and flexibility of our PineDSPCore, OakDSPCore and TeakLite offerings are particularly well suited to this cost competitive market. 
+
+ 
+
+Digital Subscriber Line applications.    Digital subscriber line (DSL) technology significantly increases the bandwidth of copper telephone lines for data transmission. The use of DSL-related applications is driven by the increasing demand for high-speed connectivity to the Internet. A programmable DSP core is used primarily to 
+
+ 
+
+11 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+improve the quality of the signals received through the telephone line. By offering flexibility across multiple DSL standards, our programmable DSP solution is designed to allow a customer to re-use the same chip for different DSL markets. In addition, a programmable DSP solution allows for field upgrades of the technology as standards evolve or are enhanced. We believe our TeakLite, Teak and PalmDSPCore offerings are well suited to address the different cost and performance requirements of multiple DSL standards. 
+
+ 
+
+Voice-over packet network applications. Voice-over packet network technology enables the transmission of voice, along with video and data, over the same infrastructure in the form of small units of digital information (“packets”). This technology allows telecommunications operators to offer higher-value, unified services that combine fast data access, cheap voice rates and advanced voice and fax services to their customers. DSP technology is a key element in voice-over packet network applications. 
+
+ 
+
+We believe that our SmartCores family (in particular our TeakLite, Teak and PalmDSPCore) is an attractive solution for these applications because they provide a low-power, cost-effective, programmable platform for the local area network (LAN) and packet-based telephony markets. Our Teak and TeakLite cores are designed to provide a low power consumption, low-cost solution for small to middle size residential gateways and integrated accesses devices. Our PalmDSPCore is designed to provide higher performance and can be embedded in multi-channel, multi-service central office gateways, where channel density and heat dissipation are the most important factors. 
+
+ 
+
+Consumer audio applications.    Consumer electronics constitute a large market for DSP cores technology. Digital versatile disc (DVD) players and digital set-top boxes require DSP cores for their high fidelity audio features. In addition, recent improvements in the speed of Internet connections have provided the ability to easily download music from the Internet. This has created a significant market for DSP-based portable players (such as MP3 players) that decode high quality audio. Furthermore, we expect demand for digital audio to expand to the home audio market in the future. DSP cores technology is used to decode the compressed data being downloaded from the Internet or retrieved from the on–board memory or disk that stores the high-fidelity audio data. DSP cores technology may also be used in the future to enhance the security of digital stored media by preventing unauthorized copies or downloads of audio and visual data. Our technology can be used in low-power, price-sensitive semiconductor products targeted specifically at the portable audio market. In addition, our 24-bit PalmDSPCore can easily be used for current audio compression algorithms. 
+
+ 
+
+Digital still cameras.    Digital still cameras are a relatively new, yet fast-growing, market. Digital still cameras use a DSP chip to adjust the contrast and detail of the image captured by the lens and to compress the digital data for storage on the memory card. Our OakDSPCore, TeakLite and Teak offerings provide a low-power, cost-effective and programmable platform for this application. 
+
+ 
+
+System-on-a-chip subsystems 
+
+ 
+
+We offer XpertTeak, a highly integrated, low-power Teak core-based DSP sub-system for system-on-a-chip designs. This subsystem platform incorporates a large set of system interface peripheral components, together with a full set of software and hardware development tools. Xpert has a seamless interface to any CPU, which significantly lowers the complexity, cost of development, and time-to-market for SoC designs. In addition to the Teak core, it incorporates advanced peripherals and a system interface set, such as direct memory accesses (DMA) controllers, timers, power consumption management units, serial ports and CPU interfaces. Delivered as a pre-integrated and verified solution, it enables OEMs (Original Equipment Manufacturers) and ODMs (Original Design Manufacturers) to significantly reduce development time, risk and cost of GSM/GPRS base-band chips for efficient development of handsets. 
+
+ 
+
+Application-Specific Platforms 
+
+ 
+
+The continuing evolution of the consumer electronics market has created significant demand for semiconductor intellectual property providers that can add greater value by delivering the complete system 
+
+ 
+
+12 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+solutions that combine mixed-signal and DSP cores technology, as well as related software—which we refer to as platform-level IP. This approach permits our customers to introduce feature-rich products while simultaneously minimizing their development cost, risk, complexity and time to market. We also offer our technology in discrete building blocks for specific functions that our customers use to develop complete systems and products. 
+
+ 
+
+Our platforms are licensed and deployed by some of the world’s largest semiconductor companies and OEMs in wireless communications devices, multimedia appliances, GPS devices, portable electronic products and other consumer electronic devices. Our current platforms include: 
+
+ 
+
+  •   BlueStream.    BlueStream is highly functional platform supporting Bluetooth communications—an emerging standard for wireless communications among electronic devices over short distances. This platform includes a digital baseband, offered both in baseband IP and as a full system-on-a-chip; and a complete software stack designed for baseband and host interface.  
+
+ 
+
+  •   MediaStream.    MediaStream is an advanced Internet audio technology enabling a range of mobile multimedia applications, including mobile phones, MP3 players, game consoles and high-fidelity in-car entertainment systems.  
+
+ 
+
+  •   NavStream.    NavStream is a complete GPS platform delivering precise location information (less than five meters within five seconds) to any device, including mobile phones, personal digital assistants (PDAs), and GPS-enabled vehicles, anywhere in the world. One of the key differentiators of the NavStream platform is its ability to track GPS signals and determine a user’s location indoors. NavStream is one of the few technologies that comply with the U.S. Federal Communications Commission’s e-911 Location Accuracy Directive, which requires that all mobile telephones enable the location of the caller to be determined to within 150 meters.  
+
+ 
+
+  •   InfoStream.    InfoStream is a mobile computing platform for the next generation of wireless devices, including 3G “smart” cellular phones, PDAs, Internet appliances and home entertainment/multimedia devices. The platform was developed in conjunction with Psion and delivers high performance, low power consumption and high levels of on-chip integration.  
+
+ 
+
+  •   VoPStream.    VoPStream is a complete VoP (Voice-over-Packet) platform targeted at residential/ enterprise markets. A complete hardware and software solution, VoPStream is based on ParthusCeva’s programmable TeakLite DSP core with all required hardware peripherals capable of handling multiple simultaneous packet-voice channels on a single chip. Software includes speech compression and decompression, echo cancellation and associated telephony signaling functions.  
+
+ 
+
+  •   ChannelStream.    ChannelStream is a complete IP solution targeting high-speed wireline applications such as Ethernet, Fiber Channel and Xaui. The platform blocks support single, dual and quad-channel configurations in applications where 1.0 to 3.2 Gbps data rates per channel are supported and where low power-per-channel is essential.  
+
+ 
+
+Each of the IP platforms described above has been developed for a specific end-market. They all adhere, however, to the specifications of our open, flexible and highly power-efficient architecture, which allows the rapid integration of our platforms and various third-party intellectual property into a single integrated circuit. Our solutions are based on a substantial portfolio of intellectual property, including building blocks for analog integrated circuits, digital integrated circuits, systems software and other functions. 
+
+ 
+
+In addition, in February 2003 we entered into an agreement with Intersil Corporation pursuant to which we will provide our wireless IP expertise as well as sales, marketing and customer support in licensing Intersil’s 802.11 PRISM platform (consisting of a baseband processor and medium access controller). PRISM solutions are the leading deployed 802.11 WLAN technology. In addition, Intersil will supply radio front-end products and reference designs—delivering a complete WLAN product solution to licensees. This technology is designed to enable new, wireless-capable products that will serve growing consumer demand for wireless connectivity wherever they live, work or play. 
+
+ 
+
+13 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+ 
+
+    Development and Integration 
+
+ 
+
+We have significant expertise in the design and development of high-performance digital, analog, mixed-signal and software technology for our customers. Our development services include complete development activities, such as development of specific systems or technology on a contract basis. Our policy is to retain ownership of, or rights to use, the intellectual property we develop under contract. Our integration services include consulting services to supplement or facilitate the integration of our licensed intellectual property and that of third parties into a customer’s product. In performing either development or integration services, we focus on designing comprehensive systems tailored to specific requirements, making the key design decisions and tradeoffs required to create the most competitive system for the customer while shortening their time-to-market. 
+
+ 
+
+We support products through manufacturing and volume production to meet customer requirements. Our computer aided design (CAD) team develops in-house design flows. The team provides each design group working on a development project a template identifying which CAD tools to use to meet its specific design goals. The team also writes software to assure that the identified tools can be used on an integrated and seamless basis. In addition, a team of layout engineers with experience in digital, analog, radio frequency and system-on-a-chip layout processes determines the physical layout requirements for each project. We also have an in-house capacity to test the performance of our intellectual property as embodied in silicon against a variety of parameters. This capability enables us to perform complete system-level product development combining our integrated circuit and software intellectual property. 
+
+ 
+
+Customers 
+
+ 
+
+We have licensed our DSP core designs and IP platforms to leading semiconductor companies throughout the world. These companies incorporate our cores and platforms into application-specific chips or custom-designed chips that they manufacture, market and sell to OEMs of a variety of electronic products. We also license our core designs and platforms to OEMs directly. To date, we have entered into more than 140 license agreements with more than 100 licensees, including Atmel, Cirrus Logic, Fujitsu, Hitachi, Infineon Technologies, Kawasaki, LSI Logic, Maxim, Mitsubishi, Motorola, National Semiconductor, NEC, nVidia, Oki, Philips Semiconductors, Prairiecom, Samsung, Seiko-Epson, Sharp Microelectronics, Sony, STMicroelectronics and Texas Instruments. More than 100 of our current license agreements have royalty components, of which approximately 10 have produced royalty revenues to date. Two customers accounted for 12.6% and 10.6% of our total revenues in 2002, respectively. The identity of our greater-than-10% customers varies from period to period, depending on when license agreements are signed, and we do not believe that we are materially dependent on any one or any small number of licensees. 
+
+ 
+
+Sales, Marketing and Technical Support 
+
+ 
+
+We license DSP cores and complete platform solutions to perform specific application functions. These solutions typically incorporate both intellectual property to be embodied on a silicon chip and intellectual property in the form of software. On occasion, we enter into portfolio licensing agreements whereby a customer licenses multiple platforms. By entering into a portfolio license, our customers have access to multiple technology platforms in our portfolio, enabling them to obtain from one supplier all of the IP required to build next-generation electronic devices. We believe that portfolio license arrangements will generally be larger than other license agreements and will allow us to develop close, strategic long-term relationships with our portfolio license customers. Although the precise terms of each of our contracts vary from licensee to licensee, they generally require payment of an initial license fee and ongoing per-unit royalties. Under the terms of these license agreements, we may also provide integration services to help accelerate the customer’s product development cycle. In addition, we enter into collaborative agreements for the sale or distribution of our products where the third party can provide additional access to special expertise or potential customers. 
+
+ 
+
+Maintaining close relationships with our customers is a core part of our strategy. We typically launch each new DSP core, platform or platform upgrade with a signed license agreement with a blue-chip customer, which 
+
+ 
+
+14 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+helps ensure that we are clearly focused on viable applications that meet broad industry needs. Strengthening these relationships is a significant part of our strategy. It allows us to create a roadmap for the future development of existing cores and platforms, and it helps us to anticipate the next potential applications for the market. We seek to use these relationships to deliver new products in a faster time to market through our research and development base. 
+
+ 
+
+    Sales Force 
+
+ 
+
+The leaders within our targeted markets include a small number of very large organizations. We therefore believe it is essential to maintain a comprehensive and capable direct sales and marketing organization focused on these market leaders. Towards this end, we have located our headquarters in San Jose, California and have established a direct sales force. Each of our sales offices is closely aligned with key customer accounts and supported by a focused central marketing team. 
+
+ 
+
+Our sales and marketing force numbers approximately 25 people. We have a total of ten sales offices, located in San Jose, California; Nashua, New Hampshire; Austin, Texas; Dublin, Ireland; Herzeliya, Israel; Hong Kong, China; Tokyo, Japan; Seoul, Korea; Northampton, England and Sophia Antipolis, France. We also have an independent sales representative covering Taiwan and China. In addition, we systematically conduct sales prospecting from our principal offices, and the sales leads are distributed to our regional offices and representatives. 
+
+ 
+
+    Marketing 
+
+ 
+
+We use a variety of marketing initiatives to stimulate demand and brand awareness in our target markets. These marketing efforts include presenting at key industry trade shows and conferences, distributing global press releases, organizing customer seminars, posting information on our website, issuing periodic newsletters and producing marketing materials. In addition, we have established co-marketing programs with our alliance partners and customers. 
+
+ 
+
+Our marketing and business development department participates in refining our intellectual property offerings to address specific new market needs and to use our brand name and close relationships to reach and create demand within system OEMs and semiconductor companies. 
+
+ 
+
+Our marketing department is responsible for defining the road map for our next-generation DSP cores and IP platforms and their key features. In defining the road map, the marketing department coordinates with our sales and research and development departments to take into consideration future trends in semiconductor technology, including DSP cores architectures and digital signal processing algorithms and competitive positioning of our products. Our marketing department also runs competitive analyses to help us maintain our competitive position. 
+
+ 
+
+Technical Support 
+
+ 
+
+We offer technical support services through our offices in Israel, the United Kingdom and the United States, as well as through the Japanese subsidiary of DSP Group, which provides us with dedicated employees to provide various technical support services to our customers. Each of our independent sales representatives in Southeast Asia also maintains engineers who provide technical support services for our products. Our technical support services include: 
+
+ 
+
+  •   assistance with implementation, responding to customer specific inquiries, training and, when and if they become available, distributing updates and upgrades of our products;  
+
+ 
+
+  •   application support, consisting of providing general hardware and software design examples, ready-to-use software modules and guidelines to our licensees to assist them in using our technology; and  
+
+ 
+
+15 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+ 
+
+  •   design services, consisting of creating customer specific implementations of our DSP cores and platform-level IP.  
+
+ 
+
+We believe that our technical support services are key factors in our licensees’ ability to embed our cores and platforms in their designs and products. Our technology is highly complex, combining a sophisticated DSP cores architecture, integrated circuit designs and development tools. Effective customer support is critical in helping our customers implement our solutions and helps to shorten the time to market for their applications. Our support organization is made up of experienced engineers and professional support personnel. We conduct detailed technical training for our licensees and their customers and visit our licensees on a regular basis to closely track the implementation of our technology. 
+
+ 
+
+Research and Development 
+
+ 
+
+Our future competitive position will largely depend on our ability to develop new generations of DSP cores and IP platforms in a timely manner to meet the evolving and rapidly changing requirements of our target markets. Towards this end, we intend to maintain significant research and development teams dedicated to developing new technological solutions and new versions of our existing technology. 
+
+ 
+
+Research and Development Staff and Expenses 
+
+ 
+
+Our research and development team consists of approximately 180 employees working in six development centers located in Ireland, Israel and the United Kingdom. This team consists of engineers who possess significant experience in developing advanced programmable DSP cores and application platforms. We believe that our strengths are in our expertise in: 
+
+ 
+
+  •   digital signal processing algorithms coupled with our deep understanding of processor architectures;  
+
+ 
+
+  •   systems architecture, including modeling and partitioning;  
+
+ 
+
+  •   analog and mixed-signal technology;  
+
+ 
+
+  •   IP integration for system-on-a-chip development;  
+
+ 
+
+  •   software development; and  
+
+ 
+
+  •   systems integration.  
+
+ 
+
+Our research and development expenses, net of related non-refundable research grants, were $8.4 million in 2002, $5.1 million in 2001, and $4.8 million in 2000. Giving effect to the combination with Parthus for the entire year, our pro forma combined research and development expenses for 2002 would have been approximately $27.6 million. 
+
+ 
+
+Research and Development Focus 
+
+ 
+
+Our research and development resources are focused in the areas of DSP and application signal processing, mixed signal and wireline communications IP and wireless communications. We seek to deliver further innovative solutions that offer clear benefits to our customers in the areas of: 
+
+ 
+
+  •   faster and higher performance, which is essential for the take-up of new services or content;  
+
+ 
+
+  •   lower power requirements, which is critical for battery life;  
+
+ 
+
+  •   smaller and lighter chip components, for better overall product design;  
+
+ 
+
+  •   easier manufacturing of extremely complex technology; and  
+
+ 
+
+  •   higher value at lower cost.  
+
+ 
+
+16 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+ 
+
+In particular, we concentrate our efforts on product improvement, next-generation product evolution and future product revolution: 
+
+ 
+
+  •   Product improvement is the process of making incremental modifications to our designs to enhance performance and ease of implementation. In addition, we continuously enhance our development tools by adding features to improve the productivity of the software development process.  
+
+ 
+
+  •   Next-generation product evolution is the process of developing new products, based on the same design concepts as the current generation, with substantially better performance and significant new features.  
+
+ 
+
+  •   Future product revolution is the process of developing new products that represent a significant departure from previous-generation design concepts and which incorporate evolving trends in processor architecture.  
+
+ 
+
+Our research and development projects are initiated based on new technology trends, emerging applications and inputs from customers and our sales and marketing personnel. We have a budgeting process in which we assess each project, establish financial goals and targets and assign resources. We monitor our projects through a variety of processes. We have frequent staff meetings to update our staff on progress and share information. We also conduct regular project reviews with the participation of management, sales, marketing and customer support. In these meetings, we review a number of aspects of the project including human, financial and technical resources used and required in the future, achievement of milestones and problems encountered. In addition, we re-evaluate the project in light of the initial definition and current market conditions. 
+
+ 
+
+We are involved in research programs with a number of university and independent research groups worldwide. These include both student sponsorships at undergraduate, masters and doctorate levels, and joint research programs. In addition, a small number of our staff work one day per week at affiliated academic institutions, providing a strong link to the faculty and student bodies. We also encourage our research and development personnel to maintain active roles in the various international organizations that develop and maintain standards in the electronics and related industries. This involvement allows us to influence the development of new standards; keeps us informed as to important new developments regarding standards; and allows us to demonstrate our expertise to existing and potential customers who also participate in these standards-setting bodies. 
+
+ 
+
+Proprietary Rights 
+
+ 
+
+Our success and ability to compete are dependent on our ability to develop and maintain the proprietary aspects of our intellectual property and to operate without infringing the proprietary rights of others. We rely on a combination of patent, trademark, trade secret and copyright laws and contractual restrictions to protect the proprietary aspects of our technology. These legal protections afford only limited protection of our technology. We also seek to limit disclosure of our intellectual property and trade secrets by requiring employees and consultants with access to our proprietary information to execute confidentiality agreements with us and by restricting access to our source code and other intellectual property. Due to rapid technological change, we believe that factors such as the technological and creative skills of our personnel, new product developments and enhancements to existing products are more important than specific legal protections of our technology in establishing and maintaining a technology leadership position. 
+
+ 
+
+We have an active program to protect our proprietary technology through the filing of patents. We hold five U.S. patents related to our DSP cores technology, with expiration dates between 2013 and 2019, and have 15 patent applications related to this technology pending in the United States, 9 pending in Israel, seven pending in Japan, seven pending in Europe and four pending in South Korea. We hold 21 U.S. patents related to our application platforms technology, with expiration dates between 2011 and 2020, and 10 non-U.S. patents on 
+
+ 
+
+17 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+various aspects of this technology. We also have 34 patent applications pending in the United States relating to our application platforms technology and an additional 11 pending in Ireland, the United Kingdom and other jurisdictions. 
+
+ 
+
+We actively pursue foreign patent protection in other countries where we feel it is prudent to do so. Our policy is to apply for patents or for other appropriate statutory protection when we develop valuable new or improved technology. The status of patents involves complex legal and factual questions, and the breadth of claims allowed is uncertain. Accordingly, we cannot assure you that any patent application filed by us will result in a patent being issued, or that our issued patents, and any patents that may be issued in the future, will afford adequate protection against competitors with similar technology; nor can we provide assurance that patents issued to us will not be infringed or that others will not design around our technology. In addition, the laws of certain countries in which our products are or may be developed, manufactured or sold may not protect our products and intellectual property rights to the same extent as the laws of the United States. We can provide no assurance that our pending patent applications or any future applications will be approved or will not be challenged by third parties, that any issued patents will effectively protect our technology, or that patents held by third parties will not have an adverse effect on our ability to do business. 
+
+ 
+
+The semiconductor industry is characterized by frequent litigation regarding patent and other intellectual property rights. Questions of infringement in the semiconductor field involve highly technical and subjective analyses. Litigation may in the future be necessary to enforce our patents and other intellectual property rights, to protect our trade secrets, to determine the validity and scope of the proprietary rights of others, or to defend against claims of infringement or invalidity. We cannot assure you that we would be able to prevail in any such litigation, or be able to devote the financial resources required to bring such litigation to a successful conclusion. 
+
+ 
+
+In any potential dispute involving our patents or other intellectual property, our licensees could also become the targets of litigation. We are generally bound to indemnify licensees under the terms of our license agreements. Although our indemnification obligations are generally subject to a maximum amount, these obligations could nevertheless result in substantial expenses. In addition to the time and expense required for us to indemnify our licensees, a licensee’s development, marketing and sale of products embodying our solutions could be severely disrupted or shut down as a result of litigation. 
+
+ 
+
+We also rely on trademark, copyright and trade secret laws to protect our intellectual property. PalmDSPcore, PineDSPcore, OakDSPcore, OCEM, TeakDSPcore, Pine, Teak and Teaklite are United States registered trademarks of ParthusCeva or its affiliates. Parthus, the Parthus logo and BlueStream are European Community trademarks of ParthusCeva or its affiliates. The registration of the following trademarks is pending in the United States: ParthusCeva, the ParthusCeva logo, SmartCores, Assyst, CedarDSPcore, Parthus, the Parthus logo, MediaStream, BlueStream, PLLXpert and NavStream. Application for the following trademarks is pending in other jurisdictions: ParthusCeva, the ParthusCeva logo, SmartCores, CedarDSPcore, Parthus, the Parthus logo, MediaStream, InfoStream, BlueStream, PLLXpert and NavStream. The following trademarks are in use: PalmASSYST, PINE ASSYST SIMULATOR, XpertDSP, XpertPalm, OpenKey, DSCKey, VoPKey, EDP, SmartCores Enabled, CamStream, VoPStream, PDKit, ODKit, TLDKit, TDKit and ChannelStream. 
+
+ 
+
+Competition 
+
+ 
+
+We believe that we are positioned to offer one of the most comprehensive offerings of DSP cores and application-specific platforms. Nevertheless, the markets we serve are highly competitive and are characterized by rapid technological change, especially with respect to wireless, telecommunications and multimedia applications. These trends lead to frequent product introductions, short product life-cycles and increased product capabilities, typically representing significant performance, power consumption and cost improvements in each new generation of products. 
+
+ 
+
+18 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+ 
+
+DSP Cores 
+
+ 
+
+We compete with other suppliers of licensed programmable DSP cores and with suppliers of other DSP solutions. We believe that the principal competitive elements of a programmable DSP-based system are processor performance, overall system cost, power consumption, flexibility, reliability, software availability, ease of implementation, customer support and name recognition. 
+
+ 
+
+The market is dominated by large, fully integrated semiconductor companies that have significant brand recognition, a large installed base and a large network of support and field application engineers. We face direct and indirect competition from: 
+
+ 
+
+  •   intellectual property vendors that offer programmable DSP cores;  
+
+ 
+
+  •   intellectual property vendors of general purpose processors with DSP extensions;  
+
+ 
+
+  •   internal design groups of large chip companies that develop proprietary DSP solutions for their own application-specific chips; and  
+
+ 
+
+  •   semiconductor companies that offer off-the-shelf programmable DSP chips.  
+
+ 
+
+We face direct competition mainly from various private intellectual property companies such as 3DSP and StarCore, a venture formed by Infineon Technologies, Agere and Motorola. In addition, some large chip manufacturing companies such as LSI Logic make their proprietary DSP technology available for license to create a second source for their technology. 
+
+ 
+
+In recent years, we have also faced competition from companies that offer microcontroller/microprocessor intellectual property. These companies’ products are used for control and system functions in various applications, including personal digital assistants and video games. Embedded systems typically incorporate both microprocessors responsible for system management and a programmable DSP that is responsible for communication and video/audio/voice compression. Recently, companies such as ARC, ARM Holdings, MIPS, and Tensilica have added a DSP extension to their products in addition to the microcontroller functions, which may successfully compete with our designs in applications that involve low to moderate DSP performance requirements. 
+
+ 
+
+With respect to certain large potential customers, we also compete with their internal engineering teams supplying programmable DSP cores, who may design products for use by other divisions internally, rather than licensing our products. These companies, which include Fujitsu, NEC and Philips, both license our designs for some applications and use their own proprietary cores for other applications. In the future, such companies may choose to license their proprietary DSP cores to third parties and, as a result, become direct competitors. 
+
+ 
+
+We also compete indirectly with several general purpose programmable DSP semiconductor companies, such as Agere Systems, Analog Devices, Motorola and Texas Instruments. These companies have proprietary chip technologies that can be accessed only as part of their semiconductor products, while our technology is licensed to multiple vendors. OEMs may prefer to buy general purpose chips from large, established semiconductor companies rather than license our products. In addition, the general purpose semiconductor companies are major competitors of semiconductor companies that license our technologies. It is also possible that in the future these DSP semiconductor companies may choose to license their proprietary DSP cores to third parties and compete directly with us. 
+
+ 
+
+Our SmartCores architecture is an independent DSP technology licensed to other companies, which we make available together with a full package of design tools, technical support and tightly coupled application IP. We believe that designs using our SmartCores architecture offer high performance along with small memory size and low-power consumption. In addition, our experience in designing and licensing programmable DSP cores can help semiconductor companies and system OEMs to create a competitive system-on-a-chip solution that takes advantage of our licensees’ proprietary intellectual property as well as ours. 
+
+ 
+
+19 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+ 
+
+Application-specific Platforms 
+
+ 
+
+Because of our complete platform approach and our strong resources in key areas such as mixed-signal technology, we believe that we are extremely competitive in delivering complete solutions that meet the requirements of our customers. In addition, we believe that the difficulty of attracting an adequate number of qualified technical staff, particularly in the areas of analog and mixed signal technology, coupled with the difficulty of combining know-how across the range of technologies required to provide a complete solution in this market area, present substantial barriers to entry for new entrants into this area. Other important competitive factors include price, product quality, design cycle time, reliability, performance, customer support, name recognition and reputation and financial strength. 
+
+ 
+
+Given our reliance on relationships with a number of leading companies in the semiconductor and electronics industry, our competitive position is dependent on the competitive positions of those companies. In addition, the companies with whom we have relationships do not license our intellectual property exclusively, and several of them also design, develop, manufacture and market products based on their own intellectual property or on other third-party intellectual property. They therefore often compete with each other and with us in various applications. 
+
+ 
+
+We compete with a variety of companies, ranging from smaller, niche semiconductor design companies to large semiconductor manufacturers and OEMs, many of whom are our customers. We believe that our principal competition comes from the in-house research and development teams of such manufacturers, many of whom have significantly greater financial and/or technical resources than we do. In addition, we must in such cases overcome any organizational bias against out-sourced solutions before we can compete successfully. 
+
+ 
+
+Aside from the in-house research and development groups of such manufacturers, we do not compete with any individual company across the range of our market offerings. Within particular market segments, however, we do face competition to a greater or lesser extent from other industry participants. For example, in the following specific areas we compete with the companies indicated: 
+
+ 
+
+  •   in the Bluetooth and 802.11 technology arenas—with NewLogic and TTPcom; and  
+
+ 
+
+  •   in the GPS market—with SiRF, Snaptrack and Trimble.  
+
+We cannot be certain that we will have the financial resources, technical expertise, and marketing or support capabilities to compete successfully in the future. 
+
+ 
+
+Employees 
+
+ 
+
+The table below presents the number of employees of ParthusCeva as of December 31, 2002, by function and geographic location. 
+
+ 
+
+     Number
+
+--------------------------------------------------------------------------------
+ 
+Total employees
+    243
+ 
+ 
+Function
+      
+Research and development
+    179
+ 
+Sales and marketing
+    25
+ 
+Technical support
+    7
+ 
+Administration
+    32
+ 
+ 
+Location
+      
+Ireland
+    127
+ 
+Israel
+    59
+ 
+United States
+    9
+ 
+United Kingdom
+    40
+ 
+Elsewhere
+    8
+ 
+
+ 
+
+20 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+ 
+
+Our employees are not represented by any collective bargaining agreements, and we have never experienced a work stoppage. We believe our employee relations are good. 
+
+ 
+
+A number of our employees are located in Israel. Certain provisions of Israeli law and of the collective bargaining agreements between the Histadrut (General Federation of Labor in Israel) and the Coordination Bureau of Economic Organizations (the Israeli federation of employers’ organizations) apply to our Israeli employees. 

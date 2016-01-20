@@ -1,0 +1,183 @@
+ITEM 1. BUSINESS 
+
+
+    We design, develop, manufacture and market a broad range of high-performance semiconductor products. Applications for our products include: data networking and telecommunications equipment, such as routers, hubs, switches, cellular base stations and other devices; storage area networks (SANs); other networked peripherals and servers; and personal computers. 
+
+    We market our products on a worldwide basis primarily to OEMs (original equipment manufacturers) through a variety of channels, including a direct sales force, distributors, contract electronic manufacturers (CEMs), and independent sales representatives. 
+
+    We attempt to differentiate our products from competitors' offerings through advanced architectures and features designed to enhance the performance of our customers' systems, accelerate their product development cycles, and reduce their system costs. We fabricate substantially all of our semiconductor wafers using advanced CMOS (complementary metal oxide silicon) process technology in our own fabrication facilities. We assemble or package the majority of our products in manufacturing facilities that we own in Malaysia and the Philippines, where we also conduct product test operations. 
+
+    In the first quarter of fiscal 2002, we acquired Newave Semiconductor Corp. ("Newave"), a privately held designer and marketer of integrated circuits for the telecommunications markets. In fiscal 2000, we acquired Quality Semiconductor, Inc. ("QSI"). QSI had been engaged in the design, development and marketing of high-performance logic, timing, and networking semiconductor products. 
+
+    IDT was incorporated in California in 1980 and reincorporated in Delaware in 1987. The terms "the Company," "IDT," "our," "us" and "we" refer to Integrated Device Technology, Inc. and its consolidated subsidiaries. 
+
+PRODUCTS AND MARKETS 
+
+    We provide a broad portfolio of communications-oriented integrated circuits focused on delivering increased bandwidth for the converging global network. Our core competency is in the development and 
+
+2
+
+
+--------------------------------------------------------------------------------
+
+integration of processor, logic and advanced memory technologies into IC (integrated circuit) solutions that enhance network performance, maximize bandwidth, enable quality of service (QoS) or "network intelligence", and speed time to market. We offer approximately 1,100 devices in over 12,000 product configurations. 
+
+    We believe that network architectures which originated in data communications are, and will continue to be, the underlying technology of the converging network of data, voice and other information media. We plan to apply our expertise to both data-oriented applications and multi-service classes of equipment to address customer needs in the following market areas: 
+
+•
+Enterprise/carrier infrastructure (routers, switches, private/public multi-service access switches) 
+
+
+•
+Wireless infrastructure (GSM and GPRS base stations, and third generation or "3G" base stations) 
+
+
+•
+Access networks (VoIP gateways that enable voice transmission over the internet; DSLAMs that facilitate broadband data transmission over traditional voice networks; customer premises equipment (CPE); and integrated access devices, or IADs) 
+
+
+•
+Storage area networks (SANs) 
+    We operated in two business segments during the fiscal year ended April 1, 2001: 
+
+•
+Communications and High-Performance Logic 
+
+
+•
+SRAMs and Other 
+    The Communications and High-Performance Logic segment includes multi-port and FIFO products (semiconductors which integrate logic and memory technology), communications ASSPs (applications-specific standard products) and high-performance logic and clock-management products. The SRAMs (static random access memories) and Other segment is comprised mainly of high-speed SRAMs. 
+
+    During fiscal 2001, the Communications and High-Performance Logic and SRAMs and Other segments accounted for approximately 69% and 31%, respectively, of total IDT revenues of $991.8 million. 
+
+Communications and High-Performance Logic Segment 
+
+    This segment includes Communications Products, Communications ASSP's, and Logic and Clock Management Products. 
+
+    Communications Products.  Our communications products in this segment are either proprietary or have limited alternative sources of supply. These include FIFOs and multi-ports that offer high-performance features for enterprise networks, wireless infrastructure applications, and access networks. 
+
+    FIFOs:  FIFOs are used as rate buffers to transfer large amounts of data at high speeds between separate devices or pieces of equipment operating at different speeds within a system, when the order of the data to be transferred needs to be controlled. New families of FIFOs also perform data organizing functions such as adapting the width and speed of incoming data to system requirements. 
+
+    We develop products and technologies to help designers solve inter-chip communications problems such as rate matching, data buffering, bus matching and data prioritizing. We provide an extensive product portfolio with more than 250 synchronous, asynchronous and bi-directional FIFO offerings. Our families of 9-bit, 18-bit, 36-bit and 72-bit FIFOs are used in many networking and telecommunications system designs. We believe that our FIFOs provide the highest density (9-megabit), highest performance (225 MHz) and broadest feature sets currently commercially available. 
+
+    Multi-ports:  Multi-port products are used to speed data transfers and act as the link between multiple microprocessors and the same memory bank, or between microprocessors and peripherals. 
+
+3
+
+
+--------------------------------------------------------------------------------
+
+Multiports are currently used primarily in SAN equipment such as RAID (Redundant Array of Independent Disks) controllers, and wireless communications and networking products, including switches and wireless base stations. 
+
+    Our portfolio consists of more than 100 types of asynchronous and synchronous dual-ports, FourPorts and bank-switchable dual-ports, including the highest-density (4-megabit), highest-performance (166 MHz) and widest word-width (36 bits) dual-ports currently in production. 
+
+    Communications ASSPs:  Communications ASSPs include telecom products, ATM (asynchronous transfer mode) switches and SARs, high-speed PHYs, communications processors, and IP co-processors. 
+
+    Telecom Products:  We offer a line of telecom products that includes time slot interchange (TSI) switches, transport (T1/E1) and voice-processing products. These products enable and accelerate the convergence of voice and data networks. Our telecom products are targeted at a variety of communications applications including voice-over-IP gateways, multi-service access switches, digital loop carrier (DLC) systems, central office switches and integrated access devices (IADs). 
+
+    ATM Switches and SARs:  Our SwitchStar™ switching chip set enables low-cost, high-performance cell-based switching. This two-chip set includes a switch controller and switch fabric memory, and along with a wide array of support devices, forms the core for a range of emerging access switch applications. We also develop segmentation and reassembly (SAR) controllers. 
+
+    PHYs:  We offer physical layer interface (PHY) devices for both ATM and Ethernet applications, focused on access network solutions at the 25-51 Mbps performance level. 
+
+    Communications Processors:  We offer a range of standalone and integrated communications processors and development tools. Going forward, our research and development efforts focus on integrated communications processors, which combine MIPS-based processor cores with a range of communications interface functions. We target these integrated processors at the highest-growth communications market segments, such as DSLAMs, residential gateways, small office/home office (SOHO) routers and Ethernet switches. 
+
+    IP Co-Processors:  We entered the IP co-processor market in fiscal 2001 with a custom IP (internet protocol) co-processor that Cisco Systems, Inc. ("Cisco") uses in its Catalyst family of multi-layer switches, including the Catalyst 6000 platform. Capitalizing on our expertise in integrating high-performance logic and memory, we introduced what was then the industry's fastest product combining CAM (content addressable memory) technology with a specialized, high-speed control interface. In May 2001, we announced our first standard product, designed to enable deep packet classification and packet forwarding in high-speed switches, routers and remote access concentrators (RACs). 
+
+    Logic and Clock Management Products.  Our product offerings fall into three groupings: high-performance interface logic, bus switch products, and clock management or timing products. We offer a broad range of high-performance, 3.3-volt CMOS logic interface products. Logic circuits control data communication between various elements of electronic systems, such as a microprocessor and a memory circuit. We offer logic circuits that support bus and backplane interfaces, memory interfaces and other applications where high speed and low power are critical. Our FCT, LVC, and ALVC families of logic components help solve inter-board communication problems in high-performance communications and computing equipment. 
+
+    We provide a range of high-performance bus switch products for solving circuit, bus and printed-circuit-board (PCB) interconnect problems for high-speed system designs. Our QuickSwitch™ products come in a variety of configurations to meet customer needs for low cost and high performance. 
+
+4
+
+
+--------------------------------------------------------------------------------
+
+    Finally, we supply high-performance clock management products with approximately 50 devices in more than 320 speed and skew options to support a broad range of control functions within communications systems. Our portfolio includes low-output skew drivers and buffers, PLL-based devices, and programmable skew devices. 
+
+SRAMs and Other Segment 
+
+    SRAMs are memory circuits used for storage and retrieval of data during the operation of a communications or computing system. Unlike DRAMs (dynamic random access memories), SRAMs do not require electrical refresh of the memory contents to ensure data integrity, allowing them to operate at high speeds. SRAMs include substantially more circuitry than DRAMs, resulting in higher production costs for a given amount of memory, and generally command higher selling prices than the equivalent density traditional DRAM products. The market for SRAMs includes segments with differing demands for speed, power, density, organization and packaging. 
+
+    To provide SRAM products that meet the varying needs of our customers, we offer both synchronous and asynchronous 16K, 64K, 256K, 1-Mbit, 4-Mbit and 9-Mbit SRAMs in a number of speed, organization, power and packaging configurations. Our family of ZBT® (Zero Bus Turnaround™) SRAMs eliminate wait states between read and write cycles and are targeted at meeting the specific needs of our communications customers. A limited number of higher density SRAM products and products with additional features believed to be important to our data networking customers are in the development stage. 
+
+Customers 
+
+    We market and sell our products on a worldwide basis primarily to OEMs in our two business segments. Products in the Communications and High-Performance Logic segment are sold primarily to communications customers. Although products in the SRAMs and Other segment are general purpose in nature, we also supply the majority of our products in this segment to our communications customers. Customers often purchase products from more than one of our product families. No one OEM direct customer accounted for 10% or more of our revenues in fiscal 2001, 2000 or 1999. When considering sales through all sales channels, one end customer, Cisco, accounts, in aggregate, for more than 10% of our revenues. Because of limitations in the amount of end customer data made available to us by our CEM customers, we are not able to precisely determine the aggregate percentage of our sales which are attributable to Cisco. However, based upon the best available information, we estimate that end-customer sales to Cisco represented between 16-18% of our fiscal 2001 revenues. 
+
+Sales Channels 
+
+    We use a variety of sales channels, including a direct sales force, distributors, CEMs, and independent sales representatives. A significant percentage of our sales, including sales to Cisco and other large OEM customers, are through CEMs and distributors. One distributor, Avnet, Inc., represented 14%, 19% and 22% of net revenues for fiscal 2001, 2000 and 1999, respectively. One CEM, Solectron Corporation, represented 11% of our revenues in fiscal 2001. 
+
+    Our worldwide direct sales organization consisted of approximately 235 personnel at April 1, 2001, in 18 domestic and 14 international sales offices. These personnel are primarily responsible for marketing and sales in their respective locations. We also utilize three national distributors, Avnet, Inc., Arrow Electronics, Inc. and Insight Electronics, Inc., and several regional distributors in the United States. A significant portion of our export sales are made through international distributors in Europe, Asia Pacific and Japan. 
+
+    During fiscal 2001, 2000 and 1999, sales outside of North America accounted for approximately 42%, 38% and 37%, respectively, of our total revenues. 
+
+5
+
+
+--------------------------------------------------------------------------------
+
+Manufacturing 
+
+    We believe that our internal wafer fabrication capability facilitates the implementation of advanced process technologies, particularly processes that optimize the integration of logic and memory within single silicon chips. We operate sub-micron wafer fabrication facilities in Hillsboro, Ore. and Salinas, Calif. The Hillsboro facility first contributed to revenues in fiscal 1997. The 245,000 square foot facility, which produces most of the wafers fabricated for our SRAMs and Other segment, contains a 70,000 square foot, eight-inch wafer fabrication line. The Salinas facility, which has been in production since fiscal 1986, includes a 24,000 square foot, six-inch wafer fabrication line. Most wafers for our Communications and High-Performance Logic segment are produced at the Salinas plant. 
+
+    In fiscal 2000, we acquired certain manufacturing assets as part of our merger with QSI, including a wafer fabrication facility located in Sydney, Australia ("the QSA Fab"). We completed the sale of surplus QSI manufacturing assets, including the QSA Fab, early in fiscal 2001. Wafer fabrication for most of the acquired QSI products has been transferred to our Salinas facility, although we continue to purchase a small number of wafers from the QSA Fab on an arms-length basis. 
+
+    We supplement our internal wafer fabrication capacity through relationships with subcontract wafer manufacturers, or foundries. We expect the percentage of our total wafer fabrication requirements provided by external foundries to increase in the future. 
+
+    We also operate two component assembly and test facilities, a 145,000 square foot facility in Penang, Malaysia and a 176,000 square-foot facility near Manila, the Philippines. Substantially all of our test operations and a significant portion of our assembly operations are performed at these two facilities. We also use subcontractors, principally in Korea, the Philippines and Malaysia, to perform certain assembly operations. Finally, in addition to this high-volume offshore assembly and test capability, we have the capacity for low-volume assembly in our Santa Clara, Calif. facilities as well as limited test capabilities in both Santa Clara and Salinas. 
+
+    We utilize proprietary CMOS silicon process technology permitting sub-micron geometries in our wafer fabrication facilities. The majority of our silicon production occurs using our 0.35-, 0.25- and 0.18-micron processes. We are expanding the use of our 0.18-micron CMOS processes in the Hillsboro facility. We continue to develop advanced versions of our 0.18 micron processes as well as processes below 0.18 microns. 
+
+    Our assembly and test activities and international subcontracting arrangements are subject to a number of risks associated with foreign operations (see "Factors Affecting Future Results"). 
+
+Backlog 
+
+    Our backlog (which we define as all confirmed, unshipped orders) as of April 1, 2001 was approximately $168.6 million ($288.6 million as of April 2, 2000). We manufacture and market both products with limited or no second sources and industry-standard products. Sales are generally made pursuant to purchase orders, which are frequently revised by customers as their requirements change. We have also entered into master purchase agreements, which do not require minimum purchase quantities, with many of our OEM customers. We schedule product deliveries on receipt of purchase orders under the related OEM agreements. Generally, these purchase orders and OEM agreements, especially those for standard products, also allow customers to reschedule delivery dates and cancel purchase orders without significant penalties. In general, orders, especially for industry standard products, are often made with very short lead times and may be rescheduled, revised or canceled. In addition, distributor orders are subject to price adjustments both before and after shipment. For these reasons, we do not believe that backlog should be used as an indicator of future revenues. 
+
+6
+
+
+--------------------------------------------------------------------------------
+
+
+Research and Development 
+
+    Our research and development efforts emphasize the development of both proprietary and enhanced-performance, industry standard products, as well as the development of our advanced CMOS processes. We believe that a continued high level of research and development expenditures is necessary to maintain our competitive position. We operate research and development centers in Santa Clara, Calif.; Hillsboro, Ore.; Atlanta, Ga.; Dallas, Tex.; and Sydney, Australia. Also, with our Newave acquisition in the first quarter of fiscal 2002, we now have a design center located in Shanghai, China. Research and development expenditures, as a percentage of revenues were approximately 13%, 15% and 24% in fiscal 2001, 2000 and 1999, respectively. 
+
+    Our product development activities are focused on the design of new circuits that provide new features and enhanced performance primarily for growing communications markets applications. Additionally, we are developing advanced manufacturing process technologies, including 0.15-micron semiconductor fabrication techniques. These process technologies are designed to enable cost and performance advantages and to support higher production volumes of integrated circuits and the continued growth of our communications products. 
+
+Competition 
+
+    Intensely competitive, the semiconductor industry is characterized by rapid technological advances, cyclical market patterns, price erosion, evolving industry standards, occasional shortages of materials, intellectual property disputes, high capital equipment costs and uncertain availability of and control over manufacturing capacity. Many of our competitors have substantially greater technical, marketing, manufacturing and financial resources than we do. In addition, several foreign competitors receive assistance from their governments in the form of research and development loans and grants and reduced capital costs, which could give them a competitive advantage. We compete in different product areas, to varying degrees, on the basis of technical innovation and product performance, as well as quality, product availability and price. As described under the heading "Products and Markets," products in the SRAMs and Other segment can generally be characterized as commodity-type items and tend to be most price sensitive. 
+
+    Our competitive strategy is to differentiate our products through high-performance, innovative configurations, proprietary features and breadth of product offerings. Price competition, introductions of new products by our competitors, delays in our own product introductions or other competitive factors could have a material adverse effect on us in the future. 
+
+    While we have a majority share in the markets for FIFO and multi-port products, some of our products compete with similar products offered by Cypress Semiconductor Corporation ("Cypress"). Our MIPS-based microprocessors compete with products offered by other vendors such as PMC-Sierra, Inc. ("PMC"), Toshiba Corporation and NEC Corporation, and with microprocessors based on other architectures, such as those offered by Intel Corp. and Motorola, Inc. Our competitors for logic sales include both U.S. and foreign manufacturers, such as Texas Instruments Incorporated and Pericom Semiconductor Corporation. Certain of our network products compete with products offered by PMC. 
+
+    In markets where we compete to sell industry standard SRAM components, market supply and pricing strategies of competitors significantly impact the price we receive for our products. Our competitors include U.S.-based companies such as Cypress, Micron Technology, Inc. and Integrated Silicon Solutions, Inc. International competitors include Samsung Electronics, and various other Taiwanese and Korean companies. 
+
+Intellectual Property and Licensing 
+
+    We recognize that our intellectual property is a valuable corporate asset, and we continue to invest in intellectual property protection. We also intend to continue our efforts to increase the breadth of our 
+
+7
+
+
+--------------------------------------------------------------------------------
+
+patent portfolio. There can be no assurance that any patents issued to us will not be challenged, invalidated or circumvented, that the rights granted thereunder will provide competitive advantages to us or that our efforts generally to protect our intellectual property rights will be successful. 
+
+    In recent years, there has been a growing trend of companies resorting to litigation to protect their semiconductor technology from unauthorized use by others. In the past, we have been involved in patent litigation which adversely affected our operating results. Although we have obtained patent licenses from certain semiconductor manufacturers, we do not have licenses from a number of semiconductor manufacturers who have a broad portfolio of patents. 
+
+    We have been notified from time to time of claims that we may be infringing patents issued to others. Further, there can be no assurance that new claims alleging infringement of intellectual property rights will not be aggressively pursued in the future. Such claims could include infringement of patents or patent applications, trade secret misappropriation, and copyright or trademark infringement. In addition, there is no assurance that licenses, to the extent required, will be available. Should licenses from any such claimant be unavailable, or not be available on terms acceptable to us, we may be required to discontinue our use of certain processes or the manufacture, use and sale of certain of our products, to incur significant litigation costs and damages, or to develop non-infringing technology. If we are unable to obtain any necessary licenses, pass any increased cost of patent licenses on to our customers or develop non-infringing technology, we could be materially adversely affected. In addition, we have received patent licenses from several companies that expire over time, and the failure to renew or renegotiate certain of these licenses could have a material adverse effect on us. 
+
+Environmental Regulation 
+
+    Federal, State and local provisions, together with those of other countries, regulate the use and discharge of certain materials used in semiconductor manufacturing. Our facilities are designed to comply with applicable regulations and we believe that our operations conform to such regulations. However, there can be no assurance that future regulatory changes will not require significant capital expenditures. Also, failure to comply with environmental regulations in the future could subject us to substantial liability or cause our manufacturing operations to be interrupted. 
+
+Employees 
+
+    At April 1, 2001, we employed approximately 5,000 people worldwide, of whom 1,400 and 1,300 were in Malaysia and the Philippines, respectively. Our future success depends in part on our ability to attract and retain qualified personnel, who are generally in great demand. We have implemented policies enabling our employees to share in our success, including stock option, stock purchase and profit sharing programs, and bonus plans for key contributors. We have never had a work stoppage. No employees are currently represented by a collective bargaining agreement, and we consider our employee relations to be satisfactory. 
+
+    On June 13, 2001, we announced plans for a realignment of our workforce to be consistent with the updated revenue outlook that we announced on May 31, 2001. Under the plan, our workforce will be reduced by approximately 900 employees, primarily in our Malaysian and Philippines manufacturing facilities. We will record a charge of approximately $2.5 million in the first quarter of fiscal 2002, primarily related to severance costs. 

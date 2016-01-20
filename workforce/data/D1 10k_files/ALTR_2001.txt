@@ -1,0 +1,731 @@
+ITEM 1.  BUSINESS.
+
+GENERAL
+
+Altera Corporation, referred to as "we," "us" or "our," designs, manufactures
+and markets programmable logic devices, or PLDs, and associated development
+tools. Programmable logic devices are semiconductor integrated circuits that our
+customers can program using our proprietary software, which operates on personal
+computers and engineering workstations. Founded in 1983, we were one of the
+first suppliers of complementary metal oxide semiconductor, or CMOS,
+programmable logic devices and are currently a global leader in this market. We
+offer a broad line of CMOS programmable logic devices that address high-speed,
+high-density and low-power applications. Our products serve a wide range of
+markets, including telecommunications, data communications, electronic data
+processing and industrial applications.
+
+STRATEGY
+
+Three principal types of digital integrated circuits are used in most electronic
+systems: microprocessors, memory and logic. Microprocessors are used for control
+and computing tasks, memory is used to store programming instructions and data,
+and logic is used to manage the interchange and manipulation of digital signals
+within a system. While system designers employ a relatively small number of
+standard architectures to meet their microprocessor and memory needs, they
+require a wide variety of logic circuits to differentiate their end products.
+
+According to Dataquest, the CMOS logic market consists of the following
+segments:
+
+        -       Semi-custom or application-specific integrated circuits, or
+                ASICs
+
+        -       Standard logic
+
+        -       Full custom devices
+
+        -       Other forms of logic integrated circuits, including chipsets
+
+The ASIC segment is comprised of programmable logic, gate arrays and cell-based
+integrated circuits (also referred to as standard cells). In a broad sense, all
+of these devices are indirectly competitive as they generally may be used in the
+same types of applications in electronic products. However, differences in cost,
+performance, density, flexibility, ease-of-use and time-to-market dictate the
+extent to which they may be directly competitive for particular applications.
+
+Programmable logic's primary advantage is that it allows for quicker design
+cycles, meeting customers' needs for quick time-to-market. Programmable logic
+allows customers to experiment and iterate their designs in a relatively short
+amount of time and with minimum cost. In most instances, this is quicker and
+easier than achieving a design in a deterministic fashion. This advantage is
+amplified by the ability to have working silicon at the time the design is
+finalized.
+
+Another advantage of programmable logic is that, particularly for small volume
+applications, it lowers the per unit cost of producing customized components.
+While programmable logic inherently consumes more silicon (because of its
+general application and on-chip programming overhead), in many cases, depending
+on the complexity of the design and total unit requirements, this higher per
+unit cost is more than offset by the high fixed costs of layout and mask-making
+required to produce a custom integrated circuit. Further, because unprogrammed
+PLDs are standard devices, we, our distributors and subcontract manufacturers --
+not our customers -- hold stocks of inventory, thereby enhancing the cost
+advantage of PLDs for our customers.
+
+Our strategy is to compete with other companies in the ASIC segment of the CMOS
+logic market by providing a total solution for our customers' programming logic
+needs. To accomplish this goal, we offer our customers:
+
+        -       PLDs with the speed, density and package types to meet their
+                specific needs
+
+        -       State-of-the-art development tools that are easy to use and
+                compatible with other industry standard electronic design
+                automation, or EDA, tools
+
+        -       Optimized system-level megafunctions to speed their design
+                process
+
+        -       A complete customer support system
+
+
+
+                                        2
+<PAGE>   3
+
+We have been able to introduce new product families that, as compared to their
+predecessors, provide more functionality at a much lower price for any given
+density because high-volume manufacturing and emerging process technologies have
+resulted in cost decreases. We believe these new product families achieve the
+integration, density, performance and cost advantages of other ASIC solutions.
+We believe that our competitiveness within the ASIC segment in these areas,
+along with the inherent advantages of programmable logic discussed above, will
+enable us to compete for designs traditionally served by other ASIC devices.
+
+PRODUCTS
+
+We sell a wide range of products, with a total of more than 1,000 product
+options among our PLD families. We offer PLDs in two fundamental technologies:
+our MAX(R) products, which use floating-gate process technology, and our
+FLEX(R), APEX(TM), ACEX(TM) and Excalibur(TM) products, which use static random
+access memory, or SRAM, process technology. Our proprietary development tools,
+the MAX+PLUS(R) II and Quartus(TM) II software, provide design development and
+programming support for our PLDs. We also offer hardware used in programming
+PLDs.
+
+Devices:
+
+We offer a wide range of general-purpose PLD families. Each device family offers
+unique features as well as differing density and performance specifications for
+implementing particular applications. Some of our major device families include
+the following:
+
+MAX 7000, MAX 7000S, MAX 7000A and MAX 7000B: The MAX 7000, MAX 7000S, MAX 7000A
+and MAX 7000B device families are among the fastest and most widely used
+high-density programmable logic families in the industry. Devices in these
+families range from 600 to 10,000 usable gates and up to 256 pins and provide
+several enhanced features, including support for the industry standard Joint
+Test Action Group boundary-scan test, or BST, circuitry and in-system
+programmability, or ISP. ISP functionality allows devices to be programmed after
+they are soldered onto the printed circuit board, thereby minimizing the
+possibility of lead damage or electrostatic discharge exposure when
+reprogrammed. The MAX 7000 device families, which includes the 5.0-V MAX 7000
+devices and the 5.0-V, ISP-based MAX 7000S devices, the 3.3-V MAX 7000A device
+family and what we believe is the industry's fastest programmable logic
+solution, the 2.5-V MAX 7000B device family, are fabricated on advanced CMOS
+electrically erasable programmable read-only memory, or EEPROM, processes,
+providing a high-density, high-speed, I/O-intensive programmable logic
+solution. Devices in these families are supported by our MAX+PLUS II development
+software.
+
+MAX 3000A: The MAX 3000A devices, which are targeted at high volume, low cost
+applications, range from 600 to 5,000 usable gates and up to 158 pins. The MAX
+3000A devices include support for BST circuitry and ISP, are fabricated on
+advanced CMOS EEPROM processes and are supported by our MAX+PLUS II development
+software.
+
+FLEX 8000: The SRAM-based FLEX 8000 device family uses our patented
+FastTrack(R) Interconnect structure, a continuous routing structure that
+allows for fast, predictable interconnect delays. Devices in this family range
+from 2,500 to 16,000 usable gates and up to 304 pins. FLEX 8000 devices have a
+5.0-V supply voltage, can interface with 3.3-V devices through the MultiVolt(TM)
+I/O feature, provide low standby power and are supported by our MAX+PLUS II
+development software.
+
+FLEX 6000: Our SRAM-based FLEX 6000 family delivers the flexibility and
+time-to-market advantage of programmable logic at prices that are competitive
+with gate arrays. Devices in this family range from 10,000 to 24,000 usable
+gates and up to 256 pins and include devices that operate at both 5.0-V and
+3.3-V supply voltages. Featuring the very efficient OptiFLEX(R) architecture,
+FLEX 6000 devices provide a flexible and cost-effective alternative to gate
+arrays for high-volume production. Every feature in the OptiFLEX architecture is
+targeted at producing maximum performance and utilization in the smallest
+possible die area. Devices in this family are supported by our MAX+PLUS II and
+Quartus II development software.
+
+FLEX 10K, FLEX 10KA and FLEX 10KE: Our SRAM-based FLEX 10K, FLEX 10KA and FLEX
+10KE device families offer a combination of logic and embedded memory on a
+single-chip architecture. Devices in these PLD families range from 10,000 to
+250,000 usable gates and up to 672 pins. With these high densities, the 5.0-V
+FLEX 10K, the 3.3-V FLEX 10KA and the 2.5-V FLEX 10KE families may be used to
+address the increasing levels of integration needed to accommodate today's
+complex designs. The FLEX 10K family includes 0.5- and 0.42-micron devices, the
+FLEX 10KA family includes 0.35- and 0.3-micron devices and the FLEX 10KE family
+includes 0.25- and 0.22-micron devices. Devices in these families are supported
+by our MAX+PLUS II development software.
+
+APEX 20K, APEX 20KE and APEX 20KC: Our SRAM-based APEX 20K, APEX 20KE and APEX
+20KC device families offer complete system-level integration on a single device,
+and the APEX 20KC is the first PLD family utilizing copper for all layers of
+metal interconnect. Devices in these families range from 30,000 to over 1.5
+million usable gates and up to 1,020 pins. With high densities and performance
+enhancements, the APEX 20K, APEX 20KE and APEX 20KC families deliver the latest
+in design flexibility and efficiency for high-performance,
+system-on-a-programmable-chip, or SOPC, design. APEX 20K devices, which operate
+at a 2.5-V supply voltage, and the
+
+
+
+                                        3
+<PAGE>   4
+
+APEX 20KE and APEX 20KC devices, which operate at a 1.8-V supply voltage, employ
+the innovative MultiCore(TM) architecture, which combines the strengths of our
+look-up table, product term block and enhanced embedded memory block structures.
+The APEX 20K, APEX 20KE and APEX 20KC devices are supported by our Quartus II
+development software.
+
+ACEX 1K: Our SRAM-based ACEX 1K device family, which combines look-up tables and
+embedded array blocks, offers complete system-level integration on a single
+device. Devices in this family range from 10,000 to 100,000 usable gates and up
+to 484 pins. Operating at 2.5-V supply voltage, the ACEX 1K devices are
+supported by our MAX+PLUS II development software.
+
+EXCALIBUR EMBEDDED PROCESSOR SOLUTIONS: The Excalibur solutions consist of three
+embedded processor families, our Nios(TM) soft core embedded processor solution,
+the ARM(R)-based embedded processor solution and the MIPS-based(TM) embedded
+processor solution. Our Nios soft core embedded processor, which was available
+in August 2000 and is supported by our Quartus II development software, is the
+industry's first reduced instruction set computer, or RISC, embedded processor
+commercially released by a major PLD vendor as a viable alternative to discrete
+processor solutions. The ARM-based embedded processor PLD family uses technology
+licensed from ARM Limited and will consist of multiple devices that each contain
+an ARM-based RISC processor core. The MIPS-based embedded processor PLD family
+uses technology licensed from MIPS Technologies, Inc. and will consist of
+multiple devices that each contain a MIPS-based RISC processor core. We expect
+the ARM-based and MIPS-based embedded processor PLD families to be available in
+the first half of 2001.
+
+Development Tools:
+
+Customers use our development system software and hardware to design and
+implement logic designs on our PLDs. Our MAX+PLUS II and Quartus II software
+development tools run under the Microsoft Windows-based operating environments
+on personal computers in addition to the UNIX environment on SUN, HP and IBM
+workstations. We also provide interfaces to many industry-standard EDA tools,
+including those offered by Cadence Design Systems, Inc., Mentor Graphics
+Corporation, Synopsys, Inc. and Synplicity, Inc. We also sell hardware for
+programming our PLDs.
+
+In January 2001, we released the Quartus II development software, which we
+believe delivers superior designer productivity and supports system-level
+designs and integration with third-party tools.
+
+MARKETING, SALES AND CUSTOMERS
+
+We market our products in the United States, Canada, Europe, Asia, South America
+and Australia through a network of direct sales personnel and electronics
+distributors. In the United States and Canada, we also rely on a network of
+independent sales representatives. From time to time, we expect that we may add
+or delete independent sales representatives or distributors from our selling
+organization as we deem appropriate to the level of business.
+
+Throughout the United States, we have domestic sales management offices in major
+metropolitan areas. Our direct sales personnel and independent sales
+representatives focus on major strategic accounts. Distributors generally focus
+selling activities on the broad base of small- and medium-size customers, as
+well as demand fulfillment services to our major strategic accounts. Our
+distributor in the United States currently is Arrow Electronics, Inc. In 2000,
+Arrow acquired Wyle Electronics, which also had served as one of our domestic
+distributors. Arrow is responsible for creating customer demand from its base of
+customers, providing technical support and other value-added services and
+filling customers' orders.
+
+Our international business is supported by a network of distributors throughout
+Europe, Asia, South America and Australia. We have representation in every major
+European country, Israel, Australia, South America and various countries
+throughout the Pacific Rim. In addition, we maintain international sales support
+offices in the metropolitan areas of Oosterhout (Netherlands), Helsinki, Hong
+Kong, Hsinchu (Taiwan), London, Ottawa, Paris, Seoul, Shanghai, Stockholm,
+Stuttgart, Tokyo and Turin.
+
+Customer support and service are important aspects of selling and marketing our
+products. We provide several levels of technical user support, including
+applications assistance, design services and customer training. Our applications
+engineering staff publishes data sheets and application notes, conducts
+technical seminars and provides design assistance via Internet and electronic
+links to the customer's design station. In 2000, we expanded our customer
+support services by establishing an Applications Engineering Center near San
+Diego, California to provide technical support to our customers. Customer
+service is supported with inventory maintained both by us and at distributors'
+locations to provide short-term delivery of chips.
+
+Through 2000, all international sales were denominated in U.S. dollars. Our
+international sales are subject to those risks common to all international
+activities, including governmental regulation, possible imposition of tariffs or
+other trade barriers and currency fluctuations.
+
+In the year ended December 31, 2000, worldwide sales through distributors
+accounted for over 95% of total sales. In 2000, two distributors accounted for
+more than 10% of sales; one accounted for 58% of sales, and the other accounted
+for 11% of sales. In 1999, three distributors
+
+
+
+                                        4
+<PAGE>   5
+
+accounted for more than 10% of sales. These three distributors accounted for
+34%, 19% and 13% of sales, whereas in 1998, they accounted for 30%, 21% and 11%
+of sales. The percentage increase for our largest distributor in 2000 compared
+to previous years is attributable to the combination of Arrow and Wyle, our two
+largest distributors in 1999 and 1998. No single end customer accounted for more
+than 10% of our sales in 2000, 1999 or 1998. International sales constituted 43%
+of sales in 2000, 44% of sales in 1999 and 45% of sales in 1998.
+
+For a detailed description of our sales by geographic region, see Item 7 and
+Note 14 to our consolidated financial statements.
+
+COMPETITION
+
+The ASIC Segment:
+
+The ASIC segment of the CMOS logic market is comprised of programmable logic,
+gate arrays and cell-based integrated circuits (also referred to as standard
+cells). In a broad sense, all of these devices are indirectly competitive as
+they generally may be used in the same types of applications in electronic
+products. However, differences in cost, performance, density, flexibility,
+ease-of-use and time-to-market dictate the extent to which they may be directly
+competitive for particular applications. As PLDs have increased in density and
+performance and decreased in cost, they have become more directly competitive
+with other ASICs, especially gate arrays. With the introduction of our FLEX 10K
+family and new APEX 20K, APEX 20KE and APEX 20KC device families, which are our
+highest density PLDs, along with our FLEX 6000 devices, which are designed and
+priced to be very competitive with lower density gate arrays, we seek to grow by
+directly competing with other companies in the ASIC segment. Many of the
+companies in the ASIC segment have substantially greater financial, technical
+and marketing resources than we do. We cannot assure you that we will be
+successful in competing in the ASIC segment of the CMOS logic market.
+
+The Programmable Logic Sub-Segment:
+
+The principal factors of competition in the programmable logic sub-segment of
+the ASIC market include:
+
+        -       The capability of software development tools and system-level
+                functional programming blocks
+
+        -       Product performance and features
+
+        -       Quality and reliability
+
+        -       Pricing
+
+        -       Technical service and support
+
+        -       The ability to respond rapidly to technical innovation
+
+        -       Customer service
+
+We believe that we compete favorably with respect to these factors and that our
+proprietary device architecture and our installed base of development systems
+with proprietary software may provide some competitive advantage. However, as is
+true of the semiconductor industry as a whole, the PLD sub-segment is intensely
+competitive and is characterized by rapid technological change, rapid rates of
+product obsolescence and price erosion resulting from both product obsolescence
+and price competition. All of these factors may influence our future operating
+results.
+
+We experience significant direct competition from other companies that are in
+the programmable logic sub-segment. Our competition in this market sub-segment
+is from suppliers of products that are marketed as either field-programmable
+gate arrays, or FPGAs, or complex PLDs, or CPLDs. In the high density CPLD
+market, we directly compete primarily with Xilinx, Inc. and Lattice
+Semiconductor Corporation.
+
+Companies that currently compete with us in our core business may have preferred
+vendor status with many of our customers, extensive marketing power, name
+recognition and other significant advantages over us. Additionally, the
+semiconductor industry as a whole includes many large domestic and foreign
+companies that have substantially greater financial, technical and marketing
+resources than we do. We expect that as the dollar volume of the programmable
+logic sub-segment grows, the attractiveness of this sub-segment to larger, more
+powerful competitors will continue to increase. Substantial direct or indirect
+competition could have a material adverse effect on our future sales and
+operating results.
+
+
+
+                                        5
+<PAGE>   6
+
+MANUFACTURING
+
+Wafer Supply:
+
+We do not directly manufacture our silicon wafers. Our wafers are produced using
+various semiconductor foundry wafer fabrication service providers. This enables
+us to take advantage of these suppliers' high volume economies of scale, as well
+as direct and more timely access to advancing process technology.
+
+We presently have our primary wafer supply arrangements with two semiconductor
+vendors: Taiwan Semiconductor Manufacturing Company, or TSMC, and Sharp
+Corporation. We may negotiate additional foundry contracts and establish other
+sources of wafer supply for our products as such arrangements become
+economically useful or technically necessary. Although there are a number of new
+state-of-the-art wafer fabrication facilities currently under construction
+around the world, semiconductor foundry capacity can become limited quickly and
+without much notice. Furthermore, since only newer fabrication or substantially
+retrofitted facilities are able to manufacture wafers that incorporate
+leading-edge technologies, any significant decrease in capacity of these
+facilities would have a material adverse effect on our ability to obtain wafer
+supply for our newer products. Accordingly, we cannot assure you that any
+shortage in foundry manufacturing capacity will not result in production
+problems for us in the future.
+
+In December 2000, we sold our 23% equity ownership interest in WaferTech, LLC to
+a subsidiary of TSMC for approximately $350 million in cash. WaferTech was
+formed in 1996 as a joint venture among us, TSMC and several other partners to
+build and operate a wafer manufacturing plant in Camas, Washington. As a result
+of the sale, we were released from all of our obligations under the operating
+agreement. We expect WaferTech to continue to supply wafers to us through TSMC.
+Accordingly, we do not believe that the sale of our ownership interest in
+WaferTech will have an adverse effect on our ability to obtain sufficient
+quantities of wafers in the future.
+
+We depend upon our foundry vendors to produce wafers at acceptable yields and to
+deliver them to us in a timely manner. The manufacture of advanced CMOS
+semiconductor wafers is a highly complex process, and we have from time to time
+experienced difficulties in obtaining acceptable yields and timely deliveries
+from our suppliers. Good production yields are particularly important to our
+business, including our ability to meet customers' demand for products and to
+maintain profit margins. Wafer production yields are dependent on a wide variety
+of factors, including the level of contaminants in the manufacturing
+environment, impurities in the materials used and the performance of personnel
+and equipment. As is common in the semiconductor industry, we have experienced
+and expect to experience production yield problems from time to time.
+Difficulties in production yields can often occur when we begin production of
+new products or transition to new processes. These difficulties can potentially
+result in significantly higher costs and lower product availability. For
+example, in the second quarter of 1999, difficulties with a vendor's
+manufacturing process limited the availability of packaging material (piece
+parts) used in certain of our new and proprietary FineLine BGA(TM), or ball-grid
+array, packages causing limited production. This in turn limited shipments of
+our new FLEX 10KE product family. Our management expects to continue to
+introduce new and established products using new process technologies, and we
+may encounter similar start-up difficulties during the transition to such
+process technologies.
+
+Further, production throughput times vary considerably among our wafer
+suppliers, and we may experience delays from time to time in processing some of
+our products which also may result in higher costs and lower product
+availability. We expect that, as is customary in the semiconductor business, in
+order to maintain or enhance our competitive position, we will continue to
+convert our fabrication process arrangements to larger wafer sizes, smaller
+circuit geometries and more advanced process technologies. Such conversions
+entail inherent technological risks that can adversely affect yields, costs and
+delivery lead time. In addition, if for any reason we were required to seek
+alternative sources of supply, shipments could be delayed significantly while
+such sources are qualified for volume production, and any significant delay
+could have a material adverse effect on our operating results.
+
+Testing and Assembly:
+
+After wafer manufacturing is completed, each wafer is tested using a variety of
+test and handling equipment. Such wafer testing is accomplished at Sharp, TSMC
+and our San Jose pilot line facility, which is used primarily for new product
+development. This testing is performed on equipment owned by us and consigned to
+the vendors.
+
+Resulting wafers are shipped to various Asian assembly suppliers, where good die
+are separated into individual chips that are then encapsulated in ceramic or
+plastic packages. As is the case with our wafer supply business, we employ a
+number of independent suppliers for assembly purposes. This enables us to take
+advantage of subcontractor high volume manufacturing, related cost savings,
+speed and supply flexibility. It also provides us with timely access to
+cost-effective advanced process and package technologies. We purchase almost all
+of our assembly services from AMKOR (Korea and the Philippines), ASAT (Hong
+Kong), ASE (Malaysia) and Fujitsu (Japan).
+
+Following assembly, each of the packaged units receives final testing, marking
+and inspection prior to shipment to customers. We obtain almost all of our final
+test and back-end operation services from AMKOR, ASAT and ASE. Final testing by
+these assembly suppliers is
+
+
+
+                                        6
+<PAGE>   7
+
+accomplished through the use of our proprietary test software and hardware,
+which is consigned to or owned by such suppliers and/or third-party commercial
+testers. These suppliers also handle shipment of the products to our customers
+or distributors.
+
+Additionally, almost all of the manufacturing, assembly, testing and packaging
+of our development system hardware products are performed by outside
+contractors. Although our wafer fabrication, assembly and other subcontractors
+have not recently experienced any serious work stoppages, the economic, social
+and political situations in countries where certain subcontractors are located
+are unpredictable and can be volatile. Any prolonged work stoppages or other
+inability to manufacture and assemble our products would have a material adverse
+effect on our operating results. Furthermore, the risks of earthquakes or power
+shortages and economic risks, such as extreme currency fluctuations, adverse
+changes in tax laws, tariff or freight rates or interruptions in air
+transportation, could have a material adverse effect on our operating results.
+
+BACKLOG
+
+Our backlog of released orders as of December 31, 2000 was approximately $510.8
+million as compared to approximately $309.4 million at December 31, 1999. Our
+backlog consists of original equipment manufacturer, or OEM, customer-released
+orders that are requested for delivery within the next six months and
+distributor orders that are requested for delivery within the next three months.
+We produce standard products that may be shipped from inventory within a short
+time after receipt of an order. Our business has been characterized by a high
+percentage of orders with near-term delivery schedules. At times, due to high
+demand and supply constraints in certain products, lead times can lengthen,
+causing an increase in backlog. However, orders constituting our current backlog
+are cancelable without significant penalty at the option of the purchaser,
+thereby decreasing backlog during periods of lower demand. In addition,
+distributor shipments are subject to price adjustments, and we defer recognition
+of revenue on shipments to distributors until the product is resold to the end
+customer. Historically, backlog has been a poor predictor of future customer
+demand. For all of these reasons, backlog as of any particular date should not
+be used as a predictor of sales for any future period.
+
+Effective January 1, 2001, our policy for determining backlog will change from a
+six-month period for OEM customer-release orders to a three-month period. We do
+not expect that this change will have a material effect on our backlog, as our
+distributor orders accounted for over 98% of our backlog as of December 31,
+2000.
+
+RESEARCH AND DEVELOPMENT
+
+Our total research and development activities have focused primarily on
+general-purpose programmable logic devices and on the associated development
+software and hardware. We have developed these related products in parallel to
+provide software support to customers upon device introduction. As a result of
+our research and development efforts, we have introduced a number of new PLD
+families, such as the FLEX 10KE, FLEX 10KA, MAX 3000A, MAX 7000A, MAX 7000B,
+APEX 20K, APEX 20KE, APEX 20KC and ACEX 1K device families. We have also
+redesigned a number of our products to accommodate their manufacture on new
+wafer fabrication processes. In 2001, we also released the Quartus II
+development tool, which is our fourth-generation software. Additionally, we
+typically release new versions of our proprietary software on a quarterly basis.
+
+Our research and development expenditures were $178.7 million in 2000, $86.1
+million in 1999 and $59.9 million in 1998. Excluding a $6.3 million one-time
+charge for acquired in-process research and development, our research and
+development expenditures in 2000 were $172.4 million. We have not capitalized
+research and development or software costs to date. We intend to continue to
+spend substantial amounts on research and development in order to continue to
+develop new products and achieve market acceptance for such products,
+particularly in light of the industry pattern of short product life cycles and
+increasing competition within the CMOS logic market. Even if such goals are
+accomplished, we cannot assure you that these products will achieve significant
+market acceptance. If we are unable to successfully define, develop and
+introduce competitive new products, and enhance our existing products, our
+future operating results would be adversely affected.
+
+PATENTS AND LICENSES
+
+We own numerous United States patents and have additional pending United States
+patent applications on our semiconductor products. Although our patents and
+patent applications may have value in discouraging competitive entry into our
+market segment, we cannot assure you that any valuable new patents will be
+granted to us, or that our patents will provide meaningful protection from
+competition. We believe that our future success will depend primarily upon the
+technical competence and creative skills of our personnel, rather than on our
+patents, licenses, or other proprietary rights.
+
+We have in the past incurred, and in the future may continue to incur,
+litigation expenses to enforce our intellectual property rights against third
+parties. We cannot assure you that any such litigation would be successful or
+that our patents would be upheld if challenged.
+
+
+
+                                        7
+<PAGE>   8
+
+In the normal course of business, we from time to time receive and make
+inquiries with respect to possible patent infringements. As a result of
+inquiries received from third parties, it may be necessary or desirable for us
+to obtain licenses relating to one or more of our current or future products. We
+cannot assure you that such licenses could be obtained, and, if obtainable,
+could be obtained on conditions which would not have a material adverse effect
+on our operating results. In addition, if patent litigation ensued, we cannot
+assure you that these third parties would not succeed in obtaining significant
+monetary damages or an injunction against the manufacture and sale of one or
+more of our product families.
+
+DIRECTORS AND EXECUTIVE OFFICERS
+
+Our directors and executive officers and their ages are as follows:
+
+<TABLE>
+<CAPTION>
+             NAME                  AGE                     POSITION
+             ----                  ---                     --------
+<S>                                <C>      <C>
+Rodney Smith .................      60      Chairman of the Board of Directors
+
+John P. Daane ................      37      President, Chief Executive Officer and Director
+
+C. Wendell Bergere ...........      55      Vice President, General Counsel and Secretary
+
+Denis Berlan .................      50      Executive Vice President and Chief Operating Officer
+
+Erik Cleage ..................      40      Senior Vice President, Marketing
+
+John R. Fitzhenry ............      51      Vice President, Human Resources
+
+Michael Jacobs ...............      41      Senior Vice President, Worldwide Sales
+
+Lance M. Lissner .............      51      Senior Vice President, Business Development
+
+Nathan Sarkisian .............      42      Senior Vice President and Chief Financial Officer
+
+Charles M. Clough(1) .........      72      Director
+
+Michael A. Ellison(2)(3) .....      55      Director
+
+Paul Newhagen (1) ............      51      Director
+
+Robert W. Reed(3) ............      54      Director and Vice Chairman of the Board of Directors
+
+Deborah D. Rieman ............      51      Director
+
+William E. Terry(1)(2) .......      67      Director
+</TABLE>
+
+----------
+
+(1)     Member of Nominating Committee.
+
+(2)     Member of Compensation Committee.
+
+(3)     Member of Audit Committee.
+
+All directors hold office until the next annual meeting of stockholders or until
+their successors have been elected and qualified. There are no family
+relationships between any of our directors or executive officers.
+
+RODNEY SMITH has served as our Chairman of the Board of Directors since joining
+us in November 1983 and as our President and Chief Executive Officer from
+November 1983 to November 2000. Prior to November 1983, he held various
+management positions with Fairchild Semiconductor Corporation, a semiconductor
+manufacturer.
+
+JOHN P. DAANE has served as our President and Chief Executive Officer since
+November 2000 and as one of our directors since December 2000. Prior to joining
+us, Mr. Daane spent 15 years at LSI Logic Corporation, a semiconductor
+manufacturer, most recently as Executive Vice President, Communications Products
+Group.
+
+C. WENDELL BERGERE joined us in August 1995 as Vice President, General Counsel
+and Secretary. From 1993 to 1995, Mr. Bergere was Special Counsel at the law
+firm of Sheppard, Mullin, Richter & Hampton. From 1982 to 1993, he was Vice
+President, General Counsel and Secretary of The Perkin-Elmer Corporation, a
+producer of analytical and life science systems.
+
+DENIS M. BERLAN joined us in December 1989 as Vice President, Product
+Engineering and was named Vice President, Operations and Product Engineering in
+October 1994. In January 1996, he was named Vice President, Operations. In
+January 1997, he was named Executive Vice President and Chief Operating Officer.
+He was previously employed by Advanced Micro Devices, Inc., or AMD, a
+semiconductor manufacturer, and by Lattice Semiconductor Corporation, a
+semiconductor manufacturer, in engineering management capacities.
+
+
+
+                                        8
+<PAGE>   9
+
+ERIK CLEAGE joined us as International Marketing Manager in February 1986. He
+became Director, Japan and Asia Pacific Sales in April 1989, was appointed Vice
+President, Marketing in August 1990 and Senior Vice President, Marketing in
+January 1999. Previously, he was employed by AMD and Fairchild in various
+positions.
+
+JOHN R. FITZHENRY joined us in May 1995 as Vice President, Human Resources. From
+February 1983 to May 1995, he was employed by Apple Computer, Inc., a
+manufacturer of personal computers, in various human resource management
+positions.
+
+MICHAEL JACOBS joined us in January 2000 as Senior Vice President, Worldwide
+Sales. From April 1997 to January 2000, Mr. Jacobs was Vice President, North
+American Sales at Analog Devices, Inc., a semiconductor manufacturer, and from
+December 1985 to April 1997, he held various management positions at National
+Semiconductor Corporation, a semiconductor manufacturer.
+
+LANCE M. LISSNER joined us in May 1998 as Vice President of Business Development
+and Investor Relations and was appointed Senior Vice President, Business
+Development in November 2000. Prior to that time, Mr. Lissner was a corporate
+officer of Measurex Corporation, a developer of computer-integrated measurement,
+control and information systems, where he was employed since 1973 and held
+various positions in sales, marketing, engineering, and business development.
+
+NATHAN SARKISIAN joined us in June 1992 as Corporate Controller. He was
+appointed Vice President, Finance and Chief Financial Officer in August 1995 and
+Senior Vice President and Chief Financial Officer in March 1998. Prior to
+joining us, Mr. Sarkisian held various accounting and financial positions at
+Fairchild and at Schlumberger Limited, an oil field services company.
+
+CHARLES M. CLOUGH has served as one of our directors since August 1997. In
+August 1997, Mr. Clough retired from his position as Chairman of the Board of
+Directors of Wyle Electronics, a distributor of semiconductor products and
+computer systems. From 1982 to 1997, Mr. Clough held various management
+positions at Wyle Electronics, including President, Chief Executive Officer and
+Chairman. Wyle Electronics was one of our authorized distributors in the United
+States prior to its acquisition by Arrow. Prior to joining Wyle Electronics, he
+had spent 27 years with Texas Instruments holding a number of management and
+executive positions relating to semiconductor operations, including the head of
+Bipolar operations, European Semiconductor group and worldwide marketing.
+
+MICHAEL A. ELLISON has served as one of our directors since April 1984 and has
+been a private venture capital investor since November 2000. From October 1994
+to October 2000, Mr. Ellison was the Chief Executive Officer of Steller, Inc., a
+distributor of electronic parts. From January 1982 to December 1992, he was a
+General Partner of Cable & Howse Ventures, a venture capital investment firm.
+
+PAUL NEWHAGEN, one of our co-founders, has served as one of our directors since
+July 1987. In March 1998, Mr. Newhagen retired from his position as our Vice
+President, Administration, a position he had held since December 1994. From June
+1993 to November 1994, he served as a consultant to us. From 1983 to 1993, Mr.
+Newhagen held various management positions with us, including Vice President of
+Finance and Administration, Chief Financial Officer and Secretary.
+
+ROBERT W. REED has served as one of our directors since October 1994 and as our
+Vice Chairman of the Board of Directors since January 2001. In 1996, Mr. Reed
+retired from his position as Senior Vice President of Intel Corporation, a
+semiconductor manufacturer. From 1983 to 1991, Mr. Reed was Intel's Chief
+Financial Officer.
+
+DEBORAH D. RIEMAN, PH.D., has served as one of our directors since May 1996. Dr.
+Rieman currently manages a private investment fund and consults to technology
+start-up companies. From July 1995 to May 1999, Dr. Rieman was the President and
+Chief Executive Officer of CheckPoint Software Technologies, Inc., an Internet
+security software company. Prior to joining CheckPoint, Dr. Rieman held various
+executive and marketing positions with Adobe Systems Inc., a computer software
+company, Sun Microsystems Inc., a computer networking company, and Xerox Corp.,
+a diversified electronics manufacturer. Dr. Rieman also serves as a director of
+Corning Inc. and Alchemedia Corp.
+
+WILLIAM E. TERRY has served as one of our directors since August 1994. Mr. Terry
+is a former director and Executive Vice President of the Hewlett-Packard
+Company, a diversified electronics manufacturing company. In 36 years at
+Hewlett-Packard, he held a number of senior management positions, including
+general manager of Hewlett-Packard's Data Products and Instrument Groups, and
+subsequently had overall responsibility for the Measurement Systems Sector. He
+retired from Hewlett-Packard in November 1993. Mr. Terry also serves as a
+director of Key Tronic Corporation.
+
+EMPLOYEES
+
+As of December 31, 2000, we had 1,947 regular employees. Our success is
+dependent in large part upon the continued service of our key management,
+technical, sales and support employees and on our ability to continue to attract
+and retain additional qualified employees. The competition for such employees is
+intense and the loss of key employees could have an adverse effect on us.

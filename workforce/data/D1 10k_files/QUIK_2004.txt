@@ -1,0 +1,467 @@
+ITEM 1. BUSINESS 
+
+Overview
+
+QuickLogic Corporation, founded in 1988 and reincorporated in Delaware in 1999, designs and sells field programmable gate arrays, embedded standard products, associated software and programming hardware. In 1991, we introduced our first line of field programmable gate array products, or FPGAs, based upon our ViaLink technology. Our ViaLink technology provides high security, low power and design efficiency to our customers.
+
+In September 1998, we introduced our first line of Embedded Standard Products, or ESPs, to address the design community’s demand for an alternative to existing options: Application Specific Integrated Circuits, or ASICs, and system-on-a-chip products. ESP products combine embedded standard functions with an FPGA. These products provide engineers with the ease-of-use, guaranteed functionality, high performance, low non-recurring engineering charges and immediate availability of standard products, or ASSPs, combined with the flexibility and time-to-market advantages of programmable logic. We also license our QuickWorks and QuickTools design software and sell our programming hardware.
+
+Our ESP and FPGA products target complex, high-performance systems in rapidly changing markets where system manufacturers seek to minimize time-to-market and maximize product differentiation and functionality. Our devices provide a high level of intellectual property security compared to our competitors’ SRAM-based FPGAs since it is extremely difficult to clone or reverse engineer intellectual property that is implemented using our one-time-programmable ViaLink technology. 
+
+Our headquarters are located at 1277 Orleans Drive, Sunnyvale, California 94089. We can be reached at (408) 990-4000, and our website address is www.quicklogic.com. Our common stock trades on the NASDAQ National Market under the symbol “QUIK”.
+
+Our fiscal year ends on the Sunday closest to December 31. The years 2003, 2002 and 2001 ended on December 28, 2003, December 29, 2002 and December 30, 2001, respectively. For presentation purposes, the financial information has been presented as ending on the last day of the nearest calendar month.
+
+Product Technology
+
+The key components of our ESP and FPGA product families are our ViaLink programmable metal technology, our user-programmable platform and the associated software tools used for system design. Our ViaLink technology allows us to create devices smaller than competitors’ comparable products, thereby minimizing silicon area and cost. In addition, our ViaLink technology has lower electrical resistance and capacitance than other programmable technologies and, consequently, supports higher signal-speed and low power consumption. The one-time programmable nature of our ViaLink technology also provides our customers with superior intellectual property security, since it is practically impossible to clone or reverse engineer logic that is programmed using our ViaLink technology. Our user-programmable platform facilitates full utilization of a device’s logic cells, clocks and input/output pins. Our architecture maximizes interconnects at every routing wire intersection, which allows more paths between logic cells. As a 
+
+2
+
+
+
+--------------------------------------------------------------------------------
+
+
+consequence, system designers are able to use QuickLogic devices with smaller gate counts to implement their designs than if they had used competing FPGAs. The abundance of interconnect resources also provides a dense connection between the ASSP and the FPGA portions of embedded standard products. Finally, our software enables our customers to efficiently implement their designs using our products.
+
+Industry Background
+
+Competitive pressures are forcing system manufacturers to rapidly bring to market products with improved functionality, higher performance and greater reliability, all at lower cost. These market forces have driven the evolution of logic semiconductors, which are used in complex electronic systems to coordinate the functions of other semiconductors, such as microprocessors or memory. There are three types of advanced logic semiconductors: 
+
+·       Application specific integrated circuits, or ASICs, are special purpose devices designed for a particular manufacturer’s electronic system. These devices are customized during wafer manufacturing; 
+
+·       Application specific standard products, or ASSPs, are fixed-function devices designed to comply with industry standards that can be used by a variety of electronic systems manufacturers. Their functions are fixed prior to wafer fabrication; and 
+
+·       Programmable logic devices, or PLDs, are general-purpose devices, which can be used by a variety of electronic systems manufacturers, and are customized after purchase for a specific application. Field programmable gate arrays, or FPGAs, are types of PLDs used for complex functions. 
+
+Historically, systems manufacturers have relied heavily on ASICs to implement the advanced logic required for their products. ASICs provide high performance due to customized circuit design. However, because ASICs are design-specific devices, they require long development and manufacturing cycles, which can extend or delay product introductions and are functional only for a very limited number of products. In addition, because of the expense associated with the design of ASICs, they are cost effective only if they can be manufactured in high volumes. Finally, once ASICs are manufactured, their functionality cannot typically be changed to respond to evolving market demands. 
+
+ASSPs have become widely utilized, as industry standards have developed to address increasing system complexity and the need for communication between systems and system components. These standards include: 
+
+·       Peripheral component interconnect, or PCI, a standard developed to provide a high performance, reliable and cost-effective method of connecting high-speed devices within a system; 
+
+·       Synchronous optical network, or SONET, a fiber-optic transmission standard for high-speed digital traffic, employed mainly by telephone companies and other network service providers; 
+
+·       Ethernet, a widely-used local area network, or LAN, transport standard which controls the interconnection between servers and computers; and 
+
+·       Fiber channel interconnect protocol, an industry-networking standard for storage area networks, or SANs, which controls the interconnection between servers and storage devices. 
+
+Compared to ASICs, ASSPs offer the systems designer shorter development time, proven functionality, lower risk and reduced development cost. However, ASSPs generally cannot be used by systems manufacturers to differentiate their products. 
+
+To address markets where industry standards do not exist or are changing and time-to-market is important, PLDs are often used. These products provide systems manufacturers with the flexibility to customize and thereby differentiate their systems, unlike ASSPs. PLDs also enable systems manufacturers 
+
+3
+
+
+
+--------------------------------------------------------------------------------
+
+
+to change the logic functionality of their systems after product introduction without the expense and time of redesigning an ASIC. However, PLDs are generally more expensive than ASSPs and ASICs of equivalent functionality because they require more silicon area. In addition, most PLDs offer lower performance than non-programmable solutions, such as ASSPs and ASICs. 
+
+Industry Future: System-on-a-Chip
+
+Over the past few years, semiconductor manufacturers have migrated to smaller process geometries. These smaller process geometries enable more logic elements to be incorporated in a single chip using less silicon area. More recently, advances have been made in the integration of the three basic components of electronic circuit boards; logic, memory and a microprocessor, on a single chip. Advantages of the single-chip approach to systems manufacturers include: 
+
+·       simplified system development; 
+
+·       reduced time-to-market; 
+
+·       elimination of delays associated with the transfer of data between chips; 
+
+·       smaller physical size; 
+
+·       lower power dissipation; 
+
+·       greater reliability; and 
+
+·       lower cost. 
+
+However, as levels of logic integration have increased, devices have become more specific to a particular application. The benefits of higher performance, low form factors, and low unit costs are quickly offset by high non-recurring engineering charges, expensive development and tool costs, long development cycles, and issues associated with intellectual property. Even though the benefits of system-on-a-chip are compelling, the offsetting limitations reduce their use and potential customer base. Instead of banking on a risky system-on-a-chip alternative, many designers rely on a combination of FPGAs, ASSPs and/or ASICs as a solution to their design needs. This approach often requires using large, expensive devices—or even multiple devices—and can also require extensive development time to implement. 
+
+QuickLogic’s ESP Solution
+
+QuickLogic has leveraged its unique ViaLink technology and user-programmable platform to address the limitations inherent in current system-on-a-chip approaches. Our Embedded Standard Products, or ESPs, deliver the system-level functionality of ASSPs and the flexibility of FPGAs in a single device. In its simplest form, an ESP contains three basic parts: a programmable logic array, an embedded standard function, and a flexible interface that allows communication between the standard function and programmable logic array. We believe our ESPs offer the following specific advantages: 
+
+·       Shorter Development Time.   With a multiple chip design, systems designers must solve complex routing and timing issues between devices. A single chip ESP provides an “out-of-the-box” solution to the timing issues between devices and simplifies software simulation, leading to shorter development time;
+
+·       Lower Power Consumption.   Our ViaLink technology provides for instant-on functionality reducing power consumption at start-up. Additionally, the FPGA portion of our ESPs consumes less power than SRAM-based FPGAs.
+
+·       More Security.   The FPGA portion of our ESPs provides more security for our customers’ intellectual property than SRAM-based FPGAs.
+
+4
+
+
+
+--------------------------------------------------------------------------------
+
+
+·       Increased Performance.   In a traditional design, data must travel between an ASSP and an FPGA across a printed circuit board. The limited number of connections available and the distance between the devices can degrade the system’s overall performance. Our ESP solution allows data to travel within a single chip;
+
+·       Decreased Cost.   Because our ESP is a single chip solution, it requires less silicon area and may eliminate the necessity of a printed circuit board. Additionally, this single chip approach lowers the assembly and test cost for the system manufacturer; and
+
+·       Increased Reliability.   ESP designs are more reliable because single chip solutions contain fewer components and circuit board connections that are subject to failure. 
+
+Our QuickMIPS family is truly a “programmable system-on-a-chip” and best represents the benefits that designers can realize using our ESP technology. The current product development cycle is generally sequential—hardware is developed first, followed by software, and finally system integration and testing. If the systems architect (who typically manages all these functions) needs to make hardware/software trade-offs, a prototype board must be developed. This can extend development time and increase costs. Designers using QuickMIPS can develop software and hardware in parallel—cutting development time and reducing total cost of ownership. 
+
+The QuickMIPS family is a complete solution. All elements needed to develop an electronics system are included—a device (which contains flexible programmable logic and a high-performance MIPS processor core), a prototype or development board, a complete set of development tools, and popular features (buses, Ethernet MACs, PCI, UARTs, etc.) that enable the QuickMIPS device to communicate with other components on the board. Finally, because these devices are based on our ViaLink technology, our customers’ intellectual property is secure as well. During 2003, we announced new QuickMIPS products; we expect to begin production shipments of these devices in the middle of 2004.
+
+Many of today’s embedded electronic systems require peripheral component interconnect, or PCI, bridging capabilities. Often large and complex, these designs can require the developer to become a PCI “expert”. Our QuickPCI family provides a range of PCI bridging solutions, which include a device, comprehensive software and hardware development kits, and a variety of development services. This allows the developer to implement the PCI interface quickly and easily without the requirement of first becoming a PCI expert. Therefore, the designer can focus on adding value to the end product by using his or her expertise rather than spending resources developing a standard interface. 
+
+QuickLogic’s FPGA Solution
+
+Our products are based on our ViaLink technology and user-programmable platform, and associated QuickWorks and QuickTools design software. Our FPGAs offer high performance at low power, security of intellectual property and competitive pricing when compared to alternative FPGA solutions. Specifically, our products and tools provide greater design flexibility than standard FPGAs and enable designers of complex systems to achieve rapid time-to-market with highly differentiated products. 
+
+During 2003, we announced our newest FPGA family, Eclipse II, developed and manufactured using advanced wafer manufacturing technology. In the first quarter of 2004, we began production shipments of these devices. Our Eclipse II family of FPGAs are medium to low density FPGAs that have the lowest power consumption in the FPGA industry. Designs using Eclipse-II achieve significantly longer system battery life than designs based upon large complex programmable logic devices, or CPLDs, due to ultra-low current draw during power-up, quiescent, and dynamic states. Quiescent power consumption of the Eclipse-II family of devices is 20 to 400 times lower than other FPGAs of similar density.
+
+5
+
+
+
+--------------------------------------------------------------------------------
+
+
+The QuickLogic Strategy
+
+Our objective is to be the indispensable provider of secure, high-speed, low-power, flexible, cost-effective ESPs—products that integrate standard functions and programmable logic. We believe ESPs offer systems manufacturers the ability to decrease time-to-market while reducing total cost of ownership. To achieve our objective, we have adopted the following strategies: 
+
+Extend Technology Leadership
+
+Our ViaLink technology, FPGA architecture, ASSP design capabilities, user-programmable platform and proprietary software design tools allow us to provide our customers with a unique solution to their design requirements. We intend to continue to invest in the development of these technologies and to utilize such developments in future innovations of our ESP products. We also intend to focus engineering resources on developing systems-level ESP solutions. 
+
+Provide Complete System Solutions
+
+Our focus on a more targeted set of applications allows us to provide value-added solutions to systems manufacturers. These solutions not only include the device and design software, but also software drivers, reference designs, test boards and complementary intellectual property functions. We currently focus ESP development efforts on two strategic applications areas: 
+
+·       embedded high-performance processing solutions; and 
+
+·       embedded PCI bridging solutions. 
+
+Strategic Alliances
+
+As a part of our ESP strategy, we have engaged with MIPS Technologies, Tower Semiconductor, and other companies to expand the range of technology that we embed in our products. In addition, we continue to sell through a network of industry sales representatives and distributors. These alliances are an essential element of our ESP strategy and a source of competitive strength going forward. By leveraging the expertise of our partners in intellectual property development, wafer fabrication and sales, we can devote our efforts to the development of targeted, well-defined ESP products. 
+
+Create Innovative, Industry-Leading Customer Services
+
+We continue to develop and implement innovative ways to serve and communicate with our customers. For example, our WebASIC service allows customers to use our development software to design a circuit, transmit design information over the Internet and receive a QuickLogic ESP or FPGA device programmed with their design within one business day in North America and Europe or within two business days in Asia. In addition, our ProChannel web-based system allows our distributors to receive quotations, place orders for our products and view their order status over the Internet. This system complements the Electronic Data Interchange systems that we have used for the past several years with our largest customers. 
+
+We have recently added MyDesign.com as an innovative way to serve and communicate with customers. MyDesign is a secure design-support portal individualized for each of our customers. It provides us with the ability to exchange information and advance system designs using our ESP and FPGA products. 
+
+6
+
+
+
+--------------------------------------------------------------------------------
+
+
+Customers and Markets
+
+The following is a representative list by industry of our current customers and the markets in which they do business: 
+
+Industry
+  
+ Customer
+  
+ Application
+ 
+High-Performance Computing
+  
+ IBM
+Unisys
+  
+ RAID controller
+Servers
+ 
+Instrumentation and Test
+  
+ Yokogawa
+ASML
+LTX
+Medtronics
+National Instruments
+Teradyne
+  
+ Semiconductor test equipment
+Semiconductor manufacturing equipment
+Semiconductor test equipment
+Medical electronics
+PC-based instrumentation boards
+Semiconductor test equipment
+ 
+Data Communications and Telecommunications
+  
+ 
+Agere
+Alcatel
+Andrews Corporation
+Emulex
+IBM
+Motorola
+  
+ Wireless access systems
+Fiber optic transmission equipment
+Cellular base stations
+Storage Area Network equipment
+Data encryption, network servers
+Cellular base stations
+ 
+Video, Audio and Graphics Imaging
+  
+ 
+Loronix
+Samsung
+Sony
+  
+ 
+Video imaging equipment
+Flat panel display controllers
+Industrial video cameras
+ 
+Military & Aerospace Systems
+  
+ General Dynamics
+DY-4
+L-3 Communications
+BAE Systems
+Honeywell
+  
+ Military communications equipment
+VME-based computer systems
+Aircraft data recorders
+Military flight controls
+Aircraft navigation and flight controls
+ 
+
+ 
+
+In addition, a Chinese systems manufacturer, purchasing our products through a distributor, accounted for 14%, 3% and zero percent of sales in 2003, 2002 and 2001, respectively. This customer used our products in a high-performance computing application.
+
+In the past, there has not been a predictable seasonal pattern to our business.
+
+Sales and Technical Support
+
+We sell our products through a network of sales managers, independent sales representatives and electronics distributors in North America, Europe and Asia. In addition to our corporate headquarters in Sunnyvale, we have regional sales operations in California, Minnesota, Texas, Massachusetts, New Hampshire, North Carolina and Maryland in the United States. We also have international sales operations in Canada, India, England, Germany, China, Japan and Hong Kong. Our sales personnel and independent sales representatives are responsible for sales and applications support for a given region of responsibility generally focusing on major strategic accounts. Our customers typically order our products through our distributors; these distributors also create demand for our devices, generally focusing on customers who are not directly served by our sales managers. 
+
+7
+
+
+
+--------------------------------------------------------------------------------
+
+
+Currently, we have two distributors in North America, and a network of more than seventeen distributors throughout Europe and Asia to support our international business. These firms work with our regional sales managers in discovering new opportunities, providing technical support and other value-added services. 
+
+We provide systems manufacturers with comprehensive technical support, which we believe is critical to remaining competitive in the markets we serve. Our factory-based and distributor applications support organizations provide pre-sales and on-site technical support to customers. 
+
+Competition
+
+The semiconductor industry is intensely competitive and is characterized by constant technological change, rapid rates of product obsolescence and price erosion. A number of companies offer products that compete with one or more of our products. Our existing competitors include suppliers of conventional standard products, such as PLX Technology; suppliers of CPLDs including Lattice Semiconductor and Altera; suppliers of FPGAs, particularly Xilinx and Actel; and suppliers of embedded processors, such as Integrated Device Technology and Motorola. Xilinx and Altera dominate the programmable logic market and have substantially greater revenue, market presence and financial resources, than Actel, Lattice or us. Xilinx dominates the FPGA segment of the market while Altera dominates the CPLD segment of the market. As we introduce additional ESPs, we will also face competition from standard product manufacturers who are already servicing or who may decide to enter the markets addressed by these ESP devices. In addition, we expect significant competition in the future from major domestic and international semiconductor suppliers and from suppliers of products based on new or emerging technologies. Increased competition may result in price reductions, reduced gross margins and loss of market share, any one of which could seriously harm our business. 
+
+We believe that important competitive factors in our market are length of development cycle, price, performance, installed base of development systems, power consumption, adaptability of products to specific applications, ease of use and functionality of development system software, reliability, technical service and support, wafer fabrication capacity and sources of raw materials, market presence, financial strength and intellectual property protection. 
+
+Research and Development
+
+Our future success will depend to a large extent on our ability to rapidly develop and introduce new products and enhancements to our existing products that meet emerging industry standards and satisfy changing customer requirements. We have made and expect to continue to make substantial investments in research and development and to participate in the development of new and existing industry standards. 
+
+As of December 31, 2003, our research and development staff consisted of 57 employees working primarily in three locations: Canada, India and Sunnyvale. 
+
+·       Our process engineering group develops our proprietary ViaLink wafer manufacturing process, oversees product manufacturing and process development with our third-party foundries, and is involved in ongoing process improvements to increase yields and optimize device characteristics. 
+
+·       Our FPGA design engineering group develops high-performance programmable systems and analog circuits that can be used stand-alone or combined with high value dedicated functions to form ESP products. 
+
+·       Our ASSP design engineering group develops or integrates dedicated IP functions that are combined with a programmable system to produce ESP products. 
+
+8
+
+
+
+--------------------------------------------------------------------------------
+
+
+·       Our FPGA software group develops the design libraries, interface routines and place and route software that allows our customers to use third-party design environments to develop designs for our programmable systems and subsystems. 
+
+·       Our embedded systems group develops the software required to program and use our MIPS based products. 
+
+Manufacturing
+
+We have established close relationships with third-party manufacturers for our wafer fabrication, package assembly, test and programming requirements in an effort to ensure stability in the supply of our products and focus our internal efforts on product design and sales. 
+
+We currently outsource our wafer manufacturing to Cypress Semiconductor Corporation, Taiwan Semiconductor Manufacturing Company, or TSMC, Samsung Semiconductor, Inc. and Tower Semiconductor Ltd. Cypress manufactures our pASIC1 and pASIC2 product families using a three-layer metal, 0.65 micron CMOS process on six-inch wafers. Our Cypress agreement provides for a guaranteed capacity availability through December 2005. TSMC manufactures our pASIC3, QuickRAM and QuickPCI product families using a four-layer metal, 0.35 micron CMOS process. TSMC also manufactures our Eclipse and other ESP products using a five-layer metal, 0.25 micron process on eight-inch wafers. Samsung manufactures our ASSP products. We purchase products from TSMC and Samsung on a purchase order basis. Outsourcing of wafer manufacturing enables us to take advantage of these suppliers’ high-volume economies of scale. We may establish additional foundry relationships as such arrangements become economically useful or technically necessary.
+
+We have entered into a Share Purchase Agreement, a Foundry Agreement and other related agreements, as amended, with Tower. We have invested $21.3 million in Tower as part of Tower’s efforts to build and equip a new wafer fabrication facility. Tower has developed manufacturing capability for our proprietary ViaLink technology, and supplies us with a guaranteed portion of the new fabrication facility’s available wafer capacity at competitive pricing. In 2003, the new fabrication facility began producing 200-mm wafers in geometries of 0.18 micron, using advanced CMOS technology acquired from Toshiba. Tower manufactures our Eclipse II and QuickMIPS product families, and certain QuickPCI devices. Our Tower agreement provides for a guaranteed capacity availability through 2010.
+
+We outsource our product packaging, test and programming primarily to Amkor Technology, Inc. and Advanced Semiconductor Engineering, or ASE. 
+
+Employees
+
+As of December 31, 2003, we had a total of 160 employees worldwide. We believe that our future success will depend in part on our continued ability to attract, hire and retain qualified personnel. None of our employees are represented by a labor union, and we believe our employee relations are favorable. 
+
+Intellectual Property
+
+Our future success and competitive position depend upon our ability to obtain and maintain the proprietary technology used in our principal products. We hold 95 U.S. patents and have 5 pending applications for additional U.S. patents containing claims covering various aspects of programmable integrated circuits, programmable interconnect structures and programmable metal devices. In Europe and Asia, we have been granted a total of three patents and have a total of six patent applications pending. Our issued patents expire between 2009 and 2021. We have also registered seven trademarks with the U.S. Patent and Trademark Office. 
+
+9
+
+
+
+--------------------------------------------------------------------------------
+
+
+From time to time, we receive letters alleging patent infringement or inviting us to take a license to other parties’ patents. We evaluate these letters on a case-by-case basis. Offers such as these may lead to litigation if we reject the opportunity to obtain the license or reject the other party’s demands. 
+
+Off-Balance Sheet Arrangements
+
+We do not maintain any off-balance sheet partnerships, arrangements or other relationships with unconsolidated entities or others, often referred to as structured finance or special purpose entities, which are established for the purpose of facilitating off-balance sheet arrangements or other contractually narrow or limited purposes. 
+
+Executive Officers and Directors 
+
+The following table sets forth certain information concerning our current executive officers and directors as of February 27, 2004: 
+
+Name
+  
+ Age
+  
+ Position
+ 
+E. Thomas Hart
+  
+ 62
+  
+ Chairman, President and Chief Executive Officer
+ 
+Hua-Thye Chua
+  
+ 68
+  
+ Vice President, Process Technology and Director
+ 
+Carl M. Mills
+  
+ 49
+  
+ Vice President, Finance and Chief Financial Officer
+ 
+Timothy Saxe
+  
+ 48
+  
+ Vice President, Engineering
+ 
+Jeffrey D. Sexton
+  
+ 42
+  
+ Vice President, Worldwide Sales
+ 
+Reynold W. Simpson
+  
+ 55
+  
+ Senior Vice President, Chief Operating Officer
+ 
+Arthur O. Whipple
+  
+ 55
+  
+ Vice President, Business Development
+ 
+Ronald D. Zimmerman
+  
+ 55
+  
+ Vice President, Administration
+ 
+Donald P. Beadle
+  
+ 68
+  
+ Director
+ 
+Michael J. Callahan
+  
+ 68
+  
+ Director
+ 
+Alan B. Lefkof
+  
+ 51
+  
+ Director
+ 
+Henry C. Montgomery
+  
+ 68
+  
+ Director
+ 
+Gary H. Tauss
+  
+ 49
+  
+ Director
+ 
+
+ 
+
+E. Thomas Hart has served as our President, Chief Executive Officer and a member of our Board of Directors since June 1994, and as our Chairman since April 2001. Prior to joining QuickLogic, Mr. Hart was Vice President and General Manager of the Advanced Networks Division at National Semiconductor Corporation where he worked from September 1992 to June 1994. Prior to joining National Semiconductor, Mr. Hart was a private consultant from February 1986 to September 1992 with Hart Weston International, a technology based management consulting firm. Prior experience includes senior level management responsibilities in semiconductor operations, engineering, sales and marketing with several companies including Motorola, Inc., an electronics provider and National Semiconductor. Mr. Hart holds a B.S.E.E. from the University of Washington.
+
+Hua-Thye Chua,a co-founder of QuickLogic, has served as a member of our Board of Directors since QuickLogic’s inception in April 1988. Effective February 27, 2004, Mr. Chua resigned as an active director and became Director Emeritus of QuickLogic. Since December 1996, Mr. Chua has served as our Vice President, Process Technology. Prior to December 1996, Mr. Chua held various positions at QuickLogic including Vice President of Technology Development. During the prior 25 years, Mr. Chua worked at several semiconductor manufacturing companies, including Fairchild Semiconductor International, Inc., 
+
+10
+
+
+
+--------------------------------------------------------------------------------
+
+
+Intel Corporation and Monolithic Memories, Inc. Mr. Chua holds a B.S.E.E. from Ohio University and an M.S.E.E. from the University of California, Berkeley.
+
+Carl M. Millshas served as our Vice President, Finance and Chief Financial Officer since August 2002. From November 2000 to July 2002, Mr. Mills was Vice President of Finance and Chief Financial Officer of AltoWeb, Inc., a software company. From November 1987 to September 2000, Mr. Mills held several positions, most recently Vice President of Finance and Chief Financial Officer, at WaferScale Integration, Inc., a producer of peripheral integrated circuits. Mr. Mills holds a B.S. degree and an M.B.A. degree from Santa Clara University.
+
+Timothy Saxe joined QuickLogic in May 2001 and has served as our Vice President, Engineering since November 2001. From November 2000 to February 2001, Mr. Saxe was Vice President of FLASH Engineering at Actel Corporation, a semiconductor manufacturing company. Mr. Saxe joined GateField Corporation, a design verification tools and services company formerly known as Zycad, in June 1983 and was a founder of their semiconductor manufacturing division in 1993. Mr. Saxe became GateField’s Chief Executive Officer in February 1999 and served in that capacity until GateField was acquired by Actel in November 2000. Mr. Saxe holds a B.S.E.E. degree from North Carolina State University, and an M.S.E.E. and a Ph.D. in electrical engineering from Stanford University.
+
+Jeffrey D. Sexton has served as our Vice President, Sales since August 2001. Between January 1995 and August 2001, he held several positions at National Semiconductor Corporation including Director of Distribution, Regional Sales Manager, Cisco Systems Global Account Manager and OEM Sales Engineer. Mr. Sexton holds a B.S.E.E. degree from Wright State University in Dayton, OH.
+
+Reynold W. Simpson joined QuickLogic in August 1997 and has served as our Senior Vice President and Chief Operating Officer since October 2000. From February 1996 to July 1997, Mr. Simpson was Vice President of Manufacturing at GateField Corporation, a design verification tools and services company formerly known as Zycad. From February 1989 to February 1996 Mr. Simpson held various positions at LSI Logic Corporation, a semiconductor manufacturing company, including Operations Manager and Quality Director. Mr. Simpson holds a Mechanical Engineering Certificate from the Coatbridge Polytechnic Institute in Scotland, a degree in Technical Horology (mechanical engineering) from the Barmulloch Polytechnic Institute in Scotland and studied for a degree in electronic engineering at the Kingsway Polytechnic Institute in Scotland.
+
+Arthur O. Whipple joined QuickLogic in April 1998 and is currently our Vice President, Business Development. He has held several positions at QuickLogic including Vice President and General Manager, Logic Products, and Chief Financial Officer. From April 1994 to April 1998, Mr. Whipple was employed by ILC Technology, a lighting device manufacturer, in various positions including Vice President of Engineering and Vice President of Finance and Operations of its subsidiary, Precision Lamp. From February 1990 to April 1994, Mr. Whipple served as the President of Aqua Design, a privately held provider of water treatment services and equipment. Mr. Whipple holds a B.S.E.E. from the University of Washington and an M.B.A. from Santa Clara University.
+
+Ronald D. Zimmerman has served as our Vice President, Administration since October 1996. From August 1988 to October 1996, Mr. Zimmerman was employed by National Semiconductor Corporation in various positions including Human Resources Director of the Analog Products Group, Human Resources Director of the corporate technology and quality/reliability organizations and the Human Resources Director of Corporate Administration. Mr. Zimmerman holds a B.A. in Sociology and Psychology and an M.A. in Psychology from San Jose State University.
+
+Donald P. Beadle has served as a member of our Board of Directors since July 1997. Since June 1994, Mr. Beadle has been President of Beadle Associates, a consulting firm. From October 1994 to December 1996, Mr. Beadle was a consultant for Asian business development at National Semiconductor 
+
+11
+
+
+
+--------------------------------------------------------------------------------
+
+
+Corporation. At National Semiconductor, he was Managing Director, Southeast Asia from 1993 until June 1994, Vice President of Worldwide Marketing and Sales, International Business Group from 1987 until 1993, and Managing Director, Europe from 1982 to 1986. Mr. Beadle was employed by National Semiconductor in executive sales and marketing positions for 34 years until June 1994, at which time he was Executive Vice President, Worldwide Sales and Marketing. Mr. Beadle serves on the board of ASAT Holdings Limited, which files reports pursuant to the Securities and Exchange Act of 1934, as amended (the “Exchange Act”), and is a provider of semiconductor assembly and testing services. Mr. Beadle received his technical education at the University of Connecticut and the Bridgeport Institute of Engineering.
+
+Michael J. Callahan has served as a member of our Board of Directors since July 1997. Since January 2004, Mr. Callahan has been the Executive Chairman of Teknovus, Inc., a privately held company specializing in communications chipsets for subscriber access networks. From March 1990 through his semi-retirement in September 2000, Mr. Callahan served as Chairman of the Board, President and Chief Executive Officer of WaferScale Integration, Inc., a producer of peripheral integrated circuits. From 1987 to March 1990, Mr. Callahan was President of Monolithic Memories, Inc., a semiconductor manufacturing company. During this period Monolithic Memories became a subsidiary of Advanced Micro Devices, Inc. where Mr. Callahan was Senior Vice President of Programmable Products. From 1978 to 1987 Mr. Callahan was employed by Monolithic Memories in various positions including Vice President of Operations and Chief Operating Officer. Prior to joining Monolithic Memories, he worked at Motorola Semiconductor for 16 years where he was Director of Research and Development as well as Director of Linear Operations. Mr. Callahan also serves on the board of Virtual Silicon Technology, Inc. During 2003, Mr. Callahan served on the Board of Integrated Telecom Express, Inc., which filed reports pursuant to the Exchange Act and was a provider of integrated software and circuit products. Mr. Callahan holds a B.S.E.E. from the Massachusetts Institute of Technology.
+
+Alan B. Lefkof has served as a member of our Board of Directors since July 2002. Mr. Lefkof has been the Chief Executive Officer of Netopia, Inc., a broadband equipment, software and service provider which files reports pursuant to the Exchange Act, since 1994, and has been President and a director of Netopia since 1991. Prior to joining Netopia, Mr. Lefkof served as President of GRiD Systems, a laptop computer manufacturer, and as a management consultant at McKinsey & Company. Mr. Lefkof received a B.S. in computer science from the Massachusetts Institute of Technology and an M.B.A. from Harvard Business School.
+
+Henry C. Montgomery has served as member of our Board of Directors since May 2003.  Since 1980, he has been the Chairman of the Board of Montgomery Professional Services Corporation, a management consulting and financial services firm. From January 2000 to March 2001, Mr. Montgomery served as Executive Vice President, Finance and Administration and Chief Financial Officer of Indus International, Inc., which files reports pursuant to the Exchange Act and is engaged in enterprise asset management systems. From May to September 1999, he served as interim Executive Vice President of Finance and Administration and from November 2001 to December 2002 as a director of Spectrian Corporation, which filed reports pursuant to the Exchange Act and was a wireless telecom infrastructure company. Mr. Montgomery also serves as a director of Swift Energy Company, which files reports pursuant to the Exchange Act, and is Chairman of Catalyst Semiconductor, Inc., which files reports pursuant to the Exchange Act. He holds a B.A. in Economics from Miami University in Oxford, Ohio.
+
+Gary H. Tauss has served as a member of our Board of Directors since June 2002. Since September 2002, Mr. Tauss has been President, Chief Executive Officer and a director of LongBoard, Inc., a provider of voice-over-IP infrastructure software solutions. From August 1998 until June 2002, Mr. Tauss was President, Chief Executive Officer and a director of TollBridge Technologies, Inc., a developer of voice-over broadband products. Prior to co-founding TollBridge, Mr. Tauss was Vice President and General Manager of Ramp Networks, Inc., a provider of Internet security and broadband access products, 
+
+12
+
+
+
+--------------------------------------------------------------------------------
+
+
+with responsibility for engineering, customer support and marketing. Mr. Tauss earned both a B.S. and an M.B.A. at the University of Illinois.
+
+Executive Officers
+
+Our executive officers are elected by, and serve at the discretion of, our board of directors. There are no family relationships among our directors and officers.
+
+Additional Information
+
+Our annual reports on Form 10-K, quarterly reports on Form 10-Q, current reports on Form 8-K, and amendments to those reports are made available on our website at www.quicklogic.com free of charge as soon as reasonably practicable after such reports are furnished to the Securities and Exchange Commission.

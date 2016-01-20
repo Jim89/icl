@@ -1,0 +1,511 @@
+ITEM 1.     BUSINESS 
+
+ 
+
+This report contains forward-looking statements within the meaning of Section 27A of the Securities Act of 1933 and Section 21E of the Securities Exchange Act of 1934. These statements include, among other things, statements concerning our future operations, financial condition and prospects, and business strategies. The words “believe,” “expect,” “anticipate” and other similar expressions generally identify forward-looking statements. Investors in our common stock are cautioned not to place undue reliance on these forward-looking statements. These forward-looking statements are subject to substantial risks and uncertainties that could cause our future business, financial condition, or results of operations to differ materially from our historical results or currently anticipated results. Investors should carefully review the information contained under the caption “Factors That May Affect Our Business, Financial Condition, and Future Operating Results,” beginning on page      of the section of this report entitled “Management’s Discussion and Analysis of Financial Condition and Results of Operations,” and elsewhere in, or incorporated by reference into, this report. 
+
+ 
+
+Overview 
+
+ 
+
+We design, develop and market high performance, highly integrated and cost efficient semiconductor image sensor devices. Our main product, an image sensing device called the CameraChip, is used to capture an image in a wide variety of consumer and commercial mass market applications including digital still cameras, cell phones, security and surveillance cameras and video game consoles. Our CameraChips are manufactured using the CMOS process, the most widely utilized method of producing modern integrated circuits. 
+
+ 
+
+We have designed our CameraChip as a single chip CMOS solution that integrates a number of distinct functions including image capture, image processing, color processing and the conversion and output of a fully processed image or video stream. Unlike some competing CMOS image sensors, which require multiple chips to achieve the same functions, we are able to integrate nearly all camera functions into a single chip. The resulting image or video stream can be displayed on either digital or analog equipment, such as computers or televisions. Manufacturers of products that include cameras can use our CameraChips without the need to dedicate additional development resources to image sensor functionality and integration. We believe that our highly integrated CameraChips enable camera device manufacturers to build high quality camera products that are smaller, consume less power, cost less and are less complex and more reliable than cameras using either traditional CCDs or multiple chip CMOS image sensors. 
+
+ 
+
+Our CameraChips are currently used in a number of consumer applications such as digital still and video cameras, cell phones, personal digital assistants, personal computers and toys and games, including interactive video games. In addition, our CameraChips have been integrated into a number of commercial and home security and surveillance applications including child monitors and door phones. We are continuing to target emerging mass market applications that incorporate camera devices such as automobiles, personal identification systems and medical imaging devices. 
+
+ 
+
+Since our inception, we have shipped over 30 million CameraChips for use in a wide variety of consumer and commercial applications. 
+
+ 
+
+Corporate Background 
+
+ 
+
+We were incorporated in California in May 1995. In March 2000, we reincorporated in Delaware. Our principal executive offices are located at 1341 Orleans Drive, Sunnyvale, California 94089-1136, our telephone number at that location is (408) 542-3000 and our website address is www.ovt.com. The contents of our website are not incorporated by reference into this Annual Report on Form 10-K. 
+
+ 
+
+1 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+We make our annual report on Form 10-K, quarterly reports on Form 10-Q and current reports on Form 8-K, and amendments to such reports, available free of charge through our web site as soon as reasonably practicable after we electronically file such material with, or furnish it to, the United States Securities and Exchange Commission, at the following address: www.ovt.com. The information in, or that can be accessed through, our web site is not part of this report. 
+
+ 
+
+Industry background 
+
+ 
+
+Image Sensor Technologies 
+
+ 
+
+Digital imaging enables the capture of still or moving images without the use of photographic, or chemical-based, film. The two most common electronic image sensors, both developed in the late 1960s, are CCD and CMOS image sensors. Both sensors are silicon-based semiconductor devices that convert light to an electric charge for display or storage. 
+
+ 
+
+CMOS image sensors are typically less expensive to produce and consume significantly less power than CCDs, but until recently the image quality of CMOS image sensors has lagged that of CCDs. Due to the historically superior image quality of CCDs, they became the standard for digital imaging and have been used in a wide variety of applications ranging from video camcorders to numerous industrial, scientific and medical imaging applications. Until the last few years, CMOS image sensors were primarily used for relatively lower-cost applications for which high image quality was not a priority, such as in PC video cameras. 
+
+ 
+
+In recent years, advances in semiconductor manufacturing processes and design techniques have led to improvements in CMOS image sensor performance and image quality. These advances have resulted in smaller size circuits and better current control, making it possible to design CMOS image sensors that provide high image quality. As a result, CMOS image sensors have become a compelling alternative to CCDs for a wide range of uses, particularly in consumer photography and emerging camera market segments, such as camera-equipped cell phones and personal digital assistants, where high image quality, low power consumption, small size and low cost are increasingly important considerations. 
+
+ 
+
+CMOS Sensors Versus CCD Sensors 
+
+ 
+
+One of the critical differences between CCD and CMOS image sensors is the way in which each processes an electrical charge, or a signal. Cameras employing CCDs require an additional integrated circuit called an analog-to-digital converter, or ADC, to convert a signal from analog to digital format. In contrast, image sensors based on the CMOS manufacturing process can integrate a number of component functions on one device, enabling all of the conversion circuitry to be incorporated onto one sensor chip. This high level of integration reduces the overall number of components and system complexity. 
+
+ 
+
+Single Chip Versus Multiple Chip CMOS Image Sensors 
+
+ 
+
+Most CMOS image sensor-based systems are made up of two integrated circuits: the CMOS image sensor itself and a separate digital signal processor, or DSP. A few CMOS image sensor vendors have introduced “camera on a chip” solutions, which incorporate not only the ADC, but also additional signal processing, formatting and encoding circuitry all on a single chip. However, many of these single chip solutions are appropriate for only lower quality applications and, if used in higher quality applications, require a separate DSP for image enhancement. 
+
+ 
+
+Image quality, power consumption, size requirements and cost are the primary considerations of manufacturers when considering an image sensor for a particular application. However, with the rising popularity of digital photography and the continuing consumer demand for ever-smaller camera-enabled devices, size of product has become an increasingly important consideration. Smaller form factors create numerous challenges 
+
+ 
+
+2 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+for solutions based on either CCDs, which can require upwards of eight integrated devices, or multiple chip CMOS image sensors, which require at least two integrated devices. Single chip CMOS image sensor solutions typically occupy approximately half of the space required by these multiple chip solutions, while providing equivalent or even superior image quality, with lower power consumption and at a lower overall cost. 
+
+ 
+
+The following illustrates the functionality of the respective integrated circuits that make up a CCD image sensor, a multiple chip CMOS image sensor, and a single-chip CMOS image sensor: 
+
+ 
+
+LOGO 
+
+ 
+
+Market Opportunity 
+
+ 
+
+According to iSuppli Corporation’s, “Consumer Platforms Topical Report Q1 2003”, the worldwide image sensor market is projected to grow from 163 million units in 2002 to 380 million units in 2007, representing a 
+
+ 
+
+3 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+five year compound annual unit growth rate of 18.4%. For this same period, CMOS image sensors are expected to grow from approximately 36 million units, or 22% of the total market, to 209 million units, or 55% of the total market representing a compounded annual growth rate of 42.2%. 
+
+ 
+
+Two of the markets expected to provide much of the growth for CMOS image sensors are digital still cameras and camera-equipped cell phones. According to iSuppli, CMOS image sensors used in digital still cameras are expected to grow from approximately 8 million units in 2002, or 36% of the total digital still camera market, to 42 million units in 2007, or 76% of the total digital still camera market, a five year compounded annual growth rate of 39.8%. iSuppli also forecasts that CMOS image sensors used in cell phone cameras are expected to grow from approximately 14 million units in 2002, or 70% of the total cell phone camera market, to 99 million units in 2007, or 88% of the total cell phone camera market, a five year compounded annual growth rate of 47.9%. 
+
+ 
+
+As device manufacturers become increasingly aware of the numerous advantages associated with single chip CMOS image sensor solutions, we believe there exists a significant opportunity for mass market applications where high image quality, accelerated time to market, efficient design and manufacturability, smaller size, lower power consumption and reduced cost are key factors in achieving broad market acceptance and maintaining a competitive advantage. 
+
+ 
+
+Our Solution 
+
+ 
+
+Our highly integrated CameraChips have been specifically designed to be cost efficient and to provide high image quality. By integrating a number of distinct functions including image capture, image processing, color processing and the conversion and output of images onto a single CMOS chip that can be displayed on either digital or analog equipment, our CameraChip offers camera device manufacturers a number of benefits, including the following: 
+
+ 
+
+High Image Quality And Resolution.    We have developed a number of proprietary methods for enhancing image quality by increasing our CameraChip’s sensitivity to light while significantly reducing the signal to noise ratio that negatively impacts the quality of the image. This allows us to reduce the size of each individual pixel and thereby increase the number of pixels in a given chip. The result is a portfolio of several high resolution CameraChips currently ranging from a 1.3 megapixel product to our recently introduced 3.1 megapixel product, all of which utilize the same general lens. Additionally, we are able to produce CameraChips at lower resolutions with smaller pixel arrays, which serves to reduce the overall cost of the CameraChip and its supporting components, such as the lens. 
+
+ 
+
+Lower Cost.    The highly integrated design of the CameraChip enables our customers to build cameras that are generally less expensive than those using CCD technology or multiple chip CMOS image sensors. This cost advantage is driven, in large part, by the fact that we have been able to achieve a high level of functionality in a single chip, as opposed to competitive solutions that require additional components or chips to achieve the same level of functionality. For example, we integrate all of the image processing componentry on a single chip, eliminating the requirement for a separate DSP. Additionally, our CameraChip increases reliability in image sensor devices as our integrated solution reduces the number of parts subject to failure. 
+
+ 
+
+Smaller Size and Lower Power Consumption.    We believe that our highly integrated solution enables our customers to develop cameras that are smaller in size and use less power than cameras based on CCD or multiple chip CMOS image sensor technology. For portable applications, such as cell phones, size and power consumption are critical design considerations for device manufacturers. Because our CameraChip integrates all of the image capture and signal processing circuitry on one chip, it consumes less board space in the device, enabling our customers to reduce the overall size or integrate additional functionality. In addition, because CCDs and multiple chip CMOS image sensors have a higher component count, they typically have lower battery performance. We believe that the size and power characteristics of our CameraChip will enable us to penetrate 
+
+ 
+
+4 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+new mass market applications as device manufacturers realize that they can integrate complete camera functionality in their products without sacrificing other key functions or performance. 
+
+ 
+
+Accelerated Time to Market.    The highly integrated nature of our CameraChip simplifies the design of cameras and allows our customers to shorten their product design cycles. This provides our consumer electronics and cell phone customers with a critical competitive differentiator as time to market is typically a major determinant of product success and longevity. We also work closely with our customers to accelerate product development cycles by providing camera reference designs, engineering design review services and customer product evaluation testing and debugging services. In addition, our manufacturing and production processes have been designed to allow us to quickly ramp production volumes to meet increased customer demand, which is particularly important in high volume markets such as digital still cameras and cell phone cameras. 
+
+ 
+
+Streamlined Manufacturing and Production.    Our CameraChips are well suited for production using relatively simple, low cost, large-scale manufacturing techniques. In general, competing CCDs and multiple chip CMOS image sensors must be individually calibrated to match companion components in order to maximize image quality due to the inconsistency of the image output from one image sensor to the next. Because our CameraChips yield consistent quality, our customers typically do not need to dedicate specialized resources for functional testing, thereby significantly streamlining the manufacturing process. 
+
+ 
+
+Ease of Use.     Due to our single chip CMOS design which outputs video in industry standard formats directly from the chip, such as NTSC/PAL for analog video and YUV for digital video, our CameraChips can be quickly and easily integrated into products targeted at numerous mass markets. This is especially important in emerging markets where video imaging expertise has not been fully developed, such as in cell phones and PDAs. Competing solutions from CCDs or multiple chip CMOS manufacturers require that camera device manufacturers dedicate internal development resources to imaging processing and away from core product design. Our CameraChips perform all necessary image processing functions in a single chip, greatly reducing the complexity of design and the time required to bring a camera-enabled product to market. 
+
+ 
+
+Strategy 
+
+ 
+
+Our objective is to be the leading supplier of CMOS image sensors for numerous mass market applications. 
+
+ 
+
+Maintain and Extend Technology Leadership.    We intend to maintain and extend our position as a leader in CMOS image sensor technology by continuing to develop our expertise in mixed-signal implementation, advanced pixel design, feature integration, and manufacturing processes and controls, including automated testing. Our image sensor integrates both the sensor and the signal processor into a single chip. As a result, we believe our CameraChips offer camera device manufacturers discernable advantages in terms of size, power consumption, cost, and ease of design. In addition, we have successfully migrated full volume production from .8µm, .6µm, .5µm, .45µm, .25µm to .18µm process geometries, which enables us to increase our image sensor’s resolution while decreasing overall chip size. Moreover, we have successfully developed sensor technology from 100,000 pixels to 3.1 megapixels, underscoring our ability to deliver solutions to address changing market demands. We are committed to continue focusing on increasing image resolutions and reducing the overall size of the CameraChip’s array. 
+
+ 
+
+Leverage Expertise Across Multiple Mass Market Applications.    We intend to continue to focus on developing our CameraChips for multiple mass market applications. To date we have shipped over 30 million CameraChips. We believe each mass market successfully penetrated by our integrated solution strengthens our position as a leading provider of CMOS image sensors. We expect that additional markets will emerge as camera functionality becomes a standard feature in a wider variety of consumer, commercial and industrial applications. In the past, we have leveraged our expertise in certain end markets to expand into emerging mass market applications for our CameraChips. For example, we have applied our experience and success in reducing pixel size for high resolution digital still camera markets to develop high resolution CameraChips for cell phone applications. Other emerging markets we are focusing on include automobiles and interactive toys and games. 
+
+ 
+
+5 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+Further Develop Close Customer Relationships.    We intend to enhance our customer relationships by continuing to collaborate with our customers on the design and specification of their products. We work with customers at various stages of the product development cycle, including strategic decision-making, new product design and replacement design to help them develop a logical technology migration path and to ensure that our products meet their future design needs. By working with our customers in this manner, we believe we can better anticipate their future design needs and increase the likelihood that they will incorporate our CameraChips into their products. 
+
+ 
+
+Continue to Develop Our Proprietary Technology to Maintain Competitive Advantage.    We intend to continue to develop proprietary intellectual property to maintain a competitive advantage. For example, we have developed a proprietary testing process that enables us to achieve increased yields and reduced capital expenditures. Additionally, we have developed a variety of proprietary technologies that expand the utility of our CameraChip solutions. For example, our VarioPixel technology enables us to enhance the low light video capabilities of our high resolution CameraChips by manipulating multiple pixels to act as a single pixel in order to improve the chip’s overall performance. CameraChips that incorporate this technology can provide significantly improved low light performance at video resolutions giving consumers improved LCD preview capabilities and enhanced video capture. In addition, we have produced CameraChips capable of generating useable data in both low light and bright light conditions simultaneously. This high dynamic range technology enables the use of CameraChips in applications generally not suited for image sensors such as in automobiles, security applications and personal identification systems. 
+
+ 
+
+Increase our Market Presence.    We intend to increase our visibility and penetration into new product designs by collaborating with OEMs, VARs and distributors and by partnering with other companies that offer complementary and supporting technologies. In certain instances we will provide design services to our contract manufacturing partners, enabling them to increase their overall value-add through the production of highly tailored end products, which we believe will increase the likelihood that they will recommend the use of our products to branded manufacturers. In addition, we will team with companies that offer complementary and supporting technologies to integrate our products with theirs for use in the reference designs that they promote to manufacturers. As a result, we believe that we are able to provide our customers with valuable design and marketing references. 
+
+ 
+
+Products 
+
+ 
+
+Our products have a variety of features, including: 
+
+ 
+
+Product Features 
+
+
+--------------------------------------------------------------------------------
+  
+CMOS CameraChip
+    Black and white or color
+ 
+  
+Resolutions
+    Low resolution
+
+Medium resolution
+
+High resolution
+ 
+  
+Output signal
+    Analog, for television, digital, for computers & other digital devices
+ 
+  
+Operating voltage
+    5 volt, 3 volt, or 2.7 volt
+ 
+  
+Optical lens size
+     1/7,  1/5,  1/4,  1/3 or  1/2 inch format
+ 
+  
+Interface chips
+    For connecting to computers & other devices
+ 
+  
+Software drivers
+      
+  
+•     Standard operating systems
+    Windows, Linux and MacOS
+ 
+  
+•     Embedded systems
+    Symbian, Palm OS, Windows Embedded and Windows CE
+ 
+
+--------------------------------------------------------------------------------
+
+ 
+
+6 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+We provide companion chips used to connect our CameraChips to various interfaces, including the universal serial bus, or USB, a connection which allows add-on devices to be connected to personal computers and other industry standard interfaces. Additionally, we provide companion chips that perform compression and standardized still photo and digital image formats such as JPEG and Motion JPEG. 
+
+ 
+
+We also design and develop standard software drivers for Microsoft Windows, Linux and MacOS, as well as embedded operating systems such as Windows Embedded, Windows CE, Symbian and PalmOS. These software drivers accept the image data being received from the USB, provide the data decompression if required and manage interface protocols with the camera. These drivers have been designed for speed and flexibility and allow easy customization of the user interface. 
+
+ 
+
+Customers 
+
+ 
+
+We sell directly to original equipment manufacturers, or OEMs, and value added resellers, or VARs, and indirectly through distributors. OEMs include branded camera device manufacturers and contract manufacturers. During fiscal 2003, we shipped approximately 14.8 million CameraChips as compared to approximately 6.0 million CameraChips during fiscal 2002. 
+
+ 
+
+In fiscal 2003, approximately 61% of our revenues were derived from OEMs and VARs. In fiscal 2003, our only OEM or VAR that accounted for more than 10% of our revenues was Primax Electronics, based in China, which accounted for approximately 14% of our revenues in such fiscal year. Primax is a supplier to Motorola. 
+
+ 
+
+In fiscal 2003, approximately 32% of our revenues were derived from distributors. In fiscal 2003, our only distributor customer that accounted for more than 10% of our revenues was World Peace Industrial headquartered in Taiwan, which accounted for approximately 21% of revenues in such fiscal year. Fiscal 2003 sales to World Peace include purchases by World Peace’s subsidiary, GainTune, based in Hong Kong. 
+
+ 
+
+Sales and Marketing 
+
+ 
+
+We sell our products through a direct sales force and indirectly through distributors. As of April 30, 2003, our sales and marketing organizations had a total of 41 employees. We also have 5 independent distributors, 4 of which are located outside the United States. Sales outside of the United States represented 84% of revenues in fiscal 2001, 74% of revenues in fiscal 2002 and 94% of revenues in fiscal 2003. We expect that sales outside of the United States will continue to account for a significant portion of our revenues. In addition to our standard product marketing, we also participate in tradeshows and other industry events to promote our CameraChip solutions. 
+
+ 
+
+Technology 
+
+ 
+
+Analog Circuit Design 
+
+ 
+
+We have the in-house expertise to design complex analog semiconductor circuits. This in-house expertise enables us to process the video data captured in the analog domain, which has many significant advantages over digital processing. Analog processing works directly in the original image signals without the loss of data typical with conversion to digital processing. Analog circuits require considerably less space which means we can design smaller chips with far less noise caused by heat or cross talk than digital circuits. The image processing circuits take approximately 20% of the space in our typical image sensor design, leaving 80% for the image sensing array. Most CCDs and other CMOS image sensor products convert the image signal to digital as the very first step. In our digital product designs, conversion to a digital signal is the last step taken before the output step rather than the first step taken. Analog processing is the key for integrating all the functions on a single chip thereby taking advantage of the benefits of CMOS technology. 
+
+ 
+
+7 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+Mixed Analog/Digital Circuit Design 
+
+ 
+
+We have also developed in-house expertise in the technology of mixing analog and digital signals in the same semiconductor design without suffering the common problems of interference from noise caused by heat or crosstalk. We have developed a method of programming the analog processing circuits which gives our customers extensive and flexible programming capability from digitally based microprocessors and micro controllers. 
+
+ 
+
+Advanced CMOS Image Sensor Design 
+
+ 
+
+Our in-house semiconductor design engineers are skilled in the design of high speed, low power and mixed analog/digital CMOS image sensors, including advanced pixel cell structures. We use advanced design techniques to develop high speed, highly integrated semiconductors which can be fabricated using standard CMOS processes. 
+
+ 
+
+Automated Testing 
+
+ 
+
+Automated testing methods and equipment designed for conventional CMOS devices are not sufficient for testing an image sensor. In addition to testing all the normal logic and electrical functions, an optical test must be performed on the image sensor. The sensor is turned on and captures a live image which is subsequently analyzed for quality and color. Our in-house expertise has enabled us to design automatic testing equipment, specifically for CMOS image sensors. Using commercially available off-the-shelf modules and components, we have designed and developed a complete PC-based testing system that has automatic handling capability, an image source, a lighting and lens system and automatic output sorting. This low cost system is programmable so that testing criteria and testing methodology can be easily changed and replicated to meet increased production requirements. The system produces detailed reports on test results that are used for feedback to our quality control and operations department. We currently use these systems to deliver a high quality product at high production volumes. 
+
+ 
+
+Single Chip Semiconductor Design 
+
+ 
+
+Our CameraChip integrates the image capture, the image processing, the color processing and conversion and output for either television or computers. To best support standard analog television equipment, our analog CameraChips output a standard NTSC signal, a standard video format adopted by broadcasters in North America and parts of Asia, and/or PAL, a standard video format adopted by broadcasters in Europe, South America and Japan, such that no additional silicon is required to output the image directly to the television. In most cases, a camera can be developed with nothing more than supporting power circuitry and a lens. 
+
+ 
+
+To best support standard digital video equipment, our digital CameraChips output a standard digital video signal known as YUV, as well as unprocessed image data known as raw RGB. YUV is an uncompressed, fully processed video format used by standard video and computer equipment such as personal computers and digital still cameras. Raw RGB is the unprocessed color image data output directly from the sensor array and converted into a digital format. Since we fully process and enhance our video images in an analog state and then format and convert it to digital YUV as the last step in our process, we can significantly reduce the need for digital circuitry in our design. As a result, our CameraChip can easily be integrated into digital imaging products such as still cameras and camera equipped mobile phones without the need for supporting chips. If the raw digital data is needed from our CameraChip, we can also supply this unformatted, unprocessed information. 
+
+ 
+
+Research and Development 
+
+ 
+
+The internal design of our CMOS CameraChips has been done in a modular fashion. The major functions, such as the image capture, image sensor control logic, color processing, analog output, digital output and programming control, are stand-alone circuits that can rapidly be modified or used in new product developments. 
+
+ 
+
+8 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+As a result, circuit improvements are designed to transfer to each new product, to help reduce total development time and cost for new products. As of April 30, 2003, we had a total of 77 employees in research and development. 
+
+ 
+
+Intellectual Property 
+
+ 
+
+Our success and future revenue growth will depend, in part, on our ability to protect our intellectual property. We rely on a combination of patent, copyright, trademark and trade secrets, as well as nondisclosure agreements and other methods to protect various aspects of our CameraChips. As of May 31, 2003, we have been issued 24 United States patents, which expire between March 2018 and November 2022. We have also received 14 foreign patents, which expire between November 2016 and December 2022. As of May 31, 2003, we have 32 additional United States patent applications pending, and we have filed 58 foreign patents, of which 3 have been allowed. 
+
+ 
+
+From time to time, we have been subject to legal proceedings and claims with respect to such matters as patents and other actions arising out of the normal course of business. It is possible that companies might pursue litigation with respect to any claims such companies purport to have against us. The results of any litigation are inherently uncertain. In the event of an adverse result in any litigation with respect to intellectual property rights relevant to our products that could arise in the future, we could be required to obtain licenses to the infringed technology, pay substantial damages under applicable law, including treble damages if we are held to have willfully infringed, cease the manufacture, use and sale of infringing products or expend significant resources to develop non-infringing technology. Litigation frequently involves substantial expenditures and can require significant management attention, even if we ultimately prevail. 
+
+ 
+
+Manufacturing 
+
+ 
+
+Wafer Fabrication 
+
+ 
+
+Our semiconductor products are fabricated using standard CMOS processes, which permit us to engage independent wafer foundries to manufacture our semiconductors. We outsource our wafer manufacturing to TSMC and PSC. Our CameraChips are currently fabricated using a standard process at 0.18, 0.25, 0.50 and 0.60 microns. 
+
+ 
+
+In addition, Samsung has fabricated and may continue in the future to fabricate one of our interface chips. Samsung also packages these chips and performs a final test, delivering a final product that can be shipped directly to our customers. 
+
+ 
+
+Color Filter Application 
+
+ 
+
+A majority of our unit sales of CameraChips in fiscal 2003 were color CameraChips. These require a color filter to be applied to the wafer before packaging. This color filter application uses a series of masks to place red, green and blue dyes on the individual picture elements in an industry-standard Bayer pattern. As a final step, a micro lens is applied to each picture element. We outsource the application of our color filters to Toppan Printing in Japan and to TSMC in Taiwan. 
+
+ 
+
+Assembly 
+
+ 
+
+After wafer fabrication, and color filter application if required, the wafers are diced into chips, which are then assembled into packages. Our products are designed to use standard packages that are widely in use for optical sensor chips. These packages have a glass lid to allow light to pass through to the image sensor array. We rely on Kyocera and SYDI for substantially all of our ceramic chip packages, which are generally used in our higher-priced products, another service provider for our plastic chip packages, which are generally used in our 
+
+ 
+
+9 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+lower-priced product lines, and another service provider for chip scale packages, which are generally used in our product lines designed for the smallest form factor applications. 
+
+ 
+
+Testing 
+
+ 
+
+High volume product testing is a critical element of the production of CameraChips and is a substantial barrier to entry for potential entrants. Production testing equipment designed for conventional CMOS devices is not sufficient for testing image sensors because an optical image must be captured and checked in addition to checking the normal logic and electrical functions. 
+
+ 
+
+We have designed our own automated test equipment, using readily available modules and components. These testers are PC-based and have automated handling capability, a lighting and lens system, a changeable image source and automated output sorting by grade. The system is programmable so that testing criteria and methodology can be changed easily to accommodate new products or special testing requests. We believe our cost to build a system is substantially less than that of commercially available testers. We can expand our production capability by building additional systems at a low cost. 
+
+ 
+
+We use the reports from our testing machines to monitor the cause of any failure in order to determine the responsible vendor, for example a wafer fabrication, color filter application or packaging provider, and to assist with determining root causes and corrective actions. Since CameraChips are optical products, the exposure to impurities is a major concern during the color filter application and packaging process. We use test data to establish yield goals at each step of the manufacturing process and to take appropriate remedial action. 
+
+ 
+
+Currently, substantially all of our testing is done on our testing machines installed at our facility in California, although a few older products are done by hand by a third party. Prior to the end of calendar 2003, we intend to consolidate our testing operations at our Chinese subsidiary. We also expect to expand our testing capabilities through the purchase of additional automated testing equipment, which also will be located in our Chinese facility. In addition, over the next 18 months, we intend to expand the scope of our operations at our Chinese subsidiary to include other processes associated with the manufacturing of our products, such as color filter application and sensor packaging. As part of this consolidation, we will move our automated image testing equipment from the United States to our Chinese subsidiary. All manufacturing, packaging and testing of our products will occur in Asia upon completion of this consolidation, which we expect to reduce our manufacturing process cycle time and provide better logistical control. 
+
+ 
+
+Product Quality Assurance 
+
+ 
+
+We focus on product quality through all stages of the design and manufacturing process. Our designs are subjected to in-depth circuit simulation before they are committed to silicon. Test wafers are fabricated and test chips are packaged and tested before a new product is committed to production. Initial production runs are kept at a minimum until sufficient products have completed the entire manufacturing and testing process and are delivered to and approved by customers. Full production runs are committed only after customer approval. 
+
+ 
+
+We qualify each of our vendors through a series of industry standard environmental product stress tests, as well as an audit and an analysis of the subcontractor’s quality system and manufacturing capability. We also participate in quality and reliability monitoring through each stage of the production cycle by reviewing electrical parametric data from our foundries and other subcontractors. 
+
+ 
+
+Competition 
+
+ 
+
+We compete in an industry characterized by intense competition, rapid technological changes, evolving industry standards, declining average selling prices and rapid product obsolescence. We believe that the principal factors affecting competition in our markets are time to market, quality, total system design cost, and availability 
+
+ 
+
+10 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+of foundry capacity, customer support and supplier reputation. Our competition comes from CCD and CMOS image sensor manufacturers: 
+
+ 
+
+  •   CCD Image Sensor Manufacturers.    Image sensor manufacturers using CCD technology include a number of well-established companies, particularly vertically integrated camcorder and high-resolution digital still camera manufacturers. Our main competition from CCD manufacturers comes from Fuji, Matsushita, NEC, Sharp, Sony, Sanyo and Toshiba.  
+
+ 
+
+  •   CMOS Image Sensor Manufacturers.    Image sensor manufacturers using CMOS technology include a number of well established companies such as Agilent, ESS, Fujitsu, Hynix, Micron, Mitsubishi Electronic, Motorola, National Semiconductor, Samsung, Sharp, Sony, STMicroelectronics and Toshiba. In addition, we compete with a large number of smaller CMOS manufacturers including Foveon, IC Media Corporation, PixArt and Zoran.  
+
+ 
+
+Our competitors include many large domestic and international companies that have greater presence in key markets, greater access to advanced wafer foundry capacity, substantially greater financial, technical, marketing, manufacturing, distribution and other resources, broader product lines, access to large customer bases, greater name recognition, longer operating histories and more established strategic and financial relationships than we do. 
+
+ 
+
+Backlog 
+
+ 
+
+Sales are generally made pursuant to standard purchase orders. Our backlog includes only those customer orders for which we have accepted purchase orders and assigned shipment dates within the upcoming twelve months. As of April 30, 2002 and 2003, our backlog was approximately $11.7 million and $45.4 million, respectively. Although our backlog is typically filled within two to four quarters, our current backlog is subject to changes in delivery schedules and backlog may not necessarily be an indication of future revenue. 
+
+ 
+
+Employees 
+
+ 
+
+As of April 30, 2003 we had a total of 176 full-time employees, 103 located at our headquarters in Sunnyvale, California and 73 in foreign offices located in Taiwan, China, Republic of South Korea, Japan and the United Kingdom. Our future success will depend, in part, on our ability to continue to attract, retain and motivate highly qualified technical and management personnel. None of our employees are represented by a collective bargaining agreement, and we have never experienced any work stoppage. We believe that our employee relations are good. 

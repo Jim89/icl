@@ -1,0 +1,509 @@
+Item 1.  Business.
+
+ 
+
+BUSINESS
+
+ 
+
+                 Lattice Semiconductor Corporation designs, develops and markets high performance programmable logic devices, or PLDs, and related software.  Programmable logic devices are widely-used semiconductor components that can be configured by end customers as specific logic circuits, and thus enable shorter design cycle times and reduced development costs.  Our end customers are primarily original equipment manufacturers in the communications, computing, industrial, military and consumer end markets.
+
+ 
+
+                In January 2002, we acquired the field programmable gate array (“FPGA”) business of Agere Systems, Inc. (“Agere”). This acquisition increased our share of the PLD market, accelerated our entry into the FPGA segment and provided us with additional technical employees and intellectual property.  In 1999, we acquired Vantis Corporation (“Vantis”), the programmable logic device subsidiary of Advanced Micro Devices (“AMD”).  This acquisition also increased our share of the PLD market, accelerated development of new products and broadened our customer base.
+
+ 
+
+Change in Fiscal Reporting Period
+
+ 
+
+                We report based on a 52 or 53 week year ending on the Saturday closest to December 31. For ease of presentation, we have adopted the convention of using March 31, June 30, September 30 and December 31 as period end dates for all financial statement captions. In the fourth quarter of 1999, we changed our fiscal year end from March 31 to December 31. The nine month fiscal period ended January 1, 2000 is referred to as “the nine months ended December 31, 1999” or “fiscal period 1999.”
+
+ 
+
+PLD Market Background
+
+ 
+
+                Three principal types of digital integrated circuits are used in most electronic systems: microprocessors, memory and logic.  Microprocessors are used for control and computing tasks, memory is used to store programming instructions and data, and logic is employed to manage the interchange and manipulation of digital signals within a system.  Logic contains interconnected groupings of simple logical “and” and logical “or” functions, commonly described as “gates.”  Typically, complex combinations of individual gates are required to implement the specialized logic functions required for systems applications.  While system designers use a relatively small number of standard architectures to meet their microprocessor and memory needs, they require a wide variety of logic circuits in order to achieve end product differentiation.
+
+ 
+
+                Logic circuits are found in a wide range of today’s digital electronic equipment including communication, computing, industrial, military and consumer systems.  According to World Semiconductor Trade Statistics, a semiconductor industry association, logic accounted for approximately 28% of the estimated $118 billion worldwide digital integrated circuit market in 2001.  The logic market encompasses, among other segments, standard logic, custom–designed application specific integrated circuits, or ASICs, which include conventional gate-arrays, standard cells and full custom logic circuits, and PLDs.
+
+ 
+
+                Manufacturers of electronic equipment are challenged to bring differentiated products to market quickly.  These competitive pressures often preclude the use of custom–designed ASICs, which generally entail significant design risks, non-recurring costs and time delays.  Standard logic products, an alternative to custom–designed ASICs, limit a manufacturer’s flexibility to adequately customize an end system.  PLDs address this inherent dilemma.  PLDs are standard products, purchased by systems manufacturers in a “blank” state, that can be custom configured into a virtually unlimited number of specific logic functions by programming the device with electrical signals.  PLDs give system designers the ability to quickly create custom logic functions to provide product differentiation without sacrificing rapid time to market.  Certain PLD
+
+ 
+
+2
+
+
+--------------------------------------------------------------------------------
+
+
+
+ 
+
+products, including our own, are reprogrammable, meaning that the logic configuration can be modified, if needed, after the initial programming.  ISPTM PLDs, pioneered by us, extend the flexibility of standard reprogrammable PLDs by allowing the system designer to configure and reconfigure logic functions using standard power supplies and without removing the PLD from the system board.
+
+ 
+
+                According to Gartner, the PLD market was approximately $2.6 billion in 2001.  Within this market there are two main segments, complex PLD (“CPLD”) and FPGA, each representing a distinct silicon architectural approach.  In 2001, CPLD was a $0.7 billion market while FPGA was a $1.9 billion market.
+
+ 
+
+                Products based on the two alternative PLD architectures are generally optimal for different types of logic functions, although many logic functions can be implemented using either architecture.  CPLDs are characterized by a regular building block structure of wide-input logic cells, called macrocells, and use of a centralized logic interconnect scheme.  FPGAs are characterized by a narrow–input logic cell and use a distributed interconnect scheme.  FPGAs may also contain dedicated blocks of fixed circuits such as memory, high-speed interface logic or processing engines.  Although CPLDs and FPGAs are typically suited for use in distinct types of logic applications, we believe that a substantial portion of PLD customers utilize both CPLD and FPGA architectures within a single system design, partitioning logic functions across multiple devices to optimize overall system performance and cost.
+
+ 
+
+                A growing percentage of the PLD market is made up of devices that operate using 3.3–volt, or lower, power supplies.  Lower voltage PLDs benefit end users by consuming less power and providing compatibility with other advanced electronic components.
+
+ 
+
+Technology
+
+ 
+
+                We believe that our proprietary E2CMOSâ technology is the preferred process technology for CPLD products due to its inherent performance, reprogrammability and testability benefits.  E2CMOS technology, through its fundamental ability to be programmed and erased electronically, serves as the foundation for our ISP products.
+
+ 
+
+                We pioneered the development of in–system programmabilityTM which has become an industry standard feature in the PLD market.  Our ISP devices use either 5-volt or 3.3-volt programming signals and, as a result, can be configured and reconfigured by a system designer without being removed from the printed circuit board.  Standard E2CMOS PLDs require a 12-volt programming signal and therefore must be removed from the printed circuit board and programmed using specialized hardware.  Our ISP devices offer enhanced flexibility compared to standard PLDs and provide significant benefits to our customers.  Our ISP devices can allow customers to reduce design cycle times, accelerate time to market, reduce prototyping costs, reduce manufacturing costs and lower inventory requirements.  Our ISP devices can also provide customers the opportunity to perform simplified and cost-effective field reconfiguration through a data file transferred by computer disk or serial data signal.
+
+ 
+
+Products
+
+ 
+
+                We strive to offer innovative and differentiated programmable solutions based on our proprietary technology.
+
+ 
+
+CPLD  Products
+
+ 
+
+                Since 1992, we have focused on developing a leadership portfolio of CPLD products and increasing the percentage of our overall revenue derived from this attractive market.  During 2001, approximately 76% of our revenue was derived from CPLD products, as compared to 66% in calendar 1999 and essentially zero in 1992.  At present we offer the industry’s broadest line of CPLDs based on our 16 families of ispLSI® and ispMACH® products which include 75 devices.  In the future, we plan to continue to introduce new families of innovative CPLD products, as well as improve the performance and
+
+ 
+
+3
+
+
+--------------------------------------------------------------------------------
+
+
+
+ 
+
+reduce the manufacturing cost of our existing product families based on market needs.
+
+ 
+
+                Our newest CPLD product families use innovative architectures and are targeted towards the low voltage portion of the market.  We believe that our multiple families of leadership CPLD products provide us a competitive advantage in this market.  The key features of these families are described in the table below:
+
+ 
+
+CPLD Family   Operating
+Voltage   Maximum
+Speed
+(MHz)   Minimum
+Prop Delay
+(Nanoseconds)   Logic
+(Macrocells)   I/O Pins 
+IspLSI 2000VE/VL
+  
+ 3.3/2.5
+  
+ 300
+  
+ 3.0
+  
+ 32 — 192
+  
+ 32-128
+ 
+IspLSI 5000VE
+  
+ 3.3
+  
+ 180
+  
+ 5.0
+  
+ 128 — 512
+  
+ 72-256
+ 
+IspMACH 5000VG
+  
+ 3.3
+  
+ 178
+  
+ 5.0
+  
+ 768 — 1024
+  
+ 196-384
+ 
+IspMACH 4000B/C
+  
+ 2.5/1.8
+  
+ 350
+  
+ 2.5
+  
+ 32 — 512
+  
+ 30-208
+ 
+
+ 
+
+FPGA  Products
+
+ 
+
+                In 2002, we entered the FPGA market as a result of our acquisition of the FPGA business of Agere.  At present we offer over 40 FPGA devices within our three ORCAÒ product families.  These  products are targeted toward the mainstream FPGA market.  In the future, we plan to introduce new families of innovative, high performance and higher density FPGAs.  Key features of our currently available FPGA families are described in the table below:
+
+ 
+
+ 
+
+FPGA Family
+  
+ Operating
+Voltage
+  
+ Logic
+(LUTs)
+  
+ Logic
+(Gates)
+  
+ Max
+RAM (kB)
+  
+ I/O Pins
+ 
+ORCA 2
+  
+ 5.0/3.3
+  
+ 400 — 3,600
+  
+ 5K — 100K
+  
+ 58
+  
+ 44-128
+ 
+ORCA 3
+  
+ 5.0/3.3/2.5
+  
+ 1,152 — 11,552
+  
+ 18K — 340K
+  
+ 185
+  
+ 44-208
+ 
+ORCA 4
+  
+ 1.5
+  
+ 4,992 — 16,192
+  
+ 260K — 1.1M
+  
+ 404
+  
+ 128-388
+ 
+
+ 
+
+                In addition, we currently offer a groundbreaking new category of FPGA products called field programmable system chips (“FPSC”).  FPSCs, which combine generic FPGA logic and embedded intellectual property cores on a single programmable chip, offer customers the ability to quickly implement complex system-level designs in a flexible manner.  Currently, we offer four FPSC devices, the ORT82G5, ORT8850L, ORLI10G and ORLI12G, based on our ORCA 4 FPGA platform.  These devices incorporate high-speed interface protocols, offering up to 3.125 Gbs SERDES, and other application-specific circuit blocks that allow customers to develop high performance designs to implement 10 Gigabit ethernet and SONET applications within advanced communications systems.
+
+ 
+
+                We also offer two additional product families, ispGDX and ispGDXV, that target a unique aspect of the programmable logic market.  These families extend in-system programmability to the circuit board level using an innovative digital cross–point switch architecture.  Offered with propagation delays as low as 3.5 nanoseconds, up to 240 input/output pins and complete pin-to-pin signal routing, both the 5-volt ispGDX and the 3.3-volt ispGDXV are targeted towards digital signal interconnect and interface applications.
+
+ 
+
+Mixed Signal Products
+ 
+
+                During 1999, we added mixed signal products to our portfolio as we believe these devices provide an opportunity to extend our proprietary technology to an untapped potential market.  Our five device ispPAC® family extends in-system programmability to the analog market.  The innovative architecture of our ispPAC products allow designers to quickly and easily program resistor and capacitor values, gain and signal polarity and circuit interconnect to implement a wide variety of analog circuits.  Our initial ispPAC products are targeted towards filtering and signal conditioning applications and can
+
+ 
+
+4
+
+
+--------------------------------------------------------------------------------
+
+
+
+ 
+
+replace numerous discrete analog components.  ispPAC designs are implemented and programmed via a personal computer using our software development tool, PAC-Designer®.
+
+ 
+
+Software Development Tools
+
+ 
+
+                All Lattice ISP products are supported by our new ispLEVER™ software development tool suite.  The ispLEVER software, our fifth generation design environment, features several important enhancements including a logic module generator, an improved constraints editor, HTML-based reporting and navigation and an automated update facility.  Supporting both the PC and UNIX platforms, ispLEVER allows our customers to enter, verify and synthesize a design, perform logic simulation and timing analysis, assign input/output pins, designate critical paths, debug, execute automatic timing-driven place and route tasks and download a program to one of our ISP devices.  Seamlessly integrated with third–party electronic design automation environments, ispLEVER provides a front-to-back design flow that leverages a customer’s prior investment in tools offered by Aldec, Cadence, Mentor Graphics, Synopsys and Synplicity.  In the future, we plan to continue to enhance and expand the capability of our software development tool suite.
+
+ 
+
+                We also provide a variety of software algorithms that support in-system programming of our ISP devices through an interface cable or directly from a system microprocessor.
+
+ 
+
+Low Density PLD Products
+
+ 
+
+                We offer the industry’s broadest line of low-density CMOS PLDs based on our 18 families of GAL® products offered in over 200 speed, power, package and temperature range combinations. These devices range in complexity from approximately 200 to 1,000 logic gates and are typically assembled in 20-, 24- and 28-pin standard dual in-line packages and in 20- and 28-pin standard plastic leaded chip carrier packages.  We offer the standard 16V8, 20V8 and 22V10 architectures in a variety of speed grades, with propagation delays as low as 3.5 nanoseconds, the highest performance in the industry.  In addition, we offer several proprietary extension architectures, the isp22V10, 6001/2, 16VP8, 16V8Z, 18V10, 20VP8, 20V8Z, 20RA10, 20XV10 and 26V12, each of which is optimized for specific applications.   We also offer a full range of 3.3-volt standard architectures, the isp22LV10, 16LV8, 20LV8, 22LV10 and 26CLV12, in a variety of speed grades, with propagation delays as low as 3.5 nanoseconds, the highest performance in the industry.
+
+ 
+
+Product Development
+
+ 
+
+                We place substantial emphasis on new product development and believe that continued investment in this area is required to maintain our competitive position.   Our product development activities emphasize new proprietary products, enhancement of existing products and process technologies and improvement of software development tools.  Product development activities occur in Hillsboro, Oregon; San Jose, California; Boulder, Colorado; Colorado Springs, Colorado; Naperville, Illinois; Allentown, Pennsylvania; Austin, Texas; Salt Lake City, Utah; Shanghai, China and Corsham, England.
+
+ 
+
+                Research and development expenses were $45.9 million in fiscal period 1999, $77.1 million in 2000 and $71.7 million in 2001.  We expect to continue to make significant future investments in research and development.
+
+ 
+
+Operations
+
+ 
+
+                We do not manufacture our own silicon wafers.  We maintain strategic relationships with large semiconductor manufacturers to source our finished silicon wafers.  This strategy allows us to focus our internal resources on product, process and market development, and eliminates the fixed cost of owning and operating manufacturing facilities.  We are also able to take advantage of the ongoing advanced process technology dedicated development efforts of semiconductor manufacturers.  In addition, all of our assembly operations are performed by outside suppliers.  We perform certain test operations and reliability and quality assurance processes internally.  We have achieved an ISO 9001 quality certification, an
+
+ 
+
+5
+
+
+--------------------------------------------------------------------------------
+
+
+
+ 
+
+indication of our high internal operational standards.
+
+ 
+
+Wafer Fabrication
+
+ 
+
+                We source silicon wafers from our foundry partners, Seiko Epson in Japan, UMC in Taiwan and Chartered Semiconductor in Singapore, pursuant to agreements with each company and their respective affiliates.  We negotiate wafer volumes, prices and other terms with our foundry partners and their respective affiliates on a periodic basis.  We also source a small portion of our wafer requirements from AMD and Agere Systems in order to support ongoing manufacturing requirements for certain of our mature product lines we obtained as a result of our acquisitions.
+
+ 
+
+Assembly
+
+ 
+
+                After wafer fabrication and initial testing, we ship wafers to independent subcontractors for assembly.  During assembly, wafers are separated into individual die and encapsulated in plastic or ceramic packages.  Presently, we have qualified long-term assembly partners in China, Malaysia, the Philippines, Singapore, South Korea, Taiwan and Thailand.
+
+ 
+
+Testing
+
+ 
+
+                We electrically test the die on each wafer prior to shipment for assembly.  Following assembly, prior to customer shipment, each product undergoes final testing and quality assurance procedures.  Final testing on certain products is performed by independent contractors in China, Malaysia, the Philippines, South Korea, Singapore, Taiwan, Thailand and the United States.
+
+ 
+
+Marketing, Sales and Customers
+
+ 
+
+                We sell our products directly to end customers through a network of independent manufacturers’ representatives and indirectly through a network of independent distributors.  We also employ a direct sales management and field applications engineering organization to support our end customers and indirect sales resources.  Our end customers are primarily original equipment manufacturers in the communication, computing, industrial, military and consumer end markets.
+
+ 
+
+                As of December 2001, we used 20 manufacturers’ representatives and two distributors, Arrow Electronics and Avnet, in North America.  We have also established export sales channels in over 30 foreign countries through a network of over 30 sales representatives and distributors.  Approximately one-half of our North American sales and the majority of our export sales are made through distributors.
+
+ 
+
+                We protect each of our North American distributors and some of our foreign distributors against reductions in published prices, and expect to continue this policy in the foreseeable future.  We also allow returns from these distributors of unsold products under certain conditions.  For these reasons, we do not recognize revenue until products are resold by these distributors to an end customer.
+
+ 
+
+                We provide technical and marketing support to our end customers with engineering staff based at our headquarters, design centers and selected field sales offices. We maintain numerous domestic and international field sales offices in major metropolitan areas.
+
+ 
+
+                Export sales as a percentage of our total revenue were 53% in fiscal period 1999, 57% in 2000 and 54% in 2001.  Both export and domestic sales are denominated in U.S. dollars, with the exception of sales to Japan, which are dominated in yen.  If our export sales decline significantly there would be a material adverse impact on our business and results of operations.
+
+ 
+
+6
+
+
+--------------------------------------------------------------------------------
+
+
+
+ 
+
+                Our products are sold to a large and diverse group of customers. No individual end customer accounted for more than 10% of total revenue in fiscal period 1999, 2000 or 2001. No export sales to any given country accounted for more than 10% of total revenue in fiscal period 1999, 2000 or 2001.
+
+ 
+
+Backlog
+
+ 
+
+                Our backlog of scheduled and released orders as of December 31, 2001 was approximately $25.8 million as compared to approximately $85.9 million as of December 31, 2000.  This backlog consists of direct customer and distributor orders scheduled for delivery within the next 90 days.  Distributor orders accounted for the majority of the backlog in both periods.  Direct customer orders may be changed, rescheduled or cancelled under certain circumstances without penalty prior to shipment.  Additionally, distributor orders generally may be changed, rescheduled or cancelled without penalty prior to shipment.  Furthermore, distributor shipments are subject to rights of return and price adjustment.  Revenue associated with distributor shipments is not recognized until the product is resold to an end customer.  Typically, the majority of our revenue results from orders placed and filled within the same period.  Such orders are referred to as “turns orders.”  By definition, turns orders are not captured in a backlog measurement made at the beginning of a period.  We do not anticipate a significant change in this business pattern.  For all these reasons, backlog as of any particular date should not be used as a predictor of revenue for any future period.
+
+ 
+
+Competition
+
+ 
+
+                The semiconductor industry is intensely competitive and characterized by rapid rates of technological change, product obsolescence and price erosion.  Our current and potential competitors include a broad range of semiconductor companies from emerging companies to large, established companies, many of which have greater financial, technical, manufacturing, marketing and sales resources.
+
+ 
+
+                The principal competitive factors in the PLD market include product features, price, customer support, and sales, marketing and distribution strength.  The availability of competitive software development tools is also critical.  In addition to product features such as density, speed, power consumption, reprogrammability, design flexibility and reliability, competition in the PLD market occurs on the basis of price and market acceptance of specific products and technology.  We believe that we compete favorably with respect to each of these factors.  We intend to continue to address these competitive factors by working to continually introduce product enhancements and new products, by seeking to establish our products as industry standards in their respective markets, and by working to reduce the manufacturing cost of our products.
+
+ 
+
+                In the PLD market, we directly compete primarily with Actel, Altera and Xilinx, all of whom offer competing products.  We also indirectly compete with other PLD suppliers as well as other semiconductor companies who provide non-PLD based logic solutions.  Although to date we have not experienced significant competition from companies located outside the United States, such companies may become a more significant competitive factor in the future.  Competition may also increase as PLD companies seek to expand our markets.  Any such increases in competition could have a material adverse effect on our operating results.
+
+ 
+
+Patents
+
+ 
+
+                We seek to protect our products and wafer fabrication process technologies primarily through patents, trade secrecy measures, copyrights, mask work protection, trademark registrations, licensing restrictions, confidentiality agreements and other approaches designed to protect proprietary information.  There can be no assurance that others may not independently develop competitive technology not covered by our intellectual property rights or that measures we take to protect our technology will be effective.
+
+ 
+
+                We hold numerous domestic, European and Asian patents and have patent applications pending in the United States,
+
+ 
+
+7
+
+
+--------------------------------------------------------------------------------
+
+
+
+ 
+
+Asia and Europe.  There can be no assurance that pending patent applications or other applications that may be filed will result in issued patents, or that any issued patents will survive challenges to their validity.  Although we believe that our patents have value, there can be no assurance that our patents, or any additional patents that may be issued in the future, will provide meaningful protection from competition.  We believe that our success will depend primarily upon the technical expertise, experience, creativity and the sales and marketing abilities of our personnel.
+
+ 
+
+                Patent and other proprietary rights infringement claims are common in our industry.  There can be no assurance that, with respect to any claim made against us, we could obtain a license on terms or under conditions that would not harm our business.
+
+ 
+
+Licenses and Agreements
+
+ 
+
+Seiko Epson/Epson Electronics America
+
+ 
+
+                Epson Electronics America (“EEA”), an affiliated U.S. distributor of Seiko Epson, has agreed to provide us with manufactured wafers in quantities based on six-month rolling forecasts.  We have committed to buy certain minimum quantities of wafers per month.  Wafers for our products are manufactured in Japan at Seiko Epson’s wafer fabrication facilities and are delivered to us by Epson Electronics America.  Prices for the wafers obtained from Epson Electronics America are reviewed and adjusted periodically.
+
+ 
+
+                In 1997, and as subsequently amended in January 2002, we entered into an advance production payment agreement with Seiko Epson and EEA under which we agreed to advance approximately $69 million, payable upon completion of specific milestones, to Seiko Epson to finance construction of an eight-inch sub-micron semiconductor wafer manufacturing facility.  The timing of the payments is related to certain milestones in the development of the facility.  Under the terms of the agreement, the advance is to be repaid with semiconductor wafers over a multi-year period.  The agreement calls for wafers to be supplied by Seiko Epson through EEA pursuant to purchase agreements concluded with EEA.  Payments of approximately $51.2 million have been made under this agreement.
+
+ 
+
+UMC Group
+
+ 
+
+                Beginning in 1995, we entered into a series of agreements with UMC pursuant to which we agreed to make several equity investments in entities now directly owned by UMC.  Under the terms of these agreements, we invested approximately $68.5 million for the right to purchase a percentage of UMC’s wafer production at market prices.
+
+ 
+
+                We currently own approximately 84 million shares of UMC common stock.  We will retain the right to purchase a certain percentage of UMC’s wafer production as long as we retain a certain percentage of these shares.
+
+ 
+
+Chartered Semiconductor
+ 
+
+                In 2002, in order to support our acquired FPGA products, Chartered Semiconductor and its affiliates agreed to provide us with manufactured wafers in quantities based on six-month rolling forecasts.  Wafers for our products are manufactured at the facilities of Chartered and its affiliates in Singapore.  We have committed to buy certain minimum quantities of wafers per month.
+
+ 
+
+Advanced Micro Devices
+
+ 
+
+                In 1999, as part of our acquisition of Vantis, we entered into an agreement with AMD pursuant to which we have cross–licensed Vantis patents with AMD patents, having an effective filing date on or before June 15, 1999, related to PLD products. This cross–license was made on a worldwide, non-exclusive and royalty-free basis.
+
+ 
+
+8
+
+
+--------------------------------------------------------------------------------
+
+
+
+ 
+
+                As part of our acquisition of Vantis Corporation, we acquired certain third–party license rights held by Vantis prior to the acquisition.  Included are rights to use certain Xilinx patents to manufacture, market and sell products.
+
+ 
+
+Agere Systems
+
+ 
+
+                In January 2002, as part of our acquisition of the FPGA business of Agere, we entered into a series of agreements with Agere to support the continuing operations of this business.  Pursuant to these agreements, for a limited period of time, Agere is providing us with certain manufacturing, engineering and transition services and sub-leased office space.
+
+ 
+
+                We also entered into an intellectual property agreement with Agere and Agere Systems Guardian Corporation.  Pursuant to this agreement, these Agere companies assigned or licensed to us certain FPGA and FPSC patents, trademarks, software and other intellectual property rights and technology, and we licensed back rights in these same assets.  These cross–licenses were made on a worldwide and royalty-free basis.
+
+ 
+
+Altera
+
+ 
+
+                In July 2001, we entered into a comprehensive, royalty-free patent cross-license agreement and a multi-year patent peace agreement.
+
+ 
+
+Employees
+
+ 
+
+                As of December 31, 2001 we had 1,004 full-time employees.  We believe that our future success will depend, in part, on our ability to continue to attract and retain highly skilled technical and management personnel. None of our employees is subject to a collective bargaining agreement.  We have never experienced a work stoppage and consider our employee relations good.

@@ -1,0 +1,1385 @@
+ITEM 1. BUSINESS.
+
+
+Background
+
+        ANADIGICS, Inc. (the "Company") was incorporated in Delaware in 1984.
+Our corporate headquarters are located at 141 Mt. Bethel Road, Warren, New
+Jersey 07059, and our telephone number at that address is 908-668-5000.
+
+         ANADIGICS, Inc. designs and manufactures radio frequency integrated
+circuit (RFIC) solutions for the wireless and broadband communications markets.
+Our high frequency RFIC products enable manufacturers of communications
+equipment to enhance overall system performance and reduce manufacturing cost
+and time to market. Our products are primarily included in cellular and PCS
+(personal communications service) phones and base stations, wireless local area
+networks (WLANs), and cable television infrastructure and set-top boxes. We
+offer a broad array of products including amplifiers, switches, tuner integrated
+circuits, photodiodes and integrated RF modules. These integrated circuits
+perform the transmit and receive functions that are critical to the performance
+of wireless and broadband communication systems.
+
+         In the wireless market, we focus on RFIC solutions for wireless
+communication handset applications operating over various air interface
+standards, including CDMA, GSM, WCDMA, GPRS and EDGE (Code Division Multiple
+Access, Global System for Mobile communication, Wideband CDMA, General Packet
+Radio Service and Enhanced Data rate for GSM Evolution). In the broadband
+markets, our focus is on applications for WLAN systems, cable television (CATV)
+subscriber products, CATV infrastructure systems, and fiber optic communications
+systems. We believe we have a competitive advantage in the markets we serve due
+to our design, development and applications expertise, our superior compound
+semiconductor technologies, our high-volume, low-cost state-of-the-art
+manufacturing processes and expertise, and our strong working relationships with
+leading original equipment manufacturers (OEMs), original design manufacturers
+(ODMs) and reference design houses (collectively our "market customers").
+
+         We design, develop and manufacture RFICs primarily using Gallium
+Arsenide (GaAs) compound semiconductor substrates with various process
+technologies, Metal Semiconductor Field Effect Transistors (MESFET),
+Pseudomorphic High Electron Mobility Transistors (pHEMT), and Heterojunction
+Bipolar Transistors (HBT).
+
+         The quality and reliability of our products results from a
+comprehensive design, characterization, qualification, and robust manufacturing
+process. In addition to the design team located at our corporate headquarters in
+Warren, New Jersey, we operate development centers in Richardson, Texas;
+Atlanta, Georgia; San Jose, California; Aalborg, Denmark; Taipei, Taiwan and
+Seoul, Korea.
+
+         Our design and applications engineering staff is strategically active
+and engaged with customers during all phases of design and production. This
+strategy helps our customers streamline their design process and time to market,
+achieve cost-effective and manufacturable designs, and ensure a smooth
+transition into high-volume production.
+
+         We have two company-owned fabrication facilities ("fabs"): a
+state-of-the-art six-inch diameter analog GaAs fab located at our corporate
+headquarters in Warren, New Jersey, and a two-inch diameter indium phosphide
+(InP) fab located in Camarillo, California. Our six-inch wafer fab allows us to
+produce, at a small incremental cost, more than twice the RF die per wafer
+compared with the current industry norm four-inch wafer. We believe our strong
+manufacturing fabrication capability, combined with logistics expertise and
+innovative product designs, allow us to quickly develop and manufacture products
+in line with market and customer requirements.
+
+Developments
+
+         In March 2003, we acquired the WLAN power amplifier product line from
+RF Solutions, headquartered in Atlanta, Georgia as an entrance into the
+high-growth and emerging WLAN market. In October 2003, we acquired the Tavanza
+CDMA power amplifier business located in San Jose, California from Celeritek,
+increasing our customer expansion and product design efforts within the CDMA
+handset market.
+
+Industry Background
+
+         Over the last decade, there have been remarkable developments in
+electronic communications, as evidenced by the emergence of wireless
+communications, Internet services and digital television services. Radio
+frequency/microwave and integrated circuit technologies have enabled increases
+in communications capacity and significant reductions in systems costs. The
+wireless and broadband communications markets are beneficiaries of current
+technological trends, including higher frequencies, digital modulation and
+higher levels of electronic integration.
+
+                                       3
+<PAGE>
+
+         Wireless communications are growing rapidly and replacing landline
+telephone services in mature markets and are being built in lieu of landline
+services in other emerging markets. Worldwide unit sales of cellular/PCS
+wireless handsets were approximately 500 million in 2003.
+
+         Broadband markets are also benefiting from technological changes. Cable
+television systems are moving from one-way analog signal distribution systems to
+interactive digital systems offering increased and new video content, Internet
+connection services and telephony. We estimate that approximately 10 million
+digital cable television (CATV) set-top boxes were produced in 2003. The
+continued build out of the cable infrastructure network required a production of
+approximately 2.5 million line extenders, systems amplifiers and fiber nodes.
+Additionally, WLANs continue to be a bright spot in the worldwide chip
+marketplace. The demand for increased mobility, seamless communications,
+internet browsing, and streaming video/audio is driving the need for increased
+throughput and gaining even greater momentum in WLANs in the enterprise and home
+markets. New standards, such as 802.11g, 802.11 b/g as well as dual-band combo
+products, are accelerating the adoption and expanding the use of WLANs globally.
+We estimate that approximately 40 million WLAN chipsets, primarily wireless
+notebooks and access points, were shipped in 2003.
+
+         Activity in broadband fiber optic networks is being driven by demand
+from Internet and corporate users for high-speed data transfer capability and
+the resultant demand for Internet, Local Area Networks (LAN), Metropolitan Area
+Networks (MAN), and Storage Area Networks (SAN).
+
+         Given these developments, our market customers are facing the following
+challenges and need the following solutions from their suppliers:
+
+         o        Shorter cycle times. In both the wireless and broadband
+                  communications markets, manufacturers must bring new
+                  subscriber products to market quickly in order to maintain
+                  their market position. The development of multi-chip modules,
+                  using advanced packaging techniques, and the development of
+                  relationships with providers of RF reference designs is
+                  imperative;
+
+         o        Need for low-cost products. Wireless handsets and cable
+                  set-top boxes are increasingly becoming consumer-driven,
+                  commodity products. Component suppliers must be cost effective
+                  in order for their market customers to stay competitive; and
+
+         o        Stronger supplier relationships. The digital, wireless, cable
+                  and fiber optic industries are standards driven. Companies in
+                  the communications industry must work very closely with their
+                  suppliers in order to develop new products. Companies
+                  therefore limit themselves to a small number of suppliers in
+                  order to keep their competitive advantages.
+
+The GaAs Advantage
+
+         Through our research and development efforts, we have developed
+expertise in producing cost-effective GaAs-based RFICs for high-volume
+commercial applications. These circuits offer the performance attributes
+required for radio frequency/microwave applications that are not easily
+obtainable with silicon-based integrated circuits. GaAs transistors can operate
+at frequencies greater than silicon transistors, and therefore can handle the
+requirements of radio frequency/microwave applications. GaAs RFICs have a lower
+noise figure than silicon-based integrated circuits, providing increased
+sensitivity, less distortion and interference and better dynamic range, thereby
+enabling systems to handle a wide range of signal strengths. GaAs is a
+semi-insulating material that facilitates integration of the passive components
+required in radio frequency/microwave applications. Finally, GaAs RFICs used in
+transmitter applications are more power-efficient than silicon-based circuits,
+allowing for longer battery life or use of smaller batteries.
+
+The InGaP Advantage
+
+         In the industry, there are two predominant commercially viable types of
+HBT process technologies. Earlier generations use either beryllium or carbon
+doping in the base layer and Aluminum Gallium Arsenide (AlGaAs) in the emitter
+layer. The state-of-the-art for HBT uses carbon doping in the base layer and
+Indium Gallium Phosphide (InGaP) in the emitter layer.
+
+         There are several significant advantages to InGaP. One advantage is
+stability over a range of temperatures. An InGaP HBT device will experience only
+an approximate 10% drop in gain over a range of 0 to 100 degrees Celsius, while
+the gain loss in an AlGaAs device approximates 50%. An InGaP device has much
+higher reliability than an AlGaAs device, giving the option to run the InGaP
+device at higher temperatures. These advantages lead to smaller chip sizes and
+thus lower cost. Finally, InGaP allows for more robust manufacturing because the
+material has the advantage of a selective etch process not possible with AlGaAs.
+
+         The InGaP advantages of performance, reliability and manufacturability
+led to our decision to develop the world's first commercially viable 6-inch
+InGaP HBT process, which was completed in 2000 and complements our GaAs MESFET
+technology.
+
+                                       4
+<PAGE>
+
+ANADIGICS' Strategy
+
+         Our objective is to be a leading supplier of RFICs for the wireless and
+broadband communications markets. The cornerstone of our strategy is to
+capitalize on opportunities in the wireless and broadband communications markets
+by addressing applications that leverage our RFIC design and manufacturing
+expertise and longstanding relationships with leading companies in these
+markets. The key elements of this strategy include:
+
+         Be First-to-Market with Proprietary Value-Added Products
+
+         We intend to continue to design timely, cost-effective RFIC solutions
+for our target markets. In developing prototypes, the combination of an
+experienced engineering staff, a "quick-turn" wafer fabrication facility, the
+flexibility of using both in-house and contracted product assembly, and a world
+class product testing process generally allow us to develop parts and be ready
+for customer evaluation in less than one month. This design efficiency
+contributes to customer satisfaction and allows us to improve product designs
+rapidly for manufacturing efficiency. We will continue to apply our
+"best-of-breed" product differentiation strategy, which focuses on developing
+high-performance and integrated products. We believe that this strategy has
+expanded the company's potential available market in 2003 from $200 million to
+$1.1 billion covering wireless RFICs shipped into the mobile handset market,
+wireless LAN (WLAN) market, and the wireless infrastructure market.
+
+         Capitalize on World Class Manufacturing Capabilities, while Reducing
+Costs
+
+         We will continue to focus on improving manufacturing performance and
+customer service, while reducing costs. We believe we can effectively control
+the critical phases of the production process in order to realize high
+manufacturing yields, product quality and customer satisfaction. Our six-inch
+wafer fab provides increased manufacturing capacities and shorter cycle times at
+a lower incremental cost than four-inch wafer fabs. We believe our strong
+working relationship with overseas manufacturing subcontractors will allow us to
+continue to deliver low-cost products to our customers.
+
+         Forge Strong Customer Relationships
+
+         We have developed strong working relationships with our customers, many
+of whom are leading manufacturers in their markets. Because our target markets
+are standards-driven, customer relationships are important. These relationships
+provide us with product development opportunities and the ability to anticipate
+future market needs. The rapid feedback received from our customers during the
+product design phase increases the likelihood that our designs will meet our
+customers' cost and performance requirements. We believe furthering our
+relationships with reference design companies will continue to contribute market
+share gains within each of the wireless and broadband communications markets.
+
+         Pursue Strategic Alliances and Investments
+
+         We will continue to pursue strategic alliances and investments to
+expand and improve upon our technologies, industry expertise, products and
+market share. We expect that these alliances and investments will be
+complementary to current activities and will enhance our ability to work with
+leading companies to develop next generation solutions. We believe the
+acquisitions completed during 2003 related to the purchase of the WLAN Power
+Amplifier product line from RF Solutions and the TAVANZA CDMA Power Amplifier
+business from Celeritek have strategically positioned us to capitalize on the
+large and growing markets in wireless and WLAN. As new strategic opportunities
+to increase shareholder value arise, we will continue to monitor and selectively
+pursue them.
+
+
+Target Markets and Products
+
+         The Company classifies its revenues based upon the end application of
+the product in which its integrated circuits are used. For the years ended
+December 31, 2001, 2002 and 2003, wireless applications accounted for
+approximately 38%, 54% and 55% of total net sales, while broadband applications
+accounted for approximately 62%, 46% and 45% of total net sales.
+
+         Wireless Communications
+
+         The wireless communications market is a growing, dynamic market as a
+result of increasing demand for:
+
+         o        Portable voice and data communications;
+
+         o        Smaller, lighter handsets offering increased functionality;
+
+         o        Reliable access and voice quality comparable to land lines;
+
+         o        Longer talk-time and standby time; and
+
+         o        Wireless access to the Internet.
+
+                                       5
+<PAGE>
+
+         Our RFIC products are used in handsets where small size, multi-band
+operation and low power consumption are key features. Currently in the United
+States, the primary digital air interface communications standard is Code
+Division Multiple Access (CDMA). Another standard, Global System for Mobile
+communication (GSM), is the most widely deployed digital standard on a worldwide
+basis, with total subscribers expected to exceed one billion in 2004. We
+currently offer and continue to bring to market an array of products for both
+the handset and infrastructure markets for these major air interface standards.
+
+         We have developed multiband/multimode InGaP HBT power amplifier (PA)
+modules for the CDMA and GSM standards. InGaP HBT module technology offers high
+efficiency, low power consumption and stability over a range of temperatures, as
+well as a lower total solution cost. This combination allows our customers to
+build the transmitter section of the wireless handset more efficiently by
+reducing design complexity and component counts.
+
+         Our principal customers in the wireless market include Kyocera and LG
+Electronics. Of our total net sales in the year ended December 31, 2003, Kyocera
+accounted for 28% and LG Electronics accounted for 14%, while no other customer
+in this market accounted for more than 10% of total net sales during 2003.
+
+         The following table sets forth information regarding our principal
+products in the wireless communications market:
+
+<TABLE>
+<CAPTION>
+        <S>                                                               <C>
+            Product                                                       Application
+
+            Handset Products
+
+            o   Power Amplifier (PA)                                      Used in RF transmit chain of wireless handset to
+                                                                          amplify signal to base station.
+
+            o   Single-band PA module                                     Encapsulates InGaP HBT PA die and certain passive
+                                                                          components in multi-layer laminate module. Used primarily
+                                                                          in CDMA handsets
+
+            o   Quad-band PA module                                       Encapsulates InGaP HBT PA die, CMOS bias control chip,
+                                                                          and certain passive components in multi-layer laminate
+                                                                          module. Used primarily in GSM handsets
+
+            o   PowerPlexer (TM)                                          Encapsulates two InGaP HBT PA die, CMOS, bias and power
+                                                                          control chip, antenna switch, coupler, harmonic filter
+                                                                          and passives in multi-layer laminate module. Used in GSM
+                                                                          handsets
+
+            o   RF Switches                                               Used in wireless handsets and other wireless
+                                                                          applications to switch between receive and transmit
+                                                                          modes and multiple frequency bands
+
+          Infrastructure Products
+
+            o   Driver Amplifiers                                         Used in cellular base stations in the transmit chain
+
+            o   Gain Blocks                                               Used in cellular base stations in the transmit chain
+
+</TABLE>
+
+
+         Broadband
+
+         Broadband encompasses our key markets in support of data and
+telecommunications support systems and primarily covers cable television, WLAN
+and fiber applications.
+
+         The trends that currently drive product development in the cable
+television markets are:
+
+         o        Shift to digital cable television with interactive services;
+
+         o        Demand for high speed Internet access; and
+
+         o        Emergence of cable telephony.
+
+         The convergence of these trends, enabled by digital transmission,
+creates the need for innovative RFICs for cable television applications.
+
+                                       6
+<PAGE>
+
+         Cable television systems, which traditionally delivered one-way analog
+television programming, limited to a few entertainment channels, are
+increasingly used to deliver a wide array of interactive video and other
+services, such as high speed Internet access and telephony. In order to support
+these new applications, cable system operators must upgrade both the bandwidth
+(i.e., capacity) and quality of the infrastructure and terminal equipment. The
+new equipment must also be able to handle digital as well as analog modulated
+signals.
+
+         Our cable products are used in CATV set-top boxes and infrastructure
+applications. We produce tuner and reverse amplifier RFICs, as well as line
+amplifiers and systems amplifiers for infrastructure applications. The tuner
+RFICs are used in double conversion tuners to receive analog and digital signals
+in the 50-860 megahertz frequency band. Reverse amplifier RFICs are used in
+certain cable set-top boxes that require a reverse path for interactivity. These
+tuner and reverse amplifier RFICs enable customers to accelerate and simplify
+their designs, and reduce manufacturing complexity and costs.
+
+         We have also developed GaAs RFIC line amplifiers to be used in 50-860
+megahertz cable television infrastructure equipment, such as line extenders,
+distribution amplifiers and system amplifiers. Our product offerings in this
+area include amplifier RFICs that operate at 24 volts.
+
+         Our principal customer in the cable and broadcast markets is Motorola,
+Inc., which represented 14% of total net sales in 2003. No other customer in
+this market accounted for more than 10% of our total net sales in 2003.
+
+         The following table sets forth information regarding our principal
+products in the cable television market:
+
+<TABLE>
+<CAPTION>
+<S>                                                          <C>
+
+   Product                                                   Application
+
+   Subscriber Products:
+
+       o    Upconverters and downconverters                  Used in set-top box double conversion video and
+                                                             data tuners
+
+       o    Reverse amplifiers                               Used in set-top boxes and cable telephony to transmit signals from a
+                                                             set-top box upstream to a cable company headend for interactive
+                                                             applications
+
+   Infrastructure Products:
+
+       o    Line amplifiers                                  Used in cable television systems to distribute signals from cable
+                                                             headends to subscribers
+
+       o    Drop amplifiers                                  Used in cable television systems to amplify signals at individual
+                                                             subscriber homes
+
+</TABLE>
+
+         In March 2003, we acquired the WLAN power amplifier product line from
+RF Solutions, headquartered in Atlanta, Georgia as an entrance into the growing
+WLAN market. The WLAN market is being driven by:
+
+         o        Demand for wireless data access and portability of wireless
+                  access devices;
+
+         o        Emergence of several wireless data networking mediums,
+                  primarily via personal computers; and
+
+         o        new market applications such as consumer electronics and
+                  wireless voice over Internet protocol (VoIP).
+
+         Adoption of wireless data networking has been enabled by the
+introduction of a family of industry standards for WLAN technology that have
+substantially increased capacity and data rates. The introduction of the 802.11g
+standard allows the existing 2.4 GHz spectrum to be operated more efficiently
+with a substantial increase in data rates from the previous one or two megabits
+per second (Mbps) now up to 54 Mbps. The introduction of the 802.11a standard
+has enabled the use of the 5 GHz spectrum and substantially increased the
+available channel capacity. The wireless networking market is further
+transitioning from products that operate using a single standard to products
+that support all of the standards using the 2.4 GHz and 5 GHz bands in a variety
+of combinations. These 802.11a/g dual band products will support the continued
+growth of the market while substantially diminishing or avoiding frequency
+interference and network congestion.
+
+         The wireless capabilities of WLAN networking products are provided
+primarily by a semiconductor chipset. A wireless chipset typically contains a
+radio transceiver, a digital media access controller (MAC), baseband processor
+and power amplifier to boost the transmit signal; improving range and data
+throughput. Traditionally, a single power amplifier supported a chipset.
+However, the market has begun seeking both dual band power amplifiers and power
+amplifiers with higher levels of integration. This increased integration will
+provide for smaller size, higher reliability and faster time to market for WLAN
+systems.
+
+                                       7
+<PAGE>
+
+         No single customer in the WLAN market was responsible for more than 10%
+of total net sales in 2003. The following table sets forth information regarding
+our principal products in the WLAN market:
+
+<TABLE>
+<CAPTION>
+<S>                                                        <C>
+
+Product                                                    Application
+
+Single band Products:
+
+         o  2.4 GHz power amplifiers                       Used in wireless network interface cards (NIC),
+                                                           embedded PC notebook (mini-PCI) and access point
+                                                           (AP) applications to boost the transmit signal for
+                                                           increased range and data throughput.
+
+         o  5 GHz power amplifiers                         Used in wireless rich-media applications, such as
+                                                           streaming audio/video, to boost the transmit
+                                                           signal for increased range and data throughput.
+
+         o  Dual band power amplifiers                     Used in wireless network systems that require
+                                                           seamless transition between frequencies to mitigate
+                                                           interference and congestion.
+
+</TABLE>
+
+
+The fiber optic market is being driven by:
+
+         o        Internet data traffic use;
+
+         o        Implementation of corporate local area networks (LAN) and
+                  storage area networks (SAN), which require high speed data
+                  transfer capability;
+
+         o        Upgrades of existing telecommunication and data communication
+                  systems with fiber optic systems; and
+
+         o        Expected build outs to Metropolitan Area Networks (MAN)
+
+
+         Fiber optic communication systems use low-loss fiber optic cable to
+link central office switches with one another and to connect the central office
+to the serving area. Most telecommunication networks today are based on
+Synchronous Optical Network (SONET) (United States and Japan) or SDH (Europe)
+standards, which require high sensitivity, high bandwidth, and wide dynamic
+range receivers. Fiber optic data communications systems use either Gigabit
+Ethernet or Fibre Channel standards to achieve high-speed data transfer. The
+Gigabit Ethernet standard has emerged as the most widely used in LAN
+environments, as it addresses the need for short distance, high speed transfers
+of large volumes of information. The Fibre Channel and emerging 4x Fibre Channel
+standards have become the most widely used in SAN environments.
+
+         The front end of most fiber optic receivers contains a photodetector
+and a transimpedance amplifier (TIA), which are used in both fiber optic
+telecommunications and data communications networks. Our GaAs TIAs for the
+telecommunications networks are designed to meet the requirements of SONET/SDH
+systems covering data speeds of OC-3 through OC-192, certain of which are for
+use in Dense Wavelength Division Multiplexing (DWDM) systems. With respect to
+telecommunications receivers and transceivers, we offer long wavelength (1300
+nanometer) positive-intrinsic-negative photodiodes and transimpedance amplifiers
+(PIN TIAs) for SONET and SDH applications.
+
+         For data communications receivers and transceivers, we sell short
+wavelength (850 nanometer) monolithically-integrated metal-semiconductor-metal
+photodiodes and transimpedance amplifiers (MSM-TIAs) and short wavelength PIN
+TIAs for the Gigabit Ethernet and Fibre Channel standards.
+
+         The continued LAN/SAN growth is placing new demands on MANs to provide
+expanded cost-effective capacity at 2.5 and 10 gigabits per second (Gb/s) to
+meet the needs of dedicated high-speed Internet users and the requirements for
+high-speed communication between private LANs and remote storage. We are
+expanding our product portfolio to offer low power consumption 3.3 volt TIAs
+addressing data rates from OC3 to OC48, 1, 2 and 4X Fibre Channel and Gigabit
+Ethernet applications.
+
+         In April 2001, we acquired Telcom Devices Corp. ("Telcom"), an
+optoelectronic semiconductor manufacturer of indium phosphide (InP) based "long
+wavelength" (1310 and 1550 nanometers) emitter (light-emitting diode, or LED)
+and detector (photodiode) products for the telecommunications and data
+communications markets. Telcom division produces active components used
+primarily for fiber optic applications in telecommunications systems, data
+communications networks, CATV broadcast and reception, fiber optic test and
+measurement equipment, and scientific, custom, and military markets.
+
+                                       8
+<PAGE>
+
+         No single customer in the fiber optics market was responsible for more
+than 10% of total net sales in 2003. The following table sets forth information
+regarding our principal products in the fiber optic market:
+
+<TABLE>
+<CAPTION>
+<S>                                                                  <C>
+
+
+    Product                                                          Application
+
+    Fiber Optic Products:
+
+          o   Transimpedance amplifiers                              Used in the receivers or transceivers of a telecom
+                                                                     fiber optic link to amplify the signal received
+
+          o   Limiting amplifiers                                    Used in the receivers or transceivers of a telecom
+                                                                     fiber optic link to provide a voltage limited output
+
+          o   Metal semiconductor metal                              Used in the transceiver of a datacom fiber optic
+              transimpedance amplifiers                              link to detect and amplify short wavelength optical
+              (MSM-TIA)                                              signals
+
+          o   PIN-TIA                                                Used in the transceiver of a datacom fiber optic link
+                                                                     to detect and amplify long wavelength optical signals
+
+
+          o   Photodiodes                                            Long wavelength detectors for SONET/SDH transmitters
+                                                                     and receivers, CATV receivers and instrumentation
+
+          o   Light-Emitting Diodes (LEDs)                           Long wavelength emitters
+
+</TABLE>
+
+
+Marketing, Sales, Distribution and Customer Support
+
+         We primarily sell our products to our direct customers worldwide. We
+have developed close working relationships with leading companies in the
+broadband and wireless communications markets. Additionally, we selectively use
+independent manufacturers' representatives and distributors to complement our
+direct sales and customer support efforts. In 2003 we continued to evaluate,
+upgrade and expand our sales representative organization. We believe this is
+critical to our objective of expanding our customer base, especially as we
+expand our product portfolio. In particular, we established a strategic presence
+in both Taipei, Taiwan and Seoul, South Korea by opening field sales
+applications support centers. These support centers position our resources in
+close proximity to our existing and potential customers in these regions
+allowing us to provide real-time service.
+
+         We believe that the technical nature of our products and markets
+demands an extraordinary commitment to building and maintaining close
+relationships with our customers. The sales and marketing staff, assisted by the
+technical staff and senior management, visit prospective and existing customers
+worldwide on a regular basis. Additionally, both field and factory sales
+personnel communicate regularly with our customers. We believe that these
+contacts are vital to the development of close, long-term working relationships
+with our customers, and in obtaining regular forecasts, market updates and
+information regarding technical and market trends.
+
+         Our design and applications engineering staff actively communicate with
+customers during all phases of design and production. We provide our customers
+with engineering data and up-to-date product application notes, and communicate
+with our customers' engineers on a regular basis to assist in resolving
+technical problems on and off site. In most cases the design and applications
+engineers obtain prototypes from our customers in order to troubleshoot and
+identify potential improvements to the design in parallel with our customers'
+efforts. This strategy helps our customers speed up their design process,
+achieve cost-effective and manufacturable designs, and ensure a smooth
+transition into high-volume production.
+
+         We believe that reference-design manufacturers in the wireless and
+broadband market will continue to play an ever-increasing role in the future of
+these markets. Therefore, we believe it is essential that we maintain strong
+relationships in partnering with these companies to penetrate market
+opportunities in the U.S. market and abroad.
+
+         Our policy is to provide our customers with applications engineering
+support at our customers' design locations and factories throughout the world,
+generally within 48 hours of a customer request. Our sales are made pursuant to
+customer purchase orders.
+
+Manufacturing, Assembly and Testing
+
+         Manufacturing
+
+         We fabricate substantially all of our integrated circuits in our
+six-inch diameter GaAs wafer fab in Warren, New Jersey and in our two-inch
+diameter InP fab in Camarillo, California.
+
+                                       9
+<PAGE>
+
+         Our Warren facility has a 19,000 square foot fab, including 10,000
+square feet of Class 100 "clean room" space. Based on physical floor space,
+weekly production capacity at the Warren facility is approximately 1,600
+equivalent six-inch MESFET wafers (adjusting for the additional mask layers, or
+processing steps, inherent in HBT production). Based on equipment currently
+installed, present weekly capacity is 800 equivalent six-inch MESFET wafers,
+although this space can be equipped to expand capacity as market conditions
+require. On the basis of equivalent four-inch MESFET wafers, which is the
+industry norm, present weekly capacity is 1,800 wafers per week. See "Risk
+Factors - We may face constraints on our manufacturing capacity which would
+limit our ability to increase sales volumes."
+
+         Our InP fab in Camarillo is a 22,000 square foot facility with 2,000
+and 6,000 square feet of fab and assembly clean room, respectively. Production
+capacity is currently 50 InP wafers per week per shift.
+
+         Our six-inch diameter InGaP HBT process, including a backside VIA hole
+process, was among the first in the industry and is the technology platform for
+our newer-generation PA module wireless applications. The advantages of better
+performance over a range of temperatures and higher reliability lead to smaller
+chip sizes and thus lower cost. InGaP also allows for more robust manufacturing
+because the material has the advantage of a selective etch process not possible
+with AlGaAs.
+
+         Our wafer processing technologies have been developed for low cost,
+high yield, rapid throughput and short cycle-time manufacturing. Our GaAs MESFET
+process uses ion implant variations to optimize performance and yield, allowing
+us to produce high-linearity, low-noise, receiver integrated circuits or
+transmitter integrated circuits with high power and efficiency. MESFET is the
+technology platform underlying the majority of our broadband products.
+
+         Our GaAs pHEMT manufacturing process achieves extremely high electron
+mobility. Devices manufactured using this process have better sensitivity and
+bandwidth than conventional MESFET devices, and offer better stability at higher
+frequencies. The pHEMT process is an enabling technology for our wireless switch
+products.
+
+         Our Warren manufacturing processes were first certified as ISO 9001
+compliant in December 1993. Since that time, we have updated our compliance to
+the ISO 9001:2000 upgrade of this standard.
+
+         Our manufacturing process technology includes our two-inch InP process
+in Camarillo. InP applications for discrete active devices are widespread in
+communications networking, making it the natural starting place for wholesale
+integration of passive devices for a complete system on a chip. As a
+semiconductor material, InP can provide all-in-one integrated functionality that
+includes light generation, detection, amplification, high-speed modulation and
+switching, as well as passive splitting, combining and routing. The same
+material can be used to make high-speed modulators, switches, amplifiers and
+detectors, or just passive waveguides for interconnecting these diverse devices.
+
+         Assembly
+
+         Fabricated GaAs wafers are shipped to contractors in Asia for packaging
+into monolithic microwave integrated circuits (MMICs) or for assembly into
+standard plastic lead frame-based packaging or modules.
+
+         The components within mobile phones have become increasingly
+integrated, enabling the development of ever smaller, lighter, and more
+efficient phones. However, integration in the RF subsystem at the IC level is
+considerably more challenging, given that various components require different
+manufacturing processes for optimal performance. Typical RF processes include
+pHEMT, MESFET, HBT, and RF CMOS. The choice of process for various RFICs is
+typically based on a trade-off between performance (often measured by efficiency
+and linearity) and cost. In general, the process selection will depend on the
+relative weight given to performance versus cost. In low-end phones, cost will
+dominate, and less-efficient, less-costly components will be used. On the other
+hand, in high-end phones, the emphasis will shift to better performance.
+
+         Since the processes cannot be easily or economically integrated onto a
+single die, multi-chip modules that combine multiple die within a single package
+have taken hold, enabling the selection of the optimal process technology for
+each IC within the package, while providing enhanced integration at the system
+level. These solutions generate significant size and weight reductions in
+handset component circuitry, while simultaneously increasing the reliability of
+the components.
+
+         A number of challenges, outlined below, are being overcome as we become
+a fully integrated module manufacturer:
+
+         Design complexity: Within a cellphone, the RF section arguably
+         represents the greatest design challenge for engineers. Modules place
+         the burden of designing and optimizing RF front-end subsystems on RFIC
+         manufacturers. The suppliers must focus on providing the optimal IC
+         process (e.g., InGaP HBT for PAs) and then integrate the technology
+         into a well-designed module that also incorporates additional passive
+         and control circuitry. The quality of the RF module design ultimately
+         drives the device's performance and manufacturability.
+
+                                       10
+<PAGE>
+
+         Increased cost: Modules can be substantially more expensive to produce
+         than individual IC components. Modules often require extensive design
+         and engineering expertise, new production processes, and additional
+         assembly costs. In many cases, the necessary components (e.g.,
+         discretes and passives) must be purchased from outside vendors.
+         Consequently, the gross margin is generally lower for modules than for
+         discrete RF MMICs.
+
+         Manufacturing challenges: In addition to the increased costs of
+         designing modules, achieving sufficient yields on new products can be
+         problematic. Previously, RFIC companies had little or no experience in
+         manufacturing modules. As a result, our gross margins were under
+         pressure as we progressed on the learning curve. In order to attain
+         high "final test" yields, the challenge continues to be to achieve high
+         yields in the fab, in assembly, and in test.
+
+         It is clear that modules result in our customers getting their product
+to market more rapidly at a lower overall end-product cost to our customers due
+largely to the reduced parts count and reduction in engineering effort by our
+customers. We believe we are well positioned to address the shift toward
+multi-chip modules because we possess both extensive process breadth (a key
+advantage, as modules typically incorporate numerous process technologies) and a
+large portfolio of RF expertise (e.g., PAs, switches, transceivers, filters, and
+discretes).
+
+         Final Test
+
+         After assembly, packaged integrated circuits are tested prior to
+shipment to our customers. Increasingly, these test activities are being
+performed by third party contractors in Asia.
+
+          Early in 2002, we announced an agreement with Universal
+Communications, Inc. ("UCOMM") for the outsourcing of the majority of our
+production RF testing operations. Under the agreement, the production RF testing
+operation was transferred closer to our module assembly contractors in Asia,
+which added considerable efficiencies to the device manufacturing process and
+further reduced product cycle times and manufacturing costs.
+
+         In line with our procedure of 100% RF testing of all parts before
+shipping, the majority of production testing is now performed by UCOMM. This
+agreement supports our initiative to reduce manufacturing costs by lowering test
+cost per unit.
+
+         See "Risk Factors - We depend on foreign semiconductor assembly
+contractors and a loss of an assembly contractor could result in delays or
+reductions in product shipment," "The manufacturing of our products could be
+delayed as a result of the outsourcing of our test operations" and "We may face
+constraints on our manufacturing capacity which would limit our ability to
+increase sales volumes."
+
+Raw Materials
+
+         GaAs wafers, InP wafers, HBT/pHEMT epitaxial wafers, passive
+components, other raw materials, and equipment used in the production of our
+integrated circuits are available from a limited number of sources. See "Risk
+Factors - Sources for certain components, materials and equipment are limited
+which could result in delays or reductions in product shipments."
+
+Research and Development
+
+         We have made significant investments in our proprietary processes,
+including product design, wafer fabrication and integrated circuit testing,
+which we believe gives us a competitive advantage. Research and development
+expenses were $37.8 million, $29.7 million, and $32.1 million in 2001, 2002, and
+2003, respectively. Our research and development efforts in 2001 were primarily
+focused on developing high yield, low cost, high volume production of InGaP HBT
+integrated circuit products for the wireless and broadband communications
+markets. In 2002, development activities focused on improving performance
+relative to the size of our CDMA products and developing products to compete in
+the GSM market. In 2003, our activities included the continued development and
+expansion of products offered to the GSM and emerging WLAN markets.
+
+         As of December 31, 2003, we had approximately 146 engineers assigned
+primarily to research and development.
+
+         Our wireless power amplifier capability has expanded from
+plastic-packaged GaAs RF integrated circuit products to RF modules incorporating
+multiple technologies. This capability is critical to encapsulating RF
+intellectual property and know-how into a module that may be used to shrink the
+time-to-market for cellular phone manufacturers. Our RF power amplifier modules
+use a multi-layer laminate substrate to combine our proprietary InGaP HBT power
+amplifier integrated circuits with custom-designed CMOS controllers and passive
+components.
+
+                                       11
+<PAGE>
+
+         Module integration capability required extending our design tools in
+several dimensions. Electromagnetic simulation of laminate substrates to design
+embedded passive components and model parasitic effects were added to our RF
+design tool set. In addition, the ability to simulate at the module level was
+greatly enhanced through our partnership with a leading manufacturer of
+electronic design automation tools.
+
+         Additionally, several silicon CMOS components were developed to support
+our module efforts. We currently do not intend to manufacture this technology
+in-house, as we believe there will be adequate external foundry capacity
+available. See "Risk Factors - Sources for certain components, materials and
+equipment are limited, which could result in delays or reductions in product
+shipments."
+
+Customers
+
+       We receive most of our revenues from a few significant customers. See
+"Risk Factors - We depend on a small number of customers; a loss of or a
+decrease in purchases and/or change in purchasing patterns by one of these
+customers would materially and adversely affect our revenues and our ability to
+forecast revenue."
+
+Employees
+
+         As of December 31, 2003, we had 480 employees, including five employees
+in Denmark who were members of the Danish Engineering Union. We believe our
+labor relations to be good and we have never experienced a work stoppage. During
+the year our workforce increased by 26 employees, consisting primarily of
+engineers working in our two acquired businesses.
+
+Competition
+
+         Competition in all of the markets for our current products is intense;
+competition is on the basis of performance, price and delivery. Our competitors
+in the wireless market are suppliers of both discrete devices and integrated
+circuits, and include Hitachi, Ltd., RF Micro Devices, Inc., Skyworks Solutions,
+Inc. and certain of our customers who design and fabricate their own in-house
+solutions.
+
+         Within the Broadband markets, which include the cable television, WLAN
+and fiber optic markets, our competitors are also primarily manufacturers of
+both discrete components and integrated circuits. Our competitors include Analog
+Devices, Inc., Applied Micro Circuits Corp., Conexant Systems, Inc., Maxim
+Integrated Products, Inc., Microsemi Corp., Microtune, Inc. and Vitesse
+Semiconductor Corp., as well as certain of our customers who design and
+fabricate their own in-house solutions.
+
+         Many of our competitors have significantly greater financial,
+technical, manufacturing and marketing resources. Increased competition could
+adversely affect our revenue and profitability through price reductions or
+reduced demand for our products. See "Risk Factors - We face intense
+competition, which could result in a decrease in our products' prices and
+sales."
+
+Patents, Licenses and Proprietary Rights
+
+         It is our practice to seek U.S. and foreign patent and copyright
+protection on our products and developments where appropriate and to protect our
+valuable technology under U.S. and foreign laws affording protection for trade
+secrets and for semiconductor chip designs. We own 33 U.S. patents and have ten
+pending U.S. patent applications and one pending foreign patent application
+filed under the Patent Cooperation Treaty. The U.S. patents were issued between
+1992 and 2003 and will expire between 2009 and 2022.
+
+         We rely primarily upon trade secrets, technical know-how and other
+unpatented proprietary information relating to our product development and
+manufacturing activities. To protect our trade secrets, technical know-how and
+other proprietary information, our employees are required to enter into
+agreements providing for maintenance of confidentiality and the assignment of
+rights to inventions made by them while in our employ. We have also entered into
+non-disclosure agreements to protect our confidential information delivered to
+third parties in conjunction with possible corporate collaborations and for
+other purposes. See "Risk Factors - We may not be successful in protecting our
+own intellectual property rights or in avoiding claims that we infringed on the
+intellectual property rights of others."
+
+Environmental Matters
+
+         Our operations are subject to federal, state and local environmental
+laws, regulations and ordinances that govern activities or operations that may
+have adverse effects on human health or the environment. These laws, regulations
+or ordinances may impose liability for the cost of remediating, and for certain
+damages resulting from, sites of past releases of hazardous materials. We
+believe that we currently conduct, and have conducted, our activities and
+operations in substantial compliance with applicable environmental laws, and
+that costs arising from existing environmental laws will not have a material
+adverse effect on our results of operations. We cannot assure you, however, that
+the environmental laws will not become more stringent in the future or that we
+will not incur significant costs in the future in order to comply with these
+laws. See "Risk Factors - We are subject to stringent environmental regulation
+both domestically and abroad."
+
+                                       12
+<PAGE>
+
+Available Information
+
+         Copies of our Annual Report on Form 10-K, Quarterly Reports on Form
+10-Q, Current Reports on Form 8-K, and amendments to those reports filed or
+furnished pursuant to Section 13(a) or 15(d) of the Securities Exchange Act of
+1934 are available free of charge through our website (www.anadigics.com) as
+soon as reasonably practicable after we electronically file the material with,
+or furnish it to, the Securities and Exchange Commission.
+
+ ******************************************************************************
+
+
+                                  RISK FACTORS
+
+CERTAIN STATEMENTS IN THIS REPORT ARE FORWARD-LOOKING STATEMENTS (AS THAT TERM
+IS DEFINED IN THE SECURITIES EXCHANGE ACT OF 1934, AS AMENDED) THAT INVOLVE
+RISKS AND UNCERTAINTIES. THESE FORWARD-LOOKING STATEMENTS CAN GENERALLY BE
+IDENTIFIED AS SUCH BECAUSE THE CONTEXT OF THE STATEMENT WILL INCLUDE WORDS SUCH
+AS WE "BELIEVE", "ANTICIPATE", "EXPECT" OR WORDS OF SIMILAR IMPORT. SIMILARLY,
+STATEMENTS THAT DESCRIBE OUR FUTURE PLANS, OBJECTIVES, ESTIMATES OR GOALS ARE
+FORWARD-LOOKING STATEMENTS. THE CAUTIONARY STATEMENTS MADE IN THIS REPORT SHOULD
+BE READ AS BEING APPLICABLE TO ALL RELATED FORWARD-LOOKING STATEMENTS WHEREVER
+THEY APPEAR IN THIS REPORT. IMPORTANT FACTORS THAT COULD CAUSE ACTUAL RESULTS
+AND DEVELOPMENTS TO BE MATERIALLY DIFFERENT FROM THOSE EXPRESSED OR IMPLIED BY
+THE FORWARD-LOOKING STATEMENTS PRESENTED HEREIN INCLUDE THE RISK FACTORS
+DISCUSSED BELOW, AS WELL AS THOSE DISCUSSED ELSEWHERE HEREIN.
+
+         IN ADDITION TO THE OTHER INFORMATION CONTAINED IN THIS REPORT, THE
+FOLLOWING RISK FACTORS SHOULD BE CONSIDERED CAREFULLY IN EVALUATING AN
+INVESTMENT IN ANADIGICS, INC. AND IN ANALYZING OUR FORWARD-LOOKING STATEMENTS.
+
+                           Risks Related to ANADIGICS
+
+Our results of operations can vary significantly.
+
+         The semiconductor industry has been cyclical, seasonal and subject to
+significant downturns. Since the beginning of 2001, the industry has experienced
+market weaknesses that have created lower order demand, production overcapacity,
+high inventory levels, and accelerated declines in average selling prices for
+our products, which is expected to continue in the future. These elements have
+continued to negatively affect our operating results.
+
+         Our results of operations have been subject to significant quarterly
+fluctuations. As a result, we may experience substantial period-to-period
+fluctuations in future operating results. Investors should not rely on our
+results of operations for any previous period as an indicator of what results
+may be for any future period.
+
+         We cannot accurately predict whether or when demand will strengthen
+across our product lines. If we are unable to reverse the recent trend of
+revenue declines and net losses, either because the economy does not improve or
+because we under-perform, our ability to compete in a very difficult market may
+be materially and adversely affected.
+
+Our decline in revenue and underutilized manufacturing capacity have adversely
+affected our gross margins and profitability.
+
+         Our manufacturing infrastructure and capacity was established to
+address significantly higher volume levels and consequently we have
+underutilized manufacturing capacity. Many of our expenses, particularly those
+relating to capital equipment and manufacturing overhead, are fixed.
+Accordingly, our fixed production costs increase as a percent of revenues during
+a period of declining revenues, which adversely affects our gross margin and
+profitability. In the future, improved utilization of our manufacturing capacity
+will primarily depend on continued growth in demand for our wireless products.
+Our ability to reduce expenses is further constrained because we must continue
+to invest in research and development in order to maintain our competitive
+position.
+
+We depend on a small number of customers; a loss of or a decrease in purchases
+and/or change in purchasing patterns by one of these customers would materially
+and adversely affect our revenues and our ability to forecast revenue.
+
+         We receive most of our revenues from a few significant customers and
+their subcontractors. Sales to Kyocera, Motorola and LG Electronics accounted
+for 28%, 14% and 14%, respectively, of total net sales during 2003. Sales to our
+greater than 10% customers has exceeded 55% of total revenues in each of the
+last three years. Our operating results have been materially and adversely
+affected in the past by the failure of anticipated orders to be realized and by
+deferrals or cancellations of orders as a result of changes in customer
+requirements. If we were to lose Kyocera, Motorola, LG Electronics or another
+major customer, or if sales to these customers were to decrease materially,
+results of operations would be materially and adversely affected.
+
+                                       13
+<PAGE>
+
+         Several of our customers have reduced the lead times on orders placed
+with us for our products. While this trend has enabled us to reduce our
+inventories, it also restricts our ability to forecast future revenues. We
+cannot predict whether a change in order demand patterns or lead times from
+customers will take place.
+
+We will need to keep pace with rapid product and process development and
+technological changes as well as product cost reductions to be competitive.
+
+         Rapid changes in both product and process technologies characterize the
+markets for our products. Because these technologies are continually evolving,
+we believe that our future success will depend, in part, upon our ability to
+continue to improve the efficiencies of our product and process technologies and
+rapidly develop new products and process technologies. If a competing technology
+emerges that is, or is perceived to be, superior to our existing technology and
+we are unable to develop and/or implement the new technology successfully or to
+develop and implement a competitive and economic alternative technology, our
+results of operations would be materially and adversely affected. We will need
+to make substantial investments to develop these enhancements and technologies,
+and we cannot assure investors that funds for these investments will be
+available or that these enhancements and technologies will be successful.
+
+Our products have experienced rapidly declining unit prices.
+
+         In each of the markets where we compete, prices of established products
+tend to decline significantly over time. Accordingly, in order to remain
+competitive, we believe that we must continue to develop product enhancements
+and new technologies that will either slow the price declines of our products or
+reduce the cost of producing and delivering our products. If we fail to do so,
+our results of operations and financial condition would be materially and
+adversely affected.
+
+The variability of our manufacturing yields may affect our gross margins.
+
+         Our manufacturing yields vary significantly among products, depending
+on the complexity of a particular integrated circuit's design and our experience
+in manufacturing that type of integrated circuit. We have experienced
+difficulties in achieving planned yields in the past, particularly in
+pre-production and upon initial commencement of full production volumes, which
+have adversely affected our gross margins.
+
+         Regardless of the process technology used, the fabrication of
+integrated circuits is a highly complex and precise process. Problems in the
+fabrication process can cause a substantial percentage of wafers to be rejected
+or numerous integrated circuits on each wafer to be nonfunctional, thereby
+reducing yields. These difficulties can include:
+
+         o        defects in masks, which are used to transfer circuit patterns
+                  onto our wafers;
+         o        impurities in the materials used;
+         o        contamination of the manufacturing environment; and
+         o        equipment failure.
+
+         Many of our manufacturing costs are relatively fixed and average
+selling prices for our products tend to decline over time. Therefore, it is
+critical for us to improve the number of shippable integrated circuits per wafer
+and increase the production volume of wafers in order to maintain and improve
+our results of operations. Yield decreases can result in substantially higher
+unit costs, which could materially and adversely affect our operating results
+and have done so in the past. We cannot assure you that we will not suffer
+periodic yield problems, particularly during the early production of new
+products or introduction of new process technologies. In either case, our
+results of operations and financial condition could be materially and adversely
+affected.
+
+We depend on foreign semiconductor assembly contractors and a loss of an
+assembly contractor could result in delays or reductions in product shipment.
+
+         We do not assemble our integrated circuits or multi-chip modules.
+Instead, we provide the integrated circuit die and, in some cases, packaging and
+other components to assembly vendors located primarily in Asia. We maintain two
+qualified service suppliers for each assembly process. If we are unable to
+obtain sufficient high quality and timely assembly service, or if we lose one of
+our current assembly vendors, or if we experience delays in transferring our
+production between assembly vendors, or if means of transportation to our
+vendors are interrupted, we would experience delays or reductions in product
+shipment, and/or reduced product yields, that could materially and adversely
+affect our results of operations and financial condition.
+
+                                       14
+<PAGE>
+
+The manufacturing of our products could be delayed as a result of the
+outsourcing of our test operations.
+
+         We outsource most of the testing of certain of our products to test
+houses or vendors overseas, primarily in Asia. The failure of these test houses
+or other third parties to maintain our standards of testing or complete the
+testing process of our products in a timely manner, could subject us to
+manufacturing delays and delivery of products to customers, which could have a
+material adverse effect on our results of operations and financial condition. In
+addition to the test houses, we also test some of our products internally.
+
+The short life cycles of some of our products may leave us with obsolete or
+excess inventories.
+
+         The life cycles of some of our products depend heavily upon the life
+cycles of the end products into which our products are designed. For example, we
+estimate that current life cycles for cellular and PCS telephone handsets, and
+in turn our cellular and PCS products, are approximately 12 to 24 months.
+Products with short life cycles require us to manage production and inventory
+levels closely. We cannot assure investors that obsolete or excess inventories,
+which may result from unanticipated changes in the estimated total demand for
+our products and/or the estimated life cycles of the end products into which our
+products are designed, will not affect us beyond the inventory charges taken in
+the past.
+
+Our announced restructuring plans may have insufficiently addressed market
+conditions.
+
+         In 2001, 2002 and 2003, we announced restructuring plans in response to
+a sharp downturn in our industry. Under our restructuring plans, we have
+incurred charges relating to reductions in our workforce, impairments of certain
+manufacturing and research fixed assets, and the consolidation of facilities.
+From January 1, 2001 to December 31, 2003, our workforce was reduced by over
+25%, primarily through restructuring initiatives. We may have incorrectly
+anticipated the extent of the long-term market decline for our products and
+services and we may be forced to restructure further or may incur further
+operating charges due to poor business conditions.
+
+We face intense competition, which could result in a decrease in our products'
+prices and sales.
+
+         The semiconductor industry is intensely competitive and is
+characterized by rapid technological change. We compete primarily with
+manufacturers of discrete gallium arsenide and silicon semiconductors and with
+manufacturers of gallium arsenide and silicon integrated circuits. We expect
+increased competition from:
+
+         o        other gallium arsenide integrated circuit manufacturers who
+                  may replace us as a supplier to our market customers or
+                  otherwise dilute our sales to them;
+         o        silicon analog integrated circuit manufacturers; and
+         o        companies which may penetrate the radio frequency/microwave
+                  integrated circuit communications market with other
+                  breakthrough technologies.
+
+Increased competition could result in:
+
+         o        decreased prices of our integrated circuits;
+         o        reduced demand for our products; and
+         o        a reduction in our ability to recover development-engineering
+                  costs.
+
+         Any of these developments could materially and adversely affect our
+results of operations and financial condition.
+
+         Most of our current and potential competitors, including Hitachi Ltd.,
+Maxim Integrated Products Inc., Microtune Inc., Motorola, RF Micro Devices Inc.
+and Skyworks Solutions, Inc. have significantly greater financial, technical,
+manufacturing and marketing resources than we do. We cannot assure investors
+that we will be able to compete successfully with existing or new competitors.
+
+We face a risk that capital needed for our business will not be available when
+we need it.
+
+         In the future, we may need to access sources of financing to fund our
+growth. Taking into consideration our cash balance including marketable
+securities of $121.6 million and our $66.7 million in outstanding convertible
+subordinated notes due November 2006, we believe that our existing sources of
+liquidity, together with cash expected to be generated from operations, will be
+sufficient to fund our research and development, capital expenditure, working
+capital and other financing requirements for at least the next twelve months.
+
+         However, there is no assurance that the capital required to fund these
+expenses will be available in the future. Conditions existing in the U.S.
+capital markets when we seek financing, as well as the then current condition of
+the Company will affect our ability to raise capital, as well as the terms of
+any financing. We may not be able to raise enough capital to meet our capital
+needs on a timely basis or at all. Failure to obtain capital when required would
+have a material adverse affect on the Company.
+
+                                       15
+<PAGE>
+
+         In addition, any strategic investments and acquisitions that we may
+make to help us grow our business may require additional capital resources. We
+cannot assure you that the capital required to fund these investments and
+acquisitions will be available in the future.
+
+We may pursue selective acquisitions and alliances and the management and
+integration of additional operations could be expensive and could divert
+management time and acquisitions may dilute the ownership of our current
+shareholders.
+
+         As part of our strategy, we will selectively pursue acquisitions and
+alliances. Our ability to complete acquisitions or alliances is dependent upon,
+and may be limited by, the availability of suitable candidates and capital. In
+addition, acquisitions and alliances involve risks that could materially
+adversely affect our operating results, including the management time that may
+be diverted from operations in order to pursue and complete such transactions
+and difficulties in integrating and managing the additional operations and
+personnel of acquired companies. We cannot assure investors that we will be able
+to obtain the capital necessary to consummate acquisitions or alliances on
+satisfactory terms, if at all. Further, any businesses that we acquire will
+likely have their own capital needs, which may be significant, which we would be
+called upon to satisfy independent of the acquisition price. Future acquisitions
+or alliances could result in additional debt, equity, costs and contingent
+liabilities, all of which could materially adversely affect our results of
+operations and financial condition. Any such additional debt could subject us to
+substantial and burdensome covenants and any such equity could be materially
+dilutive to existing stockholders. The growth that may result from future
+acquisitions or alliances may place significant strains on our resources,
+systems and management. If we are unable to effectively manage such growth by
+implementing systems, expanding our infrastructure and hiring, training and
+managing employees, our ability to offer our products could be materially
+harmed.
+
+We depend heavily on key personnel.
+
+         Our success depends in part on keeping key technical, marketing, sales
+and management personnel. We must also continue to attract qualified personnel.
+The competition for qualified personnel is intense, and the number of people
+with experience, particularly in radio frequency engineering, integrated circuit
+design, and technical marketing and support, is limited. We cannot be sure that
+we will be able to attract and retain other skilled personnel in the future.
+
+Our international sales and operations involve foreign exchange risks.
+
+         Sales to customers located outside North America (based on shipping
+addresses and not on the locations of ultimate end users) accounted for 65%, 46%
+and 49% of our net sales for the years ended December 31, 2001, 2002 and 2003,
+respectively. We expect that revenues derived from international sales will
+continue to represent a significant portion of our net sales.
+
+         In addition, independent third parties located in Asia supply a
+substantial portion of the starting wafers and packaging components that we use
+in the production of gallium arsenide integrated circuits, and assemble and test
+nearly all of our products.
+
+         Due to our reliance on international sales and foreign suppliers,
+assemblers and test houses, we are subject to risks of conducting business
+outside of the United States, including primarily those arising from currency
+fluctuations, which could affect the price of our products and/or the cost of
+producing them.
+
+Sources for certain components, materials and equipment are limited, which could
+result in delays or reductions in product shipments.
+
+           We do not manufacture any of the starting wafers, packaging or
+passive components used in the production of our gallium arsenide integrated
+circuits. Wafers and packaging components are available from a limited number of
+sources. If we are unable to obtain these wafers or components in the required
+quantities and quality, we could experience delays or reductions in product
+shipments, which would materially and adversely affect our results of operations
+and financial condition.
+
+           We depend on a limited number of vendors to supply equipment used in
+our manufacturing processes. When demand for semiconductor manufacturing
+equipment is high, lead times for delivery of such equipment can be substantial.
+We cannot assure investors that we would not lose potential sales if required
+manufacturing equipment is unavailable and, as a result, we are unable to
+maintain or increase our production levels.
+
+We may face constraints on our manufacturing capacity which would limit our
+ability to increase sales volumes.
+
+         We believe that our expanded six-inch wafer fabrication facility should
+be able to satisfy our forecasted production needs. However, if production
+volumes were to increase significantly from expected levels, we might be
+required to hire, train and manage additional production personnel in order to
+successfully increase production capacity at our facility. We cannot assure
+investors that we would be able to implement these changes successfully. A delay
+for any reason in increasing capacity would limit our ability to increase sales
+volumes. In addition, if we fail to increase production and do not have
+sufficient capacity to satisfy the demand for our products, our relationships
+with customers could be harmed.
+
+                                       16
+<PAGE>
+
+We may face interruptions in our manufacturing processes.
+
+         Our manufacturing operations are complex and subject to disruption,
+including for causes beyond our control. The fabrication of integrated circuits
+is an extremely complex and precise process consisting of multiple steps. It
+requires production in a highly controlled, clean environment. Minor impurities,
+contamination of the clean room environment, errors in any step of the
+fabrication process, defects in the masks used to print circuits on a wafer,
+defects in equipment or materials, human error, or a number of other factors can
+cause a substantial percentage of wafers to be rejected or numerous die on each
+wafer to malfunction. Because our operating results are highly dependent upon
+our ability to produce integrated circuits at acceptable manufacturing yields,
+these factors present could have a material adverse affect on our business. In
+addition, we may discover from time to time defects in our products after they
+have been shipped, which may require us to replace such products.
+
+         Additionally, our operations may be affected by lengthy or recurring
+disruptions of operations at any of our production facilities or those of our
+subcontractors. These disruptions may include electrical power outages, fire,
+earthquake, flooding, war, acts of terrorism, or other natural or man-made
+disasters. Disruptions of our manufacturing operations could cause significant
+delays in shipments until we are able to shift the products from an affected
+facility or subcontractor to another facility or subcontractor. In the event of
+such delays, we cannot assure investors that the required alternative capacity,
+particularly wafer production capacity, would be available on a timely basis or
+at all. Even if alternative wafer production or assembly and test capacity is
+available, we may not be able to obtain it on favorable terms, which could
+result in higher costs and/or a loss of customers. We may be unable to obtain
+sufficient manufacturing capacity to meet demand, either at our own facilities
+or through external manufacturing or similar arrangements with others.
+
+         Due to the highly specialized nature of the gallium arsenide integrated
+circuit manufacturing process, in the event of a disruption at the Warren, New
+Jersey semiconductor wafer fabrication facility, alternative gallium arsenide
+production capacity would not be immediately available from third-party sources.
+These disruptions could have a material adverse effect on our business,
+financial condition and results of operations.
+
+We are subject to stringent environmental regulation both domestically and
+abroad.
+
+         We are subject to a variety of federal, state and local requirements
+governing the protection of the environment. These environmental regulations
+include those related to the use, storage, handling, discharge and disposal of
+toxic or otherwise hazardous materials used in or resulting from our
+manufacturing processes. Failure to comply with environmental laws could subject
+us to substantial liability or force us to significantly change our
+manufacturing operations. In addition, under some of these laws and regulations,
+we could be held financially responsible for remedial measures if our properties
+are contaminated, even if we did not cause the contamination.
+
+We may not be successful in protecting our intellectual property rights or in
+avoiding claims that we infringed on the intellectual property rights of others.
+
+         Our success depends in part on our ability to obtain patents and
+copyrights, maintain trade secret protection and operate without infringing on
+the proprietary rights of third parties. As is typical in the semiconductor
+industry, we have been notified, and may be notified in the future, that we may
+be infringing on certain patent and/or other intellectual property rights of
+others. We are currently reviewing a claim alleging that we are or may be
+infringing certain patents. We cannot assure investors that we will not be
+subject to patent litigation to defend our products or processes against claims
+of patent infringement or other intellectual property claims. Any such
+litigation could result in substantial costs and diversion of our resources. If
+we determine that we have infringed on the intellectual property rights of
+others, we cannot assure investors that we would be able to obtain any required
+licenses on commercially reasonable terms.
+
+         In addition to patent and copyright protection, we also rely on trade
+secrets, technical know-how and other non-patented proprietary information
+relating to our product development and manufacturing activities, which we seek
+to protect, in part, by confidentiality agreements with our collaborators and
+employees. We cannot assure investors that these agreements will not be
+breached, that we would have adequate remedies for any breach or that our trade
+secrets and proprietary know-how will not otherwise become known or
+independently discovered by others.
+
+                                       17
+<PAGE>
+
+Provisions in our governing documents and our shareholders' rights agreement
+could discourage takeovers and prevent shareholders from realizing an investment
+premium.
+
+         Certain provisions of our articles of incorporation and by-laws could
+have the effect of making it more difficult for a third party to acquire, or of
+discouraging a third party from attempting to acquire, control of our Company.
+These provisions include the ability of the board of directors to designate the
+rights and preferences of preferred stock and issue such shares without
+shareholder approval, our staggered board of directors, and our advance notice
+requirements for stockholder proposals and director nominations. In addition,
+the Company has adopted a shareholders' rights agreement that may make it more
+difficult and expensive for a third party to acquire the Company. Any of the
+foregoing could limit the price that certain investors might be willing to pay
+in the future for shares of our common stock.
+
+We have had significant volatility in our stock price and it may fluctuate in
+the future. Therefore, the ability to sell shares of common stock at or above
+the price paid for them may be difficult.
+
+         The trading price of our common stock has and may continue to fluctuate
+significantly. Such fluctuations may be influenced by many factors, including:
+
+         o        our performance and prospects;
+         o        the performance and prospects of our major customers;
+         o        the depth and liquidity of the market for our common stock;
+         o        investor perception of us and the industry in which we
+                  operate;
+         o        changes in earnings estimates or buy/sell recommendations by
+                  analysts;
+         o        general financial and other market conditions; and
+         o        domestic and international economic conditions.
+
+         Public stock markets have experienced, and are currently experiencing,
+extreme price and trading volume volatility, particularly in the technology
+sectors of the market. This volatility has significantly affected the market
+prices of securities of many technology companies for reasons frequently
+unrelated to or disproportionately impacted by the operating performance of
+these companies. These broad market fluctuations may materially and adversely
+affect the market price of our common stock.
+
+         In addition, fluctuations in our stock price and our price-to-earnings
+multiple may have made our stock attractive to momentum, hedge or day-trading
+investors who often shift funds into and out of stocks rapidly, exacerbating
+price fluctuations in either direction, particularly when viewed on a quarterly
+basis.
+

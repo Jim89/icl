@@ -1,0 +1,1037 @@
+BUSINESS
+
+Cautionary Statement Regarding Forward-Looking Statements
+
+   The statements in this report that are forward-looking are based on current
+expectations and beliefs and involve numerous risks and uncertainties that
+could cause actual results to differ materially from expectations. The
+forward-looking statements relate to, among other things: operating results;
+anticipated cash flows; capital expenditures; gross margins; adequacy of
+resources to fund operations and capital investments; our ability to produce
+AMD Athlon(TM) and AMD Duron(TM) microprocessors with the performance and in
+the volume required by customers on a timely basis; our ability to maintain
+average selling prices of seventh-generation microprocessors despite aggressive
+marketing and pricing strategies of our competitors; our ability to increase
+customer and market acceptance of our seventh- and eighth-generation
+microprocessors; our ability, and the ability of third parties, to provide
+timely infrastructure solutions (motherboards and chipsets) to support our
+microprocessors; a recovery in the communication and networking industries
+leading to an increase in the demand for Flash memory products; the effect of
+foreign currency hedging transactions; the process technology transition in our
+submicron integrated circuit manufacturing and design facility located in
+Dresden, Germany (Dresden Fab 30); and the financing, construction and
+utilization of the Fujitsu AMD Semiconductor Limited (FASL) manufacturing
+facilities. For a discussion of the factors that could cause actual results to
+differ materially from the forward-looking statements, see the "Financial
+Condition" and "Risk Factors" sections set forth in "Management's Discussion
+and Analysis of Financial Condition and Results of Operations" contained in our
+2001 Annual Report to Stockholders and such other risks and uncertainties as
+set forth below in this report or detailed in our other Securities and Exchange
+Commission reports and filings.
+
+General
+
+   Advanced Micro Devices, Inc. was incorporated under the laws of Delaware on
+May 1, 1969. Our mailing address and executive offices are located at One AMD
+Place, Sunnyvale, California 94086, and our telephone number is (408) 732-2400.
+Unless otherwise indicated, references in this report to "AMD," "we" and "us"
+include our subsidiaries.
+
+   We are a semiconductor manufacturer with manufacturing facilities in the
+United States, Europe and Asia and sales offices throughout the world. Our
+products include a wide variety of industry-standard digital integrated
+circuits (ICs) that are used in many diverse product applications such as
+personal computers (PCs), workstations, servers, telecommunications equipment,
+data and network communications equipment and consumer electronics.
+
+   For financial information about geographic areas and for segment information
+with respect to sales, operating results and identifiable assets, refer to the
+information set forth in Note 9 of the Consolidated Financial Statements
+contained in our 2001 Annual Report to Stockholders.
+
+   For a discussion of the risk factors related to our business operations,
+please see the "Cautionary Statement Regarding Forward-Looking Statements,"
+"Risk Factors" and "Financial Condition" sections set forth in "Management's
+Discussion and Analysis of Financial Condition and Results of Operations"
+contained in our 2001 Annual Report to Stockholders.
+
+  The IC Industry
+
+   The IC market has grown dramatically over the past decade, driven primarily
+by the demand for electronic business and consumer products. Today, virtually
+all electronic products use ICs, including PCs and related peripherals, voice
+and data communications and networking products, facsimile and photocopy
+machines, home entertainment equipment, industrial control equipment and
+automobiles.
+
+                                      2
+
+<PAGE>
+
+   The market for ICs can be divided into separate markets for digital and
+analog devices. We participate in the market for digital ICs. The three types
+of digital ICs used in most electronic systems are:
+
+  .  microprocessors, which are used for control and computing tasks, and
+     complementary chipset devices;
+
+  .  memory circuits, which are used to store data and programming
+     instructions; and
+
+  .  logic circuits, which are employed to manage the interchange and
+     manipulation of digital signals.
+
+A discussion of the principal areas of the digital IC market in which we
+participate follows.
+
+  The Microprocessor Market
+
+   The microprocessor market consists of two broad categories, which are based
+on the function of the products. A microprocessor that performs computing tasks
+is known as the Central Processing Unit (CPU) of a computer system.
+Microprocessors used for control applications are often referred to as embedded
+processors. AMD participates primarily in the CPU category, which is the
+largest category within the microprocessor market.
+
+   A CPU processor is an IC, generally consisting of millions of transistors,
+that serves as the brain of a computer system such as a PC. The CPU processor
+is typically the component most critical to the performance and efficiency of a
+PC. The CPU processor controls data flowing through the electronic system and
+manipulates data as specified by the hardware and software that controls the
+system. In 1981, International Business Machines Corporation (IBM) introduced
+its first PC containing a microprocessor based upon the x86 instruction set
+developed by Intel Corporation and utilizing the Microsoft Corporation
+MS-DOS(R) operating system. As circuit design and large scale integration
+process technology have evolved, performance and functionality of each new
+generation of x86 microprocessors have increased. The x86 microprocessor market
+has been dominated by Intel since IBM's introduction of the PC.
+
+   The x86 microprocessor market is characterized by intense competition, short
+product life cycles and rapid advances in product design and process
+technology. Today, the greatest demand for microprocessors is from PC
+manufacturers. With few exceptions, PC manufacturers require x86
+microprocessors that are compatible with the Microsoft Windows(R) operating
+system. Improvements in the performance characteristics of microprocessors and
+decreases in production costs resulting from advances in process technology
+have broadened the market for PCs and, as a result, increased the demand for
+microprocessors.
+
+   The market for PC original equipment manufacturers (OEMs) is highly
+competitive. Most PC suppliers have evolved from fully integrated manufacturers
+with proprietary system designs to vendors focused on building brand
+recognition and distribution capabilities. Almost all of these suppliers now
+rely on Intel or on third-party manufacturers for the major subsystems of their
+PCs, such as the motherboard and chipsets. These suppliers are also
+increasingly outsourcing the design and manufacture of complete systems. The
+third-party manufacturers of these subsystems, based primarily in Asia, are
+focused on providing PCs, motherboards and complementary chipset devices that
+incorporate the latest trends in features and performance at low prices.
+Increasingly, these third-party manufacturers are also supplying fully
+configured PC systems through alternative distribution channels.
+
+   Embedded processors are also an important part of the microprocessor market.
+Embedded processors are general purpose devices used to carry out a single
+application with limited user interface and programmability. A system designed
+around an embedded processor usually cannot be programmed by an end user
+because the system is preprogrammed to execute a specific task. Key markets for
+embedded processors include telecommunications, networking, office automation,
+storage, automotive applications and industrial control.
+
+  The Memory Market
+
+   Memory ICs store data and instructions and are characterized as either
+volatile or non-volatile. Volatile devices lose their stored information after
+electrical power is shut off while non-volatile devices retain their
+
+                                      3
+
+<PAGE>
+
+stored information. The three most significant categories of semiconductor
+memory devices are (1) Dynamic Random Access Memory (DRAM) and (2) Static
+Random Access Memory (SRAM), both of which are volatile memories, and (3)
+non-volatile memory, which includes Flash memory, Read-Only Memory (ROM),
+Erasable Programmable Read-Only Memory (EPROM), and Electrically Erasable
+Programmable Read-Only Memory (EEPROM) devices.
+
+   DRAM provides large capacity main memory, and SRAM provides specialized
+high-speed memory. We do not produce any DRAM products, which make up the
+largest part of the memory market, or SRAM products.
+
+   AMD produces Flash memory devices and EPROM devices. Flash and other
+non-volatile memory devices are used in applications in which data must be
+retained after power is turned off. Several factors have contributed to an
+increasing demand for memory devices in recent years, including the:
+
+  .  expanding unit sales of PCs in the business and consumer markets;
+
+  .  increasing use and functionality of cellular phones;
+
+  .  increasing use of PCs to perform memory-intensive graphics and multimedia
+     functions;
+
+  .  volume of memory required to support faster microprocessors;
+
+  .  proliferation of increasingly complex PC software; and
+
+  .  increasing performance requirements of workstations, servers and
+     networking and telecommunications equipment.
+
+   Flash memory devices are being utilized for an expanding range of uses.
+Flash memory devices have a size and cost advantage over EEPROM devices, which
+utilize a larger, more expensive memory cell. Flash memory devices also provide
+greater flexibility and ease of use when compared to other non-volatile memory
+devices, such as ROM and EPROM, because Flash memory devices can be
+electrically rewritten to update parameters or system software; ROM cannot be
+rewritten and EPROM requires information to be erased using ultraviolet light
+before it can be rewritten. Flash memory devices are used to store control
+programs and system-critical data in communication devices such as cellular
+telephones and routers, which are devices used to transfer data between local
+area networks. Flash memory devices are also used in PC cards, which are
+inserted into notebook and subnotebook computers or personal digital assistants
+to provide added data storage.
+
+  The Logic Market
+
+   Logic devices consist of structurally interconnected groupings of simple
+logical "AND" and logical "OR" functions, commonly described as "gates."
+Typically, complex combinations of individual gates are required to implement
+the specialized logic functions required for system applications. The greater
+the number of gates on a logic device, the higher that logic device's density
+and, in general, device cost (for a particular process and architecture). Logic
+devices are generally grouped into five families of products (from lowest
+density to highest density):
+
+  .  standard logic devices;
+
+  .  programmable logic devices (PLDs);
+
+  .  conventional gate-arrays;
+
+  .  standard cells; and
+
+  .  full custom ICs.
+
+Conventional gate-arrays, standard cells and full-custom ICs are often referred
+to as application-specific ICs (ASICs).
+
+                                      4
+
+<PAGE>
+
+   Many manufacturers of electronic systems are striving to develop new and
+increasingly complex products to address rapidly evolving market opportunities.
+Achievement of this goal often precludes the use of standard logic ICs and
+ASICs. Standard logic ICs generally perform simple functions and cannot be
+customized, limiting a manufacturer's ability to adequately tailor an
+end-product system. Although ASICs can be manufactured to perform customized
+functions, they generally involve relatively high initial design, engineering
+and manufacturing costs and significant design risks, and may increase an
+end-product's time to market. As a result, ASICs are generally limited to
+high-volume products and products for which time to market may be less critical.
+
+   A growing category of the full custom IC market is Application Specific
+Standard Products (ASSPs). In this category, a full custom design, such as an
+Ethernet controller, is used to implement a particular function and is sold to
+multiple customers. Because the market requirements for these products have
+become increasingly standard, they can achieve the functional advantages of
+full custom design with the time to market advantages of a standard product.
+Almost all of our networking products are a part of the ASSP category.
+
+   Unlike ASICs and standard logic ICs, PLDs are standard products purchased by
+system manufacturers in an unprogrammed or blank state. Each system
+manufacturer may then program the PLDs to perform a variety of specific logic
+functions. Certain PLDs are reprogrammable. Compared to standard logic ICs and
+ASICs, PLDs allow system designers to design and implement custom logic more
+quickly.
+
+   On June 15, 1999, we sold Vantis Corporation, our PLD subsidiary, to Lattice
+Semiconductor Corporation. We now function as a foundry to Vantis and plan to
+continue to provide services to it through October 2002.
+
+Product Segments
+
+   In 2001, we participated in all three technology areas within the digital IC
+market--microprocessors, memory circuits and logic circuits--through our Core
+Products and Foundry Services segments. Our Core Products segment includes our
+PC processors, memory products and other IC products. In 2001, PC processors
+included our seventh-generation microprocessors, the AMD Athlon(TM) and AMD
+Duron(TM) microprocessors, and our sixth-generation microprocessors. Memory
+products included Flash memory devices and EPROM devices. Other IC products
+included embedded processors, platform products, which primarily consist of
+chipsets, and networking products. Our Foundry Services segment consisted of
+service fees from Legerity, Inc., our former voice communication products
+subsidiary, and Vantis.
+
+Core Products
+
+   Our Core Products segment ($3.8 billion, or 97 percent, of our 2001 net
+sales) includes PC processor, memory and other IC products.
+
+PC Processors
+
+   In 2001, our most significant microprocessor product sales were from the AMD
+Athlon and AMD Duron microprocessors, our seventh-generation microprocessors.
+We based AMD Athlon and AMD Duron microprocessors on superscalar RISC
+architecture and designed them to be compatible with operating system software
+such as Windows XP, Windows 2000, Windows NT(R), Windows 98 (and Windows
+predecessor operating systems), Linux, NetWare(R) and UNIX.
+
+   We introduced the AMD Athlon XP processor for high-performance desktop
+computers in October 2001. The AMD Athlon XP processor features QuantiSpeed(TM)
+architecture and 3DNow!(TM) Professional technology. We also announced plans to
+drive an initiative to develop a reliable processor performance metric.
+Historically, x86 microprocessors have improved both instructions (work) per
+clock and frequency compared to older generations. However, this is not true
+with some processors today. Therefore, megahertz cannot be solely relied upon
+as a measure of system performance. We therefore identify the AMD Athlon XP
+processor using model numbers, as opposed to clock speed in megahertz.
+
+
+                                      5
+
+<PAGE>
+
+   Maintaining PC processor sales levels in 2002 depends on a continuing
+successful technology transition in our manufacturing facility located in
+Dresden, Germany (Dresden Fab 30), our ability to maintain average selling
+prices for our seventh-generation microprocessors, continuing growth in unit
+shipments of our PC processors, and increasing market acceptance of the newest
+versions of the AMD Athlon and AMD Duron microprocessors.
+
+   We plan to continue to make significant capital expenditures to support our
+microprocessor and Flash memory products both in the near and long term. Our
+ability to increase microprocessor product revenues and benefit fully from the
+substantial investments we have made and continue to make related to
+microprocessors, depends upon the continuing success of our seventh-generation
+and future generations of microprocessors, beginning with the eighth-generation
+family of microprocessors code-named "Hammer," that we currently plan to
+introduce at the end of 2002. The Hammer microprocessors will be our first PC
+processors capable of 64-bit operation and are being designed to deliver
+leading-edge performance on both the 64-bit software used by high-end
+workstations and servers and the 32-bit software used by the majority of
+desktop users.
+
+   The microprocessor market is characterized by short product life cycles and
+migration to ever-higher performance microprocessors. To compete successfully
+against Intel in this market, we must transition to new process technologies at
+a fast pace and offer higher performance microprocessors in significantly
+greater volumes. We also must achieve yield and volume goals while producing
+these higher performance microprocessors in order to offer these products at
+competitive prices.
+
+   Intel has dominated the market for microprocessors used in PCs for many
+years. As a result, Intel has been able to control x86 microprocessor and PC
+system standards and dictate the type of products the market requires of
+Intel's competitors. In addition, the financial strength of Intel allows it to
+market its products aggressively, target our customers and our channel partners
+with special incentives and discipline customers who do business with us. These
+aggressive activities can result in lower average selling prices for us and
+adversely affect our margins and profitability. Intel also exerts substantial
+influence over PC manufacturers and their channels of distribution through the
+"Intel Inside" brand and other marketing programs. As long as Intel remains in
+this dominant position, we may be materially and adversely affected by its:
+
+  .  pricing and allocation strategies;
+
+  .  product mix and introduction schedules;
+
+  .  product bundling, marketing and merchandising strategies;
+
+  .  control over industry standards, PC manufacturers and other PC industry
+     participants, including motherboard, chipset and basic input/output system
+     (BIOS) suppliers; and
+
+  .  user brand loyalty.
+
+We expect Intel to maintain its dominant position in the marketplace as well as
+to continue to invest heavily in research and development, new manufacturing
+facilities and other technology companies.
+
+   Intel also dominates the PC system platform. As a result, PC OEMs are highly
+dependent on Intel, less innovative on their own and, to a large extent,
+distributors of Intel technology. In marketing our microprocessors to these
+OEMs and dealers, we depend on companies other than Intel for the design and
+manufacture of core-logic chipsets, graphics chips, motherboards, BIOS software
+and other components. In recent years, many of these third-party designers and
+manufacturers have lost significant market share or exited the business. In
+addition, these companies produce chipsets, motherboards, BIOS software and
+other components to support each new generation of Intel's microprocessors, and
+Intel has significant leverage over their business opportunities.
+
+   To compete with Intel in the microprocessor market in the future, we intend
+to continue to form close relationships with third-party designers and
+manufacturers of chipsets, motherboards, graphics chips, BIOS software and
+other components. Similarly, we intend to expand our chipset and system design
+capabilities and to offer OEMs licensed system designs incorporating our
+processors and companion products. We cannot be certain, however, that our
+efforts will be successful.
+
+                                      6
+
+<PAGE>
+
+   We do not currently plan to develop microprocessors that are bus interface
+protocol compatible with Intel microprocessors because our patent cross-license
+agreement with Intel does not extend to microprocessors that are bus interface
+protocol compatible with Intel's sixth and subsequent generation processors.
+Thus, the AMD Athlon and AMD Duron microprocessors are not designed to function
+with motherboards and chipsets designed to work with Intel microprocessors. The
+same will be true of our Hammer family microprocessors. Accordingly, our
+ability to compete with Intel in the market for seventh-generation and
+eighth-generation microprocessors will depend on our ability to ensure that the
+microprocessors can be used in PC platforms designed to support our
+microprocessors or that platforms are available that support both Intel
+processors and our microprocessors.
+
+Memory Products
+
+   Flash Memory Devices.  Our Flash memory devices are used in cellular
+telephones, networking equipment and other applications that require memory to
+be non-volatile and electrically rewritten. The ability of Flash memory devices
+to be electrically rewritten provides greater flexibility and ease of use when
+compared to EPROMs and other similar integrated circuits that do not share this
+feature.
+
+   Communications companies use Flash memory devices in cellular telephones and
+related equipment to enable users to add and modify frequently called numbers
+and to allow manufacturers to preprogram firmware and other information. In
+networking applications, Flash memory devices are used in hubs, switches and
+routers to enable systems to store firmware and reprogrammed Internet addresses
+and other routing information. Use of Flash memory devices is proliferating
+into a variety of other applications, such as set-top boxes, automotive control
+systems, personal digital assistants, digital cameras and other consumer
+electronic items. However, we expect competition in the market for Flash memory
+devices to increase in 2002 and beyond as existing manufacturers introduce new
+products and industry-wide production capacity increases.
+
+   In 2001, most of our Flash memory devices were produced in Japan through
+Fujitsu AMD Semiconductor Limited (FASL), our joint venture with Fujitsu
+Limited, with additional devices produced under FASL's foundry arrangements.
+
+   EPROM Devices.  EPROMs represent an older generation of erasable,
+programmable read-only memory technology, which is used primarily in the
+electronic equipment industry. These devices are used in cellular telephones,
+wireless base stations, telecommunication switching equipment, automotive
+applications, PC hard disk drives, printer controllers, industrial machine
+controls and numerous other types of electronic equipment to store firmware,
+which controls the equipment's operation. EPROMs are generally preferred over
+more expensive Flash memory devices in applications where end users do not need
+to reprogram the information stored on the IC. We believe the market for
+EPROMs, which is significantly smaller than the market for Flash memory
+devices, will continue to decline as EPROMs are replaced in various
+applications by Flash memory devices.
+
+Other ICs
+
+   Embedded Processors.  Our embedded processors are x86 software compatible
+general purpose processors designed specifically for embedded applications. Our
+16-bit family of E86 embedded processors are built around the C186/C188
+processor with additional integrated features such as additional memory, serial
+ports, high-level data link control channels or universal serial bus ports. Our
+32-bit E86 family of embedded processors includes the AMD-K6(R)-2E+,
+AMD-K6-IIIE+ and Am486(R) discrete processors as well as the Elan(TM)SC400 and
+ElanSC520 fully integrated processors. Our Elan processors integrate the PC AT
+peripheral set on chip to serve small form factor applications.
+
+   Platform Products.  Our platform products include chipsets and motherboard
+reference design kits designed to support AMD seventh-generation
+microprocessors for use in PCs. Since the AMD Athlon, AMD Duron and Hammer
+family microprocessors are not designed to function with chipsets and
+motherboards designed to work with Intel microprocessors, we must develop
+compatible platform products. We license the
+
+                                      7
+
+<PAGE>
+
+design interface specifications for these products to third-party manufacturers
+to facilitate the sale of our microprocessors. It is possible that from time to
+time a third-party manufacturer will be unable to make chipset products
+available to the market at the same time our microprocessor products are
+introduced. Since the lack of availability of these third-party chipsets could
+impact our ability to sell our microprocessors, we manufacture a quantity of
+chipsets within our own fabrication facilities or our authorized foundries on a
+limited basis. We are then able to have a supply of products available for
+sale, should the need exist, until they are available from the third-party
+manufacturers.
+
+   Networking Products.  Our networking products include logic devices that are
+used in the data communication and networking industry to establish and manage
+connectivity.
+
+   Our product portfolio encompasses the following local area network (LAN)
+products:
+
+  .  home networking controllers and physical layer products;
+
+  .  Ethernet controllers supporting the enterprise and small business
+     networking areas;
+
+  .  Ethernet physical layer and repeater products which are used in enterprise
+     and small business systems solutions; and
+
+  .  Ethernet physical layer and switch products which are used in enterprise,
+     small business and telecommunication systems.
+
+Foundry Services
+
+   Our Foundry Services segment ($98 million, or 3 percent of our 2001 net
+sales) includes fees for services provided to Vantis and Legerity. We will no
+longer function as a foundry to Legerity after June 2002, in connection with
+the closure of Fabs 14 and 15 as detailed below under "Manufacturing
+Facilities." We plan to continue to provide foundry services to Vantis through
+October 2002.
+
+Acquisition of Alchemy Semiconductor
+
+   On February 19, 2002, we acquired Alchemy Semiconductor, Inc., a privately
+held company that designs, develops and markets low power, high performance
+microprocessors for personal connectivity devices such as personal digital
+assistants, web tablets, and portable and wired Internet access devices and
+gateways. Employees of Alchemy will be part of our new Personal Connectivity
+Solutions group, which will be dedicated to delivering connectivity solutions
+for the non-PC devices listed above.
+
+Research and Development; Manufacturing Technology
+
+   Our expenses for research and development were $651 million in 2001, $642
+million in 2000 and $636 million in 1999. These expenses represented 17 percent
+of net sales in 2001, 14 percent of net sales in 2000 and 22 percent of net
+sales in 1999.
+
+   Our research and development expenses are charged to operating expenses as
+they are incurred. Most of our research and development personnel are
+integrated into our engineering staff.
+
+   Manufacturing technology is the key determinant in the improvement of most
+semiconductor products. Each new generation of process technology has resulted
+in products with greater performance produced at lower cost. We continue to
+make significant infrastructure investments to enable us to continue to achieve
+high volume, high reliability and low cost production using leading edge
+process technology.
+
+   Our efforts concerning process technologies are focused in two major areas:
+logic technology used by our microprocessors and embedded processors and
+non-volatile memory technology used by Flash memory products. Our goals are to
+improve product performance, increase manufacturing volumes and reduce unit
+costs.
+
+                                      8
+
+<PAGE>
+
+   In order to remain competitive, we must continue to make substantial
+investments in the improvement of our process technologies. In particular, we
+have made and continue to make significant research and development investments
+in the technologies and equipment used to fabricate our microprocessor products
+and our Flash memory devices. Portions of these investments might not be fully
+recovered if we fail to continue to gain market acceptance or if the market for
+our microprocessor or Flash memory products should significantly deteriorate.
+In addition, if we are unable to remain competitive with respect to process
+technology, we will be materially and adversely affected.
+
+Competition
+
+   The IC industry is intensely competitive. Products compete on performance,
+quality, reliability, price, adherence to industry standards, software and
+hardware compatibility, marketing and distribution capability, brand
+recognition and availability. After a product is introduced, costs and average
+selling prices normally decrease over time as production efficiency improves,
+competitors enter the market and successive generations of products are
+developed and introduced for sale. Technological advances in the industry
+result in frequent product introductions, regular price reductions, short
+product life cycles and increased product capabilities that may result in
+significant performance improvements.
+
+   In each area of the digital IC market in which we participate, we face
+competition from different companies. With respect to microprocessors, Intel
+holds a dominant market position. With respect to Flash memory products, our
+principal competitors are Intel, STMicroelectronics N.V., Sharp Electronics
+Corporation, Atmel Corporation and Fujitsu, our joint venture partner in FASL.
+
+Manufacturing Facilities
+
+   Our current IC manufacturing facilities are described in the chart set forth
+below:
+
+<TABLE>
+<CAPTION>
+                                              Wafer                 Approximate
+                                               Size     Production  Clean Room
+                                            (Diameter   Technology    (Square
+Facility Location                           in Inches) (in Microns)  Footage)
+-----------------                           ---------- ------------ -----------
+<S>                                         <C>        <C>          <C>
+Austin, Texas
+   Fab 25..................................     8         0.18        120,000
+   Fabs 14 and 15..........................     6          0.5         42,000
+Aizu-Wakamatsu, Japan
+   FASL JV1/(1)/...........................     8         0.35         70,000
+   FASL JV2/(1)/...........................     8      0.25 & 0.35     91,000
+   FASL JV3/(1)/...........................     8         0.17        118,000
+Dresden, Germany
+   Fab 30..................................     8         0.18        115,100
+</TABLE>
+--------
+/(1)/ We own 49.992 percent of FASL. Fujitsu owns 50.008 percent of FASL.
+
+   In connection with a restructuring plan announced in September 2001, AMD
+will close Fabs 14 and 15 at the end of the second quarter of 2002.
+
+   The FASL JV3 building and clean room were completed and released to
+production with volume revenue shipments beginning in the fourth quarter of
+2001.
+
+   We also have foundry arrangements for the production of our products by
+third parties.
+
+   Research and development are conducted at our Submicron Development Center,
+a 42,000 square foot facility located in Sunnyvale, California, Fab 25 and
+Dresden Fab 30.
+
+                                      9
+
+<PAGE>
+
+   Our current assembly and test facilities are described in the chart set
+forth below:
+
+<TABLE>
+<CAPTION>
+                                              Approximate
+                                            Assembly & Test
+    Facility Location                       Square Footage     Activity
+    -----------------                       --------------- ---------------
+    <S>                                     <C>             <C>
+    Penang, Malaysia.......................     377,000     Assembly & Test
+    Bangkok, Thailand......................      78,000     Assembly & Test
+    Singapore..............................     162,000                Test
+    Suzhou, China..........................      30,250     Assembly & Test
+</TABLE>
+
+   As set forth above, nearly all product assembly and final testing of our
+products are performed at our manufacturing facilities in Penang, Malaysia;
+Bangkok, Thailand; Suzhou, China; and Singapore; or by subcontractors in the
+United States and Asia. We also depend on foreign foundry suppliers and joint
+ventures for the manufacture of a portion of our finished silicon wafers and
+have international sales operations. The political and economic risks
+associated with our manufacturing facilities and other operations in foreign
+countries include:
+
+  .  expropriation;
+
+  .  changes in a specific country's or region's political or economic
+     conditions;
+
+  .  trade protection measures and import or export licensing requirements;
+
+  .  difficulty in protecting our intellectual property;
+
+  .  changes in foreign currency exchange rates and currency controls;
+
+  .  changes in freight and interest rates;
+
+  .  disruption in air transportation between the United States and our
+     overseas facilities; and
+
+  .  loss or modification of exemptions for taxes and tariffs.
+
+   Certain Material Agreements.   Descriptions of certain material contractual
+relationships we have relating to FASL, Dresden Fab 30, Motorola and UMC are
+set forth below:
+
+   FASL.  In 1993, we formed FASL, a joint venture with Fujitsu, for the
+development and manufacture of non-volatile memory devices. FASL operates
+advanced IC manufacturing facilities in Aizu-Wakamatsu, Japan (FASL JV1, FASL
+JV2 and FASL JV3), for the production of Flash memory devices, which are sold
+to us and Fujitsu. FASL is continuing the facilitization of FASL JV2 and FASL
+JV3.
+
+   We expect FASL JV2 and FASL JV3, including equipment, to cost approximately
+$2.4 billion when fully equipped. As of December 30, 2001, approximately $1.5
+billion of these costs had been funded by cash generated from FASL operations.
+However, to the extent that additional funds are required for the full
+facilitization of FASL JV2 and FASL JV3, we will be required to contribute cash
+or guarantee third-party loans in proportion to our 49.992 percent interest in
+FASL, up to 25 billion yen ($192 million). As of December 30, 2001, we had
+$148 million in loan guarantees outstanding with respect to FASL third-party
+loans. These costs are incurred in Japanese yen and are, therefore, subject to
+change due to foreign exchange rate fluctuations. On December 30, 2001, the
+exchange rate was 128.02 yen to one U.S. dollar, the rate we used to translate
+the amounts denominated in yen into U.S. dollars.
+
+   In 2000, FASL further expanded its production capacity through a foundry
+arrangement with Fujitsu Microelectronics, Inc. (FMI), a wholly owned
+subsidiary of Fujitsu Limited. In connection with FMI equipping its wafer
+fabrication facility in Gresham, Oregon (the Gresham Facility) to produce flash
+memory devices for sale to FASL, we agreed to guarantee the repayment of up to
+$125 million of Fujitsu's obligations as a co-signer with FMI under its global
+multicurrency revolving credit facility (the Credit Facility) with a
+third-party bank (the Guarantee). On November 30, 2001, Fujitsu announced that
+it was closing the Gresham Facility, due to the downturn of the flash memory
+market. To date, we have not received notice from Fujitsu that FMI has defaulted
+
+                                      10
+
+<PAGE>
+
+on any payment due under the Credit Facility. Furthermore, subsequent to year
+end, we were informed that amounts borrowed by FMI under the Credit Facility do
+not become due until the end of March 2002. Accordingly, under the terms of the
+Guarantee, we are not at this time, and were not at December 30, 2001,
+obligated to make any payments to Fujitsu. However, subsequent to year end,
+Fujitsu requested that we pay the entire $125 million under the Guarantee.
+Although we disagree with Fujitsu as to the amount, if any, of our obligations
+under the Guarantee, Fujitsu has indicated its belief that we are obligated to
+pay the full $125 million.
+
+   In connection with FASL, AMD and Fujitsu have entered into various joint
+development, cross-license and investment arrangements. Pursuant to these
+agreements, the companies are providing their product designs and process and
+manufacturing technologies to FASL. In addition, both companies are
+collaborating in developing manufacturing processes and designing Flash memory
+devices for FASL. The right of each company to use the licensed intellectual
+property of the other with respect to certain products is limited both in scope
+and geographic areas. For instance, AMD and Fujitsu have cross-licensed their
+respective intellectual property to produce stand-alone Flash memory devices
+with geometrics of 0.5 micron or smaller within the joint venture. Furthermore,
+our ability to sell Flash memory products incorporating Fujitsu intellectual
+property, whether or not produced by FASL, is also limited in Japan. Fujitsu is
+likewise limited in its ability to sell Flash memory devices incorporating our
+intellectual property, whether or not produced by FASL, in the United States.
+
+   While the FASL joint venture has been successful to date, there can be no
+assurance that Fujitsu and AMD will elect to continue the joint venture in its
+present form or at all.
+
+   Dresden Fab 30.  AMD Saxony Manufacturing GmbH (AMD Saxony), an indirect
+wholly owned German subsidiary of AMD, continues to facilitize Dresden Fab 30,
+which began production in the second quarter of 2000. AMD, the Federal Republic
+of Germany, the State of Saxony and a consortium of banks are providing credit
+support for the project. We currently estimate construction and facilitization
+costs of Dresden Fab 30 will be $2.5 billion when fully equipped by the end of
+2003. As of December 30, 2001, we had invested $1.8 billion.
+
+   In March 1997, AMD Saxony entered into a loan agreement and other related
+agreements (the Dresden Loan Agreements) with a consortium of banks led by
+Dresdner Bank AG in order to finance the project. Because most of the amounts
+under the Dresden Loan Agreements are denominated in deutsche marks, the dollar
+amounts set forth below are subject to change based on applicable conversion
+rates. We used the exchange rate as of December 30, 2001, which was
+approximately 2.17 deutsche marks to one U.S. dollar, to value the amounts
+denominated in deutsche marks. The Dresden Loan Agreements provide for the
+funding of the construction and facilitization of Dresden Fab 30. The funding
+consists of:
+
+  .  equity, subordinated loans and loan guarantees from AMD;
+
+  .  loans from a consortium of banks; and
+
+  .  grants, subsidies and loan guarantees from the Federal Republic of Germany
+     and the State of Saxony.
+
+   The Dresden Loan Agreements require that we partially fund Dresden Fab 30
+project costs in the form of subordinated loans to, or equity investments in,
+AMD Saxony. In accordance with the terms of the Dresden Loan Agreements, as of
+December 30, 2001, we have invested $334 million in the form of subordinated
+loans to and equity investments in AMD Saxony. In addition to support from us,
+the consortium of banks referred to above has made available up to $692 million
+in loans to AMD Saxony to help fund Dresden Fab 30 project costs. AMD Saxony
+had $602 million of such loans outstanding through December 30, 2001.
+
+   Finally, the Federal Republic of Germany and the State of Saxony are
+supporting the Dresden Fab 30 project, in accordance with the Dresden Loan
+Agreements, in the form of:
+
+  .  guarantees equal to the lesser of 65 percent of AMD Saxony bank debt or
+     $692 million;
+
+  .  capital investment grants and allowances totaling $286 million; and
+
+                                      11
+
+<PAGE>
+
+  .  interest subsidies totaling $142 million.
+
+   Of these amounts, AMD Saxony had received approximately $284 million in
+capital investment grants and allowances and $64 million in interest subsidies
+through December 30, 2001. The grants and subsidies are subject to conditions,
+including meeting specified levels of employment by December 2001 and
+maintaining those levels until June 2007. Noncompliance with the conditions of
+the grants and subsidies could result in the forfeiture of all or a portion of
+the future amounts to be received, as well as the repayment of all or a portion
+of amounts received to date. As of December 30, 2001, we were in compliance
+with all of the conditions of the grants and subsidies.
+
+   In February 2001, we amended the Dresden Loan Agreements to reflect new
+capacity and increased capital expenditure plans for Dresden Fab 30. Under the
+February 2001 amendments, we agreed to increase and extend our guaranty of AMD
+Saxony's obligations and to make available to AMD Saxony revolving loans of up
+to $500 million. We expanded our obligation to reimburse AMD Saxony for the
+cost of producing wafers for us, and we also agreed to cancel the cost overrun
+facility made available by the banks. Under the February 2001 amendments, we
+were released from financial covenants limiting capital expenditures and
+requiring AMD Saxony to achieve capacity and production cost targets by the end
+of 2001. As of December 30, 2001, $59 million of the revolving loans were
+outstanding. The revolving loan amounts are denominated in European Union euros
+and are, therefore, subject to change due to foreign exchange rate fluctuation.
+We used the exchange rate on December 30, 2001, 1.11 euros to one U.S. dollar,
+to translate the amount of the revolving loans.
+
+   The Dresden Loan Agreements, as amended, also require that we:
+
+  .  provide interim funding to AMD Saxony if either the remaining capital
+     investment allowances or the remaining interest subsidies are delayed,
+     such funding to be repaid to AMD as AMD Saxony receives the grants or
+     subsidies from the state of Saxony;
+
+  .  fund shortfalls in government subsidies resulting from any default under
+     the subsidy agreements caused by AMD Saxony or its affiliates; and
+
+  .  guarantee up to 35 percent of AMD Saxony's obligations under the Dresden
+     Loan Agreements, which guarantee must not be less than $100 million or
+     more than $277 million, until the bank loans are repaid in full.
+
+   AMD Saxony would be in default under the Dresden Loan Agreements if we, AMD
+Saxony or AMD Saxony Holding GmbH (AMD Holding), the parent company of AMD
+Saxony and a wholly owned subsidiary of AMD, fail to comply with certain
+obligations thereunder or upon the occurrence of certain events including:
+
+  .  material variances from the approved plans and specifications;
+
+  .  our failure to fund equity contributions or shareholder loans or otherwise
+     comply with our obligations relating to the Dresden Loan Agreements;
+
+  .  the sale of shares in AMD Saxony or AMD Holding;
+
+  .  the failure to pay material obligations;
+
+  .  the occurrence of a material adverse change or filings or proceedings in
+     bankruptcy or insolvency with respect to us, AMD Saxony or AMD Holding; and
+
+  .  the occurrence of default under our Loan and Security Agreement (the Loan
+     Agreement) with a consortium of banks led by a domestic financial
+     institution, effective on July 13, 1999.
+
+   Generally, any default with respect to borrowings made or guaranteed by AMD
+that results in recourse to us of more than $2.5 million and is not cured by
+us, would result in a cross-default under the Dresden Loan Agreements and the
+Loan Agreement. As of December 30, 2001, we were in compliance with all
+conditions of the Dresden Loan Agreements.
+
+                                      12
+
+<PAGE>
+
+   In the event we are unable to meet our obligations to AMD Saxony as required
+under the Dresden Loan Agreements, we will be in default under the Dresden Loan
+Agreements and the Loan Agreement, which default would permit acceleration of
+certain indebtedness, which could have a material adverse effect on us. We
+cannot assure that we will be able to obtain the funds necessary to fulfill
+these obligations. Any such failure would have a material adverse effect on us.
+
+   We entered into foreign currency hedging transactions for Dresden Fab 30 in
+1999, 2000 and 2001 and anticipate entering into additional foreign currency
+hedging transactions in 2002 and in future years. We use foreign currency
+forward and option contracts to reduce our exposure to currency fluctuations on
+our foreign currency exposures in our foreign sales subsidiaries, liabilities
+for products purchased from FASL and for foreign currency denominated fixed
+asset purchase commitments. The objective of these contracts is to minimize the
+impact of foreign currency exchange rate movements on our operating results and
+on the cost of capital asset acquisition. Our accounting policy for these
+instruments is based on our designation of such instruments as hedging
+transactions. We generally do not use derivative financial instruments for
+speculative or trading purposes.
+
+   Motorola.  In 1998, we entered into an alliance with Motorola for the
+development of logic and Flash memory process technology. The alliance includes
+a technology development and license agreement and a patent cross-license
+agreement. Licenses under the agreement may be subject to variable royalty
+rates. We are currently working with Motorola to cease our joint process
+development efforts in the second half of 2002.
+
+   UMC Alliance.  On January 31, 2002, we announced an alliance with United
+Microelectronics Corporation (UMC) under which UMC and AMD will establish a
+joint venture to own and operate a state-of-the-art, 300-mm wafer fabrication
+facility in Singapore for high-volume production of PC processors and other
+logic products. As part of the alliance, we and UMC will collaborate in the
+development of advanced process technologies for semiconductor logic products.
+We separately announced a foundry agreement under which UMC will produce PC
+processors to augment Dresden Fab 30 production capacity for devices produced
+on 130-nanometer and smaller-geometry technology.
+
+Marketing and Sales
+
+   Our products are marketed and sold under the AMD trademark. We employ a
+direct sales force through our principal facilities in Sunnyvale, California,
+and field sales offices throughout the United States and abroad, primarily
+Europe and Asia Pacific. We also sell our products through third-party
+distributors and independent representatives in both domestic and international
+markets pursuant to nonexclusive agreements. The distributors also sell
+products manufactured by our competitors. No single distributor or OEM customer
+accounted for ten percent or more of our net sales in 2001. In 2000 and 1999,
+one of our OEM customers accounted for approximately 11 and 13 percent of net
+sales. No distributor accounted for ten percent or more of net sales in 2000 or
+1999.
+
+   Distributors typically maintain an inventory of our products. Generally, we
+sell to distributors under terms allowing the distributors certain rights of
+return and price protection on unsold merchandise held by them. The price
+protection and return rights we offer to our distributors could materially and
+adversely affect us if there is an unexpected significant decline in the price
+of our products.
+
+   Our international sales operations entail political and economic risks,
+including expropriation, currency controls, exchange rate fluctuations, changes
+in freight rates and changes in rates and exemptions for taxes and tariffs.
+
+Raw Materials
+
+   Certain raw materials we use in the manufacture of our products are
+available from a limited number of suppliers. For example, we are dependent on
+key chemicals from a limited number of suppliers and rely on a few foreign
+companies to supply the majority of certain types of the IC packages we
+purchase. Interruption of supply or increased demand in the industry could
+cause shortages and price increases in various essential materials. If
+
+                                      13
+
+<PAGE>
+
+we were unable to procure certain of these materials, we might have to reduce
+our manufacturing operations. Such a reduction could have a material adverse
+effect on our business. To date, we have not experienced significant difficulty
+in obtaining the raw materials required for our manufacturing operations.
+
+Environmental Regulations
+
+   Our business involves the use of hazardous materials. If we fail to comply
+with governmental regulations related to the use, storage, handling, discharge
+or disposal of toxic, volatile or otherwise hazardous chemicals used in our
+manufacturing processes, we may be subject to fines, suspension of production,
+alteration of our manufacturing processes or cessation of our operations. Such
+regulations could require us to procure expensive remediation equipment or to
+incur other expenses to comply with environmental regulations. Any failure to
+control the use of, disposal or storage of, or adequately restrict the
+discharge of, hazardous substances could subject us to future liabilities and
+could have a material adverse effect on our business. Violations of
+environmental laws may result in criminal and civil liabilities.
+
+Intellectual Property and Licensing
+
+   We have been granted over 4,300 United States patents and have several
+thousand patent applications pending in the United States. In certain cases, we
+have filed corresponding applications in foreign jurisdictions. We expect to
+file future patent applications in both the United States and abroad on
+significant inventions, as we deem appropriate.
+
+   In May 2001, we signed a 10-year cross-licence agreement with Intel
+Corporation. In addition, we have entered into numerous cross-licensing and
+technology exchange agreements with other companies under which we both
+transfer and receive technology and intellectual property rights. Although we
+attempt to protect our intellectual property rights, in the United States and
+abroad, through patents, copyrights, trade secrets and other measures, we may
+not be able to adequately protect our technology or other intellectual property
+or prevent others from independently developing similar technology. Any patent
+licensed by us or issued to us could be challenged, invalidated or
+circumvented, or rights granted thereunder may not provide a competitive
+advantage to us. Further, patent applications that we file may not be issued.
+Despite our efforts to protect our rights, others may independently develop
+similar products, duplicate our products or design around our patents and other
+rights. In addition, it is difficult to cost-effectively monitor compliance
+with, and enforce, our intellectual property rights on a worldwide basis.
+
+   From time to time, we have been notified that we may be infringing
+intellectual property rights of others. If any such claims are asserted against
+us, we may seek to obtain a license under the third party's intellectual
+property rights. We cannot assure you that all necessary licenses can be
+obtained on satisfactory terms, or at all. We could decide, in the alternative,
+to resort to litigation to challenge such claims. Such challenges could be
+extremely expensive and time-consuming and could have a material and adverse
+effect on us. We cannot assure you that litigation related to the intellectual
+property rights of us or others will always be avoided or successfully
+concluded.
+
+Backlog
+
+   We manufacture and market standard lines of products. Consequently, a
+significant portion of our sales are made from inventory on a current basis.
+Sales are made primarily pursuant to purchase orders for current delivery or
+agreements covering purchases over a period of time, which orders or agreements
+may be revised or canceled without penalty. Generally, in light of current
+industry practice and experience, we do not believe that such agreements
+provide meaningful backlog figures or are necessarily indicative of actual
+sales for any succeeding period.
+
+Employees
+
+   On January 27, 2002, we employed approximately 14,415 employees, none of
+whom are represented by collective bargaining arrangements. We believe that our
+relationship with our employees is good.
+
+                                      14
+
+<PAGE>
+
+Executive Officers of the Registrant
+
+   W. J. Sanders III--Mr. Sanders, 65, is our Chairman of the Board and Chief
+Executive Officer and has been since he co-founded AMD in 1969. Mr. Sanders
+will retire as Chief Executive Officer on April 25, 2002; if re-elected, Mr.
+Sanders will serve as Chairman of the Board through December 27, 2003.
+
+   Hector de J. Ruiz--Dr. Ruiz, 56, is our President and Chief Operating
+Officer. Dr. Ruiz will be appointed our Chief Executive Officer on April 25,
+2002. Dr. Ruiz joined AMD in January 2000. Before joining AMD, Dr. Ruiz had
+been President of the Semiconductor Products Sector of Motorola, Inc. since
+1997. Dr. Ruiz had held various executive positions with Motorola since 1977.
+
+   Benjamin M. Anixter--Mr. Anixter, 64, is our Vice President, External
+Affairs, and has been since 1987. Mr. Anixter became a corporate officer in
+April of 1999. He has held positions with us since 1971.
+
+   Robert R. Herb--Mr. Herb, 40, is our Executive Vice President, Chief Sales
+and Marketing Officer. Mr. Herb joined AMD in 1983. In 1998, Mr. Herb became an
+officer of AMD and was promoted to Senior Vice President and Co-Chief Marketing
+Officer. From 1996 until 1998, Mr. Herb served as the Vice President of Group
+Strategic Marketing for the Computation Products Group. Before that, he was a
+director of marketing for the Personal Computer Products Division.
+
+   Walid Maghribi--Mr. Maghribi, 49, was our Senior Vice President and
+President of the Memory Group until he resigned on March 1, 2002. Mr. Maghribi
+joined us in 1986 and was Group Vice President, Memory Group before being
+promoted to Senior Vice President and President of the Memory Group in 2001.
+Before joining AMD, Mr. Maghribi was Director of Operations of Seeq Technology,
+which he joined in 1982.
+
+   Thomas M. McCoy--Mr. McCoy, 51, is our Senior Vice President, General
+Counsel and Secretary. Before his appointment as Senior Vice President, Mr.
+McCoy held the office of Vice President, General Counsel and Secretary from
+1995 to 1998. Before joining AMD, Mr. McCoy was with the law firm of O'Melveny
+and Myers where he practiced law, first as an associate and then as a partner,
+from 1977 to 1995.
+
+   Robert J. Rivet--Mr. Rivet, 47, is our Senior Vice President and Chief
+Financial Officer. Mr. Rivet joined us in September 2000. Before joining us, he
+had served as Senior Vice President and Director of Finance of the
+Semiconductor Products Sector of Motorola since 1997. Mr. Rivet served in a
+number of positions in semiconductor operations at Motorola since 1981, after
+joining the company in 1976 as a senior financial analyst and senior accountant.
+
+   William T. Siegle--Dr. Siegle, 63, is our Senior Vice President, Technology
+Operations and Chief Scientist. Dr. Siegle was Group Vice President, Technology
+Development Group and Chief Scientist from 1997 until 1998. Before his
+appointment as Group Vice President, Dr. Siegle had served as Vice President,
+Integrated Technology Department and Chief Scientist since 1990.
+
+   Stan Winvick--Mr. Winvick, 62, is our Senior Vice President, Human
+Resources. Before his appointment as Senior Vice President in 1991, Mr. Winvick
+had served as Vice President, Human Resources since 1980.
+
+   Stephen J. Zelencik--Mr. Zelencik, 67, is our Senior Vice President, Market
+Development. Before his appointment as Senior Vice President, Market
+Development in 1999, Mr. Zelencik served as Senior Vice President and Co-Chief
+Marketing Officer. From 1979 until 1998, Mr. Zelencik was Senior Vice President
+and Chief Marketing Executive.

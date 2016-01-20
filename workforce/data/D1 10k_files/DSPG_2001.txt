@@ -1,0 +1,1484 @@
+Item 1.    BUSINESS.
+
+GENERAL BUSINESS
+
+         DSP Group was incorporated as a corporation in the State of California
+in 1987 and reincorporated in the State of Delaware in 1994. DSP Group develops
+and markets products and technologies that perform digital signal processing
+(DSP) -the electronic manipulation of digitized speech and other digital
+signals. DSP Group's products are used in a wide variety of telecom
+applications.
+
+         Digital signal processing based solutions are more cost effective and
+provide a broader range of features than analog based solutions. Many
+applications, including digital cellular and wireless communications, broadband
+modems, Voice Over the Internet and digital audio/video, all use DSP techniques
+intensively.
+
+         Our work in the field of DSP has yielded four synergetic product
+families:
+
+               -  Integrated Digital Telephony (IDT) family of chips, comprised
+                  of the following:
+
+                  - SPEECH AND TELEPHONY. A highly integrated DSP based chip
+                    that handles telephony functions and advanced speech
+                    algorithms targeted for the telephony market.
+
+                  - CORDLESS TELEPHONY. A 900 Megahertz / 2.4 Gigahertz Digital
+                    Spread Spectrum chip set. The chip set is composed of a RF
+                    transceiver and a highly integrated DSP based chip. The DSP
+                    based chip combines three main functions into one chip: the
+                    wireless base band; speech processing; and telephony
+                    functions.
+
+               -  VOICE OVER PACKET. A DSP based, highly integrated speech
+                  processor targeted for the low to medium density Integrated
+                  Accesses Device (IAD), Residential gateway and IP telephony
+                  markets.
+
+               -  DSP CORES. Digital Signal Processor Cores is a family of
+                  programmable digital signal processors that, when combined
+                  with other hardware elements such as memory and
+                  input/output devices, forms a software enabled chip that
+                  is most targeted for specific applications.
+
+               -  TRUESPEECH(R). A family of proprietary speech compression
+                  algorithms.
+
+DSP-BASED SPEECH AND TELEPHONY PROCESSORS
+
+         DSP Group has developed two lines of speech and telephony processing
+chips: integrated digital telephony processors, which are designed for use in
+the consumer telephone market; and Voice over IP
+
+                                       4
+
+<PAGE>
+
+speech co-processors, which are designed for use in network telephony and video
+conferencing products. Both product lines are based upon our DSP core designs
+and incorporate our TrueSpeech speech compression algorithms.
+
+         INTEGRATED DIGITAL TELEPHONY SPEECH PROCESSORS
+
+         DSP Group's integrated digital telephony (IDT) speech processors are
+currently incorporated in over 90 models of featured phones from more than 40
+different companies. These models are being sold in Europe, Japan and the United
+States.
+
+         Our IDT speech processors are based on our PineDSPCore(R) and TeakLite
+DSPCore, which are more fully described below. Our integrated digital telephony
+speech processors use our TrueSpeech speech compression technology to provide
+the highest quality speech recording and playback. They incorporate the
+following speech and telephony technologies in various combinations:
+
+<TABLE>
+<CAPTION>
+
+--------------------------------------------------------------------------------
+              TECHNOLOGY                               DESCRIPTION
+--------------------------------------------------------------------------------
+<S>                                       <C>
+Triple Rate Coder(TM)                     Instructs the telephone answering
+                                          system to decide automatically
+                                          between better voice quality and
+                                          longer recording time.
+--------------------------------------------------------------------------------
+True Full-Duplex SpeakerPhone(TM)         Allows simultaneous two-way
+                                          (full-duplex), hands-free operation of
+                                          the telephone and suppresses and
+                                          cancels acoustic  and electrical
+                                          echoes.
+--------------------------------------------------------------------------------
+G.723.1                                   Provides speech compression for Voice
+                                          over IP and video conferencing over
+                                          standard telephone lines.
+--------------------------------------------------------------------------------
+Caller ID and Call Waiting Caller ID      Identifies to the party being called
+                                          the telephone number of the calling
+                                          party, whether or not the party being
+                                          called is already engaged in another
+                                          call.
+--------------------------------------------------------------------------------
+Call Progress Tone Detection              Detects standard telephony signals
+                                          during the progress of a telephone
+                                          call.
+--------------------------------------------------------------------------------
+DTMF Signaling                            Detects and generates touch
+                                          tone (DTMF) signals that comply with
+                                          telephone industry frequency
+                                          standards.
+--------------------------------------------------------------------------------
+Speech Prompts                            Provides the ability to stamp
+                                          a message with a time and date and
+                                          vocal operating instructions prompts.
+--------------------------------------------------------------------------------
+Variable Speed Playback                   Permits playback of recorded speech at
+(FlexiSpeech(R))                          different speeds without distorting
+                                          the natural sound of the speech.
+--------------------------------------------------------------------------------
+Voice Operated Switch (VOX)               Detects human speech and stops
+(Smart-Vox(R))                            recording during periods of silence,
+                                          thereby conserving available memory.
+--------------------------------------------------------------------------------
+Alpha Least Cost Routing                  Automatically chooses from a number of
+(LCR)/Super LCR                           telephone service providers in  order
+                                          to select the lowest available rates.
+--------------------------------------------------------------------------------
+Voice Recognition                         Allows a user to operate a telephone
+                                          or answering machine device by giving
+                                          voice commands.
+--------------------------------------------------------------------------------
+</TABLE>
+
+         The first integrated digital telephony speech processors were
+introduced by DSP Group in 1989. Since then, we have shipped approximately
+67 million units of speech processors to original equipment manufacturers
+(OEMs), of which approximately 20 million were shipped in 2000. Our IDT speech
+processor sales accounted for approximately 70% of our total revenues in 2000.
+
+                                       5
+
+<PAGE>
+
+         In 1999, we started the shipment of the D16000 family of fully
+integrated speech processors, which combine the components of a mixed signal
+system on a single chip. Each speech processor in the D16000 family contains a
+DSP core, converters that transform analog signals into digital signals and vice
+versa, and various signal amplifiers, all embedded on a single chip. In addition
+to implementing DSP algorithms, including data compression, caller ID and
+full-duplex speaker phone, these speech processors also perform tasks that would
+typically be handled by a separate central processing unit (CPU) chip. Our goal
+is for the D16000 processors to provide high value to telephony product vendors
+by eliminating the need for almost any other electronic components and thus
+reducing materials and manufacturing costs.
+
+         In 2000, we developed the D36000 family of fully integrated speech
+processors based on our TeakLite Core, which can support two line telephony as
+well as cordless base band modems with low power usage. We anticipate that this
+product will enter to mass production deliveries in the second quarter of 2000.
+
+         The following table presents the main features of the primary IDT
+speech processors that we currently offer:
+
+                        DSP GROUP'S IDT SPEECH PROCESSORS
+
+<TABLE>
+<CAPTION>
+
+                                                     D36569      D16559       D6571       D6587
+                                                   ---------     ------      ------      -------
+<S>                                                <C>          <C>         <C>         <C>
+     Process Geometry (microns)..............         0.25        0.45         0.5         0.5
+     Minutes Record, 4 Mbit Memory...........        22-25,      22-25,       22-25,      22-25,
+                                                     10,15       10,15        10,15       10,15
+     Memory Type.............................        Flash       Flash        Flash       Flash
+     DSP Core:                                      TeakLite      Pine        Pine        Pine
+     Advanced Features:
+       Speech Prompts........................         Yes         Yes          Yes         Yes
+       Variable Speed Playback...............         Yes         Yes          Yes         Yes
+       Full Duplex Speakerphone..............         Yes         Yes          Yes         Yes
+       Caller ID and Call Waiting Caller ID           Yes         Yes          Yes         Yes
+       Voice Recognition                               --          --          --          Yes
+       System On Chip-included peripherals:
+       Microcontroller.......................         Yes         Yes          --           --
+       Line Codec ...........................         Yes         Yes          --           --
+       Speaker Codec.........................         Yes         Yes          --           --
+       Amplifiers............................         Yes         Yes          --           --
+</TABLE>
+
+         CORDLESS TELEPHONY
+
+         In the beginning of 1999, DSP Group acquired two integrated groups of
+engineers, one located in Israel and the other in the United States. These
+twenty-five engineers specialize in the design of integrated circuits for
+wireless communications. In addition, we acquired technology and products,
+including associated intellectual property, related to 900 Megahertz narrow-band
+cordless telephones (the transmissions between the handset and base unit of
+these telephones are at or near a frequency of 900 Megahertz) and 900 Megahertz
+spread spectrum cordless telephones (the transmissions between the handset and
+base unit of these telephones are "spread" in a pseudo-random pattern over a
+range of frequencies).
+
+         In 2000, in anticipation of limited growth in the U.S. 900MHz spread
+spectrum market, DSP Group initiated development of a new line of cordless
+products to address this changing market. The line includes a low cost 900MHz
+digital chipset, a 2.4GHz frequency-hopping, spread spectrum, high power system
+(a method which uses fast channel switching to mitigate interference and improve
+performance) and a 2.4GHz multihandset system.
+
+         The following table presents the main features of the cordless chipsets
+that we currently offer:
+
+                                       6
+<PAGE>
+
+                   DSP GROUP'S IDT CORDLESS SPEECH PROCESSORS
+
+<TABLE>
+<CAPTION>
+
+                                                    900MHZ     900MHZ
+                                                      DSS      DIGITAL
+                                                    -------    -------
+<S>                                                <C>        <C>
+     Process Geometry baseband (microns).....         0.35       0.25
+     RF Process                                     Bipolar    Bipolar
+     Advanced Features:
+       Digital Answering Machine.............          No         Yes
+       Full Duplex Speakerphone..............          No         Yes
+       Caller ID and Call Waiting Caller ID            No         Yes
+       System On Chip-included peripherals:
+       Line Codec ...........................         Yes         Yes
+       Speaker Codec.........................          No         Yes
+       Amplifiers............................         Yes         Yes
+     Transmit power (mW)                              100          1
+     Multihandset Capability                           No          No
+</TABLE>
+
+VOICE OVER PACKET SPEECH CO-PROCESSORS
+
+         Our Voice over Packet (VoIP, VoDSL) speech co-processors were developed
+for use in conjunction with other microprocessors to transmit
+voice-over-packet-based public and private networks, including the Internet,
+local area networks (LANs), frame relay networks, xDSL links, cable networks and
+other data networks and combined data/voice networks. "Voice over IP" refers to
+the transmission of voice signals over networks using the Internet Protocol
+(IP), which involves dividing the signals into numerous small data packets that
+are individually transmitted over the network and re-assembled in the correct
+order at their destination. This technology can also be used to implement the
+speech component of video conferencing applications.
+
+         DSP Group has developed a family of TrueSpeech co-processors that
+integrate the various versions of TrueSpeech with important telephony
+capabilities. This product line is known as the CT8000 TrueSpeech Co-processor
+family. During 2000 we introduced to mass production the latest product in this
+line, our CT8022 device which has G723.1 and G729AB speech coders.
+
+         In March 2000 DSP Group acquired approximately 73% of VoicePump, Inc.,
+a company which specializes in speech coding and telecom algorithms for VoIP,
+VoDSL and other voice-over-packet applications developed for voice gateway,
+customer-oriented equipment manufacturers and broadband network providers. In
+March 2001, DSP Group exercised its option to acquire the remaining founders'
+shares of VoicePump, which is now a wholly-owned subsidiary of DSP Group.
+
+         VoicePump plans to launch its first products in the VP100 family of
+products in the second half of 2001. The VP100 family of products is based on
+DSP Group TeakLite core processor, which includes an integrated set of
+peripherals optimized for VoDSL Integrated Access Device (IADs), VoIP and other
+packet voice applications. VoicePump plans to offer its current and future
+product lines as low cost efficient applications for both VoDSL and VoIP
+solutions.
+
+         We anticipate that VoicePump's speech co-processors will take advantage
+of the G.723.1, a speech compression algorithm that has been incorporated into
+various international communications standards, which is more fully discussed
+below, to provide cost-effective, high quality speech compression. The following
+table sets forth other features of the Voice over IP speech co-processors that
+we currently offer or plan to offer during 2001:
+
+                                       7
+
+<PAGE>
+
+               DSP GROUP'S VOICE OVER PACKET SPEECH CO-PROCESSORS
+
+<TABLE>
+<CAPTION>
+
+                                                      CT8022        VP110         VP120         VP140
+                                                     --------     ---------     ---------      --------
+<S>                                                  <C>           <C>           <C>           <C>
+Number of channels supported simultaneously             1             1             2             4
+DSP Core....................................           Oak         TeakLite      TeakLite      TeakLite
+Process Geometry (microns)..................           0.5           0.25          0.25          0.25
+ITU-T Standard Speech Coders................         G.723.1,       G.726,        G.726,        G.726,
+                                                     G.729AB       G.723.1,      G.723.1,      G.723.1,
+                                                                   G.729AB       G.729AB       G.729AB
+Analog Front-End integrated.................            --           Yes           Yes           Yes
+Features:
+ Full Duplex Speakerphone...................           Yes           Yes           Yes           Yes
+ Variable Speed Message Playback............            --            --            --            --
+ Full Duplex DSVD...........................           Yes           Yes           Yes           Yes
+ Video Conferencing.........................           Yes           Yes           Yes           Yes
+Internet Telephony..........................           Yes           Yes           Yes           Yes
+ Line Echo cancellation G168................            No           Yes           Yes           Yes
+</TABLE>
+
+         The following is a list of manufacturers and resellers whose products
+incorporate our devices:
+
+<TABLE>
+<CAPTION>
+
+                  VOIP, IDT & CORDLESS MANUFACTURERS AND RESELLERS
+
+               Manufacturers                             Resellers
+   -----------------------------------               ------------------
+   <S>                     <C>                      <C>
+   Solectron               Panasonic                 Bell South
+   Flextronics             Philips                   Doro
+   CCT Telecom             CKT                       Radio Shack
+   Daewoo                  Samsung                   France Telecom
+   D&B Electronics         E-Lead                    GE
+   Primatronix             Intech                    German Telecom
+   Giant                   Sagem                     Loewe-Binatone
+   HPF Ascom               Sony                      Southwestern Bell
+   JVC                     Taifeng                   Belgacom
+   Decktron                Thomson
+   L.G. Electronics        Tiptel
+   Cenixdigicom            Syhtech
+   DIC                     Dyne
+   Matra                   Uniden
+   Maxon                   Diasonics
+</TABLE>
+
+DSP CORES
+
+         DSP Group has developed proprietary, programmable DSP core
+architectures and designs that provide low-power, high performance,
+cost-effective solutions for current and emerging digital signal processing
+applications. Our DSP cores are incorporated in our own family of speech and
+telephony, cordless, voice over packet and telephony processors and also are
+licensed to more than 60 entities, including Adaptec (now part of ST Micro),
+Atmel, DSP Communications (now part of Intel), Fujitsu,
+
+                                       8
+
+<PAGE>
+
+Kawasaki, LSI Logic, Marvell, NEC, Oki, Seiko Epson, Samsung, Siemens/Infinion,
+Sony, Temic and Philips.
+
+         Our SmartCores(TM) family is currently composed of five generations of
+fixed-point DSPs: PineDSPCore(R); OakDSPCore(R); TeakLite(R); Teak(R); and
+PalmDSPCore(R). By offering a range of performance, price and power consumption
+balances, our cores family addresses a wide range of applications, from low-end,
+high-volume applications, such as digital answering machines, hard disk
+controllers, low speed modems and Voice over IP terminals, to high performance
+applications such as third generation (3G) cellular communication devices,
+broadband modems, consumer multimedia and Voice over IP gateways.
+
+         Our DSP core designs are currently licensed to a wide variety of
+licensees under more than 60 license agreements, including leading semiconductor
+companies such as Atmel, Fujitsu, Infineon, Intel, Kawasaki, LSI Logic,
+Mitsubishi, National Semiconductor, NEC, Oki, Philips, Samsung, Seiko-Epson and
+Sony.
+
+         We believe the following to be the key benefits of our solution:
+
+         - LOW POWER CONSUMPTION. Our cores have been designed to satisfy low
+           power consumption requirements. Applications within the embedded DSP
+           Group market either rely on batteries, such as cell phones and
+           portable audio products, or are sensitive to power dissipation as in
+           the case of telecommunications equipment (DSLAM or multi-channel
+           voice gateways).
+
+         - LOW COST. Our technology is designed to address the cost requirements
+           for high volume, highly-competitive applications. Reduction of chip
+           cost is achieved by reducing the overall physical size of the chip.
+           Our technology contributes to this reduction by reducing the size of
+           the programmable DSP core through careful selection of functions and
+           mechanisms to be included within the core. We also reduce chip size
+           by minimizing the memory size used for running a specific
+           application. Through our DSP algorithms, we offer instruction sets
+           suited for targeted applications and encode the instructions in a
+           very condensed form. The instruction code density factor has recently
+           gained more significance, as the emerging applications in our markets
+           are major memory consumers.
+
+         - FLEXIBILITY. Our architecture allows our licensees to differentiate
+           their products while still taking advantage of the benefits of our
+           "open architecture" designs. We license our technology as a "soft
+           core," allowing each of our semiconductor licensees or system OEMs to
+           take advantage of their respective manufacturing strengths. In
+           addition, our architecture has flexible memory size, which enables
+           our licensees to tailor the chip to include the specific memory size
+           required for a targeted application.
+
+         - PROGRAMMABLE SOLUTION. Our intellectual property allows our licensees
+           to develop software-based, application-specific chips as opposed to a
+           hard-wired implementation. A programmable solution allows our
+           licensees to use the same IC design for several generations or
+           variations of products, implementing these differentiations through
+           software, thus shortening the time to market and reducing engineering
+           costs. Additionally, a programmable solution allows for "field
+           upgrades" of the chips, where software can be replaced through remote
+           down-loading rather than through replacing the chip.
+
+         - IMPROVING CUSTOMERS TIME TO MARKET. A typical design cycle for a
+           semiconductor company can be lengthy and painful. Our technology
+           shortens this design cycle and improves our customers overall time to
+           market by addressing two of the main time-consuming stages of the
+           design cycle: the process of porting the core design to physical
+           hardware layout; and by providing ready-made software development
+           environments for designing the software used in our core designs.
+
+                                       9
+
+<PAGE>
+
+         - FOCUSED PRODUCT ROAD MAP OF HIGH-PERFORMANCE CORES. We have developed
+           five generations of programmable DSP cores, which were designed to
+           meet the performance, power consumption and cost requirements of the
+           various applications within the embedded DSP market, and we intend to
+           continue and enhance our cores and to design new cores to meet future
+           market demands. Our family of cores offers broad selection of
+           different price performance points, although each is designed for low
+           power consumption, enabling the crafting of optimal balance of
+           performance, cost and power efficiency. In addition, our latest DSP
+           cores, the Teak and the PalmDSPCore, use advanced techniques of
+           Instruction Level Parallelism--Single Instruction Multiple Data
+           (SIMD) and Multiple Instruction Multiple Data (MIMD) allowing our
+           cores to be embedded in high-performance applications such as
+           telecommunications equipment (Multi-Channel Voice Gateways, DSLAM)
+           and third generation cellular terminals.
+
+         - SOFT CORE / FOUNDRY NEUTRAL. Our cores are "soft cores," which means
+           that they include a complete software-based description of the
+           circuits as well as simulation and verification data. This allows the
+           licensee to create diversified versions of their embedded
+           intellectual property solutions through the selection of different
+           physical library vendors or silicon suppliers and allows our cores to
+           be easily integrated across multiple semiconductor manufacturing
+           processes with different geometry technologies. This manufacturing
+           independence enables our customers to select any foundry vendor or
+           semiconductor process to manufacture their designs.
+
+         - OPEN ARCHITECTURE. Our SmartCore architecture is offered to a broad
+           range of SoC manufacturers that provide solutions for system OEMs and
+           has been adopted by leading worldwide semiconductor companies. Our
+           architecture has been adopted by several different categories of
+           companies that play a role in the design of advanced DSP-based
+           systems. As a result, the system OEMs who are the consumers of our
+           intellectual property enjoy the ability to choose multiple suppliers
+           offering solutions based on our technology, and can leverage their
+           buying power.
+
+         - RESPONSIVENESS TO OUR CUSTOMERS NEEDS. We have accumulated experience
+           in supporting and assisting customers to get into production in the
+           fastest way. We train our licensees, provide them with detailed
+           application notes, design examples and software libraries for their
+           use in the design process. We continue to be responsive to our
+           customer needs and implement changes to our solutions for the benefit
+           of our licensees. Our development and support teams consist of
+           experienced and highly-skilled engineers who enable us to provide a
+           broad range of services and design aids.
+
+         - TECHNOLOGY PARTNER NETWORK. We have established a network of
+           independent third parties that provide services and technologies
+           complementary to ours, including leading service companies such as
+           Tality, EDA vendors such as Mentor, Synopsis and Cadence, Real Time
+           Operating Systems (RTOS) vendors such as CMX, multi-core debugger
+           vendors such as Allant (a subsidiary of ARM Holding) and DSP software
+           companies such as Ensigma, Espico and Vocal Technologies. We believe
+           that these third party partners offer existing and potential users of
+           our technologies value-added solutions and help to establish our
+           cores as an industry standard.
+
+         - TIGHTLY COUPLED DEVELOPMENT TOOLS AND ARCHITECTURE. We believe that
+           it is a great benefit for our licensees that we provide them with
+           both the DSP cores and the related software development and hardware
+           emulation tools to assist in product development. The close
+           relationship between the DSP core architectures and the design
+           development tools results in a design environment composed of
+           optimized, code-efficient compilers as well as efficient and accurate
+           hardware emulation prototypes, which we believe our customers prefer.
+
+                                       10
+
+<PAGE>
+
+         With each new core we have developed, we have added features and
+enhanced overall performance. Our first core, the PineDSPCore, was released in
+1992 and was developed for use in our IDT product line. It also gained success
+in other DSP applications, such as hard disk drive applications, and Voice Over
+IP phones. In 1994, we introduced our OakDSPCore, an enhanced version of the
+PineDSPCore that, among other things, achieves a higher processing speed through
+improved architecture and includes an advanced, more efficient instruction set.
+The OakDSPCore is especially well-suited for use in digital cellular phones,
+conventional modems, IP phones and portable audio. Algorithms that use the
+PineDSPCore instruction set also can be run on the OakDSPCore.
+
+         In 1999, we introduced the TeakDSPCore. The TeakDSPCore is a family of
+two low power, low-cost cores: the TeakLite(TM) and the Teak(R). These cores
+were incorporated into two new methodologies known as "soft core" and
+"synthesizable core" which significantly simplifies and shortens the process of
+porting the design technology to the licensee's manufacturing process and
+technologies. The TeakLite takes advantage of the wide adoption of the
+OakDSPCore and offers the advantages of lower power and higher operating speeds
+over its predecessor. The Teak offers in addition to the TeakLite benefits, two
+(as opposed to one) arithmetic units functioning in parallel (Dual MAC), which
+improves the performance of a notable portion of the DSP application. The
+TeakDSPCore family is aimed at emerging applications in the digital cellular
+communications, including products implementing the Global System for Mobile
+communications (GSM), half-rate GSM, Time Division Multiple Access (TDMA) and
+Code Division Multiple Access (CDMA) standards. We also have targeted these
+cores for products implementing emerging digital audio standards and formats
+such as AC3 and MP3, as well as for Voice over IP gateways.
+
+         In 1999, we also introduced the first version of our high performance
+PalmDSPCore. The PalmDSPCore is a family of three cores, with each core version
+intended for a different market segment. These cores are intended for a wide
+range of high performance applications, including third generation cellular
+communications, digital subscriber lines (DSL), VoIP gateways and consumer
+multimedia. The following table sets forth the primary features of each our
+SmartCores products:
+
+<TABLE>
+<CAPTION>
+
+                            DSP GROUP'S CORE DESIGNS
+
+                                  PINEDSPCORE    OAKDSP CORE     TEAKLITE         TEAK       PALMDSPCORE
+                                  -----------    -----------    ----------      --------    -------------
+<S>                                 <C>            <C>            <C>            <C>        <C>
+Data Word Length ..............     16 bit         16 bit         16 bit         16 bit     16/20/24 bit
+Design Methodology.............      Hard           Hard           Soft           Soft      Soft
+Architecture...................    Single MAC    Single MAC     Single MAC      Dual MAC     Dual MAC &
+                                                                                             Instruction
+                                                                                                Level
+                                                                                             Parallelism
+Program address space..........    64Kwords       64kwords       64Kwords       4Mwords       16Mwords
+Program word size..............     16 bit         16 bits        16 bit         16 bit       16/32 bit
+</TABLE>
+
+                                       11
+
+<PAGE>
+
+         In addition to incorporating our DSP core designs in our speech and
+telephony processors, we also license them to third parties together with our
+advanced software development tools, so that these licensees can incorporate
+our DSP core designs into their semiconductor chip products. These licenses
+are generally granted in exchange for a license fee payment, a support fee
+and a royalty. The license fee is generally recognized when persuasive
+evidence of an agreement exists, delivery has occurred, the fee is fixed on
+determinable and collectability is probable. The monthly support fee is
+typically paid for a period of one or two years, and recognized during that
+period and ongoing per-unit royalties based on the number of units of
+products containing the core that are shipped by the licensee. Non refundable
+payment on account of future royalties from similar agreements are recognized
+upon payments, provided no future obligation exists. The timing and amount of
+royalties that we receive from our core licensees depends on the timing of
+each licensee's product development and the degree of market acceptance of
+each licensee's products, neither of which are within our control. In 2000,
+12 licensees shipped products utilizing these cores, an increase over the
+previous year.
+
+         The following is a partial list of companies who have licensed our DSP
+core designs and representative applications for which they use our DSP core
+designs:
+
+<TABLE>
+<CAPTION>
+
+                            DSP CORE DESIGN LICENSES
+
+             LICENSEES                           REPRESENTATIVE APPLICATIONS
+-----------------------------------          -----------------------------------
+<S>                                          <C>
+Atmel                                        ASIC, Communications
+DSP Communications
+(a subsidiary of Intel)                      Digital Cellular Telephones
+Fujitsu                                      ASIC, ADSL, Communications
+Hyundai                                      ASIC, Audio, Communications
+Infineon                                     Communications; Wireless
+Kawasaki                                     ASIC, Communications
+Kenwood                                      Audio Products
+Legerity                                     Communications
+LSI Logic                                    ASIC, DAB, Servo, Cellular
+Marvell                                      Data Storage
+Mitel                                        ASIC, Cellular, VoIP
+Mobilink                                     Cellular
+National Semiconductor                       Communications
+NEC                                          ASIC, Communications
+Oki                                          Communications, Modems, VoIP
+Philips Semiconductors                       ASIC, Communications, Audio, Wireless
+ROHM                                         ASIC, Communications
+Samsung                                      ASIC, Communications and Multimedia
+Seiko-Epson                                  ASIC, Communications
+Sony                                         Multimedia; Audio; Servo
+ST Microelectronics                          Disk Drives
+TDK Semiconductor                            Modems
+TEMIC                                        DAB, Communications
+Tioga                                        ADSL
+Xemics                                       Low Voltage applications
+Adaptec                                      Disk Drives
+</TABLE>
+
+         In 2000, the number of our core licensees increased as a result of
+several contracts signed for our newest products, TeakLite, Teak and
+PalmDSPCore. Prior to 1999, most of our licensees licensed our cores for the
+cellular market. In 2000, the PalmDSPCore was selected by leading companies as
+the platform for the xDSL (full-rate and G.Lite) market as well as for third
+generation cellular products.
+
+                                       12
+
+<PAGE>
+
+TRUESPEECH PRODUCTS
+
+         TrueSpeech is a family of high-quality, cost-effective speech
+compression technologies based on complex mathematical algorithms that are
+derived from the way airflow from the lungs is shaped by the throat, mouth and
+tongue during speech. This shaping of bursts of air is what the ear interprets
+as speech. TrueSpeech converts these sounds into digital data and then
+selectively eliminates and enhances certain sound data to replicate human
+speech.
+
+         Originally developed for consumer telephone applications, we have also
+enhanced our TrueSpeech products for use in the computer telephony and Voice
+over IP markets. We have both incorporated our TrueSpeech technology into our
+speech and telephony processors and as well as offer licenses of TrueSpeech to
+computer telephony, personal computer and Voice over IP companies for inclusion
+in their products.
+
+         Our TrueSpeech technology has become one of the leading digital speech
+compression solutions in several markets. In the personal computer market,
+Microsoft has incorporated one of our TrueSpeech algorithms in its Windows 95,
+Windows 98 and NT products. In February 1995, the International
+Telecommunications Union established its G.723.1 standard for low bit rate
+speech compression, which incorporates the TrueSpeech 6.3 and 5.3 algorithms. In
+March 1997, the International Multimedia Teleconferencing Consortium, a
+nonprofit industry group, recommended the G.723.1 standard as a default low bit
+rate audio compression technology for all voice transmissions over the Internet
+and for conferencing products conforming to the International Telecommunication
+Union's H.323 standard for packet-based multimedia communication systems.
+G.723.1 is also part of the International Telecommunication Union's H.324
+standard for video conferencing over standard telephone lines. Since its
+adoption and endorsement by the International Telecommunications Union and the
+International Multimedia Teleconferencing Consortium, the G.723.1 standard has
+gained considerable momentum in the video and audio conferencing industry.
+
+         We believe that the principal advantages of TrueSpeech, as compared
+with other currently available digital speech compression technologies, are as
+follows:
+
+         - INDUSTRY ACCEPTANCE AND FIELD PROVEN. As described above, a
+           TrueSpeech algorithm, the G.723.1, was adopted as a standard by the
+           International Telecommunications Union and was recommended as the a
+           default speech algorithm for Voice over IP by the International
+           Multimedia Teleconferencing Consortium. This encourages broad usage
+           of the algorithm, especially in Voice over IP and video conferencing
+           applications.
+
+         - HIGH QUALITY SPEECH. Another advantage of TrueSpeech is that it
+           reproduces high quality speech playback with minimum distortion by
+           selectively eliminating nonessential and background sound data
+           without significant loss of speech quality. Our TrueSpeech technology
+           has received high scores for speech quality from a number of
+           independent evaluators. For example, TrueSpeech scored the highest on
+           the ITU's test used to numerically rate the quality of the five
+           competing speech compression algorithms submitted for adoption as the
+           G.723.1 standard for video telephones. In independently conducted
+           tests performed by Dynastat, Inc., a company specializing in the
+           performance evaluation of voice communication systems, TrueSpeech 6.3
+           received a mean opinion score of 3.98, while regular telephone
+           quality being based upon a mean opinion score of 4.0.
+
+         - COST EFFECTIVENESS. TrueSpeech's ability to achieve high speech
+           compression with lower computational complexity provides it with a
+           competitive cost advantage. For example, competing speech compression
+           algorithms evaluated by the ITU use 20% to 50% more computing power
+           for the same compression and transmission rates, and require more
+           memory for storage and operation. Consequently, these competing
+           speech compression algorithms
+
+                                       13
+
+<PAGE>
+
+           require larger, more expensive DSPs and result in higher cost
+           solutions than those based on our technologies.
+
+         Our TrueSpeech licensees include, among others, Analog Devices, Cirrus
+Logic, Creative Labs, Dialogic, IBM, Intel, Microsoft, Philips,
+Siemens/Infinion, Smith Micro, Texas Instruments, Unisys, US Robotics, Winbond
+and White Pine Software. In addition, we have ported our TrueSpeech algorithms
+to certain DSP platforms offered by Analog Devices, Motorola and Texas
+Instruments, three leading merchant vendors of programmable DSP chips.
+
+SALES, MARKETING AND DISTRIBUTION
+
+         We market and distribute our products through our direct sales and
+marketing organization, as well as through a network of distributors and
+independent manufacturers' representatives. A marketing and sales team located
+in our headquarters in Santa Clara, California and in Israel pursues business
+with our customers in North America and closely monitors new markets, trends and
+customer needs to shape our strategic decisions. In Japan, we operate from a
+marketing and support office in Tokyo and through Tomen Electronics, a local
+distributor. In the rest of Asia, we operate through sales representatives in
+China, Hong Kong, India, South Korea and Taiwan. To handle sales and
+distribution in Europe, we operate a marketing and support office located in
+France and have sales representatives in Denmark, Germany, Israel, Spain, Sweden
+and the United Kingdom. Our sales representatives and distributors are not
+subject to minimum purchase requirements and can cease marketing our products at
+any time. The loss of one or more representatives or their failure to renew
+agreements with us upon expiration could harm our business, financial condition
+and results of operations.
+
+         Sales to Tomen Electronics comprised 52% of our total revenues in 2000,
+47% in 1999 and 45% in 1998. Export sales accounted for 85% of our total
+revenues in 2000, 97% in 1999 and 95% in 1998. Due to our export sales, we are
+subject to the risks of conducting business internationally, including
+unexpected changes in regulatory requirements, fluctuations in exchange rates
+that could increase the price of our products in foreign markets, delays
+resulting from difficulty in obtaining export licenses for certain technology,
+tariffs, other barriers and restrictions and the burden of complying with a
+variety of foreign laws. All of our export sales are denominated in United
+States dollars. See Note 5 of the Notes to Consolidated Financial Statements of
+our Annual Report to Stockholders for the year ended December 31, 2000, for a
+summary of our operations within various geographic areas.
+
+MANUFACTURING AND DESIGN METHODOLOGY
+
+         Since our products are based on our proprietary DSP core designs, which
+are not dependent upon a particular foundry's library cells, these products can
+be manufactured at a number of independent foundries. Accordingly, all of our
+manufacturing occurs at independent foundries. We contract fabrication services
+for speech and telephony processors from Taiwan Semiconductor Manufacturing
+Company, Sony and UMC. Under non-exclusive agreements, these independent
+foundries normally provide us with either finished, packaged and tested speech
+processors at variable prices depending on the volume of units purchased or as
+sorted good wafers. We customarily pay for fully-tested products meeting
+predetermined specifications. To ensure the integrity of quality assurance
+procedures, we develop detailed testing procedures and specifications for each
+product and require each foundry to use these procedures and specifications
+before shipping us finished products.
+
+         We intend to continue to use independent foundries to manufacture
+digital speech processors, cordless devices and other products for the consumer
+telephone and computer telephony markets. To obtain an adequate supply of
+finished wafers in the future, we are considering various alternative production
+sites. Our reliance on independent foundries involves a number of risks,
+including the foundries' ability to achieve acceptable manufacturing yields and
+their allocation of sufficient capacity to us to meet our needs. In addition,
+foundries in Taiwan produce a significant portion of our wafer supply. As a
+result, earthquakes, aftershocks or other natural disasters in Asia, could
+preclude us from obtaining an adequate supply of wafers to fill customer
+orders and could harm our business, financial condition, and results of
+operations.
+
+                                       14
+
+<PAGE>
+
+         In addition to our speech processors, our IDT speech processor products
+require an external component in the finished product to provide analog random
+access memory circuits (ARAMs) and flash memory that are supplied by third party
+manufacturers. Temporary fluctuations in the pricing and availability of these
+components could negatively impact sales of our IDT speech processors, which
+could in turn harm our business, financial condition and results of operations.
+
+COMPETITION
+
+         The markets in which we operate are extremely competitive and we expect
+that competition will increase in the future. In each of our business
+activities, we face current and potential competition from competitors that have
+significantly greater financial, technical, manufacturing, marketing, sales and
+distribution resources and management expertise than we do. Our future prospects
+will depend greatly on our ability to successfully develop and introduce new
+products that are responsive to market needs. We cannot assure you that we will
+be able to successfully develop or market any of these products.
+
+         The principal competitive factors in the IDT speech processors market
+include price, speech quality, compression ratio, value-added features (such as
+variable speed message playback and speakerphone), the level of mixed-signal
+integration, customer support and the timing of product introductions by us and
+our competitors. We believe that we are competitive with respect to each of
+these factors. Our principal competitors in the IDT market include Agere,
+Macronix, Philips, Sanyo, Siemens/Infinion and Toshiba.
+
+         The principal competitive factors in the cordless telephony market
+include price, system integration level, range, customer support and the timing
+of product introductions by us and our competitors. We believe that we are
+competitive with respect to most of these factors. Our principal competitors in
+the cordless market include Conexant, National Semiconductor, Philips and
+Siemens/Infinion.
+
+         The principal competitive factors in the Voice over Packet market
+include price, system integration level, customer support and the timing of
+product introductions by us and our competitors. We believe that we are
+competitive with respect to most of these factors. Our principal competitors in
+the Voice over Packet market include TI/Telogy, Virata and Ishoni.
+
+         The principal competitive factors in the DSP core designs market for
+high volume, low cost applications include such features as small size, low
+power, flexible I/O blocks and associated development tools. Our DSP core
+designs compete with companies such as LSI Logic and Siemens/Infinion, which
+license DSP platforms, and companies such as Analog Devices, Agere, Motorola,
+and Texas Instruments, which sell their own complete general purpose DSP
+solutions.
+
+         Several digital speech compression technologies exist and are currently
+being developed that may be promoted by competitors as industry standards for
+the computer telephony and personal computer markets. Our TrueSpeech algorithms
+compete with ADPCM, and the speech compression technologies used in the GSM and
+VSELP protocols, each of which is available in the public domain. There are many
+versions of these algorithms that have been developed by different parties,
+including AT&T, which has been actively involved in the development of GSM
+protocols, and Motorola, which developed the original VSELP protocols. Although
+TrueSpeech has achieved a degree of acceptance in the computer telephony,
+personal computer and VoIP markets, ADPCM and the speech compression
+technologies for the GSM and VSELP protocols are widely used in the development
+and implementation of new products in the telephony industry. In addition, other
+advanced speech compression algorithms have been introduced by competitors that
+offer compression ratios comparable to or higher than the TrueSpeech algorithms.
+Large companies, such as AT&T, Creative Labs, Motorola and Rockwell, have speech
+processing technologies that can be applied to speech compression for use in the
+same markets for which our products are targeted.
+
+                                       15
+
+<PAGE>
+
+         Price competition in the markets in which we currently compete and
+propose to compete is intense and may increase, which could harm our business,
+financial condition and results of operations. We have experienced and expect to
+continue to experience increased competitive pricing pressures for our IDT
+processors. We were able to offset price reductions which occurred during 2000
+through manufacturing cost reductions and by achieving a higher level of
+integration in our products and by combining other functions, which used to be
+part of separate chips, into our DSP Group chips. However, we cannot assure you
+that we will be able to further reduce product costs, or be able to compete
+successfully as to price or any other of the key competitive factors in the
+future.
+
+RESEARCH AND DEVELOPMENT
+
+         We believe that continued timely development and introduction of new
+products is essential to maintain our competitive position. We currently conduct
+most of our product development in our facilities and at December 31, 2000 had a
+staff of 135 research and development personnel, of which 102 were located in
+Israel. We also employ independent contractors to assist with certain product
+development and testing activities. We spent approximately $20.9 million in
+2000, compared with $15.4 million in 1999, on research and development
+activities.
+
+RELATIONSHIPS WITH AFFILIATED COMPANIES
+
+AUDIOCODES, LTD.
+
+         AudioCodes, Ltd. ("AudioCodes") is an Israeli corporation primarily
+engaged in design, research, development, manufacturing and marketing hardware
+and software products that enable simultaneous transmission of voice and data
+over networks including the Internet, ATM and frame relay. DSP Group acquired
+approximately 35% of the outstanding stock of in AudioCodes in two separate
+transactions in 1993 and 1994. In July 1997, AudioCodes completed a private
+placement of additional equity securities without the participation of DSP Group
+and, as a result, DSP Group's equity ownership interest in AudioCodes was
+diluted from 35% to approximately 29%. DSP Group was also granted an option to
+purchase up to an additional 5% of the outstanding stock of AudioCodes under
+certain conditions.
+
+         DSP Group accounts for its ownership in AudioCodes using the equity
+method. DSP Group's original investment in AudioCodes included the excess of
+purchase price over net assets acquired (approximately $1,907,000 at the date of
+purchase), which was attributed to developed technology to be amortized over
+seven years. The private placement by AudioCodes in July 1997 was at a price per
+share greater than DSP Group's then current investment in AudioCodes. As a
+result, even though DSP Group's ownership interest decreased from 35% to 29%,
+DSP Group's proportionate share of the net assets of AudioCodes increased from
+$816,000 to $1,481,000 at the date of the private placement. This increase in
+DSP Group's proportionate share of the net assets of AudioCodes reduced the
+remaining unamoritized excess of purchase price over net assets acquired from
+$1,080,000 to $415,000 as of the date of the private placement.
+
+         In May 1999, DSP Group exercised its option to purchase approximately
+3.5% of the outstanding stock of AudioCodes for approximately $1.2 million. In
+the same month AudioCodes completed its initial public offering (IPO) and is now
+listed on the Nasdaq SmallCap Market under the symbol AUDC. In its IPO,
+AudioCodes issued 7.0 million shares at a price of $7.00 per share. As a result,
+DSP Group recorded in "Financial and Other income (expense)" in its consolidated
+statements of income for 1999 a one-time capital gain in the amount of $11.8
+million. This amount was comprised of a $9.4 million gain from the sale of
+AudioCodes' stock to the public in the IPO and a $2.5 million gain from the sale
+of approximately 496,000 AudioCodes shares to the underwriters, to cover their
+over-allotment option. The gross proceeds to DSP Group from the sale of some of
+our AudioCodes shares was approximately $3.2 million. In October 1999,
+AudioCodes successfully concluded a follow-on public offering of 6 million
+shares at a price of $20.50 per share. In the follow-on, AudioCodes issued and
+sold 3.0 million shares and an additional 3.9 million shares were sold by
+shareholders, of which approximately 2,138,000 shares were sold by DSP
+
+                                       16
+
+<PAGE>
+
+Group in two separate transactions. The gross proceeds to DSP Group from these
+transactions were approximately $42.8 million, and we recorded as additional
+capital gain in the amount of $47.1 million. This amount was comprised of a
+$10.8 million gain from the increase in audio net asset value in the public
+offering and $36.3 million gain from our sale of approximately 2,138,000
+AudioCodes shares. As of December 31, 1999, DSP Group a amortized all the
+remaining portion of the excess of purchase price over net assets.
+
+         In January 2000, DSP Group sold an additional 1,200,000 shares of
+AudioCodes for approximately $43.8 million and recorded an additional capital
+gain in the amount of $40.0 million in the first quarter of 2000. In May
+2000, DSP Group sold an additional 500,000 shares of AudioCodes for
+approximately $19.2 million and recorded an additional capital gain in the
+amount of $17.6 million in the second quarter of 2000. In December 2000, DSP
+Group purchased in the open market 300,000 shares of AudioCodes stock for
+approximately $4.9 million. This transaction created an excess of purchase
+price over net assets acquired (approximately $3,745,000 at the date of
+purchase), which was attributed to developed technology to be amortized over
+seven years. As of December 31, 2000, DSP Group held 4.45 million shares of
+AudioCodes common stock, which represented approximately 11% of the
+outstanding shares of AudioCodes. DSP Group's equity in the net income of
+AudioCodes was $2,644,000 in 2000, $2,475,000 in 1999, and $125,000 in 1998.
+All shares and per share numbers with respect to AudioCodes have been
+adjusted to reflect the 2 for 1 Stock Split effected as a stock dividend by
+AudioCodes in October 2000. As of December 31, 2000, the fair market value of
+DSP Group's investment in AudioCodes was approximately $60.4 million.
+
+APTEL LTD. AND NEXUS TELECOMMUNICATIONS SYSTEMS LTD.
+
+         In July 1996, DSP Group invested in Aptel Ltd. ("Aptel"), which is
+located in Israel. DSP Group accounted for its investment in Aptel using the
+equity method of accounting. DSP Group's equity in the net losses of Aptel,
+including amortization of related intangibles, was $408,000 in 1997. As of June
+30,1997, DSP Group had fully written-off its investment in Aptel.
+
+         In December 1997, Aptel's shareholders, including DSP Group exchanged
+their shares in Aptel for ordinary shares of Nexus Telecommunications Systems
+Ltd. ("Nexus"). Nexus is an Israeli company whose shares are registered and
+traded on the Nasdaq SmallCap Market under the symbol NXUSF. In October 1997,
+DSP Group invested $176,000 in a convertible debenture in Aptel which was
+converted into ordinary shares of Aptel prior to the closing of the Nexus
+transaction. DSP Group received approximately 297,000 ordinary shares of Nexus
+in the exchange transaction for these shares, which represented approximately 3%
+of the outstanding shares in Nexus. DSP Group's basis in the Nexus stock
+received is $176,000. At December 31, 1997, DSP Group's investment in Nexus was
+presented in DSP Group's consolidated balance sheet at the market value of
+$1,226,000, with the unrealized gain of $1,050,000 recorded as other
+comprehensive income, as a separate component of stockholder's equity. In April
+1998, DSP Group sold all of its Nexus shares in a private transaction for
+approximately $1.3 million and realized a pre-tax gain on marketable equity
+securities of approximately $1.1 million, which is included under "Financial and
+Other income (expense)" in DSP Group's consolidated statements of income for
+1998.
+
+ACQUISITION OF VOICEPUMP, INC.
+
+         VoicePump, Inc. ("VoicePump") is a US corporation primarily engaged in
+the design, research, development and marketing of software applications for
+Voice Over DSL (VoDSL) and Voice Over Internet Protocol (VoIP). In March 2000,
+DSP Group acquired (1) approximately 1,960,250 shares of Common Stock of
+VoicePump from certain VoicePump shareholders in exchange for approximately
+261,000 shares of its DSP Group's Common Stock and a nominal amount of cash (to
+pay for fractional shares) and (2) approximately 1,027,397 shares of VoicePump
+common stock directly from VoicePump together with warrants to purchase up to
+1,027,397 shares of VoicePump Common Stock at an exercise price of $4.866 per
+share within two years (of the date of issuance of the warrant) and up to
+1,027,397 additional shares at an exercise price of $4.866 per share within
+three years (of the date of issuance of the warrant) for $5,000,000. The shares
+acquired from VoicePump and its shareholders (not including the
+
+                                       17
+
+<PAGE>
+
+shares issuable upon exercise of the warrants) represented approximately 73% of
+the outstanding shares of VoicePump. In the second quarter of 2000 the
+investment in VoicePump was diluted due to the exercise of warrants by a
+VoicePump shareholder to approximately 71% of the outstanding shares of
+VoicePump. DSP Group recorded a loss of $100,000 in the second quarter of 2000
+as a result of this option exercise which was attributed to loss from issuance
+of subsidiaries' stock on our income statement.
+
+         DSP Group's original investment in VoicePump included the excess of
+purchase price over net assets acquired (approximately $16,070,000 at the date
+of purchase), which was attributed to in-process research and development and to
+goodwill. The operation expenses include unusual items in the amount of
+$11,869,000 related to the acquired in-process research and development, which
+was written off in the first quarter of 2000. The write-off was due to the fact
+that there was no established technological feasibility or alternative future
+use of some of the technology. Other intangible assets acquired had an estimated
+fair value of $4,201,000 and were recorded as goodwill.
+
+         As of December 31, 2000 the balance of this goodwill to be amortized in
+seven years was approximately $3,854,000. The consolidated statements of income
+for the year ended December 31, 2000 (commencing from the acquisition date)
+include losses in the investment in VoicePump of approximately $2.2 million and
+include the minority interest in those losses in the amount of $627,000.
+
+
+TOMEN LTD.
+
+         In September 2000, DSP Group invested approximately $485,000 (31.0
+million Yen) in shares of its Japanese distributor's parent company, Tomen Ltd.,
+as part of a long-term strategic relationship. Tomen's shares are traded on the
+Japanese stock exchange, and are recorded in "Other Investments" on our balance
+sheets. DSP Group accounts for investments in debt and equity securities (other
+than those accounted for under the equity method of accounting) in accordance
+with FASB Statement No.115, "Accounting for Certain Investments in Debt and
+Equity Securities." Securities available for sale are carried at fair value,
+with the unrealized gains and losses, net of income taxes, reported as a
+separate component of shareholders' equity, accumulated other comprehensive
+income (loss). Realized gains and losses on sales of investments, as determined
+on a specific identification basis, are included in the consolidated statement
+of income. At December 31, 2000 the carrying amount of securities approximated
+their fair value and the amount of unrealized gain or loss was not significant.
+
+LICENSES, PATENTS AND TRADEMARKS
+
+         We have been granted eighteen United States patents, one Canadian
+patent and two Israeli patents, and have twenty-five patents pending in the
+United States, two patents pending in Japan, one patent pending in Taiwan,
+fourteen patents pending in Israel and one patent pending in Europe. We actively
+pursue foreign patent protection in other countries of interest to us. Our
+policy is to apply for patents or for other appropriate statutory protection
+when we develop valuable new or improved technology. The status of any patent
+involves complex legal and factual questions, and the breadth of claims allowed
+is uncertain. Accordingly, we cannot assure you that any patent application
+filed by us will result in a patent being issued, or that our patents, and any
+patents that may be issued in the future, will afford adequate protection
+against competitors with similar technology; nor can we provide assurance that
+patents issued to us will not be infringed or designed around by others. In
+addition, the laws of certain countries in which our products are or may be
+developed, manufactured or sold, including Hong Kong, Japan and Taiwan, may not
+protect our products and intellectual property rights to the same extent as the
+laws of the United States.
+
+         We attempt to protect our trade secrets and other proprietary
+information through agreements with our customers, suppliers, employees and
+consultants, and through other security measures. Although we intend to protect
+our rights vigorously, we cannot provide assurance that these measures will be
+successful.
+
+         The semiconductor and software industries are subject to frequent
+litigation regarding patent and other
+
+                                       18
+
+<PAGE>
+
+intellectual property rights. While we have not been involved in any material
+patent or other intellectual property rights litigation to date, we cannot
+provide assurance that third parties will not assert claims against us with
+respect to existing or future products or that we will not need to assert claims
+against third parties to protect our proprietary technology. For example, AT&T
+has asserted in the past that G.723.1, which is primarily composed of a
+TrueSpeech algorithm, includes certain elements covered by patents held by AT&T
+and has requested that video conferencing equipment manufacturers license this
+technology from AT&T. If litigation becomes necessary to determine the validity
+of any third party claims or to protect our proprietary technology, it could
+result in significant expense to us and could divert the efforts of our
+technical and management personnel, whether or not the litigation is determined
+in our favor. In the event of an adverse result in any litigation, we could be
+required to expend significant resources to develop non-infringing technology or
+to obtain licenses to the technology that is the subject of the litigation. We
+cannot provide assurance that we would be successful in developing
+non-infringing technology or that any licenses would be available on
+commercially reasonable terms.
+
+         We have been issued registered trademarks for the use of the
+PineDSPCore, Pine assyst simulatorm, Pine, OakDSPCore, TeakDSPCore, Teak,
+PalmDSPCore, OCEM, TrueSpeech, Full Duplex SpeakerPhone, TeakLite, Triple
+Rate Coder, SpeechOnChip, DSPeech and Speechip trademarks. In addition, we
+applied for trademarks for PalmAssyst, Assyst and SmartCores.
+
+         While our ability to compete may be affected by our ability to
+protect our intellectual property, we believe that, because of the rapid pace
+of technological change in the industry, our technical expertise and ability
+to innovate on a timely basis will be more important in maintaining our
+competitive position than protection of our intellectual property. We believe
+that, because of the rapid pace of technological change in the consumer
+telephone, computer telephony and personal computer industries, patents and
+trade secret protection are important but must be supported by other factors,
+including the expanding knowledge, ability and experience of our personnel,
+new product introductions and frequent product enhancements. Although we
+continue to implement protective measures and intend to defend our
+intellectual property rights, we cannot provide assurance that these measures
+will be successful.
+
+BACKLOG
+
+         At December 31, 2000, our backlog was approximately $36.2 million
+compared with approximately $28.8 million at December 31, 1999. We include in
+our backlog all accepted product purchase orders with respect to which a
+delivery schedule has been specified for product shipment within one year and
+fees have been specified in executed licensing contracts. Our business in IDT
+speech processors is characterized by short-term order and shipment schedules.
+Product orders in our current backlog are subject to changes in delivery
+schedules or to cancellation at the option of the purchaser without significant
+penalty. Accordingly, although useful for scheduling production, backlog as of
+any particular date may not be a reliable measure of our sales for any future
+period.
+
+EMPLOYEES
+
+         At December 31, 2000, we had 217 employees, including 135 in research
+and development, 34 in marketing and sales and 48 in corporate and
+administration and manufacturing coordination. Competition for personnel in the
+semiconductor, software and personal computer industries in general is intense.
+We believe that our future prospects will depend, in part, on our ability to
+continue to attract and retain highly-skilled technical, marketing and
+management personnel, who are in great demand. In particular, there is a limited
+supply of highly-qualified engineers with digital signal processing experience.
+None of our employees is represented by a collective bargaining agreement, nor
+have we ever experienced any work stoppage. We believe that relations with our
+employees are well established.
+
+RISK FACTORS
+
+OUR QUARTERLY OPERATING RESULTS MAY FLUCTUATE SIGNIFICANTLY.
+
+                                       19
+
+<PAGE>
+
+         Our quarterly results of operations may vary significantly in the
+future for a variety of reasons, including the following:
+
+-        fluctuations in volume and timing of product orders;
+
+-        level of per unit royalties;
+
+-        changes in demand for our products due to seasonal customer buying
+         patterns and other factors;
+
+-        timing of new product introductions by us or our customers, licensees
+         or competitors;
+
+-        changes in the mix of products sold by us;
+
+-        fluctuations in the level of sales by original equipment manufacturers
+         (OEMs) and other vendors of products incorporating our products; and
+
+-        general economic conditions, including the changing economic conditions
+         in the United States.
+
+         Each of the above factors is difficult to forecast and thus could harm
+our business, financial condition and results of operations.
+
+         Through 2001, we expect that revenues from our DSP core designs and
+TrueSpeech algorithms will be derived primarily from license fees rather than
+per unit royalties. The uncertain timing of these license fees has caused, and
+may continue to cause, quarterly fluctuations in our operating results. Our per
+unit royalties from licenses are dependent upon the success of our OEM licensees
+in introducing products utilizing our technology and the success of those OEM
+products in the marketplace. Per unit royalties from TrueSpeech licensees have
+not been significant to date.
+
+OUR AVERAGE SELLING PRICES CONTINUE TO DECLINE.
+
+         We have experienced a decrease in the average selling prices of our
+integrated digital telephony (IDT) speech processors, but have to date been able
+to offset this decrease on an annual basis through manufacturing cost reductions
+and the introduction of new products with higher performance. However, we cannot
+guarantee that our on-going efforts will be successful or that they will keep
+pace with the anticipated, continuing decline in average selling prices.
+
+WE DEPEND ON THE IDT MARKET WHICH IS HIGHLY COMPETITIVE.
+
+         Sales of IDT products comprise a substantial portion of our product
+sales. Any adverse change in the digital IDT market or in our ability to compete
+and maintain our position in that market would harm our business, financial
+condition and results of operations. The IDT market and the markets for our
+products in general are extremely competitive and we expect that competition
+will only increase. Our existing and potential competitors in each of our
+markets include large and emerging domestic and foreign companies, many of which
+have significantly greater financial, technical, manufacturing, marketing, sale
+and distribution resources, and management expertise than we do. It is possible
+that we may one day be unable to respond to increased price competition for IDT
+processors or other products through the introduction of new products or
+reductions of manufacturing costs. This inability would have a material adverse
+effect on our business. Likewise, any significant delays by us in developing,
+manufacturing or shipping new or enhanced products also would have a material
+adverse effect on our business.
+
+         The 900 Mhz Digital Spread Spectrum RF and Base Band technology
+acquired in 1999 from Advances Micro Devises gave us a "cheap entry ticket" to
+this market. This technology is not state of the
+
+                                       20
+
+<PAGE>
+
+art and we have noticed a trend of decreasing sales for the product models
+which are based on this technology. In the first quarter of 2000 we
+recognized two unusual expense items, of which the outstanding balance of the
+capitalized assets were amortized. We may not succeed in our development of
+new RF and Base Band models and those which are going to be developed may not
+be accepted by the market. Despite the recent success of development and
+sales of our DSP Cores, the market needs extensive R&D efforts in new
+technologies not currently owned by us, and we may not succeed in developing
+such technologies in due time, which could affect our competitive position.
+
+WE DEPEND ON INDEPENDENT FOUNDRIES TO MANUFACTURE OUR INTEGRATED CIRCUIT
+PRODUCTS.
+
+         All of our integrated circuit products are manufactured by independent
+foundries. While these foundries have been able to adequately meet the demands
+of our increasing business, we are and will continue to be dependent upon these
+foundries to achieve acceptable manufacturing yields, quality levels and costs,
+and to allocate to us a sufficient portion of foundry capacity to meet our needs
+in a timely manner. To meet our increased wafer requirements, we have added
+additional independent foundries to manufacture our processors. Our revenues
+could be harmed should any of these foundries fail to meet our request for
+products due to a shortage of production capacity, process difficulties, low
+yield rates or financial instability. For example, foundries in Taiwan produce a
+significant portion of our wafer supply. As a result, earthquakes, aftershocks
+or other natural disasters in Asia, could preclude us from obtaining an adequate
+supply of wafers to fill customer orders and could harm our business, financial
+condition and results of operations.
+
+WE MAY NEED TO INCREASE OUR RESEARCH AND DEVELOPMENT EFFORTS TO REMAIN
+COMPETITIVE.
+
+         The DSP Cores market is experiencing extensive efforts by some of our
+competitors to use new technologies to manipulate the chip design programming to
+increase the parallel processing of the chip. One such technology used is Very
+Long Instruction Word (VLIW), which some of our competitors possess elements of,
+but which we do not possess at the present time. If such technology continues to
+improve the programming processing of these chips, then we may need to further
+our research and development to obtain such technology or our failure to remain
+competitive could have an adverse effect on our results of operations.
+
+WE DEPEND ON INTERNATIONAL OPERATIONS.
+
+         We are dependent on sales to customers outside the United States. We
+expect that international sales will continue to account for a significant
+portion of our net product and license sales for the foreseeable future. As a
+result, the occurrence of any negative international, political, economic or
+geographic events could result in significant revenue shortfalls. These
+shortfalls could cause our business to be harmed. Some of the risks of doing
+business internationally include:
+
+-        unexpected changes in regulatory requirements;
+
+-        fluctuations in the exchange rate for the United States dollar;
+
+-        imposition of tariffs and other barriers and restrictions;
+
+-        burdens of complying with a variety of foreign laws;
+
+-        political and economic instability; and
+
+-        changes in diplomatic and trade relationships.
+
+WE FACE RISK FROM OPERATING IN ISRAEL.
+
+                                       21
+
+<PAGE>
+
+         Our principal research and development facilities are located in the
+State of Israel and, as a result, at December 31, 2000, 164 of our 217
+employees were located in Israel, including 102 out of 135 of our research
+and development personnel. In addition, although DSP Group is incorporated in
+Delaware, a majority of our directors and executive officers are residents of
+Israel. Although substantially almost all of our sales currently are being
+made to customers outside Israel, we are nonetheless directly influenced by
+the political, economic and military conditions affecting Israel. Any major
+hostilities involving Israel, or the interruption or curtailment of trade
+between Israel and its present trading partners, could significantly harm our
+business, operating results and financial condition.
+
+         Israel's economy has been subject to numerous destabilizing factors,
+including a period of rampant inflation in the early to mid-1980's, low
+foreign exchange reserves, fluctuations in world commodity prices, military
+conflicts and civil unrest. In addition, Israel and companies doing business
+with Israel have been the subject of an economic boycott by the Arab
+countries since Israel's establishment. Although they have not done so to
+date, these restrictive laws and policies may have an adverse impact on our
+operating results, financial condition or expansion of our business.
+
+         Since the establishment of the State of Israel in 1948, a state of
+hostility has existed, varying in degree and intensity, between Israel and the
+Arab countries. Although Israel has entered into various agreements with certain
+Arab countries and the Palestinian Authority, and various declarations have been
+signed in connection with efforts to resolve some of the economic and political
+problems in the Middle East, we cannot predict whether or in what manner these
+problems will be resolved. Our results of operations may be negatively affected
+by the obligation of key personnel to perform military service. In addition,
+certain of our officers and employees are currently obligated to perform annual
+reserve duty in the Israel Defense Forces and are subject to being called for
+active military duty at any time. Although we have operated effectively under
+these requirements since our inception, we cannot predict the effect of these
+obligations on the Company in the future. Our operations could be disrupted by
+the absence, for a significant period, of one or more of our officers or key
+employees due to military service.
+
+         Moreover, part of our expenses in Israel are paid in Israeli currency
+which subjects us to the risks of foreign currency fluctuations and to economic
+pressures resulting from Israel's general rate of inflation. While substantially
+all of our sales and expenses are denominated in United States dollars, a
+portion of our expenses are denominated in Israeli shekels. Our primary expenses
+paid in Israeli currency are employee salaries and lease payments on our Israeli
+facilities. As a result, an increase in the value of Israeli currency in
+comparison to the United States dollar could increase the cost of technology
+development, research and development expenses and general and administrative
+expenses. We cannot provide assurance that currency fluctuations, changes in the
+rate of inflation in Israel or any of the other factors mentioned above will not
+have a material adverse effect on our business, financial condition and results
+of operations.
+
+ANY FUTURE PROFITABILITY MAY BE DIMINISHED IF TAX BENEFITS FROM THE STATE OF
+ISRAEL ARE REDUCED OR WITHHELD.
+
+         DSP Group receives certain tax benefits in Israel, particularly as a
+result of the "Approved Enterprise" status of our facilities and programs. To be
+eligible for tax benefits, DSP Group must meet certain conditions, relating
+principally to adherence to the investment program filed with the Investment
+Center of the Israeli Ministry of Industry and Trade and to periodic reporting
+obligations. DSP Group believes that it will be able to meet such conditions.
+Should we fail to meet such conditions in the future, however, it would be
+subject to corporate tax in Israel at the standard rate of 36%, and could be
+required to refund tax benefits already received. There can be no assurance that
+such grants and tax benefits will be continued in the future at their current
+levels or otherwise. The termination or reduction of certain programs and tax
+benefits (particularly benefits available to us as a result of the Approved
+Enterprise status of the company's facilities and programs) or a requirement to
+refund tax benefits already received may have a material adverse effect on our
+operating results and financial condition.
+
+PROPOSED ISRAELI TAX REFORM COULD HARM OUR FINANCIAL RESULTS.
+
+                                       22
+
+<PAGE>
+
+         On May 4, 2000, a committee chaired by the Director General of the
+Israeli Ministry of Finance, Avi Ben-Bassat, issued a report recommending a
+sweeping reform in the Israeli system of taxation. The proposed reform would
+significantly alter the taxation of individuals, and would also affect corporate
+taxation. In particular, the proposed reform would reduce, but not eliminate,
+the tax benefits available to approved enterprises such as ours. The proposed
+reform would also impose a capital gains tax on individuals on the sale of
+shares, unless the selling shareholder is entitled to benefits under a tax
+treaty. The Israeli cabinet has approved the recommendations in principle, but
+implementation of the reform requires legislation by Israel's Knesset. DSP Group
+cannot be certain whether the proposed reform will be adopted, when it will be
+adopted or what form any reform will ultimately take. The elimination of our
+approved status could have negative tax consequences discussed above and could
+have a material adverse effect on our business.
+
+         Israel has recently elected a new government. At this time this
+government has not taken any position with respect to these tax benefits or the
+proposed tax reforms discussed above, and we cannot predict what, if any, impact
+this new government will have on our Israeli operations and current tax
+benefits. Any significant adverse change in the government's position could harm
+our business, results of operations and financial condition.
+
+WE DEPEND ON OEMS AND THEIR SUPPLIERS TO OBTAIN REQUIRED COMPLEMENTARY
+COMPONENTS.
+
+         Some of the raw materials, components and subassemblies included in the
+products manufactured by our OEM customers, which also incorporate our products,
+are obtained from a limited group of suppliers. Supply disruptions, shortages or
+termination of any of these sources could have an adverse effect on our business
+and results of operations due to the delay or discontinuance of orders for our
+products by customers until those necessary components are available.
+
+WE DEPEND UPON THE ADOPTION OF INDUSTRY STANDARDS BASED ON TRUESPEECH
+TECHNOLOGY.
+
+         Our prospects are partially dependent upon the establishment of
+industry standards for digital speech compression based on TrueSpeech algorithms
+in the computer telephony and Voice over IP markets. The development of industry
+standards utilizing TrueSpeech algorithms would create an opportunity for us to
+develop and market speech co-processors that provide TrueSpeech solutions and
+enhance the performance and functionality of products incorporating these
+co-processors.
+
+         In February 1995, the International Telecommunications Union
+established G.723.1, which is predominately composed of a TrueSpeech algorithm,
+as the standard speech compression technology for use in video conferencing over
+public telephone lines. In March 1997, the International Multimedia
+Teleconferencing Consortium, a nonprofit industry group, recommended the use of
+G.723.1 as the default audio coder for all voice transmissions over the Internet
+or for IP applications for H.323 conferencing products. If TrueSpeech algorithms
+are not adopted as the standard speech compression technology for different
+applications, the sales of our TrueSpeech products may not achieve anticipated
+levels.
+
+THERE ARE RISKS ASSOCIATED WITH OUR ACQUISITION STRATEGY.
+
+         DSP Group has pursued, and will continue to pursue, growth
+opportunities through internal development and acquisition of complementary
+businesses, products and technologies. We are unable to predict whether or when
+any prospective acquisition will be completed. The process of integrating an
+acquired business may be prolonged due to unforeseen difficulties and may
+require a disproportionate amount of our resources and management's attention.
+We cannot provide assurance that we will be able to successfully identify
+suitable acquisition candidates, complete acquisitions, integrate acquired
+businesses into our operations or expand into new markets.
+
+         Once integrated, acquisitions may not achieve comparable levels of
+revenues, profitability or productivity as the existing business of DSP Group or
+otherwise perform as expected. The occurrence of
+
+                                       23
+
+<PAGE>
+
+any of these events could harm our business, financial condition or results of
+operations. Future acquisitions may require substantial capital resources, which
+may require us to seek additional debt or equity financing.
+
+PROTECTION OF OUR INTELLECTUAL PROPERTY IS LIMITED; RISKS OF INFRINGEMENT OF
+RIGHTS OF OTHERS.
+
+         As is typical in the semiconductor industry, we have been and may from
+time to time be notified of claims that we may be infringing patents or
+intellectual property rights owned by third parties. For example, AT&T has
+asserted that G.723.1, which is primarily composed of a TrueSpeech algorithm,
+includes certain elements covered by patents held by AT&T and has requested that
+video conferencing manufacturers license the technology from AT&T. Other
+organizations, including Agere, NTT and VoiceCraft have raised public claims
+that they also have patents related to the G.723.1 technology.
+
+         If it appears necessary or desirable, we may try to obtain licenses for
+those patents or intellectual property rights that we are allegedly infringing.
+Although holders of these types of intellectual property rights commonly offer
+these licenses, we cannot assure you that licenses will be offered or that terms
+of any offered licenses will be acceptable to us. Our failure to obtain a
+license for key intellectual property rights from a third party for technology
+used by us could cause us to incur substantial liabilities and to suspend the
+manufacturing of products utilizing the technology. However, at this time we
+believe that the ultimate resolution of these matters will not harm our
+financial position, results of operations, or cash flows.
+
+OUR STOCK PRICE MAY BE VOLATILE.
+
+         Announcements of developments related to our business, announcements by
+competitors, quarterly fluctuations in our financial results, changes in the
+general conditions of the highly dynamic industry in which we compete or the
+national economies in which we do business, and other factors could cause the
+price of our common stock to fluctuate, perhaps substantially. In addition, in
+recent years the stock market has experienced extreme price fluctuations, which
+have often been unrelated to the operating performance of affected companies.
+These factors and fluctuations could have a material adverse effect on the
+market price of our common stock.
+
+WE HAVE MADE FORWARD-LOOKING STATEMENTS IN THIS ANNUAL REPORT ON FORM 10-K
+
+         The information contained in this Annual Report on Form 10-K and in the
+other documents referenced herein contains forward-looking statements that
+involve a number of risks and uncertainties. Forward-looking statements can be
+identified by the use of forward-looking terminology, including "believe,"
+"expect," "may," "will," "should" or "anticipate," or the negative of these
+terms or other variations or comparable terminology, or by discussions of
+strategy that involve risks and certainties. Numerous factors, including
+economic and competitive conditions, timing and volume of incoming orders,
+shipment volumes, product margins, and foreign exchange rates, could cause
+actual results to differ materially from those described in these statements.
+These forward-looking statements are based on current expectations and we assume
+no obligation to update this information.
+
+         As we have previously announced, we currently intend to create a
+stand-alone company which will manage and develop our SmartCores business. We
+have applied to the IRS for a revenue ruling relating to this anticipated
+spin-off, which we anticipate will be tax-free to our shareholders. We cannot
+predict when the spin-off will occur, if at all, or if we will receive favorable
+tax treatment from the IRS. All of the forward-looking statements made herein
+with respect to our business, results of operation and financial condition are
+necessarily colored by, and would be materially affected by, the spin-off, if it
+occurs.
+

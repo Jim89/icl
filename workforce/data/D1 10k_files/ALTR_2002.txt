@@ -1,0 +1,358 @@
+Item 1. Business. 
+
+Altera Corporation designs, manufactures, and markets (1) high-performance, high-density programmable logic devices, or PLDs, (2) intellectual property cores, which are also known as megafunctions, and (3) associated development tools. Our PLDs, which consist of field-programmable gate arrays, or FPGAs, and complex programmable logic devices, or CPLDs, are semiconductor integrated circuits that our customers can program using our proprietary software, which operates on personal computers and engineering workstations. Intellectual property cores are pre-verified hardware description language, or HDL, design files for complex, yet commonly used system-level logic functions. 
+
+Founded in 1983 and reincorporated in Delaware in 1997, we were one of the first suppliers of complementary metal oxide semiconductor, or CMOS, PLDs and are currently a global leader in this market. Today, we offer a broad range of general-purpose PLDs that offer unique features as well as differing densities and performance specifications for implementing particular applications. Our products serve a wide range of markets, including telecommunication, data communication, electronic data processing, computer peripheral, and industrial applications. Some of our major products are more fully described below. 
+
+Overview of the Types of Integrated Circuits 
+
+Three principal types of digital integrated circuits are used in most electronic systems: microprocessors, memory, and logic. Microprocessors are used for control and computing tasks; memory is used to store programming instructions and data; and logic is used to manage the interchange and manipulation of digital signals within a system. While system designers employ a relatively small number of standard architectures to meet their microprocessor and memory needs, they require a wide variety of logic circuits to differentiate their end products. In addition, competitive pressures force electronic systems manufacturers to reduce the size of their products and accelerate their products’ introduction to market. At the same time, as new technologies evolve, customers require an even larger number of logic gates on a single integrated circuit for improved functionality, performance, reliability, and cost. 
+
+We believe that these competitive pressures are driving electronic systems manufacturers more towards system-on-a-programmable-chip, or SOPC, solutions. An SOPC solution includes an integrated, high-density PLD containing three or more of the following: logic, memory, high-speed I/O, and a processor. With SOPC solutions, system designers require less, if any, separate microprocessor or memory chips, thereby allowing them to reduce the size of their system designs. 
+
+Overview of the Logic Market 
+
+According to Dataquest, the CMOS logic market consists of the following segments: 
+
+       n    Semi-custom or application-specific integrated circuits, or ASICs 
+  
+       n    Standard logic 
+  
+       n    Full custom devices 
+  
+       n    Other forms of logic integrated circuits, including chipsets 
+
+
+The ASIC segment of the CMOS logic market is comprised of programmable logic, gate arrays, and cell-based integrated circuits, also referred to as standard cells. In a broad sense, all of these devices are indirectly competitive as they generally may be used in the same types of applications in electronic products. However, differences in cost, performance, density, flexibility, ease-of-use, and time-to-market dictate the extent to which they may be directly competitive for particular applications. 
+
+ 
+2 
+
+
+
+--------------------------------------------------------------------------------
+
+
+Table of Contents
+
+Programmable logic’s primary advantage over gate arrays and standard cells is that it allows for quicker design cycles, meeting customers’ needs for quick time-to-market. Programmable logic allows customers to experiment and revise their designs in a relatively short amount of time and with minimum cost. In most instances, this is quicker and easier than achieving a design through mask-programmed, fixed-logic gate arrays, as is required for gate arrays and standard cells. This advantage is amplified by the ability to have working chips at the time the design is finalized. 
+
+Another advantage of programmable logic over gate arrays and standard cells is that, particularly for low-volume applications, PLDs reduce development costs by lowering the per unit cost of producing customized components. PLDs inherently consume more silicon than other non-PLD ASIC devices because of the general application and on-chip programming capabilities of PLDs. However, depending on the complexity of the design and total unit requirements, this higher per unit cost of PLDs is, in many cases, more than offset by the high fixed costs of layout and mask-making required to produce a custom integrated circuit. Further, because unprogrammed PLDs are standard devices, we and our distributors — not our customers — hold stocks of inventory, thereby enhancing the cost advantage of PLDs for our customers. By holding large inventory stock, however, we also subject ourselves to the risk of inventory obsolescence, which occurred last year. We have recently changed our inventory carrying policy to more of a build-to-order basis, which we believe may reduce the risk of inventory obsolescence without sacrificing customer requirements. 
+
+Strategy and Competition 
+
+The primary attributes of ASICs are high density, high speed, and low production costs in high volumes. We compete with ASIC manufacturers on the basis of lower design costs, shorter development schedules, and reduced inventory risk and field upgradability. In general, high-volume, non-PLD ASIC devices cost less than PLDs; however, as PLDs have increased in density and performance and decreased in costs, they have become more directly competitive with other ASICs, especially gate arrays. Our strategy is to compete with other companies in the ASIC segment of the CMOS logic market by providing a total solution for our customers’ logic needs. To accomplish this goal, we offer our customers: 
+
+       n    PLDs, including SOPC solutions, with the speed, density, functionality, and package types to meet their specific needs 
+  
+       n    HardCopy™ devices that enable our customers to move from a PLD to a low-cost, custom implementation of their designs 
+  
+       n    State-of-the-art development tools that are easy to use and compatible with other industry-standard electronic design automation, or EDA, tools 
+  
+       n    Optimized system-level megafunctions to speed their design process 
+  
+       n    A complete customer support system 
+
+
+We have been able to introduce new product families that, as compared to their predecessors, provide greater functionality at a lower price for any given density because high-volume manufacturing and emerging process technologies have resulted in cost decreases. We believe that in certain circumstances these new product families achieve the integration, density, performance, and cost advantages of other ASIC solutions. We also believe that our competitiveness within the ASIC segment in these areas, along with the inherent advantages of programmable logic discussed above, will enable us to compete for designs traditionally served by other ASIC devices. 
+
+In addition to competition in the broader ASIC market, we experience significant direct competition from other companies, including Xilinx, Inc. and Lattice Semiconductor Corporation, that are in the programmable logic sub-segment. We expect that as the dollar volume of the programmable logic sub-segment grows, the attractiveness of this sub-segment to larger, more powerful competitors will continue to increase. 
+
+The principal factors of competition in the programmable logic sub-segment of the ASIC market include: 
+
+       n    The capability of software development tools and system-level functional programming blocks 
+  
+       n    Product performance and features 
+  
+       n    Quality and reliability 
+  
+       n    Pricing 
+  
+       n    Technical service and customer support 
+  
+       n    Technical innovation 
+
+
+ 
+3 
+
+
+
+--------------------------------------------------------------------------------
+
+
+Table of Contents
+
+We believe that we compete favorably with respect to these factors and that our proprietary device architecture and our installed base of development systems with proprietary software may provide some competitive advantage. However, as is true of the semiconductor industry as a whole, the ASIC segment and the PLD sub-segment are intensely competitive and are characterized by rapid technological change, rapid rates of product obsolescence, and price erosion. All of these factors may influence our future operating results. For a discussion of risk factors associated with our strategy and competition, see Item 7 — Future Results; Risk Factors — “Our financial results depend on our ability to compete successfully in the highly competitive semiconductor industry” and “Our future success depends on our ability to define, develop, and sell new products.” 
+
+Products 
+
+Our products consist primarily of devices, intellectual property cores, and proprietary development tools. Altogether, these products form a unique and comprehensive solution for the implementation of SOPC applications. A brief overview of these products is provided below. 
+
+Devices 
+
+Our devices fall into the following three categories: (1) FPGAs; (2) general-purpose CPLDs; and (3) low-cost, masked devices. These devices span multiple architectures and device families, with a total of more than 1,000 product options. Each device family offers unique functional benefits and differing density and performance specifications for implementing particular applications. 
+
+FPGAs 
+
+Our FPGAs consist of general-purpose FPGAs and embedded intellectual property-based, or IP-based, system products. 
+
+General-Purpose FPGAs 
+
+Our general-purpose FPGA products, consisting of our Stratix™, APEX™ II, APEX, FLEX®, and ACEX® product families, are built using the most advanced CMOS static random access memory, or SRAM, process technology and address a broad range of datapath applications from sub-system logic integration to SOPC applications. The basic logic building block in a general-purpose FPGA is the logic element, which is comprised of a look-up table and a storage element known as a flipflop. Therefore, the total number of logic elements in a given device is often used to gauge relative logic density among FPGAs. In addition, the amount of embedded RAM within general-purpose FPGAs is also identified in determining relative memory density. Including our newly announced Stratix device family, our general-purpose FPGAs provide up to 114,140 logic elements and up to 10 megabits of RAM in a single device, while offering industry-leading core and I/O performance levels. 
+
+Some of our major general-purpose FPGAs are more fully described below: 
+
+STRATIX: We publicly announced our Stratix architecture in February 2002 and plan to ship our first device in this family during the summer of 2002. Based on an industry-leading 1.5-V, 0.13-micron process, the Stratix device family provides high-bandwidth, SOPC integration for the communication, networking, high-end consumer, data storage, and industrial markets. This highly innovative architecture, which enables block-based design methodology, can range in density from 10,570 to 114,140 logic elements, includes up to 10 megabits of embedded RAM, and contains all-layer-copper interconnect technology, which results in greater performance compared to traditional aluminum/tungsten interconnect. Our Stratix devices also contain TriMatrix™ memory, which not only offers high memory density, but also maximum memory bandwidth by incorporating three memory block sizes of 512 bits, 4 kilobits, and 512 kilobits within each Stratix device. In addition, the embedded digital signal processing, or DSP, blocks provide ultra-fast performance for applications such as encryption and filtering in wireless communications, image processing in digital entertainment, and quality of service algorithms in data communications. Stratix devices also incorporate a variety of single-ended and differential I/O standards, with up to 116 high-speed differential I/O 
+
+ 
+4 
+
+
+
+--------------------------------------------------------------------------------
+
+
+Table of Contents
+
+channels with up to 80 channels optimized for 840 megabits per second per channel. Devices in this family provide support for various high-speed networking and communication bus standards. 
+
+APEX II: Utilizing a second-generation APEX architecture, the 1.8-V APEX II device family is designed to address the increasing performance and bandwidth requirements of communication applications. These look-up table devices are based on 0.13-micron and 0.15-micron processes and include all-layer-copper interconnect technology. They range in density from 16,640 to 67,200 logic elements and include over 1.0 megabit of embedded RAM. Our APEX II devices support low-voltage differential signaling, or LVDS, low-voltage positive-referenced emitter coupled logic, or LVPECL, and I/O speeds of up to 1.0 gigabits per second per channel. 
+
+APEX 20K, APEX 20KE, and APEX 20KC: Based on the APEX architecture, the 2.5-V APEX 20K, 1.8-V APEX 20KE, and 1.8-V APEX 20KC device families provide design flexibility and efficiency for high-performance SOPC applications. Our APEX 20KC family was also the first PLD family to utilize copper for all layers of metal interconnect. Devices in these families range in density from 1,200 to 51,840 logic elements, include up to 432 kilobits of embedded RAM, and were the first FPGAs to utilize an embedded system block, or ESB, to embed content addressable memory, or CAM, used in packet switching. Additionally, these devices contain enhanced phase-locked loops, or PLLs, for high-speed clock management, and LVDS for I/O speeds of up to 840 megabits per second per channel used in high-bandwidth communications and backplane applications. 
+
+FLEX 10K, FLEX 10KA, and FLEX 10KE: Based on the FLEX 10K architecture, which was the first PLD architecture to provide on-chip embedded memory, the 5.0-V FLEX 10K, 3.3-V FLEX 10KA, and 2.5-V FLEX 10KE device families offer embedded array blocks, or EABs, to provide a combination of logic and embedded RAM on a single-chip architecture for high-speed, high-bandwidth applications. These families range in density from 576 to 12,160 logic elements, include up to 96 kilobits of embedded RAM, and incorporate dual-port RAM. 
+
+ACEX 1K: Our ACEX 1K device family, which combines logic elements and EABs, offers complete system-level integration on a single device for cost-sensitive, volume-driven applications such as cable modems, xDSL modems, low-cost switches, and routers. Devices in this family range in density from 576 to 4,992 logic elements, include up to 48 kilobits of embedded RAM, and operate at a 2.5-V supply voltage. 
+
+Embedded IP-Based System Products 
+
+As a complement to our general-purpose FPGAs, our embedded IP-based system products combine a general-purpose FPGA architecture with embedded IP, or hard cores. Together, these two elements comprise a fully integrated and flexible, customizable solution for use in targeted applications. Our embedded IP-based system products consist of our Excalibur™ devices, which are targeted for applications requiring high-performance embedded microprocessors, and our Mercury™ devices, which are suited for applications that need embedded high-speed serial I/O, also known as a transceiver. 
+
+Our embedded IP-based system products are more fully described below: 
+
+EXCALIBUR EMBEDDED PROCESSOR SOLUTIONS: The Excalibur solutions combine logic, memory, and an embedded processor core, which together allow engineers to integrate an entire system on a single PLD for a wide range of applications, from 3G base stations, embedded routers, microcontrollers, and network processors to industrial control and factory automation. The Excalibur solutions consist of two embedded processor architectures: our Nios™ soft core embedded processor solution and the ARM®-based embedded processor solution. Our Nios soft core embedded processor was the industry’s first soft core processor designed specifically for programmable logic. The Nios soft core utilizes a reduced instruction set computing, or RISC, architecture and is a cost-competitive and flexible alternative to discrete microcontroller solutions. The Nios soft core can be efficiently implemented in all of our general-purpose FPGA devices as well as in our IP-based system products. The ARM-based embedded processor PLD family uses technology licensed from ARM Limited and consists of multiple devices that each contains an ARM-based RISC processor core. These ARM-based Excalibur devices provide our customers with enhanced integration and royalty-free technology access for applications requiring the capability and complexity of an ARM processor while also needing the flexibility and customization of a general-purpose FPGA. 
+
+MERCURY: Our Mercury devices, which are programmable application-specific standard products, or ASSPs, address a wide range of serial backplane, chip-to-chip, and line-side applications. Providing speeds of up to 1.25 gigabits per second per 
+
+ 
+5 
+
+
+
+--------------------------------------------------------------------------------
+
+
+Table of Contents
+
+channel, these devices integrate a high-speed clock data recovery-enabled transceiver with a performance-optimized programmable logic core. The programmable logic core’s performance is enabled using a prioritized interconnect structure, dedicated multiplier circuitry, and quad-port ESBs on a 1.8-V all-layer-copper process. Devices in this family range in density from 4,800 to 14,400 logic elements and include up to 112 kilobits of embedded RAM. 
+
+CPLDs 
+
+Our general-purpose CPLD products, consisting of our MAX® and Classic™ product families, are built using CMOS floating-gate process technology and address a wide range of high-speed glue logic applications. Glue logic is basic logic that enables the interaction of multiple subsystem components. The basic logic building block in a general-purpose CPLD is the macrocell. Therefore, the total number of macrocells within CPLDs is often used to gauge relative logic density. Another critical metric used in gauging CPLD performance is the total propagation delay, or tPD, from an input pin to an output pin. Our MAX CPLDs provide over 500 macrocells in a single device with tPD specifications as fast as 3.5 nanoseconds. 
+
+Some of our major general-purpose CPLDs are more fully described below: 
+
+MAX 7000, MAX 7000S, MAX 7000A, and MAX 7000B: Based on the widely popular MAX 7000 architecture, the 5.0-V MAX 7000, 5.0-V MAX 7000S, 3.3-V MAX 7000A, and 2.5-V MAX 7000B device families are among the most widely used programmable logic families in the industry. These device families provide high-density, high-speed, I/O-intensive programmable logic solutions for a broad range of glue logic applications, including state machines, control functions, and address decoding. Devices in these families range in density from 32 to 512 macrocells and provide tPD values as fast as 3.5 nanoseconds. Features common to all current MAX 7000 devices include: (1) in-system programmability, or ISP, which allows devices to be programmed after they are soldered onto the printed circuit board, thereby minimizing the possibility of lead damage or electrostatic discharge exposure when reprogrammed, (2) the industry-standard Joint Test Action Group boundary-scan test, or JTAG BST, circuitry, which permits efficient board testing, (3) global clocking, (4) fast input registers, and (5) programmable slew-rate control. 
+
+MAX 3000A: The 3.3-V MAX 3000A devices, which range in density from 32 to 256 macrocells, target high-volume, low-cost glue logic applications. These devices support ISP and JTAG BST circuitry. 
+
+Masked Devices 
+
+HARDCOPY: For our highest-density FPGA and embedded IP-based system products, our HardCopy devices combine proprietary silicon design and an automated migration process to offer our customers a seamless migration path to a mask-programmed implementation of their designs for low-cost and high-volume applications. As a result, HardCopy devices extend the flexibility, power, and time-to-market advantages of high-density PLDs to high-volume, more cost-sensitive applications traditionally covered by ASICs. We offer HardCopy devices for the Stratix, APEX II, APEX, and Excalibur products. These HardCopy devices offer up to a 70% die size reduction, resulting in a lower cost for customers seeking a high-volume production solution in our highest density devices. 
+
+Intellectual Property Cores 
+
+Intellectual property cores are pre-verified HDL design files for complex, yet commonly used system-level logic functions. With intellectual property cores, system designers can focus more time and energy on improving and differentiating the unique aspects of the system design, rather than spending time designing common off-the-shelf functions from the ground up. Our intellectual property cores consist of MegaCore® functions, which we create internally, and Altera Megafunction Partners Program, or AMPPSM, cores, which are created by third parties. Today, we offer a broad range of intellectual property cores for various applications, including interface, memory controller, signal processing, telecommunication, data communication, microprocessor, and peripheral intellectual property cores. 
+
+Development Tools 
+
+Our proprietary development tools, consisting of the Quartus® II and MAX+PLUS® II software, enable our customers to design for and program our PLDs. In particular, we believe that our Quartus II development software, a new version of which was released in February 2002, delivers improved designer productivity and supports system-level designs and integration with third-party 
+
+ 
+6 
+
+
+
+--------------------------------------------------------------------------------
+
+
+Table of Contents
+
+tools. Our Quartus II and MAX+PLUS II software development tools run under the Microsoft Windows and UNIX (including Solaris, HP-UX, and Linux) operating environments. Our development tools also provide interfaces to many industry-standard EDA tools, including those offered by Mentor Graphics Corporation, Synplicity, Inc., and Synopsys, Inc. 
+
+Research and Development 
+
+Our research and development activities have focused primarily on PLDs and on the associated development software and hardware. We have developed these related products in parallel to provide software support to customers upon device introduction. As a result of our research and development efforts, we have introduced during the past three years a number of new families, such as the Stratix, APEX II, APEX 20KC, Mercury, and HardCopy device families, as well as the Excalibur embedded processor solutions. We have also redesigned a number of our products to accommodate new wafer fabrication processes. In addition, we plan to release major versions of our proprietary software at least twice a year. 
+
+Our research and development expenditures were $170.9 million in 2001, $178.7 million in 2000, and $86.1 million in 1999. Excluding a $6.3 million one-time charge for acquired in-process research and development, our research and development expenditures in 2000 were $172.4 million. We have not capitalized research and development or software costs to date. We intend to continue to spend substantial amounts on research and development in order to continue to develop new products and achieve market acceptance for such products, particularly in light of the industry pattern of short product life cycles and increasing competition within the CMOS logic market. 
+
+Patents, Trademarks, and Licenses 
+
+We generally rely on intellectual property law, including patent, copyright, trademark, and trade secret laws, to establish and maintain our proprietary rights in products and technology. As of December 31, 2001, we held a total of 622 patents relating to various aspects of our products and technology and have a number of patent applications currently pending. Also, we have used, registered, and applied to register certain trademarks and service marks to distinguish our products, technologies, and services from those of our competitors in the United States and foreign countries. In addition, we file registrations in the United States under the Semiconductor Chip Protection Act to protect our chip designs. Finally, we have entered into technology licensing agreements that give us rights to design, manufacture, and package products using certain intellectual property owned by others. In July 2001, we entered into a settlement agreement with Xilinx under which we settled all pending litigation between Altera and Xilinx. As part of the settlement agreement with Xilinx, Altera and Xilinx entered into a royalty-free patent cross license agreement, including a prohibition of further patent litigation between the two companies for the next five years. In connection with the settlement agreement, we paid Xilinx a one-time payment of $20 million. Similarly, in July 2001 we entered into a settlement agreement with Lattice under which we settled all pending patent litigation between Altera and Lattice. As part of the settlement agreement with Lattice, Altera and Lattice entered into a royalty-free patent cross license agreement, including a multi-year prohibition of further patent litigation between the two companies. No payments were made by Altera or Lattice as part of the settlement. 
+
+When necessary, we seek to enforce our intellectual property rights. Although we believe that protection afforded by our intellectual property rights has value, the rapidly changing technology in the semiconductor industry makes our future success dependent primarily on the innovative skills, technological expertise, and management abilities of our employees rather than on our patent, trademark, or other proprietary rights. For a discussion of risk factors associated with our patents, trademarks, and licenses, see Item 3, Item 7 — Future Results; Risk Factors — “We may be unable to adequately protect our intellectual property rights and may face significant future litigation expenses,” and Note 13 to our consolidated financial statements. 
+
+Marketing and Sales 
+
+We market our products in the United States, Canada, Europe, Japan, and Asia Pacific through a network of distributors and direct sales personnel. In the United States and Canada, we also rely on a network of independent sales representatives. From time to time, we may add or delete independent sales representatives or distributors from our selling organization as we deem appropriate to the level of business. 
+
+Throughout the United States, we have domestic sales management offices in major metropolitan areas. Our direct sales personnel and independent sales representatives focus on major strategic accounts. Distributors generally focus selling activities 
+
+ 
+7 
+
+
+
+--------------------------------------------------------------------------------
+
+
+Table of Contents
+
+on the broad base of small- and medium-size customers while providing demand fulfillment services to our major strategic accounts. Our only distributor in the United States is Arrow Electronics, Inc., which is responsible for creating customer demand from its customer base, providing technical support and other value-added services, filling customers’ orders, and stocking our products. 
+
+Our international business is supported by a network of distributors in major European countries, Japan, and various countries throughout Asia Pacific. In addition, we maintain international sales support offices in the metropolitan areas of Helsinki, Hong Kong, Hsinchu (Taiwan), London, Munich, Ottawa, Paris, Seoul, Shanghai, Stockholm, Stuttgart, Tokyo, and Turin (Italy). 
+
+Through 2001, all international sales were denominated in U.S. dollars. For the year ended December 31, 2001, worldwide sales through distributors accounted for over 97% of total sales, and Arrow was, and continues to be, our largest distributor. In 2001 and 2000, two distributors accounted for more than 10% of sales. In 2001, one distributor accounted for 54% of sales, and the other distributor accounted for 13% of sales. In 2000, one distributor accounted for 58% of sales, and the other distributor accounted for 11% of sales. In 1999, three distributors accounted for more than 10% of sales. These three distributors accounted for 34%, 19%, and 13% of sales. The percentage increases for our largest distributor in 2001 and 2000 compared to 1999 are attributable to the combination of Arrow and Wyle Electronics, our two largest distributors in 2000. No single end customer accounted for more than 10% of our sales in 2001, 2000, or 1999. International sales constituted 55% of sales in 2001, 43% of sales in 2000, and 44% of sales in 1999. 
+
+For a detailed description of our sales by geographic region, see Item 7 and Note 14 to our consolidated financial statements. 
+
+Backlog 
+
+Our backlog of orders on December 31, 2001 was approximately $119.6 million compared to approximately $510.8 million on December 31, 2000. The significant decrease in backlog is attributable to a decrease in sales, together with a decrease in advance orders made by our customers. Our backlog consists of original equipment manufacturer, or OEM, orders and distributor orders that are each requested for delivery within the next three months. Prior to January 1, 2001, our OEM backlog consisted of OEM orders that were requested for delivery within the next six months. This change in the determination of OEM backlog did not materially affect the change in backlog from 2000 to 2001. Also, during the third quarter of 2001, we revised our inventory model to shift more towards a build-to-order strategy. Under our previous strategy, we built up inventory with standard products to enable us to ship our devices within a short time after receipt of an order. We do not believe that our build-to-order strategy will adversely affect our relationships with our customers. 
+
+Historically, backlog has been a poor predictor of future customer demand. While our backlog can increase during periods of high demand and supply constraints in certain products, our orders are generally cancelable without significant penalty at the option of the purchaser, thereby decreasing backlog during periods of lower demand. In addition, distributor shipments are subject to price adjustments. Further, we defer recognition of revenue on shipments to distributors until the product is resold to the end customer. For all of these reasons, backlog as of any particular date should not be used as a reliable predictor of sales for any future period. 
+
+Customer Support 
+
+Customer support and service are important aspects of selling and marketing our products. We provide several levels of technical user support, including applications assistance, design services, and customer training. Also, our applications engineering staff publishes data sheets and application notes, conducts technical seminars, and provides design assistance via Internet and electronic links to the customer’s design station. Finally, as a service to our customer, inventory is maintained by us and our distributors to meet our customers’ short-term delivery needs of our products. 
+
+ 
+8 
+
+
+
+--------------------------------------------------------------------------------
+
+
+Table of Contents
+
+Manufacturing 
+
+Wafer Supply 
+
+We do not directly manufacture our silicon wafers. Instead, our silicon wafers are produced using various semiconductor foundry wafer fabrication service providers. This relationship enables us to take advantage of these suppliers’ high volume economies of scale, as well as direct and more timely access to advancing process technology. We presently have our primary wafer supply arrangements with two semiconductor vendors: Taiwan Semiconductor Manufacturing Company, or TSMC, and Sharp Corporation. We may negotiate additional foundry contracts and establish other sources of wafer supply for our products as such arrangements become economically useful or technically necessary. For a discussion of risk factors associated with our wafer supply arrangements, see Item 7 — Future Results; Risk Factors — “We depend on independent subcontractors, located primarily in Asia, for the supply and quality of our finished silicon wafers.” 
+
+Testing and Assembly 
+
+After wafer manufacturing is completed, each wafer is tested using a variety of test and handling equipment. Such wafer testing is accomplished at TSMC, Sharp, and our San Jose pilot line facility, which is used primarily for new product development. This testing is performed on equipment owned by us and consigned to the vendors. 
+
+Resulting wafers are then shipped to various Asian assembly suppliers, where good die are separated into individual chips that are then encapsulated in ceramic or plastic packages. As is the case with our wafer supply business, we employ a number of independent suppliers for assembly purposes. This enables us to take advantage of subcontractor high-volume manufacturing, related cost savings, speed, and supply flexibility. It also provides us with timely access to cost-effective advanced process and package technologies. We purchase almost all of our assembly services from Amkor Electronics in Korea and the Philippines, ASAT Limited in Hong Kong, ASE, Inc. in Malaysia and Taiwan, and Fujitsu Microelectronics, Inc. in Japan. 
+
+Following assembly, each of the packaged units receives final testing, marking, and inspection prior to shipment to customers. We obtain almost all of our final test and back-end operation services from Amkor, ASAT, and ASE. Final testing by these assembly suppliers is accomplished through the use of our proprietary test software and hardware, which is consigned to or owned by such suppliers and/or third-party commercial testers. These suppliers also handle shipment of the products to our customers or distributors. 
+
+For a discussion of risk factors associated with our testing and assembly arrangements, see Item 7 — Future Results; Risk Factors — “We depend on independent subcontractors, located primarily in Asia, for the testing and assembly of our semiconductor products.” 
+
+ 
+9 
+
+
+
+--------------------------------------------------------------------------------
+
+
+Table of Contents
+
+Executive Officers of the Registrant 
+
+Our executive officers and their ages are as follows:               
+Name   Age   Position 
+
+--------------------------------------------------------------------------------
+   
+--------------------------------------------------------------------------------
+   
+--------------------------------------------------------------------------------
+ 
+John P. Daane     38      President and Chief Executive Officer 
+ 
+ 
+ 
+ 
+Denis M. Berlan     51      Executive Vice President and Chief Operating Officer 
+ 
+ 
+ 
+ 
+Erik R. Cleage     41      Senior Vice President, Marketing 
+ 
+ 
+ 
+ 
+John R. Fitzhenry     52      Vice President, Human Resources 
+ 
+ 
+ 
+ 
+Lance M. Lissner     52      Senior Vice President, Business Development 
+ 
+ 
+ 
+ 
+George A. Papa     53      Senior Vice President, Worldwide Sales 
+ 
+ 
+ 
+ 
+Jordan S. Plofsky     41      Senior Vice President, Vertical Markets and Embedded Processor Products 
+ 
+ 
+ 
+ 
+Nathan M. Sarkisian     43      Senior Vice President and Chief Financial Officer 
+ 
+ 
+ 
+ 
+Katherine E. Schuelke     39      Vice President, General Counsel and Secretary 
+
+
+
+
+--------------------------------------------------------------------------------
+
+There are no family relationships among our executive officers or between any executive officer and any of our directors. 
+
+John P. Daane has served as our President and Chief Executive Officer since November 2000 and as one of our directors since December 2000. Prior to joining us, Mr. Daane spent 15 years at LSI Logic Corporation, a semiconductor manufacturer, most recently as Executive Vice President, Communications Products Group. Mr. Daane earned his bachelors degree from the University of California, Berkeley in 1986. 
+
+Denis M. Berlan joined us in December 1989 as Vice President, Product Engineering and was named Vice President, Operations and Product Engineering in October 1994. In January 1996, he was named Vice President, Operations. In January 1997, he was named Executive Vice President and Chief Operating Officer. He was previously employed by Advanced Micro Devices, Inc., or AMD, a semiconductor manufacturer, and by Lattice Semiconductor Corporation, a semiconductor manufacturer, in engineering management capacities. Mr. Berlan received his M.S.E.E. in 1972 and Ph.D. in 1977 from the University of Grenoble in France and an M.B.A. in 1987 from the University of Santa Clara. 
+
+Erik R. Cleage joined us as International Marketing Manager in February 1986. He became Director, Japan and Asia Pacific Sales in April 1989, was appointed Vice President, Marketing in August 1990 and Senior Vice President, Marketing in January 1999. Previously, he was employed by AMD and Fairchild Semiconductor Corporation, a semiconductor manufacturer, in various positions. Mr. Cleage earned his bachelors degree from Stanford University in 1981. 
+
+John R. Fitzhenry joined us in May 1995 as Vice President, Human Resources. From February 1983 to May 1995, he was employed by Apple Computer, Inc., a manufacturer of personal computers, in various human resource management positions. Mr. Fitzhenry earned his bachelors degree from the University of California, Santa Barbara in 1971 and his J.D. from the University of the Pacific, McGeorge School of Law in 1976. 
+
+Lance M. Lissner joined us in May 1998 as Vice President of Business Development and Investor Relations and was appointed Senior Vice President, Business Development in November 2000. Prior to that time, Mr. Lissner was a corporate officer of Measurex Corporation, a developer of computer-integrated measurement, control, and information systems, where he was employed since 1973 and held various positions in sales, marketing, engineering, and business development. Mr. Lissner earned his bachelors degree from Harvey Mudd College in 1972 and his masters degree from Stanford University in 1973. 
+
+George A. Papa joined us in February 2002 as Senior Vice President, Worldwide Sales. From February 2000 to February 2002, Mr. Papa served as Vice President of Worldwide Sales of the Communications Business Group of Marvell Semiconductor, Inc., a semiconductor company. From March 1997 to February 2000, he served as Vice President of Worldwide Sales for Level One Communications, Inc., a subsidiary of Intel Corporation, a semiconductor company. From February 1991 to March 1997, 
+
+ 
+10 
+
+
+
+--------------------------------------------------------------------------------
+
+
+Table of Contents
+
+Mr. Papa served as Vice President of North American Sales for Siemens Corporation, a diversified global technology company. Mr. Papa earned his bachelors degree from Northeastern University. 
+
+Jordan S. Plofsky joined us in February 2001 and was appointed Senior Vice President, Vertical Markets and Embedded Processor Products as of March 2001. Prior to joining us, Mr. Plofsky was employed by LSI Logic from October 1996 to February 2001, most recently as Executive Vice President, Enterprise Infrastructure Group from November 2000 to February 2001 and Vice President and General Manager, Networking Products Division from June 1998 to November 2000. Mr. Plofsky earned a bachelors degree from the University of Illinois, Urbana-Champaign in 1982. 
+
+Nathan M. Sarkisian joined us in June 1992 as Corporate Controller. He was appointed Vice President, Finance and Chief Financial Officer in August 1995 and Senior Vice President and Chief Financial Officer in March 1998. Prior to joining us, Mr. Sarkisian held various accounting and financial positions at Fairchild and at Schlumberger Limited, an oil field services company. Mr. Sarkisian earned a bachelors degree from Stanford University in 1981 and an M.B.A. from Harvard University in 1992. 
+
+Katherine E. Schuelke joined us in March 1996 as Corporate Attorney. She became Senior Corporate Attorney in July 1997 and Assistant General Counsel and Assistant Secretary in July 1999. In October 2001, she was appointed Vice President, General Counsel and Secretary. Prior to March 1996, Ms. Schuelke was an attorney at the law firm of Morrison & Foerster LLP for seven years. Ms. Schuelke earned a bachelors degree from the State University of New York at Buffalo in 1986 and a J.D. from New York University in 1989. 
+
+Employees 
+
+As of December 31, 2001, we had 1,987 regular employees, including 861 in research and development, 39 in product engineering, 159 in operations, 595 in sales and marketing, and 333 in general management, administration, and finance. Of these employees, 1,314 were located in the United States, and 673 were employed in 16 other countries. None of our employees is represented by a labor union. We have not experienced any work stoppages, and we believe that our employee relations are good. 

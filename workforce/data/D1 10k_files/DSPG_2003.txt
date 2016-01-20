@@ -1,0 +1,1209 @@
+Item 1.    BUSINESS. 
+
+ 
+
+Introduction 
+
+ 
+
+We are a fabless semiconductor company that is a leader in residential wireless markets. By combining Digital Signal Processing (DSP) cores technology with advanced Complementary Metal Oxide Semiconductor (CMOS) radio frequency (RF) devices, communications technologies and speech-processing algorithms, we are a worldwide leader in developing and providing Total Telephony Solutions™. We were incorporated in California in 1987 and reincorporated in Delaware in 1994. We completed our initial public offering in February 1994. 
+
+ 
+
+On November 1, 2002, we transferred the assets and liabilities of our DSP cores licensing business to Ceva, Inc., one of our then wholly-owned subsidiaries (the “Separation”). Immediately thereafter, Ceva affected a combination (the “Combination”) with Parthus Technologies plc whereby Ceva acquired Parthus and issued Ceva common stock to the former Parthus shareholders. After the Combination, Ceva changed its name to ParthusCeva, Inc. ParthusCeva’s common stock is quoted on the Nasdaq National Market (Nasdaq: PCVA) and listed on the London Stock Exchange (London: PCV). 
+
+ 
+
+In connection with the Separation, we contributed our DSP cores licensing business to Ceva in exchange for Ceva common stock and subsequently distributed all of the Ceva common stock we held to our stockholders of record. In addition to the other assets transferred to Ceva, we also contributed a sum of $40 million in cash and prepaid transaction expenses related to the Separation and Combination that exceeded $2 million. We received private letter rulings from the U.S. Internal Revenue Service to the effect that, among other things, the Separation was a tax-free transaction for our stockholders for federal income tax purposes, except with respect to cash distributed to our stockholders in lieu of fractional shares of Ceva common stock. 
+
+ 
+
+In anticipation of the Separation, we reclassified the DSP cores licensing business as discontinued operations in our financial statements for the years ended December 31, 2002, 2001 and 2000. After the Separation, we have one reporting segment. 
+
+ 
+
+Web Site Access to Company’s Reports 
+
+ 
+
+Our Internet Web site address is www.dspg.com. Our annual reports on Form 10-K, quarterly reports on Form 10-Q, current reports on Form 8-K, and amendments to those reports filed or furnished pursuant to Section 13(a) or 15(d) of the Exchange Act are available free of charge through our Web site as soon as reasonably practicable after they are electronically filed with, or furnished to, the Securities and Exchange Commission. We will also provide the reports in electronic or paper form free of charge upon request. Furthermore, all reports we file with the Commission are available free of charge via EDGAR through the Commission’s Web site at www.sec.gov. In addition, the public may read and copy materials filed by us at the Commission’s public reference room located at 450 Fifth St., N.W., Washington, D.C., 20549. 
+
+ 
+
+3 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+ 
+
+General Business 
+
+ 
+
+We have developed several semiconductor devices for residential wireless communication applications. Our main product lines provide an optimized solution for digital 900MHz, 2.4GHz and 5.8GHz cordless telephony. Our advanced CMOS RF and integrated DSP voice modem device provide us with a clear path to a Phone-on-a-Chip solution. 
+
+ 
+
+We also develop and market embedded, integrated silicon/software solutions for Digital Voice Recorder, Hands Free Car Kit, Voice over Digital Subscriber Line (VoDSL) and Voice over Internet Protocol (VoIP) applications, as well as other Voice over Packet applications for Integrated Access Device (IAD) and Internet Protocol (IP) telephony markets. 
+
+ 
+
+We introduced the first integrated digital telephony speech processor in 1989. Since then, we have shipped approximately 141 million units of speech processors and RF devices to original equipment manufacturers (OEMs), of which approximately 44 million were shipped in 2002. Sales of our Integrated Digital Telephony (IDT) speech processors and RF devices accounted for approximately 97% of our total revenues in 2002. 
+
+ 
+
+Our work in the field of wireless residential technology has yielded various synergistic product families: 
+
+ 
+
+  •   Integrated Digital Telephony (IDT).    A family of chips comprised of the following:  
+
+ 
+
+Speech and Telephony.    A highly-integrated DSP core-based chip that handles telephony functions and advanced speech algorithms targeted for the telephony market. 
+
+ 
+
+Cordless Telephony.    Digital 900MHz, 1.9GHz, 2.4GHz and 5.8GHz spread spectrum narrow-band chip-sets. The chip-sets are composed of an RF transceiver and a highly-integrated DSP core-based chip. The DSP core-based chip combines three main functions into one chip: the wireless baseband modem, speech processing and telephony functions. 
+
+ 
+
+  •   Voice Over Packet.    A DSP core-based, highly-integrated speech processor targeted for the low to medium density IAD, residential gateway and IP telephony markets.  
+
+ 
+
+  •   Digital Voice Recorder.    A highly-integrated processor with five different speech compression rates for voice recording application for personal and business use.  
+
+ 
+
+  •   Hands Free Car Kit Application.    An integrated DSP solution with noise reduction, echo cancellation and voice recognition to support various new safety regulations directing drivers to use hands-free cellular systems while driving.  
+
+ 
+
+  •   Software and Patent Licensing.    A family of proprietary speech compression algorithms and patents such as TrueSpeech® and G.723.1.  
+
+ 
+
+DSP-Based Speech and Telephony Processors 
+
+ 
+
+We have developed three generations of speech processors based on PineDSPCore® and TeakLiteDSPCore®. The devices are fully-integrated DSP System-on-a-Chip designed to provide custom solutions for IDT, stand-alone answering machines, Digital Voice Recorder, Hands Free Car Kit, and VoDSL and VoIP applications. The processors provide a flexible and open system, thereby enabling our customers to develop an optimal and cost effective system. Furthermore, our systems architecture provides an open design environment for OEMs and original design manufacturers (ODMs) to design and market their own end products with the maximum differentiation. 
+
+ 
+
+4 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+ 
+
+Our IDT speech processors are based on PineDSPCore® and TeakLiteDSPCore®, which are more fully described below. 
+
+ 
+
+Technology
+
+--------------------------------------------------------------------------------
+    Description
+
+--------------------------------------------------------------------------------
+ 
+ 
+Triple Rate Coder™
+    Instructs the telephone answering machine to decide automatically between better voice quality and longer recording time.
+ 
+ 
+True Full-Duplex SpeakerPhone™
+    Allows simultaneous two-way (full-duplex), hands-free operation of the telephone and suppresses and cancels acoustic and electrical echoes.
+ 
+ 
+G.723.1
+    Provides speech compression for VoIP and video conferencing over standard telephone lines.
+ 
+ 
+Caller ID and Call Waiting Caller ID
+    Identifies to the party being called the telephone number of the calling party, whether or not the party being called is already engaged in another call.
+ 
+ 
+Call Progress Tone Detection
+    Detects standard telephony signals during the progress of a telephone call.
+ 
+ 
+DTMF Signaling
+    Detects and generates touch tone (DTMF) signals that comply with telephone industry frequency standards.
+ 
+ 
+Speech Prompts
+    Provides the ability to stamp a message with a time and date and prompts voice-operated instructions.
+ 
+ 
+Variable Speed Playback (FlexiSpeech®)
+    Permits playback of recorded speech at different speeds without distorting the natural sound of the speech.
+ 
+ 
+Voice Operated Switch (VOX) (Smart-Vox®)
+    Detects human speech and stops recording during periods of silence, thereby conserving available memory.
+ 
+ 
+Text to Speech
+    Permits Caller ID in telephony as well as other voice activating systems.
+ 
+ 
+Alpha Least Cost Routing (LCR)/Super LCR
+    Chooses automatically from a number of telephone service providers in order to select the lowest available calling rates.
+ 
+ 
+Voice Recognition
+    Allows a user to operate a telephone or answering machine by giving voice commands.
+ 
+
+ 
+
+In 1999, we shipped the first D16000 family of fully-integrated speech processors, which combined the components of a mixed signal system on a single chip. Each speech processor in the D16000 family contains a DSP core, converters that transform analog signals into digital signals and vice versa, and various signal amplifiers, all embedded on a single chip. In addition to implementing DSP algorithms, including data compression, Caller ID and full-duplex speaker phone, these speech processors also perform tasks that would typically be handled by a separate central processing unit (CPU) chip. Our goal is for the D16000 family of processors to provide optimal value to our OEM customers by eliminating the need for virtually all other electronic components, thereby reducing materials and manufacturing costs. 
+
+ 
+
+In 2000, we developed the D36000 family of fully-integrated speech processors based on TeakLiteDSPCore®, which can support two-line telephony as well as cordless baseband modems with low power usage. D36000 speech processors, which entered into mass production in the second quarter of 2001, have received marketplace acceptance as an upgrade to our D16000 family of products for cordless and corded telephony standards. With this new family of products, we provide a complete solution for 900MHz, 2.4GHz single hand-set, 2.4GHz multi-hand-set and 5.8GHz baseband markets. 
+
+ 
+
+5 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+ 
+
+The following table presents the main features of the primary IDT speech processors that we currently offer: 
+
+ 
+
+DSP Group’s IDT Speech Processors 
+
+ 
+
+     D36569
+
+--------------------------------------------------------------------------------
+    D16559
+
+--------------------------------------------------------------------------------
+    D6571
+
+--------------------------------------------------------------------------------
+    D6587
+
+--------------------------------------------------------------------------------
+ 
+ 
+Process Geometry (Microns)
+    0.25
+    0.45
+    0.5
+    0.5
+ 
+ 
+Minutes Record, 4 Mbit Memory
+    22-25, 10,15
+    22-25, 10,15
+    22-25, 10,15
+    22-25, 10,15
+ 
+ 
+Memory Type
+    Flash
+    Flash
+    Flash
+    Flash
+ 
+ 
+DSP Core:
+    TeakLite
+    Pine
+    Pine
+    Pine
+ 
+ 
+Advanced Features:
+                     
+ 
+Speech Prompts
+    Yes
+    Yes
+    Yes
+    Yes
+ 
+ 
+Variable Speed Playback
+    Yes
+    Yes
+    Yes
+    Yes
+ 
+ 
+Full Duplex Speakerphone
+    Yes
+    Yes
+    Yes
+    Yes
+ 
+ 
+Caller ID & Call Waiting Caller ID
+    Yes
+    Yes
+    Yes
+    Yes
+ 
+ 
+Voice Recognition
+    Yes
+    —
+    —
+    Yes
+ 
+ 
+Text to Speech
+    Yes
+    —
+    —
+    —
+ 
+ 
+System-On-A-Chip-Included Peripherals:
+                     
+ 
+Microcontroller
+    Yes
+    Yes
+    —
+    —
+ 
+ 
+Line Codec
+    Yes
+    Yes
+    —
+    —
+ 
+ 
+Speaker Codec
+    Yes
+    Yes
+    —
+    —
+ 
+ 
+Amplifiers
+    Yes
+    Yes
+    —
+    —
+ 
+ 
+Baseband (Modem)
+    Yes
+    —
+    —
+    —
+ 
+
+ 
+
+Cordless Telephony 
+
+ 
+
+In 1999, we acquired technology and products, including associated intellectual property related to 900MHz spread spectrum cordless telephones, from Advanced Micro Devices. In addition, in connection with the acquisition, we acquired two integrated groups of engineers, one located in Israel and the other in the United States. 
+
+ 
+
+In 2000, in anticipation of limited growth in the U.S. 900MHz spread spectrum market, we initiated the development of a new line of 900MHz narrow-band cordless products to address this changing market trend. 
+
+ 
+
+In 2001, we entered into mass production of 900MHz narrow-band cordless chip-set. The chip-set includes a D36000 fully-featured telephony and baseband device and an integrated RF device. During 2001, we completed the design of our advanced chip-set for 2.4GHz single hand-set and multi-hand-set for the U.S. market. In the same year, we also developed an integrated CMOS RF device, which was an important step in our development efforts to integrate telephony features, the communications modem and the RF device into an integrated Phone-on-a-Chip. 
+
+ 
+
+In 2002, we introduced a complete chip-set for a 2.4GHz single hand-set solution and an advanced 2.4GHz multi-hand-set solution with walkie-talkie and baby monitor capabilities. As the U.S. market transitioned from 900MHz to 2.4GHz, we introduced an optimal and low-cost 2.4GHz multi-hand-set solution to serve the growing requirements for systems with two to three hand-sets. Furthermore, in the second half of 2002, we introduced a baseband device for the 5.8GHz market. During the same period, we started the development of a unique residential cordless/PBX system to support voice and data connectivity, based on Bluetooth protocol. Our universal platform ensures fast time to market and seamless migration to data connectivity and broadband wireless home applications. 
+
+ 
+
+6 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+ 
+
+The following table presents the main features of the cordless chip-sets that we currently offer: 
+
+ 
+
+DSP Group’s IDT Cordless Speech Processors 
+
+ 
+
+     900MHz Spread Spectrum
+
+--------------------------------------------------------------------------------
+    900MHz Narrow-
+
+Band
+
+--------------------------------------------------------------------------------
+    2.4GHz Single Hand-Set
+
+--------------------------------------------------------------------------------
+      2.4GHz EDCT Multi-Hand-
+
+Set
+
+--------------------------------------------------------------------------------
+ 
+Process Geometry Baseband (Microns)
+    0.35
+    0.25
+    0.25
+      0.25
+ 
+RF Process
+    Bipolar
+    Bipolar
+    CMOS
+      CMOS
+ 
+Advanced Features:
+                       
+Digital Answering Machine
+    No
+    Yes
+    Yes
+      Yes
+ 
+Full Duplex Speakerphone
+    No
+    Yes
+    Yes
+      Yes
+ 
+Caller ID & Call Waiting Caller ID
+    No
+    Yes
+    Yes
+      Yes
+ 
+System-On-A-Chip-Included Peripherals:
+                       
+Line Codec
+    Yes
+    Yes
+    Yes
+      Yes
+ 
+Speaker Codec
+    No
+    Yes
+    Yes
+      Yes
+ 
+Amplifiers
+    Yes
+    Yes
+    Yes
+      Yes
+ 
+Multi-Hand-Set Capability
+    No
+    No
+    No
+      Yes
+ 
+
+ 
+
+Voice over Packet Speech Co-Processors 
+
+ 
+
+Our Voice over Packet speech co-processors, including VoIP and VoDSL, were developed for use in conjunction with other microprocessors to transmit Voice over Packet-based public and private networks, including the Internet, local area networks (LANs), frame relay networks, xDSL links, cable networks, other data networks and combined data/voice networks. “Voice over IP” refers to the transmission of voice signals over networks using the Internet Protocol (IP), which involves dividing the signals into numerous small data packets that are individually transmitted over a network and re-assembled in the correct order at their destination. This technology can also be used to implement the speech component of video conferencing applications. 
+
+ 
+
+In March 2000, we acquired approximately 73% of VoicePump, Inc., a company which specializes in speech coding and telecom algorithms for Voice over Packet applications developed for voice gateway, customer-oriented equipment manufacturers and broadband network providers. In March 2001, VoicePump became one of our wholly-owned subsidiaries when we exercised our option to acquire the remaining equity. 
+
+ 
+
+In 2001, VoicePump launched its first VP100 family of products. This product line is based on TeakLiteDSPCore®, which includes an integrated set of peripherals optimized for VoDSL Integrated Access Device (IAD) and other Voice over Packet applications. VoicePump plans to offer its current and future product lines as low-cost and efficient applications for both VoDSL and VoIP solutions. 
+
+ 
+
+The following table sets forth other features of the VoIP speech co-processors that we currently offer: 
+
+ 
+
+DSP Group’s Voice over Packet Speech Co-Processors 
+
+ 
+
+     CT8022
+
+--------------------------------------------------------------------------------
+    VP110
+
+--------------------------------------------------------------------------------
+    VP120
+
+--------------------------------------------------------------------------------
+    VP140/101
+
+--------------------------------------------------------------------------------
+ 
+Number of channels supported simultaneously
+    1
+    1
+    2
+    4
+ 
+DSP Core
+    Oak
+    TeakLite
+    TeakLite
+    TeakLite
+ 
+Process Geometry (Microns)
+    0.5
+    0.25
+    0.25
+    0.25
+ 
+ITU-T Standard Speech Coders
+    G.711, G.723.1, G.729AB TrueSpeech
+    G.711, G.726, G.723.1, G.729AB
+    G.711, G.726, G.723.1, G.729AB
+    G.711, G.726, G.723.1, G.729AB
+ 
+Analog Front-End Integrated
+    —
+    Yes
+    Yes
+    Yes
+ 
+Features:
+                     
+Internet Telephony
+    Yes
+    Yes
+    Yes
+    Yes
+ 
+Line Echo Cancellation
+    G.165
+    G.168
+    G.168
+    G.168
+ 
+Caller ID, Detection and Generation
+    Yes
+    Yes
+    Yes
+    Yes
+ 
+T.38 Fax Relay
+    No
+    Yes
+    Yes
+    Yes
+ 
+Built-in Amplifiers
+    No
+    Yes
+    Yes
+    Yes
+ 
+
+ 
+
+7 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+ 
+
+The following is a list of manufacturers and brand names in which our products are incorporated: 
+
+ 
+
+Manufacturers and Brands 
+
+ 
+
+Manufacturers
+
+--------------------------------------------------------------------------------
+      Brands
+
+--------------------------------------------------------------------------------
+ 
+Ascom
+      Alcatel
+ 
+CCT Telecom
+      Belgacom
+ 
+Cenix
+      Bell South
+ 
+JVC
+      Deutsche Telecom
+ 
+L.G. Electronics
+      Doro
+ 
+Panasonic
+      France Telecom
+ 
+Philips
+      GE
+ 
+Samsung
+      Hyundai
+ 
+Sony
+      Radio Shack
+ 
+Uniden
+      RCI
+ 
+       Southwestern Bell
+ 
+       Swisscom
+ 
+       Telecom Italia
+ 
+
+ 
+
+International Sales and Operations 
+
+ 
+
+Export sales accounted for 99% of our total revenues in each of the years 2002 and 2001, and 95% in 2000. Although all of our sales to foreign entities are denominated in United States dollars, we are subject to risks of conducting business internationally. These risks include unexpected changes in regulatory requirements, fluctuations in exchange rates that could increase the price of our products in foreign markets, delays resulting from difficulty in obtaining export licenses for certain technology, tariffs, other barriers and restrictions and the burden of complying with a variety of foreign laws. See Note 9 of the attached Notes to Consolidated Financial Statements for the year ended December 31, 2002, for a summary of our operations within various geographic areas. 
+
+ 
+
+Moreover, part of our expenses in Israel are paid in Israeli currency, which subjects us to the risks of foreign currency fluctuations between the U.S. dollar and the New Israeli Shekel (NIS) and to economic pressures resulting from Israel’s general rate of inflation. Our primary expenses paid in NIS are employee salaries and lease payments on our Israeli facilities. As a result, an increase in the value of Israeli currency in comparison to the U.S. dollar could increase the cost of our technology development, research and development expenses and general and administrative expenses. 
+
+ 
+
+Sales, Marketing and Distribution 
+
+ 
+
+We market and distribute our products through our direct sales and marketing offices, as well as through a network of distributors and independent OEM representatives. Our sales and marketing team, working out of our sales offices in Santa Clara, California; Tokyo, Japan; Herzelia Pituach, Israel and Edinburgh, Scotland, pursues business with our customers in North and South America, Europe and Asia. In territories worldwide where we do not have sales offices, we solely operate through a network of distributors and independent OEM representatives. A significant portion of our worldwide sales is derived from our Japanese distributor, Tomen Electronics. Sales to Tomen Electronics comprised 81% of our total revenues in 2002, 72% in 2001 and 66% in 2000. In September 2000, we invested approximately $485,000 in the parent company of Tomen Electronics. For more information, see Note 6 to the attached Notes to Consolidated Financial Statements for the year ended December 31, 2002. Furthermore, Tomen Electronics sells our products to a limited number of customers. One customer of Tomen Electronics, Panasonic, has continually accounted for a majority of Tomen Electronics’ sales. Moreover, our sales representatives and distributors are not subject to minimum purchase requirements and can cease marketing our products at any time. The loss of one or more representatives or their failure to renew 
+
+ 
+
+8 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+agreements with us upon expiration, especially Tomen Electronics, could harm our business, financial condition and results of operations. Additionally, the loss of Panasonic and Tomen Electronics’ inability to thereafter effectively market our products could also materially harm our sales and results of operations. 
+
+ 
+
+Manufacturing and Design Methodology 
+
+ 
+
+All of our manufacturing occurs at independent foundries. We contract fabrication services for speech and telephony processors and RF devices from TSMC, Sony and UMC. Under non-exclusive arrangements, these independent foundries normally provide us with either finished, packaged and tested speech processors at variable prices depending on the volume of units purchased or as sorted good wafers or as un-sorted wafers. We develop detailed testing procedures and specifications for each product and require each subcontractor to use these procedures and specifications before shipping us finished products. We test our products at ASE, TSMC and Sony and use ASE and SPIL as subcontractors for dies packaging. 
+
+ 
+
+We intend to continue to use independent foundries to manufacture digital speech processors, cordless devices and other products for the consumer telephony and computer telephony markets. To obtain an adequate supply of finished wafers, we manufacture most of our materials at various alternative production fabs. Our reliance on independent foundries involves a number of risks, including the foundries’ ability to achieve acceptable manufacturing yields, competitive cost and their allocation of sufficient capacity to us to meet our needs. In addition, foundries in Taiwan produce a significant portion of our wafer supply. As a result, earthquakes, aftershocks or other natural disasters in Asia could preclude us from obtaining an adequate supply of wafers to fill customer orders and could harm our business, financial condition and results of operations. 
+
+ 
+
+In addition to our speech processors, our IDT speech processor products require an external component in the finished product to provide Analog Random Access Memory circuits (ARAMs) and flash memory, which are supplied by third party manufacturers. Temporary fluctuations in the pricing and availability of these components could negatively impact sales of our IDT speech processors, which could in turn harm our business, financial condition and results of operations. 
+
+ 
+
+Competition 
+
+ 
+
+The markets in which we operate are extremely competitive, and we expect that competition will continue to increase. In each of our business activities, we face current and potential competition from competitors that have significantly greater financial, technical, manufacturing, marketing, sales and distribution resources and management expertise than we do. Our future prospects will depend greatly on our ability to successfully develop and introduce new products that are responsive to market demands. We cannot assure you that we will be able to successfully develop or market new products. 
+
+ 
+
+The principal competitive factors in the cordless telephony market include price, system integration level, range, voice quality customer support and the timing of product introductions by us and our competitors. We believe that we are competitive with respect to most of these factors. Our principal competitors in the cordless market include National Semiconductor, Philips and Infineon. 
+
+ 
+
+Similar principal competitive factors affect the Voice over Packet market. We also believe that we are competitive with respect to most of these factors. Our principal competitors in the Voice over Packet market include Telogy Network (a Texas Instruments Company), GlobalVirata, AudioCodes, Texas Instruments, Broadcom, Infineon and Oki Electronic. 
+
+ 
+
+Also, in addition to our TrueSpeech algorithms, several other digital speech compression technologies exist and are currently being developed that may be promoted by our competitors as industry standards for the computer telephony and personal computer markets. 
+
+ 
+
+9 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+ 
+
+Price competition in the markets in which we currently compete and propose to compete is intense and may increase, which could harm our business, financial condition and results of operations. We have experienced and will continue to experience increased competitive pricing pressures for our IDT processors. We were able to partially offset price reductions which occurred during 2002 through manufacturing cost reductions and by achieving a higher level of product integration. However, we cannot assure you that we will be able to further reduce production costs, or be able to compete successfully with respect to price or any other key competitive factors in the future. 
+
+ 
+
+Research and Development 
+
+ 
+
+We believe that the continued timely development and introduction of new products is essential to maintain our competitive position. We currently conduct most of our product development at our facilities. At December 31, 2002, we had a staff of 85 research and development personnel, of which 67 were located in Israel. We also employ independent contractors to assist with certain product development and testing activities. We spent approximately $19.7 million in 2002, $21.1 million in 2001 and $16.1 million in 2000, on research and development activities. 
+
+ 
+
+Licenses, Patents and Trademarks 
+
+ 
+
+We have been granted 20 United States patents, one Canadian patent, two Israeli patents and one Taiwanese patent, and have seven patents pending in the United States, two patents pending in Japan, and two patents pending in Israel. We actively pursue foreign patent protection in countries of interest to us. Our policy is to apply for patents or for other appropriate statutory protection when we develop valuable new or improved technology. The status of any patent involves complex legal and factual questions, and the breadth of claims allowed is uncertain. Accordingly, we cannot assure you that any patent application filed by us will result in a patent being issued, or that our patents, and any patents that may be issued in the future, will afford adequate protection against competitors with similar technology; nor can we provide assurance that patents issued to us will not be infringed or designed around by others. In addition, the laws of certain countries in which our products are or may be developed, manufactured or sold, including Hong Kong, Japan and Taiwan, may not protect our products and intellectual property rights to the same extent as the laws of the United States. 
+
+ 
+
+We attempt to protect our trade secrets and other proprietary information through agreements with our customers, suppliers, employees and consultants, and through other security measures. Although we intend to protect our rights vigorously, we cannot assure you that these measures will be successful. 
+
+ 
+
+The semiconductor and software industries are subject to frequent litigation regarding patent and other intellectual property rights. While claims involving any material patent or other intellectual property rights have not been brought against us to date, we cannot provide assurance that third parties will not assert claims against us with respect to existing or future products, or that we will not need to assert claims against third parties to protect our proprietary technology. For example, in a lawsuit against Microsoft Corporation, AT&T has asserted that our TrueSpeech algorithm includes certain elements covered by a patent held by AT&T. AT&T has sued Microsoft, one of our TrueSpeech licensees, for infringement. We have not been named in AT&T’s suit against Microsoft. If litigation becomes necessary to determine the validity of any third party claims or to protect our proprietary technology, it could result in significant expense to us and could divert the efforts of our technical and management personnel, whether or not the litigation is determined in our favor. In the event of an adverse result in any litigation, we could be required to expend significant resources to develop non-infringing technology or to obtain licenses to the technology that is the subject of the litigation. We cannot provide assurance that we would be successful in developing non-infringing technology or that any licenses would be available on commercially reasonable terms. 
+
+ 
+
+We have trademark registrations for the following marks:  TRUESPEECH, FULL DUPLEX SPEAKERPHONE, and TRIPLE RATE CODER. In addition, we have applied for a trademark registration for TOTAL TELEPHONY SOLUTIONS. 
+
+ 
+
+10 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+ 
+
+While our ability to compete may be affected by our ability to protect our intellectual property, we believe that because of the rapid pace of technological change in our industry, our technical expertise and ability to innovate on a timely basis and in a cost-effective manner will be more important in maintaining our competitive position than the protection of our intellectual property. In addition, we believe that because of the rapid pace of technological change in the consumer telephone, computer telephony and personal computer industries, patents and trade secret protection are important but must be supported by other factors, including expanding the knowledge, ability and experience of our personnel, new product introductions and frequent product enhancements. Although we continue to implement protective measures and intend to defend our intellectual property rights, we cannot assure you that these measures will be successful. 
+
+ 
+
+Backlog 
+
+ 
+
+At December 31, 2002, our backlog was approximately $29.6 million compared with approximately $17.0 million at December 31, 2001. We include in our backlog all accepted product purchase orders with respect to which a delivery schedule has been specified for product shipment within one year. Our business is characterized by short-term order and shipment schedules. Product orders in our current backlog are subject to changes in delivery schedules or to cancellation by the purchaser. Accordingly, although useful for scheduling production, backlog as of any particular date may not be a reliable measure of our sales for any future period. 
+
+ 
+
+Employees 
+
+ 
+
+At December 31, 2002, we had 149 employees, including 85 in research and development, 21 in marketing and sales and 43 in corporate and administration and manufacturing coordination. Competition for personnel in the semiconductor, software and personal computer industries in general is intense. We believe that our future prospects will depend, in part, on our ability to continue to attract and retain highly-skilled technical, marketing and management personnel, who are in great demand. In particular, there is a limited supply of highly-qualified engineers with digital signal processing experience. None of our employees is represented by a collective bargaining agreement, nor have we ever experienced any work stoppage. We believe that relations with our employees are good. 
+
+ 
+
+Risk Factors 
+
+ 
+
+Various discussions in this Annual Report on Form 10-K contain forward-looking statements concerning our future products, expenses, revenue, liquidity and cash needs, as well as our plans and strategies. These forward-looking statements are based on current expectations and we assume no obligation to update this information. Numerous factors could cause our actual results to differ significantly from the results described in these forward-looking statements, including the following risk factors. 
+
+ 
+
+We rely on a primary distributor for significant portion of our total revenues and the failure of this distributor to perform as expected would materially reduce our future sales and revenues. 
+
+ 
+
+We sell our products to customers primarily through a network of distributors and OEM representatives. Particularly, revenues from our Japanese distributor, Tomen Electronics, accounted for 81% of our total revenues in 2002 and 72% of our total revenues in 2001. Our future performance will depend, in part, on this distributor to continue to successfully market and sell our products. Furthermore, Tomen Electronics sells our products to a limited number of customers. One customer of Tomen Electronics, Panasonic, has continually accounted for a majority of Tomen Electronics’ sales. The loss of Tomen Electronics as our distributor and our inability to obtain a satisfactory replacement in a timely manner will materially harm our sales and results of operations. Additionally, the loss of Panasonic and Tomen Electronics’ inability to thereafter effectively market our products could also materially harm our sales and results of operations. 
+
+ 
+
+11 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+ 
+
+Because our products are components of end products, if OEMs do not incorporate our products into their end products or if the end products of our OEM customers do not achieve market acceptance, we may not be able to generate adequate sales of our products. 
+
+ 
+
+Our products are not sold directly to the end-user; rather, they are components of end products. As a result, we rely upon OEMs to incorporate our products into their end products at the design stage. Once an OEM designs a competitor’s product into its end product, it becomes significantly more difficult for us to sell our products to that customer because changing suppliers involves significant cost, time, effort and risk for the customer. As a result, we may incur significant expenditures on the development of a new product without any assurance that an OEM will select our product for design into its own product and without this “design win,” it becomes significantly difficult to sell our products. Moreover, we rely on the end products of our OEM customers that incorporate our products to achieve market acceptance. Many of our OEM customers face intense competition in their markets. If end products that incorporate our products are not accepted in the marketplace, we may not achieve adequate sales volume of our products, which would have a negative effect on our results of operations. 
+
+ 
+
+The continuing worldwide economic slowdown and related uncertainties may adversely impact our revenues and profitability. 
+
+ 
+
+Slower economic activity, decreased consumer confidence, reduced corporate profits and capital spending, adverse business conditions and liquidity concerns in the telecommunications, semiconductor and related industries, and recent international conflicts and terrorist and military activity have resulted in a continuing downturn in worldwide economic conditions. If these unfavorable economic conditions continue, we may experience a slowdown in customer orders, an increase in the number of cancellations and rescheduling of backlog. We cannot predict the timing, strength and duration of any economic recovery in the telecommunications and semiconductor industry. In addition, the events of September 11, 2001, subsequent international conflicts and terrorist acts, and the current war with Iraq, can be expected to place further pressure on economic conditions in the United States and worldwide. These conditions make it difficult for our customers, our vendors and for us to accurately forecast and plan future business activities. If such conditions continue or worsen, our business, financial condition and results of operations may be materially and adversely affected. 
+
+ 
+
+Because our quarterly operating results may fluctuate significantly, the price of our common stock may decline. 
+
+ 
+
+Our quarterly results of operations may vary significantly in the future for a variety of reasons, many of which are outside our control, including the following: 
+
+ 
+
+  •   fluctuations in volume and timing of product orders;  
+
+ 
+
+  •   changes in demand for our products due to seasonal customer buying patterns and other factors;  
+
+ 
+
+  •   timing of new product introductions by us or our customers or competitors;  
+
+ 
+
+  •   changes in the mix of products sold by us or our competitors;  
+
+ 
+
+  •   fluctuations in the level of sales by our OEM customers and other vendors of end products incorporating our products;  
+
+ 
+
+  •   the timing and size of expenses, including expenses to develop new products and product improvements; and  
+
+ 
+
+  •   mergers and acquisitions by us, our competitors, and existing and potential customers;  
+
+ 
+
+  •   general economic conditions, including the changing economic conditions in the United States and worldwide.  
+
+ 
+
+Each of the above factors is difficult to forecast and could harm our business, financial condition and results of operations. Also, we sell our products to OEM customers that operate in consumer markets. As a result, our 
+
+ 
+
+12 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+revenues are affected by seasonality sales to our OEM customers and the market acceptance of end products supplied by our OEM customers. The fourth quarter is usually the strongest quarter for sales by our OEM customers in the consumer markets, and thus, our third quarter is usually the strongest quarter for revenues. 
+
+ 
+
+Our average selling prices continue to decline which may materially adversely affect our profitability. 
+
+ 
+
+Sales of our Integrated Digital Telephony (IDT) products comprised 97% in 2002 and 94% in 2001 of our total revenues. We have experienced and continue to experience a decrease in the average selling prices of our IDT processors, which we have to date been able to partially offset on an annual basis through manufacturing cost reductions by achieving a higher level of product integration and combining other functions. We cannot guarantee that our ongoing efforts will be successful or that they will keep pace with the anticipated, continuing decline in average selling prices of our IDT processors. 
+
+ 
+
+We generate a significant amount of our total revenues from the sale of Integrated Digital Telephony (IDT) products and our business and operating results may be materially adversely affected if we do not continue to succeed in the highly competitive IDT market. 
+
+ 
+
+Any adverse change in the digital IDT market or in our ability to compete and maintain our competitive position in that market would harm our business, financial condition and results of operations. The IDT market is extremely competitive and we expect that competition will only increase. Our existing and potential competitors in each of our markets include large and emerging domestic and foreign companies, many of which have significantly greater financial, technical, manufacturing, marketing, sale and distribution resources and management expertise than we do. It is possible that we may one day be unable to respond to increased price competition for IDT processors or other products through the introduction of new products or reduction of manufacturing costs. This inability would have a material adverse effect on our business, financial condition and results of operations. Likewise, any significant delays by us in developing, manufacturing or shipping new or enhanced products in this market also would have a material adverse effect on our business, financial condition and results of operations. 
+
+ 
+
+Because we depend on independent foundries to manufacture all of our integrated circuit products, we are subject to additional risks that may materially disrupt our business. 
+
+ 
+
+All of our integrated circuit products are manufactured by independent foundries. While these foundries have been able to adequately meet the demands of our increasing business, we are and will continue to be dependent upon these foundries to achieve acceptable manufacturing yields, quality levels and costs, and to allocate to us a sufficient portion of their foundry capacity to meet our needs in a timely manner. We currently do not have long-term supply arrangements with any of these foundries. Therefore, they are not obligated to perform services or supply products to us for any specific period or in any specific quantities. Our business could also be harmed if one or more of the foundries terminates its relationship with us and we are unable to obtain satisfactory replacements to fulfill customer orders on a timely basis and in a cost-effective manner. 
+
+ 
+
+To meet our increased wafer requirements, we have added additional manufacturing sites to manufacture our processors. However, there may be shortages in worldwide foundry capacity due to increases in semiconductor demand or other factors. In the event of such a shortage, we may not be able to obtain a sufficient allocation of foundry capacity to meet our product needs. In addition, such a shortage could lengthen our products’ manufacturing cycle and cause a delay in the shipments of our products to our customers. This could ultimately lead to a loss of sales of our products, harm our reputation and competitive position, and our revenues could be materially reduced. In addition, foundries in Taiwan produce a significant portion of our wafers. As a result, earthquakes, aftershocks or other natural disasters in Asia could preclude us from obtaining an adequate supply of wafers to fill customer orders and could harm our reputation, business, financial condition, and results of operations. 
+
+ 
+
+13 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+ 
+
+Because the manufacture of our products is complex, the foundries on which we depend may not achieve the necessary yields or product reliability that our business requires. 
+
+ 
+
+The manufacture of our products is a highly complex and precise process, requiring production in a highly controlled environment. Changes in manufacturing processes or the inadvertent use of defective or contaminated materials by a foundry could adversely affect the foundry’s ability to achieve acceptable manufacturing yields and product reliability. If the foundries we currently use do not achieve the necessary yields or product reliability, our customer relationships could suffer. This could ultimately lead to a loss of sales of our products and have a negative effect on our results of operations. 
+
+ 
+
+Furthermore, there are other significant risks associated with relying on these third-party foundries, including: 
+
+ 
+
+  •   risks due to the fact that we have reduced control over production cost, delivery schedules and product quality;  
+
+ 
+
+  •   less recourse if problems occur as the warranties on wafers or products supplied to us are limited; and  
+
+ 
+
+  •   increased exposure to potential misappropriation of our intellectual property.  
+
+ 
+
+Because we have significant international operations, we may be subject to political, economic and other conditions relating to our international operations that could increase our operating expenses and disrupt our business. 
+
+ 
+
+We are dependent on sales to customers outside the United States. We expect that international sales will continue to account for a significant portion of our net product sales for the foreseeable future. For example, export sales, primarily consisting of IDT speech processors shipped to manufacturers in Europe and Asia, including Japan, represented 99% of our total revenues for 2002. As a result, the occurrence of any negative international political, economic or geographic events could result in significant revenue shortfalls. These shortfalls could cause our business, financial condition and results of operations to be harmed. Some of the risks of doing business internationally include: 
+
+ 
+
+  •   unexpected changes in regulatory requirements;  
+
+ 
+
+  •   fluctuations in the exchange rate for the United States dollar;  
+
+ 
+
+  •   imposition of tariffs and other barriers and restrictions;  
+
+ 
+
+  •   burdens of complying with a variety of foreign laws;  
+
+ 
+
+  •   political and economic instability; and  
+
+ 
+
+  •   changes in diplomatic and trade relationships.  
+
+ 
+
+Because we have significant operations Israel, we may be subject to political, economic and other conditions affecting Israel that could increase our operating expenses and disrupt our business. 
+
+ 
+
+Our principal research and development facilities are located in the State of Israel and, as a result, at December 31, 2002, 112 of our 149 employees were located in Israel, including 67 out of 85 of our research and development personnel. In addition, although we are incorporated in Delaware, a majority of our directors and executive officers are residents of Israel. Although substantially all of our sales currently are being made to customers outside of Israel, we are nonetheless directly influenced by the political, economic and military conditions affecting Israel. Any major hostilities involving Israel, or the interruption or curtailment of trade between Israel and its present trading partners, could significantly harm our business, operating results and financial condition. 
+
+ 
+
+Israel’s economy has been subject to numerous destabilizing factors, including a period of rampant inflation in the early to mid-1980’s, low foreign exchange reserves, fluctuations in world commodity prices, military 
+
+ 
+
+14 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+conflicts and civil unrest. In addition, Israel and companies doing business with Israel have been the subject of an economic boycott by the Arab countries since Israel’s establishment. Although they have not done so to date, these restrictive laws and policies may have an adverse impact on our operating results, financial condition or expansion of our business. 
+
+ 
+
+Since the establishment of the State of Israel in 1948, a state of hostility has existed, varying in degree and intensity, between Israel and the Arab countries. Although Israel has entered into various agreements with certain Arab countries and the Palestinian Authority, and various declarations have been signed in connection with efforts to resolve some of the economic and political problems in the Middle East, hostilities between Israel and some of its Arab neighbors have recently escalated and intensified. We cannot predict whether or in what manner these conflicts will be resolved. Our results of operations may be negatively affected by the obligation of key personnel to perform military service. In addition, certain of our officers and employees are currently obligated to perform annual reserve duty in the Israel Defense Forces and are subject to being called for active military duty at any time. Although we have operated effectively under these requirements since our inception, we cannot predict the effect of these obligations on the company in the future. Our operations could be disrupted by the absence, for a significant period, of one or more of our officers or key employees due to military service. 
+
+ 
+
+Our future profits may be diminished if the current Israeli tax benefits that we enjoy are reduced or withheld. 
+
+ 
+
+We receive certain tax benefits in Israel, particularly as a result of the “Approved Enterprise” status of our facilities and programs. To be eligible for tax benefits, we must meet certain conditions, relating principally to adherence to the investment program filed with the Investment Center of the Israeli Ministry of Industry and Trade and to periodic reporting obligations. Although we have met such conditions in the past, should we fail to meet such conditions in the future, we would be subject to corporate tax in Israel at the standard rate of 36%, and could be required to refund tax benefits already received. We cannot assure you that such grants and tax benefits will be continued in the future at their current levels, if at all. The termination or reduction of certain programs and tax benefits (particularly benefits available to us as a result of the Approved Enterprise status of our facilities and programs) or a requirement to refund tax benefits already received may have a material adverse effect on our business, operating results and financial condition. 
+
+ 
+
+Our failure, and the failure of our OEM customers, to obtain the necessary complementary components required to produce various products could diminish the sales of our products. 
+
+ 
+
+Our IDT speech processor products require an external component in the finished product to provide Analog Random Access Memory circuits (ARAMs) and flash memory which are supplied by third party manufacturers. Temporary fluctuations in the pricing and availability of these components could negatively impact sales of our IDT speech processors, which could in turn harm our business, financial condition and results of operations. In addition, some of the raw materials, components and subassemblies included in the end products manufactured by our OEM customers, which also incorporate our products, are obtained from a limited group of suppliers. Supply disruptions, shortages or termination of any of these sources could have an adverse effect on our business and results of operations due to the delay or discontinuance of orders for our products by our OEM customers until those necessary components are available for their end products. 
+
+ 
+
+We may engage in future acquisitions that could dilute our stockholders’ equity and harm our business, results of operations and financial condition. 
+
+ 
+
+We have pursued, and will continue to pursue, growth opportunities through internal development and acquisition of complementary businesses, products and technologies. We are unable to predict whether or when any other prospective acquisition will be completed. The process of integrating an acquired business may be prolonged due to unforeseen difficulties and may require a disproportionate amount of our resources and management’s attention. We cannot assure you that we will be able to successfully identify suitable acquisition candidates, complete acquisitions, integrate acquired businesses into our operations, or expand into new markets. 
+
+ 
+
+15 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+Further, once integrated, acquisitions may not achieve comparable levels of revenues, profitability or productivity as our existing business or otherwise perform as expected. The occurrence of any of these events could harm our business, financial condition or results of operations. Future acquisitions may require substantial capital resources, which may require us to seek additional debt or equity financing. 
+
+ 
+
+Future acquisitions by us could result in the following, any of which could seriously harm our results of operations or the price of our stock: 
+
+ 
+
+  •   issuance of equity securities that would dilute our current stockholders’ percentages of ownership;  
+
+ 
+
+  •   large one-time write-offs;  
+
+ 
+
+  •   the incurrence of debt and contingent liabilities;  
+
+ 
+
+  •   difficulties in the assimilation and integration of operations, personnel, technologies, products and information systems of the acquired companies;  
+
+ 
+
+  •   diversion of management’s attention from other business concerns;  
+
+ 
+
+  •   contractual disputes;  
+
+ 
+
+  •   risks of entering geographic and business markets in which we have no or only limited prior experience; and  
+
+ 
+
+  •   potential loss of key employees of acquired organizations.  
+
+ 
+
+Third party claims of infringement or other claims against us could adversely affect our ability to market our products, require us to redesign our products or seek licenses from third parties, and seriously harm our operating results and disrupt our business. 
+
+ 
+
+As is typical in the semiconductor industry, we have been and may from time to time be notified of claims that we may be infringing patents or intellectual property rights owned by third parties. For example, in a lawsuit against Microsoft Corporation, AT&T has asserted that our TrueSpeech algorithm includes certain elements covered by a patent held by AT&T. AT&T has sued Microsoft, one of our TrueSpeech licensees, for infringement. If litigation becomes necessary to determine the validity of any third party claims, it could result in significant expense to us and could divert the efforts of our technical and management personnel, whether or not the litigation is determined in our favor. 
+
+ 
+
+If it appears necessary or desirable, we may try to obtain licenses for those patents or intellectual property rights that we are allegedly infringing. Although holders of these types of intellectual property rights commonly offer these licenses, we cannot assure you that licenses will be offered or that the terms of any offered licenses will be acceptable to us. Our failure to obtain a license for key intellectual property rights from a third party for technology used by us could cause us to incur substantial liabilities and to suspend the manufacturing of products utilizing the technology. 
+
+ 
+
+Alternatively, we could be required to expend significant resources to develop non-infringing technology. We cannot assure you that we would be successful in developing non-infringing technology. 
+
+ 
+
+We may not be able to adequately protect or enforce our intellectual property rights, which could harm our competitive position. 
+
+ 
+
+Our success and ability to compete is in part dependent upon our internally-developed technology and other proprietary rights, which we protect through a combination of copyright, trademark and trade secret laws, as well as through confidentiality agreements and licensing arrangements with our customers, suppliers, employees and consultants. In addition, we have filed a number of patents in the United States and in other foreign countries with respect to new or improved technology that we have developed. However, the status of any patent involves 
+
+ 
+
+16 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+complex legal and factual questions, and the breadth of claims allowed is uncertain. Accordingly, we cannot assure you that any patent application filed by us will result in a patent being issued, or that the patents issued to us will not be infringed by others. Also, our competitors and potential competitors may develop products with similar technology or functionality as our products, or they may attempt to copy or reverse engineer aspects of our product line or to obtain and use information that we regard as proprietary. Moreover, the laws of certain countries in which our products are or may be developed, manufactured or sold, including Hong Kong, Japan and Taiwan, may not protect our products and intellectual property rights to the same extent as the laws of the United States. Policing the unauthorized use of our products is difficult and may result in significant expense to us and could divert the efforts of our technical and management personnel. Even if we spend significant resources and efforts to protect our intellectual property, we cannot assure you that we will be able to prevent misappropriation of our technology. Use by others of our proprietary rights could materially harm our business and expensive litigation may be necessary in the future to enforce our intellectual property rights. 
+
+ 
+
+Our operating results may fluctuate significantly due to the cyclicality of the semiconductor industry, which could adversely affect the market price of our common stock. 
+
+ 
+
+We operate in the semiconductor industry, which is cyclical and subject to rapid technological change and evolving industry standards. From time to time, the semiconductor industry has experienced significant downturns such as the current one. These downturns are characterized by diminished product demand, excess customer inventories, accelerated erosion of prices and excess production capacity. These factors could cause substantial fluctuations in our revenues and in our results of operations. The current downturn and future downturns in the semiconductor industry may be severe and prolonged, and any failure of this industry to fully recover from the current downturn could seriously impact our revenue and harm our business, financial condition and results of operations. The semiconductor industry also periodically experiences increased demand and production capacity constraints, which may affect our ability to ship products in future periods. Our quarterly results may vary significantly as a result of the general conditions in the semiconductor industry, which could cause our stock price to decline. 
+
+ 
+
+Because the markets in which we compete are highly competitive, and many of our competitors have greater resources than we do, we cannot be certain that our products will be accepted in the marketplace or capture market share. 
+
+ 
+
+The markets in which we operate are extremely competitive and characterized by rapid technological change, evolving standards, short product life cycles and price erosion. We expect competition to intensify as current competitors expand their product offerings and new competitors enter the market. Given the highly competitive environment in which we operate, we cannot be sure that any competitive advantages enjoyed by our current products would be sufficient to establish and sustain our new products in the market. Any increase in price or competition could result in the erosion of our market share, to the extent we have obtained market share, and would have a negative impact on our financial condition and results of operations. 
+
+ 
+
+In each of our business activities, we face current and potential competition from competitors that have significantly greater financial, technical, manufacturing, marketing, sales and distribution resources and management expertise than we do. These competitors may also have pre-existing relationships with our customers or potential customers. Further, in the event of a manufacturing capacity shortage, these competitors may be able to manufacture products when we are unable to do so. Our principal competitors in the cordless market include National Semiconductor, Philips and Infineon. Our principal competitors in the Voice over Packet market include Telogy Network (a Texas Instruments Company), GlobalVirata, AudioCodes, Texas Instruments, Broadcom, Infineon and Oki Electronic. Our principal competitors with respect to digital speech compression technologies include AT&T and Motorola. 
+
+ 
+
+We cannot be sure that we will have the financial resources, technical expertise or marketing and support capabilities to continue to compete successfully. Our future prospects will depend greatly on our ability to 
+
+ 
+
+17 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+successfully develop and introduce new products that are responsive to market demands. We cannot assure you that we will be able to successfully develop or market new products. 
+
+ 
+
+Because our products are complex, the detection of errors in our products may be delayed, and if we deliver products with defects, our credibility will be harmed, the sales and market acceptance of our products may decrease and product liability claims may be made against us. 
+
+ 
+
+Our products are complex and may contain errors, defects and bugs when introduced. If we deliver products with errors, defects or bugs, our credibility and the market acceptance and sales of our products could be significantly harmed. Furthermore, the nature of our products may also delay the detection of any such error or defect. If our products contain errors, defects and bugs, then we may be required to expend significant capital and resources to alleviate these problems. This could result in the diversion of technical and other resources from our other development efforts. Any actual or perceived problems or delays may also adversely affect our ability to attract or retain customers. Furthermore, the existence of any defects, errors or failures in our products could lead to product liability claims or lawsuits against us or against our customers. We generally provide our customers with a standard warranty for our products, generally lasting one year from the date of purchase. Although we attempt to limit our liability for product defects to product replacements, we may not be successful, and customers may sue us or claim liability for the defective products. A successful product liability claim could result in substantial cost and divert management’s attention and resources, which would have a negative impact on our financial condition and results of operations. 
+
+ 
+
+Our executive officers and key personnel are critical to our business, and because there is significant competition for personnel in our industry, we may not be able to attract and retain such qualified personnel. 
+
+ 
+
+Our success depends to a significant degree upon the continued contributions of our executive management team, and our technical, marketing, sales customer support and product development personnel. The loss of significant numbers of such personnel could significantly harm our business, financial condition and results of operations. We do not have any life insurance or other insurance covering the loss of any of our key employees. Because our products are specialized and complex, our success depends upon our ability to attract, train and retain qualified personnel, including qualified technical, marketing and sales personnel. 
+
+ 
+
+However, the competition for personnel is intense and we may have difficulty attracting and retaining such personnel. 
+
+ 
+
+We are exposed to fluctuations in currency exchange rates. 
+
+ 
+
+A significant portion of our business is conducted outside the United States. Export sales to manufacturers in Europe and Asia, including Japan, represented 99% of our total revenues in both 2002 and 2001, and 95% in 2000. Although most of our revenue and expenses are transacted in U.S. dollars, we may be exposed to currency exchange fluctuations in the future as business practices evolve and we are forced to transact business in local currencies. Moreover, part of our expenses in Israel are paid in Israeli currency, which subjects us to the risks of foreign currency fluctuations between the U.S. dollar and the New Israeli Shekel (NIS) and to economic pressures resulting from Israel’s general rate of inflation. Our primary expenses paid in NIS are employee salaries and lease payments on our Israeli facilities. As a result, an increase in the value of Israeli currency in comparison to the U.S. dollar could increase the cost of our technology development, research and development expenses and general and administrative expenses. From time to time, we use derivative instruments in order to minimize the effects of currency fluctuations, but our hedging positions may be partial, may not exist at all in the future or may not succeed in minimizing our foreign currency fluctuation risks. 
+
+ 
+
+Because the markets in which we compete are subject to rapid changes, our products may become obsolete or unmarketable. 
+
+ 
+
+The markets for our products and services are characterized by rapidly changing technology, short product life cycles, evolving industry standards, changes in customer needs, demand for higher levels of integration, 
+
+ 
+
+18 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+growing competition and new product introductions. Our ability to adapt to these changes and to anticipate future standards, and the rate of adoption and acceptance of those standards, will be a significant factor in maintaining or improving our competitive position and prospects for growth. If new industry standards emerge, our products or our customers’ products could become unmarketable or obsolete, and we could lose market share. We may also have to incur substantial unanticipated costs to comply with these new standards. If our product development and improvements take longer than planned, the availability of our products would be delayed. Any such delay may render our products obsolete or unmarketable, which would have a negative impact on our ability to sell our products and our results of operations. 
+
+ 
+
+Because of changing customer requirements and emerging industry standards, we may not be able to achieve broad market acceptance of our products. Our success is dependent, in part, on our ability to: 
+
+ 
+
+  •   successfully develop, introduce and market new and enhanced products at competitive prices and in a timely manner in order to meet changing customer needs;  
+
+ 
+
+  •   convince leading OEMs to select our new and enhanced products for design into their own new products;  
+
+ 
+
+  •   respond effectively to new technological changes or new product announcements by others;  
+
+ 
+
+  •   effectively use and offer leading technologies; and  
+
+ 
+
+  •   maintain close working relationships with our key customers.  
+
+ 
+
+We cannot be sure that we will be successful in these pursuits, that the growth in demand will continue or that our products will achieve market acceptance. Our failure to develop and introduce new products that are compatible with industry standards and that satisfy customer requirements, and the failure of our products to achieve broad market acceptance, could have a negative impact on our ability to sell our products and our results of operations. 
+
+ 
+
+We may experience difficulties in transitioning to smaller geometry process technologies or in achieving higher levels of design integration, which may result in reduced manufacturing yields, delays in product deliveries and increased expenses. 
+
+ 
+
+A growing trend in our industry is the integration of greater semiconductor content into a single chip to achieve higher levels of functionality. In order to remain competitive, we must achieve higher levels of design integration and deliver new integrated products on a timely basis. We will require us to expend greater research and development resources, and may be required to modify the manufacturing processes for some of our products, to achieve greater integration. We periodically evaluate the benefits, on a product-by-product basis, of migrating to smaller geometry process technologies to reduce our costs. Although this migration to smaller geometry process technologies has helped us to offset the declining average selling prices of our IDT products, this effort may not continue be successful. Also, because we are a fabless semiconductor company, we depend on our foundries to transition to smaller geometry processes successfully. We cannot assure you that our foundries will be able to effectively manage the transition. If our foundries or we experience significant delays in this transition or fail to efficiently implement this transition, our business, financial condition and results of operations could be materially and adversely affected. 
+
+ 
+
+Our certificate of incorporation and bylaws contain anti-takeover provisions that could prevent or discourage a third party from acquiring us. 
+
+ 
+
+Our certificate of incorporation and bylaws contain provisions that may prevent or discourage a third party from acquiring us, even if the acquisition would be beneficial to our stockholders. We have a staggered board, which means it will generally take two years to change the composition of our board. Our board of directors also has the authority to fix the rights and preferences of shares of our preferred stock and to issue such shares without 
+
+ 
+
+19 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+a stockholder vote. We also have a rights plan in place. It is possible that these provisions may prevent or discourage third parties from acquiring us, even if the acquisition would be beneficial to our stockholders. In addition, these factors may also adversely affect the market price of our common stock, and the voting and other rights of the holders of our common stock. 
+
+ 
+
+War with Iraq and future attacks may negatively impact all aspects of our operations, revenues, costs and stock price. 
+
+ 
+
+The current war with Iraq and recent terrorist attacks in the United States, as well as future events occurring in response or connection to them, including future terrorist attacks against United States targets, or military or trade disruptions impacting our domestic or foreign suppliers of merchandise, may impact our operations. We may experience delays or losses in the delivery of wafer supplies to us and decreased sales of our products. More generally, any of these events could cause consumer confidence and spending to decrease or result in increased volatility in the United States and worldwide financial markets and economy. They also could result in economic recession in the United States or abroad. Any of these occurrences could have a significant impact on our operating results, revenues and costs. 
+
+ 
+
+Our stock price may be volatile so you may not be able to resell your shares of our common stock at or above the price you paid for them. 
+
+ 
+
+Announcements of developments related to our business, announcements by competitors, quarterly fluctuations in our financial results, changes in the general conditions of the highly dynamic industry in which we compete or the national economies in which we do business, and other factors could cause the price of our common stock to fluctuate, perhaps substantially. In addition, in recent years, the stock market has experienced extreme price fluctuations, which have often been unrelated to the operating performance of affected companies. These factors and fluctuations could have a material adverse effect on the market price of our common stock. 

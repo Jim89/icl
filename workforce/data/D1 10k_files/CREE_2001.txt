@@ -1,0 +1,1409 @@
+ITEM 1.  BUSINESS
+
+INTRODUCTION
+
+Cree, Inc., a North Carolina corporation, was established in 1987 to
+commercialize silicon carbide, or SiC, semiconductor wafers and devices. Today,
+we are the world-leader in developing and manufacturing compound semiconductor
+materials and electronic devices made from SiC and gallium nitride, or GaN. We
+have also acquired technology expertise in the area of silicon-based bipolar and
+laterally diffused metal oxide semiconductors, or LDMOS, products that are used
+in wireless infrastructure. We operate our business in two segments, the Cree
+segment, which consists of our SiC based products, and the UltraRF segment,
+which consists of radio frequency, or RF, transistors and amplifiers on a
+silicon platform.
+
+SiC-based devices offer significant advantages over competing products made from
+silicon, gallium arsenide, sapphire and other materials for certain electronic
+applications. We use our compound semiconductor technology to make enabling
+products such as blue and green light emitting diodes, or LEDs. We sell our LEDs
+to customers who package them for use in applications such as backlighting for
+automotive dashboards and automotive interior lighting, wireless handsets and
+other consumer products. Other applications for our LEDs include indoor and
+outdoor full color displays, such as video boards in indoor arenas and outdoor
+stadiums or billboards and message signs. Our LEDs are also used in traffic
+signals, indicator lights for consumer or industrial equipment and miniature
+white lights used for illumination applications. We have developed several
+generations of LED products, including our MegaBright(TM) and UltraBright(TM)
+LEDs, both released during fiscal 2001, which offer increased brightness over
+our previous diodes and small chip products which consume less power. Our SiC
+and GaN based blue and green LEDs offer benefits to our customers over competing
+products, including an industry standard chip structure, improved resistance to
+electrostatic discharge, small size and low unit price. We recently introduced
+an ultraviolet, or UV, LED product that when combined with a red, green, blue
+phosphor coating, may enable a higher quality emission of white light than
+alternative methods using a blue LED combined with yellow phosphors. We also
+manufacture SiC material products, including SiC wafers that we sell for use in
+manufacturing and for research directed to optoelectronics, microwave and power
+applications.
+
+In December 2000, we acquired substantially all of the assets and liabilities of
+UltraRF, Inc., or UltraRF, which was previously a division of the Spectrian
+Corporation, or Spectrian. UltraRF operates its own wafer fabrication facility
+that utilizes a silicon substrate together with bipolar and LDMOS technologies
+to produce high-power, high performance RF power semiconductors for use in the
+design and manufacture of wireless infrastructure equipment. We have product
+initiatives for RF and microwave transistors using SiC and GaN technology. We
+believe that these products may be useful in a variety of applications,
+including power amplifiers for next generation wireless infrastructure,
+home-based multi-channel, multi-point subscriber units, wireless local loop
+applications, digital broadcast and solid state radar.
+
+We have new product initiatives aimed at developing LEDs with higher luminous
+efficiency to expand our existing family of optoelectronic devices. We believe
+that if certain significant milestones are achieved, the LED chips currently in
+development may enable our customers to produce white lamps designed to compete
+in the conventional lighting market. In addition, we are developing and sampling
+high power devices for power conversion and switching uses, which we believe,
+will allow for more efficient use of energy in certain applications over
+alternative silicon based semiconductor solutions. We are also developing blue
+laser diodes for use in high-density digital versatile disk, or DVD, and other
+optical storage applications.
+
+BACKGROUND
+
+Most semiconductor devices are fabricated on wafers made from silicon crystals.
+Silicon evolved as the dominant semiconductor material because it is relatively
+easy to grow into large, single crystals and is suitable for fabricating many
+electronic devices. Alternative materials, such as gallium arsenide, or GaAs,
+have emerged to enable the fabrication of new devices with characteristics that
+could not be obtained using silicon,
+
+                                        3
+<PAGE>   4
+
+including certain RF, microwave, LED, laser and other solid state devices.
+However, GaAs, silicon and other commercially available semiconductor materials
+have certain physical and electronic characteristics that limit their usefulness
+in certain applications. For example, silicon and GaAs-based semiconductors have
+not demonstrated the ability to fabricate short wavelength optoelectronic
+devices. In addition, the power handling capabilities of silicon and GaAs-based
+microwave transistors can limit the power and performance of microwave systems
+used in certain commercial and military applications. SiC can deliver five times
+more power per single device than silicon or GaAs based devices, therefore, SiC
+based wireless systems may use fewer transistors per base station with less
+complex circuitry, which may result in a lower system cost. Furthermore, few
+silicon or GaAs devices can operate effectively at temperatures above
+400(degree) Fahrenheit. This is a significant limitation for applications such
+as advanced electronic systems for high power electric motors, jet engines and
+satellites.
+
+Substantial research and development efforts have been undertaken to explore the
+properties of other potential semiconductor materials. These efforts have
+identified few candidate materials that are capable of being grown as low defect
+single crystals, a requirement in the production of most semiconductors. Of the
+few potential candidates, SiC possesses physical and electronic properties that
+meaningfully increase device performance over products fabricated from other
+semiconductor materials in general use. The properties of SiC also make it an
+excellent material for extending existing semiconductor device technology where
+high power, high temperature or short wavelengths are important for performance.
+
+SIC OVERVIEW
+
+SiC has many physical characteristics that make it difficult to produce. For
+example, in a typical semiconductor manufacturing process, the semiconductor
+material is grown in single crystal form and sliced into wafers. The wafers are
+then polished and chemically etched, coated with thin crystalline films
+containing controlled levels of impurities and fabricated into devices. Because
+SiC can form many different atomic arrangements and must be grown at process
+temperatures above 3,500(degree) Fahrenheit, it is difficult to grow large
+single crystals that are homogeneous in structure. In addition, the high
+temperatures required to grow SiC make the control of impurity levels in SiC
+crystals and thin films difficult. "Micropipes", or small diameter holes, may
+appear in the crystals during their growth, affecting the electrical integrity
+of the wafer and reducing the usability of portions of the wafer for certain
+applications. Slicing and polishing SiC wafers is also hindered by the intrinsic
+hardness of the material. Similarly, its inherent chemical resistance makes SiC
+a difficult material to etch. The characteristics discussed below distinguish
+SiC from conventional silicon and GaAs-based semiconductor materials, resulting
+in significant advantages if production hurdles can be overcome:
+
+WIDE ENERGY BANDGAP.  Bandgap is the amount of energy required to ionize an
+electron from the valence band to the conduction band. SiC is classified as a
+"wide bandgap" semiconductor material, meaning that more energy is required for
+ionization. Electronic devices made from this material can operate more
+efficiently and at much higher temperatures than devices made from other common
+semiconductor materials.
+
+HIGH BREAKDOWN ELECTRIC FIELD.  The "breakdown electric field" is the amount of
+voltage per unit distance that a material can withstand and still effectively
+operate as a semiconductor device. SiC has a much higher breakdown electric
+field than silicon or GaAs. This characteristic allows SiC devices to operate at
+much higher voltage levels. Additionally, it allows SiC power devices to be
+significantly smaller while carrying the same as or greater power levels than
+comparable silicon and GaAs-based devices.
+
+HIGH THERMAL CONDUCTIVITY.  SiC is an excellent thermal conductor compared to
+other commercially available semiconductor materials. This feature enables
+SiC-based devices to operate at high power levels and still dissipate the excess
+heat generated.
+
+HIGH SATURATED ELECTRON DRIFT VELOCITY.  SiC has a "saturated electron drift
+velocity" higher than that of silicon or GaAs. The saturated electron drift
+velocity is the maximum speed at which electrons can travel through a material.
+This characteristic, combined with a high breakdown electric field, allows the
+fabrication of SiC-based microwave transistors that operate at significantly
+higher power levels than current silicon and GaAs-based devices.
+                                        4
+<PAGE>   5
+
+ROBUST MATERIAL.  SiC has an extremely high melting point and is one of the
+hardest known materials in the world. As a result, SiC can withstand much higher
+electrical pulses and is much more radiation-resistant than silicon or GaAs. SiC
+is also extremely resistant to chemical breakdown and can operate in harsh
+environments.
+
+THE CREE SOLUTION
+
+Some of the same physical characteristics that make SiC an excellent material
+for certain semiconductor applications also make the material very difficult to
+produce. Through our 14 years of development and manufacturing experience, we
+have succeeded in overcoming many of the difficulties involved in processing SiC
+for commercial use. We introduced our first LED product in October 1989 and
+believe we are currently the leading volume producer of SiC wafers and SiC and
+GaN-based blue and green LED products in the world. We believe that our
+proprietary process techniques and the inherent attributes of SiC give our
+products significant advantages over competing products for certain electronic
+applications. These advantages include:
+
+BLUE AND GREEN LIGHT EMISSION.  We produce high efficiency blue and green LEDs
+using GaN and other nitrides grown on SiC substrates. Other manufacturers of
+nitride-based LEDs currently use sapphire substrates. The conductive properties
+of SiC enable us to fabricate a less complex LED chip that is smaller than LEDs
+grown on competing sapphire substrates. Our chips made with SiC are the same
+size as red, green and amber LED chips made from other materials that are widely
+used in industry. We believe the standard size of our chip affords our customers
+more flexibility in gaining design wins and our smaller chip size enables our
+product to be offered for a lower cost per chip in comparison to sapphire-based
+products currently available.
+
+We have also demonstrated in the laboratory and are continuing development of
+nitride-based blue laser diodes grown on SiC. The principal advantages of SiC
+over other substrate materials for blue laser diodes are the high electrical and
+thermal conductivity attributes of the material and the ability for the material
+to be cleaved, providing an excellent surface for laser light emission.
+
+ENABLING SUBSTRATE PROPERTIES.  The inherent attributes of SiC as a substrate
+enable researchers to work on developing new optoelectronic, microwave and power
+devices that offer significant advantages over competing products and which
+could not be produced as effectively on other substrate materials. We
+manufacture SiC wafers for both internal use and for sale to external
+development programs to further new product development. In October 1999, we
+introduced a larger three-inch wafer to production for research purposes and
+have recently released new three-inch wafer products capable of meeting higher
+performance needs of power and microwave devices. We have also demonstrated a
+four-inch prototype wafer.
+
+HIGH POWER RF AND MICROWAVE OPERATIONS.  We have demonstrated SiC RF and
+microwave transistors that can operate at much higher voltages than silicon or
+GaAs because of SiC's high breakdown electric field, allowing much higher power
+operation at high frequencies. These same advantages exist for microwave devices
+made using GaN on SiC substrates, which can also operate at much higher
+frequencies than SiC-only devices. We began shipping limited quantities of SiC
+RF devices that can be used in wireless infrastructure applications. As the
+performance of silicon based LDMOS products became enhanced, we determined that
+near-term wireless infrastructure power amplifiers were likely to be
+manufactured with these products rather than our SiC based devices. As a result,
+we acquired UltraRF in December 2000 to participate in the power amplifier
+market in the near term. We believe our SiC devices will likely be more
+efficient in higher frequency devices such as wireless local loop, or WLL,
+multi-channel multi-point distribution systems, or MMDS, and future generation
+base stations. In addition, we continue to develop GaN based devices for high
+frequency wireless infrastructure and other commercial and defense related
+applications.
+
+HIGH POWER, HIGH VOLTAGE OPERATION.  We are developing SiC power diodes and
+switches that are able to operate at higher power densities than other
+semiconductor materials used currently because of the much higher breakdown
+electric field of SiC. In addition, we believe that our SiC power devices will
+be able to operate with lower resistive losses and lower switching losses than
+those made with silicon or GaAs.
+
+                                        5
+<PAGE>   6
+
+PRODUCTS
+
+We operate our business in two segments, the Cree segment, which consists of our
+SiC based products, and the UltraRF segment, which consists of RF transistors
+and amplifiers on a silicon platform. The following chart illustrates our
+existing products and existing and potential applications for these products by
+our customers and their end users:
+
+<Table>
+<Caption>
+               PRODUCT                       EXISTING AND POTENTIAL USER APPLICATIONS
+               -------                       ----------------------------------------
+<S>                                    <C>
+CREE SEGMENT:
+Blue and green and UV LEDs             -  Backlighting in applications such as automotive
+                                          dashboards and interior lighting, wireless
+                                          handsets and other lighting applications
+                                       -  Large indoor full color displays, such as arena
+                                          video screens
+                                       -  Large outdoor full color displays
+                                       -  White light products designed to replace miniature
+                                          incandescent bulbs, and other lighting
+                                          applications
+                                       -  Traffic signals
+                                       -  Indicator lights used for consumer, office and
+                                          other equipment
+Material products                      -  Manufacture of LEDs
+                                       -  Manufacture of power devices
+                                       -  Research and development for new semiconductor
+                                          devices
+                                       -  Gemstones
+RF transistors                         -  Digital broadcast systems
+                                       -  Solid-state radar systems
+                                       -  Military communications systems
+ULTRARF SEGMENT:
+RF transistors                         -  Power amplifier systems for wireless
+                                          infrastructure, such as base stations
+</Table>
+
+THE CREE SEGMENT:
+
+BLUE AND GREEN LEDs
+
+LEDs are solid-state chips used in miniature lamps in everyday applications such
+as indicator lights on printers, computers and other equipment. LEDs generally
+offer substantial advantages over small incandescent bulbs, including longer
+life, lower maintenance cost and energy consumption, and smaller space
+requirements. Groups of LEDs can make up single or multicolor electronic
+displays. Since the introduction of our first blue SiC-only LED product in 1989,
+we have developed several generations of LED products. These products include
+blue and green LEDs using nitride materials on SiC substrates, a more robust
+conductive buffer chip that is easier to build into lamps, a small size low
+power diode and several generations of higher brightness products. Prior to the
+release of our blue MegaBright(TM) LED device in May 2001, sapphire-based
+products offered by our competitors had a higher brightness than our LED
+products. We believe that the brightness output of the MegaBright(TM) chip
+equals the highest performing sapphire chips available in the market in the blue
+color range. With the release of the UltraBright(TM) and MegaBright(TM) products
+during fiscal year 2001, we have increased the brightness of our products by
+four times in less than one year. In July 2001, we announced the release of a
+MegaBright(TM) UV LED chip that is designed to be packaged with a phosphor
+coating developed by our customers. We believe that this packaged chip can be
+used as a white light source for consumer product backlighting and in
+illumination applications such as a replacement to miniature incandescent bulbs,
+and decorative and architectural lighting. We believe that the MegaBright(TM)
+products offer the highest level of brightness that is comparable with any
+nitride LED available in the world. The blue product is offered at 10 milliwatts
+of power, while the UV device generates 12 milliwatts of power. We believe these
+products are priced lower than competing nitride products based on sapphire. We
+will continue to work to improve the brightness of our UV chip with higher
+performance than currently available. Over the next five
+
+                                        6
+<PAGE>   7
+
+to ten years, we believe these yet to be developed products could be used to
+produce white lamps to compete with conventional lighting products for certain
+applications. In addition, we are working on a new higher brightness green LED
+device that we believe will allow us to better compete in the outdoor signage
+and traffic signal markets. We believe that LEDs made from SiC substrates offer
+important benefits over those made from sapphire substrates including:
+
+     - an industry standard vertical chip structure requiring a single wire bond
+       that permits faster LED assembly and reduced cost;
+
+     - a small chip size;
+
+     - improved resistance to electrostatic discharge, or ESD, which reduces the
+       cost, engineering effort and time to qualify LEDs at customer production
+       sites and;
+
+     - a low-priced product as compared to sapphire based devices.
+
+Presently, our LED chips are used for backlighting purposes in applications such
+as automotive dashboards, interior automotive lighting, and liquid crystal
+displays or LCDs, including wireless handsets and other consumer products. In
+addition, they are used in consumer products and office equipment as indicator
+lighting, full color video display technology, such as arena video boards,
+billboards and moving message advertising and informational signs. Our standard
+brightness LED products, offered in blue wavelengths only, are primarily used in
+automotive or indoor display applications or as indicator lights. Our recently
+released MegaBright(TM) blue and UV LEDs, that are currently available in
+limited commercial quantities, in addition to our previous generation blue
+products, are designed for use in manufacturing solid-state LED components that
+emit white light. By passing blue or near UV LED output through certain
+conversion materials such as phosphors, blue or UV light may be converted into
+white light. We currently sell blue LED chips to customers who produce packaged
+components that emit white light. Current commercial products incorporating our
+chips for white light conversion include backlighting applications for
+automobile dashboards and instrumentation and LCD backlighting for wireless
+handsets.
+
+We are focusing current development efforts on further improving the brightness
+as well as lowering our cost to manufacture our LEDs. We believe that increased
+brightness will continue to be necessary to effectively compete against LEDs
+fabricated on sapphire substrates, and may eventually lead to products marketed
+for commercial lighting applications. LED products represented 65%, 63%, and 49%
+of our revenue for the fiscal years ended June 24, 2001, June 25, 2000, and June
+27, 1999, respectively.
+
+MATERIALS PRODUCTS
+
+We manufacture SiC wafers for sale to corporate, government and university
+programs that use SiC as the basis for research in optoelectronic, microwave and
+high power devices. Each order may be sold as a bare wafer or customized by
+adding epitaxial films, depending upon the nature of the customer's development
+program. For the past several years, we have worked to improve the quality of
+our wafers while increasing their size. In October 1999, we introduced our first
+three-inch wafer for sale to the research community and we have recently
+expanded our product line of three-inch wafers that are better suited for the
+manufacture of power and microwave devices. We also sell some wafers to Osram
+OS, or Osram and Infineon Technologies, or Infineon, for the production of LED
+and power products, respectively.
+
+Single crystalline SiC has characteristics that are similar to diamond,
+including properties relating to hardness and brilliance. Through a proprietary
+process, we manufacture SiC crystals in near colorless form for use in gemstone
+applications. We sell SiC crystals directly to Charles & Colvard, or C&C, a
+company founded to develop gemstone products from SiC crystals. C&C cuts and
+facets the SiC crystals to fabricate diamond-like gemstones targeted at
+customers who desire affordable high quality jewelry. Sales of gemstone crystals
+declined from 15% of revenue in fiscal 2000 to only 3% of revenue in fiscal
+2001. Future demand for this product is dependent on C&C's ability to cut, facet
+and effectively market its gemstone products. Wafer and other material products
+represented 14%, 26% and 37% of our revenue for the fiscal years ended June 24,
+2001, June 25, 2000, and June 27, 1999, respectively.
+
+                                        7
+<PAGE>   8
+
+POWER DEVICES
+
+In July 2001, we announced the first of a planned line of SiC based power
+devices. Samples of this product were shipped beginning in the third quarter of
+fiscal 2001. This product is a 600 Volt Schottky diode device. We believe that
+these products can be employed in applications involving power conditioning as
+well as power switching. SiC-based power devices have the potential to handle
+significantly higher power densities than existing silicon-based devices and
+operate at significantly higher temperatures and voltages with superior
+switching capabilities, yielding power savings due to higher efficiency.
+Potential applications include power drive components for electric vehicles,
+lighting ballast components and industrial motor controls. At this time, we are
+shipping only limited quantities of these products. Revenue growth from sales of
+these devices is dependent on the results of customer evaluations of the
+Schottky diode device and whether the products are designed into customer
+applications.
+
+RF AND MICROWAVE TRANSISTORS
+
+During fiscal year 2000, we began to offer the first 10-watt transistor products
+made from SiC to customers in limited quantities. We believe that these products
+can be used in a variety of power amplifier applications, including wireless
+infrastructure, home-based subscriber units, cable TV and digital broadcast
+applications. At this time we are shipping only limited quantities of these
+products. Revenue growth from sales of these devices is dependent on the results
+of customer evaluations of the first SiC RF products and whether the products
+are designed into customer applications.
+
+THE ULTRARF SEGMENT:
+
+RF AND MICROWAVE TRANSISTORS
+
+In December 2000, we acquired UltraRF, a division of Spectrian, based in
+Sunnyvale, California. UltraRF produces bipolar and LDMOS devices made from
+silicon. We believe that silicon bipolar and LDMOS technology is complimentary
+to our SiC and GaN based microwave devices. These products enable us to provide
+an array of power amplifier semiconductor devices designed to meet the full
+spectrum of the wireless infrastructure market now and in the future. By
+acquiring UltraRF, we have access to technology that we believe will likely be
+used in the roll out of second and third generation wireless solutions, in
+addition to lower frequency applications. UltraRF products are currently
+qualified for use in Advanced Mobile Phone Services, or AMPS, Time Division
+Multiple Access, or TDMA, Code Division Multiple Access, or CDMA, Global System
+for Mobile Communications, or GSM, and Universal Mobile Telephone Service, or
+UMTS, based systems. UltraRF is the only independent LDMOS fabricator in the
+world and one of only four major manufacturers of these devices.
+
+The market for cellular communications services has grown substantially during
+the past decade due to decreasing prices for wireless handsets, increasing
+competition among service providers and a greater availability of high quality
+services. In addition, several developing countries are installing wireless
+telephone networks as an alternative to installing, expanding or upgrading
+traditional wireline networks. A typical wireless communication system comprises
+a geographic region containing a number of cells, each of which contains a base
+station, which are networked to form a service provider's coverage area. Each
+base station houses the equipment that sends telephone calls to and from the
+switching office of the local wireline telephone company and transmits and
+receives calls to the wireless users within the cell. Base stations may be
+configured as single carrier or multi-carrier designs.
+
+Traditional cellular systems based on analog technology operate in the frequency
+range of 800 MHz to 1,000 MHz and are capable of carrying only one call per
+channel in the allocated spectrum. Analog systems are being replaced with
+digital systems, which convert voice transmission into bits of electronic
+information that enable data transmission among other things. The three dominant
+digital transmission modulation formats for cellular networks include GSM, TDMA
+and CDMA systems and operate in frequency ranges from 1800 MHz to 2400 MHz.
+These systems have a call capacity of three to eight times that of first
+generation networks. The implementation of these digital networks has resulted
+in an increased demand for network infrastructure equipment. By acquiring
+UltraRF, we are now able to produce both bipolar and LDMOS
+
+                                        8
+<PAGE>   9
+
+products that are used in the manufacture of power amplifiers used in both
+analog and digital base stations. UltraRF produces the semiconductor content of
+a power amplifier, which is used in a base station to boost the power of a
+signal so that it can reach a wireless phone or other device within a designated
+geography.
+
+Radio frequency and microwave products represented 11% of our revenue for the
+fiscal year ended June 24, 2001.
+
+PRODUCTS UNDER DEVELOPMENT
+
+The following chart illustrates the potential user applications for each area of
+current product development:
+
+<Table>
+<Caption>
+PRODUCT CATEGORY                            POTENTIAL USER APPLICATIONS
+----------------                            ---------------------------
+<S>                                         <C>
+CREE SEGMENT:
+LEDs with higher luminous efficiency        -  Larger display backlight
+                                            -  Premium outdoor display signs
+                                            -  Products for the lighting market
+Power devices                               -  Industrial motor controls
+                                            -  Electric vehicles
+                                            -  High voltage power supplies
+                                            -  Lighting ballasts
+                                            -  Solid-state power transmission
+Blue and ultraviolet lasers                 -  High density optical storage, such as DVDs
+                                            -  Display applications
+RF and microwave devices                    -  Power amplifier systems for wireless
+                                               applications, such as base stations, wireless
+                                               local loop and multi-channel, multi-point
+                                               distribution system base station and
+                                               subscriber sites
+                                            -  Amplifiers for CATV
+                                            -  Digital broadcast systems
+                                            -  Solid-state radar systems
+ULTRARF SEGMENT:
+RF and microwave devices                    -  Power amplifier systems for wireless
+                                               applications, such as base stations
+</Table>
+
+THE CREE SEGMENT:
+
+LEDs WITH HIGHER LUMINOUS EFFICIENCY
+
+In May 2000, we acquired Nitres, Inc., (now a wholly owned subsidiary known as
+Cree Lighting Company or Cree Lighting) with operations based in Goleta,
+California. Cree Lighting is engaged in the development of new LED device and
+manufacturing technology, with the goal of developing higher efficiency LED
+technology that will permit LEDs to compete with incandescent and fluorescent
+lighting technology for conventional lighting markets. During fiscal 2001, we
+increased the brightness of our LED products by four times with the introduction
+of our UltraBright(TM) and then our MegaBright(TM) products. In order to compete
+with incandescent and fluorescent lighting technology for conventional lighting
+markets, the brightness of our products will need to increase by approximately
+four times over the brightness of our products available today. We do not
+anticipate that our products can achieve this level of brightness over the next
+few years, however, we believe we can achieve a greater level of brightness to
+permit for interim step illumination applications, such as miniature
+incandescent lighting replacements. We also continue to work on brighter green
+products that we are targeting for release in fiscal 2002. We are currently
+developing new large chip LED devices for use in backlighting. The development
+of these products is in early stage and will not likely be released in the near
+term.
+
+                                        9
+<PAGE>   10
+
+POWER DEVICES
+
+We are developing additional prototype high power devices that we believe have
+many potential uses. Such devices could be employed in applications involving
+power conditioning as well as power switching. In fiscal 1999, we entered into a
+three-year project with Kansai Electric Power Company, one of the largest power
+companies in the world, for development of SiC based devices for use in power
+transmission networks. We have successfully demonstrated a high efficiency
+rectifier capable of operating above 19 kV. This record blocking voltage exceeds
+the highest blocking voltage of any other known semiconductor. We continue to
+work on higher power devices such as Schottky and PIN diodes as well as power
+switches. However; we do not expect a product release of these devices in the
+near term.
+
+BLUE AND NEAR ULTRAVIOLET LASER DIODES
+
+We continue to focus on the development of blue and near ultraviolet laser
+diodes. SiC's inherent attributes, including its natural cleavability and high
+thermal conductivity, make it an excellent substrate material for development of
+such short wavelength laser diodes. The storage capacity of optical disk drives
+can be increased significantly by utilizing a laser diode capable of emitting
+shorter wavelength light. We have made prototypes of blue laser diodes,
+fabricated from nitride materials deposited on SiC substrates, which has a
+shorter wavelength than that of the red or infrared lasers used in applications
+today. We believe that the shorter wavelength of blue light could potentially
+result in storage capacity for optical disk drives that is significantly greater
+than the capacity permitted by red light. We also believe that blue laser
+technology will enable more compact sized electronics. We continue to work on
+increasing the lifetimes of our lasers and are targeting our first product to be
+released for sampling during fiscal 2002.
+
+RF AND MICROWAVE DEVICES
+
+We are currently developing SiC-based high power transistors that operate at
+radio and microwave frequencies. We believe these devices will have applications
+in future generation wireless base stations, high power solid-state broadcast
+systems for television and radio and radar search and detection equipment. These
+SiC-based devices are targeted for frequencies from 30 megahertz to 4 gigahertz.
+We believe that future SiC transistors in development, with higher output power
+per transistor than current silicon and GaAs-based devices, may allow wireless
+systems to use fewer transistors per base station, resulting in less complex
+circuitry, higher linearity and lower cost.
+
+We are also developing GaN-based microwave transistors on SiC substrates at Cree
+as well as Cree Lighting, that are targeted for higher frequency applications
+(10 to 30 gigahertz) such as solid state radar systems. We previously reported
+the demonstration of GaN on SiC transistors that operated with an output power
+of 50 watts at 10 gigahertz, which we believe to be the highest publicly
+reported power output for a single device at this frequency. We also reported a
+record high power density of 10 watts per millimeter at 10 gigahertz at Cree
+Lighting. At our Durham, North Carolina facility, we have developed GaN
+monolithic microwave integrated circuits, or MMICs, that have demonstrated 24
+watts of power at 16 gigahertz. This power density is higher than that achieved
+with equivalent silicon or GaAs-based devices. We do not anticipate that a
+commercial device capable of emitting power at this level will be available in
+the near term.
+
+THE ULTRARF SEGMENT:
+
+RF AND MICROWAVE DEVICES
+
+We continue to enhance the capabilities of our silicon based LDMOS products and
+are working towards the release of a next generation device that we believe will
+allow for more linearity and increased power and match the best in class
+products of our competitors. We are targeting this product to be available in
+fiscal 2002. In addition, we are also developing an LDMOS module device that is
+easier to assemble in a power amplifier than our current device. We believe that
+this product will deliver a lower system cost to our customer due to less costly
+packaging, a smaller design and easy manufacture. We target this product to be
+released in fiscal 2002.
+
+                                        10
+<PAGE>   11
+
+FINANCIAL INFORMATION ABOUT SEGMENTS
+
+For financial information about business segments, please see Note 2, "Summary
+of Significant Accounting Policies and Other Matters" to our consolidated
+financial statements included in Item 8 of this report.
+
+GOVERNMENT CONTRACT FUNDING
+
+We derive a portion of our revenue with funding from research contracts with the
+U.S. Government. For the fiscal years ended June 24, 2001, June 25, 2000 and
+June 27, 1999, government funding represented 10%, 11% and 14% of total revenue,
+respectively. These contracts typically cover work performed over several months
+up to three years. These contracts may be modified or terminated at the
+convenience of the government. The contracts generally provide that we may elect
+to obtain title to inventions made in the course of research, with the
+government retaining a nonexclusive license to practice such inventions for
+government purposes.
+
+RESEARCH AND DEVELOPMENT
+
+We invest significant resources in research and development aimed at improving
+our semiconductor materials and developing new device and production technology.
+Our core SiC materials research is directed to improving the quality and
+diameter of our SiC substrates. We are also working to improve the quality of
+the SiC and nitride epitaxial materials we grow to produce devices and to
+improve device yields by reducing variability in our processes. These efforts
+are in addition to the on going projects that are focused on brighter LEDs,
+higher power RF and microwave devices, blue laser devices and higher power
+conditioning diodes discussed above.
+
+We spent $38.4 million in fiscal 2001, $20.0 million in fiscal 2000 and $12.1
+million in fiscal 1999 for direct expenditures relating to research and
+development activities. Off-setting these expenditures were $19.0 million in
+fiscal 2001, $12.7 million in fiscal 2000 and $9.0 million in fiscal 1999 of
+U.S. Government funding for direct and indirect research and development
+expenses. In addition, certain customers have also sponsored research activities
+related to the development of new products. Customers contributed $11.9 million
+in fiscal 2001, $5.5 million in fiscal 2000 and $ 4.5 million in fiscal 1999
+towards our product research and development activities.
+
+SALES AND MARKETING
+
+We actively market our wafer and optoelectronic products through targeted
+mailings, telemarketing, select advertising and attendance at trade shows. We
+generally use an executive sales approach, relying predominantly on the efforts
+of senior management and a small direct sales staff for worldwide product sales.
+We believe that this approach is preferable in view of our current customer base
+and product mix, particularly since the production of lamp and display products
+incorporating LED chips is concentrated among a relatively small number of
+manufacturers. However, we depart from this approach for sales to certain Asian
+countries. In Japan, we market our LED products and SiC wafers through our
+distributors Sumitomo Corporation, or Sumitomo, and Shin-Etsu Handotai Co. Ltd.,
+or Shin-Etsu. We also use sales representatives to market our LED products in
+Hong Kong, China, Taiwan and South Korea. We sell SiC crystal materials for use
+in gemstone applications directly to C&C under an exclusive supply agreement. We
+are using both direct sales and sales representative arrangements to market RF
+products for UltraRF.
+
+CUSTOMERS
+
+During fiscal 2001, revenues from three customers, Siemens AG, or Siemens,
+Sumitomo Corporation, or Sumitomo and Spectrian, each accounted for more than
+10% of total revenue. Spectrian is a customer of the UltraRF segment. For the
+year ended June 25, 2000 revenue from Siemens, Sumitomo, C&C and the U.S.
+Government each accounted for more than 10% of total revenue. For the year ended
+June 27, 1999, revenue from Siemens, C&C and the U.S. Government each accounted
+for more that 10% of total revenue. For financial information about foreign and
+domestic sales, please see Note 2, "Summary of Significant Accounting Policies
+and Other Matters" to our consolidated financial statements included in Item 8
+of this report.
+                                        11
+<PAGE>   12
+
+BACKLOG
+
+As of June 24, 2001, we had a firm backlog of approximately $86.5 million
+consisting of approximately $69.9 million of product orders and $16.6 million
+under research contracts signed with the U.S. Government, a portion which have
+not yet been appropriated. This compares to a firm backlog level of $76.5
+million as of June 25, 2000, which consisted of approximately $55.1 million of
+product orders and approximately $21.4 million of research contracts signed with
+the U.S. Government. We believe the entire backlog could be filled during fiscal
+2002, with the exception of approximately $13.1 million of product orders and
+$4.3 million in U.S. government funded contracts.
+
+MANUFACTURING
+
+Our SiC products are manufactured in a six-part process, which includes: SiC
+crystal growth, wafer slicing, polishing, epitaxial deposition, fabrication, and
+testing and packaging. SiC crystals are grown using a proprietary high
+temperature process designed to produce uniform crystals in a single crystalline
+form. Crystals used for moissanite gemstones exit the manufacturing process at
+this stage. Crystals used for other products are then sliced into wafers. The
+wafers are polished and then processed using our epitaxial deposition processes,
+which require that we grow thin layers of SiC, GaN or other material on the
+polished wafer, depending on the nature of the device under production. SiC
+wafer products may leave the manufacturing process either after polishing or
+epitaxy. Following epitaxy, LED and RF chips are fabricated in a clean room
+environment. The final steps include testing and packaging for shipment to the
+customer. In manufacturing our products we depend substantially on our
+custom-manufactured equipment and systems, some of which are manufactured
+internally and some of which we acquire from third parties and customize
+ourselves.
+
+UltraRF produces both silicon Bipolar Junction Transistor, or BJT, and silicon
+LDMOS structures at its wafer fabrication facility in Sunnyvale, California.
+Both product families use silicon wafers that are acquired from third parties
+and the devices are fabricated in a clean room environment. The clean room steps
+employ multiple stages of photolithography, diffusion, thin film metal
+deposition and both wet and dry etch processes in the manufacturing cycle.
+Finished wafers are electrically tested and may be shipped to customers at this
+point. Transistor die from wafers which continue in the manufacturing process
+are assembled into thermally conductive packages and tested prior to shipment to
+customers.
+
+SOURCES OF RAW MATERIALS
+
+We depend on a limited number of suppliers for certain raw materials, components
+and equipment used in our products, including certain key materials and
+equipment used in our crystal growth, wafering, polishing, epitaxial deposition,
+device fabrication and device assembly processes. We generally purchase these
+limited source items pursuant to purchase orders and have no guaranteed supply
+arrangements with our suppliers. In addition, the availability of these
+materials, components and equipment to us is dependent in part on our ability to
+provide our suppliers with accurate forecasts of our future requirements. We
+endeavor to maintain ongoing communication with our suppliers to guard against
+interruptions in supply and, to date, generally have been able to obtain
+adequate supplies in a timely manner from our existing sources. However, any
+interruption in the supply of these key materials, components or equipment could
+have a significant adverse effect on our operations.
+
+COMPETITION
+
+The semiconductor industry is intensely competitive and is characterized by
+rapid technological change, price erosion and intense foreign competition. We
+believe that we currently enjoy a favorable position in the existing markets for
+SiC-based products and materials. However, we face actual and potential
+competition from a number of established domestic and international compound
+semiconductor companies. Many of these companies have greater engineering,
+manufacturing, marketing and financial resources than we have.
+
+Our primary competition for blue and green LED products comes from Nichia
+Corporation, or Nichia, Toyoda Gosei Co. Ltd. and Lumi Leds Lighting, a joint
+venture between Agilent Technologies and Philips Lighting. These companies
+currently market blue and green LED products using a sapphire substrate. In
+                                        12
+<PAGE>   13
+
+addition, Uniroyal Technologies, Inc., American Xtal Technology, Lucky Goldstar
+and other Asian based companies have announced intentions to begin production of
+blue and green LEDs, all on sapphire substrates. Historically, some of our
+existing competitors have been more successful in the market for outdoor display
+applications because, prior to the release of our MegaBright(TM) product in May
+2001, some sapphire devices were brighter than our SiC diodes. We believe our
+new MegaBright(TM) devices will enable us to compete successfully in this market
+because our LEDs often can be used in the same applications at a lower cost than
+competing products. We are working on plans to improve the brightness of our
+green LEDs to enhance our ability to compete in this market. We believe that our
+approach to manufacturing blue and green LEDs from SiC substrates offers a more
+cost-effective design and process than competitors, who use a sapphire
+substrate. Our smaller chip design, which is possible because we use a
+conductive substrate, permits more devices to be fabricated on each wafer
+processed, which lowers our cost per unit. In addition, our industry standard
+vertical chip structure allows manufacturers to package the LED on the same
+production line as other green, amber and red LEDs, eliminating the need for
+special equipment necessary for chips made from sapphire substrates.
+Furthermore, our SiC-based devices can withstand a higher level of electro
+static discharge, or ESD, than existing sapphire-based products and therefore
+are more suitable for applications that require high ESD emission ratings, such
+as automotive applications.
+
+Osram is currently producing LEDs using technology licensed from us in 1995.
+Shin-Etsu also licensed certain of our LED technology in 1996 but has not begun
+production under this license. The market for SiC wafers also is becoming
+competitive, as other companies in recent years have begun to offer SiC wafer
+products or announced plans to do so.
+
+UltraRF LDMOS and bipolar products are intensely competitive with products that
+are manufactured by Motorola Incorporated, or Motorola, Telefonaktiebolaget LM
+Ericsson, or Ericsson, and Royal Phillips Electronic NV, or Phillips. Currently,
+Motorola dominates the marketplace for these devices due to superior quality and
+pricing. UltraRF is targeting to release a new line of improved LDMOS products
+during fiscal 2002 that is expected to match the performance of Motorola parts
+for a competitive price.
+
+PATENTS AND PROPRIETARY RIGHTS
+
+We seek to protect our proprietary technology by applying for patents where
+appropriate and in other cases by preserving the technology and related know-how
+and information as trade secrets. We have also from time to time acquired,
+through license grants or assignments, rights to patents on inventions
+originally developed by others.
+
+At June 24, 2001, we owned or held exclusive rights licensed under a total of
+116 issued U.S. patents, subject in some cases to nonexclusive license rights
+held by third parties. These patents expire between 2007 and 2019. Two of these
+patents are jointly owned with a third party. In addition, we own or hold
+exclusive license rights under corresponding patents and patent applications in
+certain foreign countries.
+
+Included in the patent licenses we hold is an exclusive license granted by North
+Carolina State University, or NCSU, to 10 U.S. patents, and to corresponding
+foreign patents and applications, that relate to SiC materials and device
+technology, including a process to grow single crystal SiC. The license, granted
+pursuant to an agreement executed with NCSU in 1987, is a worldwide, fully paid,
+exclusive license to manufacture, use and sell products and processes covered by
+the claims of patent applications filed by NCSU relating to the licensed
+inventions. Ten U.S. patents were subsequently issued with respect to the
+applications, with expiration dates between 2007 and 2009. Twelve of the foreign
+applications have been issued with expiration dates from 2006 to 2013. The U.S.
+government holds a non-exclusive license to practice the inventions covered by
+the NCSU license for government purposes. We have also entered into other
+license agreements with NCSU, and with the licensing agencies of other
+universities, under which we have obtained rights to practice inventions claimed
+in various patents and applications issued or pending in the U.S. and other
+foreign countries.
+
+For proprietary technology which is not patented or otherwise published, we seek
+to protect the technology and related know-how and information as trade secrets
+and to maintain it in confidence through appropriate non-disclosure agreements
+with employees and others to whom the information is disclosed. There can be no
+assurance that these agreements will provide meaningful protection against
+unauthorized disclosure or use of
+                                        13
+<PAGE>   14
+
+our confidential information or that our proprietary technology and know-how
+will not otherwise become known or independently discovered by others. We also
+rely upon other intellectual property rights such as copyright where
+appropriate.
+
+Because of rapid technological developments in the semiconductor industry, the
+patent position of any semiconductor materials or device manufacturer, including
+ours, is subject to uncertainties and may involve complex legal and factual
+issues. Consequently, there can be no assurance that patents will be issued on
+any of the pending applications owned or licensed to us or that claims allowed
+in any patents issued or licensed to us will not be contested or invalidated. In
+the past, the U.S. patent that we license from NCSU relating to growth of SiC
+was subject to a reissue proceeding; however, that patent was successfully
+reissued. Currently, a corresponding European patent is being opposed, which
+means that we could lose patent protection in Europe for this particular method
+or that the scope of our patent protection may be reduced. There is likewise no
+assurance that patent rights owned or exclusively licensed to us will provide
+significant commercial protection since issuance of a patent does not prevent
+other companies from using alternative, non-infringing technology. Further, we
+earn a material amount of our revenues in overseas markets. While we hold and
+have applied for patent protection for certain of our technologies in these
+markets, there can be no assurance that we will obtain protection in all
+commercially significant foreign markets or that our intellectual property
+rights will provide adequate protection in all such markets.
+
+In December 1999, one of our distributors in Japan, Sumitomo, was named in a
+lawsuit filed by Nichia in Tokyo District Court. As reported previously, the
+complaint in this proceeding is directed to our standard brightness LED products
+and alleged that these products infringe a Japanese patent owned by Nichia. The
+suit sought a permanent injunction against further distribution of the products
+in Japan. We intervened in the proceeding and filed a response denying the
+allegations of infringement. On May 15, 2001, the Tokyo District Court ruled in
+favor of Cree and Sumitomo and dismissed the lawsuit. Nichia has appealed the
+ruling.
+
+In April 2000, Nichia commenced two additional lawsuits against Sumitomo in
+Tokyo District Court in which it alleges that our high brightness LED products
+infringe a second Japanese patent owned by Nichia. The complaints in the new
+proceedings seek provisional and permanent injunctive relief prohibiting
+Sumitomo from further sales of these products in Japan. We have intervened in
+the new proceedings and have filed responses denying the allegations of
+infringement. No monetary damages for infringement have been sought in any of
+the lawsuits brought by Nichia against Sumitomo. Management believes that the
+infringement claims are without merit and that the lawsuits are motivated by
+competitive factors. We intend to vigorously defend our products against these
+claims.
+
+On September 22, 2000, we and NCSU commenced a patent infringement lawsuit
+against Nichia and Nichia America Corporation in the United States District
+Court for the Eastern District of North Carolina. In their answer to the
+complaint, Nichia and Nichia America Corporation denied infringement and
+asserted counterclaims seeking a declaratory judgment that the subject patent is
+invalid and not infringed. Nichia America Corporation also moved on December 11,
+2000, for partial summary judgment seeking a determination that the subject
+patent is invalid. Cree and NCSU have opposed the motion, which remains pending.
+
+Nichia also asserted counterclaims alleging that we are infringing four U.S.
+patents relating to nitride semiconductor technology and further asserting
+misappropriation of trade secrets and related claims against us and a former
+Nichia researcher now employed by one of our subsidiaries, Cree Lighting, on a
+part-time basis. On February 20, 2001, we and our counterclaim codefendant moved
+to dismiss the non-patent counterclaims on the grounds that Nichia failed to
+allege a basis for subject matter jurisdiction and failed to state a claim upon
+which relief may be granted. The motion also seeks dismissal of certain
+counterclaims on forum non-conveniens grounds.
+
+On February 20, 2001, we also replied to the patent infringement counterclaims,
+denying any infringement and asserting a claim seeking a declaratory judgment
+that the four patents at issue are invalid, unenforceable and not infringed. We
+also added a claim for damages in which we alleged that Nichia's actions in
+asserting the patent infringement counterclaims were not made for any legitimate
+purpose and constitute unfair competition in violation of North Carolina law. On
+April 2, 2001, Nichia moved for leave to file an amended answer and counterclaim
+that seeks to address jurisdictional concerns. In addition, they moved to add
+Cree Lighting
+                                        14
+<PAGE>   15
+
+Company as a counterclaim defendant and to add federal statutory claims under
+the Computer Fraud and Abuse Act against the Cree Lighting employee previously
+added as a party. The motion for leave to file the amended answer and
+counterclaim has been opposed and remains pending. The court has stayed
+discovery as to damages and willful infringement issues pending ruling on a
+motion filed by us and NCSU seeking to have the proceedings bifurcated into
+separate liability and damages phases.
+
+Although there can be no assurances of success, we believe the counterclaims
+asserted in the North Carolina case are without merit and intend to defend
+against them vigorously.
+
+On May 3, 2001, Cree Lighting Company and the Trustees of Boston University, or
+Boston University, commenced a patent infringement lawsuit against Nichia and
+Nichia America Corporation in the United States District Court for the Northern
+District of California. The lawsuit seeks enforcement of a patent relating to
+gallium nitride-based semiconductor technology useful in manufacturing certain
+light emitting diodes and other devices. The patent was issued to Boston
+University in 1997 and is licensed to Cree Lighting under a March 2001 agreement
+pursuant to which Cree Lighting obtained rights to a number of related patents.
+In the complaint, Cree Lighting and Boston University allege that Nichia is
+infringing the patent by, among other things, importing, selling and offering
+for sale in the United States certain gallium nitride-based light emitting
+devices covered by one or more claims of the patent. The lawsuit seeks damages
+and an injunction against infringement. Boston University is a co-plaintiff in
+the action.
+
+Frequent claims and litigation involving patents and intellectual property
+rights are common in the semiconductor industry. Litigation may be necessary in
+the future to enforce our intellectual property rights or to defend us against
+claims of infringement, and such litigation can be protracted and costly and
+divert the attention of key personnel. There can be no assurance that third
+parties will not attempt to assert infringement claims against us with respect
+to our current or future products. We have been notified from time to time of
+assertions that our products or processes may be infringing patents or other
+intellectual property rights of others. We have investigated such claims and
+determined the assertions were without merit or taken steps to obtain a license
+or avoid the infringement. However, we cannot predict whether past or future
+assertions of infringement may result in litigation or the extent to which such
+assertions may require us to seek a license under the rights asserted or whether
+a license would be available or available on acceptable terms. Likewise, we
+cannot predict the occurrence of future assertions of infringement that may
+prevent us from selling products, result in litigation or require us to pay
+damage awards.
+
+ENVIRONMENTAL REGULATION
+
+The Company is subject to a variety of governmental regulations pertaining to
+chemical and waste discharges and other aspects of our manufacturing process.
+For example, we are responsible for the management of the hazardous materials we
+use and dispose of hazardous waste resulting from our manufacturing process. The
+proper handling and disposal of such hazardous material and waste requires us to
+comply with certain government regulations. We believe we are in full compliance
+with such regulations, but any failure to comply, whether intentional or
+inadvertent, could have an adverse effect on our business.
+
+EMPLOYEES
+
+As of June 24, 2001, the Company (including its subsidiaries) employed 970
+people, including 732 in manufacturing operations, 162 in research and
+development, and 76 in sales and general administration. None of our employees
+are represented by a labor union or subject to collective bargaining agreements.
+We believe relations with our employees are strong.
+
+                                        15
+<PAGE>   16
+
+CERTAIN BUSINESS RISKS AND UNCERTAINTIES
+
+OUR OPERATING RESULTS AND MARGINS MAY FLUCTUATE SIGNIFICANTLY.
+
+Although we have had significant revenue and earnings growth in recent years, we
+may not be able to sustain such growth or maintain our margins, and we may
+experience significant fluctuations in our revenue, earnings and margins in the
+future. For example, historically, the prices of our LEDs have declined based on
+market trends. We have attempted to maintain our margins by constantly
+developing improved or new products, which command higher prices. If we are
+unable to do so, our margins will decline. Our operating results and margins may
+vary significantly in the future due to many factors, including the following:
+
+     - our ability to develop, manufacture and deliver products in a timely and
+       cost-effective manner;
+
+     - variations in the amount of usable product produced during manufacturing
+       (our "yield");
+
+     - our ability to improve yields and reduce costs in order to allow lower
+       product pricing without margin reductions;
+
+     - our ability to expand our production capacity for our new LED products;
+
+     - our ability to produce higher brightness and more efficient LED products
+       that satisfy customer design requirements;
+
+     - demand for our products and our customers' products;
+
+     - declining average sales prices for our products;
+
+     - changes in the mix of products we sell; and
+
+     - changes in manufacturing capacity and variations in the utilization of
+       that capacity.
+
+These or other factors could adversely affect our future operating results and
+margins. If our future operating results or margins are below the expectations
+of stock market analysts or our investors, our stock price may decline.
+
+IF WE EXPERIENCE POOR PRODUCTION YIELDS, OUR MARGINS COULD DECLINE AND OUR
+OPERATING RESULTS MAY SUFFER.
+
+Our SiC material products and our LED and RF device products are manufactured
+using technologies that are highly complex. We manufacture our SiC wafer
+products from bulk SiC crystals, and we use these SiC wafers to manufacture our
+LED products and our SiC-based RF power semiconductors. Our UltraRF subsidiary
+manufactures its RF semiconductors on silicon wafers purchased from others.
+During manufacturing, each wafer is processed to contain numerous "die," which
+are the individual semiconductor devices, and the RF power devices are further
+processed by incorporating them into a package for sale as a packaged component.
+The number of usable crystals, wafers, die and packaged components that result
+from our production processes can fluctuate as a result of many factors,
+including but not limited to the following:
+
+     - impurities in the materials used;
+
+     - contamination of the manufacturing environment;
+
+     - equipment failure, power outages or variations in the manufacturing
+       process;
+
+     - losses from broken wafers or other human error; and
+
+     - defects in packaging.
+
+We refer to the proportion of usable product produced at each manufacturing step
+relative to the gross number that could be constructed from the materials used
+as our manufacturing "yield." Since many of our manufacturing costs are fixed,
+if our yields decrease, our margins could decline and our operating results
+would be adversely affected. In the past, we have experienced difficulties in
+achieving acceptable yields on new products, which has adversely affected our
+operating results. We may experience similar problems in the
+
+                                        16
+<PAGE>   17
+
+future and we cannot predict when they may occur or their severity. In some
+instances, we may offer products for future delivery at prices based on planned
+yield improvements. Reduced yields or failure to achieve planned yield
+improvements could significantly affect our future margins and operating
+results.
+
+OUR BUSINESS AND OUR ABILITY TO PRODUCE OUR PRODUCTS MAY BE IMPAIRED BY CLAIMS
+WE INFRINGE INTELLECTUAL PROPERTY OF OTHERS.
+
+The semiconductor industry is characterized by vigorous protection and pursuit
+of intellectual property rights. These traits have resulted in significant and
+often protracted and expensive litigation. Litigation to determine the validity
+of patents or claims by third parties of infringement of patents or other
+intellectual property rights could result in significant expense and divert the
+efforts of our technical personnel and management, even if the litigation
+results in a determination favorable to us. In the event of an adverse result in
+such litigation, we could be required to:
+
+     - pay substantial damages;
+
+     - indemnify our customers;
+
+     - stop the manufacture, use and sale of products found to be infringing;
+
+     - discontinue the use of processes found to be infringing;
+
+     - expend significant resources to develop non-infringing products and
+       processes; and/or
+
+     - obtain a license to use third party technology.
+
+Where we consider it necessary or desirable, we may seek licenses under patents
+or other intellectual property rights. However, we cannot be certain that
+licenses will be available or that we would find the terms of licenses offered
+acceptable or commercially reasonable. Failure to obtain a necessary license
+could cause us to incur substantial liabilities and costs and to suspend the
+manufacture of products. In addition, if adverse results in litigation made it
+necessary for us to seek a license or to develop non-infringing products or
+processes, there is no assurance we would be successful in developing such
+products or processes or in negotiating licenses upon reasonable terms or at
+all. Our results of operations, financial condition and business could be harmed
+if such problems were not resolved in a timely manner.
+
+Our distributor in Japan is presently a party to patent litigation in Japan
+brought by Nichia, in which the plaintiff claims that certain of our LED
+products infringe two Japanese patents it owns. The complaints in the
+proceedings seek injunctive relief that would prohibit our distributor from
+further sales of these products in Japan. The court has ruled in our favor on
+the suit directed towards our standard brightness product; however Nichia has
+appealed the ruling. An adverse result in these cases would impair our ability
+to sell both our standard brightness and high brightness LED products in Japan
+and could cause customers not to purchase other LED products from us. Subject to
+contractual limitations, we have an obligation to indemnify our distributor for
+patent infringement claims.
+
+We have also initiated patent infringement litigation in the United States
+against Nichia and one of its subsidiaries, asserting patent infringement with
+respect to certain Nichia nitride semiconductor products, including laser diode
+products. Nichia has responded with counterclaims alleging, among other things,
+patent infringement claims against us based on four U.S. patents directed to
+nitride semiconductor technology. In addition, they allege trade secret
+misappropriation and related claims against Cree and a former Nichia researcher
+who is now employed by one of our subsidiaries on a part-time basis. An adverse
+result under Nichia's counterclaims would impair our ability to sell our LED
+products and could include a substantial damage award against us.
+
+Our Cree Lighting subsidiary has also initiated litigation in the United States
+against Nichia and one of its subsidiaries asserting patent infringement with
+respect to gallium nitride-based semiconductor technology useful in
+manufacturing certain LEDs and other devices. The lawsuit seeks damages and an
+injunction against infringement.
+
+                                        17
+<PAGE>   18
+
+We believe the claims asserted against our products in the Japanese cases and
+the counterclaims asserted against us by the defendants in the initial U.S. case
+are without merit, and we intend to vigorously defend against the charges.
+However, we cannot be certain that we will be successful, and litigation may
+require us to spend a substantial amount of time and money and could distract
+management from our day-to-day operations. Litigation costs to date in these
+cases have been substantial, and variability in these costs could adversely
+affect our financial results. If any of these cases were decided against us, the
+result would have a material adverse effect on our operations and financial
+condition.
+
+THERE ARE LIMITATIONS ON OUR ABILITY TO PROTECT OUR INTELLECTUAL PROPERTY.
+
+Our intellectual property position is based in part on patents owned by us and
+patents exclusively licensed to us by NCSU and others. The licensed patents
+include patents relating to the SiC crystal growth process that is central to
+our SiC materials and device business. We intend to continue to file patent
+applications in the future, where appropriate, and to pursue such applications
+with U.S. and foreign patent authorities, but we cannot be sure that patents
+will be issued on such applications or that our existing or future patents will
+not be successfully contested. Also, since issuance of a valid patent does not
+prevent other companies from using alternative, non-infringing technology, we
+cannot be sure that any of our patents (or patents issued to others and licensed
+to us) will provide significant commercial protection.
+
+In addition to patent protection, we also rely on trade secrets and other
+non-patented proprietary information relating to our product development and
+manufacturing activities. We try to protect this information with
+confidentiality agreements with our employees and other parties. We cannot be
+sure that these agreements will not be breached, that we would have adequate
+remedies for any breach or that our trade secrets and proprietary know-how will
+not otherwise become known or independently discovered by others.
+
+Where necessary, we may initiate litigation to enforce our patent or other
+intellectual property rights, but there is not assurance that we will be
+successful in any such litigation. Moreover, litigation may require us to spend
+a substantial amount of time and money and could distract management from our
+day-to-day operations.
+
+IF WE ARE UNABLE TO PRODUCE ADEQUATE QUANTITIES OF OUR ULTRABRIGHT(TM) AND
+MEGABRIGHT(TM) LEDs WITH IMPROVED YIELDS, OUR OPERATING RESULTS MAY SUFFER.
+
+We believe that higher volume production and lower production costs for our
+UltraBright(TM) blue and green LEDs and our MegaBright(TM) blue and UV LEDs will
+be important to our future operating results. We must reduce costs of these
+products to avoid margin reductions from the lower selling prices we may offer
+to meet the competition and satisfy prior contractual commitments. Achieving
+greater volumes and lower costs requires improved production yields for these
+products. In addition, in the case of our MegaBright(TM) LED products, we only
+recently began manufacturing these products in volume and may encounter delays
+and manufacturing difficulties as we ramp up our capacity to make these
+products. Failure to produce adequate quantities and improve the yields of our
+UltraBright(TM) and MegaBright(TM) LED products could have a material adverse
+effect on our business, results of operations and financial condition.
+
+OUR OPERATING RESULTS ARE SUBSTANTIALLY DEPENDENT ON THE DEVELOPMENT OF NEW
+PRODUCTS BASED ON OUR CORE SIC TECHNOLOGY.
+
+Our future success will depend on our ability to develop new SiC solutions for
+existing and new markets. We must introduce new products in a timely and
+cost-effective manner, and we must secure production orders from our customers.
+The development of new SiC products is a highly complex process, and we have
+historically experienced delays in completing the development and introduction
+of new products. Products currently under development include high power RF and
+microwave devices, power devices, blue laser diodes and higher brightness LED
+products. The successful development and introduction of these products depends
+on a number of factors, including the following:
+
+     - achievement of technology breakthroughs required to make commercially
+       viable devices;
+
+     - the accuracy of our predictions of market requirements and evolving
+       standards;
+
+                                        18
+<PAGE>   19
+
+     - acceptance of our new product designs;
+
+     - the availability of qualified development personnel;
+
+     - our timely completion of product designs and development;
+
+     - our ability to develop repeatable processes to manufacture new products
+       in sufficient quantities for commercial sales;
+
+     - our customers' ability to develop applications incorporating our
+       products; and
+
+     - acceptance of our customers' products by the market.
+
+If any of these or other factors become problematic, we may not be able to
+develop and introduce these new products in a timely or cost-efficient manner.
+
+WE DEPEND ON A FEW LARGE CUSTOMERS.
+
+Historically, a substantial portion of our revenue has come from large purchases
+by a small number of customers. We expect that trend to continue. For example,
+for fiscal 2001 our top five customers accounted for 72% of our total revenue.
+Accordingly, our future operating results depend on the success of our largest
+customers and on our success in selling large quantities of our products to
+them. The concentration of our revenues with a few large customers makes us
+particularly dependent on factors affecting those customers. For example, if
+demand for their products decreases, they may stop purchasing our products and
+our operating results will suffer. If we lose a large customer and fail to add
+new customers to replace lost revenue, our operating results may not recover.
+
+THE MARKETS IN WHICH WE OPERATE ARE HIGHLY COMPETITIVE.
+
+The markets for our LED and RF and microwave power semiconductor products are
+highly competitive. Our competitors currently sell LEDs made from sapphire
+wafers that are brighter than the high brightness LEDs we currently produce and
+similar in brightness to our UltraBright(TM) and MegaBright(TM) LED products. In
+addition, new firms have begun offering or announced plans to offer blue and
+green LEDs. In the RF power semiconductor field, the products manufactured by
+UltraRF compete with products offered by substantially larger competitors. The
+market for SiC wafers is also becoming competitive as other firms have in recent
+years begun offering SiC wafer products or announced plans to do so. We also
+expect significant competition for products we are currently developing, such as
+those for use in microwave communications.
+
+We expect competition to increase. This could mean lower prices for our
+products, reduced demand for our products and a corresponding reduction in our
+ability to recover development, engineering and manufacturing costs. Any of
+these developments could have an adverse effect on our business, results of
+operations and financial condition.
+
+WE FACE SIGNIFICANT CHALLENGES MANAGING OUR GROWTH.
+
+We have experienced a period of significant growth that has strained our
+management and other resources. We have grown from 248 employees on June 28,
+1998 to 970 employees on June 24, 2001 and from revenues of $44.0 million for
+the fiscal year ended June 28, 1998 to $177.2 million for the fiscal year ended
+June 24, 2001. To manage our growth effectively, we must continue to:
+
+     - implement and improve operating systems;
+
+     - maintain adequate manufacturing facilities and equipment to meet customer
+       demand;
+
+     - add experienced senior level managers; and
+
+     - attract and retain qualified people with experience in engineering,
+       design, technical marketing support.
+
+We will spend substantial amounts of money in supporting our growth and may have
+additional unexpected costs. Our systems, procedures or controls may not be
+adequate to support our operations, and we may not be
+
+                                        19
+<PAGE>   20
+
+able to expand quickly enough to exploit potential market opportunities. Our
+future operating results will also depend on expanding sales and marketing,
+research and development, and administrative support. If we cannot attract
+qualified people or manage growth effectively, our business operating results
+and financial condition could be adversely affected.
+
+PERFORMANCE OF OUR INVESTMENTS IN OTHER COMPANIES COULD NEGATIVELY AFFECT OUR
+FINANCIAL CONDITION.
+
+From time to time, we have made investments in public and private companies that
+engage in complementary businesses. Should these investments be deemed to be
+impaired, the related write-down in value could have a material adverse effect
+on our financial condition. Each of these investments is subject to the risks
+inherent in the related company's business. Our private company investments are
+subject to additional risks relating to the limitations on transferability of
+our interests due to the lack of a public market and other transfer
+restrictions. Our public company investments are subject to market risks and
+also can be subject to contractual limitations on transferability. As a result,
+we may not be able to reduce the size of our positions or liquidate our
+investments when we deem appropriate to limit our downside risk.
+
+OUR OPERATING RESULTS COULD BE ADVERSELY AFFECTED IF WE ENCOUNTER PROBLEMS
+TRANSITIONING PRODUCTION TO A LARGER WAFER SIZE.
+
+We currently plan to begin gradually shifting production of some products from
+two-inch wafers to three-inch wafers in fiscal 2002. We must first qualify our
+production processes on systems designed to accommodate the larger wafer size,
+and some of our existing production equipment must be refitted for the larger
+wafer size. Delays in this process could have an adverse effect on our business,
+particularly on our ability to sell some of our RF and power products at a
+competitive price. In addition, in the past we have experienced lower yields for
+a period of time following a transition to a larger wafer size until use of the
+larger wafer is fully integrated in production and we begin to achieve
+production efficiency. We anticipate that we will experience similar temporary
+yield reductions during the transition to the three-inch wafers, and we have
+factored this into our plan for production capacity. If this transition phase
+takes longer than we expect or if we are unable to attain expected yield
+improvements, our operating results may be adversely affected.
+
+WE RELY ON A FEW KEY SUPPLIERS.
+
+We depend on a limited number of suppliers for certain raw materials, components
+and equipment used in manufacturing our products, including key materials and
+equipment used in critical stages of our manufacturing processes. We generally
+purchase these limited source items with purchase orders, and we have no
+guaranteed supply arrangements with such suppliers. If we were to lose such key
+suppliers, our manufacturing efforts could be hampered significantly. Although
+we believe our relationship with our suppliers is good, we cannot assure you
+that we will continue to maintain good relationships with such suppliers or that
+such suppliers will continue to exist.
+
+IF GOVERNMENT AGENCIES OR OTHER CUSTOMERS DISCONTINUE THEIR FUNDING FOR OUR
+RESEARCH AND DEVELOPMENT OF SIC TECHNOLOGY, OUR BUSINESS MAY SUFFER.
+
+In the past, government agencies and other customers have funded a significant
+portion of our research and development activities. If this support is
+discontinued or reduced, our ability to develop or enhance products could be
+limited and our business, results of operations and financial condition could be
+adversely affected.
+
+IF OUR PRODUCTS FAIL TO PERFORM OR MEET CUSTOMER REQUIREMENTS, WE COULD INCUR
+SIGNIFICANT ADDITIONAL COSTS.
+
+The manufacture of our products involves highly complex processes. Our customers
+specify quality, performance and reliability standards that we must meet. If our
+products do not meet these standards, we may be required to replace or rework
+the products. In some cases our products may contain undetected defects that
+
+                                        20
+<PAGE>   21
+
+only become evident after shipment. We have experienced product quality,
+performance or reliability problems from time to time. Defects or failures may
+occur in the future. If failures or defects occur, we could:
+
+     - lose revenue;
+
+     - incur increased costs, such as warranty expense and costs associated with
+       customer support;
+
+     - experience delays, cancellations or rescheduling of orders for our
+       products; or
+
+     - experience increased product returns.
+
+WE ARE SUBJECT TO RISKS FROM INTERNATIONAL SALES.
+
+Sales to customers located outside the U.S. accounted for about 69%, 69% and 59%
+of our revenue in fiscal 2001, 2000 and 1999, respectively. We expect that
+revenue from international sales will continue to be a significant part of our
+total revenue. International sales are subject to a variety of risks, including
+risks arising from currency fluctuations, trends in use of the Euro, trading
+restrictions, tariffs, trade barriers and taxes. Also, U.S. Government or
+military export restrictions could limit or prohibit sales to customers in
+certain countries because of their uses in military or surveillance
+applications. Because all of our foreign sales are denominated in U.S. dollars,
+our products become less price competitive in countries with currencies that are
+low or are declining in value against the U.S. dollar. Also, we cannot be sure
+that our international customers will continue to place orders denominated in
+U.S. dollars. If they do not, our reported revenue and earnings will be subject
+to foreign exchange fluctuations.
+
+IF WE FAIL TO INTEGRATE ACQUISITIONS SUCCESSFULLY, OUR BUSINESS WILL BE HARMED.
+
+We completed two strategic acquisitions during calendar year 2000. We will
+continue to evaluate strategic opportunities available to us, and we may pursue
+other product, technology or business acquisitions. Such acquisitions can
+present many types of risks, including the following:
+
+     - we may fail to successfully integrate the operations and personnel of
+       newly acquired companies with our existing business;
+
+     - we may experience difficulties integrating our financial and operating
+       systems;
+
+     - our ongoing business may be disrupted or receive insufficient management
+       attention;
+
+     - we may not cost-effectively and rapidly incorporate acquired technology;
+
+     - we may not be able to recognize cost savings or other financial benefits
+       we anticipated;
+
+     - acquired businesses may fail to meet our performance expectations;
+
+     - we may lose key employees of acquired businesses;
+
+     - we may not be able to retain the existing customers of newly acquired
+       operations;
+
+     - our corporate culture may clash with that of the acquired businesses; and
+
+     - we may incur undiscovered liabilities associated with acquired businesses
+       that are not covered by indemnification we may obtain from the seller.
+
+We may not successfully address these risks or other problems that arise from
+our recent or future acquisitions. In addition, in connection with future
+acquisitions, we may issue equity securities that could dilute the percentage
+ownership of our existing shareholders, we may incur debt and we may be required
+to amortize expenses related to intangible assets that may negatively affect our
+results of operations.

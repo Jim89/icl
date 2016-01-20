@@ -1,0 +1,1159 @@
+ITEM 1. BUSINESS
+
+         Broadcom Corporation is the leading provider of highly integrated
+silicon solutions that enable broadband digital transmission of voice, video and
+data to and throughout the home and within the business enterprise. These
+integrated circuits permit the cost effective delivery of high-speed,
+high-bandwidth networking using existing communications infrastructures that
+were not originally designed for the transmission of broadband digital content.
+Using proprietary technologies and advanced design methodologies, we
+design, develop and supply integrated circuits for a number of the most
+significant broadband communications markets, including the markets for digital
+cable set-top boxes, cable modems, high-speed office networks, home networking,
+direct broadcast satellite and terrestrial digital broadcast, and digital
+subscriber lines. Although the communications infrastructures of these markets
+are very different, we have leveraged our core technologies and introduced
+integrated circuits for each of these markets that deliver the cost and
+performance levels necessary to enable the widespread deployment of broadband
+transmission services. Our broadband transmission products consist primarily of
+high-performance digital signal processing circuits that implement complex
+communications algorithms, surrounded by precision high-speed analog-to-digital
+and digital-to-analog converter circuits. Our products integrate comprehensive
+systems solutions into single chips or chipsets, which:
+
+         o eliminate costly external components;
+
+         o reduce board space;
+
+         o simplify our customer's manufacturing process;
+
+         o lower our customer's system costs; and
+
+         o enable higher performance.
+
+         Customers currently shipping broadband communications equipment
+incorporating our products include 3Com, Cisco Systems, General Instrument
+(which was acquired by Motorola in January 2000), Hewlett-Packard, Motorola,
+Nortel Networks, Pace, Samsung, Scientific-Atlanta and Thomson CE, among
+others.
+
+
+                                       1
+
+
+<PAGE>   5
+
+INDUSTRY BACKGROUND
+
+         In recent years, there has been a dramatic increase in business and
+consumer demand for high-speed access to multimedia information and
+entertainment content, consisting of voice, video and data. This demand is being
+driven by the growth of desirable information and entertainment content
+accessible via the Internet and cable and data networks. The improved
+availability and affordability of access devices such as digital set-top boxes,
+PCs and other consumer appliances have also stimulated demand for high-speed
+transmissions. Computer processor speeds have increased dramatically over the
+last decade and, as a result, have significantly improved the rate at which
+multimedia data can be processed. However, the rate at which such data can be
+transmitted has not kept pace. This disparity has become known as the "bandwidth
+gap" and has frustrated users and challenged solutions providers in a number of
+markets.
+
+         The bandwidth gap has emerged in a variety of commercial and consumer
+applications. Businesses are constantly seeking new ways to access and analyze
+larger amounts of information to improve the quality of management decisions and
+enhance customer and employee communications. Many businesses have deployed
+local area networks, commonly known as LANs, which are principally based upon
+the Ethernet standard. Ethernet is the predominant networking protocol used in
+LANs for connecting devices at data rates of 10, 100 and 1000 Megabits
+per second ("Mbps") by means of copper twisted pair cabling. Emerging trends
+such as the convergence of voice, video and data along with the ever-increasing
+volumes of electronic traffic are placing new demands on legacy LAN technologies
+and infrastructures. Businesses would prefer to address these new demands
+without incurring the cost of installing new cabling or switching network
+technologies. In order to accommodate the need for more bandwidth, much of the
+installed base of 10 Mbps Ethernet ports will need to be upgraded to higher
+speed 100 and 1000 Mbps connections. Furthermore, real-time traffic such as
+voice and video will not only place additional demands on network bandwidth, but
+will also require intelligence and deterministic behavior provided by devices
+referred to as switches. Switches provide dedicated bandwidth to each end-user,
+versus repeaters, which share the bandwidth among end-users.
+
+         Individuals are also increasingly using their home PCs to access the
+Internet and to telecommute. Consumer online usage is expected to increase
+rapidly with the availability and market acceptance of low cost PCs (sub $1,000)
+and the increased availability and improving quality of content. In addition,
+the increasing number of next generation television set-top boxes, PCs and other
+devices that feature integrated Internet access will contribute to the surging
+demand for rapid access to information. As the volume of traffic continues to
+grow, consumers are becoming increasingly frustrated with the low performance of
+"last mile" remote access connections that are typically limited to data rates
+of only 28.8 kbps to 56 kbps and require several minutes or hours to download
+large multimedia-intensive files.
+
+         Business and residential PC users have not been the only ones affected
+by the bandwidth gap. Cable television subscribers seeking more entertainment
+options, including Internet access, and cable service providers seeking higher
+revenue services beyond basic cable, have generally been frustrated by the
+limited amount of programming that can be provided over the existing cable
+infrastructure. The cable infrastructure historically also has not been able to
+deliver interactive multimedia content. With the advent of digital television
+and digital compression technologies such as MPEG, the conversion from analog
+transmission to digital transmission enables a dramatic increase in the number
+of channels available to the subscriber. In late 1996, cable television service
+providers began offering expanded services, including digital programming
+through new digital set-top boxes, as well as high-speed Internet access and
+telecommuting through cable modems. A cable modem is a device that allows a
+cable subscriber to transmit and receive data over coaxial cable. In order to
+satisfy customer demand for increased programming and other entertainment
+options, and to capitalize on the revenue growth opportunities associated with
+these expanded services, service providers will have to deploy a new generation
+of digital set-top boxes and headend equipment. A headend is the central
+distribution point in a cable television system.
+
+         Much of the bandwidth gap is a result of the existing "last mile"
+communications infrastructure, which was originally designed for lower speed
+analog transmission rather than high-speed digital transmission. This
+infrastructure consists primarily of copper twisted pair wiring, coaxial cable
+and wireless communication connections. Copper twisted pair wiring was
+originally intended for the transmission of narrowband analog voice while
+coaxial cable was intended for delivery of one-way analog video signals. These
+analog infrastructures have numerous impairments, which make broadband
+transmission of digital data very difficult.
+
+
+                                       2
+
+
+<PAGE>   6
+
+         Because it is impractical to replace these communications
+infrastructures with entirely new infrastructures that are optimized for digital
+data transmission, the fundamental challenge for service and equipment providers
+is to enable broadband communications over existing infrastructures. These
+providers are in a race to introduce new cost-effective technologies and
+products into the broadband communications marketplace.
+
+MARKETS
+
+         The principal broadband communications markets include:
+
+         Digital Cable Set-Top Boxes
+
+         The last decade has seen rapid growth in the quantity and diversity in
+television programming. Despite ongoing efforts to upgrade the existing cable
+infrastructure, an inadequate number of channels exist to provide the content
+demanded by consumers. In an effort to increase the number of channels and to
+provide higher picture quality, cable service providers began offering digital
+programming in 1996 through the use of new digital cable set-top boxes. These
+digital cable set-top boxes facilitate high-speed digital communications between
+a subscriber's television and the cable network. Digital cable set-top boxes
+currently able to support downstream (to the subscriber) transmission speeds of
+up to 43 Mbps (North American standard) or 56 Mbps (international standard), and
+several hundred MPEG-2 compressed digital television channels to be delivered to
+the consumer. Additional applications for digital cable set-top boxes include
+Internet access, interactive television, high definition television, audio
+players and cable telephony. A new generation of digital cable set-top boxes is
+being introduced to facilitate television Internet access, to support high
+definition television and to provide a gateway for the distribution of voice,
+video and data throughout the home and business.
+
+         Cable Modems
+
+         Cable television operators have been upgrading their systems to hybrid
+fiber coaxial cable, commonly known as HFC in the telecommunications industry.
+These upgraded HFC networks are able to support two-way communications,
+high-speed Internet access and telecommuting through the use of a cable modem.
+High-speed Internet access services, including @Home and RoadRunner, were
+introduced in 1996 in conjunction with several cable system operators. These
+services use cable modems to connect PCs to the cable network and have been
+designed to achieve downstream transmission speeds of up to 43 Mbps (North
+American standard) or 56 Mbps (international standard), and upstream (to the
+network) transmission speeds of up to 10 Mbps. These transmission rates are
+nearly 1,000 times faster than the fastest analog telephone modems (56 kbps
+downstream and 28.8 kbps upstream) currently available. We believe the high
+speeds of cable modems should enable an entirely new generation of
+multimedia-rich content over the Internet and make telecommuting a productive
+and effective means for work at home. Cable modems will allow cable operators to
+expand their traditional video product offerings to include data and telephone
+services. The cable industry's adoption of the Data Over Cable Service Interface
+Specification, commonly known as DOCSIS, in 1997 made possible interoperability
+between different manufacturers' cable modems and headend equipment across
+different cable networks. The standard enables the cost-effective deployment of
+cable modems via retail channels.
+
+         High-Speed Networking
+
+         A LAN is comprised of different types of equipment interconnected by
+cables. Computers and servers via Network Interface Cards ("NICs"), repeaters,
+switches and routers are all examples of networking equipment. Ethernet is a
+computer networking protocol that describes a set of rules by which devices
+connected to a LAN may communicate. Ethernet physical layer standards have been
+established for different data rates (10, 100 and 1000 Mbps) and transmission
+mediums (copper, fiber and coax cabling). 100 Mbps Ethernet is sometimes
+referred to as Fast Ethernet, and 1000 Mbps is referred to as Gigabit Ethernet.
+
+         As communications bottlenecks have appeared in corporate LANs, new
+technologies such as Fast Ethernet and Gigabit Ethernet are being employed to
+replace older technologies such as 10Base-T Ethernet (10 Mbps) and Token Ring
+(16 Mbps). As desktop connections continue to migrate to Fast Ethernet, we
+believe that Gigabit Ethernet will emerge as the predominant technology for
+servers and backbone infrastructures that support LANs, and will eventually
+migrate to the desktop itself. We anticipate that a significant portion of the
+installed base of 10Base-T
+
+
+                                       3
+
+
+<PAGE>   7
+
+Ethernet repeater/hub ports, switches and NICs will be upgraded to the faster
+technologies. In addition, the need for dedicated and predictable bandwidth to
+the desktop is driving a transition from legacy repeater to switch connections.
+Switches will not only have the ability to provide dedicated bandwidth to each
+connection, but will also provide routing functionality and possess the
+intelligence to deal with differentiated traffic such as voice, video and data.
+
+         Home Networking
+
+         The proliferation of multi-PC households increases the need for home
+networking solutions and lays the foundation for extending the reach of the
+shared broadband Internet access, video transfer and voice at high speeds
+throughout the home and small office. The industry's adoption of the Home
+Phoneline Networking Alliance's (HomePNA(TM)) 2.0 standard for 10 Mbps home
+networking technology has met this need by enabling the development of
+affordable, easy-to-use networking solutions for the consumer. This standard
+delivers a 10 Mbps data rate for home phoneline networking while maintaining
+full backward compatibility and interoperability with existing HomePNA 1 Mbps
+technology. We believe this standard will enable the ubiquitous delivery of
+voice, video and data concurrently to any network-enabled appliance, PC or
+consumer electronic device over ordinary phone lines at speeds of 10 Mbps and
+higher and provides a complete, standards-based silicon platform for a host of
+new consumer devices and applications.
+
+         DBS, Terrestrial Digital Broadcast and Broadband Fixed Wireless
+
+         Digital Broadcast Satellite, commonly known as DBS, is the primary
+alternative to cable for providing digital television programming. DBS can be
+used to transmit information at speeds of up to 90 Mbps. DBS broadcasts video
+and audio data from satellites directly to digital set-top boxes in the home via
+dish antennas. Due to the ability of DBS to provide television programming where
+no cable infrastructure is in place, we believe that the U.S. market for DBS may
+eventually be surpassed by the international market where the cable
+infrastructure is generally less extensive.
+
+         Other broadband wireless technologies include:
+
+         o  Terrestrial Digital Broadcast Television, the upgrade of analog
+            broadcast television to digital, which enables the delivery of high
+            definition television;
+
+         o  Multichannel Multipoint Distribution System, commonly known as MMDS,
+            which uses microwave frequencies (below 10 GHz) to transmit voice,
+            video and data over two-way terrestrial digital microwave channels
+            to digital set-top boxes and wireless modems; and
+
+         o  Local Multipoint Distribution System, commonly known as LMDS, which
+            uses even higher microwave frequencies (above 10 GHz) to transmit
+            voice, video and data to digital set-top boxes and wireless modems
+            over a shorter distance via a cellular-like network.
+
+         MMDS and LMDS are wireless systems that are currently being tested in
+limited deployments. In the U.S. market, the MMDS and LMDS industry has
+experienced significant license holder consolidation, which may lead to greater
+investment in equipment and service for these markets. These new networks, which
+are able to provide programming in areas that do not have cable, will also
+require a digital set-top box or wireless modem.
+
+         We are currently developing products specifically for the MMDS and LMDS
+(broadband fixed wireless) markets as part of an agreement with Cisco Systems
+that we announced in October 1999.
+
+         Beginning in 1999, the FCC has mandated that the top four affiliated
+television stations begin digital broadcasting and has required that all current
+television broadcasters and their affiliates return the old analog spectrum by
+the year 2006 for FCC auction. ABC, CBS and NBC have announced that they are
+transmitting high definition television signals in some markets and will
+continue to expand that offering in 2000 and in the future. We believe this
+conversion to digital broadcasting will also require new digital set-top boxes
+and television receivers.
+
+                                       4
+<PAGE>   8
+
+         xDSL
+
+         Digital Subscriber Lines, commonly known as xDSL, represent a family of
+broadband technologies that use the copper twisted pair wiring in the existing
+telephone local loops to deliver high speed data transmission. xDSL speeds range
+from 128 kbps to 52 Mbps depending on the distance between the central office
+and the subscriber. These data rates are enabling a wide range of new services,
+including high-speed Internet access, multi-line voice and digital television
+delivery. Most major North American and European telephone operating companies
+are deploying asymmetric DSL (ADSL) and symmetric DSL (SDSL) in selected areas
+in their networks. There has also been a significant increase in the amount of
+xDSL deployed in the Far East, notably in Korea. For the most part, ADSL is
+targeted towards residential customers, while SDSL is offered to business
+customers. The major Internet service providers are also embracing xDSL
+technologies.
+
+         While ADSL and SDSL can provide high-speed Internet access and
+multi-line voice, neither of these technologies is well suited for
+transmission of entertainment quality video. Very High Bit-Rate DSL (VDSL)
+is the latest technology in the DSL family to address this need. VDSL is now
+in volume deployment in the U.S. and Canada. Capable of transmission rates four
+to five times faster than the highest ADSL rates and leveraging increased fiber
+build-outs by the operators, this technology enables telephone companies to
+offer complete broadband service offerings delivering voice, video and data
+services to the home over their existing wiring infrastructure.
+
+                                  *    *    *
+
+         These broadband communications markets are at different phases in their
+evolution. High-speed networking is an established market that is currently
+being upgraded, cable modems, digital cable and DBS set-top boxes are, on a
+global basis, in an early growth phase, and the home networking and xDSL markets
+are emerging.
+
+         The desire by equipment manufacturers and service providers to develop
+these markets has created the need for new generations of semiconductor
+solutions. Broadband transmission of digital information over existing
+infrastructures requires highly integrated mixed-signal semiconductor solutions
+to perform critical systems functions such as complex signal processing and
+converting digital data to and from analog signals. Broadband communications
+equipment requires substantially higher levels of system performance, in terms
+of both speed and precision, that typically cannot be adequately addressed by
+traditional semiconductor solutions developed for low speed transmission
+applications. Moreover, solutions that are based on multiple discrete analog and
+digital chips generally cannot achieve the cost-effectiveness, performance and
+reliability required by the broadband communications markets. These requirements
+are best addressed by new generations of highly integrated mixed-signal devices
+that combine complex analog and digital functions with high performance
+circuitry that can be manufactured in high volumes using cost-effective
+semiconductor technologies.
+
+THE BROADCOM SOLUTION
+
+         Broadcom Corporation is the leading provider of highly integrated
+silicon solutions that enable broadband digital data transmission of voice,
+video and data to and throughout the home and within the business enterprise.
+Using our proprietary communications algorithms and protocols, advanced DSP
+architectures, silicon compiler design methodologies and full-custom,
+mixed-signal circuit design techniques, we have designed and developed
+integrated circuits for some of the most significant broadband communications
+markets. Our expertise in communications algorithms and our detailed
+understanding of transmission media enable us to integrate complex systems
+incorporating signal processing functions such as digital demodulation, adaptive
+equalization and error correction in a single device. In addition, our broad
+knowledge of advanced communications protocols enables us to design protocol
+processing integrated circuits that seamlessly interface our mixed-signal
+transceiver integrated circuits with higher-level networking layers for
+communications applications.
+
+         We develop all of our products using low-cost, highly-manufacturable
+complementary metal oxide semiconductor technologies, commonly known as CMOS,
+that enable us to integrate comprehensive systems solutions into single chips,
+thereby eliminating costly external components, reducing board space,
+simplifying the customer's equipment manufacturing process, lowering customer
+system costs and enabling higher performance. Our proprietary technology and
+advanced design methodologies facilitate a high likelihood of first pass silicon
+success, accelerated time-to-market, and ease of porting to multiple foundries.
+Our design methodologies also allow us to rapidly and cost-effectively
+incorporate proprietary features or intellectual property from our key strategic
+customers into products that are exclusive to those customers, thereby enabling
+them to differentiate their products.
+
+
+                                        5
+
+
+<PAGE>   9
+
+     STRATEGY
+
+         Our objective is to be the leading provider of highly integrated
+silicon solutions to the worldwide broadband communications markets. Key
+elements of our strategy include the following:
+
+         Target Multiple High-Growth Broadband Communications Markets. Our
+         strategy is to identify rapidly growing broadband digital
+         communications markets and to develop highly integrated silicon
+         solutions for applications in those markets. Our initial products were
+         designed for the digital cable set-top box, cable modem and high-speed
+         networking markets, which require high-performance, feature-rich and
+         highly integrated semiconductor solutions. We have recently leveraged
+         our core technologies to design and develop semiconductor solutions for
+         the home networking, DBS, terrestrial digital broadcast, broadband
+         wireless and xDSL markets, which we believe have significant growth
+         potential.
+
+         Strengthen and Expand Strategic Relationships with Industry Leaders. We
+         have established strategic relationships with key equipment
+         manufacturers, including 3Com, Cisco Systems, General Instrument,
+         Hewlett-Packard, Motorola, Nortel Networks and Pace, which are market
+         and technology leaders within the broadband communications markets.
+         While we design products that can be used by multiple customers, our
+         proprietary design methodologies allow us to design custom features
+         rapidly based on either our own or our customers' intellectual
+         property. This capability enables our customers to improve their
+         time-to-market, differentiate their products and address new market
+         opportunities. We believe that these strategic relationships are
+         essential to our continued growth and to the further development and
+         acceptance of our technologies.
+
+         Extend Technology Leadership and Achieve Rapid Time-to-Market. We are
+         aggressively building on our technology leadership by investing
+         substantial research and development resources in all of our key
+         technology areas. We work closely with leading communications systems
+         companies to develop new and enhanced algorithms that address next
+         generation broadband market opportunities. Our strategy is to continue
+         to implement these algorithms in highly integrated, full-custom
+         integrated circuits using DSP architectures that optimize performance,
+         efficiency and cost. During product development, we leverage our
+         silicon compiler technologies and proprietary circuit libraries and
+         layouts of high-performance analog and digital chip building blocks,
+         to accelerate time-to-market for new products. Our silicon solutions
+         for each of these markets benefit from the same underlying core
+         technologies, providing us significant leverage in our ability to
+         address a diverse set of end user markets with a relatively focused
+         investment in research and development.
+
+         Drive Industry Standards. We actively participate in the formulation of
+         critical standards for the broadband communications markets. We believe
+         such participation provides us with several significant benefits,
+         including accelerating and expanding the development of markets for our
+         products by encouraging all market participants to focus their efforts
+         on developing products compliant with the standards. We also believe
+         our participation in the formulation of industry standards provides us
+         with valuable insight and relationships, which assists us to be early
+         to market with products incorporating the standards. We have
+         established strategic relationships with major networking equipment and
+         cable modem vendors and were a principal participant in formulating and
+         writing DOCSIS. These standards govern the end-to-end delivery of
+         high-speed data services over HFC cable networks and facilitate the
+         development of interoperable networking products, including cable
+         modems. Our active participation in this process helped us to be the
+         first provider of transmission and protocol chips to equipment
+         manufacturers developing DOCSIS compliant products. We are also
+         currently participating in the formulation and evolution of standards
+         for next generation cable modems, voice-over-cable, Gigabit Ethernet,
+         broadband fixed wireless, home networking systems and xDSL.
+
+         Focus on Highly Integrated Solutions. We believe our analog
+         mixed-signal technology and advanced design methodologies enable us to
+         offer silicon solutions that are more highly integrated than
+         competitive alternatives. High levels of integration and aggressive
+         product development roadmaps allow us to enhance the value-added
+         benefits of our products in our customers' systems. We believe
+         integration, which reduces the total component count in the system,
+         provides many fundamental benefits for our customers, including
+         streamlining their production flow, improving yields, saving board
+         space, shortening time-to-market, reducing production costs and
+         improving performance and reliability. These benefits have often helped
+         our customers to achieve faster and broader penetration within their
+         respective markets.
+
+         Engage in Strategic Acquisitions. To accelerate our time-to-market for
+         particular products and technologies, to facilitate and expedite our
+         entry into new or related broadband communications markets, and to meet
+         engineering staffing requirements, we engage in selective acquisitions
+         of other companies. Since January 1999 we have completed eight such
+         acquisitions, and we expect to undertake additional acquisitions in
+         2000 and in the future.
+
+                                       6
+
+
+<PAGE>   10
+
+CUSTOMERS AND STRATEGIC RELATIONSHIPS
+
+         We sell our products to leading manufacturers of broadband
+communications equipment in each of our target markets. Because we leverage our
+technology across different markets, certain of our integrated circuits may be
+incorporated into equipment used in several different markets.
+
+         Customers currently shipping broadband communications equipment
+incorporating our products include 3Com, Cisco Systems, General Instrument,
+Hewlett-Packard, Motorola, Nortel Networks, Pace, Samsung, Scientific-Atlanta
+and Thomson CE, among others.
+
+         As part of our business strategy, we periodically establish strategic
+relationships with certain key customers. In September 1997, we entered into a
+Development, Supply and License Agreement with General Instrument. This
+agreement provides that we will develop chips for General Instrument's digital
+cable set-top boxes and supply these chips to General Instrument for four years.
+General Instrument agreed to purchase 100% of its requirements for components
+containing transmission, communications or video decompression (MPEG) functions
+for its digital cable set-top box subscriber products from us in the first year
+of this agreement. General Instrument's purchase requirements are subject to our
+good faith efforts to maintain our competitive position with respect to these
+components. The percentage of its product requirements that General Instrument
+must purchase from us declines each year over the term of the agreement to 45%
+of General Instrument's requirements in 2001. General Instrument also granted us
+a royalty-bearing, perpetual, nonexclusive, worldwide license to use its MPEG
+and related technology.
+
+         From time to time, we have also entered into development agreements
+with 3Com, Cisco Systems, Hewlett-Packard, Nortel Networks, Sony and others. We
+have worked closely with these customers to co-develop products for these
+customers.
+
+         A small number of customers have historically accounted for a
+substantial portion of our revenue. Sales to General Instrument (including sales
+to its manufacturing subcontractors) represented approximately 27.5% of our
+revenue in 1999 and approximately 35.5% of our revenue in 1998. Sales to 3Com
+(including sales to its manufacturing subcontractors) represented approximately
+18.1% of our revenue in 1999 and approximately 26.8% of our revenue in 1998.
+Sales to Cisco (including sales to its manufacturing subcontractors) represented
+approximately 10.6% of our revenue in 1999. Sales to our five largest customers
+represented approximately 67.0% of our revenue in 1999 and approximately 74.2%
+of our revenue in 1998. General Instrument was acquired by Motorola, Inc. in
+January 2000. The loss of any key customer could materially and adversely affect
+our business, financial condition and results of operations.
+
+PRODUCTS
+
+         Our six primary product lines encompass:
+
+         o  high-speed communications and MPEG video/audio/graphics devices for
+            the digital cable television set-top box market;
+
+         o  high-speed data transmission and media access control devices for
+            the cable modem market;
+
+         o  10/100/1000Base-T Ethernet transceivers, integrated repeater
+            controllers, integrated switch controllers and proprietary
+            application specific integrated circuits ("ASICs") for the
+            high-speed networking market;
+
+         o  controllers and integrated transceivers and v.90 soft modem software
+            for the home networking market;
+
+         o  receivers and MPEG video/audio/graphics devices for the DBS and
+            terrestrial digital broadcast markets; and
+
+         o  broadband transceivers for the xDSL market.
+
+         We also develop and sell reference platforms designed around our
+integrated circuit products that represent application examples for
+incorporation into our customers' equipment. By providing these reference
+platforms, we can assist our customers in achieving easier and faster
+transitions from initial prototype designs through final production releases.
+These reference platforms enhance the customer's confidence that our products
+will meet their market requirements and product introduction schedules.
+
+
+                                       7
+
+<PAGE>   11
+
+         Digital Cable Set-Top Boxes
+
+         We offer a suite of silicon solutions for digital cable set-top boxes
+and cable headends which encompass the high-speed transmission, reception and
+decompression of digital audio and video multimedia signals. These products are
+also applicable to the terrestrial digital broadcast markets. Our QAMLink(R)
+transmission products integrate the core functionality required of advanced
+communications transceiver devices including modulators and demodulators for
+quadrature amplitude modulation, commonly known as QAM, and quadrature phase
+shift keying, commonly known as QPSK. QAM is a digital modulation technique that
+allows very efficient transmission of data over media with limited available
+bandwidth. QSPK is a digital modulation technique that is widely employed in DBS
+transmission systems. Our QAMLink transmission products also integrate adaptive
+equalization, which corrects for distortion in the transmission media, forward
+error correction, which corrects for errors that occur in the transmitted data,
+and high-speed analog-to-digital and digital-to-analog conversion. We have
+designed these products to meet both international and North American
+communications standards for cable networks. Several of these products also
+incorporate additional set-top box functionality such as cable network protocol
+processing for entitlement and tiered programming access and input/output device
+control.
+
+         In the fourth quarter of 1999, we introduced our first single-chip High
+Definition (HD) MPEG-2 video and graphics multimedia device. This device
+incorporates all of the processing capabilities necessary to decode and display
+a MPEG-2 digital television data stream and subsequently reconstruct an analog
+HD studio quality television signal that can be displayed on a standard or HD
+television receiver. This chip integrates MPEG-2 video decompression, Dolby AC3
+audio compression, MPEG-2 transport processing, studio quality 2D and 3D
+graphics, analog video reconstruction and other necessary video-graphics related
+functions required to deliver video and audio to a television. We believe our
+combination of transmission and MPEG silicon solutions, licensed MIPS
+microprocessor cores and graphics technology will provide all of the significant
+silicon functionality of most existing digital cable set-top boxes with the
+exceptions of the security functions and memory.
+
+         Our principal products for digital cable set-top boxes include the
+BCM3116 (downstream QAM receiver), BCM3120 (universal set-top box transceiver),
+BCM3125 (universal set-top box transceiver), BCM3300 (integrated DOCSIS cable
+modem chip) and the BCM7010 (MPEG system on a chip).
+
+         Cable Modems
+
+         We have leveraged our core transmission technologies that were
+developed for the cable set-top box market and adapted them to the development
+of a family of products that enable digital data to be delivered over an HFC
+cable network at downstream speeds of up to 56 Mbps and upstream speeds of up to
+10 Mbps. These products incorporate modulation, adaptive equalization and error
+correction technologies similar to those of our digital set-top box products and
+thereby achieve robust and reliable transmission, especially in the noisy and
+interference-prone upstream direction. The cable modem product family includes
+solutions for both the cable headend and subscriber. We have also expanded our
+core technology offerings in this area to include a DOCSIS Media Access
+Controller, commonly known as a MAC, which controls the upstream and downstream
+data flow over the cable network as well as a RISC central processing unit
+(CPU), Universal Serial Bus (USB) interface, and Ethernet and IP security
+functions. In December 1999 we introduced the BCM3350 single-chip cable modem,
+which integrates all the essential functions of a DOCSIS cable modem into a
+single chip, including the DOCSIS-based upstream and downstream physical layers,
+DOCSIS MAC, 10/100BaseT Ethernet physical layer and Ethernet MAC, a USB
+transceiver, a RISC CPU and IP security functions. This device allows cable
+modems to provide data telephony services over the cable network using the
+Internet Protocol. With our comprehensive offering of silicon solutions for both
+the cable modem and cable headend, designed to the DOCSIS specification, we are
+capable of supplying our customers with complete end-to-end silicon solutions
+for their DOCSIS products.
+
+         Our principal products for cable modems include the BCM3037 (universal
+QPSK/QAM burst modulator), BCM3116 (downstream QAM receiver), BCM3118
+(downstream QAM receiver), BCM3137 (headend QPSK/QAM burst receiver), BCM3220
+(DOCSIS media access controller) and the BCM3300 (single chip DOCSIS cable
+modem)
+
+
+                                       8
+<PAGE>   12
+
+         High-Speed Networking
+
+         Our networking products provide the core functionality required for
+building Ethernet NICs, repeater/hubs and switches which support the Ethernet,
+Fast Ethernet and Gigabit Ethernet standards. Our Digi-(PHI)(TM) transceivers
+are the basic elements required to implement an Ethernet connection. The
+Digi-(PHI) architecture incorporates our patent-pending DSP processing
+algorithms combined with high-speed analog-to-digital and digital-to-analog
+converters to create a highly-robust and cost-effective solution. In addition to
+the DSP-based architecture, the family of Digi-(PHI) transceiver products
+feature low power and low voltage (2.5 Volts) operation, making them suitable
+for high port density switches and hubs, as well as PCI2.2 compliant mobile and
+desktop adapter cards and computer motherboards. We also offer a variety of
+integrated repeater and switch controller devices, to provide a broad suite of
+Fast Ethernet products to meet the demands of the adapter card, repeater/hub,
+switch, network peripheral and router markets. In addition, we develop and
+produce proprietary ASICs combining our customer's intellectual property with
+our advanced Digi-(PHI) transceiver and other communication cores.
+
+         Our principal high-speed networking products include the BCM5208 (quad
+10/100Base-T transceiver), BCM5308 (nine port 10/100Base-T switch), BCM 5903
+(single chip 10/100Base-T transceiver with integrated MAC) and BCM5904 (single
+chip 10/100Base-T transceiver with integrated MAC ASIC).
+
+         Home Networking
+
+         Our home networking products are built around the iLine10(TM) chipset
+family, which networks data and multi-media applications at rates of 10 Mbps
+over the ordinary phone lines found in any home. iLine10 products use QAM
+modulation to send Ethernet data frames over ordinary phone wires in the home,
+without disturbing the ability to use the same phone wires for both regular
+phone service and ADSL broadband Internet access simultaneously. iLine10 enabled
+products include adapter cards and dongles for personal computers, add-in
+modules for home broadband gateways, and specialized chipsets and drivers for
+Internet appliances. Our principal home networking products include the BCM4100
+(integrated iLine10 analog front-end transceiver) and the BCM4210
+(fully-integrated iLine10 MAC/PHY device).
+
+         Additionally our AltoCom subsidiary licenses v.90 soft modem
+technology. The AltoCom software is very efficient in its modulation algorithms,
+resulting in lower CPU utilization and lower power consumption compared to
+competitive alternatives. As a result, over 20 companies have licensed the
+AltoCom software for use in Internet appliances, xDSL gateways and other
+devices.
+
+         DBS and Terrestrial Digital Broadcast
+
+         Our products for the DBS market are designed to meet the needs of
+satellite set-top box providers and incorporate the functionality necessary to
+receive, demodulate and decode a broadband QPSK signal, including advanced
+forward error correction. These products can be programmed to accommodate
+satellite standards such as DSS, the DIRECTV standard; DVB, the international
+standard; and Primestar. These products can operate at any data rate from 2 to
+90 Mbps. Our MPEG system on a chip, the BCM7010, employs the MPEG-2 standard,
+which enables it to be used in either digital cable set-top boxes or DBS set-top
+boxes. Our principal DBS and terrestrial digital broadcast product is the
+BCM4200 (QSPK receiver for DSS and DVB digital satellite reception).
+
+         xDSL
+
+         Our product for DSL transmission incorporates the functionality to
+enable data to be transmitted and received at high speed over the existing
+copper twisted pair wiring in the telephone local loops. Our BCM6010 currently
+offers the industry's only single-chip mixed-signal silicon solution that can be
+configured to operate at data rates spanning ISDN (128 kbps) to VDSL (52 Mbps),
+thereby accommodating the needs of a wide variety of xDSL market segments in a
+single chip. This solution offers network operators the ability to initially
+install high-speed ADSL data services on the existing local loop plant and
+subsequently offer higher data rates for video-related services on an upgraded
+plant. We have leveraged our mixed-signal and DSP processing design expertise
+developed for cable television and wireless products to develop the BCM6010
+(scalable xDSL QAM transceiver for twisted-pair applications).
+
+
+                                       9
+
+
+<PAGE>   13
+
+         Our future success will depend upon our ability to develop new silicon
+solutions for existing and new markets, introduce such products in a timely and
+cost-effective manner, and achieve design wins. We may not be able to develop or
+introduce new products in a timely and cost-effective manner or in sufficient
+quantities to meet customer demand. In addition, it is possible that new
+products may not satisfy customer requirements or achieve market acceptance.
+
+CORE TECHNOLOGIES
+
+         We believe that one of our key competitive advantages is our broad base
+of core technologies encompassing the complete design space from systems to
+silicon. We have developed and continue to build on four primary technology
+foundations:
+
+         o  proprietary communications systems algorithms and protocols;
+
+         o  advanced DSP hardware architectures;
+
+         o  silicon compiler design methodologies and advanced cell library
+            development for both standard cell and full-custom integrated
+            circuit design; and
+
+         o  high performance analog and mixed-signal circuit design using
+            industry standard CMOS processes.
+
+         Communications Algorithms and Protocols
+
+         We have been an innovator in developing advanced modulation and coding
+systems and integrating them onto a single chip. These include QAM, VSB and QPSK
+receivers incorporating digital demodulation, adaptive equalization and
+sophisticated forward error correction techniques. These receivers incorporate
+novel signal processing algorithms to facilitate robust performance in severely
+distorted channels. These core transmission algorithms are broadly applicable to
+our products in the areas of satellite, terrestrial wireless, digital cable
+set-top box, cable modem, xDSL and home networking. We introduced the industry's
+first DOCSIS physical layer and media access control chips for cable modems, the
+industry's first 52 Mbps VDSL transceiver, as well as the industry's first 10
+Mbps home phoneline networking solution. We have also developed the world's
+first all-DSP based transceiver chips for Fast Ethernet LAN applications. This
+Digi-(PHI) transceiver core has been used in a number of our single, quad, hex
+and octal channel transceiver products for Ethernet (10/100Base-TX)
+applications. Our DSP algorithmic expertise has also been extended and applied
+to the development of the world's first Gigabit copper twisted pair transceiver.
+In addition to data transmission algorithms, we have developed significant
+expertise in networking protocols which we have applied to the development of
+MAC devices for cable modems and interactive set-top box applications as well as
+Ethernet MAC controllers and switching and packet filtering techniques for Fast
+Ethernet and Gigabit Ethernet Internet Protocol (IP) networks. We have also
+developed innovative techniques for digital video processing in the areas of
+standard definition and high definition MPEG decompression, digital audio
+decoding, advanced 2D and 3D graphics for set-top boxes, and NTSC digital video
+encoders and decoders. Next generation IP networks have very demanding Quality
+of Service (QoS) requirements for supporting low latency transport of voice
+traffic, and we have incorporated our substantial algorithm, protocol and
+software expertise for voice processing into a wide variety of Voice over IP
+(VoIP) products.
+
+         Digital Signal Processing Hardware Architectures
+
+         We have developed cost-effective, single-chip broadband transceivers by
+mapping complex communications algorithms into low-complexity DSP hardware
+architectures. We are a technology leader in the area of low-complexity,
+high-performance silicon embedded algorithms. We have individually implemented
+these communications algorithms in full-custom logic rather than the
+conventional approach of running all of the algorithms in firmware on a single
+general purpose programmable DSP architecture. This design approach is combined
+with silicon compiler-based design methodologies which generate the custom logic
+functions. This results in chips that are less complex and less expensive to
+manufacture than conventional implementations. One particular area where we have
+developed leading DSP technology is in digital adaptive equalization. Equalizers
+are key components in all of our transceiver products. We believe that the speed
+and density of our equalizers help to distinguish our products in the
+marketplace. Our single-chip, mixed-signal adaptive DSP transceiver for Gigabit
+Ethernet achieves an unprecedented throughput of over 250 billion operations per
+second.
+
+
+                                       10
+
+
+<PAGE>   14
+
+         Silicon Compiler Design Methodologies
+
+         We have developed proprietary silicon compiler technologies that enable
+designers to implement chips using a high level of abstraction yet produce
+area-efficient integrated circuit layouts and achieve short design cycles. The
+cells that are synthesized from this process can be individually optimized for
+functionality, performance, topology, electrical characteristics and
+manufacturing process portability. We have designed compilers for standard
+cells, arithmetic processing, memories and analog building blocks. In addition,
+we have created compilers to manage the implementation of higher level functions
+such as digital filters, adaptive equalizers, modulators, demodulators and
+numerically controlled oscillators/direct digital frequency synthesizers. We
+believe that these silicon compiler capabilities accelerate time-to-market by
+improving designer productivity and by providing functional blocks that can be
+reused in multiple products. In addition, these compiler techniques
+significantly reduce errors, thereby frequently resulting in first pass silicon
+success. We have also developed, and continue to improve and expand, our own
+proprietary set of circuit and layout libraries for both standard cell and
+full-custom integrated circuits.
+
+         Full-Custom Analog and Mixed-Signal Circuit Design
+
+         We have developed significant analog and mixed-signal circuit
+expertise. We have achieved a level of circuit performance in standard CMOS
+process technologies that is normally associated with more expensive special
+purpose silicon fabrication technologies. All of our high-performance analog
+building blocks are implemented in the same low-cost single poly CMOS
+technologies as the digital semiconductor circuitry. In addition to achieving
+high performance, our analog-to-digital and digital-to-analog converters are
+among the lowest die area devices in the industry, which makes them well suited
+for integration into high volume mixed-signal products. Virtually all of our
+transmission products incorporate a mixed-signal analog front-end. In addition
+to our baseband mixed-signal circuit expertise, we have developed a substantial
+base of expertise in CMOS RF design. We have introduced the world's first
+all-CMOS RF tuner for cable TV receivers. This device incorporates a wide
+variety of sophisticated RF building blocks, including low noise amplifiers,
+highly linear amplifiers and mixers, wideband phase-locked loop frequency
+synthesizers, low phase noise oscillators and on-chip RF filters.
+
+RESEARCH AND DEVELOPMENT
+
+         We have assembled a core team of experienced engineers and
+technologists, many of whom are leaders in their particular field or discipline.
+As of March 1, 2000 approximately two-thirds of our 744 research and development
+employees had advanced degrees. Our work force includes approximately 100
+employees with Ph.D.s. These employees are involved in advancing our core
+technologies, as well as applying these core technologies to our product
+development activities in the areas of broadband communications in our target
+markets. The transmission solutions for each of these markets benefit from the
+same underlying core technologies, which enables us to leverage our ability to
+address various broadband communications markets with a relatively focused
+investment in research and development.
+
+         We believe that the achievement of higher levels of integration and the
+introduction of new products in our target markets is essential to our growth.
+As a result, we plan to continue to increase research and development staffing
+levels in 2000. We have established additional design centers in Tempe, Arizona,
+San Diego, Sunnyvale and San Jose, California, Atlanta, Georgia, Bunnik, the
+Netherlands, and Singapore. As a result of our 1999 acquisitions of Armedia,
+Inc. and HotHaus Technologies Inc., we also undertake design and development
+activities in India and software design and development in Canada, respectively.
+We anticipate establishing additional design centers in the United States and
+other countries in the future.
+
+MANUFACTURING
+
+         Wafer Fabrication
+
+         We manufacture our products using standard CMOS process techniques. The
+standard nature of these processes permits us to engage independent silicon
+foundries to fabricate our integrated circuits. By subcontracting our
+manufacturing requirements, we are able to focus our resources on design and
+test applications where we believe we have greater competitive advantages. This
+strategy also eliminates the high cost of owning and operating a semiconductor
+wafer fabrication facility.
+
+
+                                       11
+
+
+<PAGE>   15
+
+         Our Operations and Quality Engineering Group closely manages the
+interface between manufacturing and design engineering. While our design
+methodology typically creates smaller than average die for a given function, it
+also generates full-custom integrated circuit designs. As a result, we are
+responsible for the complete functional and parametric performance testing of
+our devices, including quality. We employ a fully staffed operations and quality
+organization similar to a vertically integrated semiconductor manufacturer. We
+also arrange with our foundries to have online work-in-progress control, making
+the manufacturing subcontracting process transparent to our customers.
+
+         Our key silicon foundries are Taiwan Semiconductor Manufacturing
+Corporation in Taiwan and Chartered Semiconductor Manufacturing in Singapore.
+While we primarily use two independent foundries, few of our components are
+manufactured at both foundries at any given time. Any inability of one of our
+foundries to provide the necessary capacity or output could result in
+significant production delays and could materially and adversely affect our
+business, financial condition and results of operations. While we currently
+believe we have adequate capacity to support our current sales levels, we
+continue to work with our existing foundries to obtain more production capacity
+and we intend to qualify new foundries to provide additional production
+capacity. It is possible that adequate foundry capacity may not be available on
+acceptable terms, if at all. In the event a foundry experiences financial
+difficulties, or if a foundry suffers any damage or destruction to its
+facilities, or in the event of any other disruption of foundry capacity, we may
+not be able to qualify alternative manufacturing sources for existing or new
+products in a timely manner.
+
+         Our products are currently fabricated with .5 micron, triple layer
+metal, .35 micron, quad layer metal, and .22 micron, five layer metal, feature
+sizes. We continuously evaluate the benefits, on a product by product basis, of
+migrating to a smaller geometry process technology in order to reduce costs. Our
+experience to date with the migration of products to smaller geometry processes
+has been favorable, but we could experience difficulties in future process
+migration. Other companies in our industry have experienced difficulty
+transitioning to new manufacturing processes and, consequently, have suffered
+reduced yields or delays in product deliveries. We believe that the transition
+of our products to smaller geometries will be important for us to remain
+competitive. Our business, financial condition and results of operations could
+be materially and adversely affected if any such transition is substantially
+delayed or inefficiently implemented.
+
+         Assembly and Test
+
+         One of our independent foundries or independent wafer probe test
+subcontractors conducts our wafer probe testing. Following completion of the
+wafer probe tests, the die are assembled into packages and the finished products
+are tested by one of our three key subcontractors: ASAT Ltd. in Hong Kong, ST
+Assembly Test Services in Singapore and Amkor Technology in the Philippines and
+South Korea. While we have not experienced any material disruption in supply
+from assembly subcontractors to date, we could experience assembly problems in
+the future. The availability of assembly and testing services from these
+subcontractors could be materially and adversely affected in the event a
+subcontractor experiences financial difficulties, if a subcontractor suffers any
+damage or destruction to its respective facilities, or in the event of any other
+disruption of assembly and testing capacity.
+
+         Quality Assurance
+
+         The broadband communications industry demands high-quality and
+reliability of the semiconductors incorporated into their equipment. We focus on
+product reliability from the initial stage of the design cycle through each
+specific design process, including layout and production test design. In
+addition, we subject our designs to in-depth circuit simulation at temperature,
+voltage and processing extremes before initiating the manufacturing process.
+
+         We prequalify each assembly and foundry subcontractor. This
+prequalification process consists of a series of industry standard environmental
+product stress tests, as well as an audit and analysis of the subcontractor's
+quality system and manufacturing capability. We also participate in quality and
+reliability monitoring through each stage of the production cycle by reviewing
+electrical and parametric data from our wafer foundry and assembly
+subcontractors. We closely monitor wafer foundry production to ensure consistent
+overall quality, reliability and yield levels. In cases where we purchase wafers
+on a fixed cost basis, any improvement in yields can reduce our cost per chip.
+
+
+                                       12
+
+
+<PAGE>   16
+
+
+         As part of our total quality program, we have applied for and received
+ISO 9000 certification, a comprehensive International Standards Organization
+specified quality system. All of our principal independent foundries and package
+assembly facilities are also ISO 9000 certified.
+
+         Product Distribution
+
+         Historically we had distributed products to our customer through an
+operations and distribution center located in Irvine, California. In 1999, we
+established an international distribution center in Singapore. This new facility
+puts us closer to our suppliers and certain key customers and improves our
+ability to meet our customers' needs. While our Irvine facility will continue to
+ship product to U.S. destinations, the transition of our international customers
+to the Singapore facility was essentially completed by the end of 1999.
+
+SALES AND MARKETING
+
+         Our sales and marketing strategy is to achieve design wins with
+technology leaders in each of the our targeted broadband communications markets
+by, among other things, providing superior field application and engineering
+support. We market and sell our products in the United States through a direct
+sales force, which has largely been established within the last three years. Our
+direct sales force is based out of offices located in Irvine and San Jose,
+California, Houston and Plano, Texas, Canton and Needham, Massachusetts,
+Chicago, Illinois, Scarborough, Maine and Atlanta, Georgia.
+
+         We dedicate sales managers to principal customers to promote close
+cooperation and communication. We also provide our customers with reference
+platform designs, which enable our customers to achieve easier and faster
+transitions from the initial prototype designs through final production
+releases. We believe these reference platform designs also significantly enhance
+our customer's confidence that our products will meet their market requirements
+and product introduction schedules.
+
+         We also market and sell our products internationally through a direct
+sales force based out of regional sales offices located in Japan, The
+Netherlands, Singapore, France and United Kingdom, as well as through a network
+of independent distributors and representatives in Germany, Israel, Japan, Korea
+and Taiwan. We select these independent entities based on their ability to
+provide effective field sales, marketing communications and technical support to
+our customers. All international sales to date have been denominated in U.S.
+dollars.
+
+BACKLOG
+
+         Our sales are made primarily pursuant to standard purchase orders for
+delivery of products. Due to industry practice which allows customers to cancel
+or change orders with limited advance notice prior to shipment, we believe that
+backlog is not a reliable indicator of future revenue levels.
+
+COMPETITION
+
+         The broadband communications markets and semiconductor industries are
+intensely competitive and are characterized by rapid technological change,
+evolving standards, short product life cycles and price erosion. We believe that
+the principal factors of competition for integrated circuit providers to these
+industries include:
+
+         o  product capabilities;
+
+         o  level of integration;
+
+         o  reliability;
+
+         o  price;
+
+         o  time-to-market;
+
+         o  standards compliance;
+
+         o  system cost;
+
+         o  intellectual property;
+
+         o  customer support; and
+
+         o  reputation.
+
+         We believe that we compete favorably with respect to each of these
+factors.
+
+
+                                       13
+
+
+<PAGE>   17
+         We compete with a number of major domestic and international suppliers
+of equipment in our target broadband communications markets, which competition
+has resulted and may continue to result in declining average selling prices for
+our products. In all of our target markets, we also may face competition from
+newly established competitors and suppliers of products based on new or emerging
+technologies. We also expect to encounter further consolidation in the markets
+in which we compete.
+
+         Many of our competitors operate their own fabrication facilities and
+have longer operating histories and presence in key markets, greater name
+recognition, larger customer bases and significantly greater financial, sales
+and marketing, manufacturing, distribution, technical and other resources than
+we do. As a result, these competitors may be able to adapt more quickly to new
+or emerging technologies and changes in customer requirements or devote greater
+resources to the promotion and sale of their products. Current and potential
+competitors have established or may establish financial or strategic
+relationships among themselves or with existing or potential customers,
+resellers or other third parties. Accordingly, it is possible that new
+competitors or alliances among competitors could emerge and rapidly acquire
+significant market share. In addition, competitors may develop technologies in
+the future that more effectively address the transmission of digital information
+through existing analog infrastructures at a lower cost. Increased competition
+could result in pricing pressures, decreased gross margins and loss of market
+share and may materially and adversely affect our business, financial condition
+and results of operations.
+
+INTELLECTUAL PROPERTY
+
+         Our success and future revenue growth will depend, in part, on our
+ability to protect our intellectual property. We rely primarily on patent,
+copyright, trademark and trade secret laws, as well as nondisclosure agreements
+and other methods, to protect our proprietary technologies and processes. These
+measures may not provide meaningful protection for our intellectual property. We
+have received 11 United States patents and have filed over 250 United States
+patent applications. We may not receive any additional patents as a result of
+these applications or future applications. Even if additional patents are
+issued, any claims allowed may not be sufficiently broad to protect our
+technology. In addition, any existing or future patents could be challenged,
+invalidated or circumvented, and any right granted under such patents may not
+provide us with meaningful protection. The failure of any patents to adequately
+protect our technology would make it easier for our competitors to offer similar
+products. In connection with our participation in the development of various
+industry standards, we may be required to license certain of our patents to
+other parties, including competitors, that develop products based upon the
+adopted industry standards. We also generally enter into confidentiality
+agreements with our employees and strategic partners, and typically control
+access to and distribution of our documentation and other proprietary
+information. Despite these precautions, it may be possible for a third party to
+copy or otherwise obtain and use our products, services or technology without
+authorization, to develop similar technology independently or to design around
+our patents. In addition, effective copyright, trademark and trade secret
+protection may not be available or may be limited in certain foreign countries.
+We have also entered into agreements with certain of our customers and granted
+these customers the right to use our proprietary technology in the event we
+default in our contractual obligations, including product supply obligations,
+and fail to cure the default within a specified period of time. Moreover, we
+often incorporate the intellectual property of our strategic customers into our
+designs, and we have certain obligations with respect to the non-use and
+non-disclosure of their intellectual property. It is possible that the steps
+taken by us to prevent misappropriation or infringement of our intellectual
+property or our customers' intellectual property may not be successful.
+Moreover, we may need to engage in litigation in the future to enforce our
+intellectual property rights or the rights of our customers, to protect our
+trade secrets or to determine the validity and scope of proprietary rights of
+others, including our customers. Such litigation could result in substantial
+costs and diversion of our resources and could materially and adversely affect
+our business, financial condition and results of operations.
+
+         Companies in the semiconductor industry often aggressively protect and
+pursue their intellectual property rights. From time to time, we have received,
+and may continue to receive in the future, notices that claim we have
+
+
+                                       14
+
+
+<PAGE>   18
+ infringed upon, misappropriated or misused other parties' proprietary rights.
+In March 2000 Intel Corporation and its subsidiary Level One Communications Inc.
+filed a lawsuit against us alleging misappropriation of trade secrets, unfair
+competition and tortious interference with existing contractual relations in
+connection with our recent hiring of three former Intel employees. In 1999 we
+settled litigation with Stanford Telecommunications, Inc. that related to the
+alleged infringement of one of Stanford's patents by several of our cable modem
+products. In 1999 we prevailed in litigation with Sarnoff Corporation and
+NxtWave Communications, Inc., formerly Sarnoff Digital Communications, Inc.,
+which alleged that we misappropriated and misused certain of their trade secrets
+in connection with our hiring of five former Sarnoff employees. Our subsidiary,
+AltoCom, is the defendant in patent litigation brought by Motorola, Inc.
+relating to software modem technology. Although we are defending the pending
+litigation vigorously, it is possible that we will not prevail in pending or
+future lawsuits. In addition, we may be sued in the future by other parties who
+claim that we have infringed their patents or misappropriated or misused their
+trade secrets, or who may seek to invalidate one of our patents. Any of these
+claims may materially and adversely affect our business, financial condition and
+results of operations. For example, in a patent or trade secret action, a court
+could issue an injunction against us that would require us to withdraw or recall
+certain products from the market or redesign certain products offered for sale
+or under development. In addition, we may be liable for damages for past
+infringement and royalties for future use of the technology. We may also have to
+indemnify certain customers and strategic partners under our agreements with
+such parties if a third party alleges or if a court finds that we have infringed
+upon, misappropriated or misused another party's proprietary rights. Even if
+claims against us are not valid or successfully asserted, these claims could
+result in significant costs and a diversion of management and personnel
+resources to defend. In that event, our business, financial condition and
+results of operations would likely be materially and adversely affected. If any
+claims or actions are asserted against us, we may seek to obtain a license under
+a third party's intellectual property rights. However, we may not be able to
+obtain a license on commercially reasonable terms, if at all.
+
+EMPLOYEES
+
+         As of March 1, 2000 we had 1,120 full-time employees and 27 contract
+and temporary employees, including 744 employees engaged in research and
+development, 134 engaged in sales and marketing, 115 engaged in manufacturing
+operations and 154 engaged in finance, legal and general administration
+activities. Our employees are not represented by any collective bargaining
+agreement, and we have never experienced a work stoppage. We believe our
+employee relations are good.

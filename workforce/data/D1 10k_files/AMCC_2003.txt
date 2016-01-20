@@ -1,0 +1,447 @@
+Item 1.    Business. 
+
+ 
+
+In this annual report on Form 10-K, “Applied Micro Circuits Corporation”, “AMCC”, the “Company”, “we”, “us” and “our” refer to Applied Micro Circuits Corporation and all of our consolidated subsidiaries. 
+
+ 
+
+Applied Micro Circuits Corporation was incorporated and commenced operations in California in 1979. AMCC was reincorporated in Delaware in 1987. Our principal executive offices are located at 6290 Sequence Drive, San Diego, California 92121, and our phone number is 858-450-9333. Our Internet homepage is located at www.amcc.com. The information that can be accessed on or through our Internet homepage is not intended to be part of this report. Various documents concerning us that are electronically filed with or furnished to the SEC, including our annual reports on Form 10-K, quarterly reports on Form 10-Q, and current reports on Form 8-K are available, free of charge, on our Internet homepage. Our common stock trades on the Nasdaq National Market under the symbol “AMCC”. 
+
+ 
+
+Overview 
+
+ 
+
+We design, develop, manufacture, and market high-performance, high-bandwidth silicon integrated circuits empowering wide area networks. We utilize a combination of high-frequency analog, mixed-signal and digital design expertise coupled with system-level knowledge and multiple silicon process technologies to offer integrated circuit, or IC, products that enable the transport of voice, video and data over wide area networks. Our customers include leading communications equipment manufacturers, or OEMs, such as Alcatel, Ciena, Cisco, Fujitsu, Hitachi, Huawei, JDS Uniphase, Juniper, Lucent, Marconi, NEC, Nortel, Siemens, and Tellabs. 
+
+ 
+
+Our objective is to be the premier supplier of high-bandwidth silicon IC solutions for the world’s wide area networks. Our strategy for achieving this objective includes: 
+
+ 
+
+  •   focusing on the market leading systems within wide area network markets, including the optical core, metropolitan area networks and access networks, and  
+
+ 
+
+  •   providing time-to-market and development cost advantages to our customers by offering complete, fiber-through-switch solutions, and integrated product functionality.  
+
+ 
+
+Our semiconductor products are used in a wide variety of communications equipment, including routers, optical and digital cross connects, next-generation voice and media gateways, add/drop multiplexers, known by 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+the acronym ADMs, multi-service provisioning platforms, known by the acronym MSPPs, multi-service switches, known by the acronym MSSs, and digital subscriber line access multiplexers, known by the acronym DSLAMs. We provide our customers with complete silicon IC solutions, including physical layer products such as transceivers, overhead processor products such as framers and mappers, and higher layer products such as network processors, traffic managers and switch fabrics. 
+
+ 
+
+Industry Background 
+
+ 
+
+The Communications Industry 
+
+ 
+
+Communications technology has evolved considerably over the last several years due to the substantial growth in the Internet and wireless communications. The emergence of new applications, such as video conferencing and wireless web devices, as well as the increase in demand for higher speed, higher bandwidth remote network access have increased network bandwidth requirements. 
+
+ 
+
+The increase in volume and complexity of this network traffic has led to the development of new technologies for use in these networks. These technologies provide substantially greater transmission capacity, are less error prone and are easier to maintain than copper networks. For example, the SONET standard in North America and Japan and the SDH standard in the rest of the world became the standards for the transmission of signals over optical fiber. The SONET/SDH standards facilitate high data integrity and improved network reliability, while reducing maintenance and other operation costs by standardizing interoperability among equipment from different vendors. With data and video traffic being added in abundance to voice traffic, ATM emerged as a transmission protocol complementary to SONET/SDH to optimize bandwidth utilization. With exponential increases in data traffic and very modest increases in voice traffic, data has become the dominant traffic over all networks today. Because of the bandwidth growth and cost pressures in today’s datacentric networks, more advanced optical networking technologies, such as DWDM, have been adopted. DWDM is the optical multiplexing of different wavelengths of light down a single fiber. Each wavelength is the equivalent of an independent optical channel. DWDM greatly increases the capacity of installed fiber. Complementing DWDM transmission capabilities are emerging technologies such as optical ADMs and cross-connects which can more efficiently switch large optical datapaths through the network. New protocols, such as multi-protocol level switching, known by the acronym MPLS, have emerged that are better suited for data traffic while providing for the low latency and quality of service needs of voice and video traffic. The SONET/SDH standards have also evolved to more efficiently handle these new protocols with general framing protocol and virtual concatenation. 
+
+ 
+
+The combination of increased traffic and emerging technologies has placed added pressure on the existing communications network infrastructure and made many systems’ architectures inadequate. In the late 1990’s, communication service providers and equipment suppliers were affected by the inadequacy of systems’ architectures and began investing in data networks to meet the rapidly growing demands of their customers. In addition, deregulation of the communications industry and privatization of many European carriers resulted in increased market competition. The abundance of available capital in the public and private markets accelerated the build-out of new network infrastructure. Additional carriers were launched with the goal of capturing significant market share. All of these factors drove a significant increase in capital spending on networking equipment by both the incumbent and emerging carriers. 
+
+ 
+
+During this period of rapid expansion, our customers placed increased orders with us and their other suppliers to ensure that they had the components needed to fulfill the expected growth in demand for networking equipment. In retrospect, it appears that OEMs ordered more devices than they needed to secure component delivery. This resulted in inventory levels expanding at the OEMs, contract manufacturers, distributors, and component suppliers. 
+
+ 
+
+This environment changed suddenly at the end of fiscal 2001. As capital markets tightened, the communications industry and the overall economy began to slow down. Many of the incumbent carriers 
+
+ 
+
+2 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+decreased capital expenditures on networking equipment in an effort to stabilize their financial condition and many of the emerging carriers were unable to attract sufficient customers and failed. 
+
+ 
+
+Due to this downturn, we experienced a significant drop in sales and orders of our products, and a sharp increase in order cancellations during fiscal 2002. In fiscal 2003, the contraction of carrier capital spending on networking equipment continued, resulting in a further decline in orders and sales of our products. The impact of this downturn has been magnified by the high levels of inventory that existed in the supply chain at the beginning of the downturn. 
+
+ 
+
+The Communications IC Opportunity 
+
+ 
+
+Despite the industry downturn, industry analysts report that network traffic continues to grow at a rapid pace. The continuing adoption of broadband technology and next-generation wireless devices is expected to drive additional data traffic through the network infrastructure in the future. To address these opportunities, OEMs are looking to develop systems that are more economically suitable to capitalize on these opportunities. To achieve the performance and functionality required by such systems, these OEMs must utilize more complex ICs. As a result of the pace of new product introductions, the proliferation of standards to be accommodated and the costs and difficulty of designing and producing the required ICs, equipment suppliers have increasingly outsourced these ICs to semiconductor firms with specialized expertise. These trends have created a significant opportunity for IC suppliers that can design cost-effective solutions for the transmission of data. IC suppliers must utilize a variety of skills and technologies to satisfy the requirements of communications OEMs. These OEMs require IC suppliers that possess system-level expertise and can quickly bring to market high-performance, highly reliable, power-efficient ICs. These OEMs seek suppliers with both analog and digital expertise to provide a more complete solution that enables faster integration into the system design and higher performance. 
+
+ 
+
+The Transition from ASICs to ASSPs 
+
+ 
+
+Application specific integrated circuits, known by the acronym ASICs, are custom products that are designed for only one customer, and can be sold only to that one customer. Application specific standard products, known by the acronym ASSPs, are standardized products that are designed for, and can be used by, multiple customers. Our customers are looking for ways to accelerate their time-to-market, reduce research and development cost, and ensure interoperability of components in their systems. ASSPs generally can be designed into the systems and brought to market in less time and for less cost. As more companies realize the development cost and time-to-market benefits that ASSPs provide, the more apt they are to use ASSPs in the future. Most of our products are ASSPs, and we believe that the trend towards greater usage of ASSPs in communications network systems will continue. 
+
+ 
+
+AMCC Strategy 
+
+ 
+
+Our objective is to be the leading supplier of high-performance, high-bandwidth silicon IC solutions for the world’s wide area networks, including the optical core, metropolitan area networks and access networks. To achieve this objective, we employ the following strategies: 
+
+ 
+
+Focus on the Market Leading Systems within the Wide Area Network Markets 
+
+ 
+
+We target key OEM product families that hold significant and/or rapidly growing market share. We have built substantial competencies focused on the specific requirements of these key OEM product families in the areas of semiconductor process technology, mixed-signal, very dense digital design, and substantial expertise in systems architecture, software and applications support. We believe that the integration of these capabilities enables us to optimize solutions addressing the high-bandwidth connectivity requirements of market leading communications equipment suppliers. 
+
+ 
+
+3 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+ 
+
+Provide a Time-to-Market and Development Cost Advantage to Our Customers by Offering Complete Fiber-Through-Switch Solutions and Integrated Product Functionality 
+
+ 
+
+Due to the extended downturn in the communications industry, our OEM customers must become more efficient with their engineering resources and have significantly cut equipment development budgets. Our strategy is to provide our customers with fiber-through-switch silicon IC solutions. We believe this comprehensive solution strategy provides our customers with guaranteed interoperability, pre-designed subsystems, better-cost economics, and system-level expertise. The result is faster time-to-market, better performance and lower development cost. To continue these customer benefits in future generations of products, we are pursuing an aggressive integration strategy to provide greater functionality in fewer ICs. 
+
+ 
+
+Products and Customers 
+
+ 
+
+We have several types of communications IC products which are categorized by the order in which they receive and transmit signals and information within communication equipment. These categories are: 
+
+ 
+
+Physical Layer:    Our physical layer ICs transmit and receive signals in a very high-speed serial format (over 40 gigabits per second, or Gbps, today) and reduce overall system “noise”. This low noise capability permits the transmission of signals over greater distances with fewer errors. Our physical layer ICs also convert high-speed serial formats to low-speed parallel formats for the framing layer and vice versa. 
+
+ 
+
+We introduced our first generation of physical layer products in 1993. We have since developed several generations of these products improving cost, power, functionality, and performance. During fiscal 2003, we introduced another generation of OC-12 (625 megabits per second) and our first generation of OC-192 (10 Gbps) physical layer devices with dispersion compensation. Our current customers for physical layer products include Alcatel, Ciena, Cisco, Fujitsu, Hitachi, JDS Uniphase, Juniper, Lucent, Marconi, Nortel, and Tellabs. 
+
+ 
+
+Framing Layer:    Our framing layer ICs transmit and receive signals to and from the physical layer in a parallel format and are used predominately in systems, such as very high-speed transmission equipment, ADMs, digital and optical cross-connects, edge and core routers, and DWDM. After receiving the signals, these ICs then perform a number of additional functions, including framing, terminating the overhead, performance monitoring, forward error correction, and mapping the data payload to/from the transmission format. The framing layer ICs then pass the data either directly to a switch fabric product which switches the information to its destination, or to a network processor, which further processes the data prior to forwarding it to a switch fabric product. Framing layer ICs similarly process signals received from the network processing and switching layers for transmission to the physical layer on their return to the optical network. 
+
+ 
+
+During fiscal 2003, we introduced several framing layer products for the OC-12, OC-48 and OC-192 markets. These devices include the Evros device, which is our deeply channelized termination framer for DS1, and our first OC-192 framer with enhanced forward error correction. Our current customers for framing layer products include Ciena, Cisco, Lucent, Marconi, NEC, Nortel, and Tellabs. 
+
+ 
+
+Network Processing Layer:    Our network processor ICs are software programmable processors that receive and transmit signals from and to the framing layer and perform the processing of packet and cell headers, including such functions as real-time parsing, matching and table look-up, as well as bit stream manipulations, such as adding, deleting, substituting, appending and pre-pending. They can perform intelligent packet classification for policy-based network services. After processing, the signals are sent on to the traffic management and switch fabric layer. 
+
+ 
+
+During fiscal 2003, we announced our second generation of metro Ethernet network processors, the nP3450 and nP3454. Our current customers for network processing products include Alcatel, Cisco, Fujitsu, Juniper, Lucent, and Nortel. 
+
+ 
+
+4 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+ 
+
+Traffic Management and Switching Layer: Our traffic management ICs receive and transmit signals from and to the network processor and primarily perform the queuing and buffering required on packets before the information is sent to the switch fabric. Our switch fabric ICs then switch the information in the proper priority and to the proper destinations. 
+
+ 
+
+In fiscal 2002, we introduced the nPX5700, a 10Gbps traffic management solution. Additionally, we introduced two new packet switching solutions, the nPX5800 targeted for system switching capacities of 160 Gbps and below and the nPX8000, a packet/cell switch capable of scaling to 1.2 terabits per second of switching capacity. Our current customers for traffic management and switching layer products include Alcatel, Cisco, Fujitsu, Inrange, Lucent, Nortel and Siemens. 
+
+ 
+
+Automated Test Equipment, Military and High-Speed Computing Products: We are not currently developing new products for the Automated Test Equipment, known by the acronym ATE, or military markets, but we continue to sell ASIC products to customers such as Agilent, Harris, IBM, LTX, Northrop Grumman, Raytheon, Schlumberger, Teradyne and Texas Instruments. The majority of these products were manufactured in our internal wafer manufacturing facility, which closed in March 2003. We are currently filling last-time-buy orders for these products. Our high-speed computing products were not manufactured in our internal wafer manufacturing facility, and we will continue to sell these products for the foreseeable future. The revenue from such products is expected to be modest. 
+
+ 
+
+Technology 
+
+ 
+
+We utilize our technological and design expertise to solve the problems of high-speed analog, digital and mixed-signal circuit designs for the world’s wide area networks. Our technological competencies include the definition and design of high-performance analog, digital and mixed-signal ICs for optical communications systems. 
+
+ 
+
+Knowledge of Communications ICs 
+
+ 
+
+We believe that our systems architects, design engineers and technical marketing and applications engineers have a thorough understanding of the fiber optic communications systems for which we design and build ASSPs. Using this systems expertise, we develop semiconductor devices to meet OEMs’ high-bandwidth systems requirements. By understanding the systems into which our products are designed, we believe that we are better able to anticipate and develop solutions optimized for the various cost, power and performance trade-offs faced by our customers. We believe that our systems knowledge also enables us to develop more comprehensive, interoperable solutions. This allows us to develop boards with products that fulfill customers’ system needs from fiber-through-switch, enabling faster integration into their products. 
+
+ 
+
+Design of Communications ICs 
+
+ 
+
+We have developed multiple generations of products that integrate both analog and digital elements on the same IC, while balancing the difficult trade-offs of speed, power and timing inherent in high-speed applications. We were one of the first companies to embed analog phase locked loops in bipolar chips with digital logic for high-speed data transmission and receiver applications. Since the introduction of our first on-chip clock recovery and clock synthesis products in 1993, we have refined these products and have successfully integrated multiple analog functions and multiple channels on the same IC. The mixing of digital and analog signals poses difficult challenges for IC designers, particularly at high frequencies. We have acquired significant expertise in mixed-signal IC designs through the development of multiple generations of products. We will continue to apply these competencies in the development of more complex digital products. 
+
+ 
+
+Manufacturing of Communications ICs 
+
+ 
+
+The manufacturing of communications ICs requires a combination of competencies in advanced silicon technologies such as deep submicron CMOS and BiCMOS silicon germanium, or SiGe, IC package design and 
+
+ 
+
+5 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+manufacturing, and high speed test and characterization. We have obtained access to advanced CMOS and SiGe processes through foundry relationships. We have substantial experience in the development and use of plastic and ceramic packages for high-performance applications. The selection of the optimal package solution is a vital element of the delivery of high-performance products and involves balancing cost, size, thermal management, and technical performance. 
+
+ 
+
+Research and Development 
+
+ 
+
+Our research and development expertise and efforts are focused on the development of high-performance analog, digital and mixed-signal ASSPs for wide area network applications. We also develop high-performance libraries and design methodologies that are optimized for these applications. 
+
+ 
+
+Our product development is focused on building high-performance, high-gate-count digital and analog-intensive designs that are incorporated into well-documented blocks that can be reused for multiple products. We have made, and will continue to make, significant investments in advanced design tools to leverage our engineering staff. Our product development is driven by the imperatives of reducing design cycle time, increasing first-time design correctness, adhering to disciplined, well documented design processes, and continuing to be responsive to customer needs. We are also developing high-performance packages for our products in collaboration with our packaging suppliers and our customers. Our primary research and development facilities are located in San Diego, California, Sunnyvale, California, Andover, Massachusetts, and Netanya, Israel. 
+
+ 
+
+Manufacturing 
+
+ 
+
+Wafer Fabrication 
+
+ 
+
+Through fiscal 2003, we manufactured a portion of our IC products, which utilized bipolar and BiCMOS process technologies, at our internal wafer fabrication facility in San Diego. In March 2003, we discontinued manufacturing products in this facility and are in the final stages of closing the facility entirely. Going forward, we will be a fabless semiconductor company, meaning we will not own or operate any foundries for the production of silicon wafers from which our products are made. We will continue to use external foundries such as IBM, Taiwan Semiconductor Manufacturing Corporation (“TSMC”) and United Microelectronics Corporation (“UMC”), for a majority of our production of silicon wafers. Subcontracting our manufacturing requirements eliminates the high fixed cost of owning and operating a semiconductor wafer fabrication facility and enables us to focus our resources on design and test applications where we believe we have greater competitive advantages. 
+
+ 
+
+Assembly, Test and Raw Materials 
+
+ 
+
+The majority of our wafer probe testing is conducted at our internal testing facility. We also utilize our external foundries and independent wafer probe test subcontractors for testing our products. After the wafers are probed, the majority of our products are sent to multiple subcontractors located in Asia and the United States for assembly. Following assembly, some of the devices are tested at the subcontractors and returned to us ready for shipment to our customers; however, a majority of the packaged units are returned to us for final testing and marking prior to shipment to customers. We purchase our ceramic packages from several vendors including Kyocera America, Motorola and NTK Ceramics and our plastic packaging from Amkor, ASE and ASAT. Certain of these materials or services are available from a limited number of sources and lead times are occasionally extended. 
+
+ 
+
+Sales and Marketing 
+
+ 
+
+Our sales and marketing strategy is to develop strong, engineering-intensive relationships with the design teams of the market leading platforms at our customers. We maintain close working relationships with these customers so our marketing team can focus on identifying and developing new products that will meet their 
+
+ 
+
+6 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+needs in the future and so we are involved in the early stages of our customers plans to design new equipment. We sell our products both directly and through a network of independent manufacturers’ representatives and distributors. Our direct sales force is technically trained. Expert technical support is critical to our customers’ success and we provide such support through our field applications engineers, technical marketing team and engineering staff, as well as through our extranet technical support web site. 
+
+ 
+
+We augment this strategic account sales approach with domestic and foreign distributors that service primarily smaller accounts purchasing ASSPs. In North America, we have one primary distributor. Internationally, we sell our products through manufacturers’ representatives and distributors. Typically, these distributors handle a wide variety of products, including those that compete with our products, and fill orders for many customers. Most of our sales to distributors are made under agreements allowing for price protection and right of return on stipulated quantities of unsold merchandise. Our sales headquarters is located in San Diego, California. We maintain sales offices throughout the world. 
+
+ 
+
+Backlog 
+
+ 
+
+Our sales are made primarily pursuant to standard purchase orders for the delivery of products. Quantities of our products to be delivered and delivery schedules are frequently revised to reflect changes in customers’ needs; customer orders generally can be cancelled or rescheduled without significant penalty to the customer. For these reasons, our backlog as of any particular date is not representative of actual sales for any succeeding period, and therefore, we believe that backlog is not necessarily a good indicator of future revenue. 
+
+ 
+
+Competition 
+
+ 
+
+In the communications IC markets, we compete primarily against companies such as Agere, Broadcom, Intel, Mindspeed, PMC-Sierra, and Vitesse. In addition, certain of our customers or potential customers have internal IC design or manufacturing capability with which we compete. 
+
+ 
+
+The communications IC markets are highly competitive and are subject to rapid technological change, evolving standards, short product life cycles, and price erosion. We typically face competition at the design stage when our customers are selecting which semiconductor components to use in their next generation equipment. We believe that the principal factors of competition for the markets we serve include: product performance, quality, reliability, integration, price, and time-to-market, as well as the Company’s reputation and level of customer support. Our ability to successfully compete in these markets depends on our ability to design and subcontract the manufacture of new products that implement new technologies and gain end market acceptance in a time efficient and cost effective manner. 
+
+ 
+
+Proprietary Rights 
+
+ 
+
+We rely in part on patents to protect our intellectual property. We have been issued 90 patents, which principally cover certain aspects of the design and architecture of our IC products. In addition, we have over 200 inventions in various stages of the patenting process in the United States and abroad. There can be no assurance that our pending patent applications or any future applications will be approved, or that any issued patents will provide us with competitive advantages or will not be challenged by third parties or that if challenged, will be found to be valid or enforceable, or that the patents of others will not have an adverse effect on our ability to do business. There can be no assurance that others will not independently develop similar products or processes, duplicate our products or processes or design around any patents that may be issued to us. 
+
+ 
+
+To protect our intellectual property, we also rely on a combination of mask work protection under the Federal Semiconductor Chip Protection Act of 1984, trademarks, copyrights, trade secret laws, employee and third-party nondisclosure agreements and licensing arrangements. 
+
+ 
+
+7 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+ 
+
+As a general matter, the semiconductor industry is characterized by substantial litigation regarding patent and other intellectual property rights. In the past we have been, and in the future may be, notified that we may be infringing on the intellectual property rights of third parties. We have certain indemnification obligations to customers with respect to the infringement of third party intellectual property rights by our products. There can be no assurance that infringement claims by third parties or claims for indemnification by customers or end users of our products resulting from infringement claims will not be asserted in the future or that such assertions, if proven to be true, will not materially adversely affect our business, financial condition or operating results. In the event of any adverse ruling in any such matter, we could be required to pay substantial damages, which could include treble damages, cease the manufacture, use and sale of infringing products, discontinue the use of certain processes or obtain a license under the intellectual property rights of the third party claiming infringement. There can be no assurance that a license would be available on reasonable terms or at all. Any limitations on our ability to market our products, any delays and costs associated with redesigning our products or payments of license fees to third parties or any failure by us to develop or license a substitute technology on commercially reasonable terms could have a material adverse effect on our business, financial condition and operating results. 
+
+ 
+
+Environmental Matters 
+
+ 
+
+We are subject to a variety of federal, state and local governmental regulations related to the use, storage, discharge and disposal of toxic, volatile or otherwise hazardous chemicals that were used in our manufacturing process. Any failure to comply with present or future regulations could result in the imposition of fines, the suspension of production or a cessation of operations. Such regulations could require us to acquire costly equipment or incur other significant expenses to comply with environmental regulations or clean up prior discharges. Since 1993, we have been named as a potentially responsible party, also known as a PRP, along with a large number of other companies that used Omega Chemical Corporation in Whittier, California to handle and dispose of certain hazardous waste material. We are a member of a large group of PRPs that has agreed to fund certain remediation efforts at the Omega Chemical site, which efforts are ongoing. 
+
+ 
+
+8 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+EMPLOYEES 
+
+ 
+
+As of March 31, 2003, we had 856 full-time employees: 82 in administration, 479 in research and development, 135 in operations, and 160 in marketing and sales. Our ability to attract and retain qualified personnel is essential to our continued success. None of our employees are covered by a collective bargaining agreement, nor have we ever experienced any work stoppage. 
+
+ 
+
+Executive Officers of the Registrant 
+
+ 
+
+Our executive officers and their ages as of May 5, 2003, are as follows: 
+
+ 
+
+Name
+
+--------------------------------------------------------------------------------
+    Age
+
+--------------------------------------------------------------------------------
+    Position
+
+--------------------------------------------------------------------------------
+ 
+David M. Rickey
+    47
+    Chairman of the Board of Directors, Chief Executive Officer and President
+ 
+Roger A. Smullen, Sr.
+    67
+    Vice Chairman of the Board
+ 
+Brent E. Little
+    39
+    Senior Vice President, Marketing
+ 
+Stephen M. Smith
+    44
+    Senior Vice President, Chief Financial Officer
+ 
+Ramakrishna R. Sudireddy
+    36
+    Senior Vice President, Engineering
+ 
+Thomas L. Tullie
+    38
+    Senior Vice President, Worldwide Sales
+ 
+Timothy M. Heenan
+    44
+    Vice President, Operations
+ 
+Candace H. Kilburn
+    49
+    Vice President, Human Resources and Community Relations
+ 
+
+ 
+
+David M. Rickey re-joined us in February 1996 as President, Chief Executive Officer and as a Director. In August 2000, Mr. Rickey was appointed Chairman of the Board. From August 1993 to May 1995, Mr. Rickey served as our Vice President of Operations. From May 1995 to February 1996, Mr. Rickey served as Vice President of Operations at NexGen, a semiconductor company. Previously, for eight years, Mr. Rickey was employed by Northern Telecom, Inc., a telecommunications manufacturer now known as Nortel Networks Corporation, where he led the wafer fab engineering and manufacturing operations in both Ottawa, Canada and San Diego, California. Mr. Rickey has earned B.S. degrees from both Marietta College (summa cum laude) and Columbia University. In addition, Mr. Rickey received a M.S. in Materials Science and Engineering from Stanford University. 
+
+ 
+
+Roger A. Smullen, Sr. was elected Vice Chairman of the Board in August 2000. Mr. Smullen served as the Chairman of the Board from October 1982 to August 2000. Mr. Smullen also served as our Acting Vice President, Operations from August 1997 through October 1997 and our Chief Executive Officer from April 1983 until April 1987. Previously, he was Senior Vice President of Operations of Intersil, Inc.’s semiconductor division. In 1967, Mr. Smullen co-founded National Semiconductor Corporation, a manufacturer of integrated circuits. Prior to that, he was Director of Integrated Circuits at Fairchild Semiconductor, a manufacturer of integrated circuits. Mr. Smullen is currently a Director of Micro Linear Corporation, a manufacturer of integrated circuits. He holds a B.S. in Mechanical Engineering from the University of Minnesota. 
+
+ 
+
+Brent E. Little joined us in 1991. Mr. Little was promoted to a Senior Vice President in January 2001. Prior to this time, Mr. Little held several marketing management positions with us, including Director of Strategic Marketing and Director of Marketing for ASIC products. Prior to joining us, Mr. Little worked as Business Development Manager for Analysis and Technology, Inc. and worked with the U.S. Navy as a Project Engineer. Mr. Little earned a B.S. in Electrical Engineering from the University of California, Santa Barbara. 
+
+ 
+
+Stephen M. Smith joined us in October 1999. Mr. Smith was promoted to Senior Vice President and Chief Financial Officer in April 2003. Prior to this time, Mr. Smith held various positions with us, including Vice President, Business Development and Vice President, Controller. From May 1998 to October 1999, Mr. Smith worked at ST Microelectronics, a semiconductor company, as the Director of a key strategic business unit. Additionally, Mr. Smith worked for STM from January 1993 until May 1997 as the Director of Finance, Region 
+
+ 
+
+9 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+Americas. From May 1997 to May 1998, Mr. Smith served as Vice President, Finance for Vixel Corporation, a Fibre Channel company. Mr. Smith also spent eight years with Northern Telecom, Inc., where he held a number of financial management positions. Mr. Smith holds a B.S. degree from Arizona State University. 
+
+ 
+
+Ramakrishna R. Sudireddy joined us in March 1999 when AMCC acquired Cimaron Communications. Mr. Sudireddy was promoted to Senior Vice President in January 2001. Before co-founding Cimaron in January 1998, Mr. Sudireddy founded Siltek Corporation in 1996, and served as its Vice President of Research and Development until 1997. From 1991 to 1996, Mr. Sudireddy was a Member of Technical Staff at AT&T Bell Laboratories. Mr. Sudireddy has a M.S. in Computer Engineering from the University of Massachusetts at Lowell, and a B.S. in Electrical Engineering from Nagarjuna University in Guntur, India. 
+
+ 
+
+Thomas L. Tullie joined us as Vice President, Sales in August 1996. Mr. Tullie was promoted to Senior Vice President in January 2001. From 1989 to 1996, Mr. Tullie held several strategic sales management positions, most recently as Director of East Coast Sales, at S-MOS Systems, a semiconductor company. Prior to joining S-MOS Systems, Mr. Tullie was a designer in the workstations group of Digital Equipment Corporation. Mr. Tullie earned a B.S. degree from the University of Massachusetts and an M.B.A. from Clark University. 
+
+ 
+
+Timothy M. Heenan joined us in October 2000 when we acquired MMC Networks. Mr. Heenan was promoted to Vice President of Operations in August 2001. Prior to joining MMC Networks, Mr. Heenan was the Director of Test Operations at Cirrus Logic, Inc., where he was responsible for worldwide manufacturing test operations. Before his tenure at Cirrus Logic, Mr. Heenan held various engineering positions at Signetics Corporation. Mr. Heenan holds a B.S. degree in Materials Engineering from Rensselaer Polytechnic Institute and a M.S. degree in Engineering Management from Santa Clara University. 
+
+ 
+
+Candace H. Kilburn, joined us in September 1996 as Director of Human Resources and was promoted to Vice President in August 1999. From 1990 to 1996, Ms. Kilburn served as Director of Human Resources with Buck Knives Inc. where she was responsible for international human resources. She has also held positions at Handyman Corporation and Rohr Industries. Ms. Kilburn earned a B.S. in Business Administration from United States International University, and an M.B.A. from Chapman University. 

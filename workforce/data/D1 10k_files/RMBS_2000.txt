@@ -1,0 +1,890 @@
+Item 1. Business
+
+   Rambus Inc. ("Rambus" or the "Company") designs, develops, licenses and
+markets high-speed chip connection technology to enhance the performance and
+cost-effectiveness of computers, consumer electronics and communications
+systems. The Company licenses semiconductor companies to manufacture and sell
+memory and logic ICs incorporating Rambus chip connection technology and
+markets its solution to systems companies to encourage them to design this
+technology into their products. The Company's chip connection technology cost-
+effectively increases the data transfer rate, or "memory bandwidth," allowing
+semiconductor memory devices to keep pace with faster generations of processors
+and controllers and thus supports the accelerating data transfer requirements
+of multimedia and other high-bandwidth applications.
+
+Background
+
+   The performance of a computer or other electronic system is typically
+constrained by the speed of its slowest element. In the past, that element was
+the logic IC that controlled the system's specific functions and performed
+calculations--the microprocessor. In recent years, however, new generations of
+microprocessors and controllers have become substantially faster and more
+powerful, and increasingly the bottleneck in system performance is becoming the
+component that stores the instructions and data needed by the microprocessors
+and controllers--the DRAM.
+
+   Since 1980, the typical operating frequency of mainstream microprocessors
+has increased from 5 MHz (million cycles per second) to over 1 GHz (billion
+cycles per second). During this same period, the typical operating frequency of
+a standard DRAM has increased only to 133 MHz. This growing disparity between
+the frequency of microprocessors and DRAMs is termed the "Performance Gap."
+
+                                       1
+<PAGE>
+
+   While microprocessors have undergone both manufacturing and architectural
+improvements, significant innovations for DRAMs have generally only occurred in
+the manufacturing area. DRAM manufacturers have been successful in increasing
+DRAM "density," or storage capacity, from roughly 1 Kbit (thousand bits) to 128
+Mbits (million bits) per chip for standard production devices, thereby reducing
+the number of DRAMs required for a given amount of memory. However,
+corresponding architectural improvements necessary to increase DRAM data
+transfer rates to keep pace with increasing microprocessor speeds have not
+occurred.
+
+Rambus Technology
+
+   Rambus has created a revolutionary chip connection architecture, which
+addresses the Performance Gap by transferring data through a simplified bus at
+significantly higher frequencies than permitted by conventional technologies.
+To date, the largest immediate application for this interface technology is to
+connect logic circuits to memory in home video game consoles, PCs, workstations
+and other electronic systems. The key elements of the Rambus interface are
+Rambus DRAMs ("RDRAMs"), Rambus ASIC cells ("RACs") and the interconnecting
+circuitry known as the "Rambus Channel."
+
+   Rambus chip connection technology allows data transfers of up to 1.6
+gigabytes per second between a logic IC and RDRAMs by transferring data at a
+frequency of 800 MHz over a two byte wide bus. System performance can be
+further enhanced by applying Rambus technology to multiple channels on a logic
+IC. For example, a Rambus-based logic IC can utilize four channels to achieve
+data transfer of up to 6.4 gigabytes per second.
+
+   Rambus technology can be used to address a wide variety of chip connection
+data transfer requirements. The Company has recently announced its first non
+memory-based technology, a SerDes cell. Similar to a RAC in the Rambus memory
+technology, the SerDes cell provides a 3.125 gigabit per second data connection
+for use in high-speed networks. Typical applications for this technology are
+backplanes in high-speed network routers and switches.
+
+Target Markets and Applications
+
+   To date, the major markets for the Company's technology have been in
+consumer products and in PCs/workstations. In the consumer area, the principal
+application has been for home video game consoles. An earlier generation of the
+Rambus chip connection technology is in the Nintendo64 video game console, and
+current Rambus technology is used in the newest version of the Sony video game
+system known as PlayStation 2. Other consumer applications for the Company's
+technology include digital televisions, VCRs and set-top boxes which have
+recently been introduced in Japan.
+
+   In the PC/workstation market, Rambus memory technology is used to provide a
+high memory bandwidth connection to Intel Pentium III processors. The
+connections are provided via Rambus memory controllers, which are a portion of
+two chipsets developed by Intel. One of these chipsets, designed for use in the
+PC workstation market, has been highly successful and Rambus technology is now
+fully established in this market. The other chipset, intended for the much
+larger main PC market has been less successful due to a variety of factors
+including inherent bandwidth limitations of the chipset design and relatively
+high cost of RDRAMs compared to standard memory. In connection with the
+introduction of its new processor, the Pentium 4, in late 2000, Intel has
+designed a new chipset which includes a Rambus memory controller. There can be
+no assurance that previous problems have been completely solved, that the
+pricing of Rambus DRAMs will be reduced to a competitive level or that the
+Intel chipset and Rambus technology will be successful in penetrating the
+market segment for PC main memory.
+
+   Other applications for the Company's technology include inkjet and laser
+printers and networking equipment such as high-speed routers and Ethernet
+switches.
+
+Rambus Business Model and Strategy
+
+   In order to establish Rambus interface technology as an industry standard,
+the Company has adopted an innovative business model in which it neither
+manufactures nor sells semiconductors incorporating the
+
+                                       2
+<PAGE>
+
+Company's technology. The Company licenses its technology on a nonexclusive and
+worldwide basis to semiconductor companies which manufacture and sell products
+which incorporate Rambus technology. The Company offers two types of licenses.
+The first, for technology which is fully compatible with the Rambus standard
+("RDRAM-compatible licenses"), allows semiconductor manufacturers to
+manufacture and sell RDRAMs and logic ICs containing RACs to systems companies
+which have adopted Rambus technology. Systems companies are not required to
+obtain a Rambus license to incorporate Rambus ICs into their products. However,
+an important part of the Company's strategy is to maintain close ties to these
+systems companies in order to encourage the adoption of Rambus technology.
+
+   In the case of RDRAM-compatible licenses, the Rambus business model and
+strategy are designed to promote Rambus as an industry standard, target leading
+systems companies in markets that the Company believes represent the greatest
+potential for Rambus-compatible IC sales, provide systems companies with
+multiple sources for RDRAMs, share research and development efforts with
+licensees, maintain technology leadership, pursue a system-level approach and
+generate revenue through a combination of contract fees and royalties.
+
+   The second type of license covers the use of Rambus patents in non-Rambus-
+compatible ICs, specifically in synchronous DRAM ("SDRAM") and double data-rate
+("DDR") SDRAM memory devices and logic ICs which control such memory. In the
+case of these "SDRAM-compatible licenses," the Rambus business model and
+strategy are designed to maximize the return on investment in R&D and patents
+through the generation of license fees and royalties.
+
+   Rambus provides licenses to both DRAM manufacturers and logic IC
+manufacturers. At September 30, 2000, Rambus had a total of 28 RDRAM-compatible
+licensees and four SDRAM-compatible licensees. RDRAM-compatible licensees
+include ten DRAM manufacturers which collectively accounted for approximately
+90% of worldwide DRAM sales in calendar 1999: Hitachi, Hyundai Electronics,
+Infineon, Micron Technology, Mitsubishi, NEC, Samsung Electronics, Toshiba,
+Vanguard and Winbond. At September 30, 2000, five of these licensees were
+shipping RDRAMs. RDRAM-compatible logic licensees include Agilent Technologies,
+Compaq, Hewlett-Packard, IBM, Intel, LSI Logic, Matsushita, NEC, PMC Sierra,
+Texas Instruments, Toshiba and Vitesse. At September 30, 2000, nine logic
+licensees were shipping logic ICs which include RACs. At September 30, 2000,
+SDRAM-compatible licensees were Hitachi, NEC, Oki Electric Industry and
+Toshiba. After the end of the fiscal year the Company added Elpida Memory, a
+joint venture of Hitachi and NEC, and Samsung Electronics as additional SDRAM-
+compatible licensees. In fiscal 2000, Toshiba, NEC and Samsung accounted for
+15%, 13% and 11% of total revenues, respectively.
+
+   Royalties, which are generally a percentage of the revenues received by
+licensees on their sales of licensed ICs, are normally payable by a Rambus
+licensee on sales occurring during the life of the Rambus patents being
+licensed in the case of RDRAM-compatible licenses, and over a five year
+contract life in the case of SDRAM-compatible licenses. For a typical systems
+application of Rambus technology, the Company receives royalties from the sale
+of both licensed logic ICs and DRAMs as they are shipped by Rambus licensees.
+Royalty rates range up to a maximum of approximately 2.5% for RDRAMs and a
+maximum of approximately 5% for associated Rambus logic ICs, and in some cases
+may decline based on the passage of time or on the total volume of Rambus ICs
+shipped. In the case of SDRAM-compatible licenses, the royalty rates for SDRAMs
+and associated controllers are generally less than the comparable RDRAM-
+compatible rates, and for DDR and associated controllers the rates are
+generally higher. The exact rate and structure of a royalty arrangement with a
+particular licensee depend on a number of factors, including the amount of the
+license fee to be paid by the licensee and, in the case of RDRAM-compatible
+licenses, the marketing and engineering commitment made by the licensee.
+
+Design and Manufacturing
+
+   RDRAM-compatible technology has been developed to allow semiconductor
+companies to use familiar, widely-available design tools and conventional
+techniques when designing their Rambus-enabled chips. A new RDRAM-compatible
+licensee receives an implementation package from the Company which contains all
+the
+
+                                       3
+<PAGE>
+
+information needed to develop a Rambus-compatible IC in the licensee's process.
+There are separate implementation packages for RDRAMs and for RACs. An
+implementation package includes a specification, a generalized circuit layout
+database for the particular version of the RDRAM or RAC which the licensee
+intends to develop, test parameter software and, for RDRAMs, a DRAM core
+interface specification. Many RDRAM-compatible licensees have contracted to
+have Rambus produce the specific implementation required to optimize the
+generalized circuit layout for the licensee's manufacturing process. In such
+cases, the licensee provides specific design rules and transistor models which
+Rambus designers use to integrate RDRAM or RAC circuits into the licensee's
+process. However, Rambus anticipates that as licensees become more familiar
+with the RDRAM-compatible technology, they will be able to do more of the
+implementation work without Rambus' assistance.
+
+   Rambus has developed its RDRAM-compatible technology to be manufacturable
+using familiar, industry-standard CMOS semiconductor processes. For this reason
+the Company believes that the wafer fabrication yields of RDRAMs and logic
+products containing RACs in mass-production volumes are consistent with those
+for similar products in the same manufacturing facility and in the same stage
+of production ramp. However, because of the extra Rambus interface circuitry
+and other features, an RDRAM chip is somewhat larger than a standard SDRAM.
+Therefore, a manufacturer will generally produce fewer RDRAMs than standard
+SDRAMs for a given wafer size and an RDRAM chip will be somewhat more expensive
+than the standard version. Also, RDRAM manufacturers are responsible for their
+own manufacturing processes and Rambus has no role in the manufacture of
+RDRAMs. For example, Rambus has no influence on decisions in regard to any
+process changes or on whether or when to "shrink" or otherwise change a design
+to reduce the cost of the chips.
+
+   RDRAMs use newer-generation chip scale packaging ("CSP") and require high-
+speed testers for a portion of the test procedure. While the Company feels that
+testing costs for RDRAMs in mass production volumes will be no greater than for
+current standard DRAMs, additional capital equipment is required and startup
+costs are incurred by the manufacturers producing Rambus DRAMs. In addition,
+for PC main memory applications memory modules (called "RIMMs"), connectors and
+clock chips must be produced by multiple vendors and available in volume. There
+is no assurance that such changes in the manufacturing processes and
+infrastructure of the DRAM industry can be accomplished at a sufficiently
+competitive price to allow the development of a mass market for RDRAM-
+compatible technology.
+
+Research and Development
+
+   The ability of the Company to compete in the future will be substantially
+dependent on its ability to advance its chip connection technology in order to
+meet changing market needs. To this end, Company engineers are involved in
+developing new versions of the Rambus technology which will allow chip-to-chip
+data transfer at higher speeds as well as provide other improvements. The
+Company has announced a 1066Mhz version of its current technology, as well as a
+1.6GHz new generation which will be introduced in the future. The Company has
+assembled a team of highly skilled engineers whose activities are focused on
+further development of Rambus chip connection technology as well as adaptation
+of current technology to specific licensees' processes. Because of the
+complexity of these activities, the design and development process at Rambus is
+a multi-disciplinary effort requiring expertise in computer architecture,
+digital and analog circuit design and layout, DRAM and logic semiconductor
+process characteristics, packaging, PCB routing and high-speed testing
+techniques.
+
+   As of September 30, 2000, Rambus had 110 employees in its engineering
+departments. Approximately two thirds of these employees have advanced
+technical degrees. In fiscal 2000, 1999 and 1998, research and development
+expenses were approximately $11.5 million, $8.1 million and $9.6 million,
+respectively. In addition, because the Company's RDRAM-compatible license
+agreements often call for engineering support by Rambus, a substantial portion
+of the Company's total engineering costs has been allocated to cost of contract
+revenues, even though these engineering efforts have direct applicability to
+Rambus' technology development. The Company expects that it will continue to
+invest substantial funds in research and development activities. There can be
+no assurance that new versions of the Rambus interface technology can be
+developed and introduced by the
+
+                                       4
+<PAGE>
+
+Company's licensees in a timely fashion or that such new technology will be
+accepted by the market. Moreover, the end markets for the Company's technology
+are subject to rapid technological change and there can be no assurance that as
+such markets change the Company's interface technology will remain current and
+suitable.
+
+Competition
+
+   The semiconductor industry is intensely competitive and has been
+characterized by price erosion, rapid technological change, short product life
+cycles, cyclical market patterns and increasing foreign and domestic
+competition. Most major DRAM manufacturers, including Rambus licensees, produce
+higher-frequency versions of standard DRAMs such as SDRAMs which compete with
+RDRAMs. These companies are much larger and have better access to financial,
+certain technical and other resources than Rambus.
+
+   The Company believes that its success in establishing a new high-speed
+memory interface has been due in part to the systems approach it has taken to
+solving the application needs of companies in home video console, PC and other
+electronic systems businesses. However, the Company believes competitors have
+begun to take a similar approach. The Company believes that its principal
+competition will come from its RDRAM-compatible licensees and prospective
+licensees, many of which are evaluating and developing products based on
+alternative technologies. Some DRAM suppliers have begun to produce DDR SDRAMs,
+aimed at doubling the memory bandwidth from SDRAMs without increasing the clock
+frequency. While Rambus has been successful in negotiating SDRAM-compatible
+licenses with some DRAM manufacturers which include the payment of royalties on
+DDR, other manufacturers have not agreed to a license and are in litigation
+with the Company. See "Legal Proceedings."
+
+   A consortium including both large DRAM manufacturers and systems companies
+is thought to be developing an extension of DDR known as DDR-2 and another
+consortium is working on advanced DRAM technology ("ADT"). To the extent that
+these alternative technologies provide comparable system performance at lower
+or similar cost than RDRAMs, or are perceived to require the payment of lower
+royalties, the Company's licensees and prospective licensees may adopt and
+promote the alternative technologies. There can be no assurance that the
+Company's future competition will not have a material adverse effect on the
+Company's business, financial condition and results of operations. While the
+Company might determine that such alternative technologies, when and if
+developed, infringe the Company's patents, there can be no assurance that the
+Company would be able to negotiate agreements which would result in royalties
+paid to the Company without litigation, which could be costly and the result of
+which would be uncertain.
+
+   In addition, certain semiconductor companies are now marketing ICs which
+combine logic and DRAM on the same chip. Such technology, called "embedded
+DRAM," eliminates the need for any chip connection interface. Embedded DRAMs
+are well suited for applications where component space saving and power
+consumption are important, such as in the graphics subsystems of notebook PCs.
+There can be no assurance that competition from embedded DRAMs will not
+increase in the future.
+
+Patents and Intellectual Property Protection
+
+   The Company has an active program to protect its proprietary technology
+through the filing of patents. At September 30, 2000, the Company held 97
+United States patents on various aspects of its technology, with expiration
+dates ranging from 2010 to 2019 and had applications pending for an additional
+approximately 120 United States patents. The Company's United States patents do
+not prevent the manufacture or sale of Rambus-based ICs abroad. At September
+30, 2000, the Company held twelve foreign patents and had an additional
+approximately 43 foreign patent applications pending in Europe and Asia. In
+addition, the Company attempts to protect its trade secrets and other
+proprietary information through agreements with licensees and systems
+companies, proprietary information agreements with employees and consultants
+and other security measures. The Company also relies on trademarks and trade
+secret laws to protect its intellectual property.
+
+   Rambus believes that it is important to develop and maintain a uniform RDRAM
+memory interface standard. The Company's RDRAM-compatible contracts generally
+prevent a licensee from using licensee-
+
+                                       5
+<PAGE>
+
+developed patented improvements related to Rambus technology to block other
+licensees from using the improvements or requiring them to pay additional
+royalties related to their use of Rambus chip connection technology.
+Specifically, the contracts generally require licensees to grant to Rambus a
+royalty-free cross-license on patented licensee intellectual property related
+to the implementation of Rambus interface technology, which Rambus sublicenses
+to other licensees which have entered into similar arrangements. Nonetheless,
+there is no assurance that such a blocking arrangement will not occur in the
+future.
+
+Factors Affecting Future Results
+
+   Current and Potential Litigation. As the Company has extended its licensing
+program to SDRAM-compatible products, it has increasingly become involved in
+litigation either instigated by the Company or by the potential licensee. As of
+September 30, 2000, the Company was in litigation with three such potential
+SDRAM-compatible licensees. In each of these cases, the Company has claimed
+infringement of its patents whereas the potential licensees have generally
+sought damages and a determination that the Rambus patents at suit are invalid
+and not infringed. While the Company's objective in all these cases is to
+achieve settlements resulting in SDRAM-compatible licenses, there can be no
+assurance that such settlements will take place, that the Company will prevail
+if there is no settlement or that additional litigation will not result from
+future efforts by the Company to obtain additional SDRAM-compatible licenses.
+In addition, future litigation may be necessary to enforce the Company's
+patents and other intellectual property rights, to protect the Company's trade
+secrets, or to determine the validity and scope of the proprietary rights of
+others, and there can be no assurance that the Company would prevail in any
+future litigation. Any such litigation, whether or not determined in the
+Company's favor or settled by the Company, is costly and could divert the
+efforts and attention of the Company's management and technical personnel from
+normal business operations, which would have a material adverse effect on the
+Company's business, financial condition and results of operations. Adverse
+determinations in litigation could result in the loss of the Company's
+proprietary rights, subject the Company to significant liabilities, require the
+Company to seek licenses from third parties or prevent the Company from
+licensing its technology, any of which could have a material adverse effect on
+the Company's business, financial condition and results of operations.
+
+   In any potential dispute involving the Company's patents or other
+intellectual property, the Company's licensees could also become the target of
+litigation. While the Company generally does not indemnify its licensees, some
+of its RDRAM-compatible license agreements require the Company to provide
+technical support and information to a licensee which is involved in litigation
+involving use of Rambus technology. The Company is bound to indemnify certain
+licensees under the terms of certain RDRAM-compatible license agreements, and
+the Company may agree to indemnify others in the future. The Company's support
+and indemnification obligations could result in substantial expenses to the
+Company. In addition to the time and expense required for the Company to supply
+such support or indemnification to its licensees, a licensee's development,
+marketing and sales of RDRAM-compatible ICs could be severely disrupted or shut
+down as a result of litigation, which in turn could have a material adverse
+effect on the Company's business, financial condition and results of
+operations.
+
+   Unpredictable and Fluctuating Operating Results. Because many of the
+Company's revenue components fluctuate and are difficult to predict, and its
+expenses are largely independent of revenues in any particular period, it is
+difficult for the Company to accurately forecast revenues and profitability.
+Until the fourth quarter of FY 2000, contract revenues had represented the
+largest portion of the Company's revenues. The Company recognizes contract
+revenues ratably over the period during which post-contract customer support on
+RDRAM-compatible licenses is expected to be provided. While this means that
+contract revenues from current licenses are generally predictable, changes can
+be introduced by a reevaluation by Company management of the length of the
+post-contract support period. The initial estimate of this period is subject to
+revision as the RDRAM-compatible IC being developed under a contract nears
+production, and such revision will result in an increase or decrease to the
+quarterly revenue for that contract. In addition, accurate prediction of
+revenues from new licenses is difficult because the development of a business
+relationship with a potential licensee is a lengthy
+
+                                       6
+<PAGE>
+
+process, frequently spanning a year or more, and the fiscal period in which a
+new license agreement will be entered into, if at all, and the financial terms
+of such an agreement are difficult to predict. Contract revenues also include
+fees for engineering services, which are dependent upon the varying level of
+assistance desired by licensees and, therefore, the revenue from these services
+is also difficult to predict. Adding to the complexity of making accurate
+financial forecasts is the fact that certain expenses associated with a
+particular contract may not be incurred evenly over the contract period,
+whereas contract fees associated with that contract are recognized ratably over
+the period during which the post-contract customer support is expected to be
+provided.
+
+   Royalties accounted for 74% of total revenues in the fourth quarter of
+fiscal 2000 and 45% of total revenues in the full fiscal year. The Company
+believes that royalties will represent the majority of total revenue in future
+periods. Increasing royalty revenues will add to the difficulty in making
+accurate financial forecasts. Such royalties are recognized in the quarter in
+which the Company receives a report from a licensee regarding the shipment of
+licensed ICs in the prior quarter, and are dependent upon fluctuating sales
+volumes and prices of chips containing Rambus technology, all of which are
+beyond the Company's ability to control or assess in advance. The Company
+believes that its continued success will be substantially dependent upon
+royalties increasing at a rate which more than offsets decreases in the
+recognition of revenue under existing contracts, as well as the Company's
+ability to add new licensees and to license new generations of its technology
+to its existing licensees. Because a systems company can change its source of
+licensed ICs at any time, and because the new Rambus license source could have
+different royalty rates, any such change by a systems company, particularly one
+which accounts for substantial volumes of licensed ICs, could have a sudden and
+significant adverse effect on the Company's revenues.
+
+   The Company's business is subject to a variety of additional risks which
+could materially adversely affect quarterly and annual operating results,
+including market acceptance of the Company's technology; systems companies'
+acceptance of RDRAM-compatible ICs produced by the Company's licensees; market
+acceptance of the products of systems companies which have adopted the
+Company's technology; the loss of any strategic relationships with systems
+companies or licensees; announcements or introductions of new technologies or
+products by the Company or the Company's competitors; delays or problems in the
+introduction or performance of enhancements or future generations of the
+Company's technology; fluctuations in the market price and demand for DRAMs and
+logic ICs into which the Company's technology has been incorporated;
+competitive pressures resulting in lower contract revenues or royalty rates;
+changes in the Company's and system companies' development schedules and levels
+of expenditure on research and development; personnel changes, particularly
+those involving engineering and technical personnel; costs associated with
+protecting the Company's intellectual property; changes in Company strategies;
+foreign exchange rate fluctuations or other changes in the international
+business climate; and general economic trends and other factors.
+
+   Volatility of Stock Price. The trading price of the Company's Common Stock
+has been subject to wide fluctuations which may continue in the future in
+response to quarterly variations in operating results; progress or lack of
+progress in the development of RDRAM-compatible ICs by licensees or RDRAM-based
+products by systems companies; signing or not signing new licensees, especially
+for SDRAM-compatible licenses; new litigation or developments in current
+litigation; announcements of technological innovations or new products by the
+Company, its licensees or its competitors; developments with respect to patents
+or proprietary rights and other events or factors. The trading price of the
+Company's Common Stock could also be subject to wide fluctuations in response
+to the publication of reports and changes in financial estimates by securities
+analysts, and it is possible that the Company's actual results in one or more
+future periods will fall short of those estimates by securities analysts. In
+addition, the equity markets have experienced volatility that has particularly
+affected the market prices of equity securities of many high technology
+companies and that often has been unrelated or disproportionate to the
+operating performance of such companies. These broad market fluctuations may
+adversely affect the market price of the Company's Common Stock.
+
+   Dependence upon Limited Number of Licensees. The Company neither
+manufactures nor sells devices containing its interface technology. Rather, the
+Company licenses its technology to semiconductor companies,
+
+                                       7
+<PAGE>
+
+which in turn manufacture and sell licensed ICs to systems companies which
+incorporate Rambus technology into their products. The Company's strategy to
+become an industry standard is dependent upon the Company's ability to make its
+technology widely available to systems companies through multiple semiconductor
+manufacturers, and there can be no assurance that the Company will be
+successful in maintaining its relationships with its current licensees or in
+entering into new relationships with additional licensees. The Company faces
+numerous risks in successfully obtaining RDRAM-compatible licensees on terms
+consistent with the Company's business model, including, among others, the
+lengthy and expensive process of building a relationship with a potential
+licensee before there is any assurance of a license agreement with such party;
+persuading large semiconductor companies to work with, to rely for critical
+technology on, and to disclose proprietary manufacturing technology to, a
+smaller company such as Rambus; persuading potential licensees to bear certain
+development costs associated with Rambus technology and to make the necessary
+investment to successfully produce RDRAM-compatible ICs; and successfully
+transferring technical know-how to licensees. To obtain new SDRAM-compatible
+licenses the Company may have to resort to litigation, in many cases against
+the same companies who are RDRAM-compatible licensees of the Company. In
+addition, there are a relatively limited number of larger semiconductor
+companies to which the Company could license its interface technology in a
+manner consistent with its business model. The Company believes that its
+principal competition may come from its licensees and prospective licensees,
+many of which are evaluating and developing products based on alternative
+technologies.
+
+   Dependence upon Systems Companies. Although sales of RDRAM-compatible ICs to
+systems companies which have adopted the Company's technology for their
+products are not made directly by the Company, such sales directly affect the
+amount of royalties from RDRAM-compatible ICs received by the Company.
+Therefore, the Company's success is partially dependent upon the adoption of
+the Company's chip connection technology by systems companies, particularly
+those which develop and market high-volume business and consumer products such
+as home video game consoles and PCs. The Company is subject to many risks
+beyond its control that influence the success or failure of a particular
+systems company, including among others competition faced by the systems
+company in its particular industry; market acceptance of the systems company's
+products; the engineering, sales and marketing and management capabilities of
+the systems company; technical challenges unrelated to Rambus technology faced
+by the systems company in developing its products; and the financial and other
+resources of the systems company. The process of persuading systems companies
+to adopt the Company's technology can be lengthy and, even if adopted, there
+can be no assurance that the Rambus technology will be used in a product that
+is ultimately brought to market, achieves commercial acceptance or results in
+significant royalties to the Company. Rambus must dedicate substantial
+resources to market to and support systems companies, in addition to supporting
+the sales and marketing and technical efforts of its licensees in promoting
+Rambus technology to systems companies. Even if a systems company develops a
+Rambus-based product, success in the market will depend in part on a supply of
+ICs from Rambus licensees in sufficient quantities and at commercially
+attractive prices. Because the Company does not control the business practices
+of its licensees, it has no ability to establish the prices at which its
+technology is made available to systems companies or the degree to which its
+licensees promote Rambus technology to systems companies.
+
+   No Assurance of Adoption of RDRAM-Compatible Technology as an Industry
+Standard; Cost of RDRAM-Compatible Technology. An important part of the
+Company's strategy for its RDRAM-compatible technology to become an industry
+standard is to penetrate new markets by targeting leaders in those markets.
+This strategy is designed to encourage other participants in those markets to
+follow such leaders in adopting RDRAM-compatible technology. Should a high
+profile industry participant adopt RDRAM-compatible technology for one or more
+of its products but fail to achieve success with those products, other industry
+participants' perception of RDRAM-compatible technology could be adversely
+affected. Any such event could reduce future sales of RDRAM-compatible ICs.
+Likewise, were a market leader to adopt and achieve success with a competing
+technology, the Company's reputation and sales could be adversely affected. In
+addition, some industry participants have adopted, and others may in the future
+adopt, a strategy of disparaging the Rambus solution adopted by their
+competitors. Failure of the Company's technology to be adopted as an industry
+
+                                       8
+<PAGE>
+
+standard would have a material adverse effect on the Company's business,
+financial condition and results of operations.
+
+   One important requirement for the Company's RDRAM-compatible technology to
+be adopted as an industry standard is for any premium in the price and cost of
+Rambus memory over alternatives to be reasonable in comparison to the perceived
+benefits of the technology. However, there can be no assurance that the price
+and cost premium for RDRAMs over standard memory can be reduced sufficiently to
+allow the development of Rambus as an industry standard. To date, RDRAMs have
+had a lower than desired yield to the full 800 MHz specification, and some
+parts have had to be sold at a lower price based on a 700 MHz or even a 600 MHz
+specification. There can be no assurance that a market for such downgraded
+RDRAMs will continue to be available or that yields to the full 800 MHz
+specification will reach satisfactory levels. In addition, because of the extra
+Rambus interface circuitry and other features, an RDRAM chip is somewhat larger
+than a standard DRAM. Therefore, a manufacturer will generally produce fewer
+RDRAMs than standard DRAMs for a given wafer size and an RDRAM chip will be
+somewhat more expensive than the standard version. Also, RDRAM manufacturers
+are responsible for their own manufacturing processes and Rambus has no role in
+the manufacture of RDRAMs. For example, Rambus has no influence on decisions in
+regard to any process changes or on whether or when to "shrink" or otherwise
+change a design to reduce the cost of the chips.
+
+   RDRAMs use newer-generation chip scale packaging ("CSP") and require high-
+speed testers for a portion of the test procedure. While the Company feels that
+testing costs for RDRAMs in mass production volumes will be no greater than for
+current standard DRAMs, additional capital equipment is required and startup
+costs are incurred by the manufacturers producing RDRAMs. In addition, for PC
+main memory applications memory modules (called "RIMMs"), connectors and clock
+chips must be produced by multiple vendors and available in volume. There is no
+assurance that such changes in the manufacturing processes and infrastructure
+of the DRAM industry can be accomplished at a sufficiently competitive price to
+allow the development of a mass market for RDRAM-compatible technology.
+
+   Dependence upon PC Main Memory Market Segment and Intel. An important part
+of the Company's strategy is for its RDRAM-compatible technology to penetrate
+the market segment for PC main memory. Rambus believes that PC main memory
+currently accounts for more than one-half of all DRAMs sold. To date, the only
+use of RDRAM-compatible technology in this market is via two chipsets developed
+by Intel which allow RDRAMs to connect to Pentium III processors. One of these
+chipsets, designed for use in the PC workstation market, has been highly
+successful and Rambus technology is now fully established in this market. The
+other chipset, intended for the much larger main PC market has been less
+successful due to a variety of factors including inherent bandwidth limitations
+of the chipset design and relatively high cost of RDRAMs compared to standard
+memory. In connection with the scheduled introduction in late 2000 of its new
+processor, the Pentium 4, Intel has designed a new chipset which includes a
+Rambus memory controller. There can be no assurance that previous problems have
+been completely solved, that the pricing of Rambus DRAMs will be reduced to a
+competitive level or that the Intel chipset and Rambus technology will be
+successful in penetrating the market segment for PC main memory. Furthermore,
+there can be no assurance that Intel's current emphasis or priorities will not
+change in the future, resulting in less attention and fewer resources being
+devoted to developing Rambus-based chipsets. Also, there can be no assurance
+that Rambus and Intel will continue to be able to work together successfully
+over an extended period of time nor that Intel will not develop or adopt
+competing technologies in the future.
+
+   Revenue Concentration. The Company is subject to revenue concentration risks
+at both the licensee and the systems company levels. In fiscal 2000, 1999, and
+1998, revenues from the Company's top five licensees accounted for
+approximately 54%, 47% and 49% of the Company's revenues, respectively. In
+fiscal 2000, 1999, and 1998 NEC accounted for approximately 13%, 11% and 22% of
+revenues, respectively. Also in fiscal 2000, Toshiba and Samsung accounted for
+15% and 11% of revenues, respectively. In fiscal 1999, two other licensees
+accounted for 11% and 10% of revenues. Because the revenues derived from
+various licensees vary from period to period depending on the addition of new
+contracts, the expiration of deferred revenue schedules
+
+                                       9
+<PAGE>
+
+under existing contracts and the volumes and prices at which the licensees have
+recently sold licensed ICs to systems companies, the particular licensees which
+account for revenue concentration have varied from period to period. These
+variations are expected to continue in the foreseeable future although the
+Company anticipates that revenue will continue to be concentrated in a limited
+number of licensees.
+
+   The royalties received by the Company are a function of the adoption of
+Rambus technology at the systems company level. Systems companies purchase
+semiconductors containing Rambus technology from Rambus licensees, and
+generally do not have a direct contractual relationship with the Company. The
+Company's licensees generally do not provide detail as to the identity of, or
+volume of licensed ICs purchased by, particular systems companies. As a result,
+the Company faces difficulty in analyzing the extent to which its future
+revenues will be dependent upon particular systems companies. However, the
+Company believes that in fiscal 2000 it is likely that sales by licensees to
+Nintendo, Sony and to PC manufacturers accounted for the majority of the
+Company's royalty revenues. All these systems companies face intense
+competitive pressure in their markets, which are characterized by extreme
+volatility, frequent new product introductions and rapidly shifting consumer
+preferences, and there can be no assurance as to the unit volumes of licensed
+ICs that will be purchased by these companies in the future or the level of
+royalty-bearing revenues that the Company's licensees will receive from sales
+to these companies. There can be no assurance that a significant number of
+other systems companies will adopt the Company's technology or that the
+Company's dependence upon particular systems companies will decrease in the
+future.
+
+   Reliance upon DRAM Market; Declines in DRAM Price and Unit Volume per
+System. In fiscal 2000, a majority of the Company's royalties was derived from
+the sale of DRAMs. Royalties on DRAMs are based on the volumes and prices of
+DRAMs manufactured and sold by the Company's licensees. The royalties received
+by the Company therefore are influenced by many of the risks faced by the DRAM
+market in general, including constraints on the volumes shipped during periods
+of shortage and reduced average selling prices during periods of surplus. The
+DRAM market is intensely competitive and generally is characterized by
+declining average selling prices over the life of a generation of chips. Such
+price decreases, and the corresponding decreases in per unit royalties received
+by the Company, can be sudden and dramatic. Compounding the effect of price
+decreases is the fact that, under certain of the Company's RDRAM-compatible
+license agreements, royalty rates decrease as a function of time or volume.
+With the introduction of each new generation of higher density DRAMs, the
+Company generally expects higher prices resulting in higher royalties per
+device, but with correspondingly fewer devices required per system. There can
+be no assurance that decreases in DRAM prices or in the Company's royalty rates
+will not have a material adverse effect on the Company's business, results of
+operations and financial condition. There can be no assurance that the Company
+will be successful in maintaining or increasing its share of any market.
+
+   Rapid Technological Change; Reliance on Fundamental Technology; Importance
+of Timely New Product Development. The semiconductor industry is characterized
+by rapid technological change, with new generations of semiconductors being
+introduced periodically and with ongoing evolutionary improvements. Since
+beginning operations in 1990, the Company has derived all of its revenue from
+its chip connection technology and expects that this dependence on its
+fundamental technology will continue for the foreseeable future. Accordingly,
+broad acceptance of the Company's technology is critical to the Company's
+future success. The introduction or market acceptance of competing technology
+which renders the Company's chip connection technology less desirable or
+obsolete would have a rapid and material adverse effect on the Company's
+business, results of operations and financial condition. The announcement of
+new products by the Company could cause licensees or systems companies to delay
+or defer entering into arrangements for the use of the Company's technology,
+which could have a material adverse effect on the Company's business, financial
+condition and results of operations.
+
+   The Company's operating results will depend to a significant extent on its
+ability to introduce enhancements and new generations of its chip connection
+technology which keep pace with other changes in the semiconductor industry and
+which achieve rapid market acceptance. The Company must continually devote
+
+                                       10
+<PAGE>
+
+significant engineering resources to addressing the ever-increasing need for
+memory bandwidth associated with increases in the speed of microprocessors and
+other controllers. Technical innovations of the type that will be required for
+the Company to be successful are inherently complex and require long
+development cycles, and there can be no assurance that the Company's
+development efforts will ultimately be successful. In addition, these
+innovations must be completed before changes in the semiconductor industry have
+rendered them obsolete, must be available when systems companies require these
+innovations, and must be sufficiently compelling to cause semiconductor
+manufacturers to enter into licensing arrangements with Rambus for the new
+technology. There can be no assurance that Rambus will be able to meet these
+requirements. Moreover, significant technological innovations generally require
+a substantial investment before their commercial viability can be determined.
+There can be no assurance that the Company will have the financial resources
+necessary to fund future development, that the Company's licensees will
+continue to share certain research and development costs with the Company as
+they have in the past, or that revenues from enhancements or new generations of
+the Company's technology, even if successfully developed, will exceed the costs
+of development.
+
+   Competition. The semiconductor industry is intensely competitive and has
+been characterized by price erosion, rapid technological change, short product
+life cycles, cyclical market patterns and increasing foreign and domestic
+competition. Most major DRAM manufacturers, including Rambus licensees, produce
+higher-frequency versions of standard DRAMs such as SDRAMs which compete with
+RDRAMs. These companies are much larger and have better access to financial,
+certain technical and other resources than Rambus.
+
+   The Company believes that its principal competition may come from its
+licensees and prospective licensees, many of which are evaluating and
+developing products based on alternative technologies and are beginning to take
+a systems approach similar to the Company's in solving the application needs of
+systems companies. Some DRAM suppliers have begun to produce DDR SDRAMs, aimed
+at doubling the memory bandwidth from SDRAMs without increasing the clock
+frequency. While Rambus has been successful in negotiating SDRAM-compatible
+licenses with some DRAM manufacturers which include the payment of royalties on
+DDR, other manufacturers have not agreed to a license and are in litigation
+with the Company.
+
+   A consortium including both large DRAM manufacturers and systems companies
+is thought to be developing an extension of DDR known as DDR-2 and another
+consortium is working on advanced DRAM technology ("ADT"). To the extent that
+these alternative technologies provide comparable system performance at lower
+or similar cost than RDRAMs, or are perceived to require the payment of lower
+royalties, the Company's licensees and prospective licensees may adopt and
+promote the alternative technologies. There can be no assurance that the
+Company's future competition will not have a material adverse effect on the
+Company's business, results of operations and financial condition. While the
+Company might determine that such alternative technologies, when and if
+developed, infringe the Company's patents, there can be no assurance that the
+Company would be able to negotiate agreements which would result in royalties
+paid to the Company without litigation, which could be costly and the result of
+which would be uncertain.
+
+   In addition, certain semiconductor companies are now marketing ICs which
+combine logic and DRAM on the same chip. Such technology, called "embedded
+DRAM," eliminates the need for any chip connection interface. Embedded DRAMs
+are well suited for applications where component space saving and power
+consumption are important, such as in the graphics subsystems of notebook PCs.
+There can be no assurance that competition from embedded DRAMs will not
+increase in the future.
+
+   Limited Protection of Intellectual Property. While the Company has an active
+program to protect its proprietary technology through the filing of patents,
+there can be no assurance that the Company's pending United States or foreign
+patent applications or any future United States or foreign patent applications
+will be approved, that any issued patents will protect the Company's
+intellectual property or will not be challenged by third parties, or that the
+patents of others will not have an adverse effect on the Company's ability to
+do business. Furthermore, there can be no assurance that others will not
+independently develop similar or competing technology or design around any
+patents that may be issued to the Company.
+
+                                       11
+<PAGE>
+
+   The Company attempts to protect its trade secrets and other proprietary
+information through agreements with licensees and systems companies,
+proprietary information agreements with employees and consultants and other
+security measures. The Company also relies on trademarks and trade secret laws
+to protect its intellectual property. Despite these efforts, there can be no
+assurance that others will not gain access to the Company's trade secrets, or
+that the Company can meaningfully protect its intellectual property. In
+addition, effective trade secret protection may be unavailable or limited in
+certain foreign countries. Although the Company intends to protect its rights
+vigorously, there can be no assurance that such measures will be successful.
+
+   Rambus believes that it is important to develop and maintain a uniform RDRAM
+memory interface standard. The Company's RDRAM-compatible contracts generally
+prevent a licensee from using licensee-developed patented improvements related
+to Rambus technology to block other licensees from using the improvements or
+requiring them to pay additional royalties related to their use of Rambus
+interface technology. Specifically, the contracts generally require licensees
+to grant to Rambus a royalty-free cross-license on patented licensee
+intellectual property related to the implementation of Rambus interface
+technology, which Rambus sublicenses to other licensees that have entered into
+similar arrangements. Nonetheless, there is no assurance that such a blocking
+arrangement will not occur in the future.
+
+   Risks Associated with International Licenses. In fiscal 2000, 1999 and 1998,
+international revenues constituted approximately 82%, 60% and 73% of the
+Company's total revenues, respectively. The Company expects that revenues
+derived from international licensees will continue to represent a significant
+portion of its total revenues in the future. All of the revenues from
+international licensees have to date been denominated in United States dollars.
+However, to the extent that such licensees' sales to systems companies are not
+denominated in United States dollars, any royalties that the Company receives
+as a result of such sales could be subject to fluctuations in currency exchange
+rates. In addition, if the effective price of licensed ICs sold by the
+Company's foreign licensees were to increase as a result of fluctuations in the
+exchange rate of the relevant currencies, demand for licensed ICs could fall,
+which in turn would reduce the Company's royalties. The Company does not use
+derivative instruments to hedge foreign exchange rate risk. In addition,
+international operations and demand for the products of the Company's licensees
+are subject to a variety of risks, including tariffs, import restrictions and
+other trade barriers, changes in regulatory requirements, longer accounts
+receivable payment cycles, adverse tax consequences, export license
+requirements, foreign government regulation, political and economic instability
+and changes in diplomatic and trade relationships. In particular, the laws of
+certain countries in which the Company currently licenses or may in the future
+license its technology require significant withholding taxes on payments for
+intellectual property, which the Company may not be able to offset fully
+against its United States tax obligations. The Company is subject to the
+further risk of the tax authorities in those countries recharacterizing certain
+engineering fees as license fees, which could result in increased tax
+withholdings and penalties. The Company's licensees are subject to many of the
+risks described above with respect to systems companies which are located in
+different countries, particularly video game console and PC manufacturers
+located in Asia and elsewhere. There can be no assurance that one or more of
+the risks associated with international licenses of the Company's technology
+will not have a direct or indirect material adverse effect on the Company's
+business, financial condition and results of operations. Moreover, the laws of
+certain foreign countries in which the Company's technology is or may in the
+future be licensed may not protect the Company's intellectual property rights
+to the same extent as the laws of the United States, thus increasing the
+possibility of infringement of the Company's intellectual property.
+
+   Dependence on Key Personnel. The Company's success depends to a significant
+extent on its ability to identify, attract, motivate and retain qualified
+technical, sales, marketing, finance and executive personnel. Because the
+future success of the Company is dependent upon its ability to continue
+enhancing and introducing new generations of such technology, the Company is
+particularly dependent upon its ability to identify, attract, motivate and
+retain qualified engineers with the requisite educational background and
+industry experience. Competition for qualified engineers, particularly those
+with significant industry experience, is intense. The Company is also dependent
+upon its senior management personnel, most of whom have worked together at the
+Company for several years. The loss of the services of any of the senior
+management personnel or a significant
+
+                                       12
+<PAGE>
+
+number of the Company's engineers could be disruptive to the Company's
+development efforts or business relationships and could have a material adverse
+effect on the Company's business, financial condition and results of
+operations. The Company generally does not enter into employment contracts with
+its employees and does not maintain key person life insurance.
+
+   Management of Expanded Operations. The Company is not experienced in
+managing rapid growth. The Company may not be equipped to successfully manage
+any future periods of rapid growth or expansion, which could be expected to
+place a significant strain on the Company's limited managerial, financial,
+engineering and other resources. The Company's RDRAM-compatible licensees and
+systems companies rely heavily on the Company's technological expertise in
+designing, testing and manufacturing products incorporating the Company's
+interface technologies. Relationships with new RDRAM-compatible licensees or
+systems companies generally require significant engineering support. As a
+result, any increases in adoption of the Company's technology will increase the
+strain on the Company's resources, particularly the Company's engineers. Any
+delays or difficulties in the Company's research and development process caused
+by these factors or others could make it difficult for the Company to develop
+future generations of its interface technology and to remain competitive. In
+addition, the rapid rate of hiring new employees could be disruptive and
+adversely affect the efficiency of the Company's research and development
+process. The rate of the Company's future expansion, if any, in combination
+with the complexity of the technology involved in the Company's licensee-based
+business model, may demand an unusually high level of managerial effectiveness
+in anticipating, planning, coordinating and meeting the operational needs of
+the Company as well as the needs of the licensees and systems companies.
+Additionally, the Company may be required to reorganize its managerial
+structure in order to more effectively respond to the needs of customers. Given
+the small pool of potential licensees and target systems companies, the adverse
+effect on the Company resulting from a lack of effective management in any of
+these areas will be magnified. Inability to manage the expansion of the
+Company's business would have a material adverse effect on its business,
+financial condition and results of operations.

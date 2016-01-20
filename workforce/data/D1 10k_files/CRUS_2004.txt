@@ -1,0 +1,699 @@
+  
+Item 1. Business 
+
+      Cirrus Logic (“we,” “us,” “our,” or the “Company”) is a premier supplier of high-performance analog or mixed-signal and digital processing integrated circuits (“ICs”) and solutions for consumer entertainment, automotive entertainment and industrial applications. We develop and market integrated ICs and embedded software used by original equipment manufacturers (“OEMs”). We also provide complete system reference designs based on our technology that enable our customers to bring products to market in a timely and cost-effective manner. 
+
+      We were founded in 1984 and were reincorporated in the State of Delaware in February 1999. Our headquarters are in Austin, Texas and we have major sites in Fremont, California; Boulder, Colorado; and Fort Wayne, Indiana. We also serve customers from international offices in Asia, including the People’s Republic of China, Korea, Japan, Singapore and Taiwan and Europe. Our common stock, which has been publicly traded since 1989, is listed on the NASDAQ National Market under the symbol CRUS. 
+
+      We maintain a Web site with the address www.cirrus.com. We are not including the information contained on our Web site as a part of, or incorporating it by reference into, this Annual Report on Form 10-K. We make available free of charge through our Web site our Annual Reports on Form 10-K, Quarterly Reports on Form 10-Q and Current Reports on Form 8-K and amendments to these reports, as soon as reasonably practicable after we electronically file such material with, or furnish such material to, the Securities and Exchange Commission. To receive a free copy of this Form 10-K, please forward your written request to Cirrus Logic, Inc., Attn: Investor Relations, 2901 Via Fortuna, Austin, Texas 78746. 
+
+Background of the Semiconductor Industry 
+
+      In general, the semiconductor industry produces three types of products: analog, digital and mixed-signal. Analog semiconductors take on a continuous range of values that can regulate functions such as temperature, speed, sound, video images and electrical current. Digital semiconductors process discrete values, for example, two values, such as 0s and 1s, used by computers. Mixed-signal semiconductors combine analog and digital functions in a single product. 
+
+      In the consumer electronics industry, until recently, audio soundtracks and video images were transmitted, edited and stored almost exclusively using analog formats. Given advances in technology, audio and video now can be stored in digital format. This format allows for the manipulation of audio and video signals through digital signal processors (“DSPs”). With digital signal processors, digital audio and digital video signals can be compressed, improving storage and efficiencies in transmissions and they can be transmitted and reproduced without degradation in the sound or images. Digital formatting also provides greater security from unauthorized copying, better editing capabilities and random access to data. 
+
+      In addition, increasing advances in semiconductor technology are resulting in the convergence of consumer electronics products, which means cost savings and added convenience and functionality for consumers. For example, compact disk (“CD”) players were introduced to play audio content in the CD format only. Later, digital video disk (“DVD”) players were introduced, combining audio with video. These consumer electronics products now support additional audio and video formats, such as MP3 audio and MPEG-4 video. As these digital home entertainment systems converge and become increasingly complex, makers of these systems will need sophisticated IC chips that have many features and are cost-effective. 
+
+      Manufacturers of consumer electronics products also face expedited time-to-market demands. In addition, because analog or mixed-signal IC design is a specialized field of IC design, manufacturers increasingly are asking third parties to provide advanced, analog or mixed-signal ICs. The design of the analog component of a mixed-signal IC is complex and difficult, and requires engineers to optimize speed, power and resolution within standard manufacturing processes. 
+
+3 
+
+
+
+--------------------------------------------------------------------------------
+
+
+Table of Contents
+
+Markets and Products 
+
+      We are focused on becoming a leader in digital audio, video and high-performance analog and mixed-signal ICs for consumer entertainment, automotive entertainment and high-precision industrial measurement applications. During fiscal year 2004, we organized our products into the following product categories: 
+
+      Audio: analog and mixed-signal products for consumer, industrial, automotive, and other applications; digital home audio processors and digital portable processors; commercial audio processors; automotive audio solutions; and embedded processors. 
+
+      Video: digital video products for DVD recorders, DVD receivers and home theater recorder systems. 
+
+      We offer more than 250 products to over 3,000 customers worldwide through both direct and indirect sales channels. Our major customers are among the world’s leading electronics manufacturers. We target both large existing and emerging growth consumer electronic markets that derive value from our expertise in advanced analog or mixed-signal design processing, systems-level integrated circuit engineering and embedded software. 
+
+      The following table summarizes sales to customers that represent more than 10 percent of our consolidated net sales: 
+
+                          
+  March 27,  March 29,  March 30, 
+  2004  2003  2002 
+  
+--------------------------------------------------------------------------------
+  
+--------------------------------------------------------------------------------
+  
+--------------------------------------------------------------------------------
+ 
+Memec Holdings Group      20 %     15 %     —   
+Fujitsu, Ltd.      —       —       21 % 
+Thomson S.A.      —       12 %     15 % 
+
+AUDIO 
+
+ 
+  
+1. Analog and Mixed-Signal Processing Components 
+
+      We are a recognized leader in analog and mixed-signal technologies that enable today’s new home and automotive entertainment products, as well as high-precision industrial measurement applications. 
+
+ 
+  
+ Consumer Analog and Mixed-Signal 
+
+      We are a leader in precision analog and mixed-signal ICs for audio converters. We have developed a wide range of solutions for multiple market segments. Our value in serving this market includes our ability to offer high quality, cost-effective solutions to OEMs that help them accelerate their time-to-market with advanced audio products. Our products include audio analog-to-digital converters (“ADCs”), audio digital-to-analog converters (“DACs”), audio encoder/decoders (“CODECs”) that integrate ADCs and DACs into a single IC, digital interface ICs (“S/PDIFs”), TV encoders (“Video DAC”) and digital amplifiers. These proprietary products leverage a patent portfolio of more than 200 patents focused on analog and mixed-signal technology. 
+
+      Our products include: 
+
+   
+  •  the CS5341, CS5342 and CS5381, which are analog-to-digital converters for digital audio. These devices perform sampling, analog-to-digital (“A/D”) conversion and anti-alias filtering, generating 24-bit values for both left and right inputs in serial form at sample rates of up to 200 kHz per channel;  
+  
+  •  the CS4398, which is a complete stereo 24-bit, 192 kHz DAC;  
+  
+  •  the CS424XX family of CODECs, which feature two analog-to-digital and six digital-to-analog converters. These devices provide a cost-effective, high quality surround sound CODEC solution for designers of audio/video receivers and DVD receivers;  
+
+
+4 
+
+
+
+--------------------------------------------------------------------------------
+
+
+Table of Contents
+
+   
+  •  the CS42416/18/26/28 family, which enables advanced features such as DVD-Audio to be added affordably to a broader range of consumer systems. This innovative CODEC family also provides design flexibility and performance levels for a wide range of applications; and  
+  
+  •  the CS8416, which is a digital interface product that receives and decodes one of eight channels of audio data according to the S/ PDIF audio interface standards.  
+
+
+      Our products are used by customers in a wide array of consumer applications, including audio/video receivers (“AVRs”), DVD players and recorders, complete home theater systems, set-top boxes, car audio systems and satellite radios. The products are sold under a variety of brands such as Bose, Denon, Digi Design, Harman Kardon, Kenwood, Mackie, Marantz, Onkyo, Panasonic, Philips, Pioneer, Sony, Technics and Yamaha. 
+
+ 
+  
+ Automotive Analog and Mixed-Signal 
+
+      We have several dozen existing products that can support new automotive audio and “infotainment” applications. In order to expand our automotive product sales, we are in the process of obtaining ISO14001 certification and complying with the requirements of TS-16949. ISO/TS-16949 is an automotive-specific certification for semiconductor suppliers developed in part by the DaimlerChrysler/ Ford/ General Motors Supplier Requirements Task Force to ensure high, consistent standards by semiconductor suppliers. ISO14001 is an environmental management system certification aimed at supporting environmental protection and pollution prevention. In furtherance of these certification procedures, we received ISO9001 certification in December 2003. ISO9001 is a corporate-wide quality assurance certification that encompasses design, development, and production of our technology solutions. 
+
+      In addition to the certifications listed above, we hold a seat on the Automotive Electronics Council (“AEC”) At-Large Members, Electronics Device Manufacturers. The AEC has recently completed a new revision of its AEC-Q100 specification covering stress test qualification for packaged integrated circuits. The AEC-Q100 is a device-specific certification that assists in the “part approval process” by standardizing the qualification procedures used for automotive application integrated circuits. Cirrus Logic has also joined the Automotive Industry Action Group in an effort to be on the leading edge of delivering high quality products that meet the rigorous requirements of the automotive industry. 
+
+      In fiscal year 2004, our customers included Bose Corporation, Delphi Corporation, Harman Becker Automotive Systems, Blaupunkt, Siemens VDO, Johnson Controls, Fujitsu, Hybrid Elektronik, Kiryung Electronics, and Visteon. 
+
+ 
+  
+ Industrial Analog and Mixed-Signal 
+
+      We are a leader in high-precision analog and mixed-signal ICs for industrial measurement. Our products are used in industrial measurement, power meter and geophysical applications. Types of applications include the digital measurement of energy, temperature gauges for industrial use, seismic devices for oil field and seismology applications and high-precision weigh scales for commercial and scientific use. We offer a broad line of ADCs that use patented self-calibration techniques that improve accuracy and reduce system-level cost. Our products include: 
+
+   
+  •  the CS5516, CS5520, CS5532 and CS5550, which are complete solutions for digitizing low-level signals from strain gauges, load cells and weigh scales;  
+  
+  •  the CS3001/02/11/12, which is an operational amplifier family designed to achieve optimum performance while reducing component count and bill of materials costs. Process control, medical and test equipment, temperature measurement and weigh scale applications are a few of the target markets needing these innovative operational amplifiers;  
+  
+  •  the CS3301/02, which are highly integrated programmable-gain differential amplifiers designed from seismic and geophysical applications that require very precise measurements; and  
+
+
+5 
+
+
+
+--------------------------------------------------------------------------------
+
+
+Table of Contents
+
+   
+  •  the CS5460A, CS5461/62 and CS5471, which are highly integrated, ADCs developed for the power measurement industry.  
+
+
+      Our customers include ABB, Actaris, Mettler-Toledo, National Instruments, Rockwell Automation, Schlumberger and Western Geco. 
+
+ 
+  
+ Other Analog and Mixed-Signal 
+
+ 
+  
+ Communications 
+
+      We also sell embedded Ethernet semiconductors for use in consumer and industrial applications. In addition, we sell telephony ICs, primarily T1/E1/J1 Line Interface Units, which provide switched interface solutions for telecommunications and data communications equipment. 
+
+ 
+  
+ Computer Audio 
+
+      Our ICs are also incorporated into the motherboards of desktop and notebook computers and workstations, as well as in external cards that plug into computers and workstations that enable audio functions on those machines. Prior to fiscal year 2004, we de-emphasized our low margin computer audio product line and focused our investments in other audio products. 
+
+ 
+  
+2. Audio Entertainment Processors 
+
+      We are a recognized leader providing digital audio IC solutions, from high-end commercial audio to mass-market consumer electronics. 
+
+ 
+  
+ Digital Home Audio 
+
+      We are a leading supplier of digital audio processors to the home AVR market. Our home audio products are incorporated into multi-channel, surround-sound AVRs and home-theater-in-a-box systems. Integrated DSP products, our largest product offering in this market, decode all major industry standards of digital multi-channel audio. Our product line consists of three distinct families of DSPs, which are designed to support a variety of standards, including Dolby® Digital, MPEG-2 stereo and multi-channel decoding, DTS® multi-channel decoding and AACTM stereo and multi-channel decoding. These products provide a complete and flexible solution for stereo and multi-channel audio decoding in home audio/video receiver/ amplifiers, digital television, set-top boxes and similar products. 
+
+      Our newest family of multi-channel audio DSPs, the CS49500 family, provides dual 32-bit, fixed point digital signal processor cores, optimized for audio applications, to power next-generation designs. These designs can be easily developed using Cirrus Logic’s modular software framework, which includes both certified application programs provided by us, as well as a modular programming environment for easy customization. This family also provides system level peripherals and internal memory, allowing many processing tasks, including Dolby Digital, Dolby Pro Logic® IIx, AAC, DTS-ES 96/24, THX® Ultra 2 Cinema and other advanced post-processing, to be accomplished without external logic or memory. 
+
+      Our customers include Bose, Harman Kardon, Kenwood, LG Electronics, Marantz, Onkyo, Panasonic, Pioneer, RCA/ Thomson S.A., Sony and Yamaha. 
+
+ 
+  
+ Digital Portable Audio 
+
+      Our portable audio products, including the CS7410 and the EP7312, are incorporated into flash memory-based MP3/WMA (“Windows Media® Audio”) compressed audio players, CD-based MP3/WMA players and hard disk drive-based jukeboxes. MP3 technology typically provides a greater than ten-to-one file size reduction for digital audio content. Our products in this area provide a comprehensive solution to address flash, CD and hard-disk drive MP3/WMA players through powerful processing capabilities and advanced features for the music and technology enthusiast. In addition to the extensive feature set for this market, these products have low-power requirements and a small package size, which makes them an ideal IC solution for 
+
+6 
+
+
+
+--------------------------------------------------------------------------------
+
+
+Table of Contents
+
+portable electronics. These solutions are versatile enough to support both high-end and low-end applications. During fiscal year 2004, we curtailed further investment in research and development for digital portable audio products. 
+      Our customers include Creative Technologies, iRiver, and Sanyo Electric Co. 
+
+ 
+  
+ Commercial Audio 
+
+      With our fiscal year 2002 acquisition of Peak Audio, Inc. (“Peak”), we expanded our commercial audio product set to include the commercial audio industry’s leading technology for distributing uncompressed, real-time, digital audio over Fast Ethernet networks based on CobraNetTM technology. CobraNet technology has been deployed at a variety of venues, including rock concerts, opera halls, resorts, championship sports events and the United States Senate. As of March 27, 2004, over 40 entities have licensed CobraNet as their solution for audio networking. 
+
+      In addition, during fiscal year 2004, we introduced the CS18101, a digital audio networking processor, which includes the CobraNet technology integrated into a DSP. The introduction of the CS18101 allows manufacturers to offer audio networking products using CobraNet technology in lower-cost products. Capable of handling eight bi-directional audio channels, the CS18101 is well suited for use in power speakers, power amplifiers, signal-processing devices and mixing consoles. 
+
+      CobraNet licensees include Bose KK Japan, BSS Audio, Crown, JBL, Mackie, Shure and Yamaha. 
+
+ 
+  
+3. Embedded Processors 
+
+      Our family of 32-bit general-purpose system-on-a-chip processor supports a wide range of price performance points and applications for consumer, commercial and industrial applications. Our Seven Series and Nine Series product lines are built around industry-standard ARM® processor cores, which offer an extensive range of development tools and qualified software products, reducing the time-to-market for new applications. We currently offer seven general-purpose system-on-a-chip processors leveraging the ARM cores, including the EP9315, which is a highly integrated system-on-a-chip processor based on the ARM920T processor core. Our new Nine Series of system-on-a-chip processors includes all the peripherals required for complex application including, hard-disk interfaces, networking capability, graphical display support and USB ports. We believe these products are ideal for a wide range of market applications such as digital media servers, point-of-sales terminals, audio/ video jukeboxes, telematic control systems, intelligent home controllers, multi-zoned stereo audio systems, Internet radios, industrial controls, KVM controllers, biometric security systems and GPS devices. 
+
+      Our customers include Ceiva, Creative Technologies, Good Technology, iRiver, Kenwood, Matsushita, Motorola, Onkyo, Phatnoise, RayMarine, Raytheon and Sagem. 
+
+VIDEO 
+
+      We are focused on providing versatile silicon and software solutions for such markets as DVD receivers, DVD recorders, and home theater systems. This strategy is designed to help manufacturers get to market faster with cost-effective, proven video-enabled solutions. 
+
+     Digital Video Products 
+
+      We are a mass-market supplier for digital video recording, offering a complete hardware/ software platform designed to speed OEMs’ time to market. We enhanced our video product line through our fiscal year 2002 acquisition of Stream Machine Company (“Stream Machine”) and LuxSonor Semiconductors, Inc. (“LuxSonor”). Our consumer entertainment video product line provides MPEG-2 encoders and decoders for DVD recorders, DVD receivers, hard disk-based PVRs and PC Video recording peripherals. During the second half of fiscal year 2004, we emerged as a leader in the merchant market for DVD recording solutions. 
+
+7 
+
+
+
+--------------------------------------------------------------------------------
+
+
+Table of Contents
+
+      Our products include the CS92288, which is a single chip, real-time MPEG-2 audio/video encoder that is targeted for consumer video recording products such as DVD recorders, Personal Video Recorders (“PVRs”) and USB video recorder peripherals for PCs. It includes an integrated system multiplexor/demultiplexor and an on-screen display feature. In addition, the CS92288 is capable of encoding and decoding MP3 audio, making it suitable to provide audio jukebox functionality in hard disk-drive devices. In combination with the CS98XXX family of MPEG-2 audio/video decoders, the CS92288 is used by manufacturers of mass-market DVD recorders. 
+
+      In fiscal year 2004, we announced our third generation of MPEG encoding chips, the CS9268X family. We believe that this new product line will offer an ideal solution for manufacturers of more affordable DVD recorders and combination DVD recorders with optical- and hard-disk drive storage capabilities. The CS9268X integrates on an IC most of the functions required to provide a digital video (“DV”) interface, thereby reducing the system bill of material. The DV interface permits a consumer to easily connect a DV camcorder directly to a DVD recorder in order to view or archive home digital video clips. 
+
+      In fiscal year 2004, we announced a chipset and software platform designed to spur a new market classification of digital entertainment products — the Home Theater Recorder. This platform features the audio and video chipsets, including the CS92688 and CS98200 and software necessary to integrate a digital AVR with DVD encode and playback capability. We believe that this platform will be manufactured and marketed to consumers as a single product, packaged and sold with home-theater-style speakers for multi-channel surround sound. 
+
+      Our customers, several of which sell products under their own brand name as well as other retail brands, for digital video encoding products include ADS Technologies, BBK Electronics, CyberHome, Ellion, Kiss, LG Electronics, Mustek, Pinnacle Systems, Sampo and Samsung. 
+
+Manufacturing 
+
+      We contract with third parties for all of our wafer fabrication and assembly, as well as for an increasing portion of our testing. Our fabless manufacturing strategy allows us to concentrate on our design strengths, minimize fixed costs and capital expenditures, access advanced manufacturing facilities and have flexibility on sourcing multiple leading-edge technologies through strategic alliances. After wafer fabrication by the foundry, third-party assembly vendors package the wafer die. The finished products are then sent for testing before shipment to our customers. Our manufacturing organization qualifies each product, participates in process and package development, defines and controls the manufacturing process at our suppliers, develops test programs and performs production testing of products in accordance with our ISO-certified quality management system. We use multiple foundries, assembly houses and test houses. 
+
+      On June 26, 2003, we announced that Cirrus Logic had agreed to sell its semiconductor test operations assets in Austin, Texas to ChipPAC, Inc. (“ChipPAC”). In addition to the transfer of assets, Cirrus Logic and ChipPAC entered into a long-term strategic alliance, under which ChipPAC provides package development, wafer probe, assembly, final test and distribution services to Cirrus Logic. This transition is expected to be completed by the end of calendar 2004. See “Item 7 — Management’s Discussion and Analysis of Financial Condition and Results of Operations” for further detail. 
+
+Patents, Licenses and Trademarks 
+
+      We rely on trade secret, patent, copyright and trademark laws to protect our intellectual property products and technology. We intend to continue this practice in the future to protect our products and technologies. As of March 27, 2004, we held 884 U.S. patents, 218 U.S. patent applications pending and various corresponding international patents and applications. Our U.S. patents expire in years 2005 through 2022. 
+
+      We have obtained U.S. federal registrations for the CIRRUS LOGIC®, CIRRUS® and CobraNetTM trademarks and our Cirrus Logic logo trademark. These U.S. registrations may be renewed as long as the 
+
+8 
+
+
+
+--------------------------------------------------------------------------------
+
+
+Table of Contents
+
+marks continue to be used in interstate commerce. We have also filed or obtained foreign registration for these marks in other countries or jurisdictions where we conduct, or anticipate conducting, international business. 
+      To complement our own research and development efforts, we have also licensed and expect to continue to license, a variety of intellectual property and technologies important to our business from third parties. 
+
+Research and Development 
+
+      We concentrate our research and development efforts on the design and development of new products for each of our principal markets. We also fund certain advanced-process technology development, as well as other emerging product opportunities. Expenditures for research and development in fiscal years 2004, 2003 and 2002 were $76.2 million, $95.3 million and $108.1 million, respectively. These amounts exclude acquired in-process research and development expenses and amortization of acquired intangibles of $14.4 million, $17.8 million and $42.5 million, in fiscal years 2004, 2003 and 2002, respectively. Our future success is highly dependent upon our ability to develop complex new products, to transfer new products to volume production in a timely fashion, to introduce them to the marketplace ahead of the competition and to have them selected for design into products of leading systems manufacturers. Our future success may also depend on assisting our customers with integration of our components into their new products, including providing support from the concept stage through design, launch and production ramp. 
+
+Competition 
+
+      Markets for our products are highly competitive and we expect that competition will continue to increase. We compete with other semiconductor suppliers that offer standard semiconductors, application-specific integrated circuits (“ASICs”) and fully customized integrated circuits, including embedded software, chip and board-level products. A few customers also develop integrated circuits that compete with our products. Our strategy involves providing lower-cost versions of existing products and new, more advanced products for customers’ new designs. 
+
+      While no single company competes with us in all of our product lines, we face significant competition in each of our major product lines. We expect to face additional competition from new entrants in our markets, which may include both large domestic and international IC manufacturers and smaller, emerging companies. 
+
+      The principal competitive factors in our markets include time-to-market; quality of hardware/ software design and end-market systems expertise; price; product benefits that are characterized by performance, features, quality and compatibility with standards; access to advanced process and packaging technologies at competitive prices; and sales and technical support, including assisting our customers with integration of our components into their new products and providing support from the concept stage through design, launch and production ramp. 
+
+      Competition typically occurs at the design stage, where the customer evaluates alternative design approaches that require integrated circuits. Because our products have not been available from second sources, we generally do not face direct competition in selling our products to a customer once our integrated circuits have been designed into that customer’s system. In products with relatively short life cycles and even shorter design-in cycles, for example, DVD recorders, our competitors have increasingly frequent opportunities to achieve design wins in next-generation systems. In the event that competitors succeed in supplanting our products, our market share may not be sustainable and net sales, gross margins and earnings could be adversely affected. 
+
+Sales, Marketing and Technical Support 
+
+      Although we sell products worldwide, we sell principally to Asia. Export sales, which include sales to customers with manufacturing plants outside the United States, were 72 percent, 77 percent, and 85 percent in fiscal years 2004, 2003 and 2002, respectively. We maintain a worldwide sales force, which is intended to provide geographically specific selling support to our customers and specialized selling of product lines with unique customer bases. 
+
+9 
+
+
+
+--------------------------------------------------------------------------------
+
+
+Table of Contents
+
+      Our domestic sales force includes a network of regional direct sales offices located in Colorado, Massachusetts, Oregon and Texas. International sales offices and staff are located in Hong Kong, Japan, the People’s Republic of China, Singapore, South Korea, Taiwan and the United Kingdom. We supplement our direct sales force with external sales representatives and distributors. Our technical support staff is located in California, Colorado, Indiana, Texas, Japan, the People’s Republic of China and Singapore. 
+
+Backlog 
+
+      Sales are made primarily pursuant to standard short-term purchase orders for delivery of standard products. The quantity actually ordered by the customer, as well as the shipment schedules, are frequently revised, without significant penalty, to reflect changes in the customer’s needs. We utilize backlog as an indicator to assist us in production planning. However, backlog is influenced by several factors including market demand, pricing and customer order patterns in reaction to product lead times. Quantities actually purchased by customers, as well as prices, are subject to variations between booking and delivery to reflect changes in customer needs or industry conditions. As a result, we believe that our backlog at any given time is not a meaningful indicator of future revenues. 
+
+Employees 
+
+      As of March 27, 2004, we had 767 full-time equivalent employees, of whom 58 percent were engaged in research and product development activities, 28 percent in sales, marketing, general and administrative activities and 14 percent in manufacturing-related activities. Our future success depends, in part, on our ability to continue to attract, retain and motivate highly qualified technical, marketing, engineering and administrative personnel. 
+
+      Due to the highly competitive nature of the marketplace that we operate in, we may from time to time lose key employees to our competitors. We have been able to hire qualified personnel in the past to fill open positions created by these occurrences, although there can be no assurance that we will be able to do this in the future. None of our employees are represented by collective bargaining agreements. 
+
+Factors Affecting Our Business and Prospects 
+
+      Our business faces significant risks. The risk factors set forth below may not be the only ones that we face. Additional risks that we are not aware of yet or that currently are not material may adversely affect our business operations. You should read the following cautionary statements in conjunction with the factors discussed elsewhere in this and other of Cirrus Logic’s filings with the Securities and Exchange Commission (“SEC”). These cautionary statements are intended to highlight certain factors that may affect the financial condition and results of operations of Cirrus Logic and are not meant to be an exhaustive discussion of risks that apply to companies such as ours. 
+
+ 
+  
+ We operate in a highly cyclical and volatile industry. 
+
+      We are subject to business cycles and it is difficult to predict the timing, length, or volatility of these cycles. During downturns, customers usually reduce purchases, delay delivery of products, shorten lead times on orders and/or cancel orders. During upturns, our third party suppliers and contract manufacturers may have supply constraints that result in higher costs, longer lead times, and/or an inability to meet customer demand. These business cycles may create pressure on our net sales, gross margins and operating income. 
+
+      We cannot assure you that any future downturn or upturn, will not have a material adverse effect on our business and results of operations. We cannot assure you that we will not experience substantial period-to-period fluctuations in revenue due to general semiconductor industry conditions or other factors. 
+
+10 
+
+
+
+--------------------------------------------------------------------------------
+
+
+Table of Contents
+
+ 
+  
+ Our business is highly dependent on the expansion of the consumer digital entertainment electronics market. 
+
+      The major focus of our business is the consumer digital entertainment electronics market. Our ICs are used in AVRs, compressed personal audio players, DVD recorders, digital automotive audio applications and set-top boxes. We expect the consumer digital market to expand over time. A decline in consumer confidence and consumer spending relating to economic conditions, terrorist attacks, armed conflicts, global health conditions and/or the political stability of other countries, however, could have a material adverse effect on our business. 
+
+ 
+  
+ Our products are complex and could contain defects, which could reduce sales of those products or result in claims against us. 
+
+      Product development in the markets we serve is becoming more focused on the integration of multiple functions on individual devices. There is a general trend towards increasingly complex products. The greater integration of functions and complexity of operations of our products increases the risk that our customers or end users could discover latent defects or subtle faults after volumes of product have been shipped. This could result in: 
+
+   
+  •  a material recall and replacement costs for product warranty and support,  
+  
+  •  an adverse impact to our customer relationships by the occurrence of significant defects,  
+  
+  •  a delay in recognition or loss of revenues, loss of market share, or failure to achieve market acceptance, and  
+  
+  •  a diversion of the attention of our engineering personnel from our product development efforts.  
+
+
+      The occurrence of any of these problems could result in the delay or loss of market acceptance of our products and would likely harm our business. In addition, any defects or other problems with our products could result in financial or other damages to our customers who could seek damages from us for their losses. A product liability claim brought against us, even if unsuccessful, would likely be time consuming and costly to defend. While we believe that we are reasonably insured against these risks, there can be no assurance that we will be able to obtain insurance in amounts or of sufficient scope to provide us with adequate coverage against all potential liability. See “Item 3 — Legal Proceedings” for further information regarding outstanding litigation. 
+
+ 
+  
+ Our success depends on our ability to introduce new products on a timely basis. 
+
+      Our success depends upon our ability to develop new products for new and existing markets, to introduce these products in a timely manner and to have these products gain market acceptance. The development of new products is highly complex and from time to time, we have experienced delays in developing and introducing these new products. Successful product development and introduction depend on a number of factors, including: 
+
+   
+  •  proper new product definition,  
+  
+  •  timely completion of design and testing of new products,  
+  
+  •  assisting our customers with integration of our components into their new products, including providing support from the concept stage through design, launch and production ramp,  
+  
+  •  successfully developing and implementing the software necessary to integrate our products into our customers’ products,  
+  
+  •  achievement of acceptable manufacturing yields,  
+  
+  •  availability of wafer, assembly and test capacity,  
+
+
+11 
+
+
+
+--------------------------------------------------------------------------------
+
+
+Table of Contents
+
+   
+  •  market acceptance of our products and the products of our customers, and  
+  
+  •  obtaining and retaining industry certification requirements.  
+
+
+      Although we seek to design products that have the potential to become industry standard products, we cannot assure you that the market leaders will adopt any products introduced by us, or that any products initially accepted by our customers that are market leaders will become industry standard products. Both revenues and margins may be materially affected if new product introductions are delayed, or if our products are not designed into successive generations of our customers’ products. We cannot assure you that we will be able to meet these challenges, or adjust to changing market conditions as quickly and cost-effectively as necessary to compete successfully. Our failure to develop and introduce new products successfully could harm our business and operating results. 
+
+      Successful product design and development is dependent on our ability to attract, retain and motivate qualified design engineers, of which there is a limited number. Due to the complexity and variety of analog and high-precision analog and mixed-signal circuits, the limited number of qualified circuit designers and the limited effectiveness of computer-aided design systems in the design of analog and mixed-signal circuits, we cannot assure you that we will be able to successfully develop and introduce new products on a timely basis. 
+
+ 
+  
+ We have historically experienced fluctuations in our operating results and expect these fluctuations to continue in future periods. 
+
+      Our quarterly and annual operating results are affected by a wide variety of factors that could materially and adversely affect our net sales, gross margins and operating income. These factors include: 
+
+   
+  •  the volume and timing of orders received,  
+  
+  •  changes in the mix of our products sold,  
+  
+  •  market acceptance of our products and the products of our customers,  
+  
+  •  competitive pricing pressures,  
+  
+  •  our ability to introduce new products on a timely basis,  
+  
+  •  the timing and extent of our research and development expenses,  
+  
+  •  the failure to anticipate changing customer product requirements,  
+  
+  •  disruption in the supply of wafers, assembly or test services,  
+  
+  •  certain production and other risks associated with using independent manufacturers, assembly houses and testers, and  
+  
+  •  product obsolescence, price erosion, competitive developments and other competitive factors.  
+
+
+ 
+  
+ We need to manage the transition of the sale of our test operations assets to ChipPAC. 
+
+      On June 26, 2003, we agreed to sell our test operation assets, consisting of analog and mixed-signal testers, handlers and wafer probes, to ChipPAC, a provider of IC packaging design, assembly, test and distribution services. ChipPAC will transfer these test assets to its China facility over the remainder of the fiscal year. This asset transfer may involve a number or risks, including but not limited to: 
+
+   
+  •  the potential disruption of our ongoing business,  
+  
+  •  possibly having to secure additional capacity with another test provider during fiscal year 2005, as we complete the transfer our testers to ChipPAC in China,  
+  
+  •  the diversion of management’s resources involved in monitoring this transition and ensuring that we have adequate test operations during the transition period from other business concerns, and  
+
+
+12 
+
+
+
+--------------------------------------------------------------------------------
+
+
+Table of Contents
+
+   
+  •  incurring unknown difficulties associated with the transfer of the assets to China, thereby jeopardizing the ongoing testing operations performed by ChipPAC and as a result, adversely affecting our ability to have our products tested in a timely manner.  
+
+
+ 
+  
+ Strong competition in the high-performance IC market may harm our business. 
+
+      The IC industry is intensely competitive and is frequently characterized by rapid technological change, price erosion and design and other technological obsolescence. Because of shortened product life cycles and even shorter design-in cycles in a number of the markets that we serve, particularly consumer entertainment, our competitors have increasingly frequent opportunities to achieve design wins in next-generation systems. In the event that competitors succeed in supplanting our products, our market share may not be sustainable and net sales, gross margins and results of operations would be adversely affected. 
+
+      We compete in a number of fragmented markets. Our principal competitors in these various markets include AKM Semiconductors, ALi Semiconductor, AMD, ATMEL, Analog Devices, Broadcom, Conexant, ESS Technologies, Freescale Semiconductor, Fujitsu DSP, Intel, Linear Technology, LSI Logic, Maxim, Mediatek, Micronas, Philips, Samsung Semiconductor, Sharp Semiconductor, SigmaTel, ST Microelectronics, Sunplus, Texas Instruments, Tripath, Wolfson and Zoran, many of whom have substantially greater financial, engineering, manufacturing, marketing, technical, distribution and other resources, broader product lines, greater intellectual property rights and longer relationships with customers than we have. We also expect intensified competition from emerging companies and from customers who develop their own IC products. In addition, some of our current and future competitors maintain their own fabrication facilities, which could benefit them in connection with cost, capacity and technical issues. 
+
+      Increased competition could adversely affect our business. We cannot assure you that we will be able to compete successfully in the future or that competitive pressures will not adversely affect our financial condition and results of operations. Competitive pressures could reduce market acceptance of our products and result in price reductions and increases in expenses that could adversely affect our business and our financial condition. 
+
+ 
+  
+ Our products may be subject to average selling prices that decline over short time periods; if we are unable to increase our volumes, introduce new or enhanced products with higher selling prices or reduce our costs, our business and operating results could be harmed. 
+
+      Historically in the semiconductor industry, average selling prices of products have decreased over time, while manufacturing costs remained fixed. If the average selling price of any of our products declines and we are unable to increase our unit volumes, introduce new or enhanced products with higher margins and/or reduce manufacturing costs to offset anticipated decreases in the prices of our existing products, our operating results may be adversely affected. In addition, because of procurement lead times, we are limited in our ability to reduce total costs quickly in response to any revenue shortfalls. Because of these factors, we may experience material adverse fluctuations in our future operating results on a quarterly or annual basis. 
+
+ 
+  
+ We have significant international sales and risks associated with these sales that could harm our operating results. 
+
+      Export sales, principally to Asia, include sales to U.S-based customers with manufacturing plants overseas and accounted for 72 percent, 77 percent and 85 percent of our net sales in fiscal years 2004, 2003 and 2002, respectively. We expect export sales to continue to represent a significant portion of product sales. This reliance on sales internationally subjects us to the risks of conducting business internationally, including political and economic stability and global health conditions, especially in Asia. For example, the financial instability in a given region, such as Asia, may have an adverse impact on the financial position of end users in the region, which could impact future orders and harm our results of operations. Our international sales operations involve a number of other risks, including: 
+
+   
+  •  unexpected changes in regulatory requirements,  
+
+
+13 
+
+
+
+--------------------------------------------------------------------------------
+
+
+Table of Contents
+
+   
+  •  changes in diplomatic and trade relationships,  
+  
+  •  delays resulting from difficulty in obtaining export licenses for technology,  
+  
+  •  tariffs and other barriers and restrictions,  
+  
+  •  competition with foreign companies or other domestic companies entering the foreign markets in which we operate,  
+  
+  •  longer sales and payment cycles,  
+  
+  •  problems in collecting accounts receivable,  
+  
+  •  political instability, and  
+  
+  •  the burdens of complying with a variety of foreign laws.  
+
+
+      In addition, we may buy hedging instruments to reduce our exposure to currency exchange rate fluctuations and our competitive position can be affected by the exchange rate of the U.S. dollar against other currencies. Consequently, increases in the value of the dollar would increase the price in local currencies of our products in foreign markets and make our products relatively more expensive. Alternatively, decreases in the value of the dollar will increase the relative cost of our and our vendors’ operations that are based overseas. We cannot assure you that regulatory, political and other factors will not adversely affect our operations in the future or require us to modify our current business practices. 
+
+ 
+  
+ The expansion of our international operations subjects our business to additional economic risks that could have an adverse impact on our business. 
+
+      In addition to export sales constituting a majority of our net sales, we are expanding our international operations. Specifically, we have recently focused our efforts on expanding in the People’s Republic of China by employing design, sales and technical support personnel. In addition, we are also using contract manufacturers in the region for foundry, assembly and/or test operations. Expansion into this region has required and will continue to require significant management attention and resources. We have limited experience in the Chinese market and may not succeed in expanding our presence into this market or other international markets. Failure to do so could harm our business. In addition, there are risks inherent in expanding our presence into foreign regions, including, but not limited to: 
+
+   
+  •  difficulties in staffing and managing foreign operations,  
+  
+  •  failure of foreign laws to protect our U.S. proprietary rights adequately,  
+  
+  •  additional vulnerability from terrorist groups targeting American interests abroad,  
+  
+  •  legal uncertainty regarding liability and compliance with foreign laws, and  
+  
+  •  regulatory requirements.  
+
+
+ 
+  
+ Our sales may fluctuate due to seasonality of customer demand. 
+
+      As our sales to the consumer entertainment market increase, we are more likely to be affected by seasonality in the sales of our products. In particular, a significant portion of consumer electronics products are sold worldwide during the back-to-school and holiday seasons. As a result, we expect stronger sales of devices into the consumer entertainment market to occur in our second and third fiscal quarters in anticipation of these seasons. 
+
+ 
+  
+ If we fail to attract, hire and retain qualified personnel, we may not be able to develop, market, or sell our products or successfully manage our business. 
+
+      Competition for personnel in our industry is intense. The number of technology companies in the geographic areas in which we operate is greater than it has been historically and we expect competition for qualified personnel to intensify. There are only a limited number of people in the job market with the requisite 
+
+14 
+
+
+
+--------------------------------------------------------------------------------
+
+
+Table of Contents
+
+skills. Our human resources organization focuses significant efforts on attracting and retaining individuals in key technology positions. For example, start-up companies generally offer larger equity grants to attract individuals from more established companies. The loss of the services of any key personnel or our inability to hire new personnel with the requisite skills could restrict our ability to develop new products or enhance existing products in a timely manner, sell products to our customers, or manage our business effectively. 
+ 
+  
+ We may incur inventory charges or write-downs as a result of shifts in industry-wide capacity and our practice of purchasing our products based on sales forecasts. 
+
+      Shifts in industry-wide capacity from shortages to oversupply, or from oversupply to shortages, may result in significant fluctuations in our quarterly and annual operating results. We must order wafers and build inventory well in advance of product shipments. Because our industry is highly cyclical and is subject to significant downturns resulting from excess capacity, overproduction, reduced demand, order cancellations, or technological obsolescence, there is a risk that we will forecast inaccurately and produce excess inventories of particular products. 
+
+      In addition, we generally order our products through non-cancelable orders from third-party foundries based on our sales forecasts and our customers can generally cancel or reschedule orders they place with us without significant penalties. If we do not receive orders as anticipated by our forecasts, or customers cancel orders that are placed, we may experience increased inventory levels. 
+
+      Due to the product manufacturing cycle characteristic of IC manufacturing and the inherent imprecision by our customers to accurately forecast their demand, product inventories may not always correspond to product demand, leading to shortages or surpluses of certain products. As a result of such inventory imbalances, future inventory write-downs or charges may occur due to lower of cost or market accounting, excess inventory, or inventory obsolescence. 
+
+ 
+  
+ We rely on independent foundries to manufacture our products, which subjects us to increased risks. 
+
+      We rely on independent foundries to manufacture all of our wafers. Our reliance on these foundries involves several risks and uncertainties, including: 
+
+   
+  •  the possibility of an interruption or loss of manufacturing capacity,  
+  
+  •  the lack of control over delivery schedules, quality assurance, manufacturing yields and costs,  
+  
+  •  the inability to secure necessary capacity to meet customer demand,  
+  
+  •  possible misappropriation of our intellectual property, and  
+  
+  •  the inability to reduce our costs as quickly as competitors who manufacture their own products and are not bound by set prices.  
+
+
+      Market conditions could result in wafers being in short supply and prevent us from having adequate supply to meet our customer requirements. In addition, any prolonged inability to utilize third-party foundries because of fire, natural disaster, or otherwise, would have a material adverse effect on our financial condition and results of operations. If we are not able to obtain additional foundry capacity as required, our relationships with our customers would be harmed and, consequently, our sales would likely be reduced and we may be forced to purchase wafers from higher-cost suppliers or to pay expediting charges to obtain additional supply, if we are able to acquire wafers at all. 
+
+      In order to secure additional foundry capacity, we may enter into contracts that commit us to purchase specified quantities of silicon wafers over extended periods. In the future, we may not be able to secure sufficient capacity with foundries in a timely fashion or at all and such arrangements, if any, may not be on terms favorable to us. Moreover, if we are able to secure foundry capacity, we may be obligated to utilize all of that capacity or incur penalties. These penalties may be expensive and could harm our financial results. 
+
+15 
+
+
+
+--------------------------------------------------------------------------------
+
+
+Table of Contents
+
+ 
+  
+ We are dependent on our subcontractors in Asia to perform key manufacturing functions for us. 
+
+      We depend on third-party subcontractors in Asia for the assembly, packaging and testing of our products. International operations and sales may be subject to political and economic risks, including changes in current tax laws, political instability, global health conditions, currency controls, exchange rate fluctuations and changes in import/export regulations, tariff and freight rates, as well as the risks of natural disaster. Although we seek to reduce our dependence on our limited number of subcontractors, this concentration of subcontractors and manufacturing operations in Asia subjects us to the risks of conducting business internationally, including political and economic conditions in Asia. Disruption or termination of the assembly, packaging or testing of our products could occur and such disruptions could harm our business and operating results. 
+
+ 
+  
+ Failure to manage our distribution channel relationships could adversely affect our business. 
+
+      In fiscal years 2004, 2003 and 2002, sales to our distributors accounted for 66 percent, 59 percent and 39 percent, respectively, of our net sales. The future of our business, as well as the future growth of our business, will depend in part on our ability to manage our relationships with current and future distributors and external sales representatives and to develop additional channels for the distribution and sale of our products. The inability to successfully do so could adversely affect our business. 
+
+ 
+  
+ We may need to acquire other companies or technologies and successfully integrate them into our business to compete in our industry. 
+
+      We continue to consider future acquisitions of other companies, or their technologies or products, to improve our market position, broaden our technological capabilities and expand our product offerings. However, we may not be able to acquire, or successfully identify, the companies, products or technologies that would enhance our business. 
+
+      In addition, if we are able to acquire companies, products or technologies, we could experience difficulties in integrating them. Integrating acquired businesses involves a number of risks, including, but not limited to: 
+
+   
+  •  the potential disruption of our ongoing business,  
+  
+  •  unexpected costs or incurring unknown liabilities,  
+  
+  •  the diversion of management’s resources from other business concerns while involved in identifying, completing, and integrating acquisitions,  
+  
+  •  the inability to retain the employees of the acquired businesses,  
+  
+  •  difficulties relating to integrating the operations and personnel of the acquired businesses,  
+  
+  •  adverse effects on the existing customer relationships of acquired companies,  
+  
+  •  the potential incompatibility of business cultures,  
+  
+  •  adverse effects associated with entering into markets and acquiring technologies in areas in which we have little experience, and  
+  
+  •  acquired intangible assets becoming impaired as a result of technological advancements, or worse-than-expected performance of the acquired company.  
+
+
+      If we are unable to successfully address any of these risks, our business could be harmed. 
+
+ 
+  
+ We may be unable to protect our intellectual property rights from third-party claims and litigation. 
+
+      Our success depends on our ability to obtain patents and licenses and to preserve our other intellectual property rights covering our manufacturing processes, products and development and testing tools. We seek patent protection for those inventions and technologies for which we believe such protection is suitable and is likely to provide a competitive advantage to us. We also rely substantially on trade secrets, proprietary technology, non-disclosure and other contractual agreements, and technical measures to protect our technol- 
+
+16 
+
+
+
+--------------------------------------------------------------------------------
+
+
+Table of Contents
+
+ogy and manufacturing know-how. We work actively to foster continuing technological innovation to maintain and protect our competitive position. We cannot assure you that steps taken by us to protect our intellectual property will be adequate, that our competitors will not independently develop or patent substantially equivalent or superior technologies or be able to design around our patents, or that our intellectual property will not be misappropriated. In addition, the laws of some foreign countries may not protect our intellectual property as well as the laws of the United States. 
+ 
+  
+ Potential intellectual property claims and litigation could subject us to significant liability for damages and could invalidate our proprietary rights. 
+
+      The IC industry is characterized by frequent litigation regarding patent and other intellectual property rights. We may find it necessary to initiate a lawsuit to assert our patent or other intellectual property rights. These legal proceedings could be expensive, take significant time and divert management’s attention from other business concerns. We cannot assure you that we will ultimately be successful in any lawsuit. Nor can we assure you that any patent owned by us will not be invalidated, circumvented, or challenged, that rights granted under the patent will provide competitive advantages to us, or that any of our pending or future patent applications will be issued with the scope of the claims sought by us, if at all. 
+
+      As is typical in the IC industry, we and our customers have from time to time received and may in the future receive, communications from third parties asserting patents, mask work rights, or copyrights. In the event third parties were to make a valid intellectual property claim and a license was not available on commercially reasonable terms, our operating results could be harmed. Litigation, which could result in substantial cost to us and diversion of our resources, may also be necessary to defend us against claimed infringement of the rights of others. An unfavorable outcome in any such suit could have an adverse effect on our future operations and/or liquidity. 
+
+ 
+  
+ Some of our products must conform to industry standards in order to be accepted by end users in our markets. 
+
+      Generally, our products comprise only a part of a device. All components of such devices must uniformly comply with industry standards in order to operate efficiently together. We depend on companies that provide other components of the devices to support prevailing industry standards. Many of these companies are significantly larger and more influential in affecting industry standards than we are. Some industry standards may not be widely adopted or implemented uniformly and competing standards may emerge that may be preferred by our customers or end users. If larger companies do not support the same industry standards that we do, or if competing standards emerge, market acceptance of our products could be adversely affected and our business would be harmed. 
+
+      The emergence of new industry standards could render our products incompatible with products developed by other suppliers. As a result, we could be required to invest significant time and effort and to incur significant expense to redesign our products to ensure compliance with relevant standards. If our products are not in compliance with prevailing industry standards for a significant period of time, we could miss opportunities to achieve crucial design wins. We may not be successful in developing or using new technologies or in developing new products or product enhancements that achieve market acceptance. Our pursuit of necessary technological advances may require substantial time and expense. 
+
+ 
+  
+ If we are unable to make continued substantial investments in research and development, we may not be able to develop and sell new products. 
+
+      We make significant investments in research and development activities to develop new and enhanced products and solutions. If we fail to make sufficient investments in research and development programs, new technologies could render our current and planned products obsolete, and our business could be harmed. 
+
+17 
+
+
+
+--------------------------------------------------------------------------------
+
+
+Table of Contents
+
+ 
+  
+ Our stock price may be volatile. 
+
+      The market price of our common stock fluctuates significantly. This fluctuation is the result of numerous factors, including: 
+
+   
+  •  actual or anticipated fluctuations in our operating results,  
+  
+  •  announcements concerning our business or those of our competitors or customers,  
+  
+  •  changes in financial estimates by securities analysts or our failure to perform as anticipated by the analysts,  
+  
+  •  announcements regarding technological innovations or new products by us or our competitors,  
+  
+  •  announcements by us of significant acquisitions, strategic partnerships, joint ventures, or capital commitment,  
+  
+  •  announcements by us of significant divestitures or sale of certain assets or intellectual property,  
+  
+  •  litigation arising out of a wide variety of matters, including, among others, employment matters and intellectual property matters,  
+  
+  •  departure of key personnel,  
+  
+  •  general conditions in the IC industry, and  
+  
+  •  general market conditions and interest rates.  
+
+
+ 
+  
+ We have provisions in our charter, and are subject to certain provisions of Delaware law, which could prevent, delay or impede a change of control of our company. 
+
+      Certain provisions of our Certificate of Incorporation and By-Laws, and Delaware law, could make it more difficult for a third party to acquire us, even if our stockholders support the acquisition. These provisions include: 
+
+   
+  •  our Rights Plan, which the Board of Directors adopted in May 1998 as an anti-takeover measure. The provisions of this plan can be triggered only in certain limited circumstances following the tenth day after a person or group announces acquisitions of or tender offers for 15 percent or more of our common stock;  
+  
+  •  elimination of the right of stockholders to call a special meeting of stockholders;  
+  
+  •  a prohibition on stockholder action by written consent; and  
+  
+  •  a requirement that stockholders provide advance notice of any stockholder nominations of directors or any proposal of new business to be considered at any meeting of stockholders.  
+
+
+      We are also subject to the anti-takeover laws of Delaware that may prevent, delay or impede a third party from acquiring or merging with us, which may adversely affect the market price of our common stock. 

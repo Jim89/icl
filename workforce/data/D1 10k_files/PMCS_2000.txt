@@ -1,0 +1,740 @@
+ITEM 1.  Business.
+
+GENERAL
+- -------
+
+In this Annual Report, "PMC-Sierra",  "PMC", "the Company", "us", "our" or "we",
+includes PMC-Sierra, Inc. and all our subsidiary companies.
+
+We issued one two-for-one stock dividend on May 14, 1999 and another on February
+14,  2000.  The share  numbers  and prices  presented  in this  report have been
+adjusted to reflect these events.
+
+We design, develop, market and support high-performance semiconductor networking
+solutions.  Our products are used in the high speed  transmission and networking
+systems which are being used to restructure  the global  telecommunications  and
+data communications infrastructure.
+
+We provide components for equipment based on Asynchronous Transfer Mode ("ATM"),
+Synchronized Optical Network ("SONET"),  Synchronized Digital Hierarchy ("SDH"),
+T1/E1/J1 and T3/E3/J2 access transmission, High speed Data Link Control ("HDLC")
+and Ethernet. Our networking products adhere to international  standards and are
+sold on the merchant market to over 100 customers either directly or through our
+worldwide distribution channels.
+
+
+PMC-Sierra   was   incorporated   in  the  State  of   California  in  1983  and
+reincorporated in the State of Delaware in 1997. Our principal  executive office
+is located at 105-8555 Baxter Place,  Burnaby,  B.C., Canada V5A 4V7. Our Common
+Stock  trades on the  Nasdaq  National  Market  under the  symbol  "PMCS" and is
+included in the Nasdaq-100 index.
+
+
+
+<PAGE>
+
+
+GLOSSARY OF TERMS
+- -----------------
+
+We use a  number  of  terms  in this  report  which  are  familiar  to  industry
+participants  but which some  investors  may not  recognize.  We have provided a
+glossary of some of these terms below.
+
+ATM: Asynchronous Transfer Mode - a high speed switching technology used in both
+LAN and WAN  applications.  ATM packages  information  in a fixed size (53 byte)
+cell format. ATM transmission rates can scale from 25 megabits per second (Mbps)
+to 10 gigabits per second (Gbps).
+
+Bandwidth: 1. The range of frequencies that can be utilized without interference
+from an outside  transmission of data packets between modules.  2. The volume of
+data  that  a  transmission  line  can  carry,  measured  in  bits  per  second.
+Traditional copper lines have the lowest bandwidth potential,  while fiber optic
+lines have the highest.
+
+Constant Bit Rate (CBR): A type of traffic that requires a continuous,  specific
+amount of bandwidth  over the ATM network.  This is typically  required for high
+quality video and digital voice transmission.
+
+Dense Wavelength  Division  Multiplexing  (DWDM): An extension of WDM technology
+that allows  simultaneous  transmission  of more than four  channels on a single
+fiber.
+
+Digital Subscriber Line:  Point-to-point public network access technologies that
+allow multiple forms of data,  voice, and video to be carried over  twisted-pair
+copper  wire on the local  loop  between a network  service  provider's  central
+office and the customer site at limited  distances.  Most DSL technologies don't
+use the full  bandwidth  of the  twisted-pair,  leaving  enough room for a voice
+channel.
+
+Ethernet: A standard protocol used in the LAN that encompasses both layer 1 (the
+transmission  and  reception  of bits) and layer 2 (the  packaging  of data into
+frames)  functions.  Ethernet  supports data transfer rates of 10Mbps.  The Fast
+Ethernet and Gigabit Ethernet  standards are compatible with previous  standards
+generations  and  support  data  transfer  rates  of 100 Mbps  and  1,000  Mbps,
+respectively.
+
+Frame Relay: A  packet-switching  technology used to route frames of information
+within a WAN.  Instead of leasing  dedicated  lines between all remote sites,  a
+virtual  private network is established in which remote sites are connected to a
+central carrier, which routes data accordingly.
+
+Gigabit:  One billion bits.
+
+HDLC:  High-level  Data  Link  Control  -  A  transmission   protocol  in  which
+information  that  allows  devices to control  data flow and  correct  errors is
+embedded in a data frame. Typically used for frame relay services.
+
+Internet  Protocol (IP): A routing  protocol  standard that is used by Microsoft
+Windows  95,  Windows  NT,  the UNIX  operating  system,  and the  Internet.  IP
+implements the network layer (Layer 3) of the TCP/IP protocol,  which contains a
+network  address  and is used to  route a  message  to a  different  network  or
+subnetwork.
+<PAGE>
+
+LAN:  Local Area Network - A shared network of computers that spans a relatively
+small area, usually confined to a single or close cluster of buildings.
+
+MAN:  Metropolitan  Area  Network  - A  communications  network  that  covers  a
+geographic  area,  such as a city or suburb.  A series of LANs at multiple sites
+often interconnected by public facilities.
+
+Megabit: One million bits.
+
+Multiplexing:  An electronic or optical  process that combines a large number of
+low-speed  transmission  lines into one  high-speed  line by splitting the total
+available  bandwidth of the high-speed line into narrower bands (known as FDM or
+frequency  division),  or by  allotting  a common  channel to several  different
+transmitting  devices,  one at a  time  in  sequence  (known  as  TDM,  or  time
+division).
+
+Packet:  A group of binary  digits  switched as a whole.  Each  packet  contains
+information,  a destination  code,  and a sequencing  code in order to place the
+data in proper place in the sequence of packets  that  comprise a complete  data
+transmission and codes used to check the transmission errors.
+
+Point-of-Presence  (POP):  1. A geographic  area within  which a  communications
+network allows local access.  2.  Locations  where a  long-distance  carrier has
+installed  transmission  equipment  in a service  area that serves as, or relays
+calls  to, a network  switching  center of that  long-distance  carrier.  3. The
+physical site where an Internet  service provider (ISP) has its modems and other
+networking gear. Subscribers dial into the POP for Internet access.
+
+Quality of Service  (QoS):  The  ability to define a level of  performance  in a
+system.  For example,  ATM networks specify modes of service that ensure optimum
+performance for traffic,  such as real-time voice and video.  Voice  information
+receives  priority over data  information  in order to ensure speech quality and
+prevent delay.
+
+Router:  Device that connects  multiple LANs or the bridge between a LAN and the
+WAN.
+
+SDH:  Synchronous Digital Hierarchy - An international  standard for synchronous
+data transmission  over fiber; SDH was adapted from SONET,  which is employed in
+North America.
+
+SONET:  Synchronous Optical Network - Standard for synchronous data transmission
+over fiber. Rates are measured in optical carrier (OC) units. For example,  OC-1
+equals rates of 51.84 Mbps and OC-3 equals rates of 155 Mbps.
+The international equivalent is SDH.
+
+T1/E1/J1: T1 is a digital transmission link with a capacity of 1.544 Mbps. A T-1
+line can  normally  accommodate  24  voice  conversations  (channels),  each one
+digitized at 64 Kbps and one 8-Kpbs channel for signaling and control. E1 is the
+European  designation  for T1 and has a capacity of  approximately 2 Mbps. J1 is
+the Japanese designation for T1.
+<PAGE>
+
+T3/E3/J2:  A data communications line capable of transmission speeds of 45 Mbps.
+A T-3 line can normally accommodate 672 voice conversations.  E3 is the European
+designation for T3 and J2 is the Japanese designation for T3.
+
+Terabit:  One trillion bits.
+
+WANs:  Wide Area  Network - A shared  network  of  computers  that spans a large
+geographical area, normally consisting of multiple LANs or MANs.
+
+
+INDUSTRY BACKGROUND
+- -------------------
+
+People are finding new and more demanding ways to use the world's communications
+networks.  At home,  we use the Internet to shop,  pay our bills or  communicate
+with each other. At the work site, we conduct on-line  meetings,  read the news,
+share  data  across  departments,  download  reports,  sell  products  and order
+supplies.  These  are  just a few of  the  applications  for  which  we use  the
+worldwide communications infrastructure.
+
+The way we use the world's  networks  today is a relatively  recent  phenomenon.
+Until  just a few years  ago,  the  world's  networks  were  primarily  used for
+telephone calls and facsimile  transmissions.  Billions of dollars were spent by
+traditional  phone  companies  to supply  reliable  networks  to  provide  these
+services.  The Internet was just a dream resident at colleges and  universities.
+Now the Internet has become much more broadly  adopted,  and the public  expects
+the  networks of the world to supply the  capacity to support  large  volumes of
+data traffic in addition to phone conversations.
+
+The Bandwidth Suppliers
+
+Two major  types of network  bandwidth  suppliers  are  trying to address  these
+rapidly evolving networking demands:  traditional  telephone companies,  such as
+AT&T, MCI Worldcom and Sprint, and new data-centric competitive carriers such as
+Williams,  Level 3 and UUNET.  These bandwidth  suppliers have used a variety of
+technologies to deliver their network  services.  Many of the traditional  phone
+companies  prefer  "multi-service"  Frame Relay and  Asynchronous  Transfer Mode
+(ATM)  networks  in order  to  leverage  their  existing  infrastructures  while
+providing the Quality of Service (QoS) required to support data, voice and other
+communication  traffic. The newer carriers are more data-centric,  and thus have
+preferred more Internet Protocol (IP) packet based data networks.
+
+Today, the newest network  deployments are focusing on transporting  data, voice
+and  other  communication  signals  over a single  multi-service  network.  Many
+carriers  are building  networks  that  converge  (IP) layers over ATM and Frame
+Relay sub-networks or directly onto fiber.
+
+Carriers  which own  multi-service  networks  enter into  agreements  with their
+customers to guarantee bandwidth for data or voice transport or Internet access.
+These  agreements can enable carriers to increase  revenues as the most critical
+traffic requirements can be guaranteed at a higher price.
+<PAGE>
+
+Carriers  can  commit to  particular  service  levels  because  the QoS  traffic
+management  techniques  made possible by protocols such as ATM have developed an
+excellent capability for providing QoS standard guarantees. Protocols such as IP
+have less developed,  but rapidly improving,  QoS  characteristics.  The current
+lack of acceptable IP-related QoS standards has prohibited the implementation of
+IP across the emerging global network.  Thus,  multi-service  networks are still
+preferred by most of the traditional phone companies.
+
+The Data Wave
+
+Many carriers  believe the next  generation of  communications  networks will be
+IP-based,  as their networks will transport far more data than any other type of
+traffic. Eventually, carriers intend to incorporate the exemplary redundancy and
+reliability  aspects of the voice network  infrastructure in new next-generation
+packet  networks  because they recognize that voice and other traffic will still
+need to be  transported.  Consumers  expect  their  telephones  to work from the
+moment  they pick up the  receiver  and hear the "dial  tone" to the moment they
+hang it up, and they do not expect to "re-boot"  their  phones.  In keeping with
+this  performance  expectation,  the  builders of the  Internet  will attempt to
+develop IP networks that offer the same dependability.
+
+The Optical Transport Network
+
+The emergence of the Optical  Transport Network (OTN) - a network based on glass
+and light  transmission,  rather than  electrical  transmission  - is one of the
+greatest  evolutions  in the  broadband  networking  arena.  Most of the current
+Internet  infrastructure  is based on electrical  transmission over copper wire.
+Many carriers consider the massive  bandwidth  capacity provided by fiber optics
+and Dense Wave Division Multiplexing (DWDM), a method of using color wavelengths
+to create a new network "line" for every color, a more attractive investment for
+long distance transmissions.
+
+In 1999 various carriers deployed  thousands of miles of glass fiber underground
+and alongside railway lines or petroleum  pipelines.  These deployments  provide
+communications  capacity  within or across  continents  (i.e. the  WAN).Emerging
+lower cost DWDM systems are now being  deployed in  Metropolitan  Area  Networks
+(MANs).
+
+The emergence of the OTN has resulted in an optical/electrical convergence where
+optical functions mesh with electrically managed functions. In today's networks,
+optical wavelengths  transport signals and electrical  semiconductors manage the
+higher layer  protocols,  such as IP routing or switching.  PMC offers  products
+that merge  existing  electrical-based  communications  protocols,  such as ATM,
+SONET/SDH,  Internet  Protocol (IP) and Gigabit Ethernet with new  optical-based
+protocols.  In the future,  emerging  technologies such as optical switching and
+routing protocols will become increasingly important.
+
+The standards for this electrical-to-optical  interface have not been finalized.
+The networking  industry's  Optical Domain  Service  Interconnect  industry-wide
+consortium  has over 100 service  providers  and  networking  vendors  which are
+attempting to develop a standards-based approach to convergence. While standards
+are evolving,  small companies are offering the innovation,  time to market, and
+new  technology  required to enable  carriers to the upgrade  rapidly from their
+existing circuit-based networks to an optical multi-service network.
+
+<PAGE>
+
+Systems  suppliers for optical  networking  applications  require  semiconductor
+products with greater levels of integration, increased density, and higher speed
+capabilities.  These  high-speed  techniques  must handle  access rates from 1.5
+megabits per second to core  Internet  backbone  rates of 10 gigabits per second
+and beyond.  They must use little power,  so that larger  networks may be built,
+and comply with telephone company signal quality standards.
+
+Specific Trends
+
+The  following  specific  trends are important to  PMC-Sierra's  internetworking
+semiconductor businesses:
+
+- -        A growing  number of Internet  Service  Providers are using  networking
+     equipment  to  aggregate  networking  traffic  from 64  kilobit  per second
+     streams  with 155 Mbps or more of traffic  that will be sent on fiber lines
+     onto the MAN and WAN core backbones of the Internet.
+
+- -        For Remote Access data and voice networks,  network users are upgrading
+     their Frame Relay networks to aggregate  additional  dedicated line traffic
+     (such as telephones) and differentiate  data traffic protocol types such as
+     ATM,  Frame  Relay  and IP.  These  new  applications  are  referred  to as
+     Any-Service-Any-Port (ASAP).
+
+- -        ATM networks are being  created  which can scale from low-rate 1.5 Mbps
+     to  Terabit  rates for data,  voice and video  traffic  which  require  QoS
+     guarantees.  ATM networks  are being used  increasingly  in  switching  and
+     transmission systems that seek to provide QoS to customers.
+
+- -        The current Internet  infrastructure  is dominated by router entry into
+     WAN backbone fiber  networks.  Sometimes users sending this traffic require
+     maximum  bandwidth.  These  users  may  forego  QoS  and  other  management
+     processing  overhead  to get more  bandwidth.  In these  cases,  mapping IP
+     directly into SONET/SDH  frames is more  efficient  because it does not use
+     bandwidth for  undesired  overhead.  IP-Over-SONET/SDH  (POS) is a protocol
+     used in Ethernet  switches as an uplink to MAN/WAN  fiber  backbone  rings,
+     high-speed Terabit routers and remote access concentrators.  It maps packet
+     traffic directly into SONET/SDH lines and is being deployed by carriers for
+     these users.
+
+- -        For residential Internet  opportunities,  the current 56 kilobit analog
+     modem is a bottleneck.  Emerging  Digital  Subscriber Line (DSL) technology
+     uses the  traditional  phone  lines to your home or office to provide up to
+     several Mbps of bandwidth for Internet access.  New DSL access  multiplexer
+     equipment is making the broad  deployment  of DSLs  possible by providing a
+     manner  with  which  to  manage  all of the  network  traffic  to and  from
+     customers using DSL services.  Cable modems are also providing  residential
+     customers with higher bandwidth access methods to the internet.
+
+- -        Carriers are rapidly  deploying base transceiver  stations for wireless
+     services.  These stations convert waves of radio frequency air traffic into
+     wired networks.  The wired networks then aggregate,  switch and process the
+     signals at primarily T1 or E1 rates.  HDLC and ATM protocols are often used
+     to interface and process the aggregated T1 and E1 lines.
+
+NETWORKING PRODUCTS
+- -------------------
+
+We provide  networking  semiconductor  devices and related technical service and
+support  to  equipment   manufacturers  for  use  in  their  communications  and
+networking equipment. Our objective is to develop networking semiconductors that
+enable network systems  vendors to get to market quickly with high  performance,
+cost effective and scalable systems.
+
+Our product  offerings can be grouped into four general  areas:  ATM,  SONET/SDH
+(including  POS),  Remote  Access and  Ethernet  switching.  These  products are
+generally used in networking equipment as follows:
+
+
+         Table I - Networking Equipment in which PMC's Products are Used
+         ---------------------------------------------------------------
+
+             Networking Equipment        ATM    SONET/SDH     ACCESS    ETHERNET
+
+Wide Area Network (WAN)
+  Remote Access Equipment
+    Frame Relay Access Devices                                  X
+    Access Multiplexers/DSLAMs*           X                     X
+    Wireless Basestations                 X                     X
+    Voice Switches                        X         X           X
+    Digital Loop Carriers                 X                     X
+    Frame Relay Switches                  X                     X
+    Internet Access Concentrators         X                     X
+
+  Transmission and Switching Equipment
+    WAN Edge Switches                     X         X           X          X
+    Routers                               X         X           X          X
+    WAN Core Switches                     X         X           X
+    Digital Cross - Connects              X         X           X
+    Add-Drop Multiplexers                 X         X           X
+    Terminal Multiplexers                 X         X           X
+
+Local Area Network (LAN)
+  Switches/Routers                        X                     X          X
+  Network Interface Cards                 X
+
+* DSLAM = Digital Subscriber Line Access Multiplexer
+
+
+
+The following is a summary of some of our more  significant  products  currently
+available.  The purpose of this table is only to provide a general understanding
+of where our products  fit. Our chips may not perform all the possible  features
+related to a specific  function.  For  example,  we have a number of single port
+OC-3 ATM physical layer products which perform  different  functions  within the
+physical layer of the  networking  hierarchy and are generally used in different
+applications.
+
+
+<PAGE>
+<TABLE>
+<CAPTION>
+
+
+                      Table II - PMC-Sierra Product Summary
+                      -------------------------------------
+
+No.  Product                        Description                           Voltage          Clock Rates/Throughput Capacities
+- ---  -------                        -----------                           -------      ------------------------------------------
+<S>                                                                                    <C>  <C>  <C>  <C>  <C>  <C>   <C>   <C>
+                                                                                       T1   E1   T3   E3   J2   OC3   OC12  >OC12
+     ATM
+   1 S/UNI-MPH        Quad T1/E1 ATM Interface                              5v          x   x
+   2 S/UNI-PDH        T1/E1/T3/E3  + ATM                                    5v          x   x    x    x
+   3 S/UNI-155        1-port PHY                                            5v                                   x
+   4 S/UNI-155-LITE   1-port PHY + analog CRU/CSU                           5v                                   x
+   5 S/UNI-PLUS       enhanced 1-port PHY + analog CRU/CSU                  5v                                   x
+   6 S/UNI-155-DUAL   2-port PHY + analog CRU/CSU                           5v                                   x
+   7 S/UNI-QUAD       4-port PHY + analog CRU/CSU                           3.3v                                 x
+   8 S/UNI-155-ULTRA  1-port PHY + UTP-5 + analog CRU/CSU                   5v                                   x
+   9 S/UNI 622        1-port PHY                                            5v                                   x     x
+  10 S/UNI-622 MAX    1-port PHY + analog CRU/CSU                           3.3v                                       x
+  11 RCMP-800         Routing Control, Monitoring & Policing                5v                                   x     x
+  12 RCMP-200         Routing Control, Monitoring & Policing                5v                                   x
+  13 S/UNI-ATLAS      Full Duplex RCMP + additional features                3.3v                                 x     x
+  14 AAL1gatorII      AAL1 SAR                                              3.3v        x   x    x    x    x
+  15 AAL1gator-4      AAL1 SAR - 4 channel                                  2.5v        x   x    x    x    x
+  16 AAL1gator-8      AAL1 SAR - 8 channel                                  2.5v        x   x    x    x    x
+  17 AAL1gator-32     AAL1 SAR - 32 channel                                 2.5v        x   x    x    x    x
+  18 LASAR-155        ATM PHY & SAR                                         5v                                   x
+  19 QRT              Quad Routing Table                                    3.3v        x   x    x    x    x     x     x
+  20 QSE              Quad Switching Element                                3.3v        x   x    x    x    x     x     x
+
+     SONET/SDH and POS
+  21 TUPP             VT/TU Payload Alignor/Processor                       5v          x   x    x    x    x     x
+  22 TUPP-PLUS        TUPP + Performance Monitor                            5v          x   x    x    x    x     x
+  23 TUPP-PLUS 622    TUPP + Performance Monitor                            2.5v        x   x    x    x    x     x     x
+  24 TUDX             VT/TU X-Connect Switch                                5v          x   x
+  25 TEMAP            VT/TU Mapper and M13 Multiplexer                      3.3v        x   x    x    x
+  26 STXC             Transport Overhead Terminator                         5v                                   x
+  27 STTX             Transport Overhead Terminator                         5v                                         x
+  28 SPECTRA-155      Payload Extractor/Aligner                             5v                                   x
+  29 SPECTRA-622      Payload Extractor/Aligner                             3.3v                                       x
+  30 SPTX             Path Terminating Tranceiver                           5v                                   x
+  31 S/UNI TETRA      4-port ATM + POS PHY + analog CRU/CSU                 3.3v                                 x
+  32 S/UNI-622-POS    1-port ATM + POS PHY + analog CRU/CSU                 3.3v                                       x
+
+     Access
+  33 T1XC             1-port framer + analog                                5v          x
+  34 COMET            1-port framer + long haul analog                      3.3v        x   x
+  35 E1XC             1-port framer + analog                                5v              x
+  36 QDSX             4-port short haul analog LIU                          5v          x   x
+  37 TQUAD            4-port framer                                         5v          x
+  38 EQUAD            4-port framer                                         5v              x
+  39 TOCTL            8-port framer                                         3.3v        x
+  40 EOCTL            8-port framer                                         3.3v            x
+  41 S/UNI JET        1-port framer or ATM UNI                              3.3v        x   x    x    x    x
+  42 S/UNI QJET       4-port framer or ATM UNI                              3.3v        x   x    x    x    x
+  43 D3MX             M13 Multiplexer/Demultiplexer                         5v          x        x
+  44 TEMUX            28T/21E framer, Sonet mapper & M13 Mux                2.5/3.3     x   x    x    x             3     3
+  45 FREEDM-8         8 link, 128 ch. HDLC Controller                       3.3v        x   x    x    x
+  46 FREEDM-32        32 link, 128 ch. HDLC Controller                      3.3v        x   x    x    x
+  47 FREEDM-32P672    32 link, 672 ch. HDLC Controller                      3.3v        x   x    x    x
+  48 FREEDM-32A672    32 link, 672 ch. HDLC Controller w' "Any-PHY"         3.3v        x   x    x    x
+  49 FREEDM-84P672    84 link, 672 ch. HDLC Controller                      3.3v        x   x    x    x          x
+  50 FREEDM-84A672    84 link, 672 ch. HDLC Controller w' "Any-PHY"         3.3v        x   x    x    x          x
+  51 S/UNI DUPLEX     Dual Serial Link PHY Multiplexer (DSLAM)              3.3v        x   x    x    x    x     x
+  52 S/UNI VORTEX     Octal Serial Link PHY Multiplexer (DSLAM)             3.3v        x   x    x    x    x
+  53 S/UNI APEX       ATM/Packet Traffic Mgr. & Switch                      3.3v        x   x    x    x    x     x     x
+
+     Ethernet
+  54 EXACT - PM3370   8x100 port controller                                 3.3v                                100m b/s
+  55 EXACT - PM3380   1x1000 port controller                                3.3v                                             x
+  56 EXACT - PM3390   8 to 16 port EXACT Switch Matrix                      3.3v                                             x
+
+
+<PAGE>
+
+
+No.      Product                        Description                                             Function
+- ---      -------                        -----------                  --------------------------------------------------------------
+                                                                     LIU/Framr SAR  Back-plane  Cell/Packet    Traffic     Switch
+                                                                                                 Processor       Mgt
+     ATM
+   1 S/UNI-MPH        Quad T1/E1 ATM Interface                          x
+   2 S/UNI-PDH        T1/E1/T3/E3  + ATM                                x
+   3 S/UNI-155        1-port PHY                                        x
+   4 S/UNI-155-LITE   1-port PHY + analog CRU/CSU                       x
+   5 S/UNI-PLUS       enhanced 1-port PHY + analog CRU/CSU              x
+   6 S/UNI-155-DUAL   2-port PHY + analog CRU/CSU                       x
+   7 S/UNI-QUAD       4-port PHY + analog CRU/CSU                       x
+   8 S/UNI-155-ULTRA  1-port PHY + UTP-5 + analog CRU/CSU               x
+   9 S/UNI 622        1-port PHY                                        x
+  10 S/UNI-622 MAX    1-port PHY + analog CRU/CSU                       x
+  11 RCMP-800         Routing Control, Monitoring & Policing                                         x
+  12 RCMP-200         Routing Control, Monitoring & Policing                                         x
+  13 S/UNI-ATLAS      Full Duplex RCMP + additional features                                         x
+  14 AAL1gatorII      AAL1 SAR                                                  x
+  15 AAL1gator-4      AAL1 SAR - 4 channel                                      x
+  16 AAL1gator-8      AAL1 SAR - 8 channel                                      x
+  17 AAL1gator-32     AAL1 SAR - 32 channel                                     x
+  18 LASAR-155        ATM PHY & SAR                                     x       x
+  19 QRT              Quad Routing Table                                                             x             x
+  20 QSE              Quad Switching Element                                                         x                        x
+
+     SONET/SDH and POS
+  21 TUPP             VT/TU Payload Alignor/Processor                                                x
+  22 TUPP-PLUS        TUPP + Performance Monitor                                                     x
+  23 TUPP-PLUS 622    TUPP + Performance Monitor                                                     x
+  24 TUDX             VT/TU X-Connect Switch                                                                                  x
+  25 TEMAP            VT/TU Mapper and M13 Multiplexer                  x
+  26 STXC             Transport Overhead Terminator                     x
+  27 STTX             Transport Overhead Terminator                     x
+  28 SPECTRA-155      Payload Extractor/Aligner                         x
+  29 SPECTRA-622      Payload Extractor/Aligner                         x
+  30 SPTX             Path Terminating Tranceiver                       x
+  31 S/UNI TETRA      4-port ATM + POS PHY + analog CRU/CSU             x
+  32 S/UNI-622-POS    1-port ATM + POS PHY + analog CRU/CSU             x
+
+     Access
+  33 T1XC             1-port framer + analog                            x
+  34 COMET            1-port framer + long haul analog                  x
+  35 E1XC             1-port framer + analog                            x
+  36 QDSX             4-port short haul analog LIU                      x
+  37 TQUAD            4-port framer                                     x
+  38 EQUAD            4-port framer                                     x
+  39 TOCTL            8-port framer                                     x
+  40 EOCTL            8-port framer                                     x
+  41 S/UNI JET        1-port framer or ATM UNI                          x
+  42 S/UNI QJET       4-port framer or ATM UNI                          x
+  43 D3MX             M13 Multiplexer/Demultiplexer                     x
+  44 TEMUX            28T/21E framer, Sonet mapper & M13 Mux            x
+  45 FREEDM-8         8 link, 128 ch. HDLC Controller                                                x
+  46 FREEDM-32        32 link, 128 ch. HDLC Controller                                               x
+  47 FREEDM-32P672    32 link, 672 ch. HDLC Controller                                               x
+  48 FREEDM-32A672    32 link, 672 ch. HDLC Controller w' "Any-PHY"                                  x
+  49 FREEDM-84P672    84 link, 672 ch. HDLC Controller                                               x
+  50 FREEDM-84A672    84 link, 672 ch. HDLC Controller w' "Any-PHY"                                  x
+  51 S/UNI DUPLEX     Dual Serial Link PHY Multiplexer (DSLAM)          x                x                                    x
+  52 S/UNI VORTEX     Octal Serial Link PHY Multiplexer (DSLAM)         x                x                                    x
+  53 S/UNI APEX       ATM/Packet Traffic Mgr. & Switch                          x                    x                x       x
+
+     Ethernet
+  54 EXACT - PM3370   8x100 port controller                                                          x                        x
+  55 EXACT - PM3380   1x1000 port controller                                                         x                        x
+  56 EXACT - PM3390   8 to 16 port EXACT Switch Matrix                                               x                        x
+
+</TABLE>
+
+
+
+
+Industry  analysts have recognized us as the market leader in ATM physical layer
+solutions.  We  offer  LAN,  Edge and WAN core ATM  switch  chip  sets.  Our ATM
+physical  layer products come in a variety of packages and provide the interface
+to copper or fiber cabling along with framing and mapping  functions.  The S/UNI
+product line offers physical layer solutions in a range from 1.5 megabits to 622
+megabits.
+
+Our line of RCMP/ATLAS  ATM layer  processors  handle higher layer ATM protocols
+such as policing,  operations and management,  fault and performance monitoring,
+while our ATM Switch chips offer a routing table and switching  element solution
+capable of running at up to 622 megabytes per second.
+<PAGE>
+
+In 1998, we added the S/UNI - ATLAS to our product portfolio.  This product is a
+622 Mbit/s ATM Layer device which integrates traffic policing, fault management,
+performance  monitoring,  address resolution and translation onto one chip. This
+full duplex chip is intended for the broadband OC-3 and OC-12 interface required
+for ATM edge, enterprise and core switches.
+
+In 1999 we also  introduced  a chip set  consisting  of: The SPECTRA - 622,  the
+TUPP+622  and the TEMAP.  These  SONET/SDH/T1/E1  products  provide the framing,
+tributary  processing and mapping functions for fully  channelized  applications
+such as multi-service add-drop multiplexers,  switches,  routers,  concentrators
+and central  office  digital  cross-connects  for rates between DS-O (64 Kbit/s)
+through to OC-12/STM4 (622 Mbit/s).
+
+In  1999,  we  introduced  the  VORTEX  chipset,  an ATM or  packet-based  DSLAM
+solution.  The  chipset  provides  traffic  management,  aggregation,  switching
+maintenance  and  management  functions  for all DSL service  types.  The VORTEX
+chipset is comprised of the S/UNI-Duplex line card multiplexer, the S/UNI-VORTEX
+core card multiplexer and the S/UNI-APEX  traffic manager and switch. The VORTEX
+chipset can be combined with the  S/UNI-ATLAS in DSLAM equipment used to provide
+high speed consumer internet access,  as well as third generation  wireless base
+stations, base station controllers and multi-service access equipment.
+
+Our Remote Access products  include T1/E1 framers,  and high density Frame Relay
+and HDLC controllers.  Our devices are used in data communications  applications
+such as multi-service  and digital  subscriber line access  multiplexers,  frame
+relay access  devices,  Internet  Protocol  routers,  wireless base stations and
+remote   access   concentrators.   Our  access   products   are  also  used  for
+telecommunications  applications such as private branch exchanges,  digital loop
+carriers,  Class 5 switches,  digital  access cross  connect  systems,  add-drop
+multiplexers and base transceiver stations.
+
+In 1999, we introduced four new products representing the next generation of our
+family of FREEDM high density  packet  processors.  The FREEDM 32P672 and FREEDM
+32A672  support up to 672  simultaneous  HDLC channels  across up to 32 T1 or E1
+links while the FREEDM 84P672 and FREEDM 84A672  support up to 672  simultaneous
+HDLC channels across up to 84 T1 or E1 links. The "P" variety of FREEDM products
+can be used in PCI-based remote access concentrators,  while the "A" variety can
+be used in voice-over-IP gateways and frame relay interfaces.
+
+In 1999,  we  introduced  the  TEMUX  chip to work  along  with  the new  FREEDM
+products.   The  TEMUX  integrates  28  T1  framers,   21  E1  framers,  a  DS-3
+framer/multiplexer  and SONET/SDH  mappers into a single chip. The  FREEDM/TEMUX
+chip set provides a solution for  packet-based  T1/E1 over  channelized  DS-3 or
+SONET/SDH  interfaces  used  in  Internet  access  switch,   router  and  access
+multiplexer equipment.
+
+Also in 1999, we introduced  the  S/UNI-JET,  a single channel J2, E3, T3 framer
+with ATM cell  delineation.  The 3.3 volt  S/UNI-JET  is  designed  for  DSLAMs,
+customer premise equipment routers, and access concentrators.
+<PAGE>
+
+NON-NETWORKING PRODUCTS
+- -----------------------
+
+In the third  quarter  of 1996,  we  announced  our  decision  to exit the modem
+chipset business and discontinue development of our custom chipsets. We disposed
+of all modem-related  inventories in 1997. Our remaining non-networking products
+are still  being  sold but we are not  planning  new  development  or  follow-on
+products.  Revenues from other non-networking  products declined rapidly in 1998
+and 1999.
+
+SALES, MARKETING AND DISTRIBUTION
+- ---------------------------------
+
+Our sales and marketing strategy is to be designed into our customers' equipment
+by developing and selling  superior  products for which we will provide  premium
+service and technical support. We maintain close working  relationships with our
+customers  in order to make  products  that  address  their  needs.  We  provide
+technical support to customers through field  application  engineers,  technical
+marketing and factory systems engineers. We believe that providing comprehensive
+product service and support is critical to shortening  customers'  design cycles
+and maintaining a competitive position in the networking market.
+
+We  sell  our   products   directly   and  through   distributors,   independent
+manufacturers'  representatives and manufacturing  subcontractors.  Based on end
+users and ignoring sales to distributors or sub-contractors, Lucent Technologies
+and Cisco Systems each  represented  greater than 10% of our 1999  revenues.  In
+1999, the country  purchasing the largest  percentage of our products outside of
+the United States was Canada at 15%. Our  international  sales accounted for 31%
+in 1999 , 32% in 1998 and 30% in 1997.
+
+MANUFACTURING
+- -------------
+
+Independent  foundries and chip assemblers  manufacture all of our products.  We
+receive  most of our  wafers  in  finished  form  from  Chartered  Semiconductor
+Manufacturing  Ltd.  ("Chartered"),   and  Taiwan  Semiconductor   Manufacturing
+Corporation  ("TSMC").   These  independent  foundries  produce  our  networking
+products  at  feature  sizes  down to 0.25  micron.  We  believe  that by  using
+independent foundries to fabricate our wafers, we are better able to concentrate
+our resources on designing and testing new products.  In addition, we avoid much
+of the capital cost associated with owning and operating a fabrication facility.
+
+We have supply  agreements  with  Chartered  and TSMC.  We have made deposits to
+secure access to wafer fabrication  capacity under both of these agreements.  At
+December 31, 1999 and 1998,  we had $19.1 and $23.1  million,  respectively,  in
+deposits with the foundries.  Under these agreements,  the foundries must supply
+certain  quantities of wafers per year. Neither of these agreements have minimum
+unit volume  requirements  but we are  obliged  under one of the  agreements  to
+purchase a minimum  percentage of our total annual wafer  requirements  provided
+that the foundry is able to continue to offer competitive  technology,  pricing,
+quality and delivery.  The agreements may be terminated if either party does not
+comply with the terms. We expect to spend $6.1 million in additional deposits to
+secure  foundry  capacity  in 2000 and to  receive a refund of $4.6  million  of
+existing deposits.
+
+Wafers  supplied by outside  foundries  must meet our incoming  quality and test
+standards.  We conduct the  majority of our test  operations  on advanced  mixed
+signal and digital  test  equipment  in our Burnaby,  British  Columbia,  Canada
+facility. The remainder of our testing is performed predominantly by independent
+Asian companies.
+<PAGE>
+
+RESEARCH AND DEVELOPMENT
+- ------------------------
+
+Our  current  research  and  development  efforts are  targeted  at  integrating
+multiple  channels  or  functions  on single  chips,  broadening  the  number of
+products we provide to address varying protocols and networking  functions,  and
+increasing the speeds at which our chips operate.
+
+We  have  design  centers  in or near  Vancouver  (Canada),  Portland  (Oregon),
+Gaithersburg  (Maryland),  San Jose  (California),  Galway  (Ireland),  Montreal
+(Canada), Ottawa (Canada) and Saskatoon (Canada).
+
+We spent $63.3 million in 1999, $35.9 million in 1998, and $22.9 million in 1997
+on research and  development.  In 1998,  we also  expensed  $39.2  million of in
+process  research  and  development,  $37.8  million  of  which  related  to the
+acquisition of Integrated Telecom Technologies and $1.4 million of which related
+to the acquisition of other technology.
+
+BACKLOG
+- -------
+
+We sell primarily pursuant to standard short-term purchase orders. Our customers
+frequently revise the quantity actually  purchased and the shipment schedules to
+reflect changes in their needs. As of December 31, 1999, our backlog of products
+scheduled for shipment within six months totaled $155.2 million.  As of December
+31,  1998,  our backlog of products  scheduled  for  shipment  within six months
+totaled $56.3  million.  Our  customers may cancel a significant  portion of the
+backlog at their discretion  without penalty.  Accordingly,  we believe that our
+backlog at any given time is not a meaningful indicator of future revenues.
+
+COMPETITION
+- -----------
+
+The markets for our  products  are  intensely  competitive  and subject to rapid
+technological  advancement  in design  tools,  wafer  manufacturing  techniques,
+process  tools and  alternate  networking  technologies.  We must  identify  and
+capture  future  market  opportunities  to offset the rapid price  erosion  that
+characterizes  our  industry.  We may not be able to  develop  new  products  at
+competitive pricing and performance levels. Even if we are able to do so, we may
+not complete a new product and  introduce it to market in a timely  manner.  Our
+customers  may  substitute  use of our products  with those of current or future
+competitors.
+
+We typically face  competition  at the design stage,  where  customers  evaluate
+alternative design approaches that require integrated circuits.  Our competitors
+have  increasingly  frequent  opportunities  to  supplant  our  products in next
+generation  systems  because of shortened  product life and design-in  cycles in
+many of our customers' products.
+
+Major domestic and international  semiconductor  companies,  such as Intel, IBM,
+and  Lucent  Technologies,  are  concentrating  an  increasing  amount  of their
+substantially  greater  financial and other resources on the markets in which we
+participate.  This  represents  a serious  competitive  threat to PMC.  Emerging
+companies   also  provide   significant   competition  in  our  segment  of  the
+semiconductor market.
+
+Our competitors include Applied Micro Circuits Corporation,  Broadcom,  Conexant
+Systems,  Cypress  Semiconductor,  Dallas  Semiconductor,   Galileo  Technology,
+Integrated  Device  Technology,   IBM,  Infineon,  Intel,  Lucent  Technologies,
+Motorola, MMC Networks, Texas Instruments, Transwitch and Vitesse Semiconductor.
+Over the next few years,  we expect  additional  competitors,  some of which may
+also have greater  financial and other  resources,  to enter the market with new
+products.  In addition,  we are aware of venture-backed  companies that focus on
+specific portions of our broad range of products. These companies,  individually
+or collectively,  could represent  future  competition for many design wins, and
+subsequent product sales.
+<PAGE>
+
+LICENSES, PATENTS AND TRADEMARKS
+- --------------------------------
+
+We have several U.S. patents and a number of pending patent  applications in the
+U.S.  and  Europe.  In  addition to such  factors as  innovation,  technological
+expertise and experienced personnel, we believe that a strong patent position is
+becoming  increasingly  important to compete  effectively  in the  industry.  We
+therefore have an active program to acquire additional patent protection.
+
+We apply for mask work  protection  on our circuit  designs.  We also attempt to
+protect our software,  trade secrets and other proprietary information by, among
+other security measures,  entering into proprietary  information agreements with
+employees.  Although we intend to protect our rights vigorously,  we do not know
+if the measures we use will be successful.
+
+PMC and its logo are our registered  trademarks and service marks.  We own other
+trademarks  and service  marks not  appearing  in this Form 10-K Annual  Report.
+Other  trademarks  used in this  Form  10-K  Annual  Report  are  owned by other
+entities.
+
+EMPLOYEES
+- ---------
+
+As of  December  31,  1999,  the  Company had 660  employees,  including  376 in
+research  and  development,  100 in  production  and quality  assurance,  110 in
+marketing and sales and 74 in administration.  Our employees are not represented
+by a  collective  bargaining  agreement.  We have  never  experienced  any  work
+stoppage. We believe our employee relations are good.

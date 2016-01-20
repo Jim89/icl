@@ -1,0 +1,618 @@
+ITEM 1.  BUSINESS
+
+Items 1 and 3 of this 10-K contain forward-looking statements concerning our
+development efforts, strategy, new product introductions, backlog and
+litigation. These statements involve numerous risks and uncertainties including
+those discussed throughout this document as well as under "Factors Affecting
+Future Operating Results" in Item 7. Forward looking statements can often be
+identified by the use of forward looking words, such as "may," "will," "could,"
+"should," "expect," "believe," "anticipate," "estimate," "continue," "plan,"
+"intend," "project," or other similar words.
+
+General
+
+Xilinx, Inc. (Xilinx or the Company) designs, develops and markets complete
+programmable logic solutions, including advanced integrated circuits (ICs),
+software design tools, predefined system functions delivered as cores of logic
+design services and field engineering support. Our programmable logic devices
+(PLDs) include field programmable gate arrays (FPGAs) and complex programmable
+logic devices (CPLDs). These devices are standard products that our customers
+program to perform desired logic functions. Our products are designed to provide
+high integration and quick time-to-market for electronic equipment manufacturers
+primarily in the telecommunications, networking, computing, industrial, and
+consumer markets. Our products are sold globally through a network of
+independent sales representatives, distributors, and to original equipment
+manufacturers ("OEMs").
+
+Competitive pressures compel manufacturers of electronic systems to accelerate
+their products' introduction to market. Customer requirements for improved
+functionality, performance, reliability and lower cost are addressed through the
+use of components that integrate ever larger numbers of logic gates onto a
+single integrated circuit. Such integration often results in greater speed,
+smaller die size, lower power consumption and reduced costs. The rapid
+proliferation of the Internet and wireless communications continues to fuel the
+demand for faster integrated circuits. At the same time, tremendous pressure is
+placed on electronic equipment manufacturers' product life cycles. Due to their
+functionality and reprogrammability, our PLDs enable electronic equipment
+manufacturers to effectively respond to these evolving market trends.
+
+We were organized in California in February 1984 and in November 1985 were
+reorganized to incorporate our research and development limited partnership. In
+April 1990, we reincorporated in Delaware. Our corporate facilities and
+executive offices are located at 2100 Logic Drive, San Jose, California 95124
+and our website is www.xilinx.com.
+
+Our fiscal year ends on the Saturday nearest March 31. For ease of presentation,
+March 31 has been utilized as the fiscal year-end for all financial statement
+captions. Fiscal 2001 ended on March 31, 2001 while fiscal 2000 and 1999 ended
+on April 1, 2000 and April 3, 1999, respectively.
+
+Products
+
+Integral to the future success of our business is the timely introduction of new
+products which address customer requirements and compete effectively on the
+basis of price, functionality, and performance. Xilinx programmable logic
+solutions help minimize risks for manufacturers of electronic equipment by
+shortening the time required to develop products and introduce them to market.
+Customers can design and verify their unique circuits in Xilinx programmable
+devices much faster than they could by choosing traditional methods such as
+mask-programmed, fixed logic gate arrays. Moreover, because Xilinx devices are
+standard parts that need only to be programmed, customers are not required to
+wait for prototypes or pay large non-recurring engineering costs. Xilinx silicon
+products, software solutions, and technical support make up the total solution
+delivered by Xilinx. The software component of this solution is critical to the
+success of every design project. Our Software Solutions provide powerful tools
+which make designing with programmable logic easy. Push button design flows,
+integrated on-line help, multimedia tutorials, plus high performance automatic
+and auto-interactive tools, help designers achieve optimum results. We offer the
+industry's broadest array of programmable logic technology and EDA integration
+options allowing us to deliver unparalleled design flexibility. Xilinx has also
+developed a technology that enables the hardware in Xilinx-based systems to be
+upgraded remotely over any kind of network including the Internet even after the
+equipment has been shipped to a customer. Such Xilinx Online Upgradable Systems
+allow equipment
+
+                                       3
+<PAGE>
+
+manufacturers to remotely add new features and capabilities to installed systems
+or repair problems without having to physically exchange hardware.
+
+     Programmable Logic Devices
+
+We currently classify our product offerings into four categories by
+manufacturing process technology. Base products consist of our mature product
+families that are currently manufactured on technologies of 0.6-micron and
+greater; this includes the XC3000, XC3100, and XC4000 families. Mainstream
+products are currently manufactured on 0.35 and 0.5-micron technologies and
+include the XC4000E, XC4000EX, XC4000XL, XC5200, XC9500, XC9500XL, Spartan(TM)
+and CoolRunner(TM) product lines. Advanced products include our newest
+technologies manufactured on 0.25-micron and smaller, which include the
+XC4000XV, XC4000XLA, XC9500XV, SpartanXL.(TM), Spartan-II(TM), Virtex(TM),
+Virtex-E(TM), and Virtex-II(TM) product lines. Support products make up the
+remainder of our product offerings and include configuration solutions,
+software, design services, and support.
+
+     Virtex-II(TM) Platform FPGAs:
+
+The Virtex-II Platform FPGA family, introduced in January 2001, is a complete
+programmable solution that allows digital system designers to rapidly implement
+a single-chip solution with densities from 40,000 up to 10 million system gates.
+The Virtex-II family is the first Platform FPGA to incorporate the
+IP-Immersion(TM) fabric that not only provide the ability to integrate a variety
+of soft intellectual property (IP), but also has the capability of embedding
+hard IP cores such as processors and Gigabit serial I/Os in future Virtex-II
+families schedule for late 2001. The Virtex-II solution was developed to enable
+rapid development of data communications and digital signal processing (DSP)
+systems. The unique features of the revolutionary Virtex-II architecture make it
+ideal for optical networking products, storage area networks (SANs),
+voice-over-Internet-protocol(VoIP), video broadcasting, medical imaging,
+cellular base-stations, and Internet infrastructure products. The Virtex-II
+devices will be delivered on 0.15-micron process technology.
+
+     Virtex(TM) FPGAs:
+
+The Virtex-EM Extended Memory (Virtex-EM) FPGA, introduced in March 2000,
+extends the Virtex-E architecture. The Virtex-EM FPGA family consists of two
+devices that have a high RAM-to-logic gate ratio, over 1 million bits of block
+RAM, that is targeted for specific applications such as gigabit-per-second
+network switches and high definition graphics. The Virtex-EM devices are the
+first FPGAs to be manufactured using an advanced copper process.
+
+The Virtex-E(TM) FPGA family, introduced in September 1999, includes a two
+million system gate device and supports twice the system-gate density and has a
+50 percent higher I/O performance than the original Virtex(TM) FPGAs. The
+Virtex-E(TM) family consists of 11 members, from 50,000 system gates to 3.2
+million system gates. The Virtex-E(TM) FPGAs, delivering new performance and
+density attributes that were only previously addressed by ASIC solutions, are
+targeted for next generation networking and telecommunication applications.
+Virtex-E(TM) FPGAs with 1.8-volt operation are the first programmable logic
+devices delivered on 0.18-micron process technology, which was jointly developed
+by Taiwan's United Microelectronics Corporation (UMC) and Xilinx. The improved
+process directly contributes to a substantial performance gain. The Virtex-E(TM)
+family also represents the industry's first programmable logic architecture with
+210 million transistors on a single device.
+
+The Virtex(TM) FPGA series, announced in October 1998, includes the industry's
+first million-gate FPGA. Nine Virtex(TM) devices are currently in production.
+The Virtex(TM) devices with 2.5-volt operation are found in traditional
+programmable logic applications such as networking or telecommunications, and in
+applications like storage area networks, routers, high end servers, switching
+equipment, cellular base stations, and High Definition Television (HDTV)
+infrastructure. The Virtex(TM) devices range from 50,000 to 1,000,000 system
+gate densities with 200 MHz chip-to-chip performance and offer system-level
+integration capabilities. The Virtex(TM) family delivers the first fully
+programmable alternative to high density system-level Application Specific
+Integrated Circuits (ASIC) design.
+
+                                       4
+<PAGE>
+
+     XC4000 FPGAs:
+
+The XC4000 family, introduced in 1990, was the first FPGA offering on-board
+distributed RAM. The XC4000 became the industry standard and was the fastest
+growing programmable logic family in history until the Virtex family was
+introduced in October 1998.
+
+The XC4000XL family has 11 members shipping in volume ranging in density from
+2,000 to 180,000 system gates. The XC4000XLA family expands on the XC4000XL
+architecture with reduced power consumption and improved performance. The
+XC4000XLA family has eight members shipping in volume and ranges in density from
+30,000 to 180,000 system gates. The XC4000XV is a 2.5-volt FPGA family that
+utilizes 0.25-micron technology. The family has four members with up to 500,000
+system gates. The XC4000XV features system performance of over 100 MHz while
+minimizing power consumption. The 2.5-volt XC4000XV family extends and builds on
+the successes of the 5-volt XC4000 and the 3-volt XC4000XL series.
+
+     Spartan(TM) FPGAs:
+
+The Xilinx Spartan(TM) and SpartanXL(TM) FPGA families are derived from the
+XC4000 architecture. These families feature low-cost ASIC replacement with
+densities ranging from 5,000 to 40,000 system gates. In January 2000, we
+announced the Spartan-II(TM) family, our newest generation of high-volume FPGAs,
+which is based on the Virtex architecture. Spartan-II(TM) devices are designed
+to be low cost programmable replacements for ASICs and application specific
+standard products (ASSPs). New features in the Spartan-II(TM) family address a
+larger range of cost-sensitive high-volume applications and open up new consumer
+market opportunities for programmable logic.
+
+     CPLDs:
+
+The XC9500 and XC9500XL families offer in-system programmability for 5.0-volt
+and 3.3-volt systems, respectively. The XC9500XV is a 2.5-volt in-system
+programmable CPLD family with significantly reduced power consumption.
+
+In August 1999 we acquired Philips Semiconductors' line of low power complex
+programmable logic devices (CPLDs) called the CoolRunner(R) family of devices.
+The CoolRunner line is the first family of CPLD products to combine very low
+power with high speed, high density, and high I/O counts in a single device.
+CoolRunner(R) CPLDs also use far less dynamic power during actual operation
+compared to conventional CPLDs, an important feature for today's mobile
+computing applications.
+
+     Software, Cores & Support
+
+We offer complete software design tool solutions which enable customers to
+implement their design specifications into our PLDs. These software design tools
+combine a powerful technology with a flexible, easy to use graphical interface
+to help achieve the best possible designs within each customer's project
+schedule, regardless of the designer's experience level.
+
+We offer three complementary software design tool solutions. Xilinx Foundation
+Series software provides designers with a complete, ready-to-use design solution
+based on industry-standard hardware description languages (HDLs). We offer this
+fully integrated software solution for those customers new to designing with
+PLDs or desiring a low cost approach. The Foundation ISE(TM) (Integrated
+Synthesis Environment) software, introduced in the fourth quarter of fiscal year
+2001, is Xilinx's next generation design environment. Foundation ISE software
+provides a design environment which integrates the HDL design flow, synthesis,
+and optimization to ensure a comprehensive integrated design flow for designers
+to increase productivity. The Alliance Series is tailored for designers who want
+maximum flexibility to integrate their programmable logic design into their
+existing EDA environment and methodology. With interfaces to over fifty EDA
+vendors, the Alliance Series Software allows users to select tools with which
+they are most familiar, thereby increasing their productivity and shortening
+their products design cycles.
+
+Xilinx offers two Web-based Design solutions giving designers the ability to
+engage in digital design activities on-line using either our application servers
+or download design and implementation software modules for use in their own
+design environment. The WebFITTER is a free Web-Based design tool that
+
+                                       5
+<PAGE>
+
+allows system designers to evaluate their designs using our XC9500/XL/XV and
+CoolRunner Series CPLDs. WebPACK(TM) solutions are a collection of free
+downloadable software modules. Customers can register and download any of the
+WebPACK(TM) modules to complete designs using the Xilinx XC9500/XL/XV,
+CoolRunner Series CPLD, the entire Spartan-II FPGA family designs and the
+300,000 system gate Virtex XCV300E FPGA.
+
+We also offer intellectual property, cores of logic, for commonly used complex
+functions such as digital signal processing (DSP), bus interfaces, processors,
+and peripheral interfaces. Using logic cores, available from Xilinx and third
+party AllianceCORE partners, customers can shorten development time, reduce
+design risk and obtain superior performance for their designs. Additionally, our
+CORE Generator system allows customers to implement intellectual property cores
+into our PLDs. It offers a simple user interface, complete cataloging of
+available cores, easy selection of parameter-based cores optimized for our
+FPGAs, and features an interface to third-party system level DSP design tools.
+Further, Xilinx's IP Center Internet portal offers customers the ability to
+purchase on line the latest intellectual property cores and reference design via
+Smart Search for faster access.
+
+To extend our customers' technical capabilities and accelerate our customers'
+design time in the race to market, we offer Xilinx Global Services which
+consists of education, product, and design services along with the
+support.xilinx.com online. At Support.xilinx.com, customers can find training
+courses, discussion forums access to an experienced Xilinx team for assistance
+in troubleshooting and design issues. To grow the emerging home networking
+market, we also introduced the Xilinx eSP website in the fourth quarter of
+fiscal 2001. This web portal is a comprehensive resource offering designers
+information such as reference designs and intellectual property. It is the
+industry's first web portal dedicated to accelerating the design and development
+of consumer products based upon emerging standards and protocols.
+
+Our software design tools operate on desktop computer platforms, including
+personal computers with Microsoft Windows '95, '98, 2000, and NT operating
+systems, and on workstations from IBM, HP and Sun Microsystems.
+
+The net revenues from Software, Cores & Support were $21.2 million, $15.3
+million, and $13.0 million in fiscal 2001, 2000, and 1999, respectively.
+
+Research and Development
+
+Our research and development activities are primarily directed towards the
+design of new integrated circuits, the development of new software design tools
+and cores of logic, the development of advanced semiconductor manufacturing
+processes, and ongoing cost reductions and performance improvements in existing
+products. Our primary areas of focus have been: to introduce the industry's
+first 10 million system gate programmable system solution (Virtex-II Platform
+FPGA devices), a low-cost ASIC replacement FPGA solution (Spartan-II devices),
+development of CPLD products (XC9500/XL/XV & CoolRunner families), and releasing
+new versions of software design tools (Foundation Series ISE software) and cores
+of logic.
+
+Our research and development challenge is to continue to develop new products
+that create cost-effective solutions for customers. In fiscal 2001, 2000, and
+1999, our research and development expenses were $213.2 million, $123.6 million,
+and $90.9 million, respectively. Excluding a $4.5 million amortization expense
+of deferred stock compensation for acquiring RocketChips in fiscal 2001, the
+research and development expenditures were $208.7 million in fiscal 2001. We
+expect we will continue to make substantial investments in research and
+development. We believe technical leadership is essential to our future success
+and we are committed to continuing a significant level of research and
+development effort. However, there can be no assurance that any of our research
+and development efforts will be successful, timely or cost-effective.
+
+Marketing and Sales
+
+We sell our products through several industrial distributors, direct sales to
+manufacturers by independent sales representative firms, sales through
+franchised domestic distributors, and sales through foreign distributors. In
+order to provide service to existing customers and reach potential customers, we
+also utilize a direct sales management organization and field applications
+engineers (FAEs). Our independent
+
+                                       6
+<PAGE>
+
+representatives generally address larger OEM customers and act as a direct sales
+force, while distributors serve the balance of our customer base. Our sales and
+customer support personnel support all channels and consult with customers about
+their plans, ensuring that the right software and devices are selected at the
+beginning of a customer's project.
+
+Avnet, Inc. and the Memec Group distribute our products worldwide and Nu
+Horizons Electronics provides additional regional sales coverage. From time to
+time, we may add or terminate distributors from our selling organization as we
+deem appropriate given the level of business. We believe distributors provide a
+cost-effective means of reaching a broad range of customers. Since our PLDs are
+standard products, they do not present many of the inventory risks to
+distributors as compared to custom gate arrays, and they simplify the
+requirements for distributor technical support.
+
+We changed our accounting method during fiscal 1999 for recognizing revenue on
+all shipments to international distributors. While we previously deferred
+revenue on shipments to domestic distributors until the product was sold to the
+end user, we recognized revenue upon shipment to international distributors, net
+of estimated reserves for returns and allowances. Following the accounting
+change, revenue recognition on shipments to distributors worldwide is deferred
+until the products are sold to the end customer. Distributors have certain
+rights of return and price protection privileges on unsold product until the
+product is sold to the end customers.
+
+Backlog and Customers
+
+As of March 31, 2001, our backlog of purchase orders scheduled for delivery
+within the next three months was $126 million, after adjustments for estimated
+discounts. Backlog as of March 31, 2000 was $174.3 million, after adjustments
+for estimated discounts. Backlog amounts for both years include orders to
+distributors, which may receive price adjustments upon sale to end customers.
+Also, orders constituting our current backlog are subject to changes in delivery
+schedule or to cancellation at the option of the purchaser without significant
+penalty. Accordingly, although useful for scheduling production, backlog as of
+any particular date may not be a reliable measure of revenues for any future
+period.
+
+No end customer accounted for more than 10% of revenues in fiscal years 2001,
+2000, or 1999. Approximately 27%, 27%, and 20% of net revenues were recognized
+through our largest domestic distributor in 2001, 2000, and 1999, respectively.
+A second domestic distributor accounted for approximately 24%, 24%, and 17% of
+net revenues in fiscal 2001, 2000, and 1999, respectively. On a consolidated
+basis, at March 31, 2001, two distributors accounted for 44.1% and 28.6% of
+worldwide net revenues in fiscal 2001. (See Note 2 of Notes to Consolidated
+Financial Statements in Item 8 for Concentration of Credit Risk; see also Note
+11 of Notes to Consolidated Financial Statements in Item 8 for geographic sales
+information.)
+
+Wafer Fabrication
+
+We do not directly manufacture processed wafers used for our products. Over the
+last several years, the majority of our wafer purchases have been manufactured
+by United Microelectronics Corporation, (UMC), UMC affiliated companies
+including our former joint venture, USIC, Seiko Epson Corporation (Seiko), and
+Taiwan Semiconductor Manufacturing Company (TSMC). Precise terms with respect to
+the volume and timing of wafer production and the pricing of wafers produced by
+the semiconductor foundries are determined by periodic negotiations between
+Xilinx and these wafer foundry partners.
+
+Our strategy is to focus our resources on creating new integrated circuits and
+software design tools and on market development rather than on wafer
+fabrication. We continuously evaluate opportunities to enhance foundry
+relationships and/or obtain additional capacity from both our main suppliers as
+well as other suppliers of leading-edge process technologies. As a result, we
+have entered into agreements with UMC and Seiko as discussed below.
+
+Xilinx, United Microelectronics Corporation (UMC) and other parties entered into
+a joint venture to construct a wafer fabrication facility in Taiwan, known as
+United Silicon Inc. (USIC). (See Note 4 of Notes to Consolidated Financial
+Statements in Item 8.) We made a total cumulative investment of $107.1 million
+in USIC. In January 2000, as a result of the merger of USIC into UMC, our equity
+position in USIC was converted into shares of UMC which are publicly traded on
+the Taiwan Stock Exchange. We retain
+
+                                                                               7
+<PAGE>
+
+monthly guaranteed wafer capacity rights in UMC as long as we retain a
+percentage of our UMC shares. (See Note 4 of Notes to Consolidated Financial
+Statements in Item 8.)
+
+In fiscal 1997, we signed a wafer purchasing agreement with Seiko Epson. (See
+Note 2 of Notes to Consolidated Financial Statements in Item 8.) This agreement
+was amended in fiscal 1998 and provided for an advance to Seiko Epson for $150.0
+million. In conjunction with the agreement, $60.0 million was paid in fiscal
+1997 and an additional $90.0 million was paid in fiscal 1998. Repayment of this
+advance is made in the form of wafer deliveries, which began during the fourth
+quarter of fiscal 1998 and ended during the second quarter of fiscal 2001.
+Specific wafer pricing was in U.S. dollars and was based upon the prices of
+similar wafers manufactured by other, specifically identified, leading-edge
+foundry suppliers.
+
+In fiscal 2001, we signed a Licensing and Marketing Agreement (LMA) with
+International Business Machines Corporation (IBM), giving us the right to
+purchase certain specified amounts of wafers from IBM on a monthly basis.
+Presently, we are not purchasing a material number of wafers from IBM.
+
+Sort, Assembly and Test
+
+Wafers purchased by us are sorted by the wafer foundry, independent sort
+subcontractors or by us. Sorted wafers are assembled by subcontractors in
+facilities in South East Asian countries. During the assembly process, the
+wafers are separated into individual die, which are then assembled into various
+package types. Following assembly, the packaged units are tested by independent
+test subcontractors or by Xilinx personnel at our San Jose or Dublin, Ireland
+facilities.
+
+Patents and Licenses
+
+Through March 31, 2001, we held over 545 issued United States patents and we
+maintain an active program of filing for additional patents in the areas of
+software, IC architecture and design. We intend to vigorously protect our
+intellectual property. We believe that failure to enforce our patents or to
+effectively protect our trade secrets could have an adverse effect on our
+financial condition and results of operations. In the future, we may incur
+litigation expenses to enforce our intellectual property rights against third
+parties. There is no assurance that any such litigation would be successful.
+(See Legal Proceedings in Item 3 and Note 12 of Notes to Consolidated Financial
+Statements in Item 8.)
+
+We have acquired various software licenses that permit us to grant object code
+sublicenses to our customers for certain third party software programs licensed
+with our software design tools. In addition, we have licensed certain software
+for internal use in product design.
+
+Employees
+
+Xilinx's employee population grew 38% during the past year. As of March 31,
+2001, Xilinx had 2,678 employees compared to 1,939 at the end of the prior year.
+None of our employees are represented by a labor union. We have not experienced
+any work stoppages and believe we maintain good employee relations.
+
+Competition
+
+Our PLDs compete in the logic industry. The industries in which we compete are
+intensely competitive and are characterized by rapid technological change,
+product obsolescence, and continuous price erosion. We expect increased
+competition, both from our primary competitors, Altera Corporation and Lattice
+Semiconductor Corporation and from a number of new companies that may enter our
+market. We believe that important competitive factors in the programmable logic
+industry include:
+
+ .    product pricing;
+ .    product performance, reliability, power consumption, and density;
+ .    the adaptability of products to specific applications;
+ .    ease of use and functionality of software design tools;
+ .    functionality of predefined cores of logic; and
+ .    the ability to provide timely customer service and support.
+
+                                                                               8
+<PAGE>
+
+Our strategy for expansion in the logic market includes continued introduction
+of new product architectures which address high volume, low cost applications as
+well as high performance, leading-edge density applications. In addition, we
+anticipate continued price reductions proportionate with our ability to lower
+the manufacturing cost for established products. However, we cannot assure that
+we will be successful in achieving these strategies.
+
+Our major sources of competition are comprised of several elements:
+
+ .    providers of high density programmable logic products characterized by
+     FPGA-type architectures;
+ .    providers of high volume and low cost FPGAs as programmable replacement for
+     ASICs and application specific standard products (ASSPs).;
+ .    providers of high speed, low density CPLD devices;
+ .    the manufacturers of custom gate arrays;
+ .    providers of competitive software development tools; and
+ .    other providers of new or emerging programmable logic products.
+
+We compete with high density programmable logic suppliers on the basis of device
+performance, the ability to deliver complete solutions to customers, device
+power consumption, and customer support by taking advantage of the primary
+characteristics of our PLD product offerings which include: flexibility, high
+speed implementation, quick time-to-market, and system level capabilities. We
+compete with ASIC manufacturers on the basis of lower design costs, shorter
+development schedules, and reduced inventory risk and field upgradability. The
+primary attributes of ASICs are high density, high speed, and low production
+costs in high volumes. We continue to develop lower cost architectures intended
+to narrow the gap between current ASIC production costs (in high volumes) and
+PLD production costs. As PLDs have increased in density and performance and
+decreased in cost due to the advanced manufacturing processes, they have become
+more directly competitive with ASICs. With the introduction of our Spartan
+family, which is Xilinx's low cost programmable replacement for ASICs, we seek
+to grow by directly competing with other companies in the ASIC segment. Many of
+the companies in the ASIC segment have substantially greater financial,
+technical, and marketing resources than Xilinx. Consequently, there can be no
+assurance that we will be successful in competing in the ASIC segment.
+Competition among PLD suppliers and manufacturers of new or emerging
+programmable logic products is based primarily on price, performance, design,
+customer support, software utility, and the ability to deliver complete
+solutions to customers. Some of our current or potential competitors have
+substantially greater financial, manufacturing, marketing, distribution, and
+technical resources than we do. To the extent that our efforts to compete are
+not successful, our financial condition and results of operations could be
+materially adversely affected.
+
+The benefits of programmable logic have attracted a number of companies to this
+market. We recognize that different applications require different programmable
+technologies, and we are developing architectures, processes, and products to
+meet these varying customer needs. Recognizing the increasing importance of
+standard software solutions, we have developed common software design tools that
+support the full range of integrated circuit products. We believe that
+automation and ease of design are significant competitive factors in the PLD
+segment.
+
+Several companies, both large and small, have introduced products that compete
+with ours or have announced their intention to enter the PLD segment. Some of
+our competitors may possess innovative technology, which could prove superior to
+our technology in certain applications. In addition, we anticipate potential
+competition from suppliers of logic products based on new technologies. Some of
+our current or potential competitors have substantially greater financial,
+manufacturing, marketing and technical resources than we do. This additional
+competition could adversely affect our financial condition and results of
+operations.
+
+We could also face competition from our licensees. Under a license from us,
+Lucent Technologies has rights to manufacture and market our XC3000 FPGA
+products and also employ that technology to provide additional high density FPGA
+products. Seiko Epson has rights to manufacture some of our products and market
+them in Japan and Europe, but is not currently doing so. We granted a license to
+use certain of our patents to Advanced Micro Devices (AMD). AMD produced certain
+programmable logic devices under that license through its wholly owned
+subsidiary, Vantis. In June 1999, AMD sold the Vantis subsidiary to Lattice
+Semiconductor Corporation.
+
+                                                                               9
+<PAGE>
+
+Executive Officers of the Registrant
+
+Certain information regarding each of Xilinx's executive officers is set forth
+below:
+
+<TABLE>
+<CAPTION>
+Name                    Age    Position                                                                     Officer
+                                                                                                            Since
+<S>                     <C>    <C>                                                                          <C>
+Willem P. Roelandts     56     President and Chief Executive Officer                                        1996
+Kris Chellam            50     Senior Vice President, Finance and Chief Financial Officer                   1998
+Steven Haynes           50     Vice President, Worldwide Sales                                              1998
+Randy Ong               51     Vice President, Worldwide Operations                                         2000
+Dennis Segers           48     Senior Vice President and General Manager of Advanced Products Group         1995
+Richard W. Sevcik       53     Senior Vice President, IP, Services and Software Group                       1997
+Sandeep S. Vij          35     Vice President, Marketing and General Manager of General Products Division   1996
+Evert A. Wolsheimer     46     Vice President, and General Manager of CPLD Division                         2000
+</TABLE>
+
+There are no family relationships among the executive officers of the Company.
+On the Board of Directors, Mr. Vonderschmitt, Chairman of the Board, is the
+brother-in-law of Mr. Sanda, Director.
+
+Willem P. "Wim" Roelandts joined the Company in January 1996 as Chief Executive
+Officer and a member of the Company's Board of Directors. In April 1996, he was
+appointed to the additional position of President of the Company. Prior to
+joining the Company, he served at Hewlett-Packard Company, a computer
+manufacturer, as Senior Vice President and General Manager of Computer Systems
+Organizations from August 1992 through January 1996 and as Vice President and
+General Manager of the Network Systems Group from December 1990 through August
+1992.
+
+Kris Chellam joined the Company in July 1998 as Senior Vice President, Finance
+and Chief Financial Officer. Prior to joining the Company, he served at Atmel
+Corporation as Senior Vice President and General Manager of a product group from
+March to July 1998 and as Vice President, Finance and Administration, and Chief
+Financial Officer from September 1991 through March 1998. Mr. Chellam also
+serves as a director of At Road Inc.
+
+Steven Haynes joined the Company in 1987 as the Regional Sales Manager of the
+Northeast region, was promoted to Area Sales Director in 1988, and was appointed
+Vice President, North American Sales in 1995. In November 1998, he was promoted
+and now holds the position of Vice President, Worldwide Sales.
+
+Randy Ong joined the Company in 1990 as Senior Staff Engineer, and was promoted
+to Vice President of Worldwide Operations in 1997. He has overall responsibility
+for manufacturing, quality assurance, testing, reliability, and package
+development for Xilinx programmable logic devices. He also oversees strategic
+management of the Company's semiconductor foundry partners. He earned his
+bachelor's and master's degrees in electrical engineering at the University of
+California, Berkeley.
+
+Dennis Segers joined the Company in January 1994 as Director of Strategic
+Products and was promoted to Vice President and General Manager in November
+1995. In April 1998, he was appointed Senior Vice President, and General Manager
+of the Advanced Products Group. Mr. Segers is also a member of the Company's
+Board of Directors.
+
+Richard W. Sevcik joined the Company in April 1997 as Senior Vice President, IP,
+Services and Software. He was at Hewlett-Packard Company for 10 years where,
+from 1994 through 1996, he served as Group General Manager of the company's
+Systems Technology Group and oversaw five divisions involved with product
+development for servers, workstations, operating systems, microprocessors,
+networking and security. In 1995 he was named Vice President. From 1992 to 1994,
+he served as Group General Manager of Computer Systems and Servers and was
+responsible for four divisions. Mr. Sevcik is also a member of the Company's
+Board of Directors.
+
+Sandeep S. Vij joined the Company in April 1996 as Director, FPGA Marketing and
+was promoted to Vice President, Marketing in October 1996. In October 1997, he
+was appointed to the additional position of
+
+                                                                              10
+<PAGE>
+
+General Manager of the General Products Division. From 1990 until April 1996, he
+served at Altera Corporation, a semiconductor manufacturer, where he most
+recently served as the Product Marketing Manager of High Volume FPGAs.
+
+Evert A. Wolsheimer joined the Company in 1991 as Vice President, Product
+Technology, with responsibility for process technology, wafer foundry, assembly,
+reliability, and product engineering. He was promoted to Vice President and
+General Manager of the CPLD Division in 1997. He has served on the Board of
+Directors of the Fabless Semiconductor Association (FSA) since 1997. Dr.
+Wolsheimer received his Ph.D. in Electrical Engineering from Delft University of
+Technology, The Netherlands.

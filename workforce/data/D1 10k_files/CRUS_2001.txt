@@ -1,0 +1,1105 @@
+ITEM 1. BUSINESS
+
+     Founded in 1984, Cirrus Logic is a leading supplier of high-performance
+analog and DSP chip solutions for Internet entertainment electronics, analog and
+magnetic markets. In February 1999, we were reincorporated in the State of
+Delaware. We design and manufacture integrated circuits, or chips, that use
+high-performance analog and digital signal processing technologies. Analog and
+digital signal processing refers to technologies to manipulate and improve the
+quality of analog and digital signals. It also includes the conversion of
+signals from digital-to-analog and analog-to-digital, as is frequently required
+in electronic equipment. A device that can perform both of these conversion
+functions is referred to as a coder-decoder, or codec. Codecs and other devices
+that support both digital and analog signals are referred to as mixed signal
+devices. Our mixed signal devices are designed for specific markets that derive
+value from our expertise in advanced mixed-signal design processing,
+systems-level engineering and software knowledge. Our products enable our
+customers to quickly deliver leading-edge technology products that are in high
+demand from consumers.
+
+MARKETS AND PRODUCTS
+
+     Our products are currently used in the audio, consumer electronics,
+telecommunications, data acquisition and personal computer markets. We organize
+our products into three business groups:
+
+          Analog products: consumer audio, industrial automation and control,
+     data acquisition, personal computer, and communication applications
+
+          Internet solutions: optical storage and embedded processor
+     applications
+
+          Magnetic storage: hard disk drive and read/write applications
+
+     We offer more than 200 products to over 3,000 customers worldwide, through
+both direct and indirect sales channels. Our major customers are among the
+world's leading electronics manufacturers and include Apple, Bose, Creative
+Technologies, Dell, Denon, Fujitsu, Harman, Hitachi, IBM, Kenwood, Pace,
+Panasonic, Pioneer, Schlumberger, SonicBlue, Sony and Western Digital.
+
+     We target large existing markets, as well as emerging growth markets that
+derive value from our expertise in advanced mixed-signal design processing,
+systems-level engineering and software expertise. This expertise is implemented
+primarily in integrated circuits and related operating systems, but may also
+include subsystem modules or system equipment designs and related software.
+
+     In the first quarter of fiscal year 2002, we announced that we would be
+focusing our business on consumer-entertainment electronics, with strength in
+analog and DSP technologies. We also announced that we would be de-emphasizing
+our magnetic storage chip business.
+
+ANALOG PRODUCTS BUSINESS GROUP
+
+     Our analog line of products is utilized in consumer audio, industrial
+automation and control, data acquisition, personal computer and communications
+products.
+
+  Consumer Audio
+
+     The consumer audio business currently offers more than 100 products for the
+consumer, professional and automotive audio markets.
+
+     Our consumer products are incorporated into a wide range of audio equipment
+in the high-fidelity audio market, including audio/video receivers and
+amplifiers, cable and satellite set-top audio decoders, digital audio tape
+recorders, audio and video compact disc players, powered speakers, DVD players
+and MP3 players. DVD players use an optical disk technology that is expected to
+replace the audio and video compact disk, as well as the computer CD-ROM, over
+the next few years due to its significantly greater storage capacity. MP3
+                                        1
+<PAGE>   4
+
+technology typically provides a greater than ten to one file size reduction for
+digital audio content. By using MP3 compression, approximately an hour of audio
+content can be loaded into a small form factor, 32 MB solid-state portable music
+player. Our products convert the player's internal digital sound output into an
+analog audio signal.
+
+     Our products include analog-to-digital converters, digital-to-analog
+converters, codecs that combine analog-to-digital and digital-to-analog
+converters in a single package, digital interface components, and a family of
+audio decoders that use digital signal processing technology and that support
+the principal standards in the audio industry, such as Dolby Digital (AC-3),
+AAC, Digital Theater System (DTS), Moving Picture Experts Group audio decoding,
+Prologic/PrologicII, THX, and other special sound effects processing. Our
+customers include Aiwa, Bose, Harman Kardon, Kenwood, Marantz, Onkyo, Panasonic,
+Pioneer, RCA/ Thomson, Sony, and Yamaha. We are the world's number one supplier
+of audio devices for both the MP3 player market and the audio/video receiver
+markets.
+
+     Our professional and automotive products include analog-to-digital
+converters, digital-to-analog converters, digital interface products, sample
+rate converters, and products that enhance audio signal quality using digital
+signal processing technology. Our professional and automotive products are
+incorporated in high-end professional recording equipment, high performance
+digital mixing consoles, special effects processors, musical instrument
+amplifiers, and automotive stereo systems.
+
+     The following consumer, professional and automotive products are expected
+to be the most important in the near term:
+
+<TABLE>
+<CAPTION>
+PRODUCT FAMILY                   DESCRIPTION             FUNCTION/END USES           STATUS
+--------------                   -----------             -----------------           ------
+<S>                        <C>                        <C>                        <C>
+Audio codecs               Analog-to-digital and      Consumer and               In production
+                           digital-to-analog          professional audio
+                           converters                 equipment
+Multi-standard, multi-     Single chip DSP that       Home entertainment/        In production
+channel audio/video        supports/converts          theater systems, DVD
+decoders                   multiple audio             players, and set-top
+                           standards, such as         boxes
+                           Dolby Digital AC-3,
+                           AAC, Digital Theatre
+                           Systems (DTS), THX and
+                           Moving Picture Experts
+                           Group audio standards.
+Analog-to-digital          Convert analog signals     Consumer equipment         In production
+converters, digital-to-    into digital data and      supporting CD-ROM,
+analog converters          digital data into          CD-R, CD-RW, and SACD
+                           analog signals.            encoded media, powered
+                           Typically used in          speakers, DVD players
+                           conjunction with other     and portable MP3
+                           digital signal             players. High end
+                           processing elements in     professional recording
+                           a system.                  equipment and high
+                                                      performance digital
+                                                      mixing consoles.
+High performance sample    Interconnects different    High performance           In production
+rate converters            digital audio devices      digital mixing
+                           by reformatting the        consoles, CD- ROM
+                           digital audio stream.      players and
+                                                      professional audio
+                                                      recording equipment.
+Digital signal             Integrates digital         Special effects            In production
+processing with            signal processing into     processors for the
+integrated high            an analog system.          music industry.
+performance codec
+</TABLE>
+
+                                        2
+<PAGE>   5
+
+<TABLE>
+<CAPTION>
+PRODUCT FAMILY                   DESCRIPTION             FUNCTION/END USES           STATUS
+--------------                   -----------             -----------------           ------
+<S>                        <C>                        <C>                        <C>
+Digital audio interface    Provides a digital         Consumer and               In production
+products                   audio connection within    professional
+                           and between audio/video    applications including
+                           systems.                   audio/video equipment,
+                                                      effects processors,
+                                                      mixing consoles, and
+                                                      digital speaker
+                                                      systems.
+High efficiency Class D    New digital audio          Consumer, professional     In development
+(PWM) converters and       technology that            and automotive systems.
+power amplifiers           replaces existing
+                           analog implementations.
+                           Class D (PWM) power
+                           amplifiers are
+                           characterized by high
+                           energy efficiency and
+                           low heat output. Class
+                           D amplifiers and
+                           converters enable new
+                           small form factor
+                           systems and can provide
+                           more battery life in
+                           portable systems.
+</TABLE>
+
+  Data Acquisition
+
+     We design, manufacture and market analog, digital and mixed-signal chips
+for data acquisition, instrumentation and imaging applications. Our data
+acquisition product family includes more than 100 products used in industrial
+automation, instrumentation, medical, military and geophysical applications.
+Types of applications include the measurement of energy usage in power meters
+and fluorescent light fixtures, temperature gauges for industrial and medical
+use, seismic devices for oil field applications and high-precision weigh scales
+for commercial and scientific use. Our broad line of analog-to-digital
+converters consists of general purpose and low frequency measurement devices.
+These devices use patented self-calibration techniques that improve accuracy and
+reduce system-level cost. Our customers include National Instruments, Rockwell
+Automation and Schlumberger. In addition to supporting a product family,
+technology from our data acquisition business is used in integrated circuits
+across all of our product lines.
+
+     The following data acquisition products are expected to be the most
+important in the near term:
+
+<TABLE>
+<CAPTION>
+PRODUCT FAMILY                   DESCRIPTION             FUNCTION/END USES           STATUS
+--------------                   -----------             -----------------           ------
+<S>                        <C>                        <C>                        <C>
+Analog-to-digital          High precision             Used in industrial         In production
+converters                 converter                  applications to amplify
+                                                      and digitize analog
+                                                      signals from sensors
+                                                      that transduce
+                                                      phenomenon like force,
+                                                      temperature, or
+                                                      pressure.
+Energy measurement         Single chip solution       Used by the power-meter    In production
+                           for energy measurement     and fluorescent light
+                           applications               market to measure and
+                                                      manage electricity
+                                                      usage in residential
+                                                      and commercial
+                                                      buildings
+</TABLE>
+
+  Computer Audio Products
+
+     We currently offer more than 15 computer audio products for use in personal
+computers and workstations. A workstation is a computer intended for individual
+use, which is faster and more capable than a
+
+                                        3
+<PAGE>   6
+
+personal computer. Our chips are incorporated in the motherboards of desktop and
+notebook computers and workstations, as well as in external cards that plug into
+computers and workstations and enable audio functions on those machines. We are
+one of the leading suppliers of stereo audio chips for the personal computer and
+workstation markets. Our chips provide high quality audio signals for the input
+and output functions of personal computer and workstation audio products. Our
+chips support a range of personal computer and workstation audio systems,
+including those that offer three dimensional sound effects and music synthesis,
+such as sound processing and mixing capabilities, as well as compatibility with
+standard audio software packages, such as SoundBlaster(TM) and Microsoft
+Sound(TM). Our computer audio products enhance the sound quality and audio
+capabilities of personal computers and workstations. These products include
+personal computer interface digital signal processors, which enable advanced
+audio functions, such as music synthesis, including sound processing and mixing
+capabilities for gaming, MP3 encode and decode and the home theater listening
+experience with Dolby Digital(TM) and DTS(TM) in add-in cards. Other products
+that enhance the sound quality and audio capabilities of personal computers and
+workstations include controller products, which enable special sound effects
+processing in personal computers and workstations and allow personal computer
+gamers to perceive sound as coming from various points around them in a
+three-dimensional space, sound equalizers, acoustic echo cancellation for high
+quality Internet audio, acceleration for Microsoft Direct Sound(TM), and other
+standard industry interfaces such as A3D and EAX. Our principal customers
+include Creative Technologies, Dell, Hewlett Packard, Intel and IBM.
+
+     The following computer audio products are expected to be the most important
+in the near term:
+
+<TABLE>
+<CAPTION>
+PRODUCT FAMILY                   DESCRIPTION             FUNCTION/END USES           STATUS
+--------------                   -----------             -----------------           ------
+<S>                        <C>                        <C>                        <C>
+AC '97 Audio codecs        Analog-to-digital and      Converts audio to/from     In production
+                           digital-analog             digital data. Used in
+                           converters                 workstation and
+                                                      personal computer
+                                                      motherboards and
+                                                      external cards.
+Digital signal             Special effects digital    Enables advanced audio     In production
+processing with            signal processors          functions such as music
+integrated high                                       synthesis, including
+performance codec                                     sound processing and
+                                                      mixing capabilities in
+                                                      add-in cards.
+Peripheral component       High-integration           Enables connection         In production
+interconnect audio         personal-computer audio    between personal
+controllers (PCI           controllers. Range of      computers or
+Controllers)               low- cost to               workstations, and
+                           high-performance           peripheral computer
+                           digital signal             components, such as
+                           processing based           audio cards, external
+                           solutions. Digital         speakers and portable
+                           signal processing          computers, which plug
+                           solutions offer            into docking stations.
+                           advanced audio
+                           processing such as
+                           three-dimensional
+                           positioning for games,
+                           wavetable music
+                           synthesis and sound
+                           equalization.
+</TABLE>
+
+  Communications
+
+     We design, manufacture and market embedded Ethernet chips for use in
+broadband access customer premises equipment, such as digital cable set-top
+boxes, cable modems, and DSL modems. These broadband access devices, also known
+as "residential gateways," enable home users to access voice, video and data
+content, typically using the Internet, over a single communications connection.
+The same Ethernet chips are commonly used in other embedded applications, such
+as Voice Over Internet Protocol (VoIP) telephones, industrial controllers, and
+wireless access points. In addition, we develop and market integrated circuit
+
+                                        4
+<PAGE>   7
+
+products, primarily T1/E1 Line Interface Units, which provide switched telephony
+network interface solutions for telecommunications and data communications
+equipment. Our newest product family is communication processors for VoIP
+telephones, residential gateways, and other embedded applications. These devices
+feature ARM processor cores, with advanced peripherals and on-board Ethernet
+interfaces.
+
+     The following communications products are expected to be the most important
+in the near term:
+
+<TABLE>
+<CAPTION>
+PRODUCT FAMILY                   DESCRIPTION             FUNCTION/END USES           STATUS
+--------------                   -----------             -----------------           ------
+<S>                        <C>                        <C>                        <C>
+Embedded Ethernet          High integration,          Used in embedded           In production
+controllers                simplified design          systems, especially for
+                           10BASE-T and 10/100        broadband access, such
+                           local area network         as cable set-top boxes,
+                           controllers and analog     cable and DSL modems
+                           front ends.
+Telecom T1/E1 Line         Broad family of high-      TI and E1 standard         In production
+Interface Units            performance, mixed-        applications such as
+                           signal devices for         multiplexors, PSTN
+                           interfacing network        switches and other
+                           equipment to high-speed    communications
+                           communications lines.      equipment for Central
+                                                      Office and Customers
+                                                      Premises.
+Communications             System on a chip           Voice-over-Internet-       Ramping
+processors                 processor solutions        Protocol telephones,
+                           based on the ARM7 and      residential gateways
+                           ARM9 architectures,        and other
+                           with on-board Ethernet     communications
+                           interfaces.                applications.
+</TABLE>
+
+INTERNET SOLUTIONS BUSINESS GROUP
+
+     Our Internet line of products consists of chips for optical storage and
+embedded processor applications.
+
+  Optical Storage
+
+     We supply chips that perform key electronics functions in advanced optical
+disc drives, including both PC-based CD-RW drives and consumer-market DVD
+drives. The CD-ROM drive, found in computers and workstations for storing and
+retrieving electronic information on a compact disc, is the most common optical
+disc drive. CD-ROM drives do not allow writing to the compact disk. Recently,
+CD-ROM drives have been developed that permit users of personal computers and
+workstations to record on CD-ROMs either once, referred to as CD-R drives, or
+numerous times, referred to as CD-RW drives. The information stored on a CD is
+transmitted to the computer or workstation through a device referred to as a
+decoder and is written to CD-R or CD-RW through a device referred to as an
+encoder. The company entered the optical storage market in fiscal 1995 with a
+CD-ROM decoder product, followed by three more generations of CD-ROM decoders
+with higher read speeds. In fiscal 2001, we discontinued our CD-ROM decoder
+products. In fiscal 1997, we introduced our first CD-RW encoder/decoder
+products. In fiscal 2001, the company introduced the industry's first CD-RW
+encoder/decoder product capable of writing to double-density CD-RW media, which
+is capable of storing twice the data of conventional CD-RW media.
+
+     We also provide chips for the DVD drive electronics market. We completed
+development of the CL3710 DVD drive manager device in fiscal 2001. This product
+is a fully integrated, high performance solution for a variety of DVD
+applications, including PC-based DVD-ROM drives, consumer DVD players, DVD-based
+game consoles and emerging consumer DVD-recordable components. We began making
+production shipments at the end of fiscal 2001.
+
+                                        5
+<PAGE>   8
+
+     We currently sell products to a number of customers in the optical storage
+market. The following optical storage products are expected to be the most
+important in the near term:
+
+<TABLE>
+<CAPTION>
+PRODUCT FAMILY                   DESCRIPTION             FUNCTION/END USES           STATUS
+--------------                   -----------             -----------------           ------
+<S>                        <C>                        <C>                        <C>
+CD-R and CD-RW             Single chip providing      Incorporated into a        In production
+encoder/decoder            up to 16x write and 48x    CD-R/CD-RW drives for
+                           read speeds for single     personal computers,
+                           density and double         workstations, and
+                           density CD-R/CD-RW         consumer devices
+                           drives. Support for
+                           consumer, ATAPI and
+                           IEEE 1394 interfaces.
+Integrated DVD drive       Fully integrated DVD       Single chip front-end      In production
+manager                    Drive manager,             electronics that can be
+                           incorporating a partial    configured with an
+                           response maximum           audio DAC, external
+                           likelihood (PRML) read-    buffer memory, and a
+                           channel servo-control      local micro-controller
+                           and decoder functions      to create a complete
+                           for DVD-ROM and DVD-       DVD solution for
+                           Player applications.       DVD-ROM drives, DVD
+                                                      players, DVD-based game
+                                                      consoles and DVD
+                                                      recordable components.
+</TABLE>
+
+  Embedded Processors
+
+     We develop, manufacture and market highly integrated, system-on-chip (SOC)
+products for emerging consumer applications. SOC products integrate a number of
+different functions, or systems, onto a single chip. In the past, most
+electronic products required multiple chips to perform all the functions;
+reducing the number of chips in a design allows space and cost savings for
+consumers. Our SOC designs are based on processor cores licensed from ARM Ltd.
+Our primary focus is on market-specific processors sold under the Maverick(R)
+brand name. These products are designed for use in digital audio devices,
+handheld information appliances and Internet computing devices. Currently, we
+are the leading supplier of chips in the portable digital audio market, with
+customers including SonicBlue (formerly S3/Diamond Multimedia), Creative
+Technologies, Compaq, and Intel. Our next generation of Maverick(R) chips will
+enable further growth of the digital audio market via a new home entertainment
+appliance called the Digital Audio Jukebox. This product compresses music
+acquired over the Internet or from personal collections, stores the music on a
+local hard disk drive, and allows the music to be played over a home
+entertainment system. Other Maverick(R) chips specifically target applications
+such as PDAs (personal digital assistants) and Internet information appliances,
+such as electronic books and low-cost Internet terminals.
+
+                                        6
+<PAGE>   9
+
+     The following embedded processor products are expected to be the most
+important in the near term:
+
+<TABLE>
+<CAPTION>
+PRODUCT FAMILY                   DESCRIPTION             FUNCTION/END USES           STATUS
+--------------                   -----------             -----------------           ------
+<S>                        <C>                        <C>                        <C>
+High-performance, ultra    ARM 720T processor core    Used in handheld           In production
+low power, system-on-      integrated with liquid     digital audio players,
+chip with LCD              Crystal(R) display         personal digital
+controller                 (LCD) and DRAM             assistants, and
+                           controllers, USB           Internet access
+                           interface, Digital         appliance applications
+                           Audio Interface and        for portable,
+                           Internet security          battery-powered
+                           software.                  devices. Multiple
+                                                      products.
+High performance, ARM9     ARM 920T processor core    Used in line powered       Testing
+Secure SOC                 integrated with            internet appliances,
+                           Ethernet, EIDE, and USB    such as digital audio
+                           interfaces, math co-       jukeboxes and web
+                           processor engine, and      browser terminals.
+                           security features.         Multiple products.
+</TABLE>
+
+MAGNETIC STORAGE BUSINESS GROUP
+
+     We supply chips that perform the key electronics functions contained in
+advanced magnetic and removable disk drives for personal computers and
+workstations. In fiscal 2001, we announced that we had entered into a strategic
+supply agreement with Fujitsu, in which Fujitsu's hard-disk drive division
+agreed to purchase approximately $200 million of our 3CI(TM) magnetic storage
+chips during the following 12 months. Our magnetic storage customers during
+fiscal 2001 included Fujitsu, Hitachi, and Western Digital. In May 2001, we
+announced that we are de-emphasizing our magnetic storage chip business.
+
+MANUFACTURING
+
+     We purchase wafers manufactured by third-party wafer fabricators for our
+wafer manufacturing needs. In addition to our wafer supply arrangements, we
+currently contract with third-party assembly vendors to package the wafer die
+into finished products. We qualify and monitor assembly vendors using procedures
+similar in scope to those used for wafer procurement. Assembly vendors provide
+fixed-cost-per-unit pricing, as is common in the semiconductor industry.
+
+     During fiscal 1998, we started outsourcing a substantial portion of our
+production testing. Our manufacturing organization has continued to qualify and
+monitor suppliers' production processes, to participate in process development,
+package development and process and product characterization, to perform
+mixed-signal production testing, to support R&D activities, and to maintain
+quality standards. As of April 28, 2001, we had approximately 23% of our
+employees engaged in manufacturing-related activities.
+
+PATENTS, LICENSES AND TRADEMARKS
+
+     To protect our products, we rely heavily on trade secret, patent,
+copyright, mask work and trademark laws. We apply for patents arising from our
+research and development activities and intend to continue this practice in the
+future to protect our products and technologies. As of April 30, 2001, we held
+692 U.S. patents, 333 U.S. patent applications pending, and various
+corresponding international patents and applications. We have also licensed a
+variety of technologies important to our business from outside parties to
+complement our own research and development efforts.
+
+RESEARCH AND DEVELOPMENT
+
+     We concentrate our research and development efforts on the design and
+development of new products for each market and on the continued enhancement of
+our design automation tools. Product-oriented research and development efforts
+are organized along the Analog, Internet and Magnetic Storage Business Groups.
+We also
+
+                                        7
+<PAGE>   10
+
+fund certain advanced process technology development, as well as other emerging
+product opportunities. Expenditures for research and development in fiscal 2001,
+2000, and 1999, were $127.6 million, $121.4 million (excluding acquired
+in-process research and development expenses of $8.0 million in fiscal year
+2000), and $149.8 million, respectively. As of April 28, 2001, approximately 43%
+of our employees were engaged in research and development activities. Our future
+success is highly dependent upon our ability to develop complex new products, to
+transfer new products to production in a timely fashion, to introduce them to
+the marketplace ahead of the competition, and to have them selected for design
+into products of leading systems manufacturers.
+
+COMPETITION
+
+     Markets for our products are highly competitive, and we expect that
+competition will increase. We compete with other semiconductor suppliers that
+offer standard semiconductors, application-specific integrated circuits and
+fully customized integrated circuits, including both chip and board-level
+products. A few customers also develop integrated circuits that compete with our
+products. Our competitive strategy has been to provide lower-cost versions of
+existing products and new, more advanced products for customers' new designs.
+
+     While no single company competes with us in all of our product lines, we
+face significant competition in each of our product lines. We expect to face
+additional competition from new entrants in each of our markets, which may
+include both large domestic and international semiconductor manufacturers and
+smaller, emerging companies.
+
+     The principal competitive factors in our markets include time to market;
+quality of hardware/software design and end-market systems expertise; price;
+product benefits that are characterized by performance, features, quality and
+compatibility with standards; access to advanced process and packaging
+technologies at competitive prices; and sales and technical support.
+
+     Competition typically occurs at the design stage, where the customer
+evaluates alternative design approaches that require integrated circuits.
+Because our products have not been available from second sources, we generally
+do not face direct competition in selling our products to a customer once our
+integrated circuits have been designed into that customer's system.
+Nevertheless, because of shortened product life cycles and even shorter
+design-in cycles, our competitors have increasingly frequent opportunities to
+achieve design wins in next-generation systems. In the event that competitors
+succeed in supplanting our products, our market share may not be sustainable and
+net sales, gross margin and earnings would be adversely affected.
+
+SALES, MARKETING AND TECHNICAL SUPPORT
+
+     Our products are sold worldwide, principally to Asia. Export sales, which
+include sales to U.S.-based customers with manufacturing plants overseas, were
+82% in fiscal 2001, 75% in fiscal 2000, and 74% in fiscal 1999, respectively. We
+maintain a worldwide sales force, which is intended to provide geographically
+specific selling support to our customers, and specialized selling of product
+lines with unique customer bases.
+
+     The domestic sales force includes a network of regional direct sales
+offices located in California, Colorado, Florida, Illinois, Maryland,
+Massachusetts, Oregon, Texas and Virginia. International sales offices and
+organizations are located in France, Germany, Hong Kong, Japan, Korea, the
+Netherlands, Singapore, Taiwan, and the United Kingdom. We supplement our direct
+sales force with sales representative organizations and distributors. Technical
+support staff is located at the sales offices and also at our facilities in
+Fremont, California; Broomfield, Colorado; Nashua, New Hampshire; Austin, Texas;
+Pune, India; and Tokyo, Japan.
+
+     See "Management's Discussion and Analysis of Financial Condition and
+Results of Operations" for export sales information.
+
+                                        8
+<PAGE>   11
+
+BACKLOG
+
+     Sales are made primarily pursuant to standard short-term purchase orders
+for delivery of standard products. The quantity actually ordered by the
+customer, as well as the shipment schedules, are frequently revised to reflect
+changes in the customer's needs. As a result, we believe that our backlog at any
+given time is not a meaningful indicator of future revenues.
+
+EMPLOYEES
+
+     As of April 28, 2001, we had approximately 1,356 full-time equivalent
+employees, of whom 43% were engaged in research and product development, 34% in
+sales, marketing, general and administrative, and 23% in manufacturing. Our
+future success will depend, in part, on our ability to continue to attract,
+retain and motivate highly qualified technical, marketing, engineering and
+management personnel.
+
+     Due to the highly competitive nature of the marketplace that we operate in,
+we may from time to time lose key employees to certain of our competitors. We
+have been able to hire qualified personnel in the past to fill open positions
+created by such occurrences, although there can be no assurance that we will be
+able to do this in the future. None of our employees is represented by any
+collective bargaining agreements.
+
+FACTORS THAT MAY AFFECT FUTURE OPERATING RESULTS
+
+  WE HAVE HISTORICALLY EXPERIENCED FLUCTUATIONS IN OUR OPERATING RESULTS AND
+  EXPECT THESE FLUCTUATIONS TO CONTINUE IN FUTURE PERIODS.
+
+     Our quarterly and annual operating results are affected by a wide variety
+of factors that could materially and adversely affect our net sales, gross
+margins and operating income. These factors include:
+
+     - the volume and timing of orders received,
+
+     - changes in the mix of our products sold,
+
+     - market acceptance of our products and the products of our customers,
+
+     - competitive pricing pressures,
+
+     - our ability to expand manufacturing output to meet increasing demand,
+
+     - our ability to introduce new products on a timely basis,
+
+     - fixed costs associated with minimum purchase commitments under supply
+       contracts if demand decreases,
+
+     - the timing and extent of our research and development expenses,
+
+     - cyclical semiconductor industry conditions,
+
+     - the failure to anticipate changing customer product requirements,
+
+     - fluctuations in manufacturing costs,
+
+     - disruption in the supply of wafers or assembly services,
+
+     - the ability of customers to make payments to us,
+
+     - increases in material costs,
+
+     - certain production and other risks associated with using independent
+       manufacturers, and
+
+     - product obsolescence, price erosion and other competitive factors.
+
+     Historically in the integrated circuit industry, average selling prices of
+products have decreased over time. If we are unable to introduce new products
+with higher margins or reduce manufacturing costs to offset anticipated
+decreases in the prices of our existing products, our operating results will be
+adversely affected.
+
+                                        9
+<PAGE>   12
+
+Our business is characterized by short-term orders and shipment schedules, and
+customer orders typically can be canceled or rescheduled without penalty to the
+customer. In addition, because of fixed costs in the integrated circuit
+industry, we are limited in our ability to reduce costs quickly in response to
+any revenue shortfalls. As a result of the foregoing or other factors, we may
+experience material adverse fluctuations in our future operating results on a
+quarterly or annual basis.
+
+  OUR SUCCESS DEPENDS ON OUR ABILITY TO INTRODUCE NEW PRODUCTS ON A TIMELY
+  BASIS.
+
+     Our success depends upon our ability to develop new precision linear and
+mixed-signal circuits for new and existing markets, to introduce such products
+in a timely manner, and to have such products gain market acceptance. The
+development of new precision linear and mixed-signal circuits is highly complex
+and from time to time we have experienced delays in developing and introducing
+new products. Successful product development and introduction depends on a
+number of factors, including:
+
+     - proper new product definition,
+
+     - timely completion of design and testing of new products,
+
+     - achievement of acceptable manufacturing yields, and
+
+     - market acceptance of our products and the products of our customers.
+
+     Although we seek to design products that have the potential to become
+industry standard products, we cannot assure you that any products introduced by
+us will be adopted by such market leaders, or that any products initially
+accepted by our customers that are market leaders will become industry standard
+products. Both revenues and margins may be materially affected if new product
+introductions are delayed or if our products are not designed into successive
+generations of our customers' products. We cannot assure you that we will be
+able to meet these challenges or adjust to changing market conditions as quickly
+and cost-effectively as necessary to compete successfully. Our failure to
+develop and introduce new products successfully could harm our business and
+operating results.
+
+     Successful product design and development is dependent on our ability to
+attract, retain and motivate qualified design engineers, of which there is a
+limited number. Due to the complexity and variety of precision linear and
+mixed-signal circuits, the limited number of qualified circuit designers, and
+the limited effectiveness of computer-aided design systems in the design of such
+circuits, we cannot assure you that we will be able to successfully develop and
+introduce new products on a timely basis.
+
+  OUR PRODUCTS ARE COMPLEX AND COULD CONTAIN DEFECTS, WHICH COULD REDUCE SALES
+  OF THOSE PRODUCTS OR RESULT IN CLAIMS AGAINST US.
+
+     Product development in the markets we serve is becoming more focused on the
+integration of functionality on individual devices. There is a general trend
+towards increasingly complex products. The greater integration of functions and
+complexity of operations of our products increase the risk that latent defects
+or subtle faults could be discovered by our customers or end users after volumes
+of product have been shipped. This could result in:
+
+     - material recall and replacement costs for product warranty and support;
+
+     - adverse impact to our customer relationships by the recurrence of
+       significant defects;
+
+     - delay in recognition or loss of revenues, loss of market share or failure
+       to achieve market acceptance; and
+
+     - diversion of the attention of our engineering personnel from our product
+       development efforts.
+
+     The occurrence of any of these problems could result in the delay or loss
+of market acceptance of our products and would likely harm our business. In
+addition, any defects or other problems with our products could result in
+financial or other damages to our customers who could seek damages from us for
+their losses. A
+
+                                        10
+<PAGE>   13
+
+product liability claim brought against us, even if unsuccessful, would likely
+be time consuming and costly to defend.
+
+  THE INTEGRATED CIRCUIT INDUSTRY IS VERY CYCLICAL AND AN INDUSTRY DOWNTURN
+  WOULD ADVERSELY AFFECT OUR BUSINESS.
+
+     The integrated circuit industry is characterized by:
+
+     - rapid technological change,
+
+     - cyclical market patterns,
+
+     - significant price erosion,
+
+     - periods of over-capacity and production shortages,
+
+     - variations in manufacturing costs and yields, and
+
+     - significant expenditures for capital equipment and product development.
+
+     The industry has from time to time experienced depressed business
+conditions. Although the semiconductor industry in recent periods has
+experienced increased demand and production capacity constraints, we cannot
+assure you that these conditions will continue. In addition, we cannot assure
+you that any future downturn in the industry will not be severe or that any such
+downturn will not have a material adverse effect on our business and results of
+operations. We cannot assure you that we will not experience substantial
+period-to-period fluctuations in operating costs due to general semiconductor
+industry conditions or other factors.
+
+  IF WE FAIL TO ATTRACT, HIRE AND RETAIN QUALIFIED PERSONNEL, WE MAY NOT BE ABLE
+  TO DEVELOP, MARKET OR SELL OUR PRODUCTS OR SUCCESSFULLY MANAGE OUR BUSINESS.
+
+     Competition for personnel in our industry is intense. The number of
+technology companies in our geographic area is greater than it has been
+historically, and we expect competition for qualified personnel to intensify.
+There is only a limited number of people in the job market with the requisite
+skills. Our human resources organization focuses significant efforts on
+attracting and retaining individuals in key technology positions. Declining
+stock market prices, however, make retention more difficult, as prior equity
+grants contain less value and key employees pursue equity opportunities
+elsewhere. In addition, start-up companies generally offer larger equity grants
+to attract individuals from more established companies. The loss of the services
+of any key personnel or our inability to hire new personnel with the requisite
+skills could restrict our ability to develop new products or enhance existing
+products in a timely manner, sell products to our customers or manage our
+business effectively.
+
+  ANY DOWNTURN IN THE MARKETS WE SERVE WOULD HARM OUR BUSINESS.
+
+     Many of our products are incorporated into products such as personal
+computers, magnetic storage, audio and industrial electronics, and embedded
+processor products. These markets may from time to time experience cyclical,
+depressed business conditions, often in connection with, or in anticipation of,
+a decline in general economic conditions. Such industry downturns have resulted
+in reduced product demand and declining average selling prices. Our business
+would be harmed by any future downturns in the markets that we serve. The
+sections below detail the risks associated with serving these various markets.
+
+     THE FOLLOWING RISKS ARE ASSOCIATED WITH SERVING THE AUDIO PRODUCTS MARKET:
+
+     - decreased average selling prices in the audio IC market due to
+       competitive pricing pressures;
+
+     - rapid integration of digital-to-analog converters into processors;
+
+     - our ability to respond effectively to the market trend of integrating
+       audio and video products;
+
+                                        11
+<PAGE>   14
+
+     - decreased average selling prices in the audio integrated circuit market
+       due to the PC industry's transition to the AC-link codecs attached to
+       core logic using the multimedia features of the processor and single chip
+       solution;
+
+     - in the PC audio products market, the transition to core logic connected
+       audio and by the introduction of cheaper, fully-integrated, single-chip
+       audio integrated circuits;
+
+     - aggressive competitive pricing pressures in the audio integrated circuits
+       market; and
+
+     - the inability of our audio products to meet cost or performance
+       requirements of the three-dimensional, spatial-effects audio market.
+
+     THE FOLLOWING RISKS ARE ASSOCIATED WITH SERVING THE EMBEDDED PROCESSOR
+PRODUCTS MARKET:
+
+     - increased competition from other semiconductor manufacturers now entering
+       the market due to the increased popularity of consumer goods
+       incorporating embedded processor products, such as portable digital audio
+       players, smart cellular phones, set-top Internet and e-mail access boxes,
+       and personal digital appliances;
+
+     - our inability to meet embedded processor products requirements of an
+       industry that has yet to define product standards;
+
+     - customer delays in their product development and introductions; and
+
+     - price competition from over 30 other embedded processor products
+       manufacturers who have licensed ARM Ltd. central processing unit cores,
+       the same central processing unit core we license, and who will likely
+       produce products around these cores that are very similar to ours.
+
+     THE FOLLOWING RISKS ARE ASSOCIATED WITH SERVING THE PRECISION DATA
+CONVERSION MARKET:
+
+     - our inability to establish broad sales channels and our failure to
+       develop and maintain a sufficiently broad competitive product line;
+
+     - customer delays in their product development and introductions;
+
+     - our inability to reach the marketplace due to the technical complexity of
+       our products and the time requirements for their development; and
+
+     - our inability to attract, hire, and retain scarce analog engineering
+       talent necessary for rapid product development in this market.
+
+     THE FOLLOWING RISKS ARE ASSOCIATED WITH OUR INVOLVEMENT IN THE PC MARKETS:
+
+     - greatly pronounced demand fluctuations characteristic of our role as a
+       component supplier to PC original equipment manufacturers, or OEMs, and
+       to peripheral device manufacturers;
+
+     - our involvement in the consumer PC market, the most volatile segment of
+       the PC market;
+
+     - increased competition from other integrated circuit makers, including
+       Intel Corporation, who plan to incorporate features into or with their
+       microprocessor products that replicate those of our products;
+
+     - loss of customer base as we refocus on non-PC markets; and
+
+     - as a supplier to manufacturers at different levels of the production
+       chain, our potential dependence on the success of a particular PC OEM due
+       to our inability to accurately identify end-users of our product.
+
+     THE FOLLOWING RISKS ARE ASSOCIATED WITH SERVING THE MAGNETIC STORAGE
+MARKET:
+
+     - significantly reduced demand for our magnetic storage products, due to
+       recent efforts by certain of our customers to contract with our
+       competitors for these products, as well as to develop their own
+       integrated circuits for these products;
+
+                                        12
+<PAGE>   15
+
+     - historically dramatic supply and demand fluctuations in the magnetic disk
+       drive market, which is closely linked to growth in the PC market;
+
+     - direct correlation between the competitive nature of the disk drive
+       industry and the price of disk drive components;
+
+     - our dependence on the success of certain 3.5 inch magnetic disk drive
+       products that incorporate our products into their design;
+
+     - our dependence on the successful introduction by our customers of new
+       disk drive products that in turn can be impacted by the timing of
+       customers' transition to new disk drive products;
+
+     - our ability to respond effectively to the market trend of integrating
+       hard disk controllers with micro-controllers; and
+
+     - our ability to successfully compete with other firms with greater
+       resources to accomplish the technical obstacles of integration and
+       greater access to the advanced technologies necessary to provide
+       integrated HDD electronic components.
+
+  SHIFTS IN INDUSTRY-WIDE CAPACITY MAY CAUSE OUR RESULTS TO FLUCTUATE AND SUCH
+  SHIFTS HAVE RESULTED AND COULD IN THE FUTURE RESULT IN SIGNIFICANT INVENTORY
+  WRITE-DOWNS.
+
+     Shifts in industry-wide capacity from shortages to oversupply or from
+oversupply to shortages may result in significant fluctuations in our quarterly
+and annual operating results. We must order wafers and build inventory well in
+advance of product shipments. Because the integrated circuit industry is highly
+cyclical and is subject to significant downturns resulting from excess capacity,
+overproduction, reduced demand or technological obsolescence, there is a risk
+that we will forecast inaccurately and produce excess or insufficient
+inventories of particular products. This inventory risk is heightened because
+many of our customers place orders with short lead times. Due to the product
+manufacturing cycle characteristic of integrated circuit manufacturing and the
+inherent imprecision by our customers to accurately forecast their demand,
+product inventories may not always correspond to product demand, leading to
+shortages or surpluses of certain products. As a result of such inventory
+imbalances, future inventory write-downs may occur due to lower of cost or
+market accounting, excess inventory or inventory obsolescence.
+
+  BECAUSE FOUNDRY CAPACITY IS LIMITED, WE MAY BE REQUIRED TO ENTER INTO COSTLY
+  LONG-TERM SUPPLY ARRANGEMENTS TO SECURE FOUNDRY CAPACITY.
+
+     We currently purchase all of our wafers from outside foundries. Market
+conditions could result in wafers being in short supply and prevent us from
+having adequate supply to meet our customer requirements. Any prolonged
+inability to utilize our foundries as a result of fire, natural disaster or
+otherwise would have a material adverse effect on our financial condition and
+results of operations. If we are not able to obtain additional foundry capacity
+as required, our business could be harmed in the following ways: (i) our
+relationships with our customers would be harmed and consequently our sales
+would likely be reduced; and (ii) we may be forced to purchase wafers or
+packaging from higher cost suppliers or to pay expediting charges to obtain
+additional supply
+
+     In order to secure additional foundry capacity, we have entered into
+contracts that commit us to purchase specified quantities of silicon wafers over
+extended periods. In fact, during fiscal 1999, the industry experienced an
+excess in production capacity that we believe, in some cases, resulted in our
+competitors paying wafer prices that were lower than our cost of production from
+our manufacturing joint ventures. As a result, we experienced pressures on our
+selling prices during fiscal years 1999 and 2000, which harmed our revenues and
+reduced our margins. In the future, we may not be able to secure capacity with
+foundries in a timely fashion or at all, and such arrangements, if any, may not
+be on terms favorable to us. Moreover, if we are able to secure foundry
+capacity, we may be obligated to utilize all of that capacity or incur
+penalties. Such penalties may be expensive and could harm our financial results.
+
+                                        13
+<PAGE>   16
+
+  WE ARE DEPENDENT ON OUR SUBCONTRACTORS IN ASIA TO PERFORM KEY MANUFACTURING
+  FUNCTIONS FOR US.
+
+     We depend on third party subcontractors in Asia for the supply and
+packaging of our products. International operations and sales may be subject to
+political and economic risks, including political instability, currency
+controls, exchange rate fluctuations, and changes in import/export regulations,
+tariff and freight rates. Although we seek to reduce our dependence on our sole
+and limited source suppliers, this concentration of suppliers and manufacturing
+operations in Asia subjects us to the risks of conducting business
+internationally, including political and economic conditions in Asia. Disruption
+or termination of our supply or manufacturing could occur, and such disruptions
+could harm our business and operating results.
+
+  WE HAVE SIGNIFICANT INTERNATIONAL SALES AND RISKS ASSOCIATED WITH THESE SALES
+  COULD HARM OUR OPERATING RESULTS.
+
+     Export sales, principally to Asia, include sales to U.S-based customers
+with manufacturing plants overseas, and accounted for 82%, 75%, and 74% of our
+net sales in fiscal 2001, 2000, and 1999, respectively. We expect export sales
+to continue to represent a significant portion of product sales. This reliance
+on sales internationally subjects us to the risks of conducting business
+internationally, including political and economic conditions. For example, the
+financial instability in a given region, such as Asia, may have an adverse
+impact on the financial position of end users in the region which could impact
+future orders and/or the ability of such users to pay us or our customers, which
+could also impact the ability of such customers to pay us. While we expect to
+carefully evaluate the collection risk related to the financial position of
+customers and potential customers in structuring the terms of sale, in
+determining whether to accept sales orders, and in evaluating the recognition of
+revenue, if a region's volatility harms the financial position of our customers,
+our results of operations could be harmed. Our international sales operations
+involve a number of other risks, including:
+
+     - unexpected changes in regulatory requirements;
+
+     - changes in diplomatic and trade relationships;
+
+     - delays resulting from difficulty in obtaining export licenses for
+       technology;
+
+     - tariffs and other barriers and restrictions; and
+
+     - the burdens of complying with a variety of foreign laws.
+
+     In addition, while we may buy hedging instruments to reduce our exposure to
+currency exchange rate fluctuations, our competitive position can be affected by
+the exchange rate of the U.S. dollar against other currencies, particularly the
+Japanese yen. Consequently, increases in the value of the dollar would increase
+the price in local currencies of our products in foreign markets and make our
+products relatively more expensive. We cannot assure you that regulatory,
+political and other factors will not adversely affect our operations in the
+future or require us to modify our current business practices.
+
+  POTENTIAL INTELLECTUAL PROPERTY CLAIMS AND LITIGATION COULD SUBJECT US TO
+  SIGNIFICANT LIABILITY FOR DAMAGES AND COULD INVALIDATE OUR PROPRIETARY RIGHTS.
+
+     Our success depends on our ability to obtain patents and licenses and to
+preserve our other intellectual property rights covering our manufacturing
+processes, products and development and testing tools. We seek patent protection
+for those inventions and technologies for which we believe such protection is
+suitable and is likely to provide a competitive advantage to us. Notwithstanding
+our attempts to protect our proprietary rights, we believe that our future
+success will depend primarily upon the technical expertise, creative skills and
+management abilities of our officers and key employees rather than on patent and
+copyright ownership. We also rely substantially on trade secrets and proprietary
+technology to protect our technology and manufacturing know-how, and work
+actively to foster continuing technological innovation to maintain and protect
+our competitive position.
+
+     The integrated circuit industry is characterized by frequent litigation
+regarding patent and other intellectual property rights. We cannot assure you
+that any patent owned by us will not be invalidated,
+
+                                        14
+<PAGE>   17
+
+circumvented or challenged, that rights granted under the patent will provide
+competitive advantages to us or that any of our pending or future patent
+applications will be issued with the scope of the claims sought by us, if at
+all. In addition, effective copyright and trade secret protection may be
+unavailable or limited in certain foreign countries. We cannot assure you that
+steps taken by us to protect our intellectual property will be adequate or that
+our competitors will not independently develop or patent substantially
+equivalent or superior technologies.
+
+     As is typical in the semiconductor industry, we and our customers have from
+time to time received, and may in the future receive, communications from third
+parties asserting patents, maskwork rights, or copyrights on certain of our
+products and technologies. In the event a third party were to make a valid
+intellectual property claim and a license was not available on commercially
+reasonable terms, our operating results could be harmed. Litigation, which could
+result in substantial cost to us and diversion of our resources, may also be
+necessary to defend us against claimed infringement of the rights of others. An
+unfavorable outcome in any such suit could have an adverse effect on our future
+operations and/or liquidity.
+
+  STRONG COMPETITION IN THE HIGH-PERFORMANCE INTEGRATED CIRCUIT MARKET MAY HARM
+  OUR BUSINESS.
+
+     The high-performance integrated circuit industry is highly competitive and
+subject to rapid technological change. Significant competitive factors in our
+markets include:
+
+     - product features, reliability, performance and price;
+
+     - the diversity and timing of new product introductions;
+
+     - the emergence of new computer standards and other customer systems;
+
+     - product quality;
+
+     - efficiency of production; and
+
+     - customer support
+
+     Because of shortened product life cycles and even shorter design-in cycles,
+our competitors have increasingly frequent opportunities to achieve design wins
+in next generation systems. In the event that competitors succeed in supplanting
+our products, our market share may not be sustainable and net sales, gross
+margin, and results of operations would be adversely affected. Our principal
+competitors include: Analog Devices, Advanced Micro Devices, Broadcom, C-Cube,
+Conexant, Creative Technologies, ESS Technologies, Infineon, Intel, LSI Logic,
+Linear Technology, Lucent Technologies, Motorola, Philips, Siemens, SigmaTel, ST
+Microelectronics, Texas Instruments, Yamaha, and Zoran, many of whom have
+substantially greater financial and other resources than we do with which to
+pursue engineering, manufacturing, marketing and distribution of their products.
+We expect intensified competition from emerging companies and from customers who
+develop their own integrated circuit products. Increased competition could
+adversely affect our business. We cannot assure you that we will be able to
+compete successfully in the future or that competitive pressures will not
+adversely affect our financial condition and results of operations. Competitive
+pressures could reduce market acceptance of our products and result in price
+reductions and increases in expenses that could adversely affect our business
+and our financial condition.
+
+     In addition, our future success depends, in part, on the continued service
+of our key engineering, marketing, sales, manufacturing, support, and executive
+personnel, and on our ability to continue to attract, retain, and motivate
+qualified personnel. The competition for such employees is intense, and the loss
+of the services of one or more of these key personnel could adversely affect our
+business.
+
+                                        15
+<PAGE>   18
+
+  IF WE ARE UNABLE TO MAKE CONTINUED SUBSTANTIAL INVESTMENTS IN RESEARCH AND
+  DEVELOPMENT, WE MAY NOT BE ABLE TO SELL OUR PRODUCTS.
+
+     We must continue to make substantial investments in research and
+development to develop new and enhanced products and solutions. If we fail to
+make sufficient investments in research and development programs, new
+technologies could render our current and planned products obsolete, resulting
+in the need to change the focus of our research and development and product
+strategies, and disrupting our business significantly.

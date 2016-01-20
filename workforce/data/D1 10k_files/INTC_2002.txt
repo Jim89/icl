@@ -1,0 +1,406 @@
+ITEM 1.    BUSINESS 
+
+
+INDUSTRY 
+
+        We are the world's largest semiconductor chip maker, supplying the computing and communications industries with chips, boards, systems and software building blocks that are integral to computers, servers, and networking and communications products. We offer products at various levels of integration, allowing our customers to create advanced computing and communications systems. Our mission is to be the preeminent building block supplier to the worldwide Internet economy. 
+
+        Our component-level products consist of integrated circuits used to process information. Integrated circuits are silicon chips, known as semiconductors, etched with interconnected electronic switches. Our developments in semiconductor design and manufacturing have made it possible to decrease the size of circuits etched into silicon, permitting more transistors to be used on each individual chip or die. This generally allows for more chips to be made from each silicon wafer, resulting in smaller and faster microprocessors and other semiconductor products that consume less power and cost less to manufacture. 
+
+        We were incorporated in California in 1968 and reincorporated in Delaware in 1989. 
+
+PRODUCTS 
+
+        Our major products include: microprocessors, chipsets, boards, networking and communications products such as Ethernet network interface cards and network processors, embedded control chips, and flash memory used in cellular handsets and handheld computing devices, as well as cellular baseband chipsets. 
+
+        Our major customers are: 
+
+•
+original equipment manufacturers (OEMs) who make computer systems, cellular handsets and handheld computing devices, telecommunications and networking communications equipment, and peripherals; 
+
+
+•
+PC and network communications products users (including individuals, large and small businesses, and service providers) who buy Intel's PC enhancements, networking products and business communications products through reseller, retail, e-Business and OEM channels throughout the world; and 
+
+
+•
+other manufacturers, including makers of a wide range of industrial and communications equipment. 
+
+--------------------------------------------------------------------------------
+
+        Intel, Intel Inside, Intel NetBurst, Intel Xeon, Intel StrataFlash, Intel Xscale, Intel Play, Intel SpeedStep, Intel 386, Intel 486, Pentium, Pentium III, Pentium III Xeon, Celeron, Itanium, Xircom, VTune, and i960 are trademarks or registered trademarks of Intel Corporation or its subsidiaries in the United States or other countries. StrongARM is licensed to Intel by ARM, Ltd. 
+
+*
+Other names and brands may be claimed as the property of others. 
+
+
+**
+Page references to the 2001 Annual Report to Stockholders under Items 1 and 2 in Part I; Items 5, 6, 7, 7A and 8 in Part II; and Item 14 in Part IV relate to the bound, printed version of the annual report, not to the electronic version appearing at the Intel Internet site (www.intc.com/intel/annual01/). However, all data referred to also appears in the electronic version. 
+1
+
+
+--------------------------------------------------------------------------------
+
+        We are organized into four operating segments according to our various product lines: the Intel Architecture business, consisting of the Desktop Platforms Group, the Mobile Platforms Group and the Enterprise Platforms Group; the Intel Communications Group; the Wireless Communications and Computing Group; and the New Business Group. We are reporting three segments for 2001. The New Business Group is not a reportable segment and is included in the "all other" category for segment reporting purposes in the footnotes to our financial statements. 
+
+        The information regarding revenues and operating profit by reportable segments, and revenues from unaffiliated customers by geographic region, under the headings "Operating segment and geographic information" on pages 35 and 36 of Intel's 2001 Annual Report to Stockholders and "Management's discussion and analysis of financial condition and results of operations" on pages 13 through 19 of the 2001 Annual Report is incorporated by reference. 
+
+Intel Architecture Business 
+
+        The Intel Architecture business develops platform solutions around our microprocessors and chipsets for end products in the desktop, mobile and server market segments. 
+
+•
+Desktop and mobile platforms incorporate our microprocessor and chipset products in desktop computers, notebooks, entry-level servers and workstations, and Internet appliances. Our strategy for desktop and mobile platforms is to introduce ever higher performance microprocessors and chipsets, tailored for the different market segments of the worldwide computing market, using a tiered branding approach. 
+
+
+•
+Server platform products are targeted for mid-range to high-end servers and workstations. Servers are powerful systems, often with multiple microprocessors working together, that house large amounts of data, direct traffic, and control central functions in local and wide area networks and on the Internet. Workstations offer higher performance than standard desktop PCs, especially in graphics processing and in the ability to carry out several tasks at the same time. Our strategy for the server platform is to provide higher performance processors and the best price for performance for the various server and workstation market segments. 
+        The Intel Architecture business's products include processors and board- and system-level products based on the IA-32 architecture. The IA-32 architecture encompasses both the Intel® NetBurst™ microarchitecture, introduced with the release of the Intel® Pentium® 4 processor, and the P6 microarchitecture (including the Intel® Celeron®, Pentium® III and Intel Pentium® III Xeon™ processors). We also offer a 64-bit processor for enterprise-class servers, the Intel® Itanium™ processor. In addition, we offer chipsets compatible with our microprocessor products. These chipsets improve ease of use for our OEM customers, provide new capabilities and enable system performance to scale as processor performance increases. To promote our customers' acceptance and deployment of these products, we also provide e-Business enabling solutions. 
+
+        Net revenues for the Intel Architecture operating segment comprised over 80% of our consolidated net revenues in 2001. 
+
+        Microprocessors.    A microprocessor is the central processing unit (CPU) of a computer system. It processes system data and controls other devices in the system, acting as the brains of the computer. One indicator of microprocessor performance is its clock speed, the rate at which its internal logic operates, which is measured in units of hertz, or cycles processed per second. One megahertz (MHz) equals one million cycles processed per second, and one gigahertz (GHz) equals one billion cycles processed per second. Other factors in chip performance include memory storage and access speed. The memory stored on a chip is measured in bytes, with 1,024 bytes equaling a kilobyte (KB), 1.049 million bytes equaling a megabyte (MB) and 1.074 billion bytes equaling a gigabyte (GB). Cache is a memory subsystem in which frequently used data is duplicated for quick access. A second level of 
+
+2
+
+
+--------------------------------------------------------------------------------
+
+
+cache (L2), located directly on the microprocessor, can also be used to further increase system performance. 
+
+        In 2001, we began converting our microprocessor manufacturing from the 0.18-micron process technology to the 0.13-micron process technology. The width of individual transistors on a chip is measured in microns; one micron equals one millionth of a meter. See the discussion of manufacturing process technologies under the heading "Manufacturing, Assembly and Test" in Part I, Item 1 of this Form 10-K. 
+
+        In 2001, we announced several new microprocessor products aimed at the various computing market segments ranging from value PCs (systems costing less than $800) to high-performance workstations and servers. 
+
+        Desktop platform.    As we exited 2001, the Pentium 4 processor became our highest volume desktop processor. The Pentium 4 processor is based on the Intel NetBurst microarchitecture, a collection of technologies that help deliver improved performance. These technologies are especially beneficial for creating and sharing digital media, processing digital video and audio, displaying 3D graphics, and accessing a variety of Internet technologies, including streaming video, speech processing and other multimedia processing tasks. Also, the Pentium 4 processor's 400-MHz system bus, the first in the industry, helps speed data transfer between the processor and main memory. During 2001, we introduced four versions of the Pentium 4 processor running at speeds of 1.6 GHz to 2.0 GHz. In January 2002, we introduced the first Pentium 4 processors built on our 0.13-micron manufacturing process technology running at up to 2.2 GHz. This technology allows us to reduce the die size by 30% and double the size of the on-chip L2 cache memory, which enhances the processor's performance. 
+
+        In the value PC market segment, the Intel Celeron processor is designed to meet the core computing needs and affordability requirements common to many new PC users. During 2001, we introduced seven new versions of the desktop Celeron processor running at speeds ranging from 800 MHz to 1.2 GHz. The 800-MHz version, introduced in January 2001, was our first desktop value PC processor to incorporate a 100 MHz system bus. In October 2001, we introduced the Intel Celeron processor running at 1.2 GHz, the first value PC processor made on our 0.13-micron process technology. It integrates 256 KB of on-chip L2 cache, which helps improve overall performance. In January 2002, we introduced the Intel Celeron processor running at 1.3 GHz, our fastest offering to date for the desktop value PC market segment. 
+
+        Mobile platform.    We design our products to provide notebook and laptop PC users with the performance they need while meeting the power consumption and size constraints of mobile PCs. As with our desktop processors, we offer mobile processors at a variety of price/performance points, allowing our OEM customers to meet the demands of a wide range of notebook PC designs. These notebook designs include full size, thin and light, and ultra-portable. Within the ultra-portable design category, we provide specialized low voltage processors, which consume as little as one watt of power on average, and ultra low voltage processors, which consume as little as half a watt of power on average. Low voltage processors are targeted for the mini-notebook market segment while ultra low voltage processors are targeted for the sub-notebook market segment of mobile PCs weighing less than three pounds and measuring one inch in height. 
+
+        During 2001, we introduced 29 mobile processors, providing solutions across a wide range of market segments. We introduced the Mobile Intel Pentium III Processor-M at speeds of up to 1.2 GHz; the low voltage mobile Pentium III processor running at up to 800 MHz; and the ultra low voltage Mobile Pentium III processor running at up to 700 MHz. Our Mobile Intel Pentium III processor features Intel® SpeedStep™ technology. When the user is disconnected from an AC power source, this technology allows the processor to switch automatically to a lower voltage and clock speed, extending the system's battery life. When the user plugs into an outlet or docking station, the chip automatically resumes full speed. We also introduced mobile Celeron processors ranging from 733 to 933 MHz, 
+
+3
+
+
+--------------------------------------------------------------------------------
+
+
+aimed at the mobile value PC market segment, as well as low voltage mobile Celeron processors at 600 and 650 MHz and ultra low voltage mobile Celeron processors at 500 and 600 MHz. 
+
+        In March 2002, we introduced the Mobile Intel Pentium 4 processor-M running at speeds up to 1.7 GHz. This new processor is designed to enable both consumer and business users to take full advantage of processing-intensive applications such as audio and video encoding, digital imaging, speech recognition, 3D content creation, games, multimedia and multi-tasking environments. 
+
+        Server and workstation platforms.    In 2001, we expanded our server product offerings in order to provide building blocks for solutions across a wide range of server market segments. In September 2001, we began shipping in volume Intel Pentium III Xeon processors for use in high-performance multiprocessing servers, which typically use between four and eight processors per system. These processors are also being used in servers with up to 32 processors. The Intel Pentium III Xeon processors running at 900 MHz feature 2 MB of on-die L2 cache. 
+
+        For the workstation market segment, in May 2001, we introduced the first generation of Intel Xeon processors based on the Intel NetBurst microarchitecture, running at speeds of up to 1.7 GHz. These processors are targeted for high-performance and mid-range, dual-processor workstations. In September 2001, we introduced a 2.0 GHz version of the Intel Xeon processor based on the Intel NetBurst microarchitecture. 
+
+        In October 2001, we introduced several new server building block products—boards, chassis and other server components—designed to help OEM system builders and product integrators build their servers around Intel processors. We designed seven server board and server chassis products to meet the specifications of a wide range of computing applications, from high-density, rack-mount server environments to e-mail servers, print servers and database servers. 
+
+        In November 2001, we introduced a new ultra low voltage processor line for low power consumption, space-saving, "ultra-dense" servers. Ultra-dense servers are increasingly used in enterprise data centers and by Internet service providers to offer Web serving, firewall protection and Web caching. Our ultra low voltage Pentium III processor at 700 MHz runs at 1.1 volts, and includes 512 KB of on-chip cache memory. 
+
+        In December 2001, we introduced our first server building block products aimed at the telecommunications server market segment. These carrier-grade products conform to stringent international telecommunications industry reliability requirements. They are designed to function in cold, fires, excessive heat and other extreme conditions. For this category, we offer dual-processor server platforms in 1U and 2U form factors (1U is a standard unit of measurement of 1.75 inches, used to describe the height of the system chassis). These systems are designed for carriers, telecommunications service providers and large corporations for use in core telecommunications and wireless infrastructure for high-speed, high-traffic networks. 
+
+        In February 2002, we introduced the first Intel Xeon processor for servers, featuring Hyper-Threading technology and the Intel Netburst microarchitecture. Hyper-Threading is a new design that allows a single processor to manage data as if it were two processors by handling data instructions in parallel rather than one at a time. The new server platform can boost system performance for two-way systems significantly when compared against Intel-based platforms running on Pentium III Xeon processors. These systems are available at speeds of up to 2.2 GHz. 
+
+        We also continued to advance our 64-bit processor for high-end servers and workstations, the Intel Itanium processor. This processor employs a new design philosophy called EPIC, Explicitly Parallel Instruction Computing. The Intel Itanium architecture combines a high degree of parallel computing with 64-bit addressing and extensive reliability features, for use in data-intensive applications, such as enterprise resource planning and intensive graphics modeling. In June 2001, we announced a multi-year agreement with Compaq Computer Corporation in which Compaq will transition its entire 64-bit server 
+
+4
+
+
+--------------------------------------------------------------------------------
+
+
+product line to the Intel Itanium processor family. During 2001, more than 19 companies, including Compaq, Dell, Hewlett-Packard and IBM, offered more than 26 server and workstation models based on the Itanium processor. In December 2001, our OEM customers began shipping to end users their initial pilot systems based on our next-generation Itanium processor, codenamed "McKinley." We anticipate that this processor will be generally available in mid-2002. 
+
+        Chipsets.    Chipsets perform essential logic functions supporting the CPU, and extend the graphics, audio, video and other capabilities of many systems based on our processors. Our chipsets are compatible with one or more of a variety of industry-accepted bus specifications, such as the Peripheral Components Interconnect (PCI) local bus specification and the Accelerated Graphics Port (AGP) specification. A bus is a circuit that carries data between parts of the system, for example, between the processor and main memory. Our customers demand memory architecture alternatives, and as a result, we currently offer chipsets supporting Rambus* Dynamic Random Access Memory (RDRAM), Synchronous DRAM (SDRAM) and Double Data Rate DRAM (DDR). 
+
+        To help computer makers speed their products to market, we design, manufacture and sell chipsets for each computing market segment. In January 2001, we introduced the Intel® 810E2 Chipset for Celeron processors, which enables PC makers to provide faster disk drive performance, more Universal Serial Bus (USB) ports and surround-sound audio in systems priced at less than $800. 
+
+        In July 2001, we introduced the Intel® 830 Chipset family for mobile PCs based on the Mobile Pentium III Processor-M. The Intel® 830MP Chipset, introduced in July, supports external graphics. Later in the year, we also introduced two other chipsets in the family: the Intel® 830M Chipset, which provides high-performance integrated graphics, and the Intel® 830MG Chipset, which offers integrated graphics for lower cost systems. The mobile chipset family integrates a new deeper sleep, low-power mode to further conserve power and help prolong battery life. 
+
+        In September 2001, we introduced the Intel®845 Chipset for Pentium 4 processor-based PCs. We targeted this chipset at the high-volume, mainstream consumer and corporate desktop PC market segment. The Intel 845 Chipset supports two memory formats, SDRAM and DDR. We also offer the high-performance Intel® 850 Chipset, providing dual RDRAM memory banks that complement the Pentium 4 processor's 400-MHz system bus for higher performance desktop PCs. 
+
+        For workstation and server makers, we introduced in May 2001 the Intel® 860 Chipset, featuring dual RDRAM memory banks to complement the Intel Xeon processor's 400-MHz system bus. In February 2002, we introduced the Intel® E7500 Chipset which is optimized for the Intel Xeon processor and supports DDR memory technology. The E7500 enables twice the memory bandwidth over legacy SDRAM platforms. The new chipset is expected to accelerate memory access to increase platform performance and deliver new levels of performance for I/O intensive server applications. 
+
+        In March 2002, we introduced the Intel® 845MP Chipset. The new chipset supports enhanced Intel SpeedStep technology, deeper sleep alert state and offers an external AGP 4X graphics support, a 400-MHz processor system bus, and DDR 266 MHz SDRAM. 
+
+        Board-level products.    To help proliferate our microarchitectures through all our computing market segments, we offer board-level products based on our microprocessors. While many of our OEM customers use our microprocessors as components in designing their own computer products, some also use board-level products that we design and build. OEMs may purchase products from us at this level of integration to speed their time-to-market and to direct their investments to other areas of their product lines. We provide board-level products to give our OEM customers flexibility by enabling them to choose whether to buy at the component or board level. 
+
+        E-business solutions.    To support and drive Intel architecture through the industry, in 2001, we broadened our engagements with developers and solutions providers to make it easier for end users to 
+
+5
+
+
+--------------------------------------------------------------------------------
+
+
+deploy best-of-class e-Business solutions on Intel architecture. Products include Intel® C/C++ and Fortran compilers, VTune™ Performance Analyzer and Intel® Performance Libraries that take full advantage of the latest performance and capabilities of our microprocessors. As part of our Early Access Program, developers have worldwide access to our online technical references with Intel® Developer Services. This program's services include technical consultants in data centers worldwide providing application porting, tuning, optimization, scaling, benchmarking and integration of software solutions. 
+
+        Sales and gross margin.    During 2001, sales of microprocessors based on the P6 microarchitecture and related board-level products and chipsets comprised a majority of our consolidated net revenues and a substantial majority of our gross margin. For the same period, sales of products based on the Intel NetBurst microarchitecture and related products were a significant and rapidly increasing portion of our consolidated net revenues and gross margin. For 2000 and 1999, sales of microprocessors based on the P6 microarchitecture and related products comprised a substantial majority of our consolidated net revenues and gross margin. 
+
+Intel Communications Group 
+
+        The Intel Communications Group provides products for the networking and communications platform based on three focus areas that we believe to be defining trends for the Internet: Ethernet connectivity products, optical components and network processing components that provide programmable building blocks for modular networking infrastructure. We also offer embedded control chips for use in laser printers, imaging products, automotive systems and other applications. 
+
+        We provide products to telecommunications and networking OEMs, Internet service carriers and providers and makers of a wide range of industrial and communications equipment who have seen a significant impact from the worldwide economic slowdown. In particular, we continue to be affected by the ongoing slump in the telecommunications industry. These market conditions impact our ability to successfully execute our strategies, as we are dependent in part on the capital expenditure levels of carriers and service providers, as well as on component purchases by our OEM customers, growth in the demand for Internet infrastructure, and acceptance of our network architecture. In addition, the success of our strategies will be affected by our ability to integrate recent acquisitions and get new products to market in a timely manner. 
+
+        Net revenues for the Intel Communications Group operating segment comprised approximately 10% of our consolidated net revenues for 2001. 
+
+        Ethernet connectivity products.    Ethernet is an industry-standard technology used to translate and transmit data in packets across networks. As Ethernet expands from the traditional local area network (LAN) environment into the wireless LAN market segment, the metropolitan area network (MAN) and the networked storage market segment, we are expanding our Ethernet product portfolio to address these emerging market segments. In storage, we are developing products that enable storage resources to be added to any location on an Ethernet network. For the MAN market segment, we offer Ethernet products at multiple levels of integration to provide a low cost solution with increased speed and signal transmission distance (commonly referred to as "reach"). 
+
+        In 2001, we introduced the world's first single-chip Gigabit Ethernet controller, which runs up to 10 times faster than the previous industry-standard Fast Ethernet product. Gigabit Ethernet networks allow the transmission of 1 billion individual bits of information per second. By contrast, standard Ethernet networks transmit 10 or 100 million bits of information per second (Mbps, or megabits per second). The Intel® 82544EI Gigabit Ethernet Controller is more than 50% smaller than previous generations of controllers, uses 50% less power and generates less heat. Competing Gigabit Ethernet products require a complex board-level design to accommodate the multiple chips needed to carry out the same functions as Intel's single-chip solution. In 2001, we also introduced the Intel® 82544GC 
+
+6
+
+
+--------------------------------------------------------------------------------
+
+
+Gigabit Ethernet Controller, in a reduced-size package aimed at ultra-dense or space-constrained servers. 
+
+        Other products for Gigabit Ethernet applications introduced in 2001 include the 16-port Intel® Media Switch IXE5416 Gigabit Device designed to help build faster plug-and-play Ethernet switches; the Intel® PRO/1000 T Desktop Adapter and Intel® PRO/1000 XT Server Adapter, designed to help IT managers upgrade existing Ethernet (10 Mbps) or Fast Ethernet (100 Mbps) networks; and the Intel® PRO/1000 T IP Storage Adapter, designed to connect storage devices located anywhere on an Ethernet network. 
+
+        In February 2002, we announced the introduction of high-performance, low-power processors for networking and storage equipment based on Intel® XScale™ technology and highly integrated gigabit Ethernet controllers. We also announced three new single-chip Gigabit Ethernet products for desktop PCs, workstations and servers that are up to 45% smaller and use less power than previous products. The products include a new single port, single-chip Gigabit Ethernet controller for workstations and the world's first-dual port, single-chip controller enabling server manufacturers to add two Gigabit Ethernet network connections in the same amount of space previously required for a single connection. In addition, we introduced the world's first Gigabit Ethernet controller optimized for desktop PCs, which helps reduce the cost of deploying Gigabit Ethernet network connections in those systems by up to 50%. 
+
+        In March 2001, we completed our acquisition of Xircom, Inc., a supplier of PC cards and other products used to connect mobile computing devices to corporate networks and the Internet. 
+
+        During 2001, we introduced several products for wireless networking connectivity. In June 2001, we expanded our family of high-speed, wireless LAN products to include the Intel® Wireless Gateway for home and small offices and the Xircom® Wireless Ethernet Module for Palm m500* series handheld devices. In November 2001, we launched the industry's first suite of wireless networking products based on the advanced 802.11a specification, a standard set by the Institute of Electrical and Electronic Engineers (IEEE), which is much faster than the previous IEEE 802.11b specification. Our products based on the 802.11a specification provide better exchange of data between computing devices and networks and include wireless hubs, adapters and software. 
+
+        Optical components.    For the MAN and wide area network (WAN) market segments, we also provide Synchronous Optical Network (SONET), Synchronous Digital Hierarchy (SDH) and Ethernet-based opto-electronic components. Opto-electronic components are electrical components used in optical networking equipment, and SONET/SDH and Ethernet are the primary optical data transport standards in the telecommunications industry. 
+
+        In February 2001, we introduced optical networking components based on Forward Error Correction (FEC) technology, which enables makers of telecommunications equipment to extend the reach of their service provider customers' optical networks and deliver new services. In October 2001, we introduced a new optical networking subsystem designed to deliver 10-Gigabit Ethernet and OC-192 SONET/SDH communications on a single line card. 
+
+        In the first half of 2001, we acquired companies with key capabilities and technologies for producing opto-electronic components. Cognet, Inc. develops high-speed electronic components for 10-Gigabit Ethernet optical modules. LightLogic, Inc. makes advanced integrated opto-electronic components that use a highly automated and sophisticated manufacturing process to combine lasers, micro-optics and high-speed electronics into integrated devices called transponders. 
+
+        Network processing components.    The Intel® Internet Exchange Architecture (Intel® IXA) provides a flexible platform for the networking and communications industry to build faster, more intelligent networks using reprogrammable silicon. Our network processor products consist of advanced, programmable devices that are used in networking equipment to rapidly manage and direct data 
+
+7
+
+
+--------------------------------------------------------------------------------
+
+
+moving across the Internet and corporate networks. In 2001, we introduced new members of the Intel® IXP1200 network processor family, which has already been chosen by our customers for use in more than 175 application designs. 
+
+        In March 2001, we introduced a low power 700-MHz version of the Intel Pentium III Processor, aimed at applied computing communications applications in which heat and constrained space are factors. In December 2001, we introduced the first in a line of communications chips specifically designed for the embedded industry. The Intel® 82801E Communications I/O Controller Hub (C-ICH) integrates multiple communications ports, eliminating the need for separate networking chips that would otherwise be required. 
+
+        In April 2001, we acquired VxTel Inc., a semiconductor company that has developed Voice over Packet (VoP) products that deliver high-quality voice and data communications over next-generation optical networks. In June 2001, we introduced a suite of communications products, including silicon components, software and reference designs for building the systems used to transmit voice communications over the Internet. VoP is a critical technology for enabling the transition from circuit-switched networks, such as traditional telephone and wireless networks, to packet-based networks, such as the Internet. We expect that our VoP technology will allow telecommunications service providers to offer more services, such as voice, fax and data applications, at higher density and lower cost than current services. 
+
+        In February 2002, we unveiled a family of network processors based on the advanced Intel XScale technology. The new Intel XScale technology-based products include the industry's broadest line of network processors, which are up to 16 times faster than our previous offerings. The network processors are designed for applications extending from the home and office to service providers' central switching office and include the Intel® IXP2800 network processor for network core applications, such as ultrahigh-speed switch/routers; the Intel® IXP2400 network processor for multi-service switches and similar equipment at the network edge; and the Intel® IXP425 network processor for equipment that brings digital subscriber line (DSL), cable Internet service and wireless networking to homes and offices. 
+
+        Embedded control chips.    Our embedded control chips are used in a broad range of applications including laser printers, imaging products, storage media, point-of-sale systems, industrial automation equipment, and automotive systems. Product families include the Intel®186, Inte1386™ processor and Inte1486™ processor, the i960® processor and 8-bit and 16-bit microcontrollers. 
+
+Wireless Communications and Computing Group 
+
+        The Wireless Communications and Computing Group provides component-level hardware and software for digital cellular communications and other applications requiring both low-power processing and high performance. Our strategy is to deliver complete solutions that enable quick deployment of applications and services for wireless Internet and handheld computing devices. Our current products for the handheld platform include flash memory, processors based on the Intel® StrongARM* processor and Intel XScale microarchitecture, and cellular baseband chipsets. 
+
+        In the market segment for handheld computing devices, we sell flash memory, baseband chipsets and processors to OEMs of cellular handsets and we sell flash memory and processors to OEMs of personal digital assistants (PDAs). Growth in this market segment is dependent on the increased use of feature-rich handsets and data-intensive applications. Growth for flash memory products will also depend on the attractiveness of the latest features of cellular handset products, including 2.5G mobile wireless devices. These 2.5G devices are based on the wireless technology usually associated with data transfer rates faster than 14.4 thousand individual bits of information per second (Kbps, or kilobits per second), but slower than 384 Kbps. Our strategy is in part dependent on the willingness of current owners of handset products to upgrade to the latest versions of these devices. 
+
+8
+
+
+--------------------------------------------------------------------------------
+
+
+        At the heart of our wireless product strategy is the Intel® Personal Internet Client Architecture (Intel® PCA), an open architecture platform that describes the separation of communication and application building blocks for data-enabled cellular phones and portable handheld devices. By separating the communication and application elements within a device, Intel PCA should allow for faster time-to-market for our customers and a standard, scalable platform for application development. In August 2001, we launched the Intel® Personal Internet Client Architecture Developer Network which features more than 400 hardware and software design tools and applications, and is available to help deliver standards-based software and hardware solutions. By the end of 2001, more than 800 companies were members of the network. 
+
+        Net revenues for the Wireless Communications and Computing Group operating segment comprised approximately 8% of our consolidated net revenues for 2001. 
+
+        Flash memory.    Flash memory is a specialized type of memory component used to store user data and program code; it retains this information even when the power is off. Although flash memory is currently used predominantly in mobile phones and PDAs, it is also found in common consumer products, including MP3 music players, handheld voice recorders and digital answering machines, as well as industrial products. 
+
+        Our Intel® StrataFlash® memory technology provides a cost-effective, single-chip solution for code execution and data storage. In September 2001, we introduced a 3-volt synchronous Intel StrataFlash memory, which operates up to four times faster than traditional flash memory. In October 2001, we produced the industry's first flash memory built on the 0.13-micron manufacturing process technology and plan to beginning shipping these components to customers in the second quarter of 2002. This new flash chip is nearly 50% smaller and consumes less power than its 0.18-micron predecessor, making it ideal for cell phones and other electronics equipment for which small form factor and low power consumption are critical. By the end of 2001, our customers had chosen Intel StrataFlash memory for use in more than 1,200 application designs, in products such as cell phones, PDAs and set-top boxes. 
+
+        Processors for handheld computing devices.    Building on Intel StrongARM technology, which we license from ARM, Ltd., Intel Xscale microarchitecture offers low-power consumption (consuming as little as 1/10,000 of a watt) and fast clock speeds and enables a new generation of handheld and cellular devices such as those based on the Microsoft Pocket PC 2002* operating system. Future microprocessors based on the Intel Xscale technology will be designed to scale between high performance and lower power consumption. In October 2001, we announced that six major manufacturers of PDAs had selected the Intel StrongARM SA-1110 processor to power their next generation of handheld communications devices. The Intel SA-1110 processor typically uses less than one half watt of power, greatly extending battery life for handheld devices while providing powerful performance for a variety of business, multimedia and Internet applications. 
+
+        In February 2002, we introduced the Intel® PXA250 and PXA210 chips, which will enable mobile phones and handheld computers to deliver music, video and games, as well as the latest enterprise applications under development. Also in February 2002, Intel and Microsoft announced an outline of the details of their collaboration to optimize Microsoft Windows CE.NET* for Intel PXA250 and Intel PXA210 applications processors based on the Intel XScale microarchitecture in support of the Intel PCA. The effort will enable hardware and software developers to create powerful, connected mobile devices that utilize the latest browsing, multimedia and wireless capabilities while maximizing battery life. 
+
+        Cellular baseband chipsets.    We offer baseband chipsets for designing multi-mode, multi-band wireless handsets. Based on DSP technology, our chipsets support multiple wireless standards and deliver enhanced voice quality and high integration, while reducing power consumption and costs. We 
+
+9
+
+
+--------------------------------------------------------------------------------
+
+
+offer the Intel® D5205 TDMA Baseband Chipset, a compact two-chip solution, and the Intel® 5206 TDMA Baseband Chip, a compact single-chip solution both for dual-mode cellular and Personal Communication Services (PCS) band applications. We also offer the Intel® D5314 PDC Baseband Chip, a compact single-chip solution for dual rate (full and half rate) baseband processing for personal digital cellular handheld phones. 
+
+New Business Group 
+
+        The New Business Group operating segment is chartered to develop and grow new businesses around our core capabilities. The group's current investments include Web hosting services, software and semiconductor products. 
+
+        In 2001, Intel Online Services, Inc. operated eight data centers offering Web hosting and data center services in the United States, Europe, India, Japan, China, Korea and Australia. 
+
+        In 2001, we made the decision to exit the consumer products marketplace and consequently began to phase out our Consumer Product Division, which provided PC accessories such as the Intel® Pocket PC Camera, the Intel® Personal Audio Player 3000 and the Intel® Play™ Movie Creator. We do not expect the phase-out of this business to have a material impact on Intel's sales or gross margin. 
+
+MANUFACTURING, ASSEMBLY AND TEST 
+
+        The majority of our wafer manufacturing, including microprocessor, flash memory and networking silicon fabrication, is conducted within the United States at our facilities in New Mexico, Arizona, Oregon, Colorado, California and Massachusetts. A significant portion of our wafer manufacturing, primarily microprocessor and chipset fabrication, is conducted outside the United States at facilities in Israel and Ireland. As of year-end 2001, the Israel and Ireland facilities accounted for approximately 30% of our total wafer fabrication. 
+
+        As of year-end 2001, a substantial majority of our microprocessors and chipsets were manufactured using our 0.18-micron process technology in Arizona, New Mexico, Israel, and Ireland. During the year, we ramped our 0.13-micron manufacturing process on 200mm (8-inch) wafers at three existing facilities in Oregon, California and Massachusetts, as well as a newly constructed facility in Arizona. These factories produce our most advanced microprocessors, including the latest Pentium 4 processors. The 0.13-micron process technology features structures smaller than 1/1,000th the thickness of a human hair (0.18 micron is 1/500th the thickness of a human hair). 
+
+        In December 2001, we began manufacturing 0.13-micron microprocessors in Oregon on 300mm (12-inch) wafers and in February 2002 began shipping products to customers. A second 300mm wafer facility is scheduled to come on line in New Mexico in the second half of 2002. We expect the larger 300mm wafer size to cut die manufacturing costs by approximately 30% when fully implemented. 
+
+        During the second quarter of 2001, we completed retrofitting changes, process improvements, and equipment installations and began manufacturing flash memory using our 0.18-micron process technology at a Colorado facility that we acquired in 2000. In addition to this Colorado site, we also manufacture flash memory in Oregon, New Mexico and California using our 0.18-micron process technology. 
+
+        We perform a substantial majority of our components assembly and testing, including assembly and testing for microprocessors, at facilities in Malaysia, the Philippines and Costa Rica. We also perform components assembly and testing for chipsets and flash memory at a facility in China. During the third quarter of 2001, we announced an additional investment in the assembly and test facility in China, and we will use this latest investment to validate, test and assemble the Intel 845 Chipset for the Pentium 4 processor platform. With the expansion, we have quadrupled the facility's size and enhanced the flash memory chip assembly and test capabilities. 
+
+10
+
+
+--------------------------------------------------------------------------------
+
+        We also manufacture microprocessor- and networking-related board-level products and systems at facilities in Malaysia, Washington and California. During the first half of 2001, we phased out our board manufacturing operations in Puerto Rico for cost competitive reasons. 
+
+        To augment capacity in the United States as well as internationally, we use subcontractors to perform assembly of certain products, primarily flash memory, chipsets and networking and communications products, as well as foundry services to manufacture wafers for certain components, including networking and communications products. We also use subcontractors to manufacture some board-level products and systems, and we purchase certain communication networking products and PC peripherals from external vendors, primarily in the Asia-Pacific region. 
+
+        We have thousands of suppliers providing our various material and service needs. We seek, where possible, to have several sources of supply for everything, but on limited occasions we may rely on a single or limited number of suppliers. In those cases, we develop and implement plans and actions to minimize the exposure that would result from a disruption at that supplier. We also typically have multiple factories at multiple sites around the world producing our leading and highest margin products. However, some other products are only produced in one factory, and again we seek, through other actions and plans, to minimize the exposure that would result from a disruption at that factory. 
+
+        Manufacturing of integrated circuits is a complex process. Normal manufacturing risks include errors and interruptions in the production process, defects in raw materials and disruptions at suppliers, as well as other risks, all of which can affect yields. A substantial decrease in yields would result in higher manufacturing costs and the possibility of not being able to produce sufficient volume to meet specific product demand. 
+
+        In general, if we were unable to manufacture wafers or to assemble and test our products abroad, or if air transportation between our foreign facilities and the United States were disrupted, there could be a material adverse effect on our operations. In addition to normal risks associated with manufacturing, assembly and test, our operations outside the United States are subject to certain additional exposures. These risks include currency controls and fluctuations; tariff, import and other related restrictions and regulations; possible disruption in commercial activities related to terrorist activity and armed conflict in the United States, Israel and other locations; and civil or military unrest or political instability in a locale. To date, we have not experienced significant difficulties related to these foreign business risks. 
+
+        Following the attacks on the World Trade Center in New York City, property insurance underwriters deleted terrorism coverage from their policies. We are exploring specialty markets that offer this coverage, however, the cost may be prohibitive. In addition, our property insurance coverage levels have decreased and our retained risk exposure from uninsured losses has increased. We have not made any material change to our operations as a result of the reduced coverage. Availability and cost of coverage have historically changed as the insurance industry reacted to various market forces and we will consider purchasing additional coverage if and when the availability and pricing become more favorable. 
+
+        For information regarding environmental proceedings related to certain facilities, see the information under the heading "Legal Proceedings" in Part I, Item 3 of this Form 10-K. 
+
+EMPLOYEES 
+
+        As of December 29, 2001, we employed approximately 83,400 people worldwide. 
+
+SALES 
+
+        Most of our products are sold or licensed through sales offices located near major concentrations of users throughout North America, Europe, Asia-Pacific, Japan and other parts of the world. 
+
+11
+
+
+--------------------------------------------------------------------------------
+
+
+        We also use industrial and retail distributors and representatives to distribute our products worldwide. Typically, distributors handle a wide variety of products, including those that compete with our products, and fill orders for many customers. Most of our sales to distributors are made under agreements allowing for price protection on unsold merchandise and right of return on stipulated quantities of unsold merchandise. Sales representatives generally do not offer directly competitive products but may carry complementary items manufactured by others. Representatives do not maintain a product inventory; instead, their customers place orders directly with us or through distributors. We conducted business with more than 2,000 customers worldwide in 2001, including customers of our acquired companies, and sales to one customer, Dell Computer Corporation, contributed approximately 14% to our total sales in 2001. A substantial majority of the sales to this customer consisted of Intel Architecture products. No other customer accounted for more than 10% of our total revenues. Sales to our five largest customers accounted for approximately 38% of total revenues. The information regarding revenues and operating profit by reportable segments and revenues from unaffiliated customers by geographic region under the heading "Operating segment and geographic information" on pages 35 and 36 of our 2001 Annual Report to Stockholders, is incorporated by reference. 
+
+BACKLOG 
+
+        Our sales are made primarily pursuant to standard purchase orders for delivery of standard products. We have some agreements that give a customer the right to purchase a specific number of products during a specified time period. Although not generally obligating the customer to purchase any particular number of such products, some of these agreements do contain billback clauses. Under these clauses, customers who do not purchase the full volume agreed to are liable for billback on previous shipments up to the price appropriate for the quantity actually purchased. As a matter of industry practice, billback clauses are difficult to enforce. The quantity actually purchased by the customer, as well as the shipment schedules, are frequently revised during the agreement term to reflect changes in the customer's needs. In light of industry practice and experience, we do not believe that such agreements are meaningful for determining backlog amounts. We believe that only a small portion of our order backlog is noncancellable and that the dollar amount associated with the noncancellable portion is not material. Therefore, we do not believe that backlog as of any particular date is indicative of future results. 
+
+COMPETITION 
+
+        Our goal is to be the preeminent building block supplier to the worldwide Internet economy. Our primary focus areas are the desktop, mobile and server platforms, and networking and communications platform including wireless communications, as well as new business opportunities around the Internet. In each of these market segments, we compete, to various degrees, on the basis of functionality, performance, quality, price and availability. We are engaged in a rapidly advancing field of technology in which our ability to compete depends on our ability to improve our products and processes, develop new products to meet changing customer requirements and reduce costs. Prices decline rapidly in the semiconductor industry as unit volumes grow, further competition develops and production experience is accumulated. Many companies compete with us in the various computing, networking and communications market segments, and are engaged in the same basic fields of activity, including research and development. Worldwide, these competitors range in size from large multinational companies to smaller companies competing in specialized market segments. 
+
+        The Intel Architecture business consists of the Desktop Platforms Group, the Mobile Platforms Group and the Enterprise Platforms Group. Our strategy for the desktop and mobile platforms is to introduce ever-higher performance microprocessors and chipsets, developed for different market segments of the worldwide computing market, using a tiered branding approach. Our strategy for the server platform is to provide higher performance processors and the best price for performance for the 
+
+12
+
+
+--------------------------------------------------------------------------------
+
+
+various market segments. In line with our strategies, we seek to develop higher performance microprocessors based on the Intel NetBurst microarchitecture specifically for each computing market segment. 
+
+        Our financial results are substantially dependent on sales of microprocessors by the Intel Architecture operating segment. A number of competitors market software-compatible products intended to compete with Intel architecture-based processors. We also face significant competition from companies offering rival microprocessor architectures. The Celeron processor competes with existing and future products in the highly competitive value PC market segment. The Pentium 4 processor competes with existing and future products in the performance desktop and entry-level workstation market segment. The Mobile Intel Pentium 4 processor competes with existing and future products in the mobile computing market segment. We have experienced an increase in the competitive product offerings in the performance desktop market segment and recently in the mobile market segment. The Pentium III Xeon processor based on the P6 architecture and the Intel Xeon processor based on the Intel Netburst architecture compete in the mid-range and high-end server and workstation market segments. The Intel Itanium processor competes in the enterprise-class server market segment. These three processors all compete with established products based on rival architectures. 
+
+        Many of our competitors are licensed to use our patents. Furthermore, our competitors can design competing products and avoid our patent rights by using certain foundry services that have broad licenses with us that, under current case law, permit them to pass our patent rights on to others. Competitors' products may add features, increase performance or sell at lower prices. We cannot predict whether our products will continue to compete successfully with such existing rival architectures or whether new architectures will establish or gain market acceptance or provide increased competition with our products. Future distortion of price maturity curves could occur if software-compatible products enter the market segment in significant volume or alternative architectures gain market acceptance. 
+
+        We plan to cultivate new businesses as well as continue to work with the computing industry to expand Internet capabilities and product offerings, and develop compelling software applications that can take advantage of higher performance microprocessors and chipsets, increasing demand for Intel's newer products in each computing market segment. We may continue to take various steps, including reducing microprocessor prices and/or offering rebates and other incentives at such times as we deem appropriate, in order to increase acceptance of our latest technology and to remain competitive within each relevant market segment. 
+
+        In the Intel Communications Group, our strategy for the networking and communications platform is based on three focus areas: Ethernet connectivity, optical components and network processing components. In the these areas, we face competition from both established and emerging companies and competitors use aggressive product and acquisition plans in an effort to achieve leading-edge market positions. Our products also compete in the small and mid-sized enterprise market segments with established products and leading edge Internet communications systems and server products. We cannot predict whether our networking and communications products will continue to compete successfully with products from existing competitors or products from new entrants to these market segments. 
+
+        In the wireless communications business, our strategy is to deliver complete solutions that enable quick deployment of applications and services for wireless Internet and personal information devices. For these segments, we offer flash memory products, processors based on the Intel StrongARM processor and Intel Xscale™ microarchitecture and baseband chipsets. In supplying these products, our Wireless Communications and Computing Group faces competition from the products of established companies in the flash memory market segment. We cannot predict whether our products will continue 
+
+13
+
+
+--------------------------------------------------------------------------------
+
+
+to compete with existing competitors in the flash memory market segment and compete with new entrants in the applications processor and baseband chipset market segments. 
+
+RESEARCH AND DEVELOPMENT 
+
+        We have maintained our competitive position to a large extent because of our emphasis on research and development. This emphasis has enabled us to deliver leading-edge technology and has permitted our customers to commit to the use of these new products in the development of their own products. Our research and development activities are directed toward developing new products; hardware technologies; manufacturing, packaging and testing processes, as well as improving existing products and lowering costs. 
+
+        We perform a substantial majority of the design and development of components and other products in the United States at our facilities in California, Oregon, Arizona and Washington. Outside the United States, we have product development facilities at various locations, including Israel, Malaysia, India, China and Russia. We also maintain research and development facilities in California and Oregon that are focused on improving manufacturing processes, as well as a facility in Arizona that is dedicated to improvements in manufacturing, assembly and test processes. 
+
+        During the second quarter of 2001, our customers began shipping servers and workstations based on the Intel Itanium processor, the first in the family of our 64-bit Itanium architecture products. The introduction of the Itanium processor is an important technology landmark for both the end user and IT supplier community. 
+
+        During the third quarter of 2001, we announced two technology breakthroughs, including the TeraHertz transistor and Hyper-Threading technology. Based on new structures and materials, a TeraHertz transistor is designed to overcome a number of the technical barriers to continued industry progress according to what is referred to as "Moore's Law". Moore's Law has accurately predicted that the number of transistors that can be placed on a computer chip will double approximately every couple of years. When used in future technology generations, TeraHertz transistors are expected to enable chips with 25 times the number of transistors of today's microprocessors, operating at 10 times the speed, with no increase in power consumption or heat dissipation. 
+
+        Hyper-Threading technology is a new processor design that we expect will significantly improve system performance for servers. Our simultaneous multi-threading design allows a single processor to manage data as if it were two processors by handling data instructions in parallel rather than one at a time. Using Hyper-Threading technology, data instructions are "threaded" as parallel streams for processing. 
+
+        In September 2001, we announced the creation of new organization called the Corporate Technology Group (CTG), which will provide research and technology direction across product lines, and will work with the industry to create and deliver key industry specifications, standards and technologies. As part of the creation of CTG, we also announced the appointment a Chief Technology Officer. 
+
+        In addition to microprocessor and chipset research and development, we have research and development initiatives in networking and communications products, wireless devices, connected peripherals and other areas. These research and development initiatives include projects surrounding the Intel IXA architecture for networking and communications products and the Intel PCA architecture for wireless devices. We have also acquired ongoing research and development activities in these areas with businesses acquired in 2001. 
+
+        Our expenditures for research and development were $3,796 million in fiscal 2001, $3,897 million in fiscal 2000 and $3,111 million in fiscal 1999. These amounts exclude charges for purchased in-process research and development related to acquisitions of $198 million for fiscal 2001, $109 million for fiscal 
+
+14
+
+
+--------------------------------------------------------------------------------
+
+
+2000 and $392 million for fiscal 1999. The decline in spending between 2001 and 2000 reflects the impact of cost containment programs including reductions in discretionary spending on travel-related expenses. 
+
+        At December 2001, we had approximately 21,000 employees engaged in research and development. The success of our research and development activities is dependent upon competitive circumstances as well as our ability to bring new products to market in each computing market segment and in our other businesses in a timely and cost-effective manner. 
+
+ACQUISITIONS AND STRATEGIC INVESTMENTS 
+
+        During 2001, we acquired 11 businesses for more than $1.7 billion, augmenting our capabilities in a number of strategic areas. The companies acquired included Xircom, VxTel, LightLogic and Cognet, which are discussed under the "Products" heading in Part I, Item 1 of this Form 10-K in connection with the Intel Communications Group. 
+
+        Under our Intel Capital program, we also make equity investments to further our strategic objectives and to support our key business initiatives for the desktop and mobile platforms, server platforms, networking and communications, and Internet services. We want to stimulate growth in computing, communications and the Internet, and to grow the total information infrastructure, in order to create and expand markets for our products. This strategic investment program helps advance our overall mission to be the preeminent supplier of building blocks to the worldwide Internet economy. Our strategic investment program seeks to invest in companies that can succeed and have an impact on their market segment. When the strategic objectives of an investment have been achieved, or if the investment diverges from our strategic objectives, we may decide to dispose of the investment. 
+
+        At December 29, 2001, our strategic investment portfolio was valued at approximately $1.7 billion. A majority of the portfolio was comprised of non-marketable equity securities. Our ability to recover our investments in non-marketable equity securities and to earn a return on these investments is largely dependent on equity market conditions and the occurrence of liquidity events, such as initial public offerings, mergers and private sales. All of these factors are difficult to predict, particularly in the current economic environment. In addition, under our accounting policy, we are required to review all of our investments for impairment. For non-marketable equity securities, this requires significant judgment, including assessment of the investees' financial condition, the existence of subsequent rounds of financing and the impact of any relevant contractual preferences, as well as the investees' historical results of operations, and projected results of cash flows. 
+
+INTELLECTUAL PROPERTY AND LICENSING 
+
+        Intellectual property rights that apply to our various products and services include patents, copyrights, trade secrets, trademarks and mask work rights. Intel has established an active program to protect its investment in technology by enforcing its intellectual property rights. We do not intend to license our intellectual property rights broadly unless we can obtain adequate consideration. See also the information under the heading "Competition" in Part I, Item 1 of this Form 10-K. 
+
+        We have filed and obtained a number of patents in the United States and abroad, and we have entered into patent cross-license agreements with many of our major competitors and other parties. While our intellectual property rights are important to our success, our business as a whole is not materially dependent on any particular patent or license. We and other companies in the computer, telecommunications and related high-technology fields typically apply for and receive, in the aggregate, thousands of patents annually in the United States and other countries. In addition, because of the fast pace of innovation and product development, our products are often obsolete before the patents related to them expire. As a result, we believe that the duration of the applicable patents is adequate relative to the expected lives of our products. 
+
+15
+
+
+--------------------------------------------------------------------------------
+
+
+        We protect many of our computer programs by copyrighting them, and we have registered numerous copyrights with the United States Copyright Office. In some non-U.S. jurisdictions, the ability to protect or copyright software in is not clear, but it is our policy to require customers to obtain a software license contract before we provide them with certain computer programs. Certain components contain embedded computer programs, and we have also obtained copyright protection for some of these programs. In addition, we have obtained protection for the mask works for a number of our components under the Chip Protection Act of 1984. 
+
+        We have obtained certain trademarks and trade names for our products to distinguish genuine Intel products from our competitors' products, and we are currently engaged in a cooperative program with OEMs to identify with the Intel Inside® logo certain personal computers containing genuine Intel microprocessors. We also maintain certain details about our processes, products and strategies as trade secrets. 
+
+        Like many companies in the semiconductor and other high-technology industries, we have from time to time been notified of claims that we may be infringing certain intellectual property rights of others. These claims have been referred to counsel, and they are in various stages of evaluation and negotiation. If it appears necessary or desirable, we may seek licenses for these intellectual property rights. We can give no assurance that licenses will be offered by all claimants, that the terms of any offered licenses will be acceptable to us or that in all cases the dispute will be resolved without litigation, which may be time consuming and expensive, and may result in injunctive relief or the payment of damages by us. See also the information under the heading "Legal Proceedings" in Part I, Item 3 of this Form 10-K. 
+
+COMPLIANCE WITH ENVIRONMENTAL REGULATIONS 
+
+        To our present knowledge, compliance with federal, state and local provisions enacted or adopted for protection of the environment has had no material effect upon our operations. We also refer to the information under the heading "Legal Proceedings" in Part I, Item 3 of this Form 10-K. 
+
+16
+
+
+--------------------------------------------------------------------------------
+
+EXECUTIVE OFFICERS 
+
+        The following sets forth certain information with regard to executive officers of Intel (ages are as of December 29, 2001): 
+
+        Craig R. Barrett (age 62) has been a director of Intel since 1992 and Chief Executive Officer since 1998. Prior to that, Dr. Barrett was President from 1997 to January 2002, Chief Operating Officer from 1993 to 1998 and Executive Vice President from 1990 to 1997. 
+
+        Andrew S. Grove (age 65) has been a director of Intel since 1974 and Chairman of the Board since 1997. Dr. Grove was Chief Executive Officer from 1987 to 1998, President from 1979 to 1997 and Chief Operating Officer from 1976 to 1987. 
+
+        Paul S. Otellini (age 51) has been President and Chief Operating Officer since January 2002. Prior to that Mr. Otellini was Executive Vice President and General Manager, Intel Architecture Group, from 1998 to January 2002; Executive Vice President and Director, Sales and Marketing Group, from 1996 to 1998 and Senior Vice President and Director, Sales and Marketing Group, from 1994 to 1996. 
+
+        Leslie L. Vadasz (age 65) has been a director of Intel since 1988 and Executive Vice President and President, Intel Capital, since 2000. Prior to that, Mr. Vadasz was Senior Vice President and Director of Corporate Business Development from 1991 to January 2000. Mr. Vadasz will retire from the Board of Directors in May 2002. 
+
+        Andy D. Bryant (age 51) has been Executive Vice President and Chief Financial and Enterprise Services Officer since January 2001 and Senior Vice President and Chief Financial and Enterprise Services Officer from 1999 to January 2001. Prior to that, Mr. Bryant was Senior Vice President and Chief Financial Officer for 1999 and Vice President and Chief Financial Officer from 1994 to 1999. 
+
+        Sean M. Maloney (age 45) has been Executive Vice President and General Manager, Intel Communications Group, since March 2001. Prior to that Mr. Maloney was Executive Vice President and Director, Sales and Marketing Group, from January 2001 to March 2001; Senior Vice President and Director, Sales and Marketing Group, from 1999 to January 2001; Vice President and Director, Sales and Marketing Group, from 1998 to 1999 and Vice President, Sales, and General Manager, Asia-Pacific Operations, from 1995 to 1998. 
+
+        Michael R. Splinter (age 51) has been Executive Vice President and General Manager, Sales and Marketing Group, since March 2001. Prior to that Mr. Splinter was Executive Vice President and General Manager, Technology and Manufacturing Group, from January 2001 to March 2001; Senior Vice President and General Manager, Technology and Manufacturing Group, from 1999 to January 2001; Vice President and General Manager, Technology and Manufacturing Group, from 1998 to 1999 and Vice President and Assistant General Manager, Technology and Manufacturing Group, from 1996 to 1998. 
+
+        F. Thomas Dunlap, Jr. (age 50) has been Senior Vice President, General Counsel and Secretary since January 2001 and Vice President, General Counsel and Secretary from 1987 to January 2001. 
+
+        Arvind Sodhani (age 47) has been Vice President and Treasurer since 1990. 
+
+        Robert J. Baker (age 46) has been Vice President and General Manager, Technology and Manufacturing Group, since March 2001 and Vice President and General Manager of Components Manufacturing from November 2000 to March 2001. Prior to that, Mr. Baker managed Fab Sort Manufacturing from 1999 to 2000 and Microprocessor Components Manufacturing from 1996 to 1999. 
+
+        Ronald J. Smith (age 55) has been Senior Vice President and General Manager, Wireless Communications and Computing Group, since January 2001 and Vice President, Wireless Communications and Computing Group, from 1999 to January 2001. Prior to that, Mr. Smith was Vice President and General Manager, Computing and Enhancement Group, from 1996 to 1999. 

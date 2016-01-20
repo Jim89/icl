@@ -1,0 +1,1130 @@
+ITEM 1.    BUSINESS 
+
+ 
+
+Overview 
+
+ 
+
+Exar Corporation and its subsidiaries (“Exar” or the “Company”) designs, develops and markets high-performance, high-bandwidth physical interface and access control solutions for use in the worldwide communications infrastructure. Leveraging its industry-proven analog and digital design expertise, system-level knowledge and standard complementary metal oxide semiconductors (“CMOS”) process technologies, Exar provides original equipment manufacturers (“OEMs”) with innovative, highly integrated circuits (“ICs”) that facilitate the aggregation and transport of signals in access, metro and wide area networks. The Company’s physical layer silicon solutions address transmission standards such as T/E carrier, ATM and SONET/SDH. During the year, the Company expanded its communications portfolio by offering a family of clock distribution devices, which leverage technology common with its existing network and transmission products. The clock distribution devices are targeted at wireless base stations, network switches and routers. The Company also provides one of the industry’s most comprehensive families of serial communications solutions. Within this product offering, the low voltage and multi-channel universal asynchronous receiver transmitters (“UARTs”) are particularly well suited to increase data transfer efficiency for various industrial, telecommunications and computer server applications. In addition, the Company markets IC products that address select applications for the video and imaging markets. Exar’s Common Stock trades on the NASDAQ Stock Market under the symbol “EXAR” and is included in the S&P 600 SmallCap Index. 
+
+ 
+
+The Company’s OEM customers include, among others, Alcatel, Cisco Systems Inc. (“Cisco”), Delphi Corporation (“Delphi”), Digi International, Inc. (“Digi International”), Hewlett-Packard Company (“Hewlett-Packard”), Huawei Technologies Company, LTD. (“Huawei”), Logitech International S.A. (“Logitech”), Lucent Technologies, Inc. (“Lucent”), Mitsubishi Electronic Corporation of Japan (“Mitsubishi Electronics”), NEC Corporation (“NEC”), Nokia Corporation (“Nokia”), Plantronics, Inc. (“Plantronics”) and Tellabs, Inc. (“Tellabs”). For the fiscal year ended March 31, 2004, no one OEM customer represented 10% or more of net sales. 
+
+ 
+
+The Company markets its products in North and South America through independent, sales representatives and independent, non-exclusive distributors, as well as the Company’s own direct sales organization. Additionally, the 
+
+ 
+
+3 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+Company is represented in Europe and the Asia/Pacific region by its wholly-owned foreign subsidiaries, independent sales representatives and independent, non-exclusive distributors. The Company’s international sales represented 53.5%, 58.6% and 47.4% of net sales for the fiscal years ended March 31, 2004, 2003 and 2002, respectively. 
+
+ 
+
+Industry Background 
+
+ 
+
+Communications technology has evolved from simple analog voice signals transmitted over networks of copper telephone lines to complex analog and digital voice, video and data signals transmitted over hybrid networks of media, such as copper, coaxial and fiber optic cables. This evolution has been driven by large increases in the number of users and the complexity and variety of the data transmitted over networks resulting from: 
+
+ 
+
+  •   the substantial growth in the Internet and its transformation from a text-based medium to a multimedia platform containing images, video and sound;  
+
+ 
+
+  •   the growth of wireless communications; and  
+
+ 
+
+  •   the increased demand for remote network access and higher-speed, higher-bandwidth communication between Local Area Networks (“LANs”), Metropolitan Area Networks (“MANs”) and Wide Area Networks (“WANs”).  
+
+ 
+
+The majority of installed communications systems were designed to transmit only voice communication, and, therefore, are inadequate for the high-bandwidth transmission of both voice and data. Access to the public network is typically based on asynchronous technologies, such as T/E carrier over copper wire. The demand for greater bandwidth is driving a migration from lower-speed T1/E1 to higher-speed T3/E3 transmission rates. The T1/E1 standard permits the transmission of data at 1.5 Mbps/2.0 Mbps, and the T3/E3 standard permits the transmission of data at 45 Mbps/34 Mbps. The backbone of the public network is built on an optical fiber transmission medium that employs synchronous technologies such as SONET/SDH. Similar to the utilization of faster transmission rates over copper wire, SONET/SDH protocols such as OC–3 (155 Mbps) are being upgraded to OC-12 (622 Mbps), OC-48 (2.5 Gbps) and OC-192 (10 Gbps) to increase the bandwidth over a single optical fiber. 
+
+ 
+
+The market dynamics of the communications industry have changed significantly since 2000. Many carriers that spent billions of dollars building out their networks in 2000 and prior years were not successful in executing their business model, and, consequently, were sold or declared bankruptcy. Incumbent telephone companies (such as AT&T Corp., Sprint Corporation and MCI, Inc.) and regional Bell operating companies (such as BellSouth Corporation, Verizon Communications Inc. and SBC Communications Inc.) have substantially reduced their capital expenditures in line with current revenues. This dynamic severely impacted Exar’s customers during the period of calendar years 2002 through 2003. Many OEMs underwent extensive restructuring to eliminate excess inventory and to reduce expenses by significantly downsizing their organizations. During calendar 2003, the Company noted increased development activity within the telecommunications industry OEMs. At the same time, the Company’s OEM customers are and will continue to come under tremendous pressure to develop new products for access and MAN markets that will enable carriers to leverage their current network infrastructure. 
+
+ 
+
+To address these evolving requirements of the communications industry, OEMs must develop and introduce increasingly sophisticated systems with fewer engineering resources. To achieve the performance and functionality required of these systems, communications OEMs are using increasingly complex communications ICs, which now account for a significant portion of the value-added proprietary content of these systems. As a result of new equipment introductions, coupled with the reduction in their technical staff, the proliferation of transmission standards and the difficulty of designing and producing communications ICs, equipment suppliers are increasingly outsourcing the design and production of the ICs incorporated into their systems. 
+
+ 
+
+4 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+The key ICs contained in a typical communications system include physical interface, access control, clocks, network processor, traffic manager and switch fabric devices. The physical interface device consists of a transmitter and receiver that, when integrated, is called a transceiver. Transceivers interface with the physical transmission media, such as copper wire or optical fiber. Most of these high-speed, mixed-signal ICs convert parallel digital signals into a single analog bit stream that is up to 32 times faster than the original signal. Transceivers therefore serve as a bridge between analog transmission media and the digital devices that process data. Access control circuits are digital ICs that format, or frame, the data, perform error checking and in some applications aggregate signals by mapping multiple lower-speed data streams to a single higher-speed stream. The traffic manager manages the transfer of data between the network processor and the switch fabric, which work together to shape, route and control the data. 
+
+ 
+
+Because physical interface and access control ICs interface with the transmission media and are critical to increasing bandwidth, these ICs must offer high-speed and robust performance. Therefore, communications equipment OEMs seek IC suppliers that possess extensive analog and digital expertise to provide high-speed, mixed-signal solutions to bridge the analog physical world and the digital computing environment. This must be coupled with system-level expertise so that a supplier can quickly bring to market high-performance, highly reliable ICs with optimal feature sets. 
+
+ 
+
+The Exar Solution 
+
+ 
+
+Exar designs, develops and markets high-performance, high-bandwidth physical interface and access control solutions for use in the worldwide communications infrastructure. The Company’s analog and digital design expertise, combined with its systems understanding, enables the Company to provide physical interface and access control silicon solutions that address transmission standards such as T/E carrier, ATM and SONET/SDH. The Company also offers within its communications portfolio clock distribution devices, targeted at high-performance system boards, that offer flexibility to board designers by providing them with precision, low jitter, programmable skew, zero delay and fan out buffers. The Company also provides one of the industry’s most comprehensive families of serial communications solutions. Exar believes its products offer its customers the following benefits: 
+
+ 
+
+  •   increased bandwidth through the integration of multiple channels on a single device;  
+
+ 
+
+  •   reduced system noise/jitter to improve data integrity;  
+
+ 
+
+  •   seamless integration;  
+
+ 
+
+  •   reduced overall system cost through the integration of multiple functions on a single device; and  
+
+ 
+
+  •   accelerated time-to-market by allowing customers to focus on core competencies and outsource standards-based solutions.  
+
+ 
+
+Key elements of the Company’s solution include: 
+
+ 
+
+Leading Analog and Mixed-Signal Design Expertise.    Exar has over 30 years of proven technical competency in developing analog and mixed-signal ICs. As a result, the Company has developed a proven history of technical competence in these areas and a library of design elements. For example, the Company believes that it has particularly strong expertise in the design of high-speed, low-jitter phase-locked loops, which are key elements in its mixed-signal transceiver, jitter attenuator, data aggregation mapper products and clock devices. As a result, Exar can provide its customers with solutions that typically exceed standard specifications and allow them flexibility in designing other system elements. 
+
+ 
+
+Broad Product Offerings.    Exar offers a variety of physical interface and access control products based upon T1/E1, T3/E3, ATM and SONET/SDH transmission standards. Exar’s broad portfolio of multiple channel and multi-function products for each transmission standard enables its customers to minimize overall system cost in multi-port applications. 
+
+ 
+
+5 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+Comprehensive Solutions to Enhance System Integration.    The combination of Exar’s design and system level expertise allows it to provide a comprehensive solution that encompasses hardware, software and applications support. Exar believes that, by using its solutions, OEMs can efficiently integrate the Company’s devices into their systems, better leverage their development resources and reduce their time-to-market. 
+
+ 
+
+Compelling Price and Performance Solutions.    The Company uses its systems expertise and its analog, digital and mixed-signal design techniques to architect high-performance products based on standard CMOS process technologies. Exar believes that these CMOS processes are proven, stable, predictable and able to meet its customers’ speed, power and performance requirements at a competitive price point. 
+
+ 
+
+Strategy 
+
+ 
+
+Exar strives to be a leading provider of physical layer high-performance, high-bandwidth IC solutions for use in the worldwide communications infrastructure. The Company also designs, develops and markets IC products that address the needs of the serial communications market. To achieve its business objectives, Exar employs the following strategies: 
+
+ 
+
+Focus on Growing Market Share within the Communications Markets.    Exar targets communications markets, including T/E carrier, ATM and SONET/SDH. The Company has built substantial expertise in the areas of analog and digital design, systems architecture and applications support. Exar believes that the integration of these capabilities enables the Company to develop solutions addressing the high-bandwidth physical layer requirements of communications systems OEMs. The Company’s broad product offerings support differentiated features that the Company believes will enable it to increase its market share. 
+
+ 
+
+Leverage Analog and Mixed-Signal Design Expertise to Provide Integrated System Level Solutions.    Utilizing its strong analog and mixed-signal design expertise, the Company integrates mixed-signal physical interface devices with digital access control devices. The Company offers products that integrate transceivers with jitter attenuators and framers/ATM UNIs on a single IC. The Company’s data aggregation devices leverage its T/E carrier and SONET/SDH expertise, mapping multiple T3 data streams into a SONET/SDH stream. These configurations enable OEMs to use less board space and reduce their overall system cost. 
+
+ 
+
+Expand the Company’s Revenue Content Per System.    Exar’s analog and mixed-signal design expertise have enabled the Company to build what it believes to be a technological lead and a strong market position in T3/E3 transceivers, T1/E1 transceivers and framer and SONET aggregation. The Company intends to leverage this lead and its established customer relationships to capture design wins for its physical layer products, thereby increasing the Company’s overall revenue content per system. 
+
+ 
+
+Strengthen and Expand Strategic OEM Relationships.    Exar’s OEM customers include Alcatel, Cisco, Digi International, Hewlett-Packard, Huawei, Lucent, NEC, Nokia and Tellabs. To promote the early adoption of its solutions, the Company actively seeks collaborative relationships with strategic OEMs during product development. The Company believes that OEMs recognize the value of Exar’s early involvement because designing their system products in parallel with the Company’s development can accelerate time to market for their end products. In addition, Exar believes that collaborative relationships help the Company to obtain early design wins and to reduce the market acceptance risk of its new products. 
+
+ 
+
+Leverage Broad Product Portfolio to Accelerate Communications Product Development.    Exar believes it has developed a strong presence in the serial communications market, where the Company has leading industry customers and proven technological capabilities. The Company’s design expertise has enabled it to offer a diverse portfolio of both industry standard and proprietary serial communications products. In addition, the Company further expanded its communications portfolio by offering a family of clock distribution devices, which leverage technology common with its existing network and transmission products. 
+
+ 
+
+Use Standard CMOS Process Technologies to Provide Compelling Price/Performance Solutions.    Exar designs its products to be manufactured using standard CMOS processes. The Company believes that these 
+
+ 
+
+6 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+processes are proven, stable and predictable and benefit from the extensive semiconductor-manufacturing infrastructure devoted to CMOS processes. Therefore, the Company believes that it can achieve a higher level of performance at a lower cost than competitors’ products. 
+
+ 
+
+Leverage Fabless Semiconductor Model.    Exar has long-standing relationships with world-class third-party assembly, test and wafer foundries to manufacture the Company’s ICs. The Company’s fabless approach allows it to avoid substantial capital spending, obtain competitive pricing, reduce time to market, reduce technology and product risks, and facilitate the migration of the Company’s products to new process technologies, which reduce costs and optimize performance. By leveraging the fabless model, Exar can focus on its core competencies of IC design and product development. 
+
+ 
+
+Products 
+
+ 
+
+Exar designs, develops and markets high-performance, high-bandwidth physical interface, access control and clock solutions for use in the worldwide communications infrastructure. The Company’s current IC products for the communications market are designed to respond to the growing demand for cost effective line card solutions based on transmission standards such as T/E carrier, ATM and SONET/SDH. The Company also designs, develops and markets IC products that address the needs of the serial communications market. Exar uses its design expertise to develop products ranging from application-specific standard product (“ASSPs”) for industry-wide applications, to custom solutions for specific customer applications. 
+
+ 
+
+Communications 
+
+ 
+
+Exar’s products for T/E carrier, ATM and SONET/SDH applications include high-speed analog, digital and mixed-signal physical interface and access control ICs. The physical interface IC consists of a transmitter and receiver that, when integrated, is called a transceiver. Transceivers interface with the physical transmission media. Most of these high-speed, mixed-signal ICs convert parallel digital inputs into a single analog bit stream that is up to 32 times faster than the original signal. Access control circuits are digital circuits that format, or frame, the data, perform error checking and in some applications aggregate signals by mapping multiple lower-speed data streams to a single higher speed stream. The figure below illustrates where the Company’s products are employed within networking equipment. 
+
+ 
+
+Types of Communications ICs Used in Networking Equipment 
+
+ 
+
+LOGO 
+
+ 
+
+7 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+Exar’s communications products include transceivers, also known as line interface units (“LIUs”), transmitters and receivers, (“transceivers”), PHYs, jitter attenuators, framers, clocks, ATM UNIs and data aggregation mappers. These products are used in networking equipment such as SONET/SDH Add/Drop Multiplexers (“ADMs”), PBX, central office switches, digital cross connects, multi-service provisioning platforms, routers and DSLAMs. The Company continues to enhance its T3/E3 physical interface solutions with an integrated single-chip transceiver and offering one, two, three, four, six and twelve-channel versions, with or without integrated jitter attenuation, that achieve higher performance levels, while requiring less board space and lower overall power in multi-port applications. Extending its jitter attenuation capabilities, Exar incorporates desynchronization in its transceivers and data aggregation mappers to solve complex timing issues associated with mapping/demapping from SONET/SDH (synchronous) to T3/E3 (asynchronous) environments. Exar’s data aggregation mapper solutions leverage the Company’s expertise in T/E carrier with SONET/SDH enabling the Company to provide unique solutions to the SONET/SDH market place. In addition to integrating SONET PHY capability into its data aggregation mappers, the Company offers an OC-48 PHY with integrated Forward Error Correction, or FEC. The Company plans to complement its products with OC-48 data aggregation solutions currently under development. Exar’s access control products include framers and ATM UNIs, in addition to its data aggregation mappers. During the year, the Company expanded its communications portfolio by offering a family of clock distribution devices, which leverage technology common with its existing network and transmission products. The clock distribution devices, targeted at high-performance system boards, offer flexibility to board designers by providing them with precision, low jitter, programmable skew, zero delay and fan out buffers. In addition, these clock distribution devices enable board designers to seamlessly migrate the board development from 3.3V to 2.5V without a major redesign effort. The result is lower system cost and improved time-to-market. The clock distribution devices are targeted at wireless base stations, network switches and routers. The Company also supplies a family of V.35 transceiver products used for data transmission, primarily in networking equipment such as routers and bridges. 
+
+ 
+
+8 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+The following table describes some of the Company’s key communications products: 
+
+ 
+
+   
+Product Description    Applications 
+OC-12 to 12 x T3/E3/STS-1 mapper
+
+OC-3 to 3 x T3/E3/STS-1 mapper
+    SONET/SDH add/drop multiplexers, ATM switches, routers and digital cross connects
+ 
+OC-48 PHY (transceiver)
+
+OC-48 framer
+    SONET/SDH add/drop multiplexers, ATM switches, routers and digital cross connects
+ 
+T3/E3/STS-1 1, 2, 3, 4, 6, 12-channel transceivers
+
+T3/E3/STS-1 1-channel receiver and transmitter
+    SONET/SDH multiplexers and digital cross connects
+ 
+T3/E3/STS-1 1, 2, 3, 4, 6, 12-channel transceivers/jitter attenuators/desync
+    SONET/SDH multiplexers and digital cross connects
+ 
+T3/E3 1, 3, 4-channel jitter attenuators
+    Multiplexers, switches and digital cross connects
+ 
+T3/E3 1, 2, 3, 4, 6, 8-channel framers
+    Multiplexers and digital cross connects
+ 
+T3/E3 1, 3, 4-channel ATM UNIs
+    ATM switches/routers/hubs
+ 
+T3/E3 1 channel integrated ATM UNI/LIU Combo
+    DSLAMs, routers, internet access equipment, frame relay and ATM switches/routers/hubs
+ 
+T1/E1 1, 4, 8, 14-channel SH and LH/SH transceivers
+    Routers, internet access equipment, frame relay and ATM switches/routers/hubs
+ 
+T1/E1 1, 2, 4, 8-channel framers/LIU Combo
+    Routers, internet access equipment, frame relay and ATM switches/routers/hubs
+ 
+T1/E1 8-channel framer
+    Routers, internet access equipment, frame relay and ATM switches/routers/hubs
+ 
+E1 multi-channel transceivers
+    Multiplexers, frame relay and ATM switches/routers/ hubs
+ 
+T1/E1 clock adaptors
+    Frame relay access devices and remote access servers
+ 
+BITS clock extractor
+    Frame relay devices, DSLAMs, multiplexers, digital cross connects
+ 
+Clock multipliers
+    Network and telecommunication equipment
+ 
+Multi-protocol serial interface
+    Multiplexers, access equipment and routers
+ 
+V.35 serial interface
+    Multiplexers, access equipment and routers
+ 
+
+ 
+
+The Company expects to introduce a number of new communications ICs in the fiscal year ending March 31, 2005 to provide an expanded line of T/E carrier products, SONET/SDH products, as well as clock distribution devices. The T/E carrier products are expected to include multi-channel, multi-function ICs that integrate transceivers, jitter attenuators, framers and ATM UNIs. SONET/SDH product introductions are expected to focus on data aggregation, combining OC-3 (155 Mbps) capability with OC-12 (622 Mbps) or OC-48 (2.5 Gbps) functions. The clock distribution devices will be expanded to include programmable skew clocks, jitter attenuation and failsafe clocks (an intelligent clock switch). 
+
+ 
+
+Serial Communications 
+
+ 
+
+UARTs convert data streams from parallel to serial and serial to parallel, enabling a serial data stream to communicate with a central processing unit, or CPU. Exar sells its UART products to the remote access, data collection, industrial automation, point-of-sale and handheld/mobile markets. Many of these products include high-performance features, such as automated flow control and large First-In First-Out, or FIFO, buffers. The Company has designed highly integrated quad (four channel) and octal (eight channel) UARTs with FIFO circuitry, which the Company believes are the de-facto industry standard for multi-channel FIFO UARTs used in 
+
+ 
+
+9 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+multi-port applications. During the past fiscal year, Exar introduced several devices in a 32-QFN package, which provide the smallest form factor in the industry for implementing a serial port on a board. 
+
+ 
+
+The following table describes some of the Company’s key serial communications products: 
+
+ 
+
+   
+Product Description    Applications 
+1, 2, 4-channel UART with 128 byte FIFO
+    Process control systems
+ 
+2, 4, 8-channel PCI UART with 64 byte FIFO
+
+2, 4, 8-channel Universal I/O PCI UART
+    PCI interface for network control management
+ 
+2, 4, 8-channel UART with 64 byte FIFO
+    Network management, remote access servers and point of sale systems, personal digital assistants and GPS
+ 
+1, 2, 4-channel UART with 16 byte FIFO
+    Hub management, high-speed modems, PC I/O cards, process control systems, switches and serial port equipment
+ 
+2-channel UART with 8 byte FIFO
+    Process control systems, switches and serial port equipment
+ 
+2-channel UART
+    Serial port equipment
+ 
+
+ 
+
+The Company expects to expand its family of PCI products during fiscal year 2005. 
+
+ 
+
+Video and Imaging 
+
+ 
+
+Exar supplies high-performance analog-to-digital converters, or ADCs, and integrated analog front ends, or AFEs, for products such as digital copiers and scanners, digital still cameras, or DSCs, and multifunctional peripherals, or MFPs, which incorporate scanning, faxing, copying and printing functions in a single integrated system. The Company uses advanced design techniques and process technologies to integrate low-power converter architectures with surrounding analog functions, thereby reducing system costs. 
+
+ 
+
+The following table describes some of the Company’s key video and imaging products: 
+
+ 
+
+   
+Product Description    Applications 
+12bit/20 or 30 Msps AFEs
+    High speed scanners, DSCs, camcorders and video conferencing
+ 
+10bit/18, 20 or 27 Msps AFEs
+    DSCs, camcorders and video conferencing
+ 
+3-channel 12, 14 or 16bit/6 or 12 Msps AFEs
+    Scanners, MFPs and digital color copiers
+ 
+10bit/20 or 40 Msps ADCs
+    High-end DSCs and broadcast video
+ 
+8bit/6 Msps ADCs
+    Video boards, scanners and battery powered devices
+ 
+8, 10 or 12 bit serial input DACs (digital-to-analog converter)
+    Voltage control and power control for wireless equipment
+ 
+
+ 
+
+Sales and Customers 
+
+ 
+
+The Company markets its products in North and South America through 23 independent sales representatives and two independent and non-exclusive primary distributors, as well as the Company’s own direct sales organization. The Company currently has domestic support offices in or near Atlanta, Boston, Chicago, Dallas, Los Angeles and Fremont, California, and international support offices in Kawasaki, Japan, Shanghai, China and Valauris, France. Additionally, the Company is represented in Europe and the Asia/Pacific region by its wholly-owned foreign subsidiaries, along with 22 independent sales representatives and other independent, non-exclusive distributors. 
+
+ 
+
+10 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+The Company’s OEM customers include the following, among others: 
+
+ 
+
+     
+Communications   Serial and Other Communications   Video and Imaging 
+•   Alcatel
+   •   Cisco
+   •   Hewlett-Packard
+ 
+•   Cisco
+   •   Delphi
+   •   Logitech
+ 
+•   Huawei
+   •   Digi International
+      
+•   Lucent
+   •   Plantronics
+      
+•   NEC
+   •   Huawei
+      
+•   Nokia
+   •   Mitsubishi Electronics
+      
+•   Tellabs
+           
+
+ 
+
+Hewlett-Packard represented 9.5% and 26.4% of the Company’s net sales for the fiscal years ended March 31, 2004 and 2003, respectively. For the fiscal years ended March 31, 2004 and 2003, no other OEM customer accounted for 10% or more of the Company’s net sales. The sharp decline in video, imaging and other products sales, as anticipated and previously announced, reflected a decision by the Company’s primary customer in imaging sales, Hewlett-Packard, to transition some of its production to a competing supplier. The Company sells its products to distributors and OEMs throughout the world. For the year ended March 31, 2004, worldwide sales through the Company’s two primary distributors for subsequent resale to OEMs or their subcontract manufacturers accounted for 33.7% of net sales. Future Electronics (“Future”) was and continues to be the Company’s largest primary distributor. Future, on a worldwide basis, represented 20.3% and 17.2% of net sales in fiscal years 2004 and 2003, respectively. The Company’s second largest primary distributor, Nu Horizons Electronics Corp. (“Nu Horizons”), accounted for 13.4% and 6.5% of net sales in fiscal years 2004 and 2003, respectively. 
+
+ 
+
+Manufacturing 
+
+ 
+
+Exar outsources all of its fabrication and assembly, as well as the majority of its testing operations. This fabless manufacturing model allows the Company to focus on its core competencies of product design and development. 
+
+ 
+
+The majority of the Company’s current products are implemented in standard CMOS. The Company uses CMOS manufacturing processes to take advantage of that technology’s lower power consumption, cost-effectiveness, foundry availability and ever-increasing speed. Currently, all of the Company’s new product development is being implemented in CMOS. Chartered Semiconductor Manufacturing (“Chartered”) manufactures all of the Company’s CMOS products. The Company does not have long term supply agreements with Chartered. During the current fiscal year, Chartered transferred production from its foundry, which utilized six-inch wafer manufacturing technologies, to a facility that is based on eight-inch wafer manufacturing technologies. The Company has completed the transfer and qualification of the majority of its existing products to the new foundry and is in the process of qualifying the remaining products. This transfer and qualification entails certain risks and uncertainties related to the re-qualification of IC wafers and related costs. See “Management’s Discussion and Analysis of Financial Condition and Results of Operations—Risk Factors.” 
+
+ 
+
+Most semiconductor wafers are shipped to the Company’s subcontractors in Asia for wafer test and assembly, where they are cut into individual die and packaged. Independent contractors in Hong Kong, Indonesia and Singapore perform most of the Company’s assembly work. Following assembly, final test and quality assurance are performed either at the Company’s Fremont, California facility or at its subcontractors’ facilities in Asia. The combination of various functions makes the test process for analog and mixed-signal devices particularly difficult. Test operations require the programming, maintenance and use of sophisticated computer-based test systems and complex automatic handling systems. 
+
+ 
+
+11 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+Research and Development 
+
+ 
+
+Exar believes that the continued introduction of new products in its core markets is essential to its growth. Exar’s research and development is focused on developing high-performance analog, digital and mixed-signal solutions addressing the high-bandwidth requirements of communications systems OEMs. Exar continues to make significant investments in advanced design tools and high-performance standard cell libraries. By utilizing these tools, the Company pursues the development of design methodologies that are optimized for reducing design-cycle time and increasing chances of first-time success. In order to support high pin-count devices, the Company continues to develop high-performance packages for its new products in collaboration with packaging suppliers. As of March 31, 2004, the Company’s research and development staff consisted of 118 employees, 52 of whom hold advanced degrees. 
+
+ 
+
+Competition 
+
+ 
+
+The semiconductor industry is intensely competitive and is characterized by rapid technological change and a history of price reductions as production efficiencies are achieved in successive generations of products. Although the market for analog and mixed-signal integrated circuits is generally characterized by longer product life cycles and less dramatic price reductions than the market for digital integrated circuits, the Company faces substantial competition in each market in which it participates. Competition in the Company’s markets is based principally on technical innovation, product features, timely introduction of new products, quality and reliability, performance, price, technical support and service. The Company believes that it competes favorably in all of these areas. 
+
+ 
+
+Because the IC markets are highly fragmented, the Company generally encounters different competitors in its various market areas. Competitors with respect to the Company’s communications products include Applied Micro Circuits Corporation, Integrated Device Technology, Inc., Mindspeed Technologies, Inc., PMC-Sierra, Inc., TranSwitch Corporation and Vitesse Semiconductor Corporation. Competitors in the Company’s serial communications and video and imaging markets include Royal Philips Electronics, Texas Instruments Incorporated and Wolfson Microelectronics LTD. 
+
+ 
+
+Backlog 
+
+ 
+
+Exar defines backlog to include OEM orders and distributor orders for which a delivery schedule has been specified for product shipment occurring during the succeeding six months. As of March 31, 2004, Exar’s backlog was $10.3 million, compared to $9.4 million as of March 31, 2003. All backlog is expected to be filled within the current fiscal year. 
+
+ 
+
+The Company’s business and, to a large extent, that of the entire communication semiconductor industry, is currently characterized by shortened order-to-shipment schedules. Sales are made pursuant to either purchase orders for current delivery of standard items or agreements covering purchases over a period of time, which are frequently subject to revision and cancellation. Lead times for the release of purchase orders depend on the scheduling practices of the individual customer, and the Company’s rate of bookings varies from month-to-month. In addition, Exar’s domestic distributor agreements generally permit the return of up to 10% of purchases of the preceding quarter for purposes of stock rotation and also provide for credits to distributors in the event that Exar reduces the price of any inventoried product. Since orders constituting the Company’s backlog are subject to changes in delivery schedules or to cancellation at the option of the customer without significant penalty, backlog is not necessarily an indication of future sales. The Company believes that its backlog as of any particular date may not be representative of actual sales for any succeeding six-month period. 
+
+ 
+
+12 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+Intellectual Property Rights 
+
+ 
+
+The Company has 104 patents issued and 19 patent applications pending in the U.S. The Company has 12 patents issued and 33 patent applications pending in various foreign countries. The Company’s existing patents will expire between 2005 and 2022, or sooner if it chooses not to pay renewal fees. The Company believes that its intellectual property is critical to its current and future success. However, the Company does not believe that it is materially dependent upon any one patent. To protect its intellectual property, the Company also relies on a combination of mask work registrations, trademarks, copyrights, trade secrets, employee and third party nondisclosure agreements and licensing arrangements. The Company may enter into license agreements or other agreements to gain access to externally developed products or technologies. 
+
+ 
+
+The Company may fail to adequately protect its intellectual property. Others may gain access to the Company’s trade secrets or disclose such trade secrets to third parties. Some or all of the Company’s pending and future patent applications may not result in issued patents that provide it with a competitive advantage. Even if issued, such patents, as well as its existing patents, may be challenged and later determined to be invalid or unenforceable. In addition, others may develop similar or superior products without access to or without infringing upon its intellectual property, including intellectual property that is protected by trade secret and patent rights. 
+
+ 
+
+The Company cannot be sure that its products or technologies do not infringe patents that may be granted in the future pursuant to pending patent applications or that the Company’s products do not infringe any patents or proprietary rights of third parties. Occasionally, the Company is informed by third parties of alleged patent infringement. In the event that any relevant claims of third-party patents are found to be valid and enforceable, the Company may be required to: 
+
+ 
+
+  •   stop selling, incorporating or using its products that use the infringed intellectual property;  
+
+ 
+
+  •   obtain a license to make, sell or use the relevant technology from the owner of the infringed intellectual property, although, such license may not be available on commercially reasonable terms, if at all; and  
+
+ 
+
+  •   redesign the Company’s products so as not to use the fringed intellectual property, which may not be technically or commercially feasible.  
+
+ 
+
+If the Company were required to take any of the actions described above or defend against any claims from third parties, its business, financial condition and results of operations could be harmed. See “Management’s Discussion and Analysis of Financial Condition and Results of Operations—Risk Factors.” 
+
+ 
+
+Employees 
+
+ 
+
+As of March 31, 2004, the Company employed 267 full-time employees, with 118 in research and development, 55 in operations, 52 in marketing and sales and 42 in administration. Of the 118 research and development employees, 52 hold advanced degrees. The Company’s ability to attract, motivate and retain qualified personnel is essential to its continued success. None of the Company’s employees is represented by a collective bargaining agreement, nor has the Company ever experienced a work stoppage due to labor issues. The Company believes its employee relations are good. 
+
+ 
+
+Available Information 
+
+ 
+
+The Company’s website is located on the Internet at www.exar.com. The Company makes available on its website, free of charge, copies of its Annual Reports on Form 10-K, Quarterly Reports on Form 10-Q, and Current Reports on Form 8-K, and amendments to those reports filed or furnished pursuant to Section 13(a) or 15(d) of the Securities Exchange Act of 1934, as amended, as soon as reasonably practicable after such reports are electronically filed with or furnished to the SEC. 
+
+ 
+
+13 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+GLOSSARY:    Exar uses a number of terms in this Annual Report which are familiar to industry participants but which some investors may not recognize. The Company has provided a glossary of some of these terms below. 
+
+ 
+
+Access: 
+
+ 
+
+Refers to the part of the network between a home or business and the public network. 
+
+ 
+
+Access Control Circuits: 
+
+ 
+
+An IC that formats or frames the data, performs error checking and in some applications aggregates signals by mapping multiple lower rate data streams to a single higher speed data stream. 
+
+ 
+
+Analog-to-Digital Converters (“ADCs”): 
+
+ 
+
+Convert an analog signal to a digital signal. 
+
+ 
+
+Add/Drop Multiplexer (“ADM”): 
+
+ 
+
+A device at an intermediate point on a transmission line that enables new signals to come in and existing signals to go out. 
+
+ 
+
+Analog Front Ends (“AFEs”): 
+
+ 
+
+An IC that conditions the analog signal received from a sensor and performs an analog-to-digital conversion. 
+
+ 
+
+Analog Integrated Circuits: 
+
+ 
+
+These semiconductor devices are used to electronically shape continuous real-world phenomena, such as sound waves, motion, heat, light and pressure. The electronic signals from analog ICs are typically translated into digital form and later converted back into analog forms that provide visual, auditory and tactile sensory stimuli. 
+
+ 
+
+Application-Specific Standard Product (“ASSP”): 
+
+ 
+
+A device tailored for a specific application that is sold on the open market to multiple customers with similar requirements. Customers will often differentiate their end product with unique software and hardware features. 
+
+ 
+
+Asynchronous Transfer Mode (“ATM”): 
+
+ 
+
+A fast packet switching protocol by which short packets or cells containing data, voice or video signals are moved over networks at high-speed. This high-speed switching technology is used as a backbone technology in carrier networks and large enterprises. ATM is designed to take advantage of high-speed transmission media such as T3/E3 and SONET. 
+
+ 
+
+ATM User Network Interfaces (“ATM UNIs”): 
+
+ 
+
+A device that provides the ATM Physical Layer (Physical Medium Dependent and Transmission Convergence sub-layers) interface for the public and private networks. 
+
+ 
+
+Asynchronous Transmission: 
+
+ 
+
+Describes digital signals that are transmitted without precise clocking. 
+
+ 
+
+Backbone: 
+
+ 
+
+Backplane or bus which makes up the skeleton of a network. 
+
+ 
+
+14 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+Bandwidth: 
+
+ 
+
+Commonly defined as the volume of data that a transmission line can carry, measured in bits per second (“bps”). Traditional copper lines have the lowest bandwidth potential, while fiber optic lines have the highest. 
+
+ 
+
+A range of signal frequencies, measured in cycles per seconds or Hertz (“Hz”). Also refers to the speed at which data is transmitted, measured in bits per second (“bps”). 
+
+ 
+
+Broadband Communications: 
+
+ 
+
+Data transmission at speeds of equal to or greater than 1.5 Mbps. 
+
+ 
+
+Central Office (“CO”): 
+
+ 
+
+The main switching facility for a telephone company where larger telephone trunks are provisioned out in smaller lines to customers. Where fiber is connected to copper and vice versa. 
+
+ 
+
+Central Processing Unit (“CPU”): 
+
+ 
+
+The computational and control unit of a computer; the device that interprets and executes instructions. By definition, the CPU is the chip that functions as the “brain” of the computer. 
+
+ 
+
+Complementary Metal Oxide Semiconductor (“CMOS”): 
+
+ 
+
+Process technology used to manufacture silicon integrated circuits. 
+
+ 
+
+Carrier: 
+
+ 
+
+An organization that provides communications services. 
+
+ 
+
+Copper: 
+
+ 
+
+Usually small gauge where two wires are twisted together, “twisted pair.” Limited in the amount of information it can carry. Typically associated with “last mile” transport. 
+
+ 
+
+Design Win: 
+
+ 
+
+Exar defines as a minimum order of 100 units which signifies acceptance of a device by an OEM for use in their end product. 
+
+ 
+
+Digital Cross Connect: 
+
+ 
+
+An electronic switching system that routes digital signals among multiple paths without demultiplexing them. 
+
+ 
+
+Digital ICs: 
+
+ 
+
+Within these devices, transistors are used to switch discrete digital signals that are represented in two states: on or off, or “1” or “0”. With today’s process technologies, millions of transistors can be integrated on a single chip, resulting in enormous computing power. 
+
+ 
+
+DSLAM: 
+
+ 
+
+Digital subscriber line access multiplexer located in the telephone company exchange that provides consumers access to digital subscriber line services over twisted pair copper cabling. 
+
+ 
+
+15 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+Frame Relay: 
+
+ 
+
+A packet-switching technology used to route frames of information within a network. Instead of leasing dedicated lines between all remote sites, frame relay allows virtual private networks to be established in which remote sites are connected to a central carrier, which routes data accordingly. 
+
+ 
+
+Gigabit (“Gbps”): 
+
+ 
+
+One billion bits per second. 
+
+ 
+
+Integrated Circuit (“IC”): 
+
+ 
+
+A single electronic device that contains previously separate (discrete) electronic components. An IC is produced on a small slice of silicon semiconductor material. 
+
+ 
+
+Jitter Attenuation: 
+
+ 
+
+Reduces jitter (noise, distortion) so that data transmission is clean and error free. 
+
+ 
+
+Kilobit (“Kbps”): 
+
+ 
+
+One thousand bits per second. 
+
+ 
+
+Local Area Network (“LAN”): 
+
+ 
+
+A shared, private data communications network linking a variety of data devices such as workstations, computers and printers within an office or home environment, usually confined to a single building or cluster of buildings. 
+
+ 
+
+Line Interface Unit (“LIU”): 
+
+ 
+
+A device containing a transmitter that converts digital data to an analog signal suitable for transmission over the transmission media. On the receiving side, it processes the incoming analog signal to recover the timing and the original digital data and outputs to the next layer for further processing. 
+
+ 
+
+Megabit (“Mbps”): 
+
+ 
+
+One million bits per second. 
+
+ 
+
+Metropolitan Area Network (“MAN”): 
+
+ 
+
+A communications network that covers a geographic area, such as a city or suburb, or a series of LANs at multiple sites often interconnected by public facilities. 
+
+ 
+
+Mixed-Signal ICs: 
+
+ 
+
+Integrated circuits that combine analog and digital functions. Mixed-signal ICs are difficult to design because the analog and digital parts of the chip operate differently. 
+
+ 
+
+Multiplexing (“Multiplexer” or “MUX”): 
+
+ 
+
+An electronic or optical process that combines a large number of low-speed transmission lines into one high-speed line by splitting the total available bandwidth of the high-speed line into narrower channels. Demultiplexing is the reverse of multiplexing. 
+
+ 
+
+16 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+Network Processor: 
+
+ 
+
+An IC that executes programmed instructions, performs arithmetic and logical operations on signals, and controls input/output functions. 
+
+ 
+
+OC-3, OC-12, OC-48, OC-192: 
+
+ 
+
+Optical carrier, designating SONET speed (155 Mbps, 622 Mbps, 2.5 Gbps, 10 Gbps, respectively). 
+
+ 
+
+Peripheral Component Interconnect (“PCI”) 
+
+ 
+
+PCI provides high speed, auto configuring interconnections between the cards in a PC or a system. 
+
+ 
+
+Packet: 
+
+ 
+
+Any logical block of data sent over a network. It contains a header consisting of control information such as sender, receiver, and error-control data, as well as the message itself. May be fixed or variable length. 
+
+ 
+
+Phase Lock Loop (“PLL”): 
+
+ 
+
+Analog or digital function that regulates the critical timing function in telecommunication and computer ICs. 
+
+ 
+
+Physical Layer: 
+
+ 
+
+Level 1 on the Open Space Interconnect (“OSI”) Model. The connection layer, or where the “wire” connects to the equipment. 
+
+ 
+
+Physical Interface (“PHY”): 
+
+ 
+
+An IC that receives analog signals from transmission media and converts it to a digital signal for further processing for incoming signals. It converts digital signals to analog for transmission across the transmission media for outgoing signals. 
+
+ 
+
+Private Branch Exchanges (“PBX”): 
+
+ 
+
+A PBX is a switching system that provides telecommunications services on the premises or campus, (e.g. internal calling and other services), and access to public and private telecommunications networks. 
+
+ 
+
+Router: 
+
+ 
+
+A device that connects multiple LANs, or the bridge between a LAN and the public network. 
+
+ 
+
+Synchronous Digital Hierarchy (“SDH”): 
+
+ 
+
+An international standard for high-speed synchronous data transmission over fiber; SDH was adapted from SONET, which is employed in North America. 
+
+ 
+
+Synchronous Optical Network (“SONET”): 
+
+ 
+
+The North America standard for high-speed synchronous data transmission over optical fiber. Rates are measured in optical carrier (“OC”) units. For example, OC-3 corresponds to 155 Mbps, OC-12 corresponds to 622 Mbps and OC-48 corresponds to 2.5 Gbps. SONET backbones are widely used to aggregate lower-speed T1 and T3 lines. The international equivalent is SDH. 
+
+ 
+
+17 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+Synchronous Transport Signal (“STS-x”): 
+
+ 
+
+Electronic equivalent of SONET—OC-level, x designating the speed. 
+
+ 
+
+Switch Fabric Devices: 
+
+ 
+
+An IC that incorporates a series of point to point interconnections that are used to overcome bandwidth bottlenecks in traditional bus structures. Connection end points are joined through a cross-connected switching matrix resembling a woven piece of cloth, hence the name fabric. Any point may be combined with any other point to produce a powerful combination of switched end points. 
+
+ 
+
+T1/E1: 
+
+ 
+
+T1 is a dedicated digital transmission link with a capacity of 1.554 Mbps provided by telephone companies. Widely used for private networks as well as interconnections between an organization’s PBX or LAN and telephone companies. A T1 line can normally accommodate 24 voice conversations (channels), each one digitized at 64 Kbps and one 8 Kbps channel for signaling and control. E1 is the European designation for T1 and has a capacity of approximately 2 Mbps. 
+
+ 
+
+T3/E3: 
+
+ 
+
+A digital transmission link capable of transmission speeds of 45 Mbps. A T3 line can normally accommodate 28 T1 lines or 672 voice conversations. E3 is the European designation for T3. 
+
+ 
+
+Traffic Manager: 
+
+ 
+
+An IC which manages the transfer of data among numerous channels and elements such as the network processor and switch fabric, which work together to shape, route and control the data. 
+
+ 
+
+Transmission Media: 
+
+ 
+
+The physical transmission path along which a signal propagates, such as a twisted copper pair, coaxial cable or optical fiber cable. 
+
+ 
+
+Universal Asynchronous Receiver Transmitter (“UART”) 
+
+ 
+
+UARTs convert data streams from parallel to serial and serial to parallel, enabling a serial data stream to communicate with a CPU. 
+
+ 
+
+Wide Area Network (“WAN”): 
+
+ 
+
+A shared network of computers and data devices that spans a large geographical area, such as the Internet, transporting long distance between MANs. 
+
+ 
+
+18 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+MANAGEMENT 
+
+ 
+
+The names of the Company’s executive officers and directors, and their ages as of May 31, 2004, are as follows: 
+
+ 
+
+     
+Name
+
+--------------------------------------------------------------------------------
+    Age
+
+--------------------------------------------------------------------------------
+    Position
+
+--------------------------------------------------------------------------------
+ 
+Donald L. Ciffone, Jr.
+    48    Chairman of the Board, Chief Executive Officer and President
+ 
+Michael Class
+    46    Vice President, Worldwide Sales
+ 
+Mir Bahram Ghaderi
+    53    Vice President and General Manager, Network and Transmission Products Division
+ 
+Roubik Gregorian
+    54    Executive Vice President and Chief Operating Officer
+ 
+Ronald W. Guire
+    55    Executive Vice President, Chief Financial Officer, Assistant Secretary and Director
+ 
+Susan J. Hardman
+    42    Vice President and General Manager, Interface Products Division
+ 
+Thomas R. Melendrez
+    50    General Counsel, Secretary and Vice President Business Development
+ 
+Stephen W. Michael
+    57    Vice President, Operations and Reliability & Quality Assurance
+ 
+Raimon L. Conlisk
+    81    Vice Chairman and Director
+ 
+Frank P. Carrubba
+    66    Director
+ 
+John McFarlane
+    55    Director
+ 
+Richard Previte
+    69    Director
+ 
+
+ 
+
+Donald L. Ciffone, Jr. joined the Company as President and Chief Executive Officer in October 1996 and was appointed a Director at that time. Mr. Ciffone was appointed Chairman of the Board in April 2002. From August 1996 to October 1996, Mr. Ciffone was Executive Vice President of Toshiba America, the U.S. semiconductor subsidiary of Toshiba Semiconductor. Prior to joining Toshiba, he served from 1991 to 1996 in a variety of senior management positions, including Senior Vice President of the VLSI Product Divisions, at VLSI Technology, Inc. From 1978 to 1991, Mr. Ciffone held a variety of marketing and operations positions at National Semiconductor, Inc. Mr. Ciffone holds a B.A. from San Jose State University and an M.B.A. from Santa Clara University. 
+
+ 
+
+Michael Class joined the Company as Director of Western Area Sales in 1997. In January 1998, he was promoted to the position of Vice President, North American/European Sales and was promoted to Vice President, Worldwide Sales in July 1999. Mr. Class has over 22 years of experience in the semiconductor industry, including employment with IC Works, Inc. as Area Sales Manager for the Western U.S. and Canada. Prior to joining IC Works, Mr. Class held various sales management positions with Intel Corporation and VLSI from 1979 to 1995. He holds a B.S. in Electrical Engineering from Lehigh University and an M.B.A. from LaSalle University. 
+
+ 
+
+Mir Bahram Ghaderi joined the Company in March 1995 as Director of Engineering, Startech Division, when the Company acquired Startech Semiconductor, Inc., where he served as Vice President of Engineering. He was promoted to Divisional Vice President of Engineering, Communications Division in September 2001, and to his current position as Vice President and General Manager, Network and Transmission Products Division, in April 2003. Prior to joining Startech in 1994, he was Director of Engineering, Modem/Clock Products, at Sierra Semiconductor, Inc. Dr. Ghaderi has 23 years of product development experience in the semiconductor industry and received a M.S.E.E. and Ph.D. in Electrical Engineering from the University of California at Los Angeles, as well as a M.S.E.E. from Tehran University. 
+
+ 
+
+Roubik Gregorian joined the Company in March 1995 as Vice President, Startech Division, when the Company acquired Startech Semiconductor, Inc., where he served as President. He was appointed Chief Technology Officer and Vice President of the Communications Division in June 1996, and Chief Technology Officer, Senior Vice President/General Manager, Communications Division, in June 1998. Dr. Gregorian was promoted to Executive Vice President/General Manager, Communications Division in May 2002 and to Chief Operating Officer in April 2003. Prior to joining Startech in 1994, Dr. Gregorian was Vice President of Research 
+
+ 
+
+19 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+and Development and Chief Technology Officer for Sierra Semiconductor, Inc. Dr. Gregorian has been issued 25 patents, authored two textbooks and received his M.S.E.E. and Ph.D. in Electrical Engineering from the University of California at Los Angeles, as well as a M.S.E.E. from Tehran University. 
+
+ 
+
+Ronald W. Guire joined the Company in July 1984 as Vice President and Treasurer and has been a Director since June 1985. His title was changed to Chief Financial Officer in May 1985, and to Executive Vice President in July 1995. Mr. Guire has served as the Company’s Assistant Secretary since June 2001. Mr. Guire was a partner in the certified public accounting firm of Graubart & Co. from 1979 until he joined Exar in July 1984. Mr. Guire holds a B.S. in Accounting from California College of Commerce. 
+
+ 
+
+Susan J. Hardman joined the Company in February 1997 and became Vice President and General Manager, Interface Products Division in April 2003. Prior to this, she served as Vice President, Corporate Marketing and has served as Director of Marketing for the Company’s communications products. Ms. Hardman has 20 years experience in the semiconductor industry. From 1989 to 1997, Ms. Hardman was with VLSI Technology (VLSI) in a variety of management positions, most recently as Director of Product Marketing for VLSI’s networking products division. From 1983 to 1989, she was with Motorola holding a variety of engineering roles. Ms. Hardman holds a B.S. in Chemical Engineering from Purdue University and an M.B.A. from the University of Phoenix. Ms. Hardman has been named a 2004 Outstanding Chemical Engineer by Purdue University. 
+
+ 
+
+Thomas R. Melendrez joined the Company in April 1986 as Corporate Attorney. He was promoted to Director, Legal Affairs in July 1991, and again to Corporate Vice President, Legal Affairs in March 1993. In March 1996, Mr. Melendrez was promoted to Corporate Vice President, General Counsel. In June 2001, Mr. Melendrez was appointed Secretary of the Company. In April 2003, Mr. Melendrez assumed, in addition to his other duties, the responsibilities of Vice President, Business Development. Mr. Melendrez has approximately 25 years legal experience in the semiconductor and related industries. He received a B.A. from the University of Notre Dame, a J.D. from the University of San Francisco, and an M.B.A. from Pepperdine University. 
+
+ 
+
+Stephen W. Michael joined Exar as Vice President New Market Development in September 1992. In July 1995, he was appointed Vice President Operations, and in May 2001, he was appointed to his current position of Vice President, Operations and Reliability & Quality Assurance. Mr. Michael has 30 years of semiconductor industry experience, most recently as Vice President and General Manager, Analog and Custom Products with Catalyst Semiconductor. Prior to joining Catalyst, he served in various senior positions at GE Semiconductor, Intersil, Fairchild and National Semiconductor. He holds a B.S. in Electrical Engineering from the University of California at Davis. 
+
+ 
+
+Raimon L. Conlisk joined the Company as a Director in August 1985, was appointed Vice Chairman of the Board in August 1990, served as Chairman of the Board from August 1994 to April 2002, and is currently serving as Vice Chairman. Mr. Conlisk has also served as a director since 1991, and in December 1997 was appointed Chairman of the Board, of SBE, Inc., a manufacturer of communications and computer products. In March 2004, Mr. Conlisk retired as a Director and Chairman from SBE, Inc., however, he was subsequently appointed Chairman Emeritus. From 1977 to 1999, Mr. Conlisk was President of Conlisk Associates, a management-consulting firm serving high-technology companies in the United States and foreign countries. From 1991 to 1998, Mr. Conlisk served as a Director of Xetel Corporation, a contract manufacturer of electronic equipment. Mr. Conlisk was also President from 1984 to 1989, a Director from 1970, and Chairman from 1989 until retirement in June 1990, of Quantic Industries, Inc., a privately held manufacturer of electronic systems. From 1970 to 1973, and from 1987 to 1990, Mr. Conlisk served as a Director of the American Electronics Association. He holds a B.S. in Electrical Engineering from the University of California at Berkeley. 
+
+ 
+
+Frank P. Carrubba joined the Company as a Director in August 1998. Dr. Carrubba served as Executive Vice President and Chief Technical Officer of Royal Philips Electronics, headquartered in Eindhoven, The Netherlands, from 1991 to 1997. From 1982 to 1991, Dr. Carrubba was with Hewlett-Packard Company, where 
+
+ 
+
+20 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+he was a member of the Group Management Committee and was Director of Hewlett-Packard Laboratories. Prior to joining Hewlett-Packard, he spent 22 years as a member of the technical staff at IBM Corporation’s Thomas J. Watson Research Laboratory in Yorktown Heights, New York. Dr. Carrubba was one of the original designers of the RISC Architecture, for which he was named “Inventor of the Year” by the Intellectual Property Owners in Washington, D.C. in 1992. Dr. Carrubba is also a Director of Coherent, Inc., a global leader in the design, manufacture and sale of lasers, and Gyration, Inc., creators of in-air cordless mice and controllers for games, presentations and virtual reality. In June 2002, Dr. Carrubba was appointed Chairman of the Board of Accerra Corporation, a provider of secure online services for business communications located in Santa Rosa, California. He holds a B.S. in Electrical Engineering, a MS in Operations Management and an Honorary Ph.D. in Computer Engineering from the University of New Haven. 
+
+ 
+
+John McFarlane joined the Company as a Director in January 2004. Mr. McFarlane has served as Chairman and Chief Executive Officer of Ascendent Telecommunication, Inc., a provider of advanced voice communications systems, enabling mobility and business continuity solutions, since March 2004. He has over 20 years of global experience in the high technology industry encompassing computing, software, networking, and telecommunications. From March 2001 to April 2002, Mr. McFarlane was President and Chief Executive Officer of Nexsi Systems, a provider of high-performance Internet security and traffic management systems. Nexsi Systems, a private corporation, filed for protection under Chapter 7 of the U.S. Bankruptcy Laws on May 17, 2002. From May 1997 to March 2001, he held senior executive positions at Sun Microsystems, including President of the Service Provider Business and President of the Software Division. Prior to May 1997, he spent 17 years at Northern Telecom and Bell Northern Research, and was Vice President, Engineering and Technology, Broadband Networks from 1995 to 1997. Mr. McFarlane is also a Director of Pitney Bowes Inc, and Creo Inc. He holds a B.S. and an M.B.A. from the University of Toronto. 
+
+ 
+
+Richard Previte joined the Company as a Director in October 1999. He was a Director of Advanced Micro Devices, or AMD, from 1990 to April 2000, and Vice Chairman from 1999 to April 2000. Additionally, Mr. Previte served as Chairman of the Board of Vantis Corporation, a subsidiary of AMD, from 1997 to June 1999, and acted as Chief Executive Officer from February 1999 to June 1999. Mr. Previte served as President of AMD from 1990 to 1999, Executive Vice President and Chief Operating Officer from 1989 to 1990, and Chief Financial Officer and Treasurer from 1969 to 1989. Most recently he was Chief Executive Officer and Chairman of the Board of MarketFusion, Inc., from January 2000 to April 2002. He holds a B.S. and an M.S. from San Jose State University. 

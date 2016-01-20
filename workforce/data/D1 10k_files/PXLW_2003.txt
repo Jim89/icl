@@ -1,0 +1,410 @@
+Item 1.  BUSINESS
+
+ 
+
+Overview
+
+ 
+
+We are a leading designer, developer and marketer of semiconductors and software for the advanced display industry. Pixelworks’ system-on-chip semiconductors process and optimize video, computer graphics and Web information for display on a wide variety of devices used in business and consumer markets, including flat-panel monitors, digital televisions and multimedia projectors. Our product line is used by the world’s leading manufacturers of consumer electronics and computer display products to enhance image quality and ease of use.
+
+ 
+
+Our business model is based on delivering multiple products that address every major segment of the advanced display market including flat panel monitors, digital televisions and multimedia projectors.  We are also developing products for emerging markets including electronic devices designed to access and display Web content.
+
+ 
+
+Since our founding we have augmented our internal technology development capabilities through a series of strategic acquisitions. In January 2001, we completed the acquisition of Panstera, Inc to strengthen our competitive position in the XGA-resolution LCD monitor market. In January 2002, we completed the acquisition of nDSP Corporation, a developer and marketer of digital signal processing ICs that enhance video quality in a wide variety of display products for the consumer television market.  In September 2002, we completed the acquisition of Jaldi Semiconductor which has developed a re-configurable system-on-chip for video processing focused at the high end of the digital television market.
+
+ 
+
+We develop a range of semiconductor products including discrete ICs and system-on-chip ICs integrating a microprocessor, memory and image processing circuits that function as a computer on a single chip.  Our product line of semiconductors and feature-rich software help our customers simplify their product design, reduce time to market, lower development costs and increase product performance. Our solutions enable our customers to use a common design environment across multiple products and applications.
+
+ 
+
+We have announced that our semiconductors are used in products marketed by Dell, HP, Hitachi, InFocus Corporation, LG Electronics, NEC-Mitsubishi, Samsung, SANYO, Seiko Epson, Sharp, Sony and ViewSonic.
+
+ 
+
+Industry Background
+
+ 
+
+In order to take full advantage of the large amounts of visual information, users are demanding more sophisticated display devices capable of showing text, graphics and full motion video simultaneously. These products include flat panel monitors, digital televisions and multimedia projectors. Independent research firms are projecting significant growth for these devices over the next several years. The following data have been gathered from published sources that were not specifically prepared or approved for use in this report.
+
+ 
+
+•                  DisplaySearch estimates that the market for flat panel monitors will increase from 32.1 million units in 2002 to 92.3 million units in 2005, a compound annual growth rate of 42%.
+
+ 
+
+•                  DisplaySearch estimates that the market for flat panel televisions including LCD TVs and plasma displays will increase from 3.4 million units in 2002 to 18.5 million units in 2005, a compound annual growth rate of 75%.
+
+ 
+
+3
+
+
+--------------------------------------------------------------------------------
+
+
+
+ 
+
+•                  According to estimates from Stanford Resources and DisplaySearch the market for Digital Television will increase from 6.7 million units in 2002 to 30.3 million units in 2005, a compound annual growth rate of 65%.
+
+ 
+
+•                  Pacific Media Associates estimates that the market for multimedia projectors will increase from 1.6 million units in 2002 to 4.8 million units in 2005, a compound annual growth rate of 45%.
+
+ 
+
+Today, the convergence of television and computer applications is creating new development opportunities for products that integrate the ability to display full motion video and support interactive capabilities such as browsing the Web while watching television. This convergence makes the interpretation and display of information more complex.  While significant growth is forecasted for display devices, the increasing need to rapidly process large amounts of information delivered in a multitude of broadcast and Web transmission formats could constrain this growth. This bottleneck limits access to the full visual potential of content.
+
+ 
+
+Developing the technology to cost effectively meet the breadth and complexity of new display devices poses several technical challenges.  Digital display based products differ from CRT based displays in many respects, but the most significant difference is that they utilize a fixed, addressable matrix of picture elements or pixels, compared to the scanning approach used in CRT based products.  This approach demands that, unlike most CRT based products, the incoming image signal must be digitally processed, specifically for display.  CRT’s, using, older, analog technology do not require this digital signal processing.
+
+ 
+
+In addition the signals delivering content to these devices include analog, digital and video information that has been encoded using a combination of standard and non-standard industry formats. This information must be processed and optimized at very high speeds to match the functionality and display characteristics of different display devices. Second, these new devices require visual information to be displayed in a wide variety of sizes and formats. Each signal, whether analog or digital, must be manipulated to properly display the appropriate image in the correct format on the device. Third, all of these differing signals and formats need to be processed without compromising the visual quality of the information displayed.  In fact, because of the image quality that is possible using digital display based products, compared to CRT’s, the incoming signal must be enhanced to deliver the superior image quality that digital display products can provide.
+
+ 
+
+The rapid development of high-resolution display technologies has created another challenge. The quality of a display device largely depends on its resolution.  Resolution is defined by the number of picture elements, or pixels, that can be displayed. Pixels on a display are arranged in a matrix made up of a series of rows and columns. With higher resolution, more information can be displayed resulting in a crisper and cleaner image. In order to meet end users’ expectations for higher quality images, new display technologies are frequently introduced with higher resolutions. Today’s mainstream computer monitors use an Extended Graphics Array, or XGA, display consisting of a matrix of 1,024 by 768 pixels. Higher computer resolution formats are emerging such as Super Extended Graphics Array, or SXGA, with 1,280 by 1,024 pixels, and Ultra Extended Graphics Array, or UXGA, with 1,600 by 1,200 pixels. In addition, 18 high definition television formats have been created to support HDTV video content.
+
+ 
+
+The industry is seeking to address some of this complexity and to accelerate the acceptance of flat panel displays through the development of new standards such as the Digital Visual Interface, or DVI, specification, a digital standard for attaching a flat panel monitor to a computer. However, even with development of these standards, today’s technology is reaching its physical limit of transmitting and receiving image data. New technology and standards are required to increase the available transmission capacity, or bandwidth.  Without new standards, the adoption of advanced high-resolution, high-performance display products may be impeded.
+
+ 
+
+Furthermore, the traditional design approach of creating “hard-wired” solutions for specific technical challenges results in single-purpose semiconductors that are difficult to re-configure for new products. The resulting fixed functionality combined with the lengthy design cycles for new products has made it difficult for developers to quickly design high-performance, flexible, multi-featured, and affordable new display products.
+
+ 
+
+4
+
+
+--------------------------------------------------------------------------------
+
+
+
+ 
+
+Products
+
+ 
+
+Our products include semiconductors and software that enables our customers to quickly integrate our system-on-chip semiconductors into their digital display products across a broad range of applications.
+
+ 
+
+Many of our image processing semiconductors include the following features:
+
+ 
+
+•                  Intelligent Image Processing-interprets and resizes incoming image signals to match the resolution and aspect ratio, or the relation of the width to the height of the specific display used in the product.
+
+ 
+
+•                  Adaptive Image Optimization-identifies the incoming computer or video signals and adjusts the display to produce the best possible image.
+
+ 
+
+•                  Advanced Video Support-recognizes and optimizes incoming video signals, including HDTV by eliminating artifacts on progressive displays by combining the most advanced digital video processing including noise reduction, dynamic edge enhancement and smoothing of moving lines to deliver clear, natural looking video images for a lifelike picture.
+
+ 
+
+•                  Software Compatibility-allows customers to rapidly create products across product lines and categories using a common set of software tools.
+
+ 
+
+Other features of display controllers include:
+
+ 
+
+•                  Support for a range of resolutions-the ability to handle a full range of resolution standards from 640 by 480 pixels to 2,048 by 1,536 pixels.
+
+ 
+
+•                  Intelligent Windowing-movable and resizable content windows with adjustable transparency deliver more control over content viewing. These features let users watch television while working on a computer, monitor multiple channels or surf the Internet while watching a video - all on the same display.  Intelligent Windowing includes formats such as Picture-In-Picture, Picture-On-Picture and Side-by-Side windows.
+
+ 
+
+•                  Digital Keystone Correction-a feature that allows a projector to be placed virtually anywhere in the room.  By electronically adjusting the image to compensate for optical distortions a square, high-quality picture is projected.
+
+ 
+
+Our Software
+
+ 
+
+We provide a complete software development environment that helps customers reduce their time to market by providing an embedded operating system, computer programming code and tools necessary to customize display devices. Our Software Development Kit enables product differentiation through rapid customization of features, performance, and device “look and feel” with fast time to market and reduced development costs. Our software provides a consistent development platform that is portable across product lines and product categories.
+
+ 
+
+Future Product Development
+
+ 
+
+We plan to develop new system-on-chip semiconductors that address customer demand and are logical extensions of our design architecture. Higher levels of integration include adding analog to digital converters, video decoders, deinterlacers, audio processing, MPEG decoders and wireless signal receivers. These higher levels of integration will further reduce the number of components on circuit boards and help to lower overall system costs.
+
+ 
+
+5
+
+
+--------------------------------------------------------------------------------
+
+
+
+ 
+
+Technology
+
+ 
+
+Our core competency in semiconductor design involves an innovative methodology for developing complex system-on-chip designs. Our designs are based on self-contained modules that can be reassembled and reused in new product development programs. We extensively simulate and test our designs using the best available simulation and synthesis tools and internally developed proprietary validation tools.
+
+ 
+
+Integrated Semiconductor Technology
+
+ 
+
+On-chip Integration of Microprocessor, Memory and Digital Signal Processor.  Our system-on-chip semiconductors are a complete, integrated display controller on a single chip, which includes automatic image optimization, automatic image resizing and an onboard microprocessor. This single chip replaces all of the individual components of the traditional display controller.
+
+ 
+
+Broad Interface Flexibility. Our display controllers work with analog or digital signals, ranging from low resolution computer graphics to the latest high-definition television formats.
+
+ 
+
+Complete Software Development Environment. We provide an embedded operating system, source code and software tools necessary to customize display devices.  Our software development environment includes a proprietary Windows-based user interface creation tool, GUI Builder, which enables customers to create finished products with a distinct “look and feel.” The GUI Builder also allows our customers to easily create multiple differentiated products from the same platform. In addition to controlling the user interface, our software forms the heart of the real-time system at the core of any modern display product. Our software provides a consistent development platform that is portable across product lines and product categories. For example, a customer that develops a projector product using our software can easily port that software for use in a monitor or a television. This benefits the customer by dramatically reducing time to market and providing a unique “look and feel” that delivers a consistent customer experience across an entire product portfolio.
+
+ 
+
+Intelligent Image Processing Technology
+
+ 
+
+Our technology supports multi-standard analog and digital video, including digital television or DTV, HDTV, National Television Standards Committee, or NTSC, and other international video standards. Our intelligent image processing products simplify the use and development of display devices. Features of our technology include the following:
+
+ 
+
+Image Scaling and Shaping. Our image processing technology incorporates proprietary programmable image scaling capable of resizing images to fit a wide variety of aspect ratios, which is the ratio of width to height of display screens, and resolutions. With our scaling, images can be adapted to aspect ratios ranging from traditional 4:3 aspect ratios of conventional computer monitors and televisions to the 16:9 format used in wide screen HDTVs. In addition, content designed for a specific resolution can be intelligently stretched or reduced in real time to fit a new resolution for a specific display without degrading the image. For example, low-resolution images are processed by intelligently adding information, so that when the new image is displayed, it looks smooth without jagged image areas. High-resolution content can be displayed on lower resolution displays by intelligently removing information without degrading image quality. This technology is essential to interfacing fixed resolution digital displays to the wide range of inputs that are present in today’s marketplace.
+
+ 
+
+Our technology allows the shape of an image to be changed in multiple dimensions. This is useful in compensating for optical distortions in products including front projection systems and rear projection televisions. For example, standard resolution videotapes designed for conventional television display can be resized and formatted for display on a high-resolution wide-screen flat panel television without degrading the image. This capability is increasingly important as HDTV becomes more prevalent. HDTV content can be delivered in as many as 18 different combinations of resolutions and aspect ratios.
+
+ 
+
+6
+
+
+--------------------------------------------------------------------------------
+
+
+
+ 
+
+Adaptive Image Optimization. Our products must translate a broad range of signals in standard and non-standard formats. We use a proprietary image processing technique to identify the characteristics of a signal and configure the system to produce the best possible image. Our adaptive image optimization technology automatically adjusts incoming signals to achieve the highest possible image quality. The display adjusts itself when it is turned on and continuously adjusts with every change of the incoming signals to display an optimal image.
+
+ 
+
+Advanced Video Processing. Our products enhance the quality of video images on digital displays by using patent-pending video processing technology to deliver clear, natural looking video images.  Our advanced video processing technology eliminates artifacts on progressive displays by combining the most advanced digital video processing including noise reduction, dynamic edge enhancement and smoothing of moving lines to deliver clear, natural looking video images for a life-like picture.
+
+ 
+
+We have developed advanced video processing techniques specifically for flat panel displays, which are progressive scan devices. Images are built and displayed sequentially one row or line at a time. Typically, video signals are interlaced or built using every other row. First the odd rows are displayed and then the image is updated with the even rows. Our image processing technology converts the incoming interlaced video signals for display on flat panels by doubling the incoming signals to match the progressive scan capabilities of flat panel displays. This is an especially difficult challenge.  Simply merging the odd and even fields results in very jagged image edges. Our intelligent approach uses a sophisticated video digital signal processing technique to display the best possible image.  Pixelworks utilizes a variety of techniques for this advanced video processing depending on the application’s or customer’s price/performance requirements.
+
+ 
+
+Color Compensation Technology. Our sophisticated custom color compensation technology makes it possible to display consistent color images from video and computer graphics, which use very different color palettes, on different display devices. Our color processing technology compensates for variations in the color performance of a display. Using our unique approach, any color can be addressed independently and adjusted without impacting other colors. Our customers can use our color compensation technology to compensate for non-uniform color in a specific display and to provide consistent color performance across multiple products using different display technologies. It can also be used to compensate for color variations in display components provided by different vendors.
+
+ 
+
+Fully Customizable On-Screen Display
+
+ 
+
+Our technology couples an integrated on-screen display controller with a unique Windows-based application that allows customers who are designing ImageProcessor semiconductors into their display products to quickly develop and implement their own unique user interfaces that can incorporate graphics and colorful icons in start-up displays and menus.
+
+ 
+
+Mixed Analog and Digital Signal Support
+
+ 
+
+Our display controller semiconductors can support as many as four different sources of computer and video content to be displayed on a single device through integrated and add-on analog and digital receivers and connectors. Analog computer graphics, digital graphics supporting the DVI standard and video through a variety of sources can be captured, decoded and optimized.
+
+ 
+
+SmartPanels – Specialized integration of display controller electronics and LCD modules
+
+ 
+
+“SmartPanels” are an emerging manufacturing trend in advanced display products.  SmartPanels integrate all electronics directly onto the LCD display module in order to streamline monitor product development by reducing the number of circuit boards used, lowering assembly costs and minimizing the manufacturing challenges caused by sourcing and integrating an array of individual components from different vendors. SmartPanels cut development time by delivering pre-tested, regulatory approved hardware and software to LCD monitor manufacturers.  This approach also provides the opportunity for new suppliers, who are not familiar with
+
+ 
+
+7
+
+
+--------------------------------------------------------------------------------
+
+
+
+ 
+
+the monitor market to deliver high quality LCD monitors to their customers very rapidly, with much less development expense than traditional monitor manufacturers.
+
+ 
+
+Pixelworks has been developing a suite of technologies optimized for SmartPanel applications including integrated electronics combining interface electronics, a display controller, a programmable LCD timing controller with advanced electronic interference reduction and backlight inverter control.
+
+ 
+
+Customers, Sales and Marketing
+
+ 
+
+We have achieved design wins with global leaders in the business computing and consumer electronics markets. We have announced products in production with Dell, HP, Hitachi, InFocus, LG Electronics, NEC-Mitsubishi, Samsung, SANYO, Seiko Epson, Sharp, Sony and ViewSonic.
+
+ 
+
+The key elements of our sales and marketing strategy are to achieve design wins with industry leading branded manufacturers in targeted markets and to continue building strong customer-supplier relationships. Once a design win has been achieved, sales and marketing efforts are focused on building long-term mutually beneficial business relationships with our customers by providing superior technology and reducing their costs, which complements their product development objectives and meets their expectations for price-performance and time to market. Marketing efforts are focused on building market-leading brand awareness and preference for our system-on-chip semiconductors.
+
+ 
+
+Our global distribution channel is multi-tiered and involves:
+
+ 
+
+•                  Manufacturers Representatives - independent sales agents who represent us in local markets and provide pre- and post-sales support and do not carry inventory.
+
+ 
+
+•                  Distributors - resellers in local markets who provide pre- and post-sales support and stock our ImageProcessor semiconductors in direct relation to specific manufacturing customer orders.
+
+ 
+
+•                  Integrators - OEM customers who build display devices based on specifications provided by branded manufacturers.
+
+ 
+
+•                  Branded Manufacturers - globally recognized manufacturers who develop display device specifications, manufacture, market and distribute display devices either directly or through resellers to end-users.
+
+ 
+
+•                  Branded Suppliers - globally recognized suppliers, who develop display device specifications and then source them from Integrators, typically in Asia, and distribute them either directly or through resellers to end-users.
+
+ 
+
+In Japan, the majority of our products are sold through our distributor, Tokyo Electron Device which represented 45%, 52% and 59% of our total revenue for the years ended December 31, 2002, 2001 and 2000, respectively. Sales through Tokyo Electron Device to our customer Seiko Epson represented 10%, 12% and 17% of our total revenue for the years ended December 31, 2002, 2001 and 2000, respectively. In China and Taiwan, we sell through a combination of a network of distributors and direct sales, which includes sales to one distributor that represented 12%, 8% and 3% of total revenue for the years ended December 31, 2002, 2001 and 2000. We support our European customers through a manufacturer’s representative and a distributor.  In Korea and the U.S., our customers are served by direct sales, which may be supported by manufacturer representatives.  Certain distributors have price protection and stock rotation provisions in their distribution agreement, which in general allow for 5% to 10% of the products purchased in the prior six months to be returned in exchange for products of equal value.
+
+ 
+
+8
+
+
+--------------------------------------------------------------------------------
+
+
+
+ 
+
+Our sales and marketing team included 91 employees as of December 31, 2002. The sales and marketing team includes the architecture support team of 59 application engineers who provide technical expertise and assistance to manufacturing customers on final product development. We have sales, marketing and support offices in the U.S., China, Japan and Taiwan.
+
+ 
+
+Research and Development
+
+ 
+
+At our inception, our internal research and development efforts were focused on the development of our PW364 ImageProcessor semiconductor for the high-end multimedia projection and flat panel monitor markets. Since the introduction of our first product our development efforts have been focused on pursuing higher levels of integration of new features in order to extend our system-on-chip semiconductors into new market segments including mainstream flat panel monitors and digital televisions. These higher levels of integration are designed to reduce components on circuit boards and to help to lower final systems costs for our customers. Future development efforts include system-on-chip technologies required for Internet and advanced video applications.
+
+ 
+
+In addition to our 59 applications engineers, on December 31, 2002, we had 127 engineers, technologists and scientists who are organized into the following functional groups: Integrated Circuit Design, Software Engineering, Systems Engineering and Product and Test Engineering.
+
+ 
+
+We have invested and expect that we will continue to invest significant resources in research and development activities. Our research and development expenses, inclusive of amortization of stock compensation, were $25.7 million, $24.2 million and $11.1 million in 2002, 2001, and 2000, respectively.
+
+ 
+
+Manufacturing
+
+ 
+
+Our products require advanced semiconductor processes and packaging technologies. Within the semiconductor industry we are known as a “fabless” company, meaning that we do not fabricate the semiconductors that we design and develop, but instead rely on third parties to manufacture our products. We have IC foundry relationships with Infineon, Taiwan Semiconductor Manufacturing Corporation or TSMC, and Toshiba. This approach allows us to concentrate our resources on product design and development where we believe we have greater competitive advantages.
+
+ 
+
+Intellectual Property
+
+ 
+
+We rely on a combination of nondisclosure agreements and copyright, trademark and trade secret laws to protect the algorithms, design and architecture of our system-on-chip technology.  As of February 2003, we have 3 patents and 33 patent applications pending with the U.S. Patent and Trademark Office, which relate generally to improvements in the visual display of digital image data including, but not limited to, improvements in image scaling and automatic image optimization and to the Digital Visual Interface standard. In addition to filing patents in the United States, we have applied for and have been granted 8 patents in Canada.  We intend to seek patent protection for other significant technologies that we have already developed and expect to seek patent protection for future products as necessary. Any future patents may not be granted and if granted may be invalidated, circumvented, challenged or licensed to others.
+
+ 
+
+To supplement the technologies that we develop internally, we have licensed rights to use intellectual properties held by third parties, and we may license additional technology rights in the future. If any of these agreements terminate, we would be required to exclude the licensed technology from our existing and future product lines.
+
+ 
+
+The semiconductor industry is characterized by frequent litigation regarding patent and other intellectual property rights. We have indemnification obligations with respect to the infringement of third party intellectual property rights. There is no intellectual property litigation currently pending against us. However, we may from time to time receive notifications of claims that we may be infringing patents or other intellectual property rights owned by third parties. If it is necessary or desirable, we may seek licenses under those patents or intellectual
+
+ 
+
+9
+
+
+--------------------------------------------------------------------------------
+
+
+
+ 
+
+property rights. However, we cannot be sure that licenses will be offered or that the terms of any offered licenses would be acceptable to us.
+
+ 
+
+Competition
+
+ 
+
+In general, the market for semiconductors is intensely competitive. Our market is characterized by rapid technological change, evolving industry standards, compressed product life cycles and declining average selling prices. We believe the principle factors impacting competition in our markets are levels of product integration, functional versatility provided by software, compliance with industry standards, time to market, cost, product performance, system design costs, intellectual property, customer relationships and reputation.
+
+ 
+
+Our current products face competition from specialized display controller developers and in-house display control chips designed by our customers and potential customers. Additionally, new, alternative display processing technologies and industry standards may emerge that directly compete with technologies that we offer.
+
+ 
+
+We compete with specialized and diversified electronics and semiconductor companies that offer display processors or scaling components. Some of these include Genesis Microchip, I-Chips, Macronix, Micronas, Mstar Semiconductor, Inc., Mediatek, Oplus, Philips, Realtek, Silicon Image, Silicon Optix, SmartASIC, STMicroelectronics, Trident and Trumpion.
+
+ 
+
+Potential competitors may include diversified semiconductor manufacturers including ATI, nVidia, National Semiconductor and Texas Instruments. In addition, start-up companies may seek to compete in our markets.
+
+ 
+
+Employees
+
+ 
+
+As of December 31, 2002, we had a total of 260 employees—127 in engineering, 91 in sales and marketing, of which 59 are application engineers and 32 sales and marketing staff, 15 in operations, and 27 in finance and administration. Of these employees, 174 are in the United States.  None of our employees are represented by a collective bargaining agreement, nor have we experienced any work stoppage. We consider our relationship with our employees to be good. The Company’s future success will depend in large part upon its ability to continue to attract, retain, and motivate highly skilled and qualified personnel.
+
+ 
+
+Available Information
+
+ 
+
+Our Internet website address is www.pixelworks.com.  Our Annual Report on Form 10-K, quarterly reports on Form 10-Q, current reports on Form 8-K and amendments to those reports filed or furnished pursuant to Section 13 or 15(d) of the Securities Exchange Act of 1934 are available through our internet website as soon as reasonably practicable after we electronically file such material with, or furnish it to, the Securities and Exchange Commission.  Our internet website and the information contained therein or connected thereto are not intended to be incorporated into the Annual Report on Form 10-K.
+
+ 

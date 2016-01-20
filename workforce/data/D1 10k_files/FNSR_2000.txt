@@ -1,0 +1,1714 @@
+ITEM 1.  BUSINESS
+
+    This report contains forward-looking statements within the meaning of the
+Private Securities Litigation Reform Act of 1995. We use words like
+"anticipates," "believes," "plans," "expects," "future," "intends" and similar
+expressions to identify these forward-looking statements. We have based these
+forward-looking statements on our current expectations and projections about
+future events. These forward-looking statements are subject to risks,
+uncertainties and assumptions about us, including:
+
+    - uncertainty regarding the commercial acceptance of high-speed networking
+      and storage technologies;
+
+    - uncertainty regarding our future operating results;
+
+    - our ability to introduce new products;
+
+    - delays or losses of sales due to long sales and implementation cycles for
+      our products;
+
+    - the possibility of lower prices, reduced gross margins and loss of market
+      share due to increased competition; and
+
+    - increased demands on our resources due to anticipated growth.
+
+    Other factors that could cause actual result to differ from expectation are
+discussed in FACTORS THAT COULD AFFECT OUR FUTURE PERFORMANCE.
+
+    In light of these risks, uncertainties and assumptions, the forward-looking
+events discussed in this report might not occur. We undertake no obligation to
+publicly update or revise any forward-looking statements, whether as a result of
+new information or future events.
+
+BUSINESS
+
+    We are a leading provider of fiber optic subsystems and network performance
+test systems which enable high-speed data communications over local area
+networks, or LANs, and storage area networks, or SANs. Additionally, we have
+recently developed products for digitizing the return path of a cable
+television, or CATV, network and for aggregating data traffic in extended
+networks. We are focused on providing high-performance, reliable, value-added
+optical subsystems, which convert electrical signals into optical signals, for
+networking and storage equipment manufacturers that develop and market systems
+based on Gigabit Ethernet and Fibre Channel, which are advanced transmission
+protocols used in LAN and SAN applications. Our line of optical subsystems
+supports a wide range of network applications, transmission speeds, distances
+and mediums. We also provide unique network performance test systems which
+assist networking and storage equipment manufacturers in the efficient design of
+reliable, high-speed networking systems and the testing and monitoring of the
+performance of these systems. We sell our products to leading networking and
+storage equipment manufacturers such as 3Com, EMC, Emulex, IBM, Newbridge
+Networks and Sun Microsystems, as well as emerging manufacturers such as Brocade
+Communications and Extreme Networks.
+
+INDUSTRY BACKGROUND
+
+    The ubiquity of computing by businesses, organizations and individuals
+worldwide and the need to interconnect multiple computing and storage devices to
+enable widespread communications has given rise to the multi-billion dollar
+computer networking and storage industries. There has been a rapid growth in the
+number of corporate and residential users accessing communications networks.
+This growth has resulted in large-scale equipment expenditures by enterprises
+and service providers to develop and expand their network and storage
+infrastructures. Networking and storage equipment expenditures are also
+accelerating due to the need to upgrade equipment to reliably accommodate data
+traffic which requires
+
+                                       3
+<PAGE>
+greater transmission capacity, or bandwidth, such as e-commerce and online
+transaction processing-related traffic, multimedia file transfers and movement
+of large blocks of stored data across networks. The transmission and storage of
+data has become increasingly mission-critical as enterprises increasingly rely
+on data-intensive applications to support a wider range of functions over a
+geographically dispersed employee and customer base. The continuing expansion of
+the network infrastructure, the growing number of users accessing networks, the
+need to accommodate higher bandwidth, and the increasingly mission-critical
+nature of data networking and storage networking have created the need for a new
+generation of high-speed, high-performance networking and storage systems that
+rely on fiber optic transmission technology.
+
+    EVOLUTION OF NETWORKS, NETWORKING SYSTEMS AND NETWORKING PROTOCOLS
+
+    GIGABIT ETHERNET AND LOCAL AREA NETWORKS. Early LANs were implemented to
+connect a limited number of users within relatively close proximity. Most of
+these LANs used the Ethernet transmission protocol which was developed to allow
+users to access the LAN and share basic common services such as file servers and
+printers. Because these early LANs had relatively limited performance
+requirements, short connection distances and low transmission speeds, systems on
+these LANs were generally connected by copper cabling.
+
+    As deployment of LANs increased, Ethernet became the predominant LAN
+technology, with a greater than 95% market share in 1998 in terms of port
+shipments according to the Dell'Oro Group. As bandwidth needs and server
+processing power increased and larger numbers of users strained the early LAN
+infrastructure, Ethernet technology evolved from the original 10 megabits per
+second, or Mbps, version to 100 Mbps Fast Ethernet. In response to continually
+increasing bandwidth and performance requirements, Gigabit Ethernet technology,
+which operates at 1,000 Mbps, was introduced in 1998. Dataquest estimates that
+sales of Gigabit Ethernet switches will increase from $364 million in 1998 to
+over $3.7 billion in 2002, representing a compound annual growth rate of 79%.
+These switches contain varying numbers of ports which serve as the connection to
+the network. According to Dataquest, the number of Gigabit Ethernet port
+shipments is projected to grow from 211,000 in 1998 to over 6 million in 2002,
+representing a compound annual growth rate of 130%. Most of these Gigabit
+Ethernet ports will rely on fiber optic subsystems, which allow data to be
+transmitted accurately, at very high speeds and over long distances. Although
+the transmission speeds currently offered by Gigabit Ethernet are expected to
+meet the increasing bandwidth needs of enterprise and service provider networks
+for the near future, manufacturers have begun to develop networking systems with
+per-port transmission speeds of 10 gigabits per second, or Gbps, ten times
+faster than Gigabit Ethernet. Because of the scalability and migration capacity
+built into the Gigabit Ethernet protocol, manufacturers developing these systems
+are able to leverage this standard much as they did when they migrated from
+100 Mbps Fast Ethernet to 1,000 Mbps Gigabit Ethernet. This next generation of
+high-speed networking systems will require even higher performance fiber optic
+subsystems.
+
+    FIBRE CHANNEL AND STORAGE AREA NETWORKS. Like data networking technology,
+data storage technology has evolved rapidly over the past decade. Traditionally,
+storage devices were connected to a single server and LAN in close proximity
+using a standard interface protocol known as the Small Computer Systems
+Interface, or SCSI. SCSI currently allows storage devices and servers to
+communicate at a maximum speed of 80 megabytes per second, over a maximum
+transmission distance of 12 meters and supports a maximum of 15 devices on a
+single bus. Although these distances and speeds were sufficient for early
+storage applications, SCSI has become a limiting technology for emerging storage
+applications, which require networking at high speeds over long distances and
+need to interconnect large numbers of users.
+
+    In recent years, demand has increased for faster, more efficient
+interconnection of data storage systems with servers and LANs. Contributing to
+this demand are:
+
+    - the need to connect increasing numbers of storage devices and servers to a
+      growing number of users;
+
+                                       4
+<PAGE>
+    - the need to interconnect servers and storage systems supplied by multiple
+      vendors;
+
+    - the increasingly mission-critical nature of stored data and the need for
+      rapid access to this data; and
+
+    - the expense and complexity associated with managing increasingly large
+      amounts of data storage.
+
+    Although advances in technology, including the recent development of Gigabit
+Ethernet, increased LAN transmission speeds by more than 1,000 times during the
+1990s, storage-to-server data transmission speeds on SCSI-based systems
+increased by less than ten times during this period. This speed disparity
+created a bottleneck between storage systems and servers and the LANs connected
+to those servers. Recently, the Fibre Channel interconnect protocol has been
+standardized to address the speed, distance and connectivity limitations of
+SCSI-based storage while maintaining backward compatibility with the installed
+base of SCSI-based storage systems. Fibre Channel allows up to 126 devices to
+communicate at rates up to 1.062 Gbps over distances of up to 10 kilometers. The
+Fibre Channel protocol has enabled the development of high-speed storage area
+networks, or SANs, which provide the interconnection between storage systems and
+servers.
+
+    Fibre Channel-based SANs provide many benefits, including transmission
+speeds comparable to high-speed LANs and transmission distances which allow
+broader sharing of resources. SANs also enable enhanced network applications
+such as storage backup, and better overall storage management achievable through
+centralized storage resources. IDC projects that the market for Fibre Channel
+systems will grow from $2.2 billion in 1998 to over $19.6 billion in 2002,
+representing a compound annual growth rate of 73%. In addition, emf Associates
+forecasts the number of Fibre Channel port shipments will grow from 2.2 million
+in 1998 to over 46.7 million in 2002, representing a compound annual growth rate
+of 115%. Most of these ports will rely on fiber optic subsystems to transmit and
+receive data at very high speeds with high accuracy, and often over long
+distances. Like manufacturers of Gigabit Ethernet-based LAN systems, Fibre
+Channel-based SAN system manufacturers are already developing the next
+generation of SAN products with speeds of 2.125 Gbps, twice as fast as current
+Fibre Channel speeds. Like Gigabit Ethernet, the Fibre Channel protocol is
+scalable, allowing for the potential development of systems with speeds of over
+8 Gbps. The speeds contemplated by future generation SAN systems will require
+even higher performance fiber optics subsystems.
+
+    In addition to SANs, Fibre Channel technology is being used in other
+high-speed data communications applications including the interconnection of
+clusters of switches based on the asynchronous transfer mode, or ATM, protocol.
+ATM switches are often used in service provider network cores to switch traffic
+between multiple networks. In these core networks, multiple switches are often
+grouped together in a service provider's central office. The interconnections
+between these systems are often provided by Fibre Channel-based subsystems which
+allow high-speed, cost-effective communication links between these switches.
+
+    EXTENDED LANS AND SANS. As technologies such as Gigabit Ethernet and Fibre
+Channel have enabled transmission of data at higher speeds over longer distances
+than previous networking technologies permitted, they have allowed the
+geographic extension of LANs and SANs over installed but unused fiber optic
+cable, known as "dark" fiber lines. Enterprises have recently begun to lease
+dark fiber from service providers to implement these extended networks. These
+extended LANs and SANs can interconnect network systems throughout a corporate
+campus or metropolitan area rather than only within a single building. Extended
+networks enable organizations to use their networks for enhanced applications
+such as real-time backup storage at distances of up to 120 kilometers for
+disaster protection. In addition, by using dark fiber lines, extended data
+networks can offer organizations a potentially cost-effective way to address
+increased bandwidth requirements. We believe that future extended networks will
+incorporate both Fibre Channel and Gigabit Ethernet transmission protocols. As
+with shorter-distance LANs and SANs, these extended networks will require
+high-performance fiber optic subsystems.
+
+                                       5
+<PAGE>
+    CABLE TELEVISION NETWORKS. Cable television networks have traditionally
+relied on the use of radio frequency, or RF, analog transmission to broadcast
+video signals over copper cable. The initial objective of these networks was to
+provide one-way broadcast of video channels to the home. These early networks
+relied on multiple amplifiers in order to compensate for the loss of signal
+strength over distance caused by the use of copper cable as the transmission
+medium.
+
+    Since the early 1990's, CATV operators have greatly expanded their ability
+to offer a growing array of entertainment services by upgrading their networks
+with fiber optic technologies in order to reduce the number of amplifiers needed
+to transmit signals to the home, expand capacity and enhance the reliability of
+their networks. While operators realize several benefits as a result of
+upgrading their networks in this manner, the fiber optic technologies deployed
+to date continue to use RF analog transmission to send signals.
+
+    With the rapid growth in Internet-related services, the demand for two-way
+interactive CATV services has increased dramatically. The transformation of a
+one-way broadcast network to a two-way interactive network requires that the
+signals originating at each home be aggregated at a node before being sent back
+to the CATV network headend. This transformation, using analog signal
+transmission for the return path, involves numerous technical challenges because
+the electrical noise originating at each home is also aggregated before being
+transmitted. This aggregation of noise limits the amount of bandwidth and
+distance over which these return signals can be transmitted. For this reason, a
+substantial portion of CATV networks have not been upgraded for two-way
+transmission and those operators who have implemented analog return path systems
+are limited with respect to their ability to carry two-way traffic.
+
+    DEMAND FOR HIGH-SPEED DATA COMMUNICATION TEST SYSTEMS
+
+    The design and development of data and storage networking systems require
+extensive testing to ensure system performance and reliability. As new, highly
+complex transmission protocols such as Gigabit Ethernet and Fibre Channel have
+emerged, system testing has become more difficult, requiring increasingly
+sophisticated and specialized test systems capable of capturing data at high
+speeds, filtering the data and identifying various types of intermittent errors
+and other network problems. Other new technologies are continually being
+developed, such as the Infiniband transmission protocol, which is being
+engineered to interconnect clusters of computer devices. In the past, many
+systems manufacturers designed their own test equipment each time they developed
+a new product. However, as the pace of technological change has accelerated, the
+performance requirements of data communications systems have increased and
+competition has afforded shorter market windows within which manufacturers can
+develop and introduce new products. Thus, system manufacturers have increasingly
+focused on the design and development of their own products and turned to
+specialized independent suppliers for state-of-the-art test equipment. As
+Ethernet and Fibre Channel-based systems reach even higher transmission speeds
+and new standards like Infiniband emerge, the internal development of test
+equipment by systems manufacturers will become more challenging, further
+increasing the demand for high performance, easy-to-use test systems from
+independent suppliers.
+
+    EVOLUTION OF FIBER OPTIC SUBSYSTEMS FOR NETWORKING
+
+    Fiber optic transmission technology was originally developed for use in long
+distance telecommunications networks to increase capacity and speed. In
+contrast, early LANs and storage systems, with their relatively limited
+performance requirements, short connection distances and low transmission
+speeds, did not require the performance capabilities of fiber optics. Systems on
+these networks were generally interconnected using copper cabling.
+
+    As the bandwidth, storage capacity and transmission distance requirements of
+enterprises and service providers have increased, it has become necessary to
+utilize the superior transmission capabilities of fiber optics to build
+practical, high-speed LANs based on Gigabit Ethernet technology and high-speed
+SANs based on Fibre Channel. As these fiber optic LANs and SANs are being
+deployed, fiber optics is becoming
+
+                                       6
+<PAGE>
+the dominant transmission technology for high-speed data networking and storage
+applications. Systems connected with fiber optics require optical subsystems to
+convert electrical signals into optical signals and back into electrical signals
+at high speeds.
+
+    The development and manufacture of high quality, cost-effective fiber optic
+subsystems for LANs and SANs present a number of significant technical
+challenges, including the following:
+
+    - As data rates increase, it becomes significantly more difficult to
+      maintain data integrity because high speed signals can be degraded unless
+      subsystem components such as lasers, detectors and integrated circuits are
+      properly integrated and packaged;
+
+    - The increasingly mission-critical nature of data transmission and storage
+      has magnified the impact of system failures, increasing the need for
+      system reliability and the importance of real-time performance monitoring;
+
+    - Manufacturers of high speed networking equipment require optical
+      subsystems that support a wide range of transmission distances, protocols
+      and applications; and
+
+    - Compliance with standards set by the Federal Communications Commission, or
+      FCC, for electromagnetic interference emissions, or EMI, is significantly
+      more difficult to achieve at higher data rates.
+
+    To date, we believe that only a limited number of companies have developed
+the specialized expertise required to engineer fiber optic subsystems and test
+systems which meet the requirements of manufacturers of high-speed data
+networking and storage systems.
+
+THE FINISAR SOLUTION
+
+    We are a leading provider of fiber optic subsystems and network performance
+test systems which enable high-speed data communications over LANs, SANs, CATV
+networks and extended networks. We are focused on providing high-performance,
+reliable, value-added optical subsystems for networking and storage equipment
+manufacturers that develop and market systems based on Gigabit Ethernet and
+Fibre Channel protocols. Our line of optical subsystems supports a wide range of
+network applications, transmission speeds, distances and mediums. Our digital
+return path technology overcomes many of the limitations associated with analog
+components used to provide two-way interactive services over CATV networks. We
+also provide unique network performance test systems which assist networking and
+storage equipment manufacturers in the efficient design of reliable, high-speed
+networking systems and the testing and monitoring of the performance of these
+systems. Our products provide the following key benefits to manufacturers of
+high-speed data networking and storage systems:
+
+    VALUE-ADDED FUNCTIONS AND INTELLIGENCE. Our high-speed fiber optic
+subsystems are engineered to deliver value-added functionality and intelligence.
+For example, many of our optical subsystems include a microprocessor containing
+specially-developed software that allows customers to monitor the optical
+performance of each port on their systems in real time. In addition, many of our
+subsystems are engineered to automatically recognize different versions of the
+Fibre Channel protocol and to interoperate with our customers' older, installed
+networking systems, often referred to as legacy systems. Real-time monitoring
+and interoperability are particularly important in the Gigabit Ethernet LAN and
+Fibre Channel SAN markets where reliability and time to market are critical. Our
+test systems also contain value-added software functions that permit users to
+simulate and track errors.
+
+    HIGH LEVEL OF DATA INTEGRITY. Through the use of advanced packaging and
+circuit design, our optical subsystems deliver data at very high speeds over
+varying distances with very low error rates. We engineer our subsystems to
+exceed the industry standard error rate of 1 bit per trillion bits transmitted.
+This degree of data integrity allows our subsystems to operate reliably over a
+wide range of temperatures and other field conditions which we believe enables
+our customers to design and deliver more robust systems.
+
+                                       7
+<PAGE>
+    HIGH RELIABILITY. We design all of our subsystems to provide the high
+reliability required for data networking and storage applications that are
+critical to an enterprise. Using standard statistical methodology and testing,
+we have been able to predict that some of our products can be expected to
+operate reliably for up to 40 million hours. Our subsystems are engineered to
+operate with minimal power requirements thereby increasing product life, and to
+function across a wide range of temperatures and voltages. This reliability and
+flexibility have allowed our subsystems to be designed into the products of
+manufacturers who provide systems for a variety of mission-critical
+applications. In addition, because our subsystems emit lower levels of EMI than
+the standards set by the FCC, we offer manufacturers greater flexibility in the
+design of their systems and integration of other components and subsystems.
+
+    BROAD OPTICAL SUBSYSTEM PRODUCT LINE. We offer a broad line of optical
+subsystems which operate at varying protocols, speeds, fiber types, voltages,
+wavelengths and distances and are available in a variety of industry standard
+packaging configurations, or form factors. Our optical subsystems are designed
+to comply with key networking protocols such as Fibre Channel and Gigabit
+Ethernet and to plug directly into standard port configurations used in our
+customers' products. The breadth of our optical subsystems product line is
+important to many of our customers who manufacture a wide range of networking
+products for diverse applications.
+
+    BROAD TEST SYSTEM PRODUCT LINE. We believe that we are a leading provider of
+network performance test systems for Fiber Channel-based networks. We offer a
+broad line of test systems to assist our customers in efficiently designing
+reliable, high-speed networking systems and testing and monitoring the
+performance of these systems. We believe our test systems enable our customers
+to focus their attention on the development of new products, reduce overall
+development costs and speed time to market.
+
+STRATEGY
+
+    Our objective is to be the leading provider of fiber optic subsystems and
+test systems to manufacturers of high-speed data networking and storage systems.
+Key elements of our strategy include the following:
+
+    MAINTAIN TECHNOLOGY LEADERSHIP IN HIGH-SPEED FIBER OPTIC TRANSMISSION. We
+have been focused on the development of fiber optic subsystems since 1988.
+Current Finisar employees were actively involved in the original development of
+the Fibre Channel standard and, more recently, in the development and
+implementation of Gigabit Ethernet and the emerging Infiniband protocol. Our
+years of engineering experience, our multi-disciplinary technical expertise and
+our participation in the development of industry standards have enabled us to
+become a leader in the design and development of fiber optic subsystems and test
+systems. We intend to maintain our technological leadership through continual
+enhancement of our existing products and the development of new products as
+evolving technology permits higher speed transmission of data, with greater
+capacity, over longer distances. For example, we are designing flexible hardware
+and software architectures to support emerging technologies such as 10 Gbps
+Ethernet, 2 Gbps Fibre Channel, wavelength division multiplexing, or WDM, and
+the Infiniband protocol. We are also focusing on increased product integration
+to enhance the price/performance capabilities of our products. An example of
+this product integration is our new digital return path links used in broadband
+CATV systems that utilize existing technology from our optical subsystems, test
+equipment and extended network subsystems. Our CATV products are plug compatible
+with existing systems, offer superior performance and allow various system
+enhancements. This technology also has the potential to change the product
+architecture of CATV systems for use as broadband metropolitan networks.
+
+    LEVERAGE CORE COMPETENCIES ACROSS MULTIPLE, HIGH-GROWTH MARKETS. We believe
+that fiber optic technology will increasingly become the transmission technology
+of choice for multiple high-growth data communication markets, including Gigabit
+Ethernet-based LANs, Fibre Channel-based SANs and CATV and extended networks.
+These markets are characterized by differentiated applications with unique
+design criteria such as product function, performance, cost, in-system
+monitoring, size limitations and software. We intend to target opportunities
+where our core competencies in high-speed data transmission protocols
+
+                                       8
+<PAGE>
+such as Gigabit Ethernet, Fibre Channel and Infiniband can be leveraged into
+leadership positions as these technologies are extended across multiple markets
+and applications. Our goal is to be the optical subsystem and network
+performance test system provider of choice for multiple protocols and network
+applications. Recently, we entered the broadband CATV market with a product that
+leverages our core competencies in optical subsystems, test systems and WDM. Our
+CATV digital return path product can emulate existing analog return links, plug
+into existing sockets, provide better performance, lower cost and reduce system
+level diagnostics. Furthermore, this product has traffic aggregation features
+that enhance the traditional analog coaxial system.
+
+    STRENGTHEN AND EXPAND CUSTOMER RELATIONSHIPS. Over the past 11 years, we
+have established valuable relationships and a loyal base of customers by
+providing high-quality products and superior service. Our service-oriented
+approach has allowed us to work closely with leading data and storage network
+system manufacturers, understand and address their current needs and anticipate
+their future requirements. We intend to leverage our relationships with our
+existing customers as they enter new, high-speed data communications markets. We
+have recently established new customer relationships with several emerging
+Gigabit Ethernet and Fibre Channel networking equipment manufacturers. We intend
+to expand our sales and marketing organization in order to establish new
+relationships with other key data communications network manufacturers.
+
+    CAPITALIZE ON CROSS-SELLING OPPORTUNITIES. Many manufacturers of high-speed
+data networking and storage systems purchase both optical subsystems and test
+systems from third-party providers. Frequently, however, different groups or
+departments within a manufacturer's organization are responsible for qualifying
+and purchasing subsystems and test equipment. We are increasingly able to
+capitalize on our customers' satisfaction with one of our product lines and our
+service-oriented approach to gain valuable introductions that lead to sales of
+our other product lines. As this trend develops, we intend to leverage our
+unique expertise in both optical subsystems and test systems. In particular, the
+widespread acceptance of our Fibre Channel test systems is providing
+opportunities to develop new customers for our optical subsystems. Our entry
+into the broadband CATV market targets customers in both the direct CATV digital
+return path link market and the extended network subsystems market, allowing
+cable operators to offer digital services economically to businesses in their
+service area.
+
+    EXPAND INTERNATIONAL OPERATIONS. Historically, substantially all of our
+sales have been made to system manufacturers located in North America. In the
+fiscal year ended April 30, 2000, sales to customers outside North America
+represented approximately 5% of our total revenues. Recently, manufacturers in
+other parts of the world have developed and introduced high-speed networking
+products based on the Gigabit Ethernet and Fibre Channel protocols and
+international markets for our products are beginning to expand. To better
+address these expanding international markets, we have recently established
+relationships with distributors in Japan, the United Kingdom and Israel. We
+intend to further extend our international operations by expanding our network
+of distributors and sales representatives in key international markets. As
+international Fibre Channel and Gigabit Ethernet standards are substantially the
+same as those in North America, we do not expect that we will require
+substantial product development efforts to enter international markets.
+
+PRODUCTS
+
+    We provide a broad line of complementary optical subsystems and test systems
+for high-speed data communications over Gigabit Ethernet LANs and Fibre Channel
+SANs.
+
+    OPTICAL SUBSYSTEMS
+
+    Our optical subsystems product line consists of three product
+families--optical data links, optical link extenders and Opticity 3000. Our
+optical data links are integrated into our customers' systems and used for
+
+                                       9
+<PAGE>
+both short- and long-distance fiber optic communications. Our optical link
+extenders are external subsystems used for fiber optic communications over long
+distances. Our Opticity 3000 is an external link extender subsystem which also
+includes multiplexer functionality that permits multi-channel data transmission
+over long distances.
+
+OPTICAL DATA LINKS
+
+    Our family of optical data link products consists of transmitters, receivers
+and transceivers based on the Gigabit Ethernet and Fibre Channel protocols. A
+transmitter converts electrical signals into optical signals for transmission
+over fiber optics. A receiver converts incoming optical signals into electric
+signals. A transceiver combines both transmitter and receiver functions. Our
+optical data link products perform these functions with high reliability and
+data integrity and support a wide range of protocols, transmission speeds, fiber
+types, wavelengths, transmission distances, form factors and software
+enhancements.
+
+    Our high-speed fiber optic subsystems are engineered to deliver value-added
+functionality and intelligence. Most of our optical data link products include a
+microprocessor with proprietary embedded software that allows customers to
+monitor transmitted and received optical power, temperature, drive current and
+other link parameters of each port on their systems in real time. In addition,
+our intelligent optical data links are used by many enterprise networking and
+storage system manufacturers to enhance the ability of their systems to diagnose
+and correct abnormalities in fiber optic networks.
+
+    The following table describes our principal optical data link products:
+
+<TABLE>
+<CAPTION>
+                           TRANSMISSION                 WAVELENGTHS   TRANSMISSION     FORM           SOFTWARE
+        PROTOCOLS          SPEED (GBPS)   FIBER TYPES      (NM)        DISTANCES     FACTORS        ENHANCEMENTS
+-------------------------  ------------   -----------   -----------   ------------   --------       ------------
+<S>                        <C>            <C>           <C>           <C>            <C>        <C>
+TRANSMITTERS
+Fibre Channel............     1.062       Multimode       850           500 m        17-pin     Built-in diagnostics
+Gigabit Ethernet.........     1.25        Singlemode      1310          10 km
+                                                          1550          30 km
+                                                                        80 km
+RECEIVERS
+Fibre Channel............     1.062       Multimode       850           500 m        17-pin     Reports on received
+                                                                                                optical power levels
+Gigabit Ethernet.........     1.25        Singlemode      310           10 km
+                                                          1550          30 km
+                                                                        80 km
+TRANSCEIVERS
+Fibre Channel............  1.062/2.125    Multimode       850           500 m        28-pin     Built-in diagnostics
+Gigabit Ethernet.........   1.25/2.5      Singlemode      1310          10 km         9-pin        OFC auto-sense
+                                                          1550          30 km         GBIC             Serial
+                                                                                                   identification
+                                                                        80 km          SFP
+                                                                                       SFF
+</TABLE>
+
+CABLE TELEVISION DIGITAL RETURN PATH SYSTEMS
+
+    Over the past year, we have developed a new technical approach to the
+transportation of information inside broadband cable television networks.
+Traditionally, fiber optic links in CATV networks have used analog modulation to
+transport signals. Our design digitizes the return path signal with performance
+comparable to the best analog links. We have begun customer trials of our
+digital optical return path links for CATV systems.
+
+                                       10
+<PAGE>
+    Our digital technology enables us to make links that have significant
+advantages over traditional analog links. These links are more stable in varying
+temperatures, show no analog variation with fiber distance and are more immune
+to mishandling problems, such as poor splices and connectors, than traditional
+analog links.
+
+    Digital return path links allow broadband systems to be better managed and
+to support a variety of CATV architectures. Our products are used in nodes that
+typically serve between 50 and 500 homes as well as in secondary hub sites and
+headends. These products build on our basic optical modules and test systems to
+provide our customers with a level of service, reliability and signal integrity
+that is superior to the systems they are replacing at a lower cost. These
+modules plug into existing nodes, hubs and headends, which facilitates market
+acceptance.
+
+OPTICAL LINK EXTENDERS
+
+    Our FLX-2000 family of optical link extenders allows enterprises to extend
+the distance of fiber optic links in Gigabit Ethernet and Fibre Channel-based
+networks while preserving data integrity and reliability. Using our optical link
+extenders, Gigabit Ethernet networks can be extended from the maximum standard
+distance of 5 kilometers to up to 120 kilometers, and Fibre Channel networks can
+be extended from the maximum standard distance of 10 kilometers to up to
+120 kilometers. Our optical link extenders enable new network applications such
+as remote storage and real-time backup, as well as geographic extensions of a
+network. In addition, our optical link extenders provide a value-added
+diagnostic function by measuring the bit error rate on data links and monitoring
+and reporting system status.
+
+OPTICITY 3000
+
+    Introduced in September 1999, our Opticity 3000 is now being evaluated by
+several network service providers ranging from application service providers to
+competitive local exchange carriers and CATV operators. Our Opticity 3000
+combines cost-effective wavelength division multiplexing with the ability to
+create reliable ring network topologies. The Opticity 3000 allows enterprises
+and service providers to build gigabit metropolitan data networks. The
+Opticity 3000 aggregates data traffic on fiber rings. It is able to multiplex up
+to 16 channels of Fibre Channel or Gigabit Ethernet traffic on a single fiber
+pair, providing aggregate full-duplex bandwidth of up to 20 Gbps. The
+Opticity 3000 can be remotely managed using standard network management
+protocols such as the Simple Network Management Protocol. Opticity 3000 also has
+features such as redundant power supply designed to maximize reliability and
+uptime in case of failures.
+
+    The Opticity 3000 platform enables our customers to create complex systems
+combining both networking and storage based services and to access Ethernet
+service at speeds up to 100 Mbps at costs comparable to today's prices for T1 or
+DSL connections provided by local telephone companies.
+
+    Currently our Opticity 3000 platform can be configured with as few as four
+and as many as 16 channels. The Opticity 3000 platform manages a ring topology
+matching the fiber layout in most metropolitan areas. The Opticity 3000 can
+operate over a single fiber ring and still maintain the ability to provide
+failover switching for redundancy and reliability in the event of a fiber
+breakage. Extended networks using the Opticity 3000 are configured to remain
+operational in the event of any single point of failure throughout the platform
+or physical plant.
+
+    The effectiveness of the Opticity 3000 relies on a variety of bandwidth
+enhancing techniques including time division multiplexing and WDM. All channels
+are actively monitored, therefore service levels can be tracked and verified for
+each customer served by the system. The Opticity 3000 platform can be managed
+using simple network management protocol as well as a web browser. Remote
+management of an entire ring system can be accomplished through a single
+Internet connection to the system.
+
+                                       11
+<PAGE>
+    NETWORK PERFORMANCE TEST SYSTEMS
+
+    Our GTX, GT and GLA family of network performance test systems assist
+networking and storage system manufacturers in the efficient design of reliable,
+high-speed networking systems and the testing and monitoring of the performance
+of these systems. We believe we are the leading supplier of test equipment for
+the Fibre Channel protocol used in enterprise SANs. We also offer Gigabit
+Ethernet test systems. Our test systems allow engineers, service technicians and
+network managers to capture data at high speeds, filter the data and identify
+various types of intermittent errors and other network problems.
+
+    Our GTX, GT and GLA family of test system products includes data generators,
+data analyzers, error injector/data jammers and low-cost, real-time link
+monitors. The following table describes our GTX, GT and GLA family of test
+products:
+
+<TABLE>
+<CAPTION>
+                                        INTRODUCTION    PROTOCOL      TRANSMISSION
+PRODUCT DESCRIPTION                         DATE       SUPPORTED         SPEED            APPLICATION      CONFIGURATION
+-------------------                     ------------   ----------   ----------------   -----------------   -------------
+<S>                                     <C>            <C>          <C>                <C>                 <C>
+GIGABIT LINK ANALYZERS
+
+GLA-3100ES............................    10/96          ESCON          200 Mbps          R&D Service       PC-Hosted
+
+GLA-3100FC............................    1/97           Fibre         1.062 Gbps         R&D Service       PC-Hosted
+                                                        Channel
+
+GT-G Data Generator Module............    1/98           Fibre         1.062 Gbps      Inter-operability    PC-Hosted
+                                                        Channel
+
+GT-J Error Injector Module............    2/99           Fibre         1.062 Gbps       Error Recovery      PC-Hosted
+                                                        Channel
+
+GT-J22 Error Stimulus Response            2/99           Fibre         1.062 Gbps       Error Recovery         High
+  System..............................                  Channel,                                           Performance
+                                                         FICON                                               Tower PC
+
+GT GIGABIT TRAFFIC CHECK
+
+GT-C-FC Link Monitor..................    5/98           Fibre         1.062 Gbps        Field Service      Hand Held
+                                                        Channel
+
+GT-C-GE Link Monitor..................    5/98          Gigabit        1.25 Gbps         Field Service      Hand Held
+                                                        Ethernet
+
+GTX GIGABIT TRAFFIC SYSTEM
+
+GTX-A.................................    11/99          Fibre         1.062 Gbps             R&D           PC-Hosted
+                                                        Channel        2.125 Gbps
+
+GTX-B bit error rate tester...........    3/00           Fibre         1.062 Gbps        Hardware Test      PC-Hosted
+                                                        Channel,       1.25 Gbps
+                                                        Gigabit        2.125 Gbps
+                                                       Ethernet,        2.5 Gbps
+                                                       Infiniband
+
+GTX-J Error Injector..................    7/00           Fibre         1.062 Gbps       Error Recovery      PC-Hosted
+                                                        Channel,       2.125 Gbps
+                                                         FICON
+
+SANmetrics--Loop......................    4/00           Fibre      1.062/2.125 Gbps    SAN Performance         NA
+                                                        Channel                        Analysis Software
+
+SANmetrics--Switch....................    6/00           Fibre      1.062/2.125 Gbps    SAN Performance         NA
+                                                        Channel                        Analysis Software
+</TABLE>
+
+                                       12
+<PAGE>
+CUSTOMERS
+
+    Sales to our two principal customers, Newbridge Networks and EMC
+Corporation, accounted for 25.1% and 24.1% of our revenues in fiscal 1999 and
+24.5% and 24.0% in fiscal 2000.
+
+TECHNOLOGY
+
+    The development of high quality fiber optic subsystems and test systems for
+high-speed data communications requires multidisciplinary expertise in the
+following six technology areas:
+
+    HIGH FREQUENCY SEMICONDUCTOR DESIGN. Our fiber optic subsystems development
+efforts are supported by an engineering team that specializes in analog/digital
+integrated circuit design. This group works in both silicon and gallium
+arsenide, or GaAs, semiconductor technologies where circuit element frequencies
+are very fast and can be as high as 60 GHz. We have designed proprietary
+circuits including laser drivers and receiver pre- and post-amplifiers. Our
+designs have made us early entrants in the 1.0 Gbps data communications market
+and more recently in the 2.5 Gbps data communications market. These advanced
+semiconductor devices provide significant cost advantages and will be critical
+in the development of future products capable of even faster data rates.
+
+    OPTICAL SUBSYSTEM DESIGN. Finisar has established itself as a low-cost
+design leader beginning with its initial Gbps optical subsystems in 1992. From
+that base we have developed new singlemode laser alignment approaches and
+low-cost, all-metal packaging techniques for improved EMI performance and
+environmental tolerance. We develop our own component and packaging and designs
+and integrate these designs with proprietary manufacturing processes that allow
+our products to be manufactured in high volume.
+
+    COMPLEX LOGIC DESIGN. Our test equipment designs are based on field
+programmable gate arrays, or FPGAs. In recent customer trials, our newest
+products are being used to operate with clock frequencies of up to 125 MHz and
+logic densities up to 1 million gates per chip. Our test systems use FPGAs that
+are programmed by the host PC and therefore can be configured differently for
+different tests. All of our logic design is done in the VHDL hardware
+description language which will enable migration to ASICs as volumes warrant. We
+develop VHDL code in a modular fashion for reuse in logic design which comprises
+a critical portion of our intellectual property. This re-usable technology base
+of logic design is available for use in both our test system and optical
+subsystem product lines and allows us to reduce the time to market for our new
+and enhanced products.
+
+    SOFTWARE TECHNOLOGY. We devote substantial engineering resources to the
+development of software technology for use in all of our product lines. We have
+developed software to control our test systems, analyze data collected by our
+test systems, and monitor, maintain, test and calibrate our optical subsystems.
+A majority of our software technology and expertise is focused on the use of
+object-oriented development techniques to develop software subsystems that can
+be reused across multiple product lines. We have created substantial
+intellectual property in the area of data analysis software for our Fibre
+Channel test equipment. This technology allows us to rapidly sort, filter and
+analyze large amounts of data using a proprietary database format. This database
+format is both hardware platform-independent and protocol-independent. This
+independence allows all of the software tools developed for our existing test
+products to be utilized in all of our new test products that collect data
+traces. Because the database format is also protocol-independent, new protocols
+can be added quickly and easily. Another important component of our intellectual
+property is our graphical user interface, or GUI, design. Many years of customer
+experience with our test products have enabled us to define a simple yet
+effective method to display complex protocols in clear and concise GUIs for
+intuitive use by engineers.
+
+    SYSTEM DESIGN. The design of all of our products requires a combination of
+sophisticated technical competencies--optical engineering, high-speed digital
+and analog design, ASIC design and software engineering. We have built an
+organization of people with skills in all of these areas. It is the integration
+of these technical competencies that enables us to produce products that meet
+the needs of our customers.
+
+                                       13
+<PAGE>
+Our combination of these technical competencies has enabled us to design and
+manufacturer optical subsystems with built-in optical test multiplexing, and
+network monitoring, as well as test systems that integrate optical and protocol
+testing with user interface software.
+
+    MANUFACTURING SYSTEM DESIGN. The design skills gained in our test systems
+group are also used in the manufacturing of our optical subsystems. We utilize
+our high-speed FPGA design blocks and concepts and GUI software elements to
+provide specialized manufacturing test systems for our internal use. These test
+systems are optimized for test capacity and broad test coverage. We use
+automated, software-controlled testing to enhance the field reliability of all
+Finisar products. All of our products are subjected to temperature testing of
+powered systems as well as full functional tests.
+
+COMPETITION
+
+    The market for optical subsystems and network performance test systems for
+use in LANs, SANs and extended networks are highly competitive. We believe the
+principal competitive factors in the optical subsystem and test system markets
+are:
+
+    - product performance, features, functionality and reliability;
+
+    - price/performance characteristics;
+
+    - timeliness of new product introductions;
+
+    - adoption of emerging industry standards;
+
+    - service and support;
+
+    - size and scope of distribution network;
+
+    - brand name;
+
+    - access to customers; and
+
+    - size of installed customer base.
+
+    We believe we compete favorably with our competitors with respect to most of
+the foregoing factors. However, we cannot assure you that we will be able to
+compete successfully against either current or future competitors.
+
+SALES, MARKETING AND TECHNICAL SUPPORT
+
+    We sell our products in North America through our direct sales force and a
+network of twelve independent manufacturers' representatives. Our direct sales
+force maintains close contact with our customers and provides technical support
+to our manufacturers' representatives. In our international markets, our direct
+sales force works with local resellers who assist us in providing support and
+maintenance to the territories they cover. We have recently established
+relationships with distributors in Japan, the United Kingdom, Israel, Germany
+and Korea.
+
+    Both our optical subsystems and our network performance test systems are
+often sold to the same customer. We are increasingly able to capitalize on our
+customers' satisfaction with one of our product lines and our service-oriented
+approach to gain valuable introductions that can lead to sales of our other
+product line. We anticipate that we will continue to benefit from these trends
+in the future.
+
+    Our marketing efforts are focused on increasing awareness of our optical
+subsystems and test systems product lines and our brand name. Key components of
+our marketing efforts include:
+
+    - continuing our active participation in industry associations and standards
+      committees to promote and further enhance Gigabit Ethernet and Fibre
+      Channel technologies, promote standardization in the LAN and SAN markets,
+      and increase our visibility as industry experts; and
+
+                                       14
+<PAGE>
+    - leveraging major trade show events and LAN and SAN conferences to promote
+      our broad product lines.
+
+    In addition, our marketing group provides marketing support services for our
+executive staff, our direct sales force and our manufacturers' representatives
+and resellers. Through our marketing activities, we provide technical and
+strategic sales support to our direct sales personnel and resellers including
+in-depth product presentations, technical manuals, sales tools, pricing,
+marketing communications, marketing research, trademark administration and other
+support functions.
+
+    A high level of continuing service and support is critical to our objective
+of developing long-term customer relationships. We emphasize customer service
+and technical support in order to provide our customers and their end users with
+the knowledge and resources necessary to successfully utilize our product line.
+Our customer service utilizes a technical team of field and factory applications
+engineers, technical marketing personnel and, when required, product design
+engineers. We provide extensive customer support throughout the qualification
+and sale process. In addition, we also provide many resources through our World
+Wide Web site, including product documentation and technical information. We
+intend to continue to provide our customers with comprehensive product support
+and believe it is critical to remaining competitive.
+
+MANUFACTURING
+
+    We outsource the majority of our assembly operations, and we conduct
+manufacturing engineering, supply chain management, quality assurance and
+documentation control operations at our facility in Sunnyvale, California. This
+approach enables us to focus on our design strengths, reduce fixed costs and
+capital expenditures and provide flexibility in meeting market demand.
+
+    We currently rely on three Asia based and one U.S. based contract
+manufacturers for substantially all of our assembly operations. We do not have
+long-term contracts with any of our contract manufacturers, and none of them are
+obligated to perform assembly services for us for any specific period or at any
+specified price, except as may be provided in a particular purchase order.
+
+    We design and develop a number of the key components of our products,
+including ASICs, printed circuit boards and software. In addition, our
+manufacturing team works closely with our engineers to manage the supply chain.
+Product testing and burn-in are performed at our facility. We also use
+inspection, testing and statistical process controls to assure the quality and
+reliability of our products. In addition, most of our optical subsystems have an
+intelligent interface that allows us to monitor product quality during the
+manufacturing process.
+
+    Although we use standard parts and components for our products where
+possible, we currently purchase a few key components used in the manufacture of
+our products from single or limited sources. Our principal single source
+components include ASICs and lasers. Generally, purchase commitments with our
+single or limited source suppliers are on a purchase order basis. Any
+interruption or delay in the supply of any of these components, or the inability
+to procure these components from alternate sources at acceptable prices and
+within a reasonable time, would substantially harm our business. In addition,
+qualifying additional suppliers can be time-consuming and expensive and may
+increase the likelihood of errors.
+
+    We use a rolling 12-month forecast based on anticipated product orders to
+determine our material requirements. Lead times for materials and components we
+order vary significantly, and depend on factors such as the specific supplier,
+contract terms and demand for a component at a given time. It is our practice to
+maintain a 12-month inventory of sole source components to decrease the risk of
+a component shortage.
+
+                                       15
+<PAGE>
+RESEARCH AND DEVELOPMENT
+
+    In fiscal 1999 and fiscal 2000, our research and development expenses were
+$7.9 million and $13.8 million, respectively. We believe that our future success
+depends on our ability to continue to enhance our existing products and to
+develop new products that maintain technological competitiveness. We focus our
+product development activities on addressing the evolving needs of our customers
+within the LAN, SAN, CATV networks and extended network markets. We work closely
+with our original equipment manufacturers and system integrators to monitor
+changes in the marketplace. We design our products around current industry
+standards and will continue to support emerging standards that are consistent
+with our product strategy. Our research and development groups are aligned with
+our different product lines and we have specific groups devoted to ASIC design
+and test, gigabit per second subsystem design, test equipment hardware and
+software design. In addition, our research and development also includes
+manufacturing engineer efforts whereby we examine each product for its
+manufacturability, predicted reliability, expected lifetime and manufacturing
+costs.
+
+    We are currently undertaking development efforts for our product lines with
+emphasis on increasing reliability, integrity and performance, as well as
+value-added functions. Some examples of products that we are working on are
+10 Gbps Ethernet and 2.125 Gbps Fibre Channel optical subsystems. We also intend
+to focus on increased product integration to enhance the price/performance
+capabilities of our products. We believe that our research and development
+efforts are key to our ability to maintain technical competitiveness and to
+deliver innovative products that address the needs of the market. However, there
+can be no assurance that our product development efforts will result in
+commercially successful products, or that our products will not be rendered
+obsolete by changing technology or new product announcements by other companies.
+
+INTELLECTUAL PROPERTY
+
+    Our success and ability to compete is dependent in part on our proprietary
+technology. We rely on a combination of patent, copyright, trademark and trade
+secret laws, as well as confidentiality agreements and licensing arrangements,
+to establish and protect our proprietary rights. To date, we have relied
+primarily on proprietary processes and know-how to protect our intellectual
+property. Although we have filed for several patents, some of which have issued,
+we cannot assure you that any patents will issue as a result of pending patent
+applications or that our issued patents will be upheld. Any infringement of our
+proprietary rights could result in significant litigation costs, and any failure
+to adequately protect our proprietary rights could result in our competitors
+offering similar products, potentially resulting in loss of a competitive
+advantage and decreased revenues. Despite our efforts to protect our proprietary
+rights, existing patent, copyright, trademark and trade secret laws afford only
+limited protection. In addition, the laws of some foreign countries do not
+protect our proprietary rights to the same extent as do the laws of the United
+States. Attempts may be made to copy or reverse engineer aspects of our products
+or to obtain and use information that we regard as proprietary. Accordingly, we
+may not be able to prevent misappropriation of our technology or deter others
+from developing similar technology. Furthermore, policing the unauthorized use
+of our products is difficult. Litigation may be necessary in the future to
+enforce our intellectual property rights or to determine the validity and scope
+of the proprietary rights of others. This litigation could result in substantial
+costs and diversion of resources and could significantly harm our business.
+
+    The networking industry is characterized by the existence of a large number
+of patents and frequent litigation based on allegations of patent infringement.
+From time to time, third parties may assert patent, copyright, trademark and
+other intellectual property rights to technologies and in various jurisdictions
+that are important to our business. Any claims asserting that our products
+infringe or may infringe proprietary rights of third parties, if determined
+adversely to us, could signifiantly harm our business. Any claims, with or
+without merit, could be time-consuming, result in costly litigation, divert the
+efforts of our technical and management personnel, cause product shipment delays
+or require us to enter into royalty or licensing
+
+                                       16
+<PAGE>
+agreements, any of which could significantly harm our business. Royalty or
+licensing agreements, if required, may not be available on terms acceptable to
+us, if at all. In addition, our agreements with our customers typically require
+us to indemnify our customers from any expense or liability resulting from
+claimed infringement of third party intellectual property rights. In the event a
+claim against us was successful and we could not obtain a license to the
+relevant technology on acceptable terms or license a substitute technology or
+redesign our products to avoid infringement, our business would be significantly
+harmed.
+
+EMPLOYEES
+
+    As of April 30, 2000, we employed a total of 252 full-time employees. We
+also from time to time employ part-time employees and hire contractors. Our
+employees are not represented by any collective bargaining agreement, and we
+have never experienced a work stoppage. We believe that our employee relations
+are good.
+
+FACTORS THAT COULD AFFECT OUR FUTURE PERFORMANCE
+
+    OUR FUTURE PERFORMANCE IS SUBJECT TO A VARIETY OF RISKS. IF ANY OF THE
+FOLLOWING RISKS ACTUALLY OCCUR, OUR BUSINESS COULD BE HARMED AND THE TRADING
+PRICE OF OUR COMMON STOCK COULD DECLINE. YOU SHOULD ALSO REFER TO THE OTHER
+INFORMATION CONTAINED IN THIS REPORT, INCLUDING OUR FINANCIAL STATEMENTS AND THE
+RELATED NOTES.
+
+OUR FUTURE REVENUES ARE UNPREDICTABLE, OUR OPERATING RESULTS ARE LIKELY TO
+  FLUCTUATE FROM QUARTER TO QUARTER, AND IF WE FAIL TO MEET THE EXPECTATIONS OF
+  SECURITIES ANALYSTS OR INVESTORS, OUR STOCK PRICE COULD DECLINE SIGNIFICANTLY
+
+    Our quarterly and annual operating results have fluctuated in the past and
+are likely to fluctuate significantly in the future due to a variety of factors,
+some of which are outside of our control. Accordingly, we believe that
+period-to-period comparisons of our results of operations are not meaningful and
+should not be relied upon as indications of future performance. Some of the
+factors that could cause our quarterly or annual operating results to fluctuate
+include market acceptance of our products and the Gigabit Ethernet and Fibre
+Channel standards, product development and production, competitive pressures and
+customer retention.
+
+    We may experience a delay in generating or recognizing revenues for a number
+of reasons. Orders at the beginning of each quarter typically do not equal
+expected revenues for that quarter and are generally cancelable at any time.
+Accordingly, we depend on obtaining orders during a quarter for shipment in that
+quarter to achieve our revenue objectives. Failure to ship these products by the
+end of a quarter may adversely affect our operating results. Furthermore, our
+customer agreements typically provide that the customer may delay scheduled
+delivery dates and cancel orders within specified time frames without
+significant penalty. Because we base our operating expenses on anticipated
+revenue trends and a high percentage of our expenses are fixed in the short
+term, any delay in generating or recognizing forecasted revenues could
+significantly harm our business.
+
+    It is likely that in some future quarters our operating results may fall
+below the expectations of securities analysts and investors. In this event, the
+trading price of our common stock would significantly decline.
+
+OUR SUCCESS IS DEPENDENT ON THE CONTINUED DEVELOPMENT OF THE EMERGING HIGH-SPEED
+  LAN, SAN, CATV NETWORK AND EXTENDED NETWORK MARKETS
+
+    Our optical subsystem and network performance test system products are used
+exclusively in high-speed local area networks, or LANs, storage area networks,
+or SANs, cable television, or CATV, networks and extended networks. Accordingly,
+widespread adoption of high-speed LANs, SANs and extended
+
+                                       17
+<PAGE>
+networks and the adoption of digital return path technology for CATV network
+applications is critical to our future success. The markets for high-speed LANs,
+SANs, CATV networks and extended networks have only recently begun to develop
+and are rapidly evolving. Because these markets are new and evolving, it is
+difficult to predict their potential size or future growth rate. Potential
+end-user customers who have invested substantial resources in their existing
+data storage and management systems may be reluctant or slow to adopt a new
+approach, like high-speed LANs, SANs, CATV networks or extended networks. Our
+success in generating revenue in these emerging markets will depend, among other
+things, on the growth of these markets. There is significant uncertainty as to
+whether these markets ultimately will develop or, if they do develop, that they
+will develop rapidly. If the markets for high-speed LANs, SANs, CATV networks or
+extended networks fail to develop or develop more slowly than expected, or if
+our products do not achieve widespread market acceptance in these markets, our
+business would be significantly harmed.
+
+WE WILL FACE CHALLENGES TO OUR BUSINESS IF OUR TARGET MARKETS ADOPT ALTERNATE
+  STANDARDS TO FIBRE CHANNEL AND GIGABIT ETHERNET TECHNOLOGY OR IF OUR PRODUCTS
+  FAIL TO COMPLY WITH EVOLVING INDUSTRY STANDARDS AND GOVERNMENT REGULATIONS
+
+    We have based our product offerings principally on Fibre Channel and Gigabit
+Ethernet standards and our future success is substantially dependent on the
+continued market acceptance of these standards. If an alternative technology is
+adopted as an industry standard within our target markets, we would have to
+dedicate significant time and resources to redesign our products to meet this
+new industry standard. For example, manufacturers have begun to develop
+networking systems with per-port transmission speeds of 10 gigabits per second,
+or Gbps, ten times faster than Gigabit Ethernet. We cannot assure you that we
+will be successful in redesigning our products or developing new products to
+meet this new standard or any other standard that may emerge. Our products
+comprise only a part of an entire networking system, and we depend on the
+companies that provide other components to support industry standards as they
+evolve. The failure of these companies, many of which are significantly larger
+than we are, to support these industry standards could negatively impact market
+acceptance of our products. Moreover, if we introduce a product before an
+industry standard has become widely accepted, we may incur significant expenses
+and losses due to lack of customer demand, unusable purchased components for
+these products and the diversion of our engineers from future product
+development efforts. In addition, because we may develop some products prior to
+the adoption of industry standards, we may develop products that do not comply
+with the eventual industry standard. Our failure to develop products that comply
+with industry standards would limit our ability to sell our products. Finally,
+if new standards evolve, we may not be able to successfully design and
+manufacture new products in a timely fashion, if at all, that meet these new
+standards.
+
+    In the United States, our products must comply with various regulations and
+standards defined by the Federal Communications Commission and Underwriters
+Laboratories. Internationally, products that we develop also will be required to
+comply with standards established by local authorities in various countries.
+Failure to comply with existing or evolving standards established by regulatory
+authorities or to obtain timely domestic or foreign regulatory approvals or
+certificates could significantly harm our business.
+
+WE DEPEND ON LARGE PURCHASES FROM A FEW SIGNIFICANT CUSTOMERS, AND ANY LOSS,
+  CANCELLATION, REDUCTION OR DELAY IN PURCHASES BY THESE CUSTOMERS COULD HARM
+  OUR BUSINESS
+
+    A small number of customers have accounted for a significant portion of our
+revenues. Our success will depend on our continued ability to develop and manage
+relationships with significant customers. Sales to Newbridge Networks
+Corporation and EMC Corporation represented 24.5% and 24.0% of our revenues
+during fiscal 2000 and 25.1% and 24.1% of our revenues for fiscal 1999. Although
+we are attempting to expand our customer base, we expect that significant
+customer concentration will continue for the foreseeable future.
+
+    The markets in which we sell our products are dominated by a relatively
+small number of systems manufacturers, thereby limiting the number of our
+potential customers. Our dependence on large orders
+
+                                       18
+<PAGE>
+from a relatively small number of customers makes our relationship with each
+customer critically important to our business. We cannot assure you that we will
+be able to retain our largest customers, that we will be able to attract
+additional customers or that our customers will be successful in selling their
+products that incorporate our products. We have in the past experienced delays
+and reductions in orders from some of our major customers. In addition, our
+customers have in the past sought price concessions from us and will continue to
+do so in the future. Further, some of our customers may in the future shift
+their purchases of products from us to our competitors or to joint ventures
+between these customers and our competitors. The loss of one or more of our
+largest customers, any reduction or delay in sales to these customers, our
+inability to successfully develop relationships with additional customers or
+future price concessions that we may make could significantly harm our business.
+
+BECAUSE WE DO NOT HAVE LONG-TERM CONTRACTS WITH OUR CUSTOMERS, OUR CUSTOMERS MAY
+  CEASE PURCHASING OUR PRODUCTS AT ANY TIME IF WE FAIL TO MEET OUR CUSTOMERS'
+  NEEDS
+
+    We do not have long-term contracts with our customers. As a result, our
+agreements with our customers do not provide any assurance of future sales.
+Accordingly:
+
+    - our customers can stop purchasing our products at any time without
+      penalty;
+
+    - our customers are free to purchase products from our competitors; and
+
+    - our customers are not required to make minimum purchases.
+
+    Sales are typically made pursuant to individual purchase orders, often with
+extremely short lead times. If we are unable to fulfill these orders in a timely
+manner, we will lose sales and customers.
+
+OUR MARKET IS SUBJECT TO RAPID TECHNOLOGICAL CHANGE, AND TO COMPETE EFFECTIVELY,
+  WE MUST CONTINUALLY INTRODUCE NEW PRODUCTS THAT ACHIEVE MARKET ACCEPTANCE
+
+    The markets for our products are characterized by rapid technological
+change, frequent new product introductions, changes in customer requirements and
+evolving industry standards. We expect that new technologies will emerge as
+competition and the need for higher and more cost effective bandwidth increases.
+Our future performance will depend on the successful development, introduction
+and market acceptance of new and enhanced products that address these changes as
+well as current and potential customer requirements. The introduction of new and
+enhanced products may cause our customers to defer or cancel orders for existing
+products. We have in the past experienced delays in product development and such
+delays may occur in the future. Therefore, to the extent customers defer or
+cancel orders in the expectation of a new product release or there is any delay
+in development or introduction of our new products or enhancements of our
+products, our operating results would suffer. We also may not be able to develop
+the underlying core technologies necessary to create new products and
+enhancements, or to license these technologies from third parties. Product
+development delays may result from numerous factors, including:
+
+    - changing product specifications and customer requirements;
+
+    - difficulties in hiring and retaining necessary technical personnel;
+
+    - difficulties in reallocating engineering resources and overcoming resource
+      limitations;
+
+    - difficulties with contract manufacturers;
+
+    - changing market or competitive product requirements; and
+
+    - unanticipated engineering complexities.
+
+    The development of new, technologically advanced products is a complex and
+uncertain process requiring high levels of innovation and highly skilled
+engineering and development personnel, as well as
+
+                                       19
+<PAGE>
+the accurate anticipation of technological and market trends. We cannot assure
+you that we will be able to identify, develop, manufacture, market or support
+new or enhanced products successfully, if at all, or on a timely basis. Further,
+we cannot assure you that our new products will gain market acceptance or that
+we will be able to respond effectively to product announcements by competitors,
+technological changes or emerging industry standards. Any failure to respond to
+technological change would significantly harm our business.
+
+CONTINUED COMPETITION IN OUR MARKETS MAY LEAD TO A REDUCTION IN OUR PRICES,
+  REVENUES AND MARKET SHARE
+
+    The markets for optical subsystems and network performance test systems for
+use in LANs, SANs, CATV networks and extended networks are highly competitive.
+Our current competitors include a number of domestic and international
+companies, many of which have substantially greater financial, technical,
+marketing, distribution resources and brand name recognition than we have. We
+expect that more companies, including some of our customers, will enter the
+market for optical subsystems and network performance test systems. We may not
+be able to compete successfully against either current or future competitors.
+Increased competition could result in significant price erosion, reduced
+revenue, lower margins or loss of market share, any of which would significantly
+harm our business. For optical subsystems, we compete primarily with Agilent
+Technologies, Inc., Infineon Technologies, International Business Machines
+Corporation, Stratos Lightwave (formerly Methode Electronics), Molex Premise
+Networks and Vixel Corporation. For network performance test systems, we compete
+primarily with Ancot Corporation, I-Tech Corporation and Xyratex International.
+Our competitors continue to introduce improved products with lower prices, and
+we will have to do the same to remain competitive. In addition, some of our
+current and potential customers may attempt to integrate their operations by
+producing their own optical subsystems and network performance test systems or
+acquiring one of our competitors, thereby eliminating the need to purchase our
+products. Furthermore, larger companies in other related industries, such as the
+telecommunications industry, may develop or acquire technologies and apply their
+significant resources, including their distribution channels and brand name
+recognition, to capture significant market share.
+
+DECREASES IN AVERAGE SELLING PRICES OF OUR PRODUCTS MAY REDUCE GROSS MARGINS
+
+    The market for optical subsystems is characterized by declining average
+selling prices resulting from factors such as increased competition, the
+introduction of new products and increased unit volumes as manufacturers
+continue to deploy network and storage systems. We have in the past experienced,
+and in the future may experience, substantial period-to-period fluctuations in
+operating results due to declining average selling prices. We anticipate that
+average selling prices will decrease in the future in response to product
+introductions by competitors or us, or by other factors, including price
+pressures from significant customers. Therefore, we must continue to develop and
+introduce on a timely basis new products that incorporate features that can be
+sold at higher average selling prices. Failure to do so could cause our revenues
+and gross margins to decline, which would significantly harm our business.
+
+    We may be unable to reduce the cost of our products sufficiently to enable
+us to compete with others. Our cost reduction efforts may not allow us to keep
+pace with competitive pricing pressures or lead to improved gross margins. In
+order to remain competitive, we must continually reduce the cost of
+manufacturing our products through design and engineering changes. We may not be
+successful in redesigning our products or delivering our products to market in a
+timely manner. We cannot assure you that any redesign will result in sufficient
+cost reductions to allow us to reduce the price of our products to remain
+competitive or improve our gross margin.
+
+                                       20
+<PAGE>
+SHIFTS IN OUR PRODUCT MIX MAY RESULT IN DECLINES IN GROSS MARGINS
+
+    Our gross profit margins vary among our product families, and our gross
+margins are generally higher on our network performance test systems than on our
+optical subsystems. Our gross margins are generally lower for newly introduced
+products and improve as unit volumes increase. Our overall gross margins have
+fluctuated from period to period as a result of shifts in product mix, the
+introduction of new products, decreases in average selling prices for older
+products and our ability to reduce product costs. As a result of a significant
+growth in sales of optical subsystem products over the past several quarters,
+including sales of new products to a number of new customers, we have
+experienced a sustained product shift toward a greater percentage of optical
+subsystem products resulting in a decline in overall gross margins. We expect
+this trend to continue at least through the first quarter ended July 31, 2000.
+
+WE ARE SUBJECT TO A PENDING LEGAL PROCEEDING
+
+    In April 1999, Methode, a manufacturer of electronic component devices,
+filed a lawsuit against us and another manufacturer alleging that our
+optoelectronic products infringe four patents held by Methode. The original
+complaint sought monetary damages and injunctive relief. Methode has amended its
+complaint to add another manufacturer as an additional defendant, to allege
+infringement of a fifth Methode patent and to allege that we breached our
+obligations under a license and supply agreement with Methode by failing to
+provide Methode with unspecified information regarding new technology related to
+the products licensed under the agreement. The amended complaint seeks
+additional compensatory damages of at least $224.3 million plus interest for the
+alleged breach of this license and supply agreement. In addition, Methode has
+notified us that it intends to file another amended complaint alleging
+infringement of a sixth Methode patent. We believe that we have strong defenses
+against Methode's lawsuit, and we have filed a counterclaim against Methode.
+Portions of our counterclaim, based on principles of state law, were dismissed
+in May 2000 on grounds of federal preemption; however, our basic claims of
+ownership of the patents remain subject to our pending counterclaim. On June 5,
+2000, Methode transferred the patents at issue in the litigation, as well as a
+number of other patents, to Stratos Lightwave LLC, and on June 21, 2000, Stratos
+Lightwave LLC transferred the same patents to Stratos Lightwave, Inc. Methode
+has made a motion to add Stratos Lightwave, Inc. to the lawsuit as an additional
+plaintiff.
+
+    We intend to defend Methode's lawsuit and pursue our counterclaim
+vigorously. However, the litigation is in the preliminary stage, and we cannot
+predict its outcome with certainty. The litigation process is inherently
+uncertain and we may not prevail. Patent litigation is particularly complex and
+can extend for a protracted time, which can substantially increase the cost of
+such litigation. In connection with the Methode litigation, we have incurred,
+and expect to continue to incur, substantial legal fees and expenses. The
+Methode litigation has also diverted, and is expected to continue to divert, the
+efforts and attention of some of our key management and technical personnel. As
+a result, our defense of this litigation, regardless of its eventual outcome,
+has been, and will likely continue to be, costly and time consuming. Should the
+outcome of the litigation be adverse to us, we could be required to pay
+significant monetary damages to Methode and could be enjoined from selling those
+of our products found to infringe Methode's patents unless and until we are able
+to negotiate a license from Methode. In the event that we obtain a license from
+Methode, we would likely be required to make royalty payments with respect to
+sales of our products covered by the license. Any such royalty payments would
+increase our cost of revenues and reduce our gross profit. If we are required to
+pay significant monetary damages, are enjoined from selling any of our products
+or are required to make substantial royalty payments pursuant to any such
+license agreement, our business would be significantly harmed. For a more
+complete discussion of this litigation matter, please refer to "Item 3.--Legal
+Proceedings."
+
+                                       21
+<PAGE>
+OUR CUSTOMERS OFTEN EVALUATE OUR PRODUCTS FOR LONG AND VARIABLE PERIODS, WHICH
+  CAUSES THE TIMING OF OUR REVENUES AND RESULTS OF OPERATIONS TO BE
+  UNPREDICTABLE
+
+    The period of time between our initial contact with a customer and the
+receipt of an actual purchase order may span a year or more. During this time,
+customers may perform, or require us to perform, extensive and lengthy
+evaluation and testing of our products before purchasing and using them in their
+equipment. Our customers do not typically share information on the duration or
+magnitude of these qualification procedures. The length of these qualification
+processes also may vary substantially by product and customer, and, thus, cause
+our results of operations to be unpredictable. While our potential customers are
+qualifying our products and before they place an order with us, we may incur
+substantial sales and marketing expenses and expend significant management
+effort. Even after incurring such costs we ultimately may not sell any products
+to such potential customers. In addition, these qualification processes often
+make it difficult to obtain new customers, as customers are reluctant to expend
+the resources necessary to qualify a new supplier if they have one or more
+existing qualified sources. Once our products have been qualified, our
+agreements with our customers have no minimum purchase commitments. Failure of
+our customers to incorporate our products into their systems would significantly
+harm our business.
+
+WE DEPEND ON CONTRACT MANUFACTURERS FOR SUBSTANTIALLY ALL OF OUR ASSEMBLY
+  REQUIREMENTS AND IF THESE MANUFACTURERS FAIL TO PROVIDE US WITH ADEQUATE
+  SUPPLIES OF HIGH-QUALITY PRODUCTS, OUR COMPETITIVE POSITION, REPUTATION AND
+  BUSINESS COULD BE HARMED
+
+    We currently rely on four contract manufacturers for substantially all of
+our assembly requirements. We do not have long term contracts with any of these
+manufacturers. We have experienced delays in product shipments from contract
+manufacturers in the past, which in turn delayed product shipments to our
+customers. We may in the future experience similar delays or other problems,
+such as inferior quality and insufficient quantity of product, any of which
+could significantly harm our business. We cannot assure you that we will be able
+to effectively manage our contract manufacturers or that these manufacturers
+will meet our future requirements for timely delivery of products of sufficient
+quality and quantity. We intend to regularly introduce new products and product
+enhancements, which will require that we rapidly achieve volume production by
+coordinating our efforts with those of our suppliers and contract manufacturers.
+The inability of our contract manufacturers to provide us with adequate supplies
+of high-quality products or the loss of any of our contract manufacturers would
+cause a delay in our ability to fulfill orders while we obtain a replacement
+manufacturer and would significantly harm our business.
+
+    If the demand for our products grows, we will need to increase our material
+purchases, contract manufacturing capacity and internal test and quality
+assurance functions. Any disruptions in product flow could limit our revenue,
+adversely affect our competitive position and reputation and result in
+additional costs or cancellation of orders under agreements with our customers.
+
+    In addition, we have recently begun outsourcing a portion of our contract
+manufacturing internationally, and we intend to increase the use of
+international contract manufacturers over time. Additional risks associated with
+international contract manufacturing include:
+
+    - unexpected changes in regulatory requirements;
+
+    - legal uncertainties regarding liability, tariffs and other trade barriers;
+
+    - inadequate protection of intellectual property in some countries;
+
+    - greater incidence of shipping delays;
+
+    - limited oversight of manufacturing operations;
+
+    - potential political and economic instability; and
+
+                                       22
+<PAGE>
+    - currency fluctuations.
+
+    Any of these factors could significantly impair our ability to source our
+contract manufacturing requirements internationally.
+
+WE MAY LOSE SALES IF OUR SUPPLIERS FAIL TO MEET OUR NEEDS
+
+    We currently purchase several key components used in the manufacture of our
+products from single or limited sources. We depend on these sources to meet our
+needs. Moreover, we depend on the quality of the products supplied to us over
+which we have limited control. We have encountered shortages and delays in
+obtaining components in the past and expect to encounter shortages and delays in
+the future. If we cannot supply products due to a lack of components, or are
+unable to redesign products with other components in a timely manner, our
+business will be significantly harmed. We have no long-term or short-term
+contracts for any of our components. As a result, a supplier can discontinue
+supplying components to us without penalty. If a supplier discontinued supplying
+a component, our business may be harmed by the resulting product manufacturing
+and delivery delays.
+
+    We use rolling forecasts based on anticipated product orders to determine
+our component requirements. Lead times for materials and components that we
+order vary significantly and depend on factors such as specific supplier
+requirements, contract terms and current market demand for particular
+components. If we overestimate our component requirements, we may have excess
+inventory, which would increase our costs. If we underestimate our component
+requirements, we may have inadequate inventory, which could interrupt our
+manufacturing and delay delivery of our products to our customers. Any of these
+occurrences would significantly harm our business.
+
+WE ARE DEPENDENT ON WIDESPREAD MARKET ACCEPTANCE OF TWO PRODUCT FAMILIES, AND
+  OUR REVENUES WILL DECLINE IF THE MARKET DOES NOT CONTINUE TO ACCEPT EITHER OF
+  THESE PRODUCT FAMILIES
+
+    We currently derive substantially all of our revenue from sales of our
+optical subsystems and network performance test systems. We expect that revenue
+from these products will continue to account for substantially all of our
+revenue for the foreseeable future. Accordingly, widespread acceptance of these
+products is critical to our future success. If the market does not continue to
+accept either our optical subsystems or our network performance test systems,
+our revenues will decline significantly. Factors that may affect the market
+acceptance of our products include the continued growth of the markets for LANs,
+SANs, CATV networks and extended versions of these networks and, in particular,
+Gigabit Ethernet and Fibre Channel-based technologies as well as the
+performance, price and total cost of ownership of our products and the
+availability, functionality and price of competing products and technologies.
+Many of these factors are beyond our control. In addition, in order to achieve
+widespread market acceptance, we must differentiate ourselves from the
+competition through product offerings and brand name recognition. We cannot
+assure you that we will be successful in making this differentiation or
+achieving widespread acceptance of our products. Failure of our existing or
+future products to maintain and achieve widespread levels of market acceptance
+will significantly impair our revenue growth.
+
+BECAUSE OF INTENSE COMPETITION FOR TECHNICAL PERSONNEL, WE MAY NOT BE ABLE TO
+  RECRUIT OR RETAIN NECESSARY PERSONNEL
+
+    We believe our future success will depend in large part upon our ability to
+attract and retain highly skilled managerial, technical, sales and marketing,
+finance and manufacturing personnel. In particular, we will need to increase the
+number of technical staff members with experience in high-speed networking
+applications as we further develop our product lines. Competition for these
+highly skilled employees in our industry is intense. Our failure to attract and
+retain these qualified employees could significantly harm our business. The loss
+of the services of any of our qualified employees, the inability to attract or
+retain qualified personnel in the future or delays in hiring required personnel
+could hinder the development and
+
+                                       23
+<PAGE>
+introduction of and negatively impact our ability to sell our products. In
+addition, employees may leave our company and subsequently compete against us.
+Moreover, companies in our industry whose employees accept positions with
+competitors frequently claim that their competitors have engaged in unfair
+hiring practices. We have been subject to claims of this type and may be subject
+to such claims in the future as we seek to hire qualified personnel. Some of
+these claims may result in material litigation. We could incur substantial costs
+in defending ourselves against these claims, regardless of their merits.
+
+CONTINUED RAPID GROWTH WILL STRAIN OUR OPERATIONS AND REQUIRE US TO INCUR COSTS
+  TO UPGRADE OUR INFRASTRUCTURE
+
+    We have experienced a period of rapid growth, which has placed a significant
+strain on our resources. Unless we manage our growth effectively, we may make
+mistakes in operating our business, such as inaccurate sales forecasting,
+material planning and financial reporting, which may result in fluctuations in
+our operating results and cause the price of our stock to decline. We plan to
+continue to expand our operations significantly. This anticipated growth will
+continue to place a significant strain on our management and operational
+resources. In order to manage our growth effectively, we must implement and
+improve our operational systems, procedures and controls on a timely basis. If
+we cannot manage growth effectively, our business could be significantly harmed.
+
+OUR PRODUCTS MAY CONTAIN DEFECTS THAT MAY CAUSE US TO INCUR SIGNIFICANT COSTS,
+  DIVERT OUR ATTENTION FROM PRODUCT DEVELOPMENT EFFORTS AND RESULT IN A LOSS OF
+  CUSTOMERS
+
+    Networking products frequently contain undetected software or hardware
+defects when first introduced or as new versions are released. Our products are
+complex and defects may be found from time to time. In addition, our products
+are often embedded in or deployed in conjunction with our customers' products
+which incorporate a variety of components produced by third parties. As a
+result, when problems occur, it may be difficult to identify the source of the
+problem. These problems may cause us to incur significant damages or warranty
+and repair costs, divert the attention of our engineering personnel from our
+product development efforts and cause significant customer relation problems or
+loss of customers, all of which would harm our business.
+
+OUR FAILURE TO PROTECT OUR INTELLECTUAL PROPERTY MAY SIGNIFICANTLY HARM OUR
+  BUSINESS
+
+    Our success and ability to compete is dependent in part on our proprietary
+technology. We rely on a combination of patent, copyright, trademark and trade
+secret laws, as well as confidentiality agreements and licensing arrangements,
+to establish and protect our proprietary rights. To date, we have relied
+primarily on proprietary processes and know-how to protect our intellectual
+property. Although we have filed for several patents, some of which have issued,
+we cannot assure you that any patents will issue as a result of pending patent
+applications or that our issued patents will be upheld. Any infringement of our
+proprietary rights could result in significant litigation costs, and any failure
+to adequately protect our proprietary rights could result in our competitors
+offering similar products, potentially resulting in loss of a competitive
+advantage and decreased revenues. Despite our efforts to protect our proprietary
+rights, existing patent, copyright, trademark and trade secret laws afford only
+limited protection. In addition, the laws of some foreign countries do not
+protect our proprietary rights to the same extent as do the laws of the United
+States. Attempts may be made to copy or reverse engineer aspects of our products
+or to obtain and use information that we regard as proprietary. Accordingly, we
+may not be able to prevent misappropriation of our technology or deter others
+from developing similar technology. Furthermore, policing the unauthorized use
+of our products is difficult. Litigation may be necessary in the future to
+enforce our intellectual property rights or to determine the validity and scope
+of the proprietary rights of others. This litigation could result in substantial
+costs and diversion of resources and could significantly harm our business.
+
+                                       24
+<PAGE>
+CLAIMS THAT WE INFRINGE THIRD-PARTY INTELLECTUAL PROPERTY RIGHTS COULD RESULT IN
+  SIGNIFICANT EXPENSES OR RESTRICTIONS ON OUR ABILITY TO SELL OUR PRODUCTS
+
+    The networking industry is characterized by the existence of a large number
+of patents and frequent litigation based on allegations of patent infringement.
+We are currently involved in a patent infringement lawsuit. For a more detailed
+discussion of this lawsuit, please refer to "--We are subject to a pending legal
+proceeding." In addition, from time to time, other parties may assert patent,
+copyright, trademark and other intellectual property rights to technologies and
+in various jurisdictions that are important to our business. Any claims
+asserting that our products infringe or may infringe proprietary rights of third
+parties, if determined adversely to us, could significantly harm our business.
+Any claims, with or without merit, could be time-consuming, result in costly
+litigation, divert the efforts of our technical and management personnel, cause
+product shipment delays or require us to enter into royalty or licensing
+agreements, any of which could significantly harm our business. Royalty or
+licensing agreements, if required, may not be available on terms acceptable to
+us, if at all. In addition, our agreements with our customers typically require
+us to indemnify our customers from any expense or liability resulting from
+claimed infringement of third party intellectual property rights. In the event a
+claim against us was successful and we could not obtain a license to the
+relevant technology on acceptable terms or license a substitute technology or
+redesign our products to avoid infringement, our business would be significantly
+harmed.
+
+IF WE ARE UNABLE TO EXPAND OUR DIRECT SALES OPERATION AND RESELLER DISTRIBUTION
+  CHANNELS OR SUCCESSFULLY MANAGE OUR EXPANDED SALES ORGANIZATION, OUR ABILITY
+  TO INCREASE OUR REVENUES WILL BE HARMED
+
+    Historically, we have relied primarily on a limited direct sales
+organization, supported by third party manufacturers' representatives, to sell
+our products domestically and on indirect distribution channels to sell our
+products internationally. Our distribution strategy focuses primarily on
+developing and expanding our direct sales organization in North America and our
+indirect distribution channels internationally. We may not be able to
+successfully expand our direct sales organization and the cost of any expansion
+may exceed the revenue generated. To the extent that we are successful in
+expanding our direct sales organization, we cannot assure you that we will be
+able to compete successfully against the significantly larger and well-funded
+sales and marketing operations of many of our current or potential competitors.
+In addition, if we fail to develop relationships with significant international
+resellers or domestic manufacturers' representatives, of if these resellers or
+representatives are not successful in their sales or marketing efforts, sales of
+our products may decrease and our business would be significantly harmed. We
+have granted exclusive rights to substantially all of our resellers to sell our
+product and to our representatives to market our products in their specified
+territories. Our resellers and representatives may not market our products
+effectively or continue to devote the resources necessary to provide us with
+effective sales, marketing and technical support. Our inability to effectively
+manage the expansion of our domestic sales and support staff or maintain
+existing or establish new relationships with domestic manufacturer
+representatives and international resellers would harm our business.
+
+ANY ACQUISITIONS THAT WE UNDERTAKE COULD BE DIFFICULT TO INTEGRATE, DISRUPT OUR
+  BUSINESS, DILUTE STOCKHOLDER VALUE AND HARM OUR OPERATING RESULTS
+
+    We expect to review opportunities to buy other businesses or technologies
+that would complement our current products, expand the breadth of our markets or
+enhance our technical capabilities, or that may otherwise offer growth
+opportunities. We may buy businesses, products or technologies in the future. If
+we make any future acquisitions, we could issue stock that would dilute existing
+stockholders' percentage ownership, incur substantial debt or assume contingent
+liabilities. Our experience in acquiring other business and technologies is
+limited. Potential acquisitions also involve numerous risks, including:
+
+    - problems assimilating the purchased operations, technologies or products;
+
+    - unanticipated costs associated with the acquisition;
+
+                                       25
+<PAGE>
+    - diversion of management's attention from our core business;
+
+    - adverse effects on existing business relationships with suppliers and
+      customers;
+
+    - risks associated with entering markets in which we have no or limited
+      prior experience; and
+
+    - potential loss of key employees of purchased organizations.
+
+    We cannot assure you that we would be successful in overcoming problems
+encountered in connection with such acquisitions, and our inability to do so
+could significantly harm our business.
+
+OUR EXECUTIVE OFFICERS AND DIRECTORS AND ENTITIES AFFILIATED WITH THEM OWN A
+  LARGE PERCENTAGE OF OUR VOTING STOCK, WHICH WILL ALLOW THEM TO CONTROL ALL
+  MATTERS REQUIRING STOCKHOLDER APPROVAL
+
+    Our executive officers, directors and 5% or greater stockholders
+beneficially own 86,076,120 shares or approximately 53.9% of the outstanding
+shares of our common stock. These stockholders, acting together, would be able
+to control all matters requiring approval by stockholders, including the
+election or removal of directors and the approval of mergers or other business
+combination transactions. This concentration of ownership could have the effect
+of delaying or preventing a change in our control or otherwise discouraging a
+potential acquirer from attempting to obtain control of us, which in turn could
+have an adverse effect on the market price of our common stock or prevent our
+stockholders from realizing a premium over the market price for their shares of
+common stock. See "Item 12--Security Ownership of Certain Beneficial Owners and
+Management."
+
+IF WE ARE UNABLE TO EXPAND OUR INTERNATIONAL OPERATIONS OR MANAGE THEM
+  EFFECTIVELY, OUR BUSINESS WOULD BE SIGNIFICANTLY HARMED
+
+    Historically, substantially all of our sales have been made to customers in
+North America. To address expanding international markets, we have recently
+established relationships with distributors in Japan, the United Kingdom,
+Israel, Germany and Korea. The growth of our distribution channels outside of
+North America will be subject to a number of risks and uncertainties, including:
+
+    - the difficulties and costs of obtaining regulatory approvals for our
+      products;
+
+    - unexpected changes in regulatory requirements;
+
+    - legal uncertainties regarding liability, tariffs and other trade barriers;
+
+    - inadequate protection of intellectual property in some countries;
+
+    - increased difficulty in collecting delinquent or unpaid accounts;
+
+    - potentially adverse tax consequences;
+
+    - adoption of different local standards; and
+
+    - potential political and economic instability.
+
+    Any of these factors could significantly harm our existing international
+operations and business or significantly impair our ability to expand into
+international markets.
+
+    Our international sales currently are U.S. dollar-denominated. As a result,
+an increase in the value of the U.S. dollar relative to foreign currencies could
+make our products less competitive in international markets. In the future, we
+may elect to invoice some of our international customers in local currency.
+Doing so will subject us to fluctuations in exchange rates between the U.S.
+dollar and the particular local currency.
+
+                                       26
+<PAGE>
+DELAWARE LAW AND OUR CHARTER DOCUMENTS CONTAIN PROVISIONS THAT COULD DISCOURAGE
+  OR PREVENT A POTENTIAL TAKEOVER, EVEN IF SUCH A TRANSACTION WOULD BE
+  BENEFICIAL TO OUR STOCKHOLDERS
+
+    Some provisions of our Certificate of Incorporation and Bylaws, as well as
+provisions of Delaware law, may discourage, delay or prevent a merger or
+acquisition that a stockholder may consider favorable. These provisions include:
+
+    - authorizing the board to issue additional preferred stock;
+
+    - prohibiting cumulative voting in the election of directors;
+
+    - limiting the persons who may call special meetings of stockholders;
+
+    - prohibiting stockholder actions by written consent;
+
+    - creating a classified Board of Directors pursuant to which our directors
+      are elected for staggered three-year terms; and
+
+    - establishing advance notice requirements for nominations for election to
+      the board of directors or for proposing matters that can be acted on by
+      stockholders at stockholder meetings.
+
+OUR HEADQUARTERS AND MOST OF OUR CONTRACT MANUFACTURERS ARE LOCATED IN NORTHERN
+  CALIFORNIA WHERE NATURAL DISASTERS MAY OCCUR
+
+    Currently, our corporate headquarters and most of our contract manufacturers
+are located in Northern California. Northern California historically has been
+vulnerable to natural disasters and other risks, such as earthquakes, fires and
+floods, which at times have disrupted the local economy and posed physical risks
+to our and our manufacturers' property. We presently do not have redundant,
+multiple site capacity in the event of a natural disaster. In the event of such
+disaster, our business would suffer.
+
+OUR STOCK PRICE IS VOLATILE AND YOU MAY BE UNABLE TO RESELL YOUR SHARES AT OR
+  ABOVE YOUR PURCHASE PRICE
+
+    The trading price of our common stock has fluctuated substantially since our
+initial public offering in November 1999. The stock market in general, and the
+Nasdaq National Market and stocks of technology companies in particular, have
+experienced extreme price and volume fluctuations. This volatility is often
+unrelated or disproportionate to the operating performance of these companies.
+Broad market and industry factors may adversely affect the market price of our
+common stock, regardless of our actual operating performance. In the past,
+following periods of volatility in the market price of a company's securities,
+securities class-action litigation has often been initiated against these
+companies. This litigation, if initiated, could result in substantial costs and
+a diversion of management's attention and resources, which would significantly
+harm our business.
