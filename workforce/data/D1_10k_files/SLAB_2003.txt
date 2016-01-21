@@ -1,0 +1,1638 @@
+Item 1. Business and Factors Affecting Future Operating Results
+
+GENERAL
+
+   Silicon Laboratories Inc. designs and develops proprietary, analog-intensive,
+mixed-signal integrated circuits (ICs) for the communications industry.
+Mixed-signal ICs are electronic components that convert real-world analog
+signals, such as sound and radio waves, into digital signals that electronic
+
+
+                                        2
+<Page>
+
+products can process. Therefore, mixed-signal ICs are critical components of
+numerous communications products, including wireless phones, cable and
+satellite set-top boxes, personal computer modems, voice over digital
+subscriber line (DSL) modems, personal video recorders, telephone equipment and
+optical networking equipment. To develop our business rapidly, we initially
+focused our efforts on developing ICs for the personal computer modem market.
+We applied our mixed-signal and communications expertise to the development of
+ICs for other high growth communications devices such as wireless telephones,
+cable and satellite set-top boxes, voice over DSL modems, personal video
+recorders and optical network applications. Our world-class, mixed-signal
+design engineers use standard complementary metal oxide semiconductor, or CMOS,
+technology to create innovative ICs that can improve the performance and
+dramatically reduce the cost, size and system power requirements of devices
+that our customers sell to their end-user customers. Our expertise in
+analog-intensive, mixed-signal IC design in CMOS allows us to develop new and
+innovative products rapidly, which enables our customers to improve their
+time-to-market with end products that respond to end customer demand in the
+communications industry.
+
+INDUSTRY BACKGROUND
+
+   In a November 2002 report, the Semiconductor Industry Association projected
+that the analog IC market will grow by 19 percent in 2003 to $28 billion in
+total sales. Recent growth in the market for communications ICs has been due to
+a number of factors, including the growth of Internet usage, development of new
+communications technologies, availability of improved communications services
+at lower costs, broad deployment of optical networks and remote access
+requirements for corporate networks. This demand has fueled tremendous growth
+in the number of wireless and wireline communications devices. For example, in
+wireless markets, the demand for wireless phones and other wireless devices,
+such as personal digital assistants, has grown steadily as digital wireless
+services have become increasingly popular and affordable. In wireline markets,
+demand has increased for communications capabilities in a wide range of
+products, including personal computers (PCs), cable and satellite set-top
+boxes, fax machines, credit card verification machines, automated teller
+machines and personal video recorders. Consumers increasingly demand higher
+capacity connections at their residences using cable modems or high speed DSL.
+The demand for greater and faster Internet access by households and businesses
+has increased the need to significantly upgrade the communications backbone to
+handle this traffic, increasing the need for smaller, faster and better
+performing optical networking systems that route this traffic.
+
+   Digital communications devices typically require analog-intensive,
+mixed-signal circuits that provide analog-to-digital functionality to access the
+communications networks to which they are connected. Traditional designs for
+communications devices have used mixed-signal circuits built with numerous
+discrete analog and digital components. While these traditional designs provide
+the required functionality, they can be inefficient and inadequate for use in
+markets where size, cost, power consumption and performance are increasingly
+important product differentiators. In order to improve their competitive
+position, communications device manufacturers need advanced mixed-signal ICs
+that reduce the number of discrete components and required board space to create
+smaller products with improved price/performance characteristics. Additionally,
+these manufacturers require programmable ICs that can be reconfigured to comply
+with numerous and constantly evolving international communications standards
+without altering the fundamental design of a product.
+
+   Manufacturers of communications devices face accelerating time-to-market
+demands and must adapt to evolving industry standards and new technologies.
+Because analog-intensive, mixed-signal IC design expertise is difficult to find,
+these manufacturers increasingly are turning to third parties to provide
+advanced mixed-signal ICs. Designing the analog component of a mixed-signal IC
+involves great complexity and difficulty, because the performance of an analog
+IC depends on the creative analog expertise of engineers to optimize speed,
+power, amplitude and resolution within the constraints of standard manufacturing
+processes. The development of analog design expertise typically requires years
+of practical analog design experience under the guidance of a senior engineer,
+and engineers with the required level of skill and expertise are in short
+supply.
+
+   Many third-party IC providers lack sufficient analog expertise to develop
+compelling mixed-signal ICs. As a result, manufacturers of communications
+devices are often faced with inadequate mixed-signal ICs and are challenged to
+find third-party providers that can supply them with mixed-signal ICs with
+greater functionality, smaller size and lower power requirements at a reduced
+cost and shorter time-to-market.
+
+                                        3
+<Page>
+
+PRODUCTS
+
+   We provide analog-intensive, mixed-signal ICs for use in various
+communication applications across eight product areas. Our products integrate
+the functions of numerous discrete components required by most existing
+mixed-signal solutions for communications devices into single chips or chipsets.
+By doing so, we are able to create products that, compared to many competitive
+products:
+
+   -  Require less board space;
+
+   -  Reduce the use of external components;
+
+   -  Can offer superior performance;
+
+   -  Provide increased reliability;
+
+   -  Reduce system power requirements; and
+
+   -  Reduce costs.
+
+   The following table summarizes the product areas and applications for the
+various ICs that we currently sell or have introduced to customers:
+
+<Table>
+<Caption>
+PRODUCT AREAS and DESCRIPTION                                    APPLICATIONS
+<S>                                                              <C>
+WIRELESS PRODUCTS
+
+RF Synthesizer
+     A radio frequency, or RF, synthesizer generates high        - GSM/GPRS wireless phones
+     frequency signals that are used in wireless                 - GSM/GPRS data communications
+     communications systems to select a particular radio           devices
+     channel. We provide RF Synthesizers for the Global System   - Wideband CDMA 3G handsets
+     for Mobile Communications (GSM)/General Packet Radio        - Wireless local area networks
+     Services (GPRS) markets, as well as third generation (3G)   - Cordless phones
+     wireless data handsets, industrial, science and medical     - Satellite radio receivers
+     (ISM) band applications, and Wideband Code Division         - Wireless headsets
+     Multiple Access (W-CDMA) applications. GPRS brings          - Wireless LAN (802.11b) modems
+     wireless Internet access to GSM users through data
+     transfer and signaling over GSM radio networks. Our
+     synthesizers are well-suited to meet the increasing
+     requirement for highly-integrated electronics that reduce
+     component count and consume less power.
+
+Aero(TM) Transceiver
+     This chipset provides highly integrated transmit            - GSM/GPRS wireless phones
+     and receive radio electronics that are found                - GSM/GPRS data communications
+     between the antennae electronics and the digital baseband     devices
+     section of a GSM/GPRS mobile handset or wireless data       - Personal digital assistants
+     communication device. The Aero Transceiver addresses dual   - PCMCIA data cards
+     or triple band requirements, requires a smaller footprint
+     than competing solutions in this form-factor sensitive
+     market and supports wireless data transmission.
+     The Aero Transceiver chipset is designed using 100%
+     standard CMOS process technology which enables an
+     aggressive roadmap for cost reduction and integration. The
+     most popular standard world-wide for mobile handsets is
+     the GSM. The Aero Transceiver chipset is highly optimized
+     to satisfy the GSM specifications.
+</Table>
+
+                                        4
+<Page>
+
+<Table>
+<S>                                                              <C>
+WIRELINE PRODUCTS
+
+Silicon Direct Access Arrangement (DAA)
+     Our DAA provides the functionality of both a direct access    - PCI desktop modems
+     arrangement and a codec. A direct access arrangement          - Audio Modem Riser Cards
+     provides electrical isolation between a wireline device,      - Mobile Daughter Cards
+     such as a modem, and the telephone line to guard against      - Notebook modems
+     power surges in the telephone line, while the codec           - Communication and Network
+     provides analog-to-digital and digital-to-analog                Riser (CNR) Cards
+     conversion. Traditional direct access arrangement             - Modem on Motherboard
+     implementations contain numerous discrete components to       - Mini PCI cards
+     provide functionality comparable to that which we provide     - Fax machines
+     in a single chipset. This family of products includes         - Handheld organizers
+     offerings to support different computer interface             - Set-top boxes
+     standards. Some versions of this chipset are programmable     - Video conferencing systems
+     for differing international telephone standards, which        - Speaker phones
+     enables manufacturers to distribute their products globally   - PBXs
+     without costly country-specific design modifications. A       - Voice recognition systems
+     complementary voice codec product can be combined with our    - Web telephony products
+     DAA to support speakerphone applications.
+
+ISOmodem(TM) Embedded Modems
+     The ISOmodem combines an analog modem with a silicon DAA,     - Set-top boxes
+     resulting in a complete modem implemented in a very small     - Digital cable boxes
+     form factor. The ISOmodem products are designed for           - Credit card verification
+     embedded modem applications, which are typically found        - Industrial power meters
+     outside of the personal computer area. The ISOmodem           - Postage meters
+     contains a programmable line interface that meets global      - Security systems
+     telephone line requirements, allowing manufacturers to        - Remote medical monitoring
+     implement a single modem design world-wide. The ISOmodem      - Japan L-mode phone
+     family includes embedded modem solutions for speeds           - Personal video recorders
+     ranging from 2400 bps to 56Kbps, suitable for a wide          - Point of sale (POS)
+     range of applications.                                          terminals
+
+ProSLIC(R) Subscriber Line Interface Circuits
+     The ProSLIC provides the analog telephone interface on        - Telephone switchboard systems
+     the source end of the telephone which generates dial          - Cable telephony
+     tone, busy tone, caller ID and ring signal. Telephone         - Wireless local loop providing
+     source end electronics have historically been at the            remote access for a wireline
+     telephone company central office, but recently have been        system
+     migrating to the customer premises for voice over             - Voice over Internet protocol
+     internet protocol (VOIP) systems. Our ProSLIC product         - Voice over cable or digital
+     family has offerings for short-haul applications suitable       subscriber lines
+     for the customer premises as well as long-haul                - Digital broadband to analog
+     applications suitable for the traditional telephone             telephone adapters
+     company central office. This family includes a dual
+     ProSLIC that provides for higher port density and lower
+     cost per phone line. The dual ProSLIC is in the early
+     stages of customer adoption and is not yet being produced
+     in volume.
+
+DSL Analog Front End
+     The DSL Analog Front End, or AFE, is designed to provide      - Personal computer modems
+     the connectivity functions for business or residential        - External modems
+     asymmetric digital subscriber line, or ADSL, connection       - Residential gateways
+     at the user end in customer premises equipment. Such a        - Network interface devices
+     connection addresses the business and residential demand
+     for DSL broadband higher capacity connectivity as
+     compared to traditional standard dial-up analog phone
+     line transmission speeds. The DSL AFE supports several
+     ADSL communication standards enabling various upload and
+     download data rates.  When combined with our DAA products
+     for analog phone line connectivity, our combined product
+     offering provides a single modem design to address both
+     the prevalent analog modem and the emerging ADSL
+     services. The ability to dial up the analog phone line in
+     order to provision the ADSL connection or run remote
+     diagnostics can assist in the implementation and
+     maintenance of this ADSL broadband connection. This
+     product is in the late stages of customer evaluation and
+     is not yet being produced in volume.
+</Table>
+
+                                        5
+<Page>
+
+<Table>
+<S>                                                              <C>
+OPTICAL NETWORKING PRODUCTS
+
+SiPHY(TM) Optical Physical Layer Transceivers
+     We offer a family of high-speed physical layer ICs that       - Optical port cards for SONET
+     meet the high-speed fiber Synchronous Optical Network, or     - SONET/SDH/ATM routers
+     SONET, specifications. The transceiver operates at a rate     - SONET/SDH test equipment
+     of 2.5 GHz transmission speed commonly referred to as         - Optical transponder modules
+     OC-48 and 10 GHz speed commonly referred to as OC-192. A      - Add/drop multiplexers
+     transceiver provides both the transmit and receive            - SONET/SDH regenerators
+     function in the physical layer. In addition to the            - Digital cross connects
+     transceiver products, we offer a stand-alone transmitter      - Board-level serial links
+     and stand-alone receiver product. We also offer a family
+     of clock and data recovery chips to provide specific
+     functions at multiple speeds up to the OC-48 rate. This
+     IC family utilizes our proprietary digital signal
+     processing technology to reduce the device's sensitivity
+     to board-level noise and improve performance. This
+     product is still in the early stages of customer adoption
+     and has produced small amounts of revenue in certain
+     product configurations.
+
+Precision Clocks Integrated Circuits
+     This precision clock product family includes various          - Optical port cards for SONET
+     products ranging from general purpose clock multiplier        - SONET/SDH test equipment
+     products up to high performance multi-port, redundant,        - SONET/SDH/ATM switches
+     multiple frequency range clock multipliers and                - SONET/SDH/ATM routers
+     regenerators. SONET optical network systems operate in a      - Optical transponder modules
+     synchronous manner requiring very high precision clock
+     sources. Our knowledge gained in developing the physical
+     layer transceiver subsections provided us the technology
+     to offer these highly precise clock products.
+     Traditionally, these clock sources have been performed
+     by expensive, bulky modules, complicated discrete
+     implementations requiring numerous components or current
+     incomplete IC offerings needing supplemental corrective
+     circuitry in order to meet specifications. As the
+     optical network market makes a transition from OC-48
+     transmission speeds to OC-192 speeds, the need for
+     precision clock sources throughout the synchronous
+     optical network becomes a key design feature for our
+     customers. This product is still in the early stages of
+     customer adoption and has produced small amounts of
+     revenue in certain product configurations.
+</Table>
+
+   During fiscal 2002, sales of our wireline products and wireless products
+accounted for 54% and 46% of our revenues, respectively. During fiscal 2001,
+sales of our wireline products and wireless products accounted for 74% and 25%
+of our revenues, respectively. During fiscal 2000, sales of our wireline
+products accounted for 95% of our revenues.
+
+CUSTOMERS, SALES AND MARKETING
+
+   We market our products to original equipment manufacturers (OEM) and other
+providers of applications in the wireless, wireline and optical networking
+communications markets through our direct sales staff, a network of independent
+sales representatives, and electronics distributors. Direct and distributor
+customers buy on an individual purchase order basis, rather than pursuant to
+long-term agreements. Two of our distributors, Uniquest and Edom Technology,
+each selling to multiple end customers in Asia, represented 20% and 16% of our
+fiscal 2002 revenues, respectively. Distributors are not considered end
+customers, but rather serve as a sales channel to our end customers. No other
+distributor accounted for 10% or more of revenues for fiscal 2002.
+
+   During fiscal 2002, our ten largest end customers accounted for 67% of our
+revenues. We had one end customer, Samsung, which represented 16% of our
+revenues. No other single end customer accounted for more than 10% of our
+
+
+                                        6
+<Page>
+
+revenues. The following is a list of our largest end customers that purchased
+our products in fiscal 2002 for inclusion in products or devices offered to
+their customers:
+
+- Agere Systems     - PC-TEL       - Sony                  - Wavecom
+- Ambit             - Samsung      - Texas Instruments
+- Echostar          - Smart Link   - Thomson
+
+   We maintain five sales offices in North America and provide European sales
+support through our United Kingdom subsidiary. The Asia Pacific area is
+supported through our Japanese and Hong Kong subsidiaries as well as a branch
+sales office in Taiwan. Our direct sales force includes regional sales managers
+in the field and area business managers at our headquarters to further support
+customer communications. Many of these managers have engineering degrees. We
+maintain a dedicated website for our field sales organization, which includes
+technical documentation, backlog information, order status, product availability
+and new product introduction information to support our communications with that
+organization. Additionally, we provide direct communication to all field sales
+personnel as part of a structured sales communications program.
+
+   We also utilize independent sales representatives and distributors to
+generate sales of our products. We have relationships with many independent
+sales representatives and distributors worldwide whom we have selected based on
+their understanding of the mixed-signal IC marketplace and their ability to
+provide effective field sales applications support for our products. For the
+year ended December 28, 2002, sales through these representatives and
+distributors accounted for 52% of our sales.
+
+   Our marketing efforts are targeted at both identified industry leaders and
+emerging market participants. Direct marketing activities are supplemented by a
+focused communications effort that seeks to raise awareness of the company and
+our products. Our public relations efforts are focused on leading trade and
+business publications. Our external website is used to deliver corporate
+information and product information. We also pursue targeted advertising in key
+trade publications and we have a cooperative marketing program that allows our
+distributors and representatives to promote our products to their local markets
+in conjunction with their own advertising activities. Finally we maintain a
+presence at strategic trade shows and industry events. These activities, in
+combination with direct sales activities, help drive demand for our products.
+
+   Due to the complex and innovative nature of our ICs, we employ experienced
+applications engineers who work closely with customers to support the design-win
+process, and can significantly accelerate the customer's time required to bring
+a product to market. A design-win occurs when a customer has designed our ICs
+into its product architecture. A considerable amount of effort to assist the
+customer in incorporating our ICs into its products is typically required prior
+to any sale. In many cases, our innovative ICs require significantly different
+implementations than existing approaches and, therefore, successful
+implementations may require extensive communication with potential customers.
+The amount of time required to achieve a design-win can vary substantially
+depending on a customer's development cycle, which can be relatively short (such
+as three months) or very long (such as two years) based on a wide variety of
+customer factors. Due to this extensive design-win process, once a completed
+design architecture has been implemented and produced in high volumes, our
+customers are reluctant to significantly alter their designs. We believe this
+process, coupled with our intellectual property protection, promotes relatively
+longer product life cycles for our ICs and high barriers to entry for
+competitive products, even if such competing products are offered at lower
+prices. Finally, our close collaboration with our customers provides us with
+knowledge of derivative product ideas or completely new product line offerings
+that may not otherwise arise in other new product discussions.
+
+RESEARCH AND DEVELOPMENT
+
+   Through our research and development efforts, we apply our experienced analog
+and mixed-signal engineering talent and expertise to create new ICs that
+integrate functions typically performed inefficiently by multiple discrete
+components. This integration generally results in lower costs, smaller die
+sizes, lower power demands and enhanced price/performance characteristics. We
+attempt to reuse successful techniques for integration in new applications where
+
+
+                                        7
+<Page>
+
+similar benefits can be realized. We believe that reliable and precise analog
+and mixed-signal ICs can only be developed by teams of engineers that
+coordinate their efforts under the direction of senior engineers who have
+significant analog experience and are familiar with the intricacies of
+designing these ICs for commercial volume production. The development of test
+methodologies is a critical activity in releasing a new product for commercial
+success. We believe that we have attracted some of the best engineers in our
+industry. As of December 28, 2002, we had 128 employees involved in research
+and development.
+
+   Research and development expenses were $32.0 million, $29.0 million and $19.4
+million in fiscal 2002, 2001, and 2000, respectively.
+
+TECHNOLOGY
+
+   Our product development process facilitates the design of highly-innovative,
+analog-intensive, mixed-signal ICs. Our senior engineers start the product
+development process by forming an understanding of our customers' products and
+then design alternatives with increased functionality and with decreasing power,
+size and cost requirements. Our engineers' deep knowledge of existing and
+emerging communications standards and performance requirements help us to assess
+the technical feasibility of a particular IC. We target areas where we can
+provide compelling product improvements. Once we have solved the primary
+challenges, our field engineers continue to work closely with our customers'
+design teams to maintain and develop an understanding of our customers' needs,
+allowing us to formulate derivative products and refined features.
+
+   In providing mixed-signal ICs for our customers, we believe our key
+competitive advantages are: (1) analog CMOS design expertise; (2) digital signal
+processing design expertise; and (3) our broad understanding of communication
+systems technology and trends. To fully capitalize on these advantages, we have
+assembled a world-class development team with exceptional analog and
+mixed-signal design expertise led by accomplished senior engineers.
+
+ANALOG CMOS DESIGN EXPERTISE
+
+   We believe that our most significant core competency is our world-class
+analog design capability. Additionally, we strive to design all of our ICs in
+CMOS processes. There are several modern process technologies for manufacturing
+semiconductors including CMOS, Bipolar, BiCMOS, silicon germanium and gallium
+arsenide. While it is significantly more difficult to design analog ICs in CMOS,
+CMOS provides multiple benefits versus existing alternatives, including
+significantly reduced cost, reduced technology risk and greater worldwide
+foundry capacity. CMOS is the most commonly used process technology for
+manufacturing digital ICs and as a result is most likely to be used for the
+manufacturing of ICs with finer line geometries, which enable smaller and faster
+ICs. By designing our ICs in CMOS, we enable our products to benefit from this
+trend towards finer line geometries, which lowers the cost of the digital
+circuitry in our products and allows us to integrate more digital functionality
+into our mixed-signal ICs.
+
+   Designing analog ICs is significantly more complicated than designing digital
+ICs. While advanced software tools exist to help automate digital IC design,
+there are far fewer tools for advanced analog IC design. In many cases, our
+analog circuit design efforts begin at the fundamental transistor level. We
+believe that we have a demonstrated ability to design the most difficult analog
+and RF circuits using standard CMOS technologies. For example, our DAA product
+family replaces bulky, discrete modem components, such as transformers, relays
+and opto-isolators, with highly integrated CMOS mixed-signal ICs. Similarly,
+bulky wireless phone components such as voltage controlled oscillators are
+replaced by our integrated CMOS frequency synthesizer products. Our design
+expertise in the technically challenging optical networking market has allowed
+us to reduce the number of supplemental components used in our customers'
+products while providing lower levels of noise in the circuit operation. This is
+a key technical consideration in high speed optical networks.
+
+DIGITAL SIGNAL PROCESSING DESIGN EXPERTISE
+
+   We consider the partitioning of a circuit's functionality to be a proprietary
+and creative design technique. Our digital signal processing design expertise
+maximizes the price/performance characteristics of both the analog and digital
+functions and allows our ICs to work in an optimized manner to accomplish
+particular tasks. Generally, we surround core analog circuitry with inexpensive
+digital CMOS transistors, which allows our ICs to perform the required analog
+
+
+                                        8
+<Page>
+
+functions with increased digital capabilities. For example, our ProSLIC product
+is designed to function more efficiently than traditional products for the
+source end of the telephone line, which involve a two chip combination
+requiring more board space and numerous external components. The ProSLIC
+product is partitioned by combining a core analog design that provides
+analog-to-digital conversion and digital-to-analog conversion with optimized
+digital signal processing functions such as data compression, data expansion,
+filtering and tone generation. In this manner, we can isolate the higher
+voltage required to ring a telephone in low-cost, off-chip high voltage
+transistors or a small, complementary high voltage chip, thereby enabling us to
+fulfill the remaining core functions with a single CMOS chip. As a further
+example, our SiPHY Optical Physical Layer Transceivers utilize an
+architecturally advanced phase locked loop circuit based principally on digital
+signal processing. By performing a significant portion of this function in the
+digital domain in a monolithic chip, the circuit has been able to satisfy the
+demanding specifications of the optical network SONET standard using
+inexpensive CMOS transistors.
+
+UNDERSTANDING OF COMMUNICATION SYSTEMS TECHNOLOGY AND TRENDS
+
+   Our focused expertise in communications ICs is the result of the breadth of
+engineering talent we have assembled with experience working in
+analog-intensive, mixed-signal CMOS design for communications applications. This
+expertise, which we consider a competitive advantage, is the foundation of our
+in-depth understanding of the technology and trends that impact communications
+systems and markets. We believe we have a rare ability to predict product
+evolution and design compelling ICs for communications manufacturers. Our
+expertise spans from single line plain old telephone service (POTS) to high
+speed SONET-based optical networks. We have also expanded our knowledge base
+into wireless communications. Our understanding of the role of analog/digital
+interfaces within communications systems and the key domestic and international
+telecommunications standards that must be supported are particular areas of our
+expertise.
+
+MANUFACTURING
+
+   As a fabless IC manufacturer, we conduct IC design and development in our
+facilities in the United States and electronically transfer our proprietary IC
+designs to third-party semiconductor fabricators who process silicon wafers to
+produce the ICs that we design. Our IC designs use industry-standard CMOS
+manufacturing process technology to achieve a level of performance normally
+associated with more expensive special-purpose IC fabrication technology. We
+believe the use of CMOS technology facilitates the rapid production of our ICs
+within a lower cost framework. Our IC production employs submicron process
+geometries which are readily available from leading foundry suppliers worldwide,
+thus ensuring the availability of manufacturing capacity over our products' life
+cycles. We currently rely principally on Taiwan Semiconductor Manufacturing Co.
+(TSMC) to manufacture substantially all of our semiconductor wafers. We believe
+that our fabless manufacturing model significantly reduces our capital
+requirements and allows us to focus our resources on design, development and
+marketing of our ICs.
+
+   Once the silicon wafers have been produced, they are shipped directly to our
+third-party assembly subcontractors. The assembled ICs are then forwarded for
+final testing, either to our facilities in Austin, Texas or to our third-party
+test subcontractors, prior to shipping to our customers. We have increasingly
+utilized offshore third-party test subcontractors, typically in Asia where the
+parts are assembled and where the products are frequently delivered to our
+customers. We expect this trend toward utilization of offshore third-party test
+subcontractors to continue.
+
+BACKLOG
+
+   Our sales are made primarily pursuant to standard purchase orders for
+delivery of products, with such purchase orders officially acknowledged by us
+according to our own terms and conditions. Because industry practice allows
+customers to cancel orders with limited advance notice to us prior to
+shipment, we believe that backlog as of any particular date is not always a
+reliable indicator of our future revenue levels.
+
+                                        9
+<Page>
+
+COMPETITION
+
+   The markets for semiconductors generally, and for analog and mixed-signal ICs
+in particular, are intensely competitive. We believe the principal competitive
+factors in our industry are:
+
+- Level of integration;                   - Intellectual property;
+- Product capabilities;                   - Customer support;
+- Reliability;                            - Reputation; and
+- Price;                                  - Ability to rapidly introduce new
+- Performance;                              products to market.
+
+   We believe that we are competitive with respect to these factors,
+particularly because our ICs typically are smaller in size, are highly
+integrated, achieve high performance specifications at lower price points than
+competitive products and are manufactured in standard CMOS which generally
+enables us to supply them on a relatively rapid basis to customers to meet their
+product introduction schedules. However, disadvantages we face include our
+relatively short operating history in certain of our markets and the need for
+customers to redesign their products and modify their software to implement our
+ICs in their products.
+
+   We anticipate that the market for our products will continually evolve and
+will be subject to rapid technological change. In addition, as we target and
+supply products to numerous communications markets and applications, we face
+competition from a relatively large number of competitors. Across our product
+offerings, we compete with Agere Systems, AMCC, Analog Devices, Broadcom,
+Conexant, Cypress, ESS, Fujitsu, Hitachi, Infineon Technologies, Legerity, Maxim
+Integrated Products, National Semiconductor, Philips, RF Micro Devices, Semtech,
+Skyworks Solutions (the company resulting from the combination of Conexant's
+wireless business and Alpha Industries), Texas Instruments, Vitesse
+Semiconductor, and others. We expect to face competition in the future from our
+current competitors, other manufacturers and designers of semiconductors, and
+innovative start-up semiconductor design companies. Our competitors may also
+offer bundled chipset kit arrangements offering a more complete product, which
+may negatively impact our competitive position despite the technical merits or
+advantages of our products. In addition, our customers could develop products or
+technologies internally that would replace their need for our products and would
+become a source of competition. As the markets for communications products grow,
+we also may face competition from traditional communications device companies.
+These companies may enter the mixed-signal semiconductor market by introducing
+their own products, including components within their products that would
+eliminate the need for our ICs, or by entering into strategic relationships with
+or acquiring other existing IC providers.
+
+   Many of our competitors and potential competitors have longer operating
+histories, greater name recognition, access to larger customer bases,
+complementary product offerings, and significantly greater financial, sales and
+marketing, manufacturing, distribution, technical and other resources than us.
+Current and potential competitors have established or may establish financial
+and strategic relationships between themselves or with our existing or potential
+customers, resellers or other third parties. Accordingly, it is possible that
+new competitors or alliances among competitors could emerge and rapidly acquire
+significant market share.
+
+INTELLECTUAL PROPERTY
+
+   Our future success depends in part upon our proprietary technology. We seek
+to protect our technology through a combination of patents, copyrights, trade
+secrets, trademarks and confidentiality procedures. As of December 28, 2002, we
+had been granted 63 United States patents in the IC field. We also have filed 98
+applications for additional United States patents covering our proprietary
+technology. We also frequently file for patent protection in a variety of
+international jurisdictions with respect to the proprietary technology covered
+by our U.S. patents and patent applications. There can be no assurance that
+patents will ever be issued with respect to these applications. Furthermore, it
+is possible that any patents held by us may be invalidated, circumvented,
+challenged or licensed to others. In addition, there can be no assurance that
+such patents will provide us with competitive advantages or adequately safeguard
+our proprietary rights. The patents and patent applications described above will
+expire at various times in the distant future.
+
+                                       10
+<Page>
+
+   In addition, we claim copyright protection for proprietary documentation used
+in our products. We have filed for registration, or are in the process of filing
+for registration, of the visual image of each IC that we have manufactured in
+commercial quantities with the United States Copyright Office. We have
+registered the "Silicon Laboratories" logo and a variety of other product and
+product family names as trademarks in the United States. All other trademarks,
+service marks or trade names appearing in this report are the property of their
+respective owners. We also attempt to protect our trade secrets and other
+proprietary information through agreements with our customers, suppliers,
+employees and consultants, and through other customary security measures. We
+intend to protect our rights vigorously, but there can be no assurance that our
+efforts will be successful. In addition, the laws of other countries in which
+our products are sold may not protect our products and intellectual property
+rights to the same extent as the laws of the United States.
+
+   While our ability to effectively compete depends in large part on our ability
+to protect our intellectual property, we believe that our technical expertise
+and ability to introduce new products in a timely manner will be an important
+factor in maintaining our competitive position.
+
+   Many participants in the semiconductor and communications industries have a
+significant number of patents and have frequently demonstrated a readiness to
+commence litigation based on allegations of patent and other intellectual
+property infringement. From time to time, third parties may assert infringement
+claims against us. We may not prevail in any such litigation or may not be able
+to license any valid and infringed patents from third parties on commercially
+reasonable terms, if at all. Litigation, regardless of the outcome, is likely to
+result in substantial cost and diversion of our resources, including our
+management's time. Any such litigation could materially adversely affect us. For
+further information regarding patent litigation, please see "Part I, Item 3.
+Legal Proceedings." Our licenses include industry standard licenses with our
+vendors, such as wafer fabrication tool libraries, third party core libraries,
+computer-aided design applications and business software applications.
+
+EMPLOYEES
+
+   As of December 28, 2002, we employed 364 people, including 106 in
+manufacturing, 128 in research and development, 75 in marketing, 31 in sales and
+24 in administration. Our success depends on the continued service of our key
+technical and senior management personnel and on our ability to continue to
+attract, retain and motivate highly skilled analog and mixed-signal engineers.
+The competition for such personnel is intense. We have never had a work stoppage
+and none of our employees are represented by a labor organization. We consider
+our employee relations to be good.
+
+ENVIRONMENTAL REGULATION
+
+   Federal, state and local regulations impose various environmental controls on
+the storage, use, discharge and disposal of certain chemicals and gases used in
+the semiconductor industry. Our compliance with these laws and regulations has
+not had a material impact on our financial position or results of operations.
+
+FACTORS AFFECTING FUTURE OPERATING RESULTS
+
+RISKS RELATED TO OUR BUSINESS
+
+WE MAY NOT BE ABLE TO MAINTAIN OUR HISTORICAL GROWTH RATE AND MAY EXPERIENCE
+SIGNIFICANT PERIOD-TO-PERIOD FLUCTUATIONS IN OUR REVENUES AND OPERATING RESULTS,
+WHICH MAY RESULT IN VOLATILITY IN OUR STOCK PRICE
+
+   Although we have experienced revenue and earnings growth in our three most
+recent quarterly periods, we may not be able to sustain these growth rates. We
+may also experience significant period-to-period fluctuations in our revenues
+and operating results in the future due to a number of factors, and any such
+variations may cause our stock price to fluctuate. It is likely that in some
+future period our operating results will be below the expectations of public
+market analysts or investors. If this occurs, our stock price may drop, perhaps
+significantly.
+
+                                       11
+<Page>
+
+   A number of factors, in addition to those cited in other risk factors
+applicable to our business, may contribute to fluctuations in our revenues and
+operating results, including:
+
+   -  the timing and volume of orders received from our customers;
+
+   -  the rate of acceptance of our products by our customers, including the
+      acceptance of new products we may develop for integration in the products
+      manufactured by such customers, which we refer to as "design wins";
+
+   -  the time lag between "design wins" and production orders;
+
+   -  the demand for, and life cycles of, the products incorporating our ICs;
+
+   -  the rate of adoption of mixed-signal ICs in the markets we target;
+
+   -  deferrals of customer orders in anticipation of new products or product
+      enhancements from us or our competitors or other providers of ICs;
+
+   -  changes in product mix;
+
+   -  the average selling prices for our products could drop suddenly due to
+      competitive offerings or competitive predatory pricing; and
+
+   -  the rate at which new markets emerge for products we are currently
+      developing or for which our design expertise can be utilized to develop
+      products for these new markets.
+
+   The markets for mobile telephones, personal computers, satellite television
+set-top boxes and voice over DSL applications are characterized by rapid
+fluctuations in demand and seasonality which result in corresponding
+fluctuations in the demand for our wireless and wireline products that are
+incorporated in such devices. Additionally, the rate of technology acceptance by
+our customers results in fluctuating demand for our products as customers are
+reluctant to incorporate a new IC into their products until the new IC has
+achieved market acceptance. Once a new IC achieves market acceptance, demand for
+the new IC can quickly accelerate to a point and then level off such that rapid
+historical growth in sales of a product should not be viewed as indicative of
+continued future growth. In addition, demand can quickly decline for a product
+when a new IC product is introduced and receives market acceptance. For example,
+transceivers that provide some of the functionality provided by our RF
+Synthesizers have recently been introduced to market by us and our competitors.
+These competing transceivers are likely to result in a rapid decline in our
+sales of RF Synthesizers. If our Aero Transceiver does not gain sufficient
+market acceptance to offset the anticipated decline in our sales of RF
+Synthesizers, our future operating results and growth could be materially
+adversely affected. Due to the various factors mentioned above, the results of
+any prior quarterly or annual periods should not be relied upon as an indication
+of our future operating performance.
+
+WE DEPEND ON A LIMITED NUMBER OF CUSTOMERS FOR A SUBSTANTIAL PORTION OF OUR
+REVENUES, AND THE LOSS OF, OR A SIGNIFICANT REDUCTION IN ORDERS FROM, ANY KEY
+CUSTOMER COULD SIGNIFICANTLY REDUCE OUR REVENUES
+
+   The loss of any of our key customers, or a significant reduction in sales to
+any one of them, would significantly reduce our revenues and adversely affect
+our business. During fiscal 2002, our ten largest customers accounted for 67% of
+our revenues. We had one customer, Samsung, purchasing primarily through the
+distributor Uniquest, which represented 16% of our revenues. No other single
+customer accounted for more than 10% of our revenues during fiscal 2002. Two
+distributors, Uniquest and Edom Technology, each selling to multiple customers
+in Asia, represented 20% and 16% of our fiscal 2002 revenues, respectively. Most
+of the markets for our products are dominated by a small number of potential
+customers. Therefore, our operating results in the foreseeable future will
+continue to depend on our ability to affect sales to these dominant customers,
+as well as the ability of these customers to sell products that incorporate our
+IC products. In the future, these customers may decide not to purchase our ICs
+at all, purchase fewer ICs than they did in the past or alter their purchasing
+patterns, particularly because:
+
+   -  we do not have any material long-term purchase arrangements with these or
+      any of our other customers;
+
+                                       12
+<Page>
+
+   -  substantially all of our sales to date have been made on a purchase order
+      basis, which permits our customers to cancel, change or delay product
+      purchase commitments with little or no notice to us and without penalty;
+      and
+
+   -  some of our customers have sought or are seeking relationships with our
+      current or potential competitors which may affect our customers'
+      purchasing decisions.
+
+   While we have been the sole supplier of the direct access arrangement, or
+DAA, ICs used in many of our customers' soft modem DAA products and have also
+been a substantial supplier of synthesizers and transceivers to Samsung and
+other major GSM handset manufacturers, we anticipate that our customers will
+regularly evaluate alternative sources of supply in the future in order to
+diversify their supplier base, which would increase their negotiating leverage
+with us and protect their ability to secure these components. We believe that
+any expansion of our customers' supplier bases could have an adverse effect on
+the prices we are able to charge and volume of product that we are able to
+supply to our customers, which would negatively affect our revenues and
+operating results.
+
+WE ARE SUBJECT TO RISKS RELATING TO PRODUCT CONCENTRATION AND LACK OF REVENUE
+DIVERSIFICATION
+
+   We derive a substantial portion of our revenues from a limited number of
+products, and we expect these products to continue to account for a large
+percentage of our revenues in the near term. Continued market acceptance of
+these products, is therefore, critical to our future success. In addition,
+substantially all of our products that we have sold include technology related
+to one or more of our issued U.S. patents. If these patents are found to be
+invalid or unenforceable, our competitors could introduce competitive products
+that could reduce both the volume and price per unit of our products. Our
+business, operating results, financial condition and cash flows could therefore
+be adversely affected by:
+
+   -  a decline in demand for any of our more significant products including our
+      Aero Transceiver, RF Synthesizer, DAA or ISOmodem;
+
+   -  failure of our products to achieve continued market acceptance;
+
+   -  an improved version of our products being offered by a competitor;
+
+   -  technological change that we are unable to address with our products; and
+
+   -  a failure to release enhanced versions of our products on a timely basis
+      and/or the failure of these new products to achieve market acceptance.
+
+   We are particularly dependent on sales of our wireless products, which
+constituted almost half of our total revenues in 2002. If the market for GSM
+mobile handsets in which these products are incorporated deteriorates, our
+operating results would be materially and adversely affected.
+
+OUR INABILITY TO MANAGE GROWTH COULD MATERIALLY AND ADVERSELY AFFECT OUR
+BUSINESS
+
+   In recent periods, we have significantly increased the scope of our
+operations and expanded our workforce from 42 employees at January 2, 1999 to
+364 employees at December 28, 2002. This growth has placed, and any future
+growth of our operations will continue to place, a significant strain on our
+management personnel, systems and resources. We anticipate that we will need to
+implement a variety of new and upgraded operational and financial systems,
+procedures and controls, including the improvement of our accounting and other
+internal management systems. We also expect that we will need to continue to
+expand, train, manage and motivate our workforce. All of these endeavors will
+require substantial management effort. If we are unable to effectively manage
+our expanding operations, our business could be materially and adversely
+affected.
+
+IF WE ARE UNABLE TO DEVELOP NEW AND ENHANCED PRODUCTS THAT ACHIEVE MARKET
+ACCEPTANCE IN A TIMELY MANNER, OUR OPERATING RESULTS AND COMPETITIVE POSITION
+COULD BE HARMED
+
+   Our future success will depend on our ability to reduce our dependence on a
+few products by developing new ICs and product enhancements that achieve market
+
+
+                                       13
+<Page>
+
+acceptance in a timely and cost-effective manner. The development of
+mixed-signal ICs is highly complex, and we occasionally have experienced delays
+in completing the development and introduction of new products and product
+enhancements. Successful product development and market acceptance of our
+products depend on a number of factors, including:
+
+   -  changing requirements of customers within the communications markets;
+
+   -  accurate prediction of market requirements;
+
+   -  timely completion and introduction of new designs;
+
+   -  timely qualification and certification of our ICs for use in our
+      customers' products;
+
+   -  commercial acceptance and volume production of the products into which our
+      ICs will be incorporated;
+
+   -  availability of foundry, assembly, and test capacity;
+
+   -  achievement of high manufacturing yields;
+
+   -  quality, price, performance, power use and size of our products;
+
+   -  availability, quality, price and performance of competing products and
+      technologies;
+
+   -  our customer service and support capabilities and responsiveness;
+
+   -  successful development of our relationships with existing and potential
+      customers;
+
+   -  changes in technology, industry standards or end-user preferences; and
+
+   -  cooperation of software partners and semiconductor partners to support our
+      chips within a system.
+
+   We cannot provide any assurance that products which we recently have
+developed or may develop in the future will achieve market acceptance. We have
+introduced to market or are in development of many ICs. If our recently
+introduced or other ICs fail to achieve market acceptance, or if we fail to
+develop new products or if these new products fail to achieve market acceptance,
+our growth prospects, operating results and competitive position could be
+adversely affected.
+
+OUR RESEARCH AND DEVELOPMENT EFFORTS ARE FOCUSED ON A LIMITED NUMBER OF NEW
+TECHNOLOGIES AND PRODUCTS, AND ANY DELAY IN THE DEVELOPMENT, OR ABANDONMENT, OF
+THESE TECHNOLOGIES OR PRODUCTS BY INDUSTRY PARTICIPANTS, OR THEIR FAILURE TO
+ACHIEVE MARKET ACCEPTANCE, COULD COMPROMISE OUR COMPETITIVE POSITION
+
+   Our ICs are used as components in communications devices in various markets.
+As a result, we have devoted and expect to continue to devote a large amount of
+resources to develop products based on new and emerging technologies and
+standards that will be commercially introduced in the future. Research and
+development expense in fiscal 2002 was $32.0 million, or 17.6% of revenues,
+compared with research and development expense of $29.0 million, or 39.1% of
+revenues, in fiscal 2001. A number of large companies in the communications
+industry are actively involved in the development of these new technologies and
+standards. Should any of these companies delay or abandon their efforts to
+develop commercially available products based on new technologies and standards,
+our research and development efforts with respect to these technologies and
+standards likely would have no appreciable value. In addition, if we do not
+correctly anticipate new technologies and standards, or if the products that we
+develop based on these new technologies and standards fail to achieve market
+acceptance, our competitors may be better able to address market demand than we
+would. Furthermore, if markets for these new technologies and standards develop
+later than we anticipate, or do not develop at all, demand for our products that
+are currently in development would suffer, resulting in lower sales of these
+products than we currently anticipate. For example, we have introduced to market
+the Aero Transceiver product for use in wireless phones operating on the GSM
+standard. The Aero Transceiver is also compatible with the GPRS standard, which
+we believe is the emerging data communications protocol for GSM based wireless
+phones. We cannot be certain that these standards will not change, thereby
+
+
+                                       14
+<Page>
+
+making our products unsuitable or impractical. Additionally, despite the
+published GSM/GPRS specifications, mobile phone network operators may demand
+increased performance beyond specifications for this highly competitive market.
+In the area of optical networking, our clock and data recovery integrated
+circuit operates within stringent specifications for high speed communications
+systems known as SONET. Changes to this standard could make our products
+uncompetitive or unsuitable to changing system requirements and result in our
+inability to sell these products.
+
+WE RELY ON THIRD PARTIES TO MANUFACTURE, ASSEMBLE AND TEST OUR PRODUCTS AND THE
+FAILURE TO SUCCESSFULLY MANAGE OUR RELATIONSHIPS WITH OUR MANUFACTURERS AND
+ASSEMBLERS WOULD NEGATIVELY IMPACT OUR ABILITY TO SELL OUR PRODUCTS
+
+   We do not have our own wafer fab manufacturing facilities. Therefore, we rely
+principally on one third-party vendor, TSMC, to manufacture the ICs we design.
+We also currently rely principally on two third-party assembly subcontractors,
+Advanced Semiconductor Engineering and Amkor, to assemble and package the
+silicon chips provided by the wafers for use in final products. Additionally, we
+rely on third-party vendors for a portion of the testing requirements of our
+products prior to shipping. We also maintain testing facilities in Austin,
+Texas. However, we have increasingly utilized offshore third-party test
+subcontractors, typically in Asia where the parts are assembled and where the
+products are more frequently delivered to our customers. We expect this trend
+toward utilization of offshore third-party test subcontractors to continue.
+
+   There are significant risks associated with relying on these third-party
+foundries and subcontractors, including:
+
+   -  failure by us, our customers or their end customers to qualify a selected
+      supplier;
+
+   -  capacity shortages during periods of high demand;
+
+   -  potential insolvency of the third-party subcontractors;
+
+   -  reduced control over delivery schedules and quality;
+
+   -  limited warranties on wafers or products supplied to us;
+
+   -  potential increases in prices;
+
+   -  increased need for international-based supply and logistics management;
+
+   -  their inability to supply or support new or changing packaging
+      technologies; and
+
+   -  low test yields.
+
+   We currently do not have long-term supply contracts with any of our
+third-party vendors, and, therefore, they are not obligated to perform services
+or supply products to us for any specific period, or in any specific quantities,
+except as may be provided in a particular purchase order. Although we believe
+that other semiconductor foundries or assembly subcontractors can adequately
+address our needs, we expect that it would take approximately six to twelve
+months to transition performance of these services from our current providers to
+new providers. Such a transition may also require a qualification process by our
+customers or their end customers. We generally place orders for products with
+some of our suppliers approximately four months prior to the anticipated
+delivery date, with order volumes based on our forecasts of demand from our
+customers. Accordingly, if we do not accurately forecast demand for our
+products, we may be unable to obtain adequate foundry or assembly capacity from
+our third-party foundry and assembly subcontractors to meet our customers'
+delivery requirements, or we may accumulate excess inventories. On occasion, we
+have been unable to adequately respond to unexpected increases in customer
+purchase orders, and, therefore, were unable to benefit from this incremental
+demand. None of our third-party foundry or assembly subcontractors have provided
+assurances to us that adequate capacity will be available to us within the time
+required to meet additional demand for our products.
+
+   Since our inception, substantially all of the silicon wafers for the products
+that we have shipped were manufactured either by TSMC or its affiliates. Our
+customers typically complete their own qualification process. If we fail to
+
+                                       15
+<Page>
+
+properly balance customer demand across the existing semiconductor fabrication
+facilities that we utilize or are required by our foundry partners to increase,
+or otherwise change the number of fab lines that we utilize for our production,
+we might not be able to fulfill demand for our products and may need to divert
+our engineering resources away from new product development initiatives to
+support the fab line transition, which would adversely affect our operating
+results. Additionally, a resulting write off of unusable or excess inventories
+would contribute to a decline in earnings.
+
+WE HAVE INCREASED OUR INTERNATIONAL SALES ACTIVITIES SIGNIFICANTLY AND PLAN TO
+CONTINUE SUCH EFFORTS, WHICH SUBJECTS US TO ADDITIONAL BUSINESS RISKS INCLUDING
+INCREASED LOGISTICAL COMPLEXITY, POLITICAL INSTABILITY AND CURRENCY FLUCTUATIONS
+
+   We recently established an additional international subsidiary and have
+opened additional sales offices in international markets to expand our
+international sales activities in Europe and the Pacific Rim region and intend
+to increase our staffing in international sales. The percentage of our revenues
+to customers located outside of the United States was 79% in fiscal 2002, 66% in
+fiscal 2001 and 21% in fiscal 2000. This percentage increase in the two most
+recent years reflects our progress in the areas of product and customer
+diversification, as many of our wireless, and increasingly, wireline customers
+manufacture and design their products in the Pacific Rim region. Our planned
+international sales growth will be limited if we are unable to hire additional
+personnel and develop relationships with international distributors. We may not
+be able to maintain or increase international market demand for our products.
+Our international operations are subject to a number of risks, including:
+
+   -  increased complexity and costs of managing international operations;
+
+   -  protectionist laws and business practices that favor local competition in
+      some countries;
+
+   -  multiple, conflicting and changing laws, regulations and tax schemes;
+
+   -  longer sales cycles;
+
+   -  greater difficulty in accounts receivable collection and longer collection
+      periods;
+
+   -  high levels of distributor inventory subject to rights of return to us;
+
+   -  political and economic instability; and
+
+   -  greater difficulty in hiring qualified technical sales and applications
+      engineers.
+
+   To date, all of our sales to international customers and purchases of
+components from international suppliers have been denominated in U.S. dollars.
+As a result, an increase in the value of the U.S. dollar relative to foreign
+currencies could make our products more expensive for our international
+customers to purchase, thus rendering our products less competitive.
+
+OUR CURRENT MANUFACTURERS, ASSEMBLERS, TEST SERVICE PROVIDERS, AND CUSTOMERS ARE
+CONCENTRATED IN THE SAME GEOGRAPHIC REGION, WHICH INCREASES THE RISK THAT A
+NATURAL DISASTER, LABOR STRIKE, WAR OR POLITICAL UNREST COULD DISRUPT OUR
+OPERATIONS OR SALES
+
+   Our current semiconductor wafer manufacturer's foundries are located in the
+same region within Taiwan and our assembly and test subcontractors are located
+in the Pacific Rim region. In addition, many of our customers, particularly
+mobile telephone manufacturers, are located in the Pacific Rim region. The risk
+of earthquakes in Taiwan and the Pacific Rim region is significant due to the
+proximity of major earthquake fault lines in the area. We are not currently
+covered by insurance against business disruption caused by earthquakes as such
+insurance is not currently available on terms that we believe are commercially
+reasonable. Earthquakes, fire, flooding or other natural disasters in Taiwan or
+the Pacific Rim region, or political unrest, war, labor strikes or work
+stoppages in countries where our semiconductor manufacturer, assemblers and test
+subcontractors are located, likely would result in the disruption of our
+
+
+                                       16
+<Page>
+
+foundry, assembly or test capacity. There can be no assurance that such
+alternate capacity could be obtained on favorable terms, if at all.
+
+   A natural disaster, labor strike, war or political unrest where our
+customers' facilities are located would likely reduce our sales to such
+customers. For example, Samsung, our largest customer, is based in South Korea
+and represented 16% of our fiscal 2002 revenues. North Korea's recent decision
+to withdraw from the nuclear Non-Proliferation Treaty and related geopolitical
+maneuverings has created unrest. Such unrest could create economic uncertainty
+or instability, could escalate to war or otherwise adversely affect South Korea
+and our South Korean customers and reduce our sales to such customers, which
+would materially and adversely affect our operating results. In addition, a
+significant portion of the assembly and test for our wireless products occurs in
+South Korea. Any disruption resulting from these events could also cause
+significant delays in shipments of our products until we are able to shift our
+manufacturing, assembling or testing from the affected subcontractor to another
+third-party vendor.
+
+THE SEMICONDUCTOR MANUFACTURING PROCESS IS HIGHLY COMPLEX AND, FROM TIME TO
+TIME, MANUFACTURING YIELDS MAY FALL BELOW OUR EXPECTATIONS, WHICH COULD RESULT
+IN OUR INABILITY TO SATISFY DEMAND FOR OUR PRODUCTS IN A TIMELY MANNER.
+
+   The manufacture of silicon wafers for our products is a highly complex and
+technologically demanding process. Although we work closely with our foundries
+to minimize the likelihood of reduced manufacturing yields, our foundries from
+time to time have experienced lower than anticipated manufacturing yields.
+Changes in manufacturing processes or the inadvertent use of defective or
+contaminated materials by our foundries could result in lower than anticipated
+manufacturing yields or unacceptable performance deficiencies. If our foundries
+fail to deliver fabricated silicon wafers of satisfactory quality in a timely
+manner, we will be unable to meet our customers' demand for our products in a
+timely manner, which would adversely affect our operating results and damage our
+customer relationships.
+
+OUR PRODUCTS ARE COMPLEX AND MAY REQUIRE MODIFICATIONS TO RESOLVE UNDETECTED
+ERRORS WHICH COULD LEAD TO AN INCREASE IN OUR COSTS OR A REDUCTION IN OUR
+REVENUES
+
+   Our products are complex and may contain errors when first introduced or as
+new versions are released. We rely primarily on our in-house testing personnel
+to design test operations and procedures to detect any errors prior to delivery
+of our products to our customers. Because our products are manufactured by third
+parties, should problems occur in the operation or performance of our ICs, we
+may experience delays in meeting key introduction dates or scheduled delivery
+dates to our customers. These errors also could cause us to incur significant
+re-engineering costs, divert the attention of our engineering personnel from our
+product development efforts and cause significant customer relations and
+business reputation problems.
+
+WE DEPEND ON OUR KEY PERSONNEL TO MANAGE OUR BUSINESS EFFECTIVELY IN A RAPIDLY
+CHANGING MARKET, AND IF WE ARE UNABLE TO RETAIN OUR CURRENT PERSONNEL AND HIRE
+ADDITIONAL PERSONNEL, OUR ABILITY TO DEVELOP AND SUCCESSFULLY MARKET OUR
+PRODUCTS COULD BE HARMED
+
+   We believe our future success will depend in large part upon our ability to
+attract and retain highly skilled managerial, engineering, sales and marketing
+personnel. Specifically, we believe that our future success is highly dependent
+on Navdeep Sooch, our co-founder, Chief Executive Officer and Chairman of the
+Board, Daniel Artusi, our President and Chief Operating Officer, Jeffrey Scott,
+our co-founder and Vice President, and David Welland, our co-founder and Vice
+President. There is currently a shortage of qualified personnel with significant
+experience in the design, development, manufacturing, marketing and sales of
+analog and mixed-signal communications ICs. In particular, there is a shortage
+of engineers who are familiar with the intricacies of the design and
+manufacturability of analog elements, and competition for such personnel is
+intense. Our key technical personnel represent a significant asset and serve as
+the primary source for our technological and product innovations. We may not be
+successful in attracting and retaining sufficient numbers of technical personnel
+to support our anticipated growth. The loss of any of our key employees or the
+inability to attract or retain qualified personnel both in the United States and
+internationally, including engineers and sales and marketing personnel, could
+delay the development and introduction of, and negatively impact our ability to
+sell, our products.
+
+                                       17
+<Page>
+
+WE ARE ENGAGED IN A PATENT LAWSUIT WITH TDK SEMICONDUCTOR CORPORATION
+
+   In August 2001, TDK Semiconductor Corporation commenced a lawsuit against us
+for alleged willful infringement by our DAA products of a TDK-held patent. TDK's
+complaint seeks unspecified treble damages, costs and attorneys' fees, and an
+injunction. In September 2001, we served and filed an answer to TDK's complaint,
+in which we denied the alleged infringement and asserted that their patent is
+invalid. On March 27, 2002, we filed an amended answer and counterclaims in
+which we claimed that the TDK-held patent is unenforceable due to inequitable
+conduct and asserted counterclaims seeking a declaration that the TDK-held
+patent is invalid, not infringed and unenforceable. On November 6, 2002, the
+court denied our motion for summary judgment, that we did not infringe TDK's
+semiconductor patent rights. On January 6, 2003, the court extended discovery
+through July 3, 2003, set a final date for all summary judgment motions of
+August 4, 2003, and extended the trial date to November 2003. This lawsuit may
+involve significant expense and may also divert our management's time and
+attention from other aspects of our business. Due to the inherent uncertainties
+of litigation, we are unable to predict the outcome of this matter. For further
+information regarding this litigation, please see "Part I, Item 3. Legal
+Proceedings."
+
+WE MAY BE UNABLE TO PROTECT OUR INTELLECTUAL PROPERTY, WHICH WOULD NEGATIVELY
+AFFECT OUR ABILITY TO COMPETE
+
+   Our products rely on our proprietary technology, and we expect that future
+technological advances made by us will be critical to sustain market acceptance
+of our products. Therefore, we believe that the protection of our intellectual
+property rights is and will continue to be important to the success of our
+business. We rely on a combination of patent, copyright, trademark and trade
+secret laws and restrictions on disclosure to protect our intellectual property
+rights. We also enter into confidentiality or license agreements with our
+employees, consultants, intellectual property providers, and business partners,
+and control access to and distribution of our documentation and other
+proprietary information. Despite these efforts, unauthorized parties may attempt
+to copy or otherwise obtain and use our proprietary technology. Monitoring
+unauthorized use of our technology is difficult, and we cannot be certain that
+the steps we have taken will prevent unauthorized use of our technology,
+particularly in foreign countries where the laws may not protect our proprietary
+rights as fully as in the United States. We cannot be certain that patents will
+be issued as a result of our pending applications nor can we be certain that any
+issued patents would protect or benefit us or give us adequate protection from
+competing products. For example, issued patents may be circumvented or
+challenged and declared invalid or unenforceable. We also cannot be certain that
+others will not develop effective competing technologies on their own.
+
+SIGNIFICANT LITIGATION OVER INTELLECTUAL PROPERTY IN OUR INDUSTRY MAY CAUSE US
+TO BECOME INVOLVED IN COSTLY AND LENGTHY LITIGATION WHICH COULD SERIOUSLY HARM
+OUR BUSINESS
+
+   In recent years, there has been significant litigation in the United States
+involving patents and other intellectual property rights. From time to time, we
+receive letters from various industry participants alleging infringement of
+patents, trademarks or misappropriation of trade secrets. The exploratory nature
+of these inquiries has become relatively common in the semiconductor industry.
+We typically respond when appropriate and as advised by legal counsel. We have
+been involved in litigation to protect our intellectual property rights in the
+past and may become involved in such litigation again in the future. In the
+future, we may become involved in litigation to defend allegations of
+infringement asserted by others, both directly and indirectly as a result of
+certain industry-standard indemnities we may offer to our customers. Legal
+proceedings could subject us to significant liability for damages or invalidate
+our proprietary rights. Legal proceedings initiated by us to protect our
+intellectual property rights could also result in counterclaims or countersuits
+against us. Any litigation, regardless of its outcome, would likely be time
+consuming and expensive to resolve and would divert our management's time and
+attention. Any intellectual property litigation also could force us to take
+specific actions, including:
+
+   -  cease selling products that use the challenged intellectual property;
+
+   -  obtain from the owner of the infringed intellectual property a right to a
+      license to sell or use the relevant technology, which license may not be
+      available on reasonable terms, or at all;
+
+                                       18
+<Page>
+
+   -  redesign those products that use infringing intellectual property; or
+
+   -  pursue legal remedies with third parties to enforce our indemnification
+      rights, which may not adequately protect our interests.
+
+FAILURE TO MANAGE OUR DISTRIBUTION CHANNEL RELATIONSHIPS COULD IMPEDE OUR FUTURE
+GROWTH
+
+   The future growth of our business will depend in part on our ability to
+manage our relationships with current and future distributors and sales
+representatives, develop additional channels for the distribution and sale of
+our products and manage these relationships. As we execute our indirect sales
+strategy, we will need to manage the potential conflicts that may arise with our
+direct sales efforts. For example, conflicts with a distributor may arise when a
+customer begins purchasing directly from us rather than through the distributor.
+The inability to successfully execute or manage a multi-channel sales strategy
+could impede our future growth.
+
+A SUBSTANTIAL PORTION OF THE FINAL TESTING OF OUR PRODUCTS IS PERFORMED
+INTERNALLY BY US, WHICH INCREASES OUR FIXED COSTS
+
+   In fiscal 2001, substantially all of our test operations were performed
+in-house. During fiscal 2002, we significantly expanded our internal test
+capabilities to support our wireless products. However, during this same period
+we also outsourced a portion of test operations to our contract manufacturers or
+other third parties. While we expect that performing a substantial portion of
+testing in-house provides us with advantages in terms of quality control and
+shorter time required to bring a product to market, we may encounter
+difficulties and delays in maintaining or expanding our internal test
+capabilities. In addition, final testing of complex semiconductors requires
+substantial resources to acquire state-of-the-art testing equipment and hiring
+additional qualified personnel, which has increased our fixed costs. If demand
+for our products does not support the effective utilization of these employees
+and additional equipment, we may not realize any benefit from performing the
+final testing internally. Any decrease in the demand for our products could
+result in the underutilization of our testing equipment and personnel. If our
+internal test operations are underused or mismanaged, we may incur significant
+costs that could adversely affect our operating results.
+
+OUR CUSTOMERS REQUIRE OUR PRODUCTS TO UNDERGO A LENGTHY AND EXPENSIVE
+QUALIFICATION PROCESS WHICH DOES NOT ENSURE PRODUCT SALES
+
+   Prior to purchasing our products, our customers require that our products
+undergo an extensive qualification process, which involves testing of the
+products in the customer's system as well as rigorous reliability testing. This
+qualification process may continue for six months or longer. However,
+qualification of a product by a customer does not ensure any sales of the
+product to that customer. Even after successful qualification and sales of a
+product to a customer, a subsequent revision to the IC, changes in its
+manufacturing process or the selection of a new supplier by us may require a new
+qualification process, which may result in delays and in us holding excess or
+obsolete inventory. After our products are qualified, it can take an additional
+six months or more before the customer commences volume production of components
+or devices that incorporate our products. Despite these uncertainties, we devote
+substantial resources, including design, engineering, sales, marketing and
+management efforts, toward qualifying our products with customers in
+anticipation of sales. If we are unsuccessful or delayed in qualifying any of
+our products with a customer, such failure or delay would preclude or delay
+sales of such product to the customer, which may impede our growth and cause our
+business to suffer.
+
+WE DEPEND ON OUR CUSTOMERS TO SUPPORT OUR PRODUCTS
+
+   Our products are currently used by our customers to produce modems,
+telephony equipment, mobile telephones, various wireless devices and optical
+networking equipment. We rely on our customers to provide hardware, software,
+intellectual property indemnification and other technical support for the
+products supplied by our customers. If our customers do not provide the
+required functionality or if our customers do not provide satisfactory
+support for their products, the demand for these devices that incorporate our
+products may diminish or we may otherwise be materially adversely affected.
+Any reduction in the demand for these devices would significantly reduce our
+revenues.
+
+                                       19
+<Page>
+
+WE ARE SUBJECT TO INCREASED INVENTORY RISKS AND COSTS BECAUSE WE BUILD OUR
+PRODUCTS BASED ON FORECASTS PROVIDED BY CUSTOMERS BEFORE RECEIVING PURCHASE
+ORDERS FOR THE PRODUCTS
+
+   In order to ensure availability of our products for some of our largest
+customers, we start the manufacturing of our products in advance of receiving
+purchase orders based on forecasts provided by these customers. However, these
+forecasts do not represent binding purchase commitments and we do not recognize
+sales for these products until they are shipped to the customer. As a result,
+we incur inventory and manufacturing costs in advance of anticipated sales.
+Because demand for our products may not materialize, manufacturing based on
+forecasts subjects us to increased risks of high inventory carrying costs and
+increased obsolescence and may increase our operating costs. These inventory
+risks are exacerbated when our customers purchase indirectly through contract
+manufacturers because this causes us to have less visibility regarding the
+accumulated levels of inventory for such customers.
+
+WE ARE SUBJECT TO CREDIT RISKS RELATED TO OUR ACCOUNTS RECEIVABLE, ESPECIALLY
+WHEN CUSTOMERS PURCHASE PRODUCTS THROUGH DISTRIBUTORS AND CONTRACT
+MANUFACTURERS.
+
+   We do not generally obtain letters of credit or other security for payment
+from customers, distributors or contract manufacturers. Accordingly, we are not
+protected against accounts receivable default or bankruptcy by these entities.
+If we are unable to collect our accounts receivable, our operating results could
+be materially harmed. A significant and increasing portion of our revenues are
+realized through indirect channels such as distributors and contract
+manufacturers, with a growing portion being located outside the United States.
+At December 28, 2002, gross receivable balances from distributors and contract
+manufacturers totaled $20.6 million versus $5.9 million at December 29, 2001.
+Typically, distributors and contract manufacturers are dependent on receiving
+payment from the ultimate customers for the resources necessary to pay us. None
+of our shipments to distributors and contract manufacturers are guaranteed by
+the ultimate customer. If for any reason a customer does not pay the distributor
+or contract manufacturer, there are no assurances that our direct contractual
+customers will have adequate working capital to enable the collection of our
+accounts receivable. We continue to monitor the credit worthiness and payment
+practice of each of the distributors or contract manufacturers, and to date have
+not had any significant write offs of receivable balances from them.
+
+WE COULD SEEK TO RAISE ADDITIONAL CAPITAL IN THE FUTURE THROUGH THE ISSUANCE OF
+EQUITY OR DEBT SECURITIES, BUT ADDITIONAL CAPITAL MAY NOT BE AVAILABLE ON TERMS
+ACCEPTABLE TO US, OR AT ALL.
+
+   We believe that our existing cash, cash equivalents, investments and bank
+credit facility will be sufficient to meet our working capital needs, capital
+expenditures, investment requirements and commitments for at least the next 12
+months. However, it is possible that we may need to raise additional funds to
+finance our activities or to consummate acquisitions of other businesses,
+products or technologies. We believe we could raise these funds, if needed, by
+selling equity or debt securities to the public or to selected investors. In
+addition, even though we may not need additional funds, we may still elect to
+sell additional equity or debt securities or obtain credit facilities for other
+reasons. However, we may not be able to obtain additional funds on favorable
+terms, or at all. If we decide to raise additional funds by issuing equity or
+convertible debt securities, the ownership percentages of existing shareholders
+would be reduced.
+
+WE ARE A RELATIVELY SMALL COMPANY WITH LIMITED RESOURCES COMPARED TO SOME OF OUR
+CURRENT AND POTENTIAL COMPETITORS AND WE MAY NOT BE ABLE TO COMPETE EFFECTIVELY
+AND INCREASE MARKET SHARE
+
+   Some of our current and potential competitors have longer operating
+histories, significantly greater resources and name recognition and a larger
+base of customers than we have. As a result, these competitors may have
+greater credibility with our existing and potential customers. They also may
+be able to adopt more aggressive pricing policies and devote greater
+resources to the development, promotion and sale of their products than we
+can to ours. In addition, some of our current and potential competitors have
+already established supplier or joint development relationships with the
+
+
+                                       20
+<Page>
+
+decision makers at our current or potential customers. These competitors may be
+able to leverage their existing relationships to discourage their customers
+from purchasing products from us or persuade them to replace our products with
+their products. Our competitors may also offer bundled chipset kit arrangements
+offering a more complete product despite the technical merits or advantages of
+our products. These competitors may elect not to support our products which
+could complicate our sales efforts. These and other competitive pressures may
+prevent us from competing successfully against current or future competitors,
+and may materially harm our business. Competition could decrease our prices,
+reduce our sales, lower our margins or decrease our market share.
+
+ANY ACQUISITIONS WE MAKE COULD DISRUPT OUR BUSINESS AND HARM OUR FINANCIAL
+CONDITION
+
+   As part of our growth strategy, we will continue to evaluate opportunities to
+acquire other businesses or technologies that would complement our current
+offerings, expand the breadth of our markets or enhance our technical
+capabilities. Acquisitions that we may potentially make in the future entail a
+number of risks that could materially and adversely affect our business and
+operating results, including:
+
+   -  problems integrating the acquired operations, technologies or products
+      with our existing business and products;
+
+   -  diversion of management's time and attention from our core business;
+
+   -  need for financial resources above our planned investment levels;
+
+   -  difficulties in retaining business relationships with suppliers and
+      customers of the acquired company;
+
+   -  risks associated with entering markets in which we lack prior experience;
+
+   -  potential loss of key employees of the acquired company; and
+
+   -  potential requirement to amortize intangible assets or write off
+      in-process research and development and other acquisition-related
+      expenses.
+
+   Future acquisitions also could cause us to incur debt or contingent
+liabilities or cause us to issue equity securities that could impact the
+ownership percentages of existing shareholders.
+
+OUR STOCK PRICE MAY BE VOLATILE.
+
+   The market price of our common stock has been volatile in the past and may be
+volatile in the future. The market price of our common stock may be
+significantly affected by the following factors:
+
+   -  actual or anticipated fluctuations in our operating results;
+
+   -  changes in financial estimates by securities analysts or our failure to
+      perform in line with such estimates;
+
+   -  changes in market valuations of other technology companies, particularly
+      semiconductor companies;
+
+   -  announcements by us or our competitors of significant technical
+      innovations, acquisitions, strategic partnerships, joint ventures or
+      capital commitments;
+
+   -  introduction of technologies or product enhancements that reduce the need
+      for our products;
+
+   -  the loss of one or more key OEM customers; and
+
+   -  departures of key personnel.
+
+   The stock market has experienced extreme volatility that often has been
+unrelated to the performance of particular companies. These market fluctuations
+may cause our stock price to fall regardless of our performance.
+
+                                       21
+<Page>
+
+PROVISIONS IN OUR CHARTER DOCUMENTS AND DELAWARE LAW COULD PREVENT, DELAY OR
+IMPEDE A CHANGE IN CONTROL OF US AND MAY REDUCE THE MARKET PRICE OF OUR COMMON
+STOCK
+
+   Provisions of our certificate of incorporation and bylaws could have the
+effect of discouraging, delaying or preventing a merger or acquisition that a
+stockholder may consider favorable. For example, our certificate or
+incorporation and bylaws provide for:
+
+   -  the division of our board of directors into three classes to be elected on
+      a staggered basis, one class each year;
+
+   -  the ability of our board of directors to issue shares of our preferred
+      stock in one or more series without further authorization of our
+      stockholders;
+
+   -  a prohibition on stockholder action by written consent;
+
+   -  elimination of the right of stockholders to call a special meeting of
+      stockholders;
+
+   -  a requirement that stockholders provide advance notice of any stockholder
+      nominations of directors or any proposal of new business to be considered
+      at any meeting of stockholders; and
+
+   -  a requirement that a supermajority vote be obtained to amend or repeal
+      certain provisions of our certificate of incorporation.
+
+   We also are subject to the anti-takeover laws of Delaware which may
+discourage, delay or prevent someone from acquiring or merging with us, which
+may adversely affect the market price of our common stock.
+
+THE PERFORMANCE OF OUR NEXT GENERATION DIRECT ACCESS ARRANGEMENT PRODUCTS MAY BE
+ADVERSELY AFFECTED BY SEVERE ENVIRONMENTAL CONDITIONS THAT MAY REQUIRE
+MODIFICATIONS, WHICH COULD LEAD TO AN INCREASE IN OUR COSTS OR A REDUCTION IN
+OUR REVENUES
+
+   Although our DAA products are compliant with published specifications, these
+established specifications might not adequately address all conditions that must
+be satisfied in order to operate in harsh environments. This includes
+environments where there are wide variations in electrical quality, telephone
+line quality, static electricity and operating temperatures or that may be
+affected by lightning or improper handling by customers and end users. Our next
+generation products have had a limited period of time in the field under
+operation, and these environmental factors may result in unanticipated returns
+of our products. Any necessary modifications could cause us to incur significant
+re-engineering costs, divert the attention of our engineering personnel from our
+product development efforts and cause significant customer relations and
+business reputation problems.
+
+RISKS RELATED TO OUR INDUSTRY
+
+COMPETITION WITHIN THE NUMEROUS MARKETS WE TARGET MAY REDUCE SALES OF OUR
+PRODUCTS AND REDUCE MARKET SHARE
+
+   The markets for semiconductors in general, and for mixed-signal ICs in
+particular, are intensely competitive. We expect that the market for our
+products will continually evolve and will be subject to rapid technological
+change. In addition, as we target and supply products to numerous markets and
+applications, we face competition from a relatively large number of competitors.
+Across all of our product areas, we compete with Agere Systems, AMCC, Analog
+Devices, Broadcom, Conexant, Cypress, ESS, Fujitsu, Hitachi, Infineon
+Technologies, Legerity, Maxim Integrated Products, National Semiconductor,
+Philips, RF Micro Devices, Semtech, Skyworks Solutions Inc. (the company
+resulting from the combination of Conexant's wireless business and Alpha
+Industries), Texas Instruments, Vitesse Semiconductor, and others. We expect to
+face competition in the future from our current competitors, other manufacturers
+and designers of semiconductors, and innovative start-up semiconductor design
+companies. Some of our customers, such as Agere Systems, Intel, Motorola,
+Samsung and Texas Instruments, are also large, established semiconductor
+suppliers. Our sales to and support of these customers may enable them to become
+a source of competition to us, despite our efforts to protect our intellectual
+property rights. As the markets for communications products grow, we also may
+face competition from traditional communications device companies.
+
+                                       22
+<Page>
+
+These companies may enter the mixed-signal semiconductor market by introducing
+their own ICs or by entering into strategic relationships with or acquiring
+other existing providers of semiconductor products. We anticipate increasing
+competitive pressure because sales of our wireless products into the highly
+competitive GSM handset market are expected to comprise a larger percentage of
+our future revenues.
+
+   In addition, our largest competitors may restructure their operations to
+create separate companies that are more focused on providing the types of
+products we produce. For example, Conexant is a significant competitor of ours
+across multiple product areas. In June 2002, Conexant completed the spin-out of
+Skyworks Solutions, resulting from the combination of Conexant's wireless
+business with Alpha Industries. In July 2000, Lucent Technologies spun off its
+microelectronics business, which included its optoelectronics components and
+integrated circuits division, into a separate company named Agere Systems in
+order to accelerate the growth of the business and alleviate strategic conflicts
+with Lucent's competitors. Additionally, Siemens spun off its semiconductor
+business in 1999 to create a more focused company named Infineon Technologies.
+
+THE AVERAGE SELLING PRICES OF OUR PRODUCTS COULD DECREASE RAPIDLY WHICH MAY
+NEGATIVELY IMPACT OUR GROSS MARGINS AND REVENUES
+
+   We may experience substantial period-to-period fluctuations in future
+operating results due to the erosion of our average selling prices. We have
+reduced the average unit price of our products in anticipation of future
+competitive pricing pressures, new product introductions by us or our
+competitors and other factors. The highly competitive GSM handset market is
+extremely cost sensitive due to the potentially very high volumes and stringent
+expectations placed on consumer electronics component suppliers for aggressive
+and sustained price reductions which do result in declining average selling
+prices. We expect that these factors will create downward pressure on our
+average selling prices and gross margins. If we are unable to offset any such
+reductions in our average selling prices by increasing our sales volumes, our
+gross profits and revenues will suffer. To maintain gross margins, we will need
+to develop and introduce new products and product enhancements on a timely basis
+and continually reduce our costs. Our failure to do so would cause our revenues
+and gross margins to decline.
+
+WE ARE SUBJECT TO THE CYCLICAL NATURE OF THE SEMICONDUCTOR INDUSTRY, WHICH HAS
+BEEN SUBJECT TO SIGNIFICANT DOWNTURNS
+
+   The semiconductor industry is highly cyclical and is characterized by
+constant and rapid technological change, rapid product obsolescence and price
+erosion, evolving standards, short product life cycles and wide fluctuations in
+product supply and demand. The industry has experienced significant downturns,
+often connected with, or in anticipation of, maturing product cycles of both
+semiconductor companies' and their customers' products and declines in general
+economic conditions. These downturns have been characterized by diminished
+product demand, production overcapacity, high inventory levels and accelerated
+erosion of average selling prices. Specific areas of the communications markets
+have contributed to the overall decline and volatility of the semiconductor
+industry in the recent past. For example, in fiscal 2001, the semiconductor
+industry suffered a downturn due to reductions in the actual unit sales of
+personal computers and wireless phones as compared to previous robust forecasts.
+Additionally, changing and competing technical standards in airwave interfaces
+such as GSM and CDMA for mobile handsets, migration to higher speed
+communication protocols in the optical space and the return to prominence of the
+traditional bell regional operating companies compared to the competitive local
+exchange companies all have contributed to the volatility in the communications
+area of the semiconductor industry. This downturn resulted in a material adverse
+effect on our business and operating results in fiscal 2001.
+
+   Due to the cyclical nature of the semiconductor industry, an upturn in
+business could result in increased competition for access to third-party
+foundry, assembly and test capacity. We are dependent on the availability of
+such capacity to manufacture, assemble and test our ICs. None of our third-party
+foundry, assembly or test subcontractors have provided assurances that adequate
+capacity will be available to us.
+
+                                       23
+<Page>
+
+OUR PRODUCTS MUST CONFORM TO INDUSTRY STANDARDS IN ORDER TO BE ACCEPTED BY END
+USERS IN OUR MARKETS
+
+   Generally, our products comprise only a part of a communications device. All
+components of such devices must uniformly comply with industry standards in
+order to operate efficiently together. We depend on companies that provide other
+components of the devices to support prevailing industry standards. Many of
+these companies are significantly larger and more influential in affecting
+industry standards than we are. Some industry standards may not be widely
+adopted or implemented uniformly, and competing standards may emerge that may be
+preferred by our customers or end users. If larger companies do not support the
+same industry standards that we do, or if competing standards emerge, market
+acceptance of our products could be adversely affected which would harm our
+business.
+
+   Products for communications applications are based on industry standards that
+are continually evolving. Our ability to compete in the future will depend on
+our ability to identify and ensure compliance with these evolving industry
+standards. The emergence of new industry standards could render our products
+incompatible with products developed by other suppliers. As a result, we could
+be required to invest significant time and effort and to incur significant
+expense to redesign our products to ensure compliance with relevant standards.
+If our products are not in compliance with prevailing industry standards for a
+significant period of time, we could miss opportunities to achieve crucial
+design wins. We may not be successful in developing or using new technologies or
+in developing new products or product enhancements that achieve market
+acceptance. Our pursuit of necessary technological advances may require
+substantial time and expense.
+
+AVAILABLE INFORMATION
+
+   Our Internet website address is http://www.silabs.com. Our annual report on
+Form 10-K, quarterly reports on Form 10-Q, current reports on Form 8-K and
+amendments to those reports filed or furnished pursuant to Section 13(a) or
+15(d) of the Securities Exchange Act of 1934 are available through our Internet
+website as soon as reasonably practicable after we electronically file such
+material with, or furnish it to, the SEC. Our Internet website and the
+information contained therein or connected thereto are not intended to be
+incorporated into this Annual Report on Form 10-K.

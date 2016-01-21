@@ -1,0 +1,915 @@
+
+ITEM 1.  Business.
+
+GENERAL
+
+PMC-Sierra,  Inc.  designs,  develops,  markets  and  supports  high-performance
+semiconductor   networking  solutions.  Our  products  are  used  in  high-speed
+transmission  and  networking  systems which are being used to  restructure  the
+global telecommunications and data communications infrastructure.
+
+PMC-Sierra   was   incorporated   in  the  State  of   California  in  1983  and
+reincorporated  in the State of Delaware in 1997. Our Common Stock trades on the
+Nasdaq National Market under the symbol "PMCS" and is included in the Nasdaq-100
+index.
+
+In this Annual Report on Form 10-K,  "PMC-Sierra",  "PMC", "the Company",  "us",
+"our" or "we", includes PMC-Sierra, Inc. and all of our subsidiary companies.
+
+This Annual  Report and the  portions  of our Proxy  Statement  incorporated  by
+reference  into this  Annual  Report  contain  forward-looking  statements  that
+involve risks and uncertainties. We use words such as "anticipates", "believes",
+"plans", "expects",  "future", "intends", "may", "will", "should",  "estimates",
+"predicts",  "potential",  "continue"  and similar  expressions to identify such
+forward-looking  statements.  These forward-looking  statements include, but are
+not  limited to,  statements  under  "Management's  Discussion  and  Analysis of
+Financial Condition and Results of Operations" (including the "Outlook for 2001"
+subsection within) and "Business".
+
+Forward-looking statements are subject to known and unknown risks, uncertainties
+and other  factors  that may  cause  our  actual  results,  levels of  activity,
+performance,  achievements  and prospects to be materially  different from those
+expressed  or  implied  by  such   forward-looking   statements.   These  risks,
+uncertainties  and other factors include,  among others,  those identified under
+"Factors that You Should Consider Before  Investing In PMC-Sierra" and elsewhere
+in this Annual Report.
+
+These  forward-looking  statements  apply  only as of the  date  of this  Annual
+Report.   We  undertake  no  obligation   to  publicly   update  or  revise  any
+forward-looking  statements,  whether  as a result  of new  information,  future
+events or otherwise.  In light of these risks,  uncertainties,  and assumptions,
+the forward-looking  events discussed in this report might not occur. Our actual
+results could differ materially from those anticipated in these  forward-looking
+statements  for many  reasons,  including the risks we face as described in this
+Annual  Report and readers are  cautioned  not to place undue  reliance on these
+forward-looking  statements,  which reflect management's analysis only as of the
+date hereof.  Such  forward-looking  statements  include statements as to, among
+others:
+
+*   our mergers and their accounting treatment;
+*   revenues;
+*   gross profit;
+*   research and development expenses;
+*   marketing, general and administrative expenditures; and
+*   capital resources sufficiency.
+
+This report  contains terms used within our industry that some investors may not
+recognize.  We refer  investors to the glossary of terms  provided at the end of
+this Item.
+
+INDUSTRY BACKGROUND
+
+Increasing  demand for Internet  bandwidth is straining  the global  information
+infrastructure.  At home, individuals use the Internet for shopping, downloading
+music and video files, working at home, checking investment  portfolios,  paying
+bills and  communicating.  At work,  more and more companies are  "web-enabling"
+their sales, budgeting,  production,  purchasing,  human resources,  and finance
+applications.  Companies are conducting  on-line  meetings,  sharing data across
+departments,  downloading  reports and sending in timesheets over networks.  The
+demand  for these  applications,  and the  bandwidth  required  to  successfully
+implement them, has resulted in an increased  interest for higher speed Internet
+connections.
+
+         The Bandwidth Suppliers
+
+Two major  types of network  bandwidth  suppliers  are  trying to address  these
+rapidly evolving networking demands: (a) incumbent telephone companies,  such as
+AT&T, British Telecom, NTT, MCI Worldcom, Sprint and the Regional Bell Operating
+Companies,  and (b) new data-centric  competitive carriers, such as Williams and
+Level 3 at the  core  of the  Internet  infrastructure,  and  Competitive  Local
+Exchange  Carriers,  or CLECs, such as Covad and Northpoint at the access points
+of the Internet infrastructure.
+
+Historically,  traditional  phone companies spent  significant  capital building
+networks that supplied  reliable phone services to their customers.  As a result
+of  the  deregulation  of the  telecommunications  industry,  traditional  phone
+service  has  become  much more  competitive  and much less  profitable.  Hence,
+established  carriers facing reduced  margins in their phone  businesses and new
+carriers  are  expanding  their focus to include the higher  growth data market.
+They will invest  billions of dollars to build new  networks  that will  address
+public demand for massive data and voice capacity.
+
+         Access to High Bandwidth Internet
+
+One of the major factors behind the growth of the Internet infrastructure market
+is demand by the end-user to transmit more  information at faster  speeds.  This
+bandwidth  demand by  individuals,  organizations  and businesses  grows as more
+sophisticated  and enhanced  user  applications  consumes  much of the available
+access bandwidth.
+
+For residential  Internet access, the more commonly used 56 kilobit analog modem
+is a bottleneck.  Digital  Subscriber Line, or DSL,  technology uses traditional
+phone lines connected to your home or office to provide substantially  increased
+bandwidth for Internet access.  New DSL access  multiplexer  equipment is making
+the broad deployment of DSLs possible by efficiently managing all of the network
+traffic to and from customers using DSL services.  In areas where cable services
+are available, cable modems are also providing residential customers with higher
+bandwidth access methods to the Internet.
+
+Many  businesses  are finding  that their ISDN or even T1 access  lines  provide
+insufficient  bandwidth for the file sharing,  online  procurement,  production,
+sales,  service  and other  management  applications  they use.  Some  CLECs are
+deploying new DSL technologies  and higher bandwidth  connections for businesses
+in an effort to meet these growing demands.
+
+Equipment  manufacturers are supplying network equipment to bandwidth  suppliers
+that enables more and higher bandwidth connections, often within the limitations
+of traditional phone networking facilities and the power supply  infrastructure.
+To be effective,  this networking  equipment must feature low power  consumption
+per port  served,  as well as more ports  served per  equipment  line card.  PMC
+develops lower power and higher port density  networking  products,  such as the
+TEMUX-84, to address the requirements of these equipment manufacturers.
+
+         Wireless Infrastructure
+
+Some of the major  catalysts  driving the  expansion of wireless  infrastructure
+are: the accelerated  growth of mobile phone usage,  increased call duration and
+call frequency, and new third generation licenses.
+
+Many  carriers  are  upgrading  their  existing  wireless   infrastructures   to
+facilitate the change from  session-oriented,  voice conversations to data-rich,
+continuous connections with the Internet.  Emerging next-generation personal web
+companions will integrate  features such as voice service,  text messaging,  web
+content,  enterprise data, and global positioning.  Users are demanding wireless
+handsets  and  personal  digital  assistants  that  are  "always  on" for use as
+Internet access devices.
+
+Carriers are  deploying  base  transceiver  stations to connect  these  wireless
+services to the Internet.  These base stations  convert  wireless  communication
+traffic into wired  networks.  The wired  networks  then  aggregate,  switch and
+process the signals at primarily T1 or E1 rates.
+
+         All IP/Ethernet Networks
+
+Today, many incumbent carriers supplement their existing network  infrastructure
+with new  "multi-service"  Frame Relay and  Asynchronous  Transfer Mode, or ATM,
+networks  that  support  data,  voice and  other  communication  traffic.  These
+carriers use Quality of Service, or QoS, management  techniques to differentiate
+service and pricing for different  types of  communication  traffic carried over
+their networks.
+
+To date, purely Internet  Protocol,  or IP, and Ethernet based networks have not
+been able to provide  carriers  with the  management  and  control  required  to
+provide different  quality levels for different types of traffic.  For instance,
+purely IP or Ethernet  networks may have  difficulty  differentiating  between a
+voice signal or an email, or may cause unwanted pauses or delays during a normal
+telephone conversation.
+
+As networks  transport  significantly  more data than any other type of traffic,
+many carriers  believe the next  generation of  communications  networks will be
+IP-based.  Some of these  carriers are  deploying  large  networks  that support
+traffic on purely IP or Ethernet  transmissions.  For example,  many ISPs deploy
+multiple  high-capacity routers that have Ethernet interconnects and communicate
+with WAN optical transport equipment using IP-over-Sonet/SDH.  PMC is developing
+networking  products such as the S/UNI 2xGE and the S/UNI-2488  that support our
+customers'  increased  demand  for  WAN  compliant  Ethernet  and  IP-over-Sonet
+applications.
+
+     Optics Deployment to Handle High Volume Traffic
+
+The emergence of the Optical Transport Network, or OTN, - a network based on the
+transmission of light,  rather than electrical  signals - is one of the greatest
+evolutions in the broadband  networking  arena. In 2000,  carriers  continued to
+deploy  and  light  thousands  of miles of fiber  optic  cable  underground  and
+alongside railway lines or petroleum pipelines.  These deployments have provided
+increased  communications capacity throughout the core of the Wide Area Network,
+or WAN.
+
+The emergence of the OTN has resulted in an optical/electrical convergence where
+optical functions mesh with electrically managed functions. In today's networks,
+optical wavelengths  transport traffic while electrical  semiconductors are used
+to  manage  traffic.   PMC  offers  networking   products  that  merge  existing
+electrical-based  communications  protocols,  such  as  ATM,  SONET/SDH,  IP and
+Gigabit Ethernet, with new optical-based protocols.
+
+As a more attractive investment for long distance  transmissions,  many carriers
+consider the massive bandwidth  capacity provided by fiber optics and Dense Wave
+Division Multiplexing,  or DWDM, which is a method of using color wavelengths to
+create a new network "line" for every color.  Today,  more and more carriers are
+deploying  lower cost DWDM systems  throughout  Metropolitan  Area Networks,  or
+MANs,  and  networks  on the  "edge" of the WAN to manage  the large  volumes of
+bandwidth  driven by increased DSL, Cable,  Frame Relay and other network access
+technologies.
+
+The MANs and edge  networks  being  deployed  by  carriers  have high  bandwidth
+capacities (such as OC-3, OC-12 and OC-48) that  traditionally have been used in
+Core or Transport  parts of the WAN. Core  networks,  however,  are migrating to
+higher  OC-48  and  OC-192   speeds,   and  using   primarily   large   capacity
+"concatenated"  signals, which are signals that do not have individually managed
+channels  within them. MANs and Edge networks must look inside the high capacity
+signals to aggregate,  filter, manage and disaggregate individual communications
+channels.
+
+This need for  granularity or channelized  management  presents a variety of new
+challenges  for  networking  equipment  manufacturers  and their  customers.  In
+addition,  our customers  require high density and lower power  solutions due to
+the real estate and power supply limitations in the densely populated  locations
+where the Metro and Edge  equipment is deployed.  PMC introduced the SPECTRA and
+CHESS  (Channelized  Engine for  Sonet/SDH)  set of networking  products,  among
+others, to directly address our customers concerns in these areas.
+
+         The Shift from ASIC to ASSP
+
+As  the  networking   equipment   markets  become  more   competitive,   and  as
+technological  advances  accelerate,  our customers continue to look for ways to
+reduce  development  risk, reduce research and development costs and shorten the
+time it takes  to  bring  their  products  to  market.  In the  past,  equipment
+manufacturers looked for off-the-shelf Application Specific Standard Product, or
+ASSP,  solutions to solve their  immediate  design needs before  undertaking the
+risky  and  often  resource  inefficient  task of  designing  their  own  custom
+Application  Specific Integrated Circuit, or ASIC. If our customers applied ASSP
+solutions to their technology challenges, they were often able to allocate their
+valuable and scarce design  resources to functions  that were  unavailable  from
+standard product suppliers and would help differentiate their product.
+
+Traditionally,  the ASSPs  demanded by customers  were fixed  function  standard
+PHYs. In recent years,  equipment  manufacturers  have been demanding ASSPs that
+perform additional networking equipment functions.  Some equipment manufacturers
+are  demanding  the  additional  flexibility  derived  from ASSP  microprocessor
+products  along with ASSPs which  perform  traffic  management,  processing  and
+switching.
+
+OUR STRATEGY
+
+Our overall  strategy is to provide our customers with networking  semiconductor
+solutions that address a broad range of products and applications.  Our approach
+is as follows:
+
+*   Address a number of classes of networking equipment;
+*   Provide a selection of specialized products within each networking function;
+*   Provide a selection of products that address multiple networking functions;
+    and
+*   Develop or acquire  new  technologies  and  products  in  anticipation  of
+    our customers' needs.
+
+         Classes of Equipment Served
+
+The  internet  infrastructure  is  comprised  of a complex  structure  of linked
+networks,  many of which are owned by separate organizations and follow a unique
+approach to manage and transmit networking traffic. These networks are made more
+complex by the variety of equipment used in the networks, each of which performs
+a separate  function.  In addition,  there may be a number of manufacturers that
+design and market  numerous  types of  networking  equipment.  We have a diverse
+customer base comprised of large  customers that produce a variety of networking
+equipment  products and some small  customers that provide one or two networking
+equipment products.
+
+Our  strategy  is to  provide  products  that  adhere  to the  major  networking
+standards and perform the most common networking  functions required by the most
+widely  deployed  types of  Internet  infrastructure  equipment.  Our goal is to
+provide  products that can be used in the majority of the  applications  used to
+build the Internet.
+
+Thus, we design our products for a wide variety of networking  equipment  types,
+including:
+
+WAN Access Equipment                    WAN Transmission and Switching Equipment
+
+*    Remote Access Equipment            *    WAN Edge Switches
+*    Frame Relay Access Devices         *    Routers
+*    Wireless Basestations              *    WAN Core Switches
+*    Digital Loop Carriers              *    Digital Cross Connects
+*    Frame Relay Switches               *    Add-Drop Multiplexers
+*    Internet Access Concentrators      *    Terminal Multiplexers
+*    Digital Subscriber Line Access
+     Multiplexers (DSLAMs)
+
+LAN equipment
+
+*    Switches/Routers
+*    Network Interface Cards
+*    Network Appliances
+
+         Provide a Broad Range of Products
+
+We provide our customers  with a variety of products from which to choose.  This
+allows them to select the equipment  design that is appropriate  for the segment
+of the equipment  market they are  attempting to address.  We sell products that
+vary  within  certain  functions,  such as our  line  of  S/UNI  physical  layer
+products,  and we sell  products  that vary  across  functions.  This is further
+discussed below.
+
+The following is a summary of some of our more  significant  products  currently
+available.
+
+
+
+<TABLE>
+<CAPTION>
+
+                      Table I - PMC-Sierra Product Summary
+                      ------------------------------------
+
+
+                                                                                                       Function
+                                                                               -----------------------------------------------------
+                                                         Through-               LIU /                                   Traf-
+                                                         put/Clock     Granu-   PHY /      Tributary  Cell/Packet Back-  fic
+No.Product                       Description               Rate        larity  Framer  SAR Processor   Processor  plane  Mgr Switch
+---------                        -----------             ---------     ------  ------  --- ---------  ----------- ----- ---- ------
+  <S>                                <C>                    <C>          <C>    <C>    <C>    <C>         <C>      <C>   <C>   <C>
+
+
+ 1 T1XC             1-port framer + LIU                     T1           -       x
+ 2 E1XC             1-port framer + LIU                     E1           -       x
+ 3 QDSX             4-port short haul analog LIU           T1/E1         -       x
+ 4 COMET            1-port framer + long haul LIU          T1/E1         -       x
+ 5 COMET-QUAD       4-port framer + long haul LIU          T1/E1         -       x
+ 6 TQUAD            4-port framer                           T1           -       x
+ 7 EQUAD            4-port framer                           E1           -       x
+ 8 TOCTL            8-port framer                           T1           -       x
+ 9 EOCTL            8-port framer                           E1           -       x
+10 D3MX             M13 Multiplexer/Demultiplexer           T3           -       x
+11 TEMUX            28T/21E framer, Sonet mapper
+                    & M13 Mux                          T1/E1 - T3/E3     -       x
+12 TEMUX-84         84T/63E framer, Sonet mapper
+                    & 3xM13 Muxes                      T1/E1 - T3/E3     -       x
+13 S/UNI-IMA-8      8 link inverse multiplexer
+                    for ATM/UNI PHY                        T1/E1         -       x
+14 S/UNI-IMA-32     32 link inverse multiplexer
+                    for ATM/UNI PHY                        T1/E1         -       x
+15 S/UNI-IMA-84     84 link inverse multiplexer
+                    for ATM/UNI PHY                        T1/E1         -       x
+16 S/UNI-MPH        Quad T1/E1 ATM Interface               T1/E1         -       x
+17 S/UNI-PDH        T1/E1/T3/E3  + ATM                 T1/E1 - T3/E3     -       x
+18 S/UNI JET        1-port framer or ATM UNI           T1/E1/J2 - T3/E3  -       x
+19 S/UNI QJET       4-port framer or ATM UNI           T1/E1/J2 - T3/E3  -       x
+20 S/UNI-4xD3F      4-port J2, E3 and DS-3 Framer        T3/E3/J2        -       x
+21 S/UNI-CDB        4 channel cell delineation block      52mb/s         -       x
+22 S/UNI-155        1-port PHY                              OC3          -       x
+23 S/UNI-155-LITE   1-port PHY + analog CRU/CSU             OC3          -       x
+24 S/UNI-PLUS       enhanced 1-port PHY + analog
+                    CRU/CSU                                 OC3          -       x
+25 S/UNI-155-ULTRA  1-port PHY + UTP-5 + analog
+                    CRU/CSU                                 OC3          -       x
+26 S/UNI-155-DUAL   2-port PHY + analog CRU/CSU             OC3          -       x
+27 S/UNI-QUAD       4-port PHY + analog CRU/CSU             OC3          -       x
+28 S/UNI-16x155     16-port PHY + analog CRU/CSU            OC3          -       x
+29 LASAR-155        ATM PHY & AAL5 SAR                      OC3          -       x      x
+30 S/UNI STAR       1-port SONET/SDH framer                 OC3          -       x
+31 S/UNI TETRA      4-port ATM + POS PHY + analog
+                    CRU/CSU                                 OC3          -       x
+32 S/UNI 622        1-port PHY                             OC12          -       x
+33 S/UNI-622 MAX    1-port PHY + analog CRU/CSU            OC12          -       x
+34 S/UNI-4x622      4-port PHY + analog CRU/CSU            OC12          -       x
+35 S/UNI-2488       1-port PHY + analog CRU/CSU            OC48          -       x
+36 S/UNI-2xGE       2-port SERDES & Gigabit MAC         2 x 1 Gbps       -       x
+37 S/UNI-622-POS    1-port ATM + POS PHY + analog
+                    CRU/CSU                                OC12          -       x
+38 TEMAP            VT/TU Mapper and M13 Multiplexer       STS-1         -              x
+39 SPTX             Path Terminating Tranceiver             OC3        STS-1     x
+40 STXC             Transport Overhead Terminator           OC3          -       x
+41 STTX             Transport Overhead Terminator          OC12          -       x
+42 SPECTRA-155      Payload Extractor/Aligner               OC3        STS-1     x
+43 SPECTRA-4x155    4-port Payload Extractor/Aligner
+                    (Chess)                                 OC3        STS-1     x
+44 SPECTRA-622      Payload Extractor/Aligner              OC12        STS-1     x
+45 SPECTRA-2488     Payload Extractor/Aligner
+                    (Chess)                                OC48        STS-1     x
+46 S/UNI-MACH 48    48-channel POS/ATM Cell
+                    Processor/Mapper (Chess)               OC48        STS-1     x
+47 QUAD-PHY         4-port SERDES                         5 Gbps         -       x
+48 OCTAL-PHY        8-port SERDES                         10 Gbps        -       x
+49 AAL1gatorII      AAL1 SAR Processor                     T3/E3        DS0             x
+50 AAL1gator-4      4-channel AAL1 SAR                     T3/E3        DS0             x
+51 AAL1gator-8      8-channel AAL1 SAR                     T3/E3        DS0             x
+52 AAL1gator-32     32-channel AAL1 SAR                    T3/E3        DS0             x
+53 TUPP             VT/TU Payload Alignor/Processor         OC3          T1                     x
+54 TUPP-PLUS        TUPP + Performance Monitor              OC3          T1                     x
+55 TUPP-PLUS 622    TUPP + Performance Monitor              OC12         T1                     x
+56 TUDX             VT/TU X-Connect Switch                2 x OC3        T1                     x
+57 PALADIN-10       DSP for Amplification Correction        n/a         n/a                                x
+58 FREEDM-32P32     32 link, 32 ch. HDLC Controller       2 x T3        DS0                                x
+59 FREEDM-8         8 link, 128 ch. HDLC Controller       2 x T3        DS0                                x
+60 FREEDM-32        32 link, 128 ch. HDLC Controller      2 x T3        DS0                                x
+61 FREEDM-32P672    32 link, 672 ch. HDLC Controller        OC3         DS0                                x
+62 FREEDM-32A672    32 link, 672 ch. HDLC Controller
+                    w' "Any-PHY"                            OC3         DS0                                x
+63 FREEDM-84P672    84 link, 672 ch. HDLC Controller        OC3         DS0                                x
+64 FREEDM-84A672    84 link, 672 ch. HDLC Controller
+                    w' "Any-PHY"                            OC3         DS0                                x
+65 MECA-4A          Multi-Channel Voice over ATM DSP        n/a         n/a                                x
+66 MECA-4I          Multi-Channel Voice over IP DSP         n/a         n/a                                x
+67 RCMP-200         Routing Control, Monitoring &
+                    Policing                                OC3        Cell                                x
+68 RCMP-800         Routing Control, Monitoring &
+                    Policing                                OC12       Cell                                x
+69 S/UNI-ATLAS      Full Duplex RCMP + additional
+                    features                                OC12       Cell                                x
+70 S/UNI-ATLAS-3200 Full Duplex RCMP + additional
+                    features                                OC48       Cell                                x
+71 RM5231A          64-bit MIPS RISC Microprocessor         n/a           -                                x
+72 RM5261A          64-bit MIPS RISC Microprocessor         n/a           -                                x
+73 RM7000A          64-bit MIPS RISC Microprocessor
+                    with L2 Cache                                                                          x
+74 QRT              ATM Quad Routing Table                  OC12       Cell                                                x
+75 QSE              ATM Quad Switching Element             5 Gbps      Cell                                                      x
+76 TBS              Telecom Bus Serializer (Chess)          OC48      STS-1                                          x
+77 TSE              Transmission Switching Element
+                    (Chess)                                40Gbps     STS-1                                                      x
+78 S/UNI DUPLEX     Dual Serial Link PHY Multiplexer
+                    (Vortex)                                OC3           -      x                                   x           x
+79 S/UNI VORTEX     Octal Serial Link PHY Multiplexer
+                    (Vortex)                                OC12          -      x                                   x           x
+80 S/UNI APEX       ATM/Packet Traffic Mgr. & Switch
+                    (Vortex)                                OC12          -                                x               x     x
+81 PM9311           TT1 Scheduler                           C192/
+                                                         320 Gbps     OC 48
+82 PM9312           TT1 Cross Bar
+                                                                                                                                 x
+83 PM9313           TT1 Data Slice
+84 PM9315           TT1 Enhanced Port Processor
+85 EXACT - PM3370   8x100 port controller                 100 Mbps        -                                x                     x
+86 EXACT - PM3380   1x1000 port controller                  1 Gbps        -                                x                     x
+87 EXACT - PM3390   8 to 16 port EXACT Switch Matrix        8 Gbps        -                                x                     x
+
+</TABLE>
+
+
+
+
+This table is intended only to provide a general  understanding of our products.
+Our chips may not  perform  all the  possible  features  related  to a  specific
+function.  For example,  we have a number of single port OC-3 ATM physical layer
+products  that perform  different  functions  within the  physical  layer of the
+networking hierarchy and are generally used in different applications.
+
+         Our Strategy Includes Addressing More Networking Functions
+
+While we provide our customers with single function products,  such as our S/UNI
+products,  in a variety of formats,  we also  develop  products  that  address a
+variety of networking functions.  The following product map provides examples of
+how our products  address our customers'  needs based on target equipment market
+(access, edge, core) and functionality (PHY/Framer, Layer 2+, traffic management
+and switch fabrics):
+
+                       Table II - Product Function Table
+
+                     ------------------- ------------------- -------------------
+                            ACCESS               EDGE              CORE
+                     ------------------- ------------------- -------------------
+Switch Fabrics and
+Traffic Management   S/UNI-APEX,         S/UNI-APEX          TT1
+                     S/UNI-VORTEX,
+                     S/UNI- DUPLEX
+                     ................... ................... ...................
+Layer 2+             MECA, FREEDM,       CLASSIPI,
+                     S/UNI-ATLAS,        S/UNI-ATLAS,        CHESS-2488,
+                     AAL1gator, PALADIN  AAL1gator           S/UNI-ATLAS-2500
+                     ................... ................... ...................
+PHY/FRAMER           COMET, TEMUX        SPECTRA,            S/UNI-2488
+                                         S/UNI 155/622
+                     -----------------------------------------------------------
+                                        MIPS MICROPROCESSORS
+                     -----------------------------------------------------------
+
+By providing architectural  solutions, our goal is to provide our customers with
+solutions  that enable them to bring  their next  generation  products to market
+faster.
+
+         We Develop and Acquire  New  Technologies  to Address the Needs of Next
+         Generation Networks
+
+While  some  of  the  next  generation   products  we  introduce  are  based  on
+technologies we develop ourselves, we intend to fill some of our technology gaps
+through acquisitions.  The following is a table that summarizes the acquisitions
+where we acquired technology in the three years ended December 31, 2000.
+
+                         Table III - Acquisition Summary
+
+--------------------------------------------------------------------------------
+         Acquired Company              Date Acquired     Technology Acquired
+--------------------------------------------------------------------------------
+ Integrated Telecom Technology, Inc.        May 1998  SARs, Traffic Management
+                                                      and Switch Fabrics
+--------------------------------------------------------------------------------
+ Abrizio, Inc.                        September 1999  High Capacity/Protocol
+                                                      Agnostic Switch Fabrics
+--------------------------------------------------------------------------------
+ Toucan Technology Ltd.                 January 2000  Digital Signal
+                                                      Processing (DSP)
+--------------------------------------------------------------------------------
+ AANetcom, Inc.                           March 2000  High Speed Serial/
+                                                      Deserialisers
+--------------------------------------------------------------------------------
+ Extreme Packet Devices Inc.              April 2000  Traffic Management
+--------------------------------------------------------------------------------
+ Malleable Technologies, Inc.              June 2000  Voice-over-IP/ATM DSPs
+--------------------------------------------------------------------------------
+ Datum Telegraphic Inc.                    July 2000  Power Linearization DSPs
+                                                      for Wireless Basestations
+--------------------------------------------------------------------------------
+ Quantum Effect Devices, Inc.            August 2000  MIPS Microprocessors
+--------------------------------------------------------------------------------
+ SwitchOn Networks, Inc.              September 2000  Layer 3-7 Classification
+                                                      DSPs
+--------------------------------------------------------------------------------
+
+Some of the technologies we acquired not only addressed  different  functions in
+our  customers'   equipment,   but  also  provided  us  with  new  semiconductor
+technologies  that  our  customers  demand.   For  instance,   we  acquired  DSP
+technologies  through  the  acquisitions  of Toucan,  Malleable  and Datum,  and
+microprocessor technology through the acquisition of Quantum Effect Devices.
+
+         New Networking Product Development
+
+In 2000,  we  introduced  the S/UNI  16x155,  S/UNI 4x622 and S/UNI 2488.  These
+represent  our  next  generation  of ATM and  Packet-over-Sonet  physical  layer
+products  that  traffic  at OC-48  line  rates on next  generation  routers  and
+multi-service switches.
+
+We introduced the CHESS chip set in 2000 to address the  challenging  networking
+task of managing  channelized  signals.  Channelized  signals  carry a number of
+smaller  channels  on one high speed  signal.  The CHESS chip set  includes  the
+Spectra 2488,  Spectra 4x155, TBS, TSE and S/UNI MACH 48. These products provide
+framing, channelizing, serializing, traffic grooming, and mapping in channelized
+OC-48 streams. With the CHESS chip set, we provide our customers with a range of
+products  which can help them  build new  classes  of  digital  cross  connects,
+add-drop multiplexers and switches.
+
+We introduced the S/UNI Atlas 3200, which performs address  resolution,  traffic
+policing,  fault and performance management and statistics gathering channelized
+and  unchannelized  communication  streams  at OC-48.  The S/UNI  Atlas  3200 is
+targeted at multi-service core, edge, access and metro-optical equipment.
+
+We began  sampling our S/UNI 2xGE in 2000 to support our  customers'  efforts to
+handle IP traffic in their core and edge  routers,  multi-service  platforms and
+point-of-presence  equipment.  The  S/UNI  2xGE is a  physical  layer  dual port
+gigabit ethernet transceiver with integrated media access controllers.
+
+We announced three new members of our AAL1gator  family of ATM adaptation  layer
+processors. These chips allow our customers to develop equipment that aggregates
+multiple lines of voice and other traffic onto an ATM network.
+
+We introduced the S/UNI STAR, S/UNI CDB and S/UNI 4xD3F.  These products provide
+flexible  physical layer  solutions to our customers for use in next  generation
+multi-service  equipment,   customer  premise  equipment  routers  and  wireless
+basestations.
+
+In 2000,  we also  introduced a variety of next  generation  products for use in
+lower speed traffic  aggregation  and  management  equipment  applications.  The
+TEMUX-84 is a next generation T1/E1 product that combines 84 ports of T1 framing
+or 63 ports of E1 framing with three DS-3 multiplexers. This product, along with
+our other physical layer access products,  addresses key market concerns of high
+port density,  low power  consumption and small packaging.  Also in keeping with
+these needs,  we introduced the COMET QUAD, the four-port next generation of our
+COMET product line.
+
+We introduced  the  PALADIN-10,  a DSP chip that improves the  effectiveness  of
+wireless  base-station  amplifiers by reducing power  consumption by eliminating
+transmitter  distortions  and spectral  inefficiencies.  We also  introduced the
+MECA-4I and MECA-4A, a family of voice-over-IP or voice-over-ATM DSP chips which
+convert voice signals into IP packets or ATM cells for transport  over IP or ATM
+networks.
+
+We also  introduced our next  generation  MIPS based  microprocessor  called the
+RM7000A.  The  RM7000A  is  designed  for  software-intensive   data  networking
+applications.
+
+Finally, we introduced the Tiny Tera One, or TTI, chip set and switch fabric for
+high bandwidth switching applications. The TT1 chip set enables scalable terabit
+routers,  ATM switches and optical switches to provide aggregate bandwidth of up
+to 320 gigabits per second.  The TT1 chip set uses an  architecture  that allows
+for the multiple rack system implementations required to deal with the power and
+mechanical demands of these high performance systems.
+
+OUR NON-NETWORKING PRODUCTS
+
+In the third  quarter of 1996,  we announced our decision to exit the modem chip
+set business and discontinue  development of our custom chip sets. Our remaining
+non-networking  products  are  still  being  sold  but we are not  planning  new
+development or follow-on products. Most of our remaining  non-networking revenue
+is  generated  by one custom  semiconductor  that is used in a  portable  health
+monitoring device.
+
+Revenues from other  non-networking  products  declined rapidly in 1998 and 1999
+and increased in 2000. We expect that our primary non-networking customer's next
+generation  health monitoring device will be released in 2001. This product does
+not incorporate any of our  semiconductors in its design. As a result, we expect
+revenue from non-networking products to decline rapidly in 2001 and end in 2002.
+
+SEGMENT PERFORMANCE
+
+We evaluate performance based on gross profits from operations of our networking
+and non-networking  segments.  Summarized financial information by segment is as
+follows:
+
+                                               Year Ended December 31,
+                                     -------------------------------------------
+
+(in thousands)                           2000            1999            1998
+--------------------------------------------------------------------------------
+Net revenues
+
+ Networking                           $  665,700      $  278,477      $  152,015
+ Non-networking                           28,984          17,291          22,273
+--------------------------------------------------------------------------------
+Total                                 $  694,684      $  295,768      $  174,288
+                                     ===========================================
+
+
+Gross profit
+
+ Networking                           $  515,712      $  214,401      $  118,469
+ Non-networking                           12,811           7,928          10,529
+--------------------------------------------------------------------------------
+Total                                 $  528,523      $  222,329      $  128,998
+                                     ===========================================
+
+SALES, MARKETING AND DISTRIBUTION
+
+Our sales and marketing strategy is to be designed into our customers' equipment
+by developing and selling  superior  products for which we will provide  premium
+service and technical support. We maintain close working  relationships with our
+customers  in order to make  products  that  address  their  needs.  We  provide
+technical support to customers through field  application  engineers,  technical
+marketing and factory systems engineers. We believe that providing comprehensive
+product service and support is critical to shortening  customers'  design cycles
+and maintaining a competitive position in the networking market.
+
+We  sell  our   products   directly   and  through   distributors,   independent
+manufacturers'  representatives and manufacturing  subcontractors.  Based on end
+users and ignoring sales to distributors or sub-contractors, Lucent Technologies
+and Cisco Systems each  represented  greater than 10% of our 2000  revenues.  In
+2000, the country  purchasing the largest  percentage of our products outside of
+the United States was Canada at 12%. Our  international  sales accounted for 38%
+of total revenue in 2000, 30% in 1999 and 32% in 1998.
+
+MANUFACTURING
+
+Independent  foundries and chip assemblers  manufacture all of our products.  We
+receive  most of the  silicon  wafers  with  which we derive our  products  from
+Chartered Semiconductor  Manufacturing Ltd. ("Chartered"),  Taiwan Semiconductor
+Manufacturing  Corporation  ("TSMC"),  LSI  Logic  Corporation  and  IBM.  These
+independent  foundries produce our networking  products at feature sizes down to
+0.18 micron.  We believe that by using  independent  foundries to fabricate  our
+wafers, we are better able to concentrate our resources on designing and testing
+new products.  In addition,  we avoid much of the capital cost  associated  with
+owning and operating a fabrication facility.
+
+We have supply  agreements  with  Chartered  and TSMC.  We have made deposits to
+secure access to wafer fabrication  capacity under both of these agreements.  At
+December 31, 2000 and 1999,  we had $23.0 and $19.1  million,  respectively,  in
+deposits with the foundries.  Under these agreements,  the foundries must supply
+certain  quantities of wafers per year. Neither of these agreements have minimum
+unit volume  requirements  but we are  obliged  under one of the  agreements  to
+purchase a minimum  percentage of our total annual wafer  requirements  provided
+that the foundry is able to continue to offer competitive  technology,  pricing,
+quality and delivery.  The agreements may be terminated if either party does not
+comply with the terms.
+
+Wafers  supplied by outside  foundries  must meet our incoming  quality and test
+standards.  We conduct the  majority of our test  operations  on advanced  mixed
+signal  and  digital  test  equipment  in our  Burnaby,  Canada,  facility.  The
+remainder of our testing is performed  predominantly by independent US and Asian
+companies.
+
+RESEARCH AND DEVELOPMENT
+
+Our  current  research  and  development  efforts are  targeted  at  integrating
+multiple  channels  or  functions  on single  chips,  broadening  the  number of
+products we provide to address varying protocols and networking  functions,  and
+increasing the speeds at which our chips operate.
+
+We have design centers in or near  Gaithersburg  (Maryland),  Galway  (Ireland),
+Dublin (Ireland),  Montreal (Canada),  Portland (Oregon),  Ottawa (Canada), Pune
+(India), San Jose (California),  Saskatoon (Canada), Toronto (Canada), Vancouver
+(Canada) and Winnipeg (Canada).
+
+We spent $178.8  million in 2000,  $83.7  million in 1999,  and $50.9 million in
+1998 on research and development.  In 2000, we also expensed $38.2 million of in
+process  research  and  development,  $31.5  million  of  which  related  to the
+acquisition of Malleable  Technologies  and $6.7 million of which related to the
+acquisition of Datum Telegraphic.
+
+In 1998, we also expensed $39.2 million of in process  research and development,
+$37.8  million  of  which  related  to the  acquisition  of  Integrated  Telecom
+Technologies  and $1.4  million  of which  related to the  acquisition  of other
+technology.
+
+BACKLOG
+
+We sell primarily pursuant to standard short-term purchase orders. Our customers
+frequently revise the quantity actually  purchased and the shipment schedules to
+reflect changes in their needs. As of December 31, 2000, our backlog of products
+scheduled for shipment within six months totaled $216.0 million.  As of December
+31,  1999,  our backlog of products  scheduled  for  shipment  within six months
+totaled $165.3 million.  Our backlog includes backlog to our major  distributor,
+which may not  result  in  revenues  as we do not  recognize  revenue  until our
+distributor  has  sold our  products  through  to the end  customer.  Also,  our
+customers  may cancel a significant  portion of the backlog at their  discretion
+without penalty.  Accordingly,  we believe that our backlog at any given time is
+not a meaningful indicator of future revenues.
+
+During  December 2000 and into the first quarter of 2001,  many of our customers
+experienced  decreased  demand,  order  cancellations or  postponements  and had
+accumulated significant inventories of our networking products. See "Outlook for
+2001" in  "Management's  Discussion  and  Analysis of  Financial  Condition  and
+Results of Operations".
+
+COMPETITION
+
+Our competitors include Applied Micro Circuits Corporation,  Broadcom,  Conexant
+Systems,   Cypress  Semiconductor,   Dallas  Semiconductor,   Exar  Corporation,
+Integrated  Device  Technology,   IBM,  Infineon,   Intel,  Lucent  Technologies
+(including Agere),  Marvell  Technology Group,  Motorola,  Multilink  Technology
+Corporation,   Nortel  Networks,  Texas  Instruments,   Transwitch  and  Vitesse
+Semiconductor.  Over the next few years, we expect additional competitors,  some
+of which may also have  greater  financial  and  other  resources,  to enter the
+market with new products. In addition, we are aware of venture-backed  companies
+that focus on specific portions of our broad range of products. These companies,
+individually or collectively, could represent future competition for many design
+wins, and subsequent product sales.
+
+The markets for our  products  are  intensely  competitive  and subject to rapid
+technological  advancement  in design  tools,  wafer  manufacturing  techniques,
+process  tools and  alternate  networking  technologies.  We must  identify  and
+capture  future  market  opportunities  to offset the rapid price  erosion  that
+characterizes  our  industry.  We may not be able to  develop  new  products  at
+competitive pricing and performance levels. Even if we are able to do so, we may
+not complete a new product and  introduce it to market in a timely  manner.  Our
+customers may substitute use of our products in their next generation  equipment
+with those of current or future competitors.
+
+We typically face  competition  at the design stage,  where  customers  evaluate
+alternative design approaches that require integrated circuits.  Our competitors
+have  increasingly  frequent  opportunities  to  supplant  our  products in next
+generation  systems  because of shortened  product life and design-in  cycles in
+many of our customers' products.
+
+We are expanding  into some  markets,  such as the wireless  infrastructure  and
+generic  microprocessor  markets,  that have  established  incumbents  that have
+substantial  financial and other resources.  Some of these  incumbents  derive a
+majority of their earnings from these markets.  We expect fiercer competition in
+these markets.
+
+In addition, major domestic and international  semiconductor companies,  such as
+Intel, IBM, and Lucent  Technologies,  are concentrating an increasing amount of
+their  substantially  greater  financial  and other  resources on the markets in
+which we  participate.  This  represents  a serious  competitive  threat to PMC.
+Emerging  companies also provide  significant  competition in our segment of the
+semiconductor  market,  while our  peers are  becoming  mature,  successful  and
+sophisticated.
+
+Competition  is  particularly  strong in the market for optical  networking  and
+optical  telecommunication chips, in part due to the market's growth rate, which
+attracts larger competitors,  and in part due to the number of smaller companies
+focused on this area. These companies,  individually or collectively,  represent
+strong  competition for many design wins, and subsequent  product sales.  Larger
+competitors in our market have recently  acquired or announced  plans to acquire
+both publicly  traded and privately held  companies with advanced  technologies.
+These acquisitions could enhance the ability of larger competitors to obtain new
+business that PMC might have otherwise won.
+
+LICENSES, PATENTS AND TRADEMARKS
+
+We have several U.S. patents and a number of pending patent  applications in the
+U.S.  and  Europe.  In  addition to such  factors as  innovation,  technological
+expertise and experienced personnel, we believe that a strong patent position is
+becoming  increasingly  important to compete  effectively  in the  industry.  We
+therefore have an active program to acquire additional patent protection.
+
+We apply for mask work  protection  on our circuit  designs.  We also attempt to
+protect our software,  trade secrets and other proprietary information by, among
+other security measures,  entering into proprietary  information agreements with
+employees.  Although we intend to protect our rights vigorously,  we do not know
+if the measures we use will be successful.
+
+PMC and its logo are our registered  trademarks and service marks.  We own other
+trademarks  and service  marks not  appearing in this Annual  Report.  Any other
+trademarks used in this Annual Report are owned by other entities.
+
+EMPLOYEES
+
+As of December 31, 2000, we had 1,726  employees,  including 1,083 in Research &
+Development, 207 in Production and Quality Assurance, 245 in Marketing and Sales
+and 191 in  Administration.  Our employees are not  represented  by a collective
+bargaining  agreement.  We have never experienced any work stoppage.  We believe
+our employee relations are good.
+
+GLOSSARY OF TERMS
+
+We use a number of terms in this Annual  Report  which are  familiar to industry
+participants  but which some  investors  may not  recognize.  We have provided a
+glossary of some of these terms below.
+
+ATM: Asynchronous Transfer Mode - a high speed switching technology used in both
+LAN and WAN  applications.  ATM packages  information  in a fixed size (53 byte)
+cell format. ATM transmission rates can scale from 25 megabits per second (Mbps)
+to 40 gigabits per second (Gbps). An "ATM Network" is a network based on the ATM
+protocol.
+
+Bandwidth:  Commonly defined as the volume of data that a transmission  line can
+carry,  measured in bits per second.  Traditional  copper  lines have the lowest
+bandwidth potential, while fiber optic lines have the highest.
+
+Constant Bit Rate (CBR): A type of traffic that requires a continuous,  specific
+amount of bandwidth  over the ATM network.  This is typically  required for high
+quality video and digital voice transmission.
+
+Dense Wavelength  Division  Multiplexing  (DWDM): An extension of WDM technology
+that allows simultaneous transmission of multiple channels on a single fiber.
+
+Digital  Cross  Connect:  An  electronic  switching  system that routes  digital
+signals among multiple paths without demultiplexing them.
+
+Digital Subscriber Line: A public network access technology that allows multiple
+forms of high bandwidth data,  voice, and video to be carried over  twisted-pair
+copper wire between a network service provider's central office and the customer
+site.
+
+Digital Signal Processor (DSP): A specialized  computer chip designed to perform
+a variety of possible  complex  operations  digitally rather than by traditional
+analog  methods.  DSPs are useful in processing  sound (like voice phone calls),
+graphics or video.  For  example,  some DSPs are used in  compressing  real-time
+video signals before they are sent on a  communications  pipe to help reduce the
+amount of bandwidth used by the signals.
+
+Ethernet:  A standard  protocol that encompasses both layer 1 (the  transmission
+and  reception  of  bits)  and  layer  2 (the  packaging  of data  into  frames)
+functions.
+
+Frame Relay: A  packet-switching  technology used to route frames of information
+within a WAN. Instead of leasing dedicated lines between all remote sites, frame
+relay allows  virtual  private  networks to be established in which remote sites
+are connected to a central carrier, which routes data accordingly.
+
+Gigabit:  One billion bits.
+
+HDLC:   High-level  Data  Link  Control  -  A  transmission  protocol  in  which
+information  that  allows  devices to control  data flow and  correct  errors is
+embedded in a data frame. Typically used for frame relay services.
+
+Internet  Protocol (IP): A routing  protocol  standard that is used to transport
+traffic over the  Internet.  IP  implements  the network  layer (Layer 3) of the
+TCP/IP protocol, which contains a network address and is used to route a message
+to a different network or subnetwork.
+
+ISDN: A  traditional  communications  line that allows users to transmit data at
+128 Kbps over copper cable.
+
+LAN:  Local Area Network - A shared network of computers that spans a relatively
+small area, usually confined to a single or cluster of buildings.
+
+MAN:  Metropolitan  Area  Network  - A  communications  network  that  covers  a
+geographic area, such as a city or suburb, or a series of LANs at multiple sites
+often interconnected by public facilities.  "Edge" networks are similar to MANs,
+but generally relate to equipment that acts as a bridge onto an ATM network.
+
+Megabit: One million bits.
+
+MIPS Microprocessor: Microprocessors based on reduced instruction set computing,
+or RISC  architectures;  these devices can perform  computations and control the
+flow  of  information  in  networking/communications  infrastructure  equipment,
+business network equipment and consumer network products.
+
+Multiplexing:  An electronic or optical  process that combines a large number of
+low-speed  transmission  lines into one  high-speed  line by splitting the total
+available   bandwidth   of  the   high-speed   line  into   narrower   channels.
+Demultiplexing is the reverse of multiplexing.
+
+OC Units:  See "SONET" below.
+
+Packet: A group of binary digits  transmitted and routed as a whole. Each packet
+contains  information,  a destination  code,  and a sequencing  code in order to
+place the data in proper  place in the  sequence  of  packets  that  comprise  a
+complete data transmission and codes used to check the transmission errors.
+
+Point-of-Presence  (POP):  1. A geographic  area within  which a  communications
+network allows local access.  2.  Locations  where a  long-distance  carrier has
+installed  transmission  equipment  in a service  area that serves as, or relays
+calls  to, a network  switching  center of that  long-distance  carrier.  3. The
+physical  site  where an  Internet  service  provider  has its  modems and other
+networking gear. Subscribers dial into the POP for Internet access.
+
+Quality of Service  (QoS):  The  ability to define a level of  performance  in a
+system.  For example,  ATM networks specify modes of service that ensure optimum
+performance for traffic,  such as real-time voice and video.  Voice  information
+receives  priority over data  information  in order to ensure speech quality and
+prevent delay.
+
+Router:  Device that connects  multiple LANs or the bridge between a LAN and the
+WAN.
+
+SDH:  Synchronous Digital Hierarchy - An international  standard for synchronous
+data transmission  over fiber; SDH was adapted from SONET,  which is employed in
+North America.
+
+SONET:  Synchronous Optical Network - Standard for synchronous data transmission
+over glass fiber. Rates are measured in optical carrier (OC) units. For example,
+OC-1 equals rates of 51.84 Mbps, OC-3 equals 155 Mbps, OC-12 equals 622 Mbps and
+OC-48 equals 2.5 Gbps. The international equivalent is SDH.
+
+T1/E1:  T1 is a digital  transmission  link with a capacity of 1.544 Mbps. A T-1
+line can  normally  accommodate  24  voice  conversations  (channels),  each one
+digitized at 64 Kbps and one 8-Kbps channel for signaling and control. E1 is the
+European designation for T1 and has a capacity of approximately 2 Mbps.
+
+T3/E3: A digital  transmission link capable of transmission speeds of 45 Mbps. A
+T-3 line can normally  accommodate 672 voice  conversations.  E3 is the European
+designation for T3.
+
+Terabit:  One trillion bits.
+
+WANs:  Wide Area  Network - A shared  network  of  computers  that spans a large
+geographical area, normally consisting of multiple LANs or MANs.

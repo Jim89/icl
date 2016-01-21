@@ -1,0 +1,850 @@
+Item 1.    BUSINESS. 
+
+ 
+Applied Micro Circuits Corporation was incorporated and commenced operations in California in 1979. AMCC was reincorporated in Delaware in 1987. Certain statements in this Annual Report on Form 10-K, including statements contained in the sections entitled “Business” and “Management’s Discussion and Analysis of Financial Condition and Results of Operations”, constitute “forward-looking statements” within the meaning of Section 27A of the Securities Act of 1933, as amended (the “Securities Act”), and Section 21E of the Securities Exchange Act of 1934, as amended (the “Exchange Act”). Such forward-looking statements involve known and unknown risks, uncertainties and other factors which may cause the actual results, performance or achievements of the Company to be materially different from any future results, performance or achievements expressed or implied by such forward-looking statements. See “Risk Factors” and “Management’s Discussion and Analysis of Financial Condition and Results of Operations”. 
+ 
+In this Annual Report on Form 10-K, “Applied Micro Circuits Corporation”, “AMCC”, the “Company”, “we”, “us” and “our” refer to Applied Micro Circuits Corporation and all of our consolidated subsidiaries. 
+ 
+Overview 
+ 
+We design, develop, manufacture and market high-performance, high-bandwidth silicon integrated circuit (“IC”) solutions for the world’s wide area networks. We utilize a combination of high-frequency analog, mixed-signal and digital design expertise coupled with system-level knowledge and multiple silicon process technologies to offer IC products that enable the transport of voice and data over wide area networks. Our customers include leading communications equipment manufacturers (“OEMs”) such as Alcatel, Ciena, Cisco, Fujitsu, Huawei, JDS Uniphase, Juniper, Lucent, Marconi, NEC, Nortel, ONI, OpNext, Redback, Siemens/Unisphere, Sycamore, and Tellabs. 
+ 
+Our objective is to be the premier supplier of high-bandwidth silicon IC solutions for the world’s wide area networks. Our strategy for achieving this objective includes: 
+ 
+  •   focusing on the wide area network markets, including the optical core, metropolitan area networks and access networks;  
+
+ 
+  •   providing a time-to-market advantage to our customers by offering complete, fiber-through-switch solutions and integrated product functionality; and  
+
+ 
+  •   leveraging our expertise in multiple silicon-process technologies to provide cost-effective, optimized solutions.  
+
+ 
+Our products target the following communications semiconductor markets: Synchronous Optical Network (“SONET”), Synchronous Digital Hierarchy (“SDH”), Asynchronous Transfer Mode (“ATM”), Dense Wave Division Multiplexing (“DWDM”), and 10 Gigabit Ethernet. We provide our customers with complete silicon IC solutions including physical media dependent (“PMD”) devices such as laser drivers, physical layer (“PHY”) products such as transceivers, overhead processor products such as framers and mappers, and higher layer products such as network processors and switch fabrics. Our products currently target data rates up to 40 gigabits per second (a rate known as “OC-768”). 
+ 
+Industry Background 
+ 
+The Communications Industry 
+ 
+Communications technology has evolved from simple analog voice signals transmitted over networks of copper telephone lines to complex analog and digital voice and data signals transmitted over hybrid networks of 
+
+1 
+
+
+--------------------------------------------------------------------------------
+
+media, such as copper, coaxial and fiber optic cables, as well as by radio frequency. This evolution has been driven by enormous increases in the number of users and the complexity of the data types transmitted. In addition, the substantial growth in the Internet and wireless communications, the emergence of new applications, such as video conferencing and wireless web devices, and the increase in demand for remote network access and higher speed, higher bandwidth communication between local and wide area networks have increased network bandwidth requirements. 
+ 
+The increase in volume and complexity of this network traffic has led to the development of new technologies for use in these networks. These technologies provide substantially greater transmission capacity, are less error prone and are easier to maintain than copper networks. For example, the SONET standard in North America and Japan and the SDH standard in the rest of the world became the standards for the transmission of signals over optical fiber. The SONET/SDH standards facilitate high data integrity and improved network reliability, while reducing maintenance and other operation costs by standardizing interoperability among equipment from different vendors. With data and video traffic being added in abundance to voice traffic, ATM emerged as a transmission protocol complementary to SONET/SDH to optimize bandwidth utilization. With exponential increases in data traffic and very modest increases in voice traffic, data has become the dominant traffic over fiber optic networks today. Because of the bandwidth growth and cost pressures in today’s datacentric networks, more advanced optical networking technologies, such as DWDM, have been adopted. DWDM is the optical multiplexing of different wavelengths of light down a single fiber. Each wavelength is the equivalent of an independent optical channel. DWDM greatly increases the capacity of installed fiber. Complementing DWDM transmission capabilities are emerging technologies, such as optical add-drop multiplexers and cross-connects which can more efficiently switch large optical datapaths through the network. New protocols, such as multi-protocol level switching (“MPLS”), have emerged that are better suited for data traffic while providing for the low latency and quality of service needs of voice and video traffic. The SONET/SDH standards have also evolved to handle these new protocols with packet over SONET (“POS”) capabilities. 
+ 
+The combination of increased traffic and emerging technologies has placed added pressure on the existing communications network infrastructure and made many systems’ architectures inadequate. In the late 1990’s communication service providers and equipment suppliers were affected by the inadequacy of systems’ architectures and began investing in data networks to meet the rapidly growing demands of their customers. In addition, deregulation of the communications industry and privatization of many European carriers resulted in increased market competition. The abundance of available capital in the public and private markets accelerated the build-out of new network infrastructure. Additional carriers were launched with the goal of capturing significant market share. All of these factors drove a significant increase in capital spending on networking equipment by both the incumbent and emerging carriers. During this period of rapid expansion, our OEM customers placed increased orders with us and their other suppliers to ensure they had the components needed to fulfill the expected growth in demand for networking equipment. 
+ 
+The Downturn of Capital Expenditures 
+ 
+This environment changed suddenly at the end of our fiscal 2001. Global capital markets tightened, and the communications industry began to rapidly slow down. Many of the incumbent carriers halted capital expenditures on networking equipment in an effort to stabilize their financial condition. Many of the emerging carriers were unable to attract sufficient customers and failed. Capital spending in general, and on networking equipment in particular, collapsed across the industry. 
+ 
+With the collapse of capital spending, we first experienced an increase in order cancellations and then a decline in customer orders, which resulted in a sudden drop in sales of our products. As fiscal 2002 progressed, the impact of the downturn was prolonged by the inventory levels that existed at our OEM Customers. 
+
+2 
+
+
+--------------------------------------------------------------------------------
+
+ 
+The Communications IC Opportunity 
+ 
+Despite the industry downturn, industry analysts report that network traffic continues to grow. The continuing adoption of broadband technology and next-generation wireless devices is expected to drive additional data traffic through the network infrastructure in the future. To address these opportunities, OEMs are looking to develop more sophisticated and cost effective systems. To achieve the performance and functionality required by such systems, these OEMs must utilize more complex ICs. As a result of the pace of new product introductions, the proliferation of standards to be accommodated and the difficulty of designing and producing the required ICs, equipment suppliers have increasingly outsourced these ICs to semiconductor firms with specialized expertise. These trends have created a significant opportunity for IC suppliers that can design cost-effective solutions for the transmission of data. IC suppliers must utilize a variety of skills and technologies to satisfy the requirements of communications OEMs. These OEMs require IC suppliers that possess system-level expertise and can quickly bring to market high-performance, highly reliable, power-efficient ICs. These OEMs seek suppliers with both analog and digital expertise to provide a more complete solution that enables faster integration into the system design and higher performance. 
+ 
+AMCC Strategy 
+ 
+Our objective is to be the leading supplier of high-performance, high-bandwidth silicon IC solutions for the world’s wide area networks, including the optical core, metropolitan area networks and access networks. To achieve this objective, we employ the following strategies: 
+ 
+Focus on Wide Area Network Markets 
+ 
+We target key WAN markets, including those for SONET/SDH, ATM, POS, DWDM and optical modules. We have built substantial competencies focused on the specific requirements of these markets in the areas of process technology, mixed-signal, and very dense digital design and substantial expertise in systems architecture and applications support. We believe that the integration of these capabilities enables us to optimize solutions addressing the high-bandwidth connectivity requirements of communications equipment suppliers. 
+ 
+Provide a Time-to-Market Advantage to Our Customers by Offering Complete Fiber-Through-Switch Solutions and Integrated Product Functionality 
+ 
+Due to the extended downturn in the communications industry, our OEM customers must become more efficient with their engineering resources. Our strategy is to provide our customers with fiber-through-switch pre-integrated silicon ICs. We believe this comprehensive solution strategy provides our customers with guaranteed interoperability, pre-designed subsystems, better cost economics and system-level expertise. The result is faster time-to-market, better performance and lower development cost. To continue these customer benefits in future generations of products, we are pursuing an aggressive integration strategy to provide greater functionality in fewer ICs. 
+ 
+Leverage our Expertise in Multiple Silicon Process Technologies to Provide Optimized Solutions 
+ 
+We are dedicated to utilizing the best silicon process technologies available to offer solutions optimized for specific applications and customer requirements. We believe our expertise in advanced processes from external foundries provides us with the flexibility to design and manufacture products that are tailored to an application’s individual needs. Through this flexible approach, we are better able to transition products over time to new manufacturing processes as product performance requirements and process technologies evolve. 
+
+3 
+
+
+--------------------------------------------------------------------------------
+
+ 
+Products and Customers 
+ 
+Transition from ASICs to ASSPs 
+ 
+Application specific integrated circuits (“ASICs”) are custom products that are designed for only one customer and can be sold only to that one customer. Application specific standard products (“ASSPs”) are standardized products that are designed for, and can be used by, multiple customers. Our customers are looking for ways to accelerate their time to market, reduce research and development cost, and ensure interoperability of components in their systems. ASSPs generally can be designed into the systems and brought to market in less time and for less cost. As more companies realize the development cost and time-to-market benefits that ASSPs provide, the more apt they are to use ASSPs in the future. Most of our products are ASSPs, and we believe that the trend towards greater usage of ASSPs in communication network systems will continue. 
+ 
+We have several types of communications IC products which are categorized by the order in which they receive and transmit signals and information within communication equipment. These categories are: 
+ 
+PMD Layer:    Our PMD layer ICs typically work in conjunction with the lasers or photo diodes that provide the electrical-to-optical and optical-to-electrical signal conversions. These ICs include various amplifiers that take very weak analog electrical signals (e.g. a few millivolts) and increase them for use by the physical layer. Our PMD layer products transmit signals at rates ranging from 1 to over 40 gigabits per second (“Gbps”). 
+ 
+Physical Layer:    Our physical layer ICs transmit and receive signals to and from the PMD layer in a very high-speed serial format (over 40Gbps today) and reduce overall system “noise”. This low noise capability permits the transmission of signals over greater distances with fewer errors. Our physical layer ICs also convert analog signals from the PMD layer to digital signals for the framing layer and vice versa. 
+ 
+Framing Layer:    Our framing layer ICs transmit and receive signals to and from the physical layer in a parallel format and are used predominately in systems, such as very high-speed transmission equipment, add-drop multiplexers, digital and optical cross-connects, edge and core routers and DWDM. After receiving the signals, these ICs then perform a number of additional functions, including framing, terminating the overhead, performance monitoring, forward error correction and mapping the data payload to/from the transmission format. The framing layer ICs then pass the data either directly to a switch fabric product which switches the information to its destination, or to a network processor, which further processes the data prior to forwarding it to a switch fabric product. Framing layer ICs similarly process signals received from the network processing and switching layers for transmission to the physical layer on their return to the optical network. 
+ 
+Network Processing Layer:    Our network processor ICs are software programmable processors that receive and transmit signals from and to the framing layer and perform the processing of packet and cell headers, including such functions as real-time parsing, matching and table look-up, as well as bit stream manipulations, such as adding, deleting, substituting, appending and pre-pending. They can perform intelligent packet classification for policy-based network services. After processing, the signals are sent on to the traffic management and switch fabric layer. 
+ 
+Traffic Management and Switching Layer:    Our traffic management ICs receive and transmit signals from and to the network processor and primarily perform the queuing and buffering required on packets before the information is sent to the switch fabric. Our switch fabric ICs then switch the information in the proper priority and to the proper destinations. 
+ 
+Products 
+ 
+PMD Products:    During fiscal 2001, we introduced our first generation OC-768 modulator driver, 10Gigabit ethernet transimpedance amplifier, and 10Gbps VCSEL laser driver and amplifier products. In addition, we introduced our second generation 3.2Gbps VCSEL laser driver and amplifier products for use in 
+
+4 
+
+
+--------------------------------------------------------------------------------
+
+optical backplane and very short reach parallel fiber applications. Our current customers for PMD products include Agere, Alcatel, Ciena, Fujitsu, NEC, Sumitomo, Sycamore Networks and Zarlink. 
+ 
+Physical Layer Products:    We introduced our first generation of physical layer products in 1993. We have since developed several generations of these products improving cost, power, functionality and performance. During fiscal 2002, we introduced another generation of OC-48 (2.5 Gbps) and OC-192 integrated physical layer transceiver devices. Our current customers for physical layer products include Alcatel, Cisco, Ciena, Fujitsu, Hitachi, JDS Uniphase, Juniper Networks, Lucent, Marconi Communications, Nortel, Sycamore Networks and Tellabs. 
+ 
+Framer Layer Products:    During fiscal 2002, we introduced several framing layer products for the OC-12 (625 megabits per second), OC-48 and OC-192 markets. Some of these devices include: the Khantanga device, which is our combined 10Gigabit ethernet and OC-192 framer; the Mekong, which supports OC-192 pointer processing; and the Ohio, which is our second generation OC-48 data termination framer. Our current customers for framing layer products include Cisco, Ciena, Lucent, Marconi Communications, NEC, Nortel, Sycamore Networks, Tellabs and Tellium. 
+ 
+Network Processing Layer Products:    During fiscal 2002, we introduced our third and fourth generation network processors the nP7250, for OC-48 and the nP7510, a programmable wire speed OC-192 network processor. We also offer the nP7120 OC-48 packet processor. Our current customers for network processing products include Alcatel, Cisco, Fujitsu, Lucent, Nortel and Siemens/Unisphere. 
+ 
+Traffic Management and Switching Layer Products:    In fiscal 2002, we introduced the nPX5700, a 10Gbps traffic management solution. Additionally, we introduced two new packet switching solutions: the nPX5800 for system switching capacities of 160Gbps and below and the nPX8000, a packet/cell switch capable of scaling to 1.2 terabits of switching capacity. Our current customers for traffic management and switching layer products include Alcatel, Cisco, Fujitsu, Lucent, Nortel and Siemens/Unisphere. 
+ 
+Automated Test Equipment, High-Speed Computing and Military Products 
+ 
+We are not currently developing new products for the Automated Test Equipment (“ATE”), high-speed computing or military markets, but we continue to manufacture and sell ASIC products to customers such as Agilent, IBM, LTX, Northrop Grumman, Raytheon, Schlumberger, Teradyne and Texas Instruments. During fiscal 2002, we initiated a plan to phase out supplying ICs for these markets. We are currently receiving and filling last-time buy orders and finalizing plans to close our internal wafer fabrication facility, which manufactures the majority of the products for these markets. 
+ 
+Technology 
+ 
+We utilize our technological and design expertise to solve the problems of high-speed analog, digital and mixed-signal circuit designs for the world’s intelligent wide area networks. Our technological competencies include the definition, design and manufacturing of high-performance analog, digital and mixed-signal ICs for optical communications systems. 
+ 
+Knowledge of Communications ICs 
+ 
+We believe that our systems architects, design engineers and technical marketing and applications engineers have a thorough understanding of the fiber optic communications systems for which we design and build ASSPs. We substantially expanded this expertise into higher layers of the communication system with the acquisitions of Cimaron, YuniNetworks and MMC Networks in fiscal 2001. Using this systems expertise, we develop semiconductor devices to meet OEMs’ high-bandwidth systems requirements. By understanding the systems into which our products are designed, we believe that we are better able to anticipate and develop solutions optimized 
+
+5 
+
+
+--------------------------------------------------------------------------------
+
+for the various cost, power and performance trade-offs faced by our customers. We believe that our systems knowledge also enables us to develop more comprehensive, interoperable solutions. This allows us to develop boards with products that fulfill customers’ system needs from fiber-through-switch, enabling faster integration into their products. 
+ 
+Design of Communications ICs 
+ 
+We have developed multiple generations of products that integrate both analog and digital elements on the same IC, while balancing the difficult trade-offs of speed, power and timing inherent in high-speed applications. We were one of the first companies to embed analog phase locked loops in bipolar chips with digital logic for high-speed data transmission and receiver applications. Since the introduction of our first on-chip clock recovery and clock synthesis products in 1993, we have refined these products and have successfully integrated multiple analog functions and multiple channels on the same IC. The mixing of digital and analog signals poses difficult challenges for IC designers, particularly at high frequencies. We have acquired significant expertise in mixed-signal IC designs through the development of multiple generations of products. Through the acquisitions of MMC Networks and YuniNetworks in fiscal 2001, we added network processor and switch fabric digital design and systems expertise. We will continue to apply these competencies in the development of more complex digital products. 
+ 
+Manufacturing of Communications ICs 
+ 
+The manufacturing of communications ICs requires a combination of competencies in advanced silicon technologies, such as deep submicron CMOS and BiCMOS silicon germanium (“SiGe”), IC package design and manufacturing, and high speed test and characterization. We have obtained access to advanced CMOS and SiGe processes through foundry relationships. We have substantial experience in the development and use of plastic and ceramic packages for high-performance applications. The selection of the optimal package solution is a vital element of the delivery of high-performance products and involves balancing cost, size, thermal management and technical performance. Our products are designed to reduce power dissipation and die size to enable the use of industry standard packages. We employ a wide variety of package types and are currently designing products using ball grid arrays, tape ball grid arrays and multi-chip modules. Our experience with a variety of packages is one of the factors that enables us to provide optimal high-performance IC solutions to our customers. 
+ 
+Research and Development 
+ 
+Our research and development expertise and efforts are focused on the development of high-performance analog, digital and mixed-signal ASSPs for WAN applications. We also develop high-performance libraries and design methodologies that are optimized for these applications. 
+ 
+Product Development 
+ 
+Our product development is focused on building high-performance high-gate-count digital and analog-intensive designs that are incorporated into well-documented blocks that can be reused for multiple products. We have made, and will continue to make, significant investments in advanced design tools to leverage our engineering staff. Our product development is driven by the imperatives of reducing design cycle time, increasing first-time design correctness, adhering to disciplined, well documented design processes and continuing to be responsive to customer needs. We are also developing high-performance packages for our products in collaboration with our packaging suppliers and our customers. 
+ 
+Process Development 
+ 
+Our process development is focused on identifying or acquiring new processes optimized for high-performance digital and mixed-signal communications applications. Our process engineers are involved with the selection and management of our relationships with outside foundries to provide the advanced CMOS, SiGe and other leading edge process technologies required for certain of our products. 
+
+6 
+
+
+--------------------------------------------------------------------------------
+
+ 
+Manufacturing 
+ 
+Wafer Fabrication 
+ 
+We have a majority of our IC products manufactured at outside foundries, such as IBM, Taiwan Semiconductor Manufacturing Corporation (“TSMC”) and United Microelectronics Corporation (“UMC”). We rely on these foundries for the manufacture of nearly all of our products designed on CMOS and SiGe processes. By subcontracting our manufacturing requirements, we are able to focus our resources on design and test applications where we believe we have greater competitive advantages. This strategy also eliminates the high cost of owning and operating a semiconductor wafer fabrication facility for these technologies. Our operations and quality engineering team closely manages the interface between manufacturing and design engineering. As a result, we are responsible for the complete functional and performance testing of our devices, including quality testing. 
+ 
+Despite the current emphasis on external foundry resources, we still manufacture some of our IC products, which utilize bipolar and BiCMOS process technologies, at our internal wafer fabrication facility. We have neither designed nor developed any products in these technologies for several years and we have announced our intent to discontinue manufacturing these products entirely. We are in the final stages of developing a plan to close this facility and estimate that we will cease production in early calendar 2003 and will completely exit the facility shortly thereafter, although these dates may change. 
+ 
+Assembly and Test 
+ 
+The majority of our wafer probe testing is conducted at our internal testing facility. We also utilize our external foundries and independent wafer probe test subcontractors for testing of our products. After the wafers are probed, the majority of our products are sent to multiple subcontractors located in Asia, Europe and the United States for assembly. Following assembly, some of the devices are tested at the subcontractors and returned to us ready for shipment to our customers. However, a majority of the packaged units are returned to us for final testing and marking prior to shipment to customers. 
+ 
+Components and Raw Materials 
+ 
+We purchase our ceramic packages from IBM, Kyocera America, Motorola and NTK Ceramics and our plastic packaging from Amkor, ASE and ASAT. For our internal wafer fabrication facility, we purchase all of our “raw” silicon wafers from Wacker Siltronic Corporation. We believe that Wacker Siltronic will continue to supply our needs through the closure of the facility. 
+ 
+Sales and Marketing 
+ 
+We sell our products principally through a network of independent manufacturers’ representatives and distributors in specified territories under the direction of our direct sales force. Our direct sales force is technically trained and is supported by applications engineers in the field as well as applications and customer engineers at our design centers. We believe that this “engineering-intensive” relationship with our customers results in strong, long-term customer relationships beneficial to both us and our customers. We augment this strategic account sales approach with domestic and foreign distributors that service primarily smaller accounts purchasing ASSPs. 
+ 
+In North America, our direct sales effort is supported by 17 independent manufacturers’ representatives and one distributor. Internationally, we sell our products through 19 manufacturers’ representatives and distributors. Typically, distributors handle a wide variety of products, including those that compete with our products, and fill orders for many customers. Most of our sales to distributors are made under agreements allowing for price protection and right of return on stipulated quantities of unsold merchandise. Sales representatives generally do not offer directly competitive products, but may carry complementary items manufactured by others. 
+
+7 
+
+
+--------------------------------------------------------------------------------
+
+Representatives do not maintain a product inventory; instead, their customers place orders directly with us or through distributors. Our sales headquarters is located in San Diego, California. We maintain sales offices throughout the world. 
+ 
+Backlog 
+ 
+Our sales are made primarily pursuant to standard purchase orders for the delivery of products. Quantities of our products to be delivered and delivery schedules are frequently revised to reflect changes in customers’ needs, and customer orders generally can be canceled or rescheduled without significant penalty to the customer. For these reasons, our backlog as of any particular date is not representative of actual sales for any succeeding period, and we therefore believe that backlog is not a good indicator of future revenue. 
+ 
+Competition 
+ 
+In the communications IC markets, we compete primarily against companies such as Agere, Broadcom, Conexant, Infineon, Intel, Maxim, Multilink, PMC-Sierra, TriQuint and Vitesse. In addition, certain of our customers or potential customers have internal IC design or manufacturing capability with which we compete. Many of our competitors operate their own fabrication facilities and have longer operating histories and presence in key markets, greater name recognition, larger customer bases and significantly greater financial, sales and marketing, manufacturing, distribution, technical and other resources than we do. As a result, these competitors may be able to adapt more quickly to new or emerging technologies and changes in customer requirements or devote greater resources to the promotion and sale of their products. 
+ 
+The communications IC markets are highly competitive and are subject to rapid technological change, evolving standards, short product life cycles, price erosion and heightened international competition. We believe that the principal factors of competition for the markets we serve include: product performance, quality, reliability, integration, price and time-to-market as well as the Company’s reputation and level of customer support. Our ability to successfully compete in these markets depends on our ability to design and subcontract the manufacture of new products that implement new technologies and gain end market acceptance in an efficient and cost effective manner. 
+ 
+Proprietary Rights 
+ 
+We rely in part on patents to protect our intellectual property. We have been issued 61 patents, which principally cover certain aspects of the design and architecture of our IC products. In addition, we have over 200 inventions in various stages of the patent process in the United States and abroad. There can be no assurance that our pending patent applications or any future applications will be approved, or that any issued patents will provide us with competitive advantages or will not be challenged by third parties or that if challenged, will be found to be valid or enforceable, or that the patents of others will not have an adverse effect on our ability to do business. There can be no assurance that others will not independently develop similar products or processes, duplicate our products or processes or design around any patents that may be issued to us. 
+ 
+To protect our intellectual property, we also rely on a combination of mask work protection under the Federal Semiconductor Chip Protection Act of 1984, trademarks, copyrights, trade secret laws, employee and third-party nondisclosure agreements and licensing arrangements. 
+ 
+As a general matter, the semiconductor industry is characterized by substantial litigation regarding patent and other intellectual property rights. In the past we have been, and in the future may be, notified that we may be infringing the intellectual property rights of third parties. We have certain indemnification obligations to customers with respect to the infringement of third party intellectual property rights by our products. There can be no assurance that infringement claims by third parties or claims for indemnification by customers or end users of our products resulting from infringement claims will not be asserted in the future or that such assertions, if 
+
+8 
+
+
+--------------------------------------------------------------------------------
+
+proven to be true, will not materially adversely affect our business, financial condition or operating results. In the event of any adverse ruling in any such matter, we could be required to pay substantial damages, which could include treble damages, cease the manufacturing, use and sale of infringing products, discontinue the use of certain processes or obtain a license under the intellectual property rights of the third party claiming infringement. There can be no assurance that a license would be available on reasonable terms or at all. Any limitations on our ability to market our products, any delays and costs associated with redesigning our products or payments of license fees to third parties or any failure by us to develop or license a substitute technology on commercially reasonable terms could have a material adverse effect on our business, financial condition and operating results. See “Risk Factors”. 
+ 
+Environmental Matters 
+ 
+We are subject to a variety of federal, state and local governmental regulations related to the use, storage, discharge and disposal of toxic, volatile or otherwise hazardous chemicals used in our manufacturing process. Any failure to comply with present or future regulations could result in the imposition of fines, the suspension of production or a cessation of operations. In addition, such regulations could require us to acquire costly equipment or incur other significant expenses to comply with environmental regulations or clean up prior discharges. In this regard, since 1993, we have been named as a potentially responsible party (“PRP”) along with a large number of other companies that used Omega Chemical Corporation (“Omega”) in Whittier, California to handle and dispose of certain hazardous waste material. We are a member of a large group of PRPs that has agreed to fund certain remediation efforts at the Omega site, which efforts are ongoing. 
+
+9 
+
+
+--------------------------------------------------------------------------------
+
+EMPLOYEES 
+ 
+As of March 31, 2002, we had 1,129 full-time employees: 97 in administration, 601 in research and development, 214 in operations and 217 in marketing and sales. Our ability to attract and retain qualified personnel is essential to our continued success. None of our employees are covered by a collective bargaining agreement, nor have we ever experienced any work stoppage. We believe our employee relations are very good. 
+ 
+Executive Officers of the Registrant 
+ 
+Our executive officers and their ages as of May 1, 2002, are as follows: 
+ 
+Name
+--------------------------------------------------------------------------------
+    Age
+--------------------------------------------------------------------------------
+    Position
+--------------------------------------------------------------------------------
+ 
+David M. Rickey    46    Chairman of the Board and Chief Executive Officer 
+Roger A. Smullen, Sr.    66    Vice Chairman of the Board 
+Douglas C. Spreng    58    President and Chief Operating Officer 
+William E. Bendush    53    Senior Vice President, Chief Financial Officer, Secretary and Treasurer 
+Brent E. Little    38    Senior Vice President, Corporate Marketing and General Manager of Mixed Signal Products Division 
+Ramakrishna R. Sudireddy    35    Senior Vice President and General Manager of Framer Layer Products 
+Thomas L. Tullie    37    Senior Vice President, Worldwide Sales 
+Gregory A. Winner    46    Senior Vice President, Corporate Engineering, Technology and Quality 
+Jeffrey J. Cashen    41    Vice President, General Manager of Switching and Network Processing 
+Timothy M. Heenan    42    Vice President, Operations 
+Stephen M. Smith    43    Vice President, Controller 
+Vincent J. DeMaioribus    43    Vice President, Manufacturing 
+
+ 
+David M. Rickey re-joined the Company in February 1996 as President, Chief Executive Officer and as a Director. In August 2000, Mr. Rickey was appointed Chairman of the Board. In July 2001, Mr. Rickey resigned from the position of President, but continues to serve as Chairman of the Board and Chief Executive Officer. From August 1993 to May 1995, Mr. Rickey served as the Company’s Vice President of Operations. From May 1995 to February 1996, Mr. Rickey served as Vice President of Operations at NexGen, a semiconductor company. Previously, for eight years, Mr. Rickey was employed by Northern Telecom, Inc., a telecommunications manufacturer, where he led the wafer fab engineering and manufacturing operations in both Ottawa, Canada and San Diego, California. Mr. Rickey is a director of Macropore, Inc. Mr. Rickey has earned B.S. degrees from both Marietta College (summa cum laude) and Columbia University. In addition, Mr. Rickey received a M.S. in Materials Science and Engineering from Stanford University. 
+ 
+Roger A. Smullen, Sr. was elected Vice Chairman of the Board in August 2000. Prior to August 2000, Mr. Smullen served as the Chairman of the Board from October 1982. Mr. Smullen also served as Acting Vice President, Operations of the Company from August 1997 through October 1997 and the Company’s Chief Executive Officer from April 1983 until April 1987. Previously, he was Senior Vice President of Operations of Intersil, Inc.’s semiconductor division. In 1967, Mr. Smullen co-founded National Semiconductor Corporation, a manufacturer of integrated circuits. Prior to that, he was Director of Integrated Circuits at Fairchild Semiconductor, a manufacturer of integrated circuits. Mr. Smullen is currently a Director of Micro Linear Corporation, a manufacturer of integrated circuits. He holds a B.S. in Mechanical Engineering from the University of Minnesota. 
+ 
+Douglas C. Spreng joined the Company as Senior Vice President, Switch Fabric and Network Processing Division and Chief Executive Officer of MMC Networks when the Company acquired MMC Networks in October 2000. Mr. Spreng was promoted to Chief Operating Officer and President of the Company in July 2001. Mr. Spreng was Executive Vice President of the Client Access Business Unit at 3Com Corporation for seven years. In the early 1990’s, Mr. Spreng was President and Chief Operating Officer of Cellnet Data Systems. He 
+
+10 
+
+
+--------------------------------------------------------------------------------
+
+began his career with Hewlett Packard Company, where he held various marketing, manufacturing and general management positions for more than 23 years. Mr. Spreng is a director of Silicon Image, Inc. He holds a B.S.E.E. degree from the Massachusetts Institute of Technology and an M.B.A. from the Harvard Business School. 
+ 
+William E. Bendush joined the Company in April 1999 as Vice President, Chief Financial Officer and Secretary. Mr. Bendush was promoted to a Senior Vice President of the Company in January 2001. Mr. Bendush came to AMCC from Silicon Systems Inc., where he served as Senior Vice President and Chief Financial Officer from September 1986 to April 1999. Prior to joining Silicon Systems Inc., Mr. Bendush held various financial management positions at AM International, Gulf + Western Industries and Gould Inc. Mr. Bendush received a B.S. from Northern Illinois University. 
+ 
+Brent E. Little joined the Company in 1991. Mr. Little was promoted to a Senior Vice President of the Company in January 2001. Prior to this time, Mr. Little held several marketing management positions with the Company, including Director of Strategic Marketing and Director of Marketing for ASIC products. Prior to joining the Company, Mr. Little worked as Business Development Manager for Analysis and Technology, Inc. and worked with the U.S. Navy as a Project Engineer. Mr. Little earned a B.S. in Electrical Engineering from the University of California, Santa Barbara. 
+ 
+Ramakrishna R. Sudireddy joined the Company when AMCC acquired Cimaron Communications in March 1999. Mr. Sudireddy was promoted to a Senior Vice President of the Company in January 2001. Before co-founding Cimaron in January of 1998, Mr. Sudireddy founded Siltek Corporation in 1996, and served as its Vice President of Research and Development until 1997. Siltek provided ATM and SONET design services for such companies as Lucent Technologies, SGS Thomson, and Sun Microsystems. From 1991 to 1996, Mr. Sudireddy was a Member of Technical Staff at AT&T Bell Laboratories. While at Bell Labs, he was the chief architect and lead designer for a number of highly complex ASICs. These ASICs generally had hundreds of thousands of gates, and operated at speeds as high as 622 MHz. Mr. Sudireddy gained prominence for developing these ASICs more efficiently (with as many as 30% fewer gates) and more quickly than conventional methods within Bell Labs. Mr. Sudireddy has a master’s degree in Computer Engineering from the University of Massachusetts at Lowell, and a bachelor’s degree in Electrical Engineering from Nagarjuna University in Guntur, India. 
+ 
+Thomas L. Tullie joined the Company as Vice President, Sales in August 1996. Mr. Tullie was promoted to a Senior Vice President of the Company in January 2001. From 1989 to 1996, Mr. Tullie held several strategic sales management positions, most recently as Director of East Coast Sales, at S-MOS Systems, a semiconductor company. Prior to joining S-MOS Systems, Mr. Tullie was a designer in the workstations group of Digital Equipment Corporation. Mr. Tullie earned a B.S. from the University of Massachusetts and an M.B.A. from Clark University. 
+ 
+Gregory A. Winner joined the Company in November 1999 as Vice President, Engineering. Mr. Winner was promoted to a Senior Vice President of the Company in January 2001. From September 1982 to November 1999, Mr. Winner was the Vice President of Product Development of Silicon Systems, Inc. where he was responsible for the advanced development of integrated circuit products. Mr. Winner has also held various engineering positions at Memorex, IBM and General Dynamics. Mr. Winner holds an M.S.E.E. from Stanford University and a B.S.E.E. degree from the University of California, Los Angeles. 
+ 
+Jeffrey J. Cashen joined the Company in October 2000 as Vice President of Sales of MMC Networks when the Company acquired MMC Networks. Mr. Cashen was promoted to Vice President, General Manager of the Switching and Network Processing Division of the Company in July 2001. Prior to joining MMC Networks, Mr. Cashen held various senior sales positions with Texas Instruments where he managed the Cisco Systems, Digital Equipment Corporation and Sun Microsystems accounts. Mr. Cashen received his B.S.E.E. from Pennsylvania State University. 
+
+11 
+
+
+--------------------------------------------------------------------------------
+
+ 
+Timothy M. Heenan joined the Company in October 2000 as Vice President of MMC Networks when the Company acquired MMC Networks. Mr. Heenan was promoted to Vice President of Operations of the Company in August 2001. Prior to joining MMC Networks, Mr. Heenan was the Director of Test Operations at Cirrus Logic, Inc., where he was responsible for worldwide manufacturing test operations. Before his tenure at Cirrus Logic, Mr. Heenan held various engineering positions at Signetics Corporation. Mr. Heenan holds a B.S. in materials engineering from Rensselaer Polytechnic Institute and a M.S. in engineering management from Santa Clara University. 
+ 
+Stephen M. Smith joined the Company in October 1999 as Vice President, Business Development. Mr. Smith was appointed to Vice President, Controller of the Company in July 2001. From May 1998 to October 1999, Mr. Smith worked at ST Microelectronics, a semiconductor company, as the Director of the Micro-fluidics Business Unit located in San Diego, California. Additionally, Mr. Smith worked for ST Microelectronics from January 1993 until May 1997 as the Director of Finance, Region Americas located in Carrollton, Texas. From May 1997 to May 1998, Mr. Smith served as Vice President, Finance for Vixel Corporation, a Fibre Channel company. Mr. Smith also spent 8 years with Northern Telecom, Inc., a telecommunications manufacturer, where he led the Finance teams in Ottawa, Canada and San Diego, California. Mr. Smith holds a B.S. degree from Arizona State University. 
+ 
+Vincent J. DeMaioribus joined the Company in November 1998 as Director of Operations. In November 2000, Mr. DeMaioribus was promoted to Vice President, Manufacturing of the Company. Mr. DeMaioribus has also served as Engineering Manager for Hitachi Semiconductor (America), Director of Process Engineering for TelCom Semiconductor Inc. and Director of Process Engineering for InterConnect Technology. From 1990 to 1997, Mr. DeMaioribus served as the Manufacturing Module Manager for Silicon Systems Inc. Mr. DeMaioribus holds a B.S. in Electrical Engineering from the Rochester Institute of Technology. 
+
+12 
+
+
+--------------------------------------------------------------------------------
+
+RISK FACTORS 
+ 
+Before deciding to invest in the Company or to maintain or increase your investment, you should carefully consider the risks described below, in addition to the other information contained in this report and in our other filings with the SEC, including our reports on Forms 10-Q and 8-K. The risks and uncertainties described below are not the only ones facing us. Additional risks and uncertainties not presently known to us or that we currently deem immaterial may also affect our business. If any of these known or unknown risks or uncertainties actually occur, our business, financial condition and results of operations could be seriously harmed. In that event, the market price for our common stock could decline and you may lose all or part of your investment. 
+ 
+Our operating results may fluctuate because of a number of factors, many of which are beyond our control. 
+ 
+If our operating results are below the expectations of public market analysts or investors, then the market price of our common stock could decline. Some of the factors that affect our quarterly and annual results, but which are difficult to control or predict are: 
+ 
+  •   the reduction, rescheduling or cancellation of orders by customers, whether as a result of slowing demand for our customers’ products, stockpiling of our products or otherwise;  
+
+ 
+  •   fluctuations in the timing and amount of customer requests for product shipments;  
+
+ 
+  •   general communications equipment industry and semiconductor industry conditions, including the effects of the current significant slowdown;  
+
+ 
+  •   the availability of external foundry capacity, purchased parts and raw materials;  
+
+ 
+  •   the effect of the pending closure of our internal wafer fabrication facility;  
+
+ 
+  •   increases in the costs of products or discontinuance of products by suppliers;  
+
+ 
+  •   fluctuations in manufacturing output, yields and inventory levels or other potential problems or delays in the fabrication, assembly, testing or delivery of our products;  
+
+ 
+  •   changes in the mix of products that our customers buy;  
+
+ 
+  •   the gain or loss of a key customer or significant changes in the financial condition of one or more of our key customers;  
+
+ 
+  •   our ability to introduce and deliver new products and technologies on a timely basis;  
+
+ 
+  •   the announcement or introduction of products and technologies by our competitors;  
+
+ 
+  •   competitive pressures on selling prices;  
+
+ 
+  •   market acceptance of our products and our customers’ products;  
+
+ 
+  •   the amounts and timing of costs associated with warranties and product returns;  
+
+ 
+  •   the amounts and timing of investments in research and development;  
+
+ 
+  •   problems or delays that we may face in shifting our products to smaller geometry process technologies and in achieving higher levels of design integration;  
+
+ 
+  •   the amounts and timing of the costs associated with payroll taxes related to stock option exercises;  
+
+ 
+  •   costs associated with acquisitions and the integration of acquired companies;  
+
+ 
+  •   costs associated with compliance with applicable environmental regulations or remediation;  
+
+ 
+  •   costs associated with litigation, including without limitation, litigation or settlements relating to the use or ownership of intellectual property or the pending litigation against us and certain of our executive officers and directors alleging violations of federal securities laws and various state claims;  
+
+
+13 
+
+
+--------------------------------------------------------------------------------
+
+ 
+  •   the ability of our customers to obtain components from their other suppliers;  
+
+ 
+  •   the effects of war or acts of terrorism, such as disruptions in general economic activity, changes in logistics and security arrangements, and reduced customer demand for our products and services; and  
+
+ 
+  •   general economic conditions.  
+
+ 
+Our business, financial condition and operating results would be harmed if we do not achieve anticipated revenues. 
+ 
+We can have revenue shortfalls for a variety of reasons, including: 
+ 
+  •   a decrease in demand for our customers’ products;  
+
+ 
+  •   a decrease in the financial condition of our customers or liquidity issues with our customers or their customers;  
+
+ 
+  •   a stockpiling of our products by our customers resulting in a reduction in their order patterns as they work through the excess inventory of our products;  
+
+ 
+  •   the reduction, rescheduling or cancellation of customer orders;  
+
+ 
+  •   significant pricing pressures that occur because of declines in average selling prices over the life of a product;  
+
+ 
+  •   sudden shortages of raw materials or production capacity constraints that lead our suppliers to allocate available supplies or capacity to customers with resources greater than us and, in turn, interrupt our ability to meet our production obligations;  
+
+ 
+  •   the pending closure of our internal wafer fabrication facility;  
+
+ 
+  •   delays in product availability; and  
+
+ 
+  •   fabrication, test or assembly capacity constraints for devices which interrupt our ability to meet our production obligations.  
+
+ 
+Our business is characterized by short-term orders and shipment schedules. Customer orders typically can be canceled or rescheduled without significant penalty to the customer. Because we do not have substantial noncancellable backlog, we typically plan our production and inventory levels based on internal forecasts of customer demand which are highly unpredictable and can fluctuate substantially. Our revenues are increasingly derived from sales of ASSPs, as compared to ASICs. Customer orders for ASSPs typically have shorter lead times than orders for ASICs, which makes it more difficult for us to predict revenues and inventory levels and adjust production appropriately. If we are unable to plan inventory and production levels effectively, our business, financial condition and operating results could be materially harmed. 
+ 
+From time to time, in response to anticipated long lead times to obtain inventory and materials from our outside suppliers and foundries, we may order materials in advance of anticipated customer demand. This advance ordering has in the past and may in the future result in excess inventory levels or unanticipated inventory write-downs if expected orders fail to materialize, or other factors render our products less marketable. 
+ 
+Our expense levels are relatively fixed and are based, in part, on our expectations of future revenues. We have limited ability to reduce expenses quickly in response to any revenue shortfalls. 
+ 
+The downturn in the communications equipment industry has negatively impacted our revenues and profitability. 
+ 
+We derive a substantial amount of our revenues from communications equipment manufacturers. The communications equipment industry, which is highly cyclical, is experiencing a significant extended downturn 
+
+14 
+
+
+--------------------------------------------------------------------------------
+
+and as a result, the financial condition of many telecom companies has significantly declined. This downturn has severely affected the demand for our products, and in turn our revenues and profitability. We cannot predict how long this downturn will last. In addition, our need to continue investment in research and development during this downturn and to maintain extensive ongoing customer service and support capability constrains our ability to reduce expenses. 
+ 
+Our business substantially depends upon the continued growth of the Internet. 
+ 
+A substantial portion of our business and revenue depends on the continued growth of the Internet. We sell our products primarily to communications equipment manufacturers that in turn sell their equipment to customers that depend on the growth of the Internet. As a result of the economic slowdown, the significant decline in the financial condition of many telecommunications companies and the reduction in capital spending, spending on Internet infrastructure has declined. To the extent that the economic slowdown and reduction in capital spending continue to adversely affect spending on Internet infrastructure, our business, operating results and financial condition will continue to be materially harmed. 
+ 
+Our customers are concentrated. The loss of one or more key customers or the diminished demand for our products from a key customer could significantly reduce our revenues and profits. 
+ 
+A relatively small number of customers have accounted for a significant portion of our revenues in any particular period. We have no long-term volume purchase commitments from any of our key customers. Many of our key customers have announced dramatic declines in demand for their products into which our products are incorporated. As a result, new orders from these customers have been deferred, and customers may have overstocked our products. Continued reductions, delays and cancellation of orders from our key customers or the loss of one or more key customers could significantly further reduce our revenues and profits. We cannot assure you that our current customers will continue to place orders with us, that orders by existing customers will continue at current or historical levels or that we will be able to obtain orders from new customers. 
+ 
+Our ability to maintain or increase sales to key customers and attract new significant customers is subject to a variety of factors, including: 
+ 
+  •   customers may stop incorporating our products into their own products with limited notice to us and may suffer little or no penalty;  
+
+ 
+  •   customers or prospective customers may not incorporate our products in their future product designs;  
+
+ 
+  •   design wins with customers may not result in sales to such customers;  
+
+ 
+  •   the introduction of a customer’s new products may be late or less successful in the market than planned;  
+
+ 
+  •   a customer’s product line using our products may rapidly decline or be phased out;  
+
+ 
+  •   our agreements with customers typically do not require them to purchase a minimum amount of our products;  
+
+ 
+  •   many of our customers have pre-existing relationships with current or potential competitors that may cause them to switch from our products to competing products;  
+
+ 
+  •   we may not be able to successfully develop relationships with additional network equipment vendors; and  
+
+ 
+  •   our relationship with some of our larger customers may deter other potential customers (who compete with these customers) from buying our products.  
+
+ 
+The occurrence of any one of the factors above could have a material adverse effect on our business, financial condition and results of operations. 
+
+15 
+
+
+--------------------------------------------------------------------------------
+
+ 
+Any significant order cancellations or deferrals could adversely affect our operating results. 
+ 
+We typically sell products pursuant to purchase orders that customers can generally cancel or defer on short notice without incurring a significant penalty. Any significant cancellations or deferrals in the future could materially and adversely affect our business, financial condition and results of operations. In addition, cancellations or deferrals could cause us to hold excess inventory, which could reduce our profit margins, increase product obsolescence and restrict our ability to fund our operations. We generally recognize revenue upon shipment of products to a customer. If a customer refuses to accept shipped products or does not pay for these products, we could miss future revenue projections or incur significant charges against our income, which could materially and adversely affect our operating results. 
+ 
+An important part of our strategy is to continue our focus on the markets for high-speed communications ICs. If we are unable to expand our share of these markets further, our revenues may not grow and could decline. 
+ 
+Our markets frequently undergo transitions in which products rapidly incorporate new features and performance standards on an industry-wide basis. If our products are unable to support the new features or performance levels required by OEMs in these markets, we would be likely to lose business from an existing or potential customer and, moreover, would not have the opportunity to compete for new design wins until the next product transition occurs. If we fail to develop products with required features or performance standards, or if we experience a delay as short as a few months in bringing a new product to market, or if our customers fail to achieve market acceptance of their products, our revenues could be significantly reduced for a substantial period. 
+ 
+A significant portion of our revenues in recent periods has been, and is expected to continue to be, derived from sales of products based on SONET, SDH, ATM and DWDM transmission standards. If the communications market evolves to new standards, we may not be able to successfully design and manufacture new products that address the needs of our customers or gain substantial market acceptance. Although we have developed products for the Gigabit Ethernet and Fibre Channel communications standards, sales volumes of these products are modest, and we may not be successful in addressing the market opportunities for products based on these standards. 
+ 
+Customers for network processors, one of our product lines, generally have substantial technological capabilities and financial resources. They traditionally use these resources to internally develop their own network processors. The future prospects for our products in these markets are dependent upon our customers’ acceptance of our network processors as an alternative to their internally developed network processors. Network equipment vendors may in the future continue to use internally developed ASIC components and general-purpose processors. They also may decide to develop or acquire components, technologies or network processors that are similar to, or that may be substituted for, our network processor products. 
+ 
+If our network equipment vendor customers fail to accept network processors as an alternative, if they develop or acquire the technology to develop such components internally rather than purchase our network processor products, or if we are otherwise unable to develop strong relationships with network equipment vendors, our business, financial condition and results of operations would be materially and adversely affected. 
+ 
+Our industry is subject to consolidation, which may result in stronger competitors. 
+ 
+There has been a trend toward industry consolidation among communications IC companies for several years. We expect this trend toward industry consolidation to continue as communications IC companies attempt to strengthen or hold their positions in evolving markets. Consolidation may result in stronger competitors, which in turn could have a material adverse effect on our business, operating results, and financial condition. 
+
+16 
+
+
+--------------------------------------------------------------------------------
+
+ 
+Our operating results are subject to fluctuations because we rely heavily on international sales. 
+ 
+International sales account for a significant part of our revenues and may account for an increasing portion of our future revenues. As a result, an increasing portion of our revenues may be subject to certain risks, including: 
+ 
+  •   foreign currency exchange fluctuations;  
+
+ 
+  •   changes in regulatory requirements;  
+
+ 
+  •   tariffs and other barriers;  
+
+ 
+  •   timing and availability of export licenses;  
+
+ 
+  •   political and economic instability;  
+
+ 
+  •   difficulties in accounts receivable collections;  
+
+ 
+  •   difficulties in staffing and managing foreign subsidiary operations;  
+
+ 
+  •   difficulties in managing distributors;  
+
+ 
+  •   difficulties in obtaining governmental approvals for communications and other products;  
+
+ 
+  •   the burden of complying with a wide variety of complex foreign laws and treaties; and  
+
+ 
+  •   potentially adverse tax consequences.  
+
+ 
+We are subject to risks associated with the imposition of legislation and regulations relating to the import or export of high technology products. We cannot predict whether quotas, duties, taxes or other charges or restrictions upon the importation or exportation of our products will be implemented by the United States or other countries. Because sales of our products have been denominated to date primarily in United States dollars, increases in the value of the United States dollar could increase the price of our products so that they become relatively more expensive to customers in the local currency of a particular country, leading to a reduction in sales and profitability in that country. Future international activity may result in increased foreign currency denominated sales. Gains and losses on the conversion to United States dollars of accounts receivable, accounts payable and other monetary assets and liabilities arising from international operations may contribute to fluctuations in our results of operations. Some of our customer purchase orders and agreements are governed by foreign laws, which may differ significantly from United States laws. Therefore, we may be limited in our ability to enforce our rights under such agreements and to collect damages, if awarded. 
+ 
+Our markets are subject to rapid technological change, so our success depends heavily on our ability to develop and introduce new products. 
+ 
+The markets for our products are characterized by: 
+ 
+  •   rapidly changing technologies;  
+
+ 
+  •   evolving and competing industry standards;  
+
+ 
+  •   short product life cycles;  
+
+ 
+  •   changing customer needs;  
+
+ 
+  •   emerging competition;  
+
+ 
+  •   frequent new product introductions and enhancements;  
+
+ 
+  •   increased integration with other functions; and  
+
+ 
+  •   rapid product obsolescence.  
+
+
+17 
+
+
+--------------------------------------------------------------------------------
+
+ 
+To develop new products for the communications markets, we must develop, gain access to and use leading technologies in a cost-effective and timely manner and continue to develop technical and design expertise. In addition, we must have our products designed into our customers’ future products and maintain close working relationships with key customers in order to develop new products that meet customers’ changing needs. We must respond to changing industry standards, trends towards increased integration and other technological changes on a timely and cost-effective basis. If we fail to achieve design wins with key customers, our business will significantly suffer because once a customer has designed a supplier’s product into its system, the customer typically is extremely reluctant to change its supply source due to significant costs associated with qualifying a new supplier. 
+ 
+Products for communications applications are based on industry standards that are continually evolving. Our ability to compete in the future will depend on our ability to identify and ensure compliance with these evolving industry standards. The emergence of new industry standards could render our products incompatible with products developed by major systems manufacturers. As a result, we could be required to invest significant time and effort and to incur significant expense to redesign our products to ensure compliance with relevant standards. If our products are not in compliance with prevailing industry standards for a significant period of time, we could miss opportunities to achieve crucial design wins. We may not be successful in developing or using new technologies or in developing new products or product enhancements that achieve market acceptance. Our pursuit of necessary technological advances may require substantial time and expense. 
+ 
+The markets in which we compete are highly competitive and subject to rapid technological change, price erosion and heightened international competition. 
+ 
+The communications IC markets are highly competitive and we expect that competition will increase in these markets, due in part to deregulation and heightened international competition. Our ability to compete successfully in our markets depends on a number of factors, including: 
+ 
+  •   success in designing and subcontracting the manufacture of new products that implement new technologies;  
+
+ 
+  •   product quality, reliability and performance;  
+
+ 
+  •   customer support;  
+
+ 
+  •   time-to-market;  
+
+ 
+  •   price;  
+
+ 
+  •   production efficiency;  
+
+ 
+  •   design wins;  
+
+ 
+  •   expansion of production of our products for particular systems manufacturers;  
+
+ 
+  •   end-user acceptance of the systems manufacturers’ products;  
+
+ 
+  •   market acceptance of competitors’ products; and  
+
+ 
+  •   general economic conditions.  
+
+ 
+In addition, our competitors may offer enhancements to existing products, or offer new products based on new technologies, industry standards or customer requirements, that are available to customers on a more timely basis than comparable products from us or that have the potential to replace or provide lower cost alternatives to our products. The introduction of such enhancements or new products by our competitors could render our existing and future products obsolete or unmarketable. Furthermore, once a customer has designed a supplier’s product into its system, the customer is extremely reluctant to change its supply source due to the significant costs associated with qualifying a new supplier. Finally, we expect that certain of our competitors and other 
+
+18 
+
+
+--------------------------------------------------------------------------------
+
+semiconductor companies may seek to develop and introduce products that integrate the functions performed by our IC products on a single chip, thus eliminating the need for our products. Each of these factors could have a material adverse effect on our business, financial condition and results of operations. 
+ 
+In the communications markets, we compete primarily against companies such as Agere, Broadcom, Conexant, Infineon, Intel, Maxim, Multilink, PMC-Sierra, TriQuint and Vitesse. In addition, certain of our customers or potential customers have internal IC design or manufacturing capability with which we compete. Any failure by us to compete successfully in these target markets, particularly in the communications markets, would have a material adverse effect on our business, financial condition and results of operations. 
+ 
+Revenues that are currently derived from non-communications markets have been declining and we expect them to continue to decline in future periods. 
+ 
+We have derived significant revenues from product sales to customers in the ATE, high-speed computing and military markets and currently anticipate that we will continue to derive revenues from sales to customers in these markets in the near term. We are not currently developing products for these markets, and have initiated a plan to exit these markets entirely. The plan includes closing the facility where a majority of these products are manufactured, as well as coordinating a last time buy program with our customers in these markets. 
+ 
+Our future success depends in part on the continued service of our key design engineering, sales, marketing, manufacturing and executive personnel and our ability to identify, hire and retain additional, qualified personnel. 
+ 
+There is intense competition for qualified personnel in the semiconductor industry, in particular design, product and test engineers, and we may not be able to continue to attract and train engineers or other qualified personnel necessary for the development of our business, or to replace engineers or other qualified personnel who may leave our employment in the future. Periods of contraction in our business may inhibit our ability to attract and retain our personnel. Loss of the services of, or failure to recruit, key design engineers or other technical and management personnel could be significantly detrimental to our product and process development programs. 
+ 
+In May 2002, we completed a stock option exchange program. The sole purpose of the program was to improve our ability to retain and motivate employees, officers and board members. We cannot be certain that the program will result in increased retention of employees, officers or board members. 
+ 
+To manage operations effectively, we will be required to continue to improve our operational, financial and management systems and to successfully hire, train, motivate and manage our employees. The integration of past and future potential acquisitions will require significant additional management, technical and administrative resources. We cannot be certain that we will be able to manage our expanded operations effectively. 
+ 
+A disruption in the manufacturing capabilities of our outside foundries would negatively impact the production of certain of our products. 
+ 
+We rely on outside foundries for the manufacture of the majority of our products, including all of our products designed on CMOS and SiGe processes. These outside foundries generally manufacture our products on a purchase order basis. A majority of our products are only qualified for production at a single foundry. These suppliers can allocate, and in the past have allocated, capacity to the production of other companies’ products while reducing deliveries to us on a short notice. Because establishing relationships and ramping production with new outside foundries may take over a year, there is no readily available alternative source of supply for these products. A manufacturing disruption experienced by one or more of our outside foundries or a disruption of our relationship with an outside foundry, including discontinuance of our products by that foundry, would negatively impact the production of certain of our products for a substantial period of time. The transition to the next generation of manufacturing technologies at one or more of our outside foundries could be unsuccessful or delayed. 
+
+19 
+
+
+--------------------------------------------------------------------------------
+
+ 
+Our dependence on third-party manufacturing and supply relationships increases the risk that we will not have an adequate supply of products to meet demand or that our cost of materials will be higher than expected. 
+ 
+We depend upon third parties to manufacture, assemble or package a majority of our products, the risks associated with our dependence on these third parties include: 
+ 
+  •   reduced control over delivery schedules and quality;  
+
+ 
+  •   risks of inadequate manufacturing yields and excessive costs;  
+
+ 
+  •   difficulties selecting and integrating new subcontractors;  
+
+ 
+  •   potential lack of adequate capacity during periods of excess demand;  
+
+ 
+  •   limited warranties on products supplied to us;  
+
+ 
+  •   potential increases in prices; and  
+
+ 
+  •   potential misappropriation of our intellectual property.  
+
+ 
+Difficulties associated with adapting our technology and product design to the proprietary process technology and design rules of outside foundries can lead to reduced yields. The process technology of an outside foundry is typically proprietary to the manufacturer. Since low yields may result from either design or process technology failures, yield problems may not be effectively determined or resolved until an actual product exists that can be analyzed and tested to identify process sensitivities relating to the design rules that are used. As a result, yield problems may not be identified until well into the production process, and resolution of yield problems may require cooperation between us and our manufacturer. This risk could be compounded by the offshore location of certain of our manufacturers, increasing the effort and time required to identify, communicate and resolve manufacturing yield problems. Manufacturing defects that we do not discover during the manufacturing or testing process may lead to costly product recalls. These risks may lead to increased costs or delay product delivery, which would harm our profitability and customer relationships. 
+ 
+If the foundries or subcontractors we use to manufacture our products discontinue the manufacturing processes needed to meet our demands, or fail to upgrade their technologies needed to manufacture our products, we may be unable to deliver products to our customers. 
+ 
+Our requirements typically represent a very small portion of the total production of the third-party foundries. As a result, we are subject to the risk that a producer will cease production on an older or lower-volume process that it uses to produce our parts. We cannot be certain our external foundries will continue to devote resources to the production of our products or continue to advance the process design technologies on which the manufacturing of our products are based. Each of these events could increase our costs and materially impact our ability to deliver our products on time. 
+ 
+Our operating results related to our internally manufactured products depend on manufacturing output and yields, which may not meet expectations. 
+ 
+Though we intend to close our wafer manufacturing facility in calendar 2003, we still manufacture a minority of our ICs at that facility. Because the majority of our costs of manufacturing are relatively fixed, downturns in the volumes manufactured by our internal process such as wafer fabrication and test and assembly will result in substantially higher unit costs and may result in reduced gross profit and net income. 
+ 
+Manufacturing ICs requires manufacturing tools which are unique to each product being produced. If one of these unique manufacturing tools was damaged or destroyed, then our ability to manufacture the related product would be impaired and our business would suffer until the tools were repaired or replaced. 
+ 
+Our yields decline whenever a substantial percentage of wafers must be rejected or a significant number of die on each wafer are nonfunctional. Such declines can be caused by many factors, including minute levels of 
+
+20 
+
+
+--------------------------------------------------------------------------------
+
+contaminants in the manufacturing environment, design issues, defects in masks used to print circuits on a wafer and difficulties in the fabrication process. Design iterations and process changes by our suppliers can cause a risk of contamination. Many of these problems are difficult to diagnose, are time consuming and expensive to remedy, and can result in shipment delays. 
+ 
+We estimate yields per wafer in order to estimate the value of inventory. If yields are materially different than projected, work-in-process inventory may need to be revalued. We have in the past, and may occasionally in the future, take inventory write-downs as a result of decreases in manufacturing yields. We may suffer periodic yield problems in connection with new or existing products or in connection with the commencement of production at a new manufacturing facility. 
+ 
+In addition, our manufacturing output or yields may decline as a result of power outages, supply shortages, accidents, natural disasters or other disruptions to the manufacturing process. 
+ 
+Due to an industry transition to six-inch, eight-inch and twelve-inch wafer fabrication facilities, there is a limited number of suppliers of the four-inch wafers that we use to build products in our existing manufacturing facility, and we rely on a single supplier for these wafers. We believe that we will have sufficient access to four-inch wafers to support production in our internal fabrication facility until it is closed. However, if we are unable to attain sufficient numbers of these four-inch wafers, it may prevent us from fulfilling our last time buy orders with certain customers of our legacy products. 
+ 
+We must develop or otherwise gain access to improved process technologies. 
+ 
+Our future success will depend upon our ability to continue to improve existing process technologies, to develop or acquire new process technologies, and to adapt our process technologies to emerging industry standards. In the future, we may be required to transition one or more of our products to process technologies with smaller geometries, other materials or higher speeds in order to reduce costs and/or improve product performance. We may not be able to improve our process technologies and develop or otherwise gain access to new process technologies in a timely or affordable manner. In addition, products based on these technologies may not achieve market acceptance. 
+ 
+We may experience difficulties in transitioning to smaller geometry process technologies or in achieving higher levels of design integration and that may result in reduced manufacturing yields, delays in product deliveries and increased expenses. 
+ 
+In order to remain competitive, we expect to continue to transition our products to increasingly smaller line width geometries. This transition will require us to modify the manufacturing processes for our products and redesign certain products. We periodically evaluate the benefits, on a product-by-product basis, of migrating to smaller geometry process technologies to reduce our costs, and we have designed products to be manufactured at as little as .13 micron geometry processes. In the past, we have experienced some difficulties in shifting to smaller geometry process technologies or new manufacturing processes. These difficulties resulted in reduced manufacturing yields, delays in product deliveries and increased expenses. We may face similar difficulties, delays and expenses as we continue to transition our products to smaller geometry processes. We are dependent on our relationships with our foundries to transition to smaller geometry processes successfully. We cannot assure you that our foundries will be able to effectively manage the transition or that we will be able to maintain our relationships with our foundries. If we or our foundries experience significant delays in this transition or fail to efficiently implement this transition, our business, financial condition and results of operations could be materially and adversely affected. As smaller geometry processes become more prevalent, we expect to continue to integrate greater levels of functionality into our products. However, we may not be able to achieve higher levels of design integration or deliver new integrated products on a timely basis, or at all. 
+
+21 
+
+
+--------------------------------------------------------------------------------
+
+ 
+The complexity of our products may lead to errors, defects and bugs when they are first introduced, which could negatively impact our reputation with customers. 
+ 
+Products as complex as ours may contain errors, defects and bugs when first introduced or as new versions are released. Our products have in the past experienced such errors, defects and bugs. Delivery of products with production defects or reliability, quality or compatibility problems could significantly delay or hinder market acceptance of the products. This, in turn, could damage our reputation and adversely affect our ability to retain existing customers and to attract new customers. Errors, defects or bugs could cause problems, interruptions, delays or cessation of sales to our customers. 
+ 
+We may also be required to make significant expenditures of capital and resources to resolve such problems. There can be no assurance that problems will not be found in new products after commencement of commercial production, despite testing by us, our suppliers or our customers. This could result in: 
+ 
+  •   additional development costs;  
+
+ 
+  •   loss of, or delays in, market acceptance;  
+
+ 
+  •   diversion of technical and other resources from our other development efforts;  
+
+ 
+  •   claims by our customers or others against us; and  
+
+ 
+  •   loss of credibility with our current and prospective customers.  
+
+ 
+Any such event could have a material adverse effect on our business, financial condition and results of operations. 
+ 
+Our ability to manufacture a sufficient number of products to meet demand could be severely hampered by a shortage of water, electricity or other supplies, or by natural disasters or other catastrophes. 
+ 
+The manufacture of our products requires significant amounts of water. Previous droughts have resulted in restrictions being placed on water use by manufacturers. In the event of a future drought, reductions in water use may be mandated generally, and our ability or our external foundries’ ability to manufacture our products could be impaired. 
+ 
+Early in 2001, California experienced prolonged energy alerts and blackouts caused by disruption in energy supplies. As a consequence, California continues to experience substantially increased costs of electricity and natural gas. To minimize the potential disruption to our business, we equipped our internal manufacturing facilities with generators. We are unsure whether these alerts and blackouts will reoccur or how severe they may become in the future. Several of our facilities, including our principal executive offices and principal research and development headquarters, are located in California. Many of our customers and suppliers are also headquartered or have substantial operations in California. If we, or any of our major customers located in California, experience a sustained disruption in energy supplies, our results of operations could be materially and adversely affected. 
+ 
+Our internal manufacturing facilities are located in San Diego, California, which is subject to natural disasters such as earthquakes or floods. We do not have earthquake insurance for these facilities, because adequate coverage is not offered at economically justifiable rates. In addition, some of our external foundries upon which we rely for the manufacture of the majority of our products are also located in areas which have in the past, and may in the future, experience a significant earthquake. A significant natural disaster or other catastrophic event could have a material adverse impact on our business, financial condition and operating results. 
+ 
+In addition, the effects of war or acts of terrorism could have a material adverse effect on our business, operating results and financial condition. The terrorist attacks in New York and Washington, D.C. on 
+
+22 
+
+
+--------------------------------------------------------------------------------
+
+September 11, 2001 disrupted commerce throughout the world and intensified the uncertainty of the U.S. economy and other economies around the world. The continued threat of terrorism and heightened security and military action in response to this threat, or any future acts of terrorism, may cause further disruptions and create further uncertainties. To the extent that such disruptions or uncertainties result in delays or cancellations of customer orders, or the manufacture or shipment of our products, our business, operating results and financial condition could be materially and adversely affected. 
+ 
+We could incur substantial fines or litigation costs associated with our storage, use and disposal of hazardous materials. 
+ 
+We are subject to a variety of federal, state and local governmental regulations related to the use, storage, discharge and disposal of toxic, volatile or otherwise hazardous chemicals used in our manufacturing process. Any failure to comply with present or future regulations could result in the imposition of fines, the suspension of production or a cessation of operations. These regulations could require us to acquire costly equipment or incur other significant expenses to comply with environmental regulations or clean up prior discharges. Since 1993, we have been named as a potentially responsible party, along with a large number of other companies that used Omega Chemical Corporation in Whittier, California to handle and dispose of certain hazardous waste material. We are a member of a large group of potentially responsible parties that has agreed to fund certain remediation efforts at the Omega site, which efforts are ongoing. To date, our payment obligations with respect to these funding efforts have not been material, and we believe that our future obligations to fund these efforts will not have a material adverse effect on our business, financial condition or operating results. Although we believe that we are currently in material compliance with applicable environmental laws and regulations, we cannot assure you that we are or will be in material compliance with these laws or regulations or that our future obligations to fund any remediation efforts, including those at the Omega site, will not have a material adverse effect on our business. 
+ 
+We have in the past and may in the future make acquisitions that will involve numerous risks. We may not be able to address these risks successfully without substantial expense, delay or other operational or financial problems. 
+ 
+The risks involved with acquisitions include: 
+ 
+  •   diversion of management’s attention;  
+
+ 
+  •   failure to retain key personnel;  
+
+ 
+  •   difficulty in completing an acquired company’s in-process research or development projects;  
+
+ 
+  •   amortization of acquired intangible assets and deferred compensation;  
+
+ 
+  •   customer dissatisfaction or performance problems with an acquired company’s products or services;  
+
+ 
+  •   the cost associated with acquisitions and the integration of acquired operations;  
+
+ 
+  •   ability of the acquired companies to meet their financial projections; and  
+
+ 
+  •   assumption of unknown liabilities, or other unanticipated events or circumstances.  
+
+ 
+As with past purchase acquisitions, future acquisitions could adversely affect operating results. In particular, acquisitions may materially and adversely affect our results of operations because they may require large one-time charges or could result in increased debt or contingent liabilities, adverse tax consequences, substantial additional depreciation or deferred compensation charges. In connection with our six purchase acquisitions in fiscal 2001, we recorded goodwill in the aggregate amount of approximately $4.0 billion. In accordance with Statement of Financial Accounting Standard No. 121, “Accounting for the Impairment of Long-Lived Assets and Long-Lived Assets to be Disposed Of”, we recorded a goodwill impairment charge of $3.1 billion in the three months ended June 30, 2001 to write down the value of goodwill associated with certain of our purchase 
+
+23 
+
+
+--------------------------------------------------------------------------------
+
+transactions. Beginning in the first quarter of fiscal 2003, goodwill will no longer be amortized, but will be subject to annual impairment tests in accordance with Statement of Financial Accounting Standard No. 141, “Business Combinations” and Statement No. 142, “Goodwill and Other Intangible Assets”. We have not yet completed our initial review for impairment under this new guidance and thus, there can be no assurance that we will not be required to take additional significant one-time charges as a result of an impairment to the carrying value of these other intangible assets. 
+ 
+Any of these risks could materially harm our business, financial condition and results of operations. Any business that we acquire may not achieve anticipated revenues or operating results. 
+ 
+We have been named as a defendant in recently initiated securities class action litigation that could result in substantial costs and divert management’s attention and resources. 
+ 
+We are aware of several lawsuits in which we, and certain of our other executive officers and directors have been sued for alleged violations of federal securities laws related to alleged misrepresentations regarding our financial prospects for the fourth quarter of fiscal 2001. We believe that the claims being brought against us, our officers and directors are without merit, and we intend to engage in a vigorous defense of such claims. If we are not successful in our defense of such claims, we could be forced to make significant payments to our stockholders and their lawyers, and such payments could have a material adverse effect on our business, financial condition and results of operations if not covered by our insurance carriers. Even if such claims are not successful, the litigation could result in substantial costs and divert management’s attention and resources, which could have an adverse effect on our business. 
+ 
+We may not be able to protect our intellectual property adequately. 
+ 
+We rely in part on patents to protect our intellectual property. We cannot assure you that our pending patent applications or any future applications will be approved, or that any issued patents will adequately protect the intellectual property in our products, provide us with competitive advantages or will not be challenged by third parties, or that if challenged, will be found to be valid or enforceable. Furthermore, others may independently develop similar products or processes, duplicate our products or processes or design around any patents that may be issued to us. 
+ 
+To protect our intellectual property, we also rely on the combination of mask work protection under the Federal Semiconductor Chip Protection Act of 1984, trademarks, copyrights, trade secret laws, employee and third-party nondisclosure agreements and licensing arrangements. Despite these efforts, we cannot be certain that others will not independently develop substantially equivalent intellectual property or otherwise gain access to our trade secrets or intellectual property, or disclose such intellectual property or trade secrets, or that we can meaningfully protect our intellectual property. A failure by us to meaningfully protect our intellectual property could have a material adverse effect on our business, financial condition and operating results. 
+ 
+We could be harmed by litigation involving patents and proprietary rights. 
+ 
+Litigation may be necessary to enforce our intellectual property rights, to determine the validity and scope of the proprietary rights of others or to defend against claims of infringement or misappropriation. The semiconductor industry is characterized by substantial litigation regarding patent and other intellectual property rights. Such litigation could result in substantial costs and diversion of resources, including the attention of our management and technical personnel and could have a material adverse effect on our business, financial condition and results of operations. We may be accused of infringing the intellectual property rights of third parties. We have certain indemnification obligations to customers with respect to the infringement of third-party intellectual property rights by our products. We cannot be certain that infringement claims by third parties or claims for indemnification by customers or end users resulting from infringement claims will not be asserted in the future or that such assertions, if proven to be true, will not harm our business. 
+
+24 
+
+
+--------------------------------------------------------------------------------
+
+ 
+Any litigation relating to the intellectual property rights of third parties, whether or not determined in our favor or settled by us, would at a minimum be costly and could divert the efforts and attention of our management and technical personnel. In the event of any adverse ruling in any such litigation, we could be required to pay substantial damages, cease the manufacturing, use and sale of infringing products, discontinue the use of certain processes or obtain a license under the intellectual property rights of the third party claiming infringement. A license might not be available on reasonable terms, or at all. 
+ 
+Our stock price is volatile. 
+ 
+The market price of our common stock has fluctuated significantly. In the future, the market price of our common stock could be subject to significant fluctuations due to general economic and market conditions and in response to quarter-to-quarter variations in: 
+ 
+  •   our anticipated or actual operating results;  
+
+ 
+  •   announcements or introductions of new products;  
+
+ 
+  •   technological innovations or setbacks by us or our competitors;  
+
+ 
+  •   conditions in the semiconductor, telecommunications, data communications or high-speed computing markets;  
+
+ 
+  •   the commencement or outcome of litigation;  
+
+ 
+  •   changes in estimates of our performance by securities analysts;  
+
+ 
+  •   announcements of merger or acquisition transactions; and  
+
+ 
+  •   other events or factors.  
+
+ 
+In addition, the stock market in recent years has experienced extreme price and volume fluctuations that have affected the market prices of many high technology companies, particularly semiconductor companies, and that have often been unrelated or disproportionate to the operating performance of those companies. These fluctuations may harm the market price of our common stock. 
+ 
+The anti-takeover provisions of our certificate of incorporation and of the Delaware general corporation law may delay, defer or prevent a change of control. 
+ 
+Our board of directors has the authority to issue up to 2,000,000 shares of preferred stock and to determine the price, rights, preferences and privileges and restrictions, including voting rights, of those shares without any further vote or action by our stockholders. The rights of the holders of common stock will be subject to, and may be harmed by, the rights of the holders of any shares of preferred stock that may be issued in the future. The issuance of preferred stock may delay, defer or prevent a change in control, as the terms of the preferred stock that might be issued could potentially prohibit our consummation of any merger, reorganization, sale of substantially all of our ssets, liquidation or other extraordinary corporate transaction without the approval of the holders of the outstanding shares of preferred stock. The issuance of preferred stock could have a dilutive effect on our stockholders. 
+ 
+If we issue additional shares of stock in the future, it may have a dilutive effect on our stockholders. 
+ 
+We have a significant number of authorized and unissued shares of our common stock available. These shares will provide us with the flexibility to issue our common stock for proper corporate purposes, which may include making acquisitions through the use of stock, adopting additional equity incentive plans and raising equity capital. Any subsequent issuance of our common stock may result in immediate dilution of our then current stockholders. 

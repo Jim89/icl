@@ -1,0 +1,510 @@
+ITEM 1. BUSINESS
+
+COMPANY OVERVIEW
+
+Analog Devices, Inc. (Analog, ADI or the Company) is a world leader in the
+design, manufacture and marketing of high-performance analog, mixed-signal and
+digital signal processing (DSP) integrated circuits (ICs) used in signal
+processing applications.
+
+As of the end of fiscal 1999, approximately 40% of Analog's revenues came from
+the communications market, making it the Company's largest and fastest growing
+served market. Communications applications include wireless handsets and base
+stations, as well as products used for high-speed access to the Internet,
+including ICs used in ADSL and cable modems and central office networking
+equipment.
+
+Analog serves the PC market with products that monitor and manage power usage,
+process signals used in flat panel displays and LCD projectors and enable PCs to
+provide CD-quality audio. Analog also serves the high-end consumer market with
+products used in digital cameras and camcorders, DVD players and surround sound
+audio systems. Analog provides a broad array of products to the industrial
+market, including products for automatic test equipment and for the digital
+speed control of AC motors.
+
+Analog's products are sold worldwide through a direct sales force, third-party
+industrial distributors and independent sales representatives. The Company has
+direct sales offices in 18 countries, including the United States. Approximately
+46% of fiscal 1999 revenue came from customers in North America, while most of
+the balance came from customers in Western Europe and the Far East.
+
+The Company is headquartered near Boston, in Norwood, Massachusetts, and has
+manufacturing facilities in Massachusetts, California, North Carolina, Ireland,
+the Philippines and Taiwan. Founded in 1965, Analog Devices employs
+approximately 7,400 people worldwide. The Company's stock is listed on the New
+York Stock Exchange under the symbol ADI and is included in the Standard &
+Poor's 500 Index.
+
+INDUSTRY BACKGROUND
+
+Real-world phenomena, such as temperature, pressure, sound, images, speed and
+acceleration are inherently analog in nature, consisting of continuously varying
+information. This information can be detected and measured using analog sensors,
+which represent real-world phenomena by generating continuously varying voltages
+and currents. The signals from these sensors are initially processed using
+analog methods, such as amplification, filtering and shaping. They are then
+usually converted to digital form for input to a microprocessor, which is used
+to manipulate, store or display the information. In many cases, the signals are
+further processed after conversion to digital form using a technology called
+"digital signal processing," or DSP. In addition, digital signals are frequently
+converted to analog form to provide signals for functions such as analog
+display, audio output or control. These manipulations and transformations are
+known collectively as "real-world signal processing."
+
+Significant advances in semiconductor technology in recent years have led to
+substantial increases in the performance and functionality of ICs used in signal
+processing applications. These advances include the ability to sense, receive,
+condition, convert and transmit signals from analog phenomena, such as voice and
+video images, and process these signals in both the analog and digital domain.
+The analog circuitry portion of the IC is used for manipulating real-world
+signals while still in analog form and for converting analog signals into
+digital form (or vice versa), and the digital portion is used for further
+processing analog signals subsequent to their conversion to digital form. The
+convergence of computing and communications requires applications that
+incorporate these functions and the Company's products are used as components in
+equipment and systems to achieve higher performance and more efficient signal
+processing.
+
+
+
+
+                                       1
+<PAGE>   3
+
+PRINCIPAL PRODUCTS
+
+The Company is engaged in the design, manufacture and marketing of a broad line
+of high-performance ICs that incorporate analog, mixed-signal and digital signal
+processing technologies that address a wide range of real-world signal
+processing applications. The Company has a generic list of approximately 2,000
+products, with the highest revenue product accounting for approximately 2% of
+the Company's revenue for fiscal 1999. Many of the Company's products are
+proprietary, while equivalents to other products are available from a limited
+number of other suppliers. The Company also designs, manufactures and markets a
+range of assembled products.
+
+MARKETS AND APPLICATIONS
+
+The following describes some of the characteristics of, and products supplied
+to, each of the Company's major markets:
+
+COMMUNICATIONS--The rapid development of broadband and wireless communications
+infrastructure around the world combined with the development of the Internet
+has created a rapidly growing market for the Company's products. Communications
+technology involves the acquisition of analog signals that are converted from
+analog to digital and digital to analog form as they are processed and
+transmitted. ADI's expertise in combining analog and digital functionality on a
+single chip has enabled the Company to develop products that fulfill the
+technological challenges of this complex and rapidly expanding market space. The
+need for ever higher speed and reduced power consumption, coupled with more
+reliable, more bandwidth-efficient communications, is creating increasing demand
+for the Company's products which are used in systems that include digital,
+analog and mixed-signal processing capability. The products are used in the full
+spectrum of signal processing for audio, data, image or video communication. In
+broadband and wireless communication applications, the Company's products are
+incorporated into data and digital subscriber line (DSL) modems, cellular
+telephones, base station equipment and remote access servers.
+
+COMPUTERS AND COMPUTER PERIPHERALS--Increased interface between users and the PC
+through monitors, printers, scanners and audio devices and the increasing need
+for power and thermal management capability in PCs have provided many
+opportunities in the computer market. The Company's ability to integrate analog,
+DSP and mixed-signal functionality on ICs has enabled ADI to supply many high
+performance critical components required by PC manufacturers. The computer
+industry requires smaller, lighter personal computers, creating increased demand
+for high performance ICs to monitor power usage thereby allowing manufacturers
+to use smaller batteries and extend battery life between charges. The Company
+currently supplies a variety of ICs used in this market for functions such as
+graphic displays, interfaces between PCs and peripherals such as modems and
+printers, power and battery management, and enhanced audio input and output
+capability for business and entertainment applications.
+
+CONSUMER ELECTRONICS--The acquisition and display of signals combined with the
+requirement for digital processing of these signals have allowed the Company to
+combine analog and digital design capability to provide solutions that conform
+to the rigorous cost, size and reliability constraints of the consumer
+electronic market. The emergence of high-performance consumer products, such as
+compact disc players, DVD players and digital camcorders and cameras, has led to
+the need for high-performance system-level ICs with a high level of specific
+functionality. The addition of monitoring and motor control devices on many
+consumer products has also created new opportunities for the Company.
+
+INDUSTRIAL--includes data acquisition systems, automatic process control
+systems, robotics, environmental control systems and automatic test equipment
+(ATE). These products generally require ICs that offer performance greater than
+that available from commodity-level ICs, but generally do not have production
+volumes that warrant custom or application-specific ICs. Combinations of analog
+and mixed-signal ICs are usually employed to achieve the necessary
+functionality, except in ATE applications where the high level of electronic
+circuitry required per tester has created opportunities for the design of
+system-level ICs.
+
+INSTRUMENTATION--includes engineering, medical and scientific instruments. These
+products are usually designed using the highest performance analog and
+mixed-signal ICs available, where production volumes generally do not warrant
+custom or application-specific ICs.
+
+MILITARY/AEROSPACE--includes military, commercial avionics and space markets,
+all of which require high-performance ICs that meet rigorous environmental and
+reliability specifications. Nearly all of the Company's analog ICs can be
+supplied in versions that meet appropriate military standards. In addition, many
+products can be supplied to meet the standards required for broadcast satellites
+and other commercial space applications. Most of the Company's products
+
+
+
+                                       2
+<PAGE>   4
+
+sold in this market are derived from standard commercial grade ICs, although the
+Company sometimes develops products expressly for military/aerospace
+applications.
+
+AUTOMOTIVE--Although the automotive market has historically been served with
+low-cost, low-performance ICs, demand has emerged for higher performance devices
+for a wide range of applications. In response, the Company is developing
+products specifically for the automotive market. The Company supplies a
+micromachined IC used as a crash sensor in airbag systems, which serves as an
+alternative to an electromechanical sensor. The Company believes that other
+micromachined devices derived from this product may be suitable for other
+automotive applications, such as roll-over sensing, global positioning satellite
+(GPS) automotive navigation systems, anti-lock brakes and "smart" suspension
+systems and other applications including earthquake detectors and high-end
+computer joysticks.
+
+RESEARCH AND DEVELOPMENT
+
+The markets served by Analog are characterized by rapid technological changes
+and advances. Accordingly, the Company makes substantial investments in the
+design and development of new products and processes, and for significant
+improvement of existing products and processes. ADI incurred $257 million during
+fiscal 1999 for the design, development and improvement of new and existing
+products and processes, compared to $219 million and $196 million during fiscal
+1998 and fiscal 1997, respectively.
+
+In support of its research and development activities, the Company employs
+hundreds of engineers involved in product and process development at several
+design centers and manufacturing sites located throughout the world.
+
+As of October 30, 1999, the Company owned approximately 550 U.S. patents and had
+150 patent applications on file with the United States patent office. The
+Company believes that while its patents may provide some advantage, its
+competitive position is largely determined by such factors as the knowledge,
+ability and experience of the Company's personnel, new product development,
+market recognition and ongoing marketing efforts, customer service and technical
+support.
+
+IC TECHNOLOGY
+
+Analog Technology
+
+Analog IC technology has been the foundation of the Company's business for more
+than 25 years, and the Company believes it is one of the world's largest
+suppliers of analog ICs. The Company's analog ICs are primarily
+high-performance, single-function devices. The majority of the Company's analog
+IC product revenue is attributable to sales of data converters
+(analog-to-digital and digital-to-analog) and amplifiers. Other analog IC
+products offered by the Company include analog signal processing devices (such
+as analog multipliers), voltage references and comparators. Over the past few
+years the Company has been expanding its analog IC product offerings into
+product areas where its focus was previously limited, principally interface
+circuits and power management ICs. It is also expanding its analog IC product
+line to include a much larger number of products designed to operate from
+single-supply 3 or 5 volt power sources to better meet the needs of customers
+designing portable battery-operated equipment.
+
+ADI's analog IC products tend to be general purpose in nature, which allows
+customers to incorporate them in a wide variety of equipment and systems. ADI's
+product portfolio includes several hundred analog ICs, any one of which can have
+as many as several hundred customers. Analog ICs typically have long product
+life cycles. The Company's analog IC customers include both OEMs and customers
+who build equipment for their own use. Historically, most analog ICs have been
+purchased by OEMs that serve the instrumentation, industrial and
+military/aerospace markets, but they are now also being used for applications in
+communications, computers, camcorders, scanners, automatic test equipment,
+imaging and other consumer applications requiring high-performance real-world
+signal processing. By using standard, high-performance, readily available,
+off-the-shelf components in their designs, ADI's customers can reduce the time
+required to develop and bring new products to market. Given the high cost of
+developing customized ICs, analog ICs usually provide the most cost-effective
+solutions for low to medium volume applications. In addition, combinations of
+analog ICs connected together on a printed circuit board can provide
+functionality not currently achievable using a single IC.
+
+Other analog ICs include circuits that are designed to serve the needs of
+particularly demanding applications, e.g. very high speed analog timing and pin
+driver circuits needed by OEMs in the automatic test equipment business.
+
+
+
+
+                                       3
+<PAGE>   5
+
+Manufacturers of portable instrumentation need analog ICs designed to address
+demanding battery life requirements, and need similar kinds of functions
+available in analog IC products integrated into a single, very low-power chip.
+Other principal requirements can include higher accuracy, lower cost per
+function, smaller size, lower weight and fewer components for improved
+reliability. These application specific products allow ADI's customers to design
+smaller, lighter, higher performance, more power-efficient and lower-cost end
+products. The Company believes that these benefits have become more important to
+the Company's OEM customers as they increase their focus on high-performance,
+small, lightweight products, many of which are battery-powered.
+
+General Purpose DSP Technology
+
+The Company's products that include DSP technology are designed to efficiently
+execute specialized programs (algorithms) associated with processing digitized
+real-time, real-world data. General-purpose DSP IC customers typically write
+their own algorithms using software tools provided by the Company and software
+tools obtained from third-party suppliers. All of these devices share a common
+architecture which allows system designers to address cost, performance and
+time-to-market constraints. ADI supports these products with specialized
+applications and easy-to-use, low-cost design tools, which reduce product
+development costs and time to market.
+
+Mixed-Signal Technology
+
+ADI's product range also includes multi-function mixed-signal devices which
+incorporate combinations of analog and digital technology. The growing need to
+allow user interface with computers and consumer products as well as the
+development of communications systems has created new opportunities for these
+mixed-signal devices. Examples of these devices include chipsets for
+communication applications (GSM cellular phones, remote access servers, data and
+fax modems), audio input/output devices and power and thermal management devices
+for computer applications and motor control devices.
+
+Micromachined Technology
+
+The Company's technology base includes a number of new products using an
+advanced IC technology known in the industry as surface micromachining. This
+technology enables extremely small mechanical structures to be built on the
+surface of a chip along with supporting circuitry. In addition to incorporating
+an electro-mechanical structure, these devices also have analog circuitry for
+conditioning signals obtained from the micromachined sensing element.
+
+ADI's micromachined products are accelerometers used in a wide variety of
+applications. The majority of current revenue from ADI's micromachined products
+is derived from accelerometers used by automotive manufacturers in airbag
+applications. Emerging applications include GPS automobile navigation systems,
+earthquake detectors and high-end computer joysticks.
+
+General Purpose and Custom Products
+
+Across the entire range of ICs designed and manufactured by the Company there
+are general purpose products and custom products designed for specific
+applications for specific customers. In many of the new emerging markets in
+communications, computer and consumer products there is a tendency to work with
+selected large customers to design application-specific solutions which can
+combine elements of analog, digital, mixed-signal and micromachined
+functionality.
+
+ASSEMBLED PRODUCT TECHNOLOGY
+
+The Company's assembled products technology includes multi-chip modules (MCMs),
+hybrids and printed circuit board modules. An MCM is a device made up of several
+IC chips assembled in an automated fashion in a multilayer package that provides
+high interconnect density at low cost. A hybrid consists of several chips and
+discrete components mounted and wired together on a substrate, which is then
+enclosed in a package. A printed-board module consists of surface-mount
+components assembled on a small printed board that is then encapsulated in a
+small plastic case.
+
+Revenues from this product group have been declining for several years,
+primarily because hybrids are being replaced in many new designs with smaller,
+lower-cost monolithic ICs that offer higher levels of performance and
+integration. Sales of these products have declined to approximately 3% of the
+Company's total sales.
+
+
+
+                                       4
+<PAGE>   6
+
+SALES CHANNELS
+
+ADI sells its products in both North America and internationally through a
+direct sales force, third-party distributors and independent sales
+representatives. Approximately 46% of fiscal 1999 revenue was derived from
+customers in North America. As of December 1, 1999, the Company had 14 sales
+offices in the United States, and its third-party distribution channel consisted
+of six national and regional third-party distributors and several independent
+sales representatives at numerous locations throughout the U.S. and Canada.
+
+Approximately 22% of the Company's fiscal 1999 revenue was derived from sales to
+customers in Europe; 14% to customers in Japan; and 18% to customers in other
+international markets. As of December 1, 1999, the Company had direct sales
+offices in Australia, Austria, China, Denmark, France, Germany, Hong Kong,
+India, Israel, Italy, Japan, Korea, the Netherlands, Singapore, Sweden, Taiwan
+and the United Kingdom. The Company also had sales representatives and/or
+distributors in approximately 40 countries outside North America, including
+countries where the Company also has direct sales offices. For further detail
+regarding geographic information, see Note 4 in the Notes to the Company's
+Consolidated Financial Statements incorporated herein by reference to the 1999
+Annual Report to Shareholders and filed herewith as part of Exhibit 13.2.
+
+Approximately 42% of ADI's fiscal 1999 revenue was derived from sales made
+through distributors. These distributors typically maintain an inventory of
+Analog products. Some of them also sell products competitive with the Company's
+products, including those for which the Company is an alternate source. Sales to
+certain distributors are made under agreements which provide protection to the
+distributors for their inventory of Company products against price reductions
+and products that are slow-moving or have been discontinued by the Company.
+
+The Company's worldwide sales efforts are supported by an extensive promotional
+program that includes editorial coverage and paid advertising in trade
+publications; direct mail programs; promotional brochures; technical seminars
+and participation in trade shows. The Company publishes and distributes
+full-length databooks, short-form catalogs, applications guides, technical
+handbooks and detailed data sheets for individual products. The Company also
+provides products and application information via its worldwide web site on the
+Internet and the Company started to sell products on the Internet in the fourth
+quarter of fiscal 1999. The Company also maintains a staff of application
+engineers who aid customers in incorporating Analog's products into their
+products during their product development cycles.
+
+For fiscal 1999, Analog's 20 largest customers accounted for approximately 30%
+of the Company's net sales. The largest single customer represented
+approximately 4% of net sales.
+
+PRODUCTION AND RAW MATERIALS
+
+Monolithic integrated circuit components are manufactured in a sequence of
+semiconductor production steps that include wafer fabrication, wafer testing,
+cutting the wafer into individual "chips" (or dice), assembly of the dice into
+packages and electrical testing of the devices in final packaged form. The raw
+materials used to manufacture these devices include silicon wafers, processing
+chemicals (including liquefied gases), precious metals, ceramic packages and
+plastic used for packaging.
+
+ADI employs a wide variety of Company-developed proprietary processes
+specifically tailored for use in fabricating high-performance linear and
+mixed-signal and system-level ICs. The Company also uses industry-standard
+bipolar and CMOS wafer fabrication processes.
+
+ADI's IC products are fabricated both at the Company's production facilities and
+by third-party wafer fabricators. The Company relies primarily on its own
+facilities for fabricating wafers that require linear and mixed-signal
+processes. The Company operates wafer fabrication facilities in Wilmington and
+Cambridge, Massachusetts; Santa Clara and Sunnyvale, California; and Limerick,
+Ireland. The Company also operates assembly and test facilities located in the
+United States, Ireland, the Philippines and Taiwan and also uses third-party
+subcontractors. The Company has agreements with Taiwan Semiconductor
+Manufacturing Company, (TSMC), and Chartered Semiconductor Manufacturing Pte.,
+Ltd., (CSM), for the production of digital and VLSI mixed-signal devices. To
+provide access to advanced process technology at competitive costs, the Company
+participates in a joint venture agreement (WaferTech, LLC) with TSMC, Altera,
+Integrated Silicon Solutions and several individual investors that built an
+eight-inch wafer fabrication facility in Camas, Washington. Originally the
+Company had an 18% equity ownership in WaferTech. In
+
+
+
+                                       5
+<PAGE>   7
+
+January 1999, the Company concluded an agreement to sell to other WaferTech
+partners 78% of its equity ownership in WaferTech for cash equal to its
+carrying value at October 31, 1998.
+
+Hybrid products are manufactured by mounting and connecting together several
+integrated circuit chips in a single package. Some of the chips used in the
+Company's hybrids are manufactured by the Company and some are purchased from
+outside suppliers. The production process for modular components, subsystems and
+systems consists primarily of assembly, packaging and testing. Some of the
+Company's assembled products are assembled and tested within the Company's U.S.
+manufacturing facilities, while others are assembled and tested at Company-owned
+facilities outside the United States or by subcontractors, principally in the
+Far East.
+
+To respond to production capacity requirements, the Company significantly
+expanded its manufacturing capacity in 1997 and 1998. Major wafer fabrication
+expansions were completed in Wilmington and Cambridge, Massachusetts; Sunnyvale,
+California and Limerick, Ireland. Also, in fiscal 1998 the Company completed
+construction of an additional assembly and test facility in Cavite, Philippines.
+Capital expenditures were reduced to a total of $78 million in fiscal 1999 in
+response to the industry downturn in the latter half of fiscal 1998 and the
+early part of fiscal 1999.
+
+BACKLOG
+
+Backlog at the end of fiscal 1999 was approximately $446 million, up from
+approximately $174 million at the end of fiscal 1998. The increase in the
+backlog is a result of the rapid increase in demand for the Company's products
+from the year earlier period. This is the result of an upturn in the
+semiconductor industry during fiscal 1999 combined with increased demand for the
+Company's products in the rapidly growing communications, computer and consumer
+products markets. In periods of increased demand there is a tendency towards
+longer lead times which has the effect of increasing backlog and, in some
+instances, the Company may not have manufacturing capacity sufficient to fulfill
+all orders. As is customary in the semiconductor industry, the Company includes
+customers' forecast orders in backlog and often allows such orders to be
+canceled or deliveries delayed by customers without significant penalty.
+Accordingly, the Company believes that its backlog at any time should not be
+used as a measure of future revenues.
+
+GOVERNMENT CONTRACTS
+
+The Company estimates that approximately 7% of its fiscal 1999 total worldwide
+revenue was attributable to sales to the U.S. government and government
+contractors and subcontractors. Analog's government contract related business is
+predominantly in the form of negotiated, firm fixed-price subcontracts. All such
+contracts and subcontracts contain standard provisions relating to termination
+at the election of the United States government.
+
+COMPETITION
+
+ADI competes with a large number of semiconductor companies in markets that are
+highly competitive. The Company believes it is one of the largest suppliers of
+high-performance linear and mixed-signal signal-processing components.
+Competitors for the Company's analog, mixed-signal and DSP products include
+Burr-Brown Corp., Cirrus Logic Inc., Harris Corp., Linear Technology Corp.,
+Lucent Technologies Inc., Maxim Integrated Products, Inc., Motorola
+Semiconductor Products, National Semiconductor Corp., Sierra Semiconductor
+Corp., Siliconix Inc. and Texas Instruments, Inc. Sales of the Company's
+micromachined products currently comprise acceleration sensors, and its main
+competitors are Bosch, Motorola and Denso, which use a multichip solution
+whereas ADI uses a single chip solution that the Company believes provides
+cost, reliability and functional advantages in the marketplace.
+
+Many other companies offer components that compete with ADI's products; some
+also offer other electronic products, and some have financial resources
+substantially larger than ADI's. Also, some formerly independent competitors
+have been purchased by larger companies. However, to the Company's knowledge, no
+manufacturer competes with ADI across all of the product types offered by the
+Company in its signal-processing components product line.
+
+The Company believes that competitive performance in the marketplace for
+real-world signal-processing components depends upon several factors, including
+product price, technical innovation, product quality and reliability, range of
+products, customer service and technical support. The Company believes its
+aggressive technical innovation emphasizing product performance and reliability,
+supported by its commitment to strong customer service and technical support,
+enables the Company to continue to compete successfully in its chosen markets
+against both foreign and domestic semiconductor manufacturers.
+
+
+
+                                       6
+<PAGE>   8
+
+ENVIRONMENT
+
+Analog's manufacturing facilities are subject to numerous environmental laws and
+regulations, particularly with respect to industrial waste and emissions.
+Compliance with these laws and regulations has not had a material impact on the
+Company's capital expenditures, earnings or competitive position.
+
+EMPLOYEES
+
+As of October 30, 1999, the Company employed approximately 7,400 persons. The
+Company's future success depends in large part on the continued service of its
+key technical and senior management personnel, and on its ability to continue to
+attract, retain and motivate qualified employees, particularly those highly
+skilled design, process and test engineers involved in the manufacture of
+existing products and the development of new products and processes. The
+competition for such personnel is intense, and the loss of key employees could
+have a material adverse effect on the Company. The Company believes that
+relations with its employees are good.
+

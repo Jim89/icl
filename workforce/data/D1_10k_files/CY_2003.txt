@@ -1,0 +1,608 @@
+ITEM I.          BUSINESS
+
+The discussion in this report contains forward-looking statements within the meaning of Section 27A of the Securities Act of 1933 and Section 21E of the Securities Exchange Act of 1934 that involve risks and uncertainties, including, but not limited to, statements as to future operating results and business plans, our prospects and the prospects of the semiconductor industry generally, and statements as to the use of autolines for factory output, cost savings and productivity improvements and other benefits from information systems, the proportion of parts assembled in our Philippines factory, pressure on and trends for average selling prices, investments by competitors in manufacturing capacity and productivity yields, entering into licensing arrangements with third parties, capital expenditures, future acquisitions, the financing of SunPower Corporation, the impact of SunPower Corporation on future financial results, our expected effective control of SunPower Corporation, the general economy and its impact to the market segments we serve, changing environment and the cycles of the semiconductor industry, competitive pricing and the rate at which new products are introduced, successful integration and achieving the objectives of the acquired businesses, cost goals emanating from manufacturing efficiencies, expected financing and investment cash outlays, adequacy of cash and working capital, when we expect to generate positive cash flow from operations and other liquidity risks. We use words such as “anticipates,” “believes,” “expects,” “future,” “intends” and similar expressions to identify forward-looking statements. Our actual results could differ materially from those projected in the forward-looking statements for any reason, including the factors set forth in “Risk Factors” and elsewhere in this Report.
+
+General
+
+Cypress Semiconductor Corporation (“Cypress”) designs, develops, manufactures and markets a broad line of high-performance digital and mixed-signal integrated circuits for a range of markets, including data communications, telecommunications, computing, consumer and instrumentation systems. We have four product lines organized into two business segments—Memory and Non-memory. Our product divisions—Memory, Datacom, Timing Technology and Personal Communication—are the core internal reporting entities. In addition, Cypress views its product offerings by market segment in order to enhance our focus on serving end markets. These market segments include the Wide Area Networks (“WAN”) and Storage Area Networks (“SAN”) which focus on networking applications, Wireless Infrastructure (“WIN”) and Wireless Terminal (“WIT”) which focus on wireless connectivity, and Computation and Consumer which focuses on personal computers, gaming and video applications. Refer to Note 19 of our consolidated financial statements for further information related to our business and market segments.
+
+Cypress was incorporated in California in December 1982. The initial public offering of our common stock occurred in May 1986, at which time our common stock commenced trading on the NASDAQ National Market. In February 1987, we reincorporated in Delaware and on October 17, 1988 listed our common stock on the New York Stock Exchange.
+
+Cypress makes available its annual report on Form 10-K, quarterly reports on Form 10-Q, current reports on Form 8-K, and amendments to those reports filed or furnished pursuant to Section 13(a) or Section 15 (d) of the Securities Exchange Act of 1934 free of charge on our website, www.cypress.com, as soon as reasonably practicable after we electronically file such material with or furnish such material to the Securities and Exchange Commission.
+
+Products
+
+In recent years, Cypress has shifted its focus from the design and manufacture of commodity-type products—with a significant exposure to fluctuations in supply and demand, average selling price and gross margin—to the development of higher-margin, proprietary products, which tend to be more resistant to market volatility and trends. Cypress has developed higher-value products in both its Memory and Non-memory businesses.
+
+Our Memory product segment includes integrated circuits on silicon wafers manufactured using leading-edge process technology. A significant portion of the wafers we produce for memory products are manufactured at our technologically advanced, eight-inch wafer production facility in Bloomington, Minnesota, which we refer to as Fab 4. Sales of Memory products may be driven by higher volumes and operational results improved through migration to advanced technology and the attainment of lower manufacturing costs. But our Memory portfolio also includes next-generation memories with advanced functionality and features in demand by leading manufacturers in wireless, wireline, computation, consumer and other businesses. 
+
+
+
+Page 3
+
+
+
+--------------------------------------------------------------------------------
+
+A majority of the wafers we produce for Non-memory products are manufactured at our six-inch production facility located in Round Rock, Texas, which we refer to as Fab 2. For non-core technologies, we purchase wafers fabricated from outside foundries because the semiconductor industry is characterized by rapid technology and manufacturing-process improvements—resulting in products with greater speed, densities and performance capabilities—and future sales and operational results of these products will continue to be driven primarily by the timely introduction of new products with a technology advantage and customer design wins.
+
+In fiscal 2002, Cypress invested approximately $8.7 million for a 57% ownership interest in SunPower Corporation, a developer of ultra high efficiency solar cells. SunPower was not a significant part of our fiscal 2002 financial results, but we anticipate that SunPower and its technology could have a material impact in future years. (See Note 6 in the consolidated financial statements in this report for additional information.)
+
+Please refer to Note 19 of the consolidated financial statements included in this report for detailed information about the composition of revenues from our Memory and Non-memory product business segments. 
+
+Memory Products
+
+Static random access memory (“SRAM”) is used for storage and retrieval of data in data communication, telecommunication, computation, consumer, automotive, and other electronic systems. The overall SRAM market is characterized by the need for many different densities (number of bits per memory circuit), organizations (number of bits available to the user in a single access of the RAM), performance (number of bits transferred per cycle) and levels of power consumption (low power and ultra-low-power devices are required for portable battery operated equipment). We offer a broad selection of SRAM products, including high-speed synchronous SRAMs, high-performance micropower SRAMs and fast asynchronous SRAMs. Cypress’s portfolio offerings include the following:
+
+QDR™ (Quad Data Rate™) SRAMs represent a new architecture for emerging, high-performance communications applications. These SRAMs target switches and routers that operate at data rates beyond 300- MHz. Cypress, Micron Technology Inc., Samsung, Hitachi, IDT and NEC worked closely together to create the QDR standard to ensure that customers will have multiple pin- and function-compatible sources for these next-generation SRAMs.
+
+NoBL™ (No Bus Latency™) and Synchronous Burst SRAMs. NoBL synchronous SRAMs have an architecture optimized for high-speed applications requiring maximum bus bandwidth, such as networking, instrumentation, video and simulation. Synchronous Burst SRAMs have a broad selection of varying densities and input/output configurations well suited for processor cache applications.
+
+Fast Asynchronous SRAMs. Cypress markets a wide selection of fast asynchronous SRAMs with densities ranging from 16Kb to 4Mb and a wide array of bus widths, packages and temperature ranges. This portfolio includes the high-performance 16-bit-wide and 24-bit-wide families, which are optimized for the latest generation of fast digital signal processors (“DSPs”). 
+
+Micropower SRAMs. Cypress’s MoBL® (More Battery Life™) SRAMs have one of the industry’s lowest rates of power consumption, using less power than current standard, low-power SRAMs. They significantly increase battery life and talk time in wireless products such as cellular phones. 
+
+Non-memory Products
+
+Non-memory products include a variety of devices that serve the networking, telecommunications, computation, and consumer markets. Our Non-memory portfolio includes physical-layer (“PHY”) devices, framers and network search engines for datacommunications linecards, along with a broad selection of clocks, Universal Serial Bus (“USB”) controllers, specialty memories, optical products, mixed-signal arrays with embedded microcontroller capabilities and programmable-logic devices (“PLDs”). 
+
+Physical Layer devices. Our family of high-performance Synchronous Optical Network/Synchronous Digital Hierarchy (“SONET/SDH”) and Serializer/Deserializer (“SERDES”) devices move SONET or SDH frames between equipment at the SONET/SDH data rates of 51.85 Mbps (OC-1), 155.52 Mbps (OC-3/STM-1), and 2.488 Gbps (OC-48/STM-16). Our latest addition to this family meets the stringent requirements of WAN switches and routers by having Bellcore-compliant jitter specifications. 
+
+Framers. Our high-performance SONET/SDH framers transport SONET or SDH frames at the data rates of 2.488 Gbps and 9.952 Gbps (OC-192/STM-64). This family includes our POSIC2GVC™, one of the first devices on the market to offer both generic framing procedure and virtual concatenation, which enables efficient transport of data protocols such as Ethernet FibreChannel, ESCON, DVB and SMPTE over existing SONET/SDH networks.
+
+
+
+Page 4
+
+
+
+--------------------------------------------------------------------------------
+
+HOTLink® (High-speed Optical Transceiver Link) PHYs. Our HOTLink serial transceivers are industry-leading products for moving serial data at rates from 50 Mbps to 1.5 Gbps. These products support a variety of applications and industrial protocols, including Gigabit Ethernet (“GbE”), 10 Gbps Ethernet (“XAUI”), Fibre-Channel (“FC”), Enterprise System Connection (“ESCON”), Asynchronous Transfer Mode (“ATM”), Digital Video Broadcast (“DVB”), Advanced Micro Devices, Inc.’s TAXITM protocol, generic backplane and point-to-point applications. In the past several years, we have introduced new families of HOTLink PHYs, including the HOTLink II™ PHY, which moves up to four channels of serial data at up to 1.5 Gbps. 
+
+QuadPort® Datapath Switching Elements (“DSEs”). QuadPort DSEs are non-blocking switch devices that allow four independent busses, processors, or backplanes to access the DSE simultaneously in separate time domains. The applications for the devices include 4x4 switching, packet-header manipulation, and datapath transport that can reduce the need for large field programmable gate array (“FPGA”) devices. QuadPort DSEs are used in redundant array of independent disks (“RAID”) and storage switches, Metropolitan Area Network/Wide Area Network (“MAN/WAN”) switches and routers and wireless base station applications. We have recently expanded our product offering to include 16 Kbits x 18 and 32 Kbits x 18 versions of these devices.
+
+Network Search Engines (“NSEs”). NSEs are used in high-performance routers and switches to provide deterministic wirespeed table lookups for WAN infrastructure equipment, handling multiple high-speed protocols up to OC-768 and 10-Gigabit Ethernet. The Cypress family of NSEs and network coprocessors are widely used by leading networking original equipment manufacturers, referred to as OEMs.
+
+RoboClock® clock buffers. OurRobo Clock family of high-performance, programmable-skew clock buffers—the flagship product of our Timing Technology Division (TTD)—offers features, including zero propagation delay, 50/50 duty cycle, multiply/divide functions, and programmable skew—which allows customers to compensate for timing differences arising from varying circuit board trace lengths and device set-up and hold times. We recently introduced the RoboClock IITM programmable clock skew buffer, which doubles the performance of the original family by operating up to 200 MHz, supports 18 outputs, and adds more multiply, divide and programmable-skew options. TTD also offers a broad array of programmable timing products (see below), timing distribution products and frequency timing generators, targeting markets including consumer, communications and computation. These devices are widely used in personal computers, disk drives, modems, small office/home office (“SOHO”) network routers and hubs, digital video disks and home video games.
+
+Dual-Port Memories. Dual-Ports are memories that can be accessed by two different processors or busses simultaneously. Dual-Ports are designed to be memory solutions for shared-memory and switching applications, including networking switches and routers, cellular base stations, mass storage devices and telecommunication equipment. Our family of synchronous and asynchronous Dual-Port RAMs range in density from 8 Kbit to 9 Mbit in x8, x9, x16, x18 and x36 configurations. Cypress broadened its portfolio recently with the introduction of the world’s first true 9 Mbit Dual-Port.
+
+First-in, First-out (“FIFO”) Memories. FIFOs are used as an elasticity buffer between systems operating at different frequencies. We offer FIFO memories in a variety of high-bandwidth synchronous and asynchronous architectures with industry-standard pinouts. 
+
+Programmable Clocks. Programmable timing solutions combine the convenience of field programming with high performance at a cost that is competitive against custom clocks at equivalent volumes. Working with our easy-to-use CyClocks™ and CyberClocks™ software, designers can select custom frequencies for a variety of applications. We are the only supplier offering true field-programmable clocks, and all our clock outputs have the desired characteristics of high drive, low jitter, low electro-magnetic interference and low skew.
+
+Neuron Chips. Neuron Chips are very-large-scale-integrated (“VLSI”) devices that make it possible to implement low-cost control networking applications. They provide all the key functions necessary to intelligently process inputs from sensors and control-actuator devices, and to propagate control information across a variety of wireline and fiber-optic networking media. Neuron chips provide the logic for LonWorks networks, an open, interoperable control networking standard widely used in building automation, industrial control, transportation, and utility automation controllers. Each Neuron device contains three 8-bit central processing units (“CPUs”), on-board memory, 11 general-purpose input/output (“I/O”) pins, and a complete, interoperable implementation of the ANSI/EIA 709.1-A-1999 Control Network Protocol.
+
+
+
+Page 5
+
+
+
+--------------------------------------------------------------------------------
+
+USB Controllers. USB is a four-wire connection between a PC and peripherals, including keyboards, mice, printers, joysticks, scanners and modems, and among various non-PC systems. The standard facilitates an easy-to-use architecture known as “plug and play,” which enables instant recognition and interoperabiliby when a device is hooked into a system. Cypress expanded its original position in low-speed (1.5-Mbps) USB into full-speed (12-Mbps) and high-speed (480-Mbps) USB products, along with a broad array of USB hubs, transceivers, serial interface engines (“SIEs”) and embedded-host products for a broad range of new applications, including DSL modems, digital cameras and mass storage devices. 
+
+WirelessUSB™ (“W-USB”) Controllers. WirelessUSB is a wireless, radio frequency (“RF”) solution introduced in fiscal 2002 that enables manufacturers of PC mice, keyboards and gaming systems to minimize development time, cost, and power requirements without sacrificing performance. Operating at 2.4 GHz, WirelessUSB can connect a maximum of seven devices up to 30 feet apart. WirelessUSB is Cypress’s first wireless product, leveraging its strong market position in wired USB solutions into the wireless world.
+
+PLDs. The logic in an electrical system performs the non-memory functions, such as floating-point mathematics or the organization and routing of signals throughout a computer system. Logic constitutes a significant portion of the circuitry in most systems. We manufacture several families of user-programmable logic circuits, which facilitate the replacement of many standard logic devices with a single device, thus reducing package count and cost, improving performance and allowing miniaturization. Our PLD portfolio consists of a wide variety of devices ranging from simple PLDs such as the Flash 22V10, to the very-high-density complex PLDs, such as the Cypress Ultra37000TM, Quantum38KTM and Delta39KTM Complex Programmable Logic Devices (“CPLD”) families. All our products are supported by the Warp™ software tool set, which enables design description in either VHDL (very high-speed integrated circuit hardware description language), an industry standard developed by Cypress, or in Verilog, another industry standard.
+
+PSoC™ (Programmable System-on-Chip™) Configurable Mixed-Signal Arrays. PSoC products are based on a configurable mixed-signal array with an on-board controller, providing a low-cost, single-chip solution for a variety of consumer, industrial, and control applications. The PSoC device family integrates programmable blocks of analog and digital logic, a fast 8-bit processing unit, 8 to 16 Kbytes of flash memory and 256 bytes of SRAM. PSoC provides designers with a flexible architecture that can be configured for a broad range of embedded applications and dynamically reconfigured to extend the capabilities and value of their product. 
+
+GLV™ (Grating Light Valve™). Our Silicon Light Machines™ (“SLM”) subsidiary’s GLV technology switches, modulates and attenuates light. The GLV device is a dynamic diffraction grating that can serve as a simple mirror in the static state, or a variable grating in the dynamic state. Its unique combination of speed, accuracy, reliability and manufacturability has been field proven in demanding applications in the simulation, display and direct-to-print markets. SLM has leveraged its experience and expertise in optical microelectromechanical systems (“MEMS”) to create products in the fields of digital imaging and optical telecommunications, and is developing new applications for advanced uses of its technology.
+
+Cypress, the Cypress logo, MoBL, QuadPort, HOTLink, Warp, and RoboClock are registered trademarks of Cypress Semiconductor Corporation.
+
+WirelessUSB, More Battery Life, NoBL, No Bus Latency, POSIC, POSIC2GVC, Programmable Serial Interface, PSI, RoboClock II, Ultra37000, Quantum38K, Delta39K are trademarks of Cypress Semiconductor Corporation.
+
+“Programmable System-on-Chip” and PSoC are trademarks of Cypress MicroSystems, a subsidiary of Cypress.
+
+Silicon Light Machines, Grating Light Valve, and GLV are trademarks of Silicon Light Machines, a subsidiary of Cypress.
+
+Quad Data Rate™ SRAM and QDR™ SRAM comprise a new family of products developed by Cypress, IDT, Micron Technology, Inc., NEC, and Samsung. 
+
+Neuron Chip and LonWorks are registered trademarks of Echelon Corporation in the US and other countries.
+
+All other trademarks or registered trademarks are the property of their respective owners.
+
+Research and Development
+
+We place great emphasis on research and development (“R&D”). This is partially reflected by our commitment of significant management resources to continuously improve process and product design development cycle time. Our current product strategy requires rapid development of new products using emerging process technologies while minimizing R&D costs. We perform R&D for both process technology and for new product design. We spent $287.9 million, $267.5 million and $184.5 million on R&D in fiscal 2002, fiscal 2001 and fiscal 2000, respectively.
+
+
+
+Page 6
+
+
+
+--------------------------------------------------------------------------------
+
+Our process technology research focuses primarily on the continuous migration to smaller geometries. Currently, we are ramping our latest 0.13-micron manufacturing technology. We are simultaneously transferring our 90-nanometer (0.9-micron) technology from our eight-inch R&D facility in San Jose, California (“Fab 1”) to our eight-inch manufacturing Fab 4 in Minnesota.
+
+In addition to continuously reducing the geometry of our manufacturing platforms, we are developing value added derivatives for analog and embedded non-volatile memory applications. In fiscal 2002, we completed development of 0.20-micron Silicon Germanium (“SiGe”) Bipolar Complementary Metal Oxide Semiconductor (“BiCMOS”) technology for high speed and analog applications in Minnesota (Fab 4). Finally, we equipped our wafer Fab in San Jose (Fab 1) to develop MRAM (magnetic RAM) wafers for memory and embedded non-volatile application. 
+
+In October 2002, we entered into an agreement with Honeywell to jointly develop a 0.13-micron Silicon-On-Insulator (“SOI”) process technology in Fab 4. Under the agreement, Honeywell engineers will work with our R&D team on defining 0.13-micron for SOI and developing this technology in Fab 4. 
+
+We have a central design group that focuses on new product creation and improvement of design methodologies. This group has ongoing efforts to reduce design cycle time and increase first pass yield through structured re-use of intellectual property (“IP”) blocks from a controlled IP library, development of computer-aided design tools and improved design business processes. We currently have 44 design teams in place working on new product designs. Design and related software development work primarily occurs at centers located in the United States, the United Kingdom, Ireland and India.
+
+Manufacturing
+
+In fiscal 2002, we continued to manufacture our products at two sub-micron wafer fabrication facilities located in Fab 4 and Fab 2. These fabrication facilities utilize our proprietary 0.13 through 0.8-micron CMOS, 0.25 and 0.8-micron BiCMOS, and 0.35-micron Silicon Nitride Oxide Silicon (SONOS). To enhance our competitive position, we emphasize programs designed to reduce manufacturing cycle times, reduce die size, improve labor productivity, improve efficient use of capital resources, improve defect densities, improve yields and ultimately lower manufacturing costs.
+
+We made significant progress with our Statistical Process Control program. This program fully engages our entire manufacturing workforce thereby making this workforce more productive. 
+
+Also in fiscal 2002, we reduced die size by introducing our RAM 8 manufacturing process in Fab 4 and by continuing the production ramps of our RAM 7 process in Fab 4 and our SONOS process in Fab 2. RAM 8 reduced our leading edge line widths from 0.15-micron to 0.13-micron, resulting in more die per wafer. The SONOS process reduced our Fab 2 line width from 0.5-micron to 0.35-micron enabling new embedded non-volatile programmable products and increased die per wafer.
+
+A significant portion of our assembly and test operations is performed by our highly automated assembly and test facility in the Philippines, which accounted for over 40% of our fiscal 2002 assembly output, with the balance being performed by various offshore subcontractors. Our Philippines facility primarily manufactures volume products and packages where our ability to leverage manufacturing costs is high. We expect to increase the proportion of parts assembled in the Philippines factory to 60% during fiscal 2003.
+
+One of our initiatives in fiscal 2002, was to improve the overall quality and cost of our backend manufacturing process by increasing the number of parts assembled and tested in our Philippines factory and consolidating the devices built at subcontractors to a few key suppliers. This included moving the manufacture of more clock products to the Philippines. This strategy has increased the proportion of parts tested in the Philippines factory from 49% at the end of fiscal 2001 to 58% at the end of fiscal 2002. 
+
+In fiscal 2002, we invested $3.3 million in one additional fully integrated, automated manufacturing facility (autoline) enabling complete assembly and test operations with minimal human intervention. Currently, less than 10% of our output is processed on these autolines; however, we expect the autolines will provide over 20% of our factory output by the end of 2003 with no additional labor requirement. 
+
+
+
+Page 7
+
+
+
+--------------------------------------------------------------------------------
+
+During the fourth quarter of fiscal 2002, we announced and implemented a restructuring plan that resized our manufacturing facilities and reduced our workforce to bring our cost structure in line with future expected demand and to reduce expenses in all operations areas. We took out of service and are holding for sale manufacturing assets with a gross book value of $65.5 million and a net book value of $41.7 million. The restructuring affected assets at our facilities in Minnesota, Texas, and San Jose, California (see further discussion on restructuring included in Management’s Discussion and Analysis and Note 7 of the Consolidated Financial Statements). Refer to Note 1 and Note 19 of our consolidated financial statements included in this report for additional information on long-lived assets.
+
+Marketing and Sales
+
+We use four channels to sell our products: direct OEM sales by our sales force; sales by manufacturing representative firms; sales through domestic distributors; and sales through international trading companies and representative firms. Our marketing and sales efforts are organized around four regions: North America, Europe, Japan and Asia/Pacific. We also have a corporate accounts group and a contract manufacturing group, which are responsible for specific customers with worldwide operations. We augment our sales effort with field application engineers, specialists in our products, technologies and services who work with customers to design our products into their systems. Field application engineers also help us to identify emerging markets and new products.
+
+International revenues accounted for 57% of our total revenues in fiscal 2002 compared with 50% in fiscal 2001 and 49% in fiscal 2000. For additional information on our geographic revenue split, please refer to Note 19 of our Consolidated Financial Statements included with this report. Sales to Motorola, Inc. accounted for 10.2% of total revenues in fiscal 2002. No individual customer accounted for greater than 10% of total revenues in fiscal 2001. Sales to Motorola, Inc. accounted for 10.9% of total revenues in fiscal 2000. 
+
+We typically warrant our products against defects in materials and workmanship for a period of one year and that product warranty is generally limited to a refund of the original purchase price of the product.
+
+Backlog
+
+Our sales typically rely upon standard purchase orders for delivery of catalog products. Customer relationships are generally not subject to long-term contracts. However, Cypress has entered into long-term supply agreements with Alcatel, Cisco, Flextronics, Intel, Lucent, Motorola, Nortel, Philips, Solectron and ST Microelectronics N.V. Products to be delivered and the related delivery schedules are frequently revised to reflect changes in customer needs. For these reasons, our backlog at any particular date is not representative of actual sales for any succeeding period and we believe that our backlog is not a meaningful indicator of future revenues.
+
+Competition
+
+We face competition from domestic and foreign high-performance integrated circuit manufacturers, many of which have advanced technological capabilities and have increased their participation in the markets in which we operate. We compete with a large number of companies primarily in the telecommunications, data communications, computation and consumer markets. Competitors, including Altera Corporation, Applied Micro Circuits Corporation, Hitachi Ltd., Integrated Device Technology, Inc., Integrated Circuit Systems, Inc., Motorola, Inc., National Semiconductor Corporation, PMC-Sierra, Inc., Samsung Corporation, ST Microelectronics N.V., Texas Instruments Incorporated, Vitesse Semiconductor Corporation, and Xilinx, Inc., target certain markets and compete directly with some of our products. Competition is based on factors that can vary among products and markets, including product design and quality, product performance, price and service.
+
+The semiconductor industry is intensely competitive. This intense competition results in a challenging operating environment for most companies in the industry, including Cypress. This environment is characterized by potential erosion of product sale prices over the lives of each product, rapid technological change, limited product life cycles and strong domestic and foreign competition in many markets. Our ability to compete successfully in a rapidly evolving high performance end of the semiconductor technology spectrum depends on many factors, including:
+
+•          Our success in developing new products and manufacturing technologies; 
+
+•          The delivery, performance, quality and price of our products; 
+
+•          The diversity of our product line; 
+
+•          The cost effectiveness of our design, development, manufacturing and marketing efforts; 
+
+•          The pace at which customers incorporate our products into their systems; and
+
+•          The number and nature of our competitors and general economic conditions.
+
+
+
+Page 8
+
+
+
+--------------------------------------------------------------------------------
+
+We believe that we currently compete effectively in the above areas to the extent they are within our control; however, given the pace at which events change in the industry, our current abilities are not a guarantee of future success. If we are not able to compete successfully in this environment, our business, operating results and financial condition will be harmed.
+
+Patents, Licenses and Trademarks
+
+We currently have over 750 patents and approximately 700 additional patent applications on file with the United States Patent and Trademark Office. We are preparing to file more than 200 new patent applications. In addition to factors such as innovation, technological expertise and experienced personnel, we believe that patents are increasingly important to remain competitive in our industry. We have an active program to obtain additional patent and other intellectual property protection.
+
+We have entered into, and in the future may continue to enter into, technology license agreements with third parties that give those parties the right to use patents and other technology developed by us. Some of these agreements also give us the right to use patents and other technologies developed by such other parties, some of which involve payment of royalties. 
+
+Cypress also vigorously defends its product and service marks. For a list of Cypress trademarks and registered trademarks, please visit the “Terms and Conditions” section of our website, which is located at www.cypress.com.
+
+Acquisition and Equity Investment
+
+During fiscal 2002 we acquired Sahasra Networks, Inc. and made an investment in SunPower Corporation, which has been accounted for under the equity method of accounting.
+
+•          Sahasra Networks, Inc. is designing a software-based method of making large-entry, next generation network search engines. This acquisition broadens our capability within our Non-memory business segment and the WAN/SAN market segment.
+
+•           SunPower Corporation (“SunPower”) designs and manufactures high-efficiency silicon solar cells. Cypress is partnering with SunPower to leverage our expertise in cost-effective, high-volume silicon manufacturing.
+
+Employees
+
+As of December 29, 2002, we had 4,101 employees. Effective December 31, 2002, an additional 311 persons left Cypress as part of the restructuring plan announced in the fourth quarter of 2002. (See Note 7 of the consolidated financial statements included in this report). None of our employees is represented by a collective bargaining agreement, nor have we ever experienced work stoppages. 
+
+Risk Factors
+
+ 
+
+The discussion in this report contains forward-looking statements within the meaning of Section 27A of the Securities Act of 1933 and Section 21E of the Securities Exchange Act of 1934 that involve risks and uncertainties, including, but not limited to, statements as to future operating results and business plans, our prospects and the prospects of the semiconductor industry generally, and statements as to the use of autolines for factory output, cost savings and productivity improvements and other benefits from information systems, the proportion of parts assembled in our Philippines factory, pressure on and trends for average selling prices, investments by competitors in manufacturing capacity and productivity yields, entering into licensing arrangements with third parties, capital expenditures, future acquisitions, the financing of SunPower Corporation, the impact of SunPower Corporation on future financial results, our expected effective control of SunPower Corporation, the general economy and its impact to the market segments we serve, changing environment and the cycles of the semiconductor industry, competitive pricing and the rate at which new products are introduced, successful integration and achieving the objectives of the acquired businesses, cost goals emanating from manufacturing efficiencies, expected financing and investment cash outlays, adequacy of cash and working capital, when we expect to generate positive cash flow from operations, and other liquidity risks. We use words such as “anticipates,” “believes,” “expects,” “future,” “intends,” and similar expressions to identify forward-looking statements. Our actual results could differ materially from those projected in the forward-looking statements for any reason, including the factors set forth in “Risk Factors” and elsewhere in this Report.
+
+
+
+Page 9
+
+
+
+--------------------------------------------------------------------------------
+
+We are exposed to the risks associated with the slowdown in the U.S. and worldwide economy.
+
+Among other factors, concerns about inflation, decreased consumer confidence and spending and reduced corporate profits and capital spending have resulted in a downturn in the U.S. economy generally and in the semiconductor industry in particular. As a result of the downturn, our volumes initially declined and were followed by significant reductions in our average selling prices. We expect continued pressure on average selling prices in the future. As a consequence of the continued economic downturn in fiscal 2002, during the fourth quarter of fiscal 2002 we announced a restructuring plan that resized our manufacturing facilities, and reduced our workforce and combined facilities. In addition, we recorded a charge for the impairment of goodwill and intangibles related to SLM as well as the impairment of certain other investments in development stage companies. If the adverse economic conditions continue or worsen, additional restructuring of operations may be required, and our business, financial condition and results of operations may be seriously harmed.
+
+We face periods of industry-wide semiconductor over-supply that harm our results. 
+
+The semiconductor industry has historically been characterized by wide fluctuations in the demand for, and supply of, semiconductors. These fluctuations have helped produce many occasions when supply and demand for semiconductors have not been in balance. In the past, these industry-wide fluctuations in demand, which have resulted in under-utilization of our manufacturing capacity, have seriously harmed our operating results. In some cases, industry downturns with these characteristics have lasted more than a year. Prior experience has shown that restructuring of the operations, resulting in significant restructuring charges, may become necessary if an industry downturn persists. In response to the current significant downturn, we restructured our manufacturing operations and administrative areas in the fourth quarter of fiscal 2002 to increase cost efficiency while still maintaining an infrastructure that will enable us to grow when sustainable economic recovery begins. When these cycles occur, however, they will likely seriously harm our business, financial condition and results of operations and we may need to take further action to respond to them.
+
+Our future operating results are likely to fluctuate and therefore may fail to meet expectations.
+
+Our operating results have varied widely in the past and may continue to fluctuate in the future. In addition, our operating results may not follow any past trends. Our future operating results will depend on many factors and may fluctuate and fail to meet our expectations or those of others for a variety of reasons, including the following:
+
+•          the intense competitive pricing pressure to which our products are subject, which can lead to rapid and unexpected declines in average selling prices; 
+
+•          the complexity of our manufacturing processes and the sensitivity of our production costs to declines in manufacturing yields, which make yield problems both possible and costly when they occur; and 
+
+•          the need for constant, rapid, new product introductions which present an ongoing design and manufacturing challenge, which can be significantly impacted by even relatively minor errors, and which may result in products never achieving expected market demand.
+
+As a result of these or other factors, we could fail to achieve our expectations as to future revenues, gross profit and income from operations. Any downward fluctuation or failure to meet expectations will likely adversely affect the value of your investment in Cypress. 
+
+In addition, because we recognize revenues from sales to certain distributors only when these distributors make a sale to customers, we are highly dependent on the accuracy of their resale estimates. The occurrence of inaccurate estimates also contributes to the difficulty in predicting our quarterly revenue and results of operations and we can fail to meet expectations if we are not accurate in our estimates.
+
+
+
+Page 10
+
+
+
+--------------------------------------------------------------------------------
+
+Our financial results could be seriously harmed if the markets in which we sell our products do not grow.
+
+Our continued success depends in large part on the continued growth of various electronics industries that use our semiconductors, including the following industries:
+
+•          networking equipment;
+
+•          wireless telecommunications equipment;
+
+•          computers and computer-related peripherals; and
+
+•          consumer electronics, automotive electronics and industrial controls. 
+
+Many of our products are incorporated into data communications and telecommunications end products. Any reduction in the growth of, or decline in the demand for, networking applications, mass storage, telecommunications, cellular base stations, cellular handsets and other personal communication devices that incorporate our products could seriously harm our business, financial condition and operating results. In addition, certain of our products, including USB microcontrollers and high-frequency clocks, are incorporated into computer and computer-related products, which have historically and may in the future experience significant fluctuations in demand. We may also be seriously harmed by slower growth in the other markets in which we sell our products.
+
+We are affected by a general pattern of product price decline and fluctuations, which can harm our business.
+
+Even in the absence of an industry downturn, the average selling prices of our products have historically decreased during the products’ lives, and we expect this trend to continue. In order to offset selling price decreases, we attempt to decrease the manufacturing costs of our products, and to introduce new, higher priced products that incorporate advanced features. If these efforts are not successful or do not occur in a timely manner, or if our newly introduced products do not gain market acceptance, our business, financial condition and results of operations could be seriously harmed.
+
+In addition to following the general pattern of decreasing average selling prices, the selling prices for certain products, particularly commodity products, fluctuate significantly with real and perceived changes in the balance of supply and demand for these products. In the event we are unable to decrease per unit manufacturing costs at a rate equal to or faster than the rate at which selling prices continue to decline, our business, financial condition and results of operations will be seriously harmed. Furthermore, we expect our competitors to invest in new manufacturing capacity and achieve significant manufacturing yield improvements in the future. These developments could dramatically increase the worldwide supply of competitive products and result in further downward pressure on prices.
+
+We may be unable to protect our intellectual property rights adequately, and may face significant expenses as a result of ongoing or future litigation.
+
+Protection of our intellectual property rights is essential to keep others from copying the innovations that are central to our existing and future products. Consequently, we may become involved in litigation to enforce our patents or other intellectual property rights, to protect our trade secrets and know-how, to determine the validity or scope of the proprietary rights of others, or to defend against claims of invalidity. This type of litigation can be expensive, regardless of whether we win or lose.
+
+We are now and may again become involved in litigation relating to alleged infringement by us of others’ patents or other intellectual property rights. This type of litigation is frequently expensive to both the winning party and the losing party and could take up significant amounts of management’s time and attention. In addition, if we lose such a lawsuit, a court could require us to pay substantial damages and/or royalties or prohibit us from using essential technologies. For these and other reasons, this type of litigation could seriously harm our business, financial condition and results of operations. Also, although in certain instances we may seek to obtain a license under a third party’s intellectual property rights in order to bring an end to certain claims or actions asserted against us, we may not be able to obtain such a license on reasonable terms or at all.
+
+For a variety of reasons, we have entered into technology license agreements with third parties that give those parties the right to use patents and other technology developed by us, and that give us the right to use patents and other technology developed by them. We anticipate that we will continue to enter into these kinds of licensing arrangements in the future. It is possible however, that licenses we want will not be available to us on commercially reasonable terms or at all. If we lose existing licenses to key technology, or are unable to enter into new licenses that we deem important, our business, financial condition and results of operations could be seriously harmed.
+
+ 
+
+
+
+Page 11
+
+
+
+--------------------------------------------------------------------------------
+
+It is critical to our success that we be able to prevent competitors from copying our innovations. We therefore intend to continue to seek patent, trade secret and mask work protection for our semiconductor manufacturing technologies. The process of seeking patent protection can be long and expensive, and we cannot be certain that any currently pending or future applications will actually result in issued patents, or that, even if patents are issued, they will be of sufficient scope or strength to provide meaningful protection or any commercial advantage to us. Furthermore, others may develop technologies that are similar or superior to our technology or design around the patents we own.
+
+We also rely on trade secret protection for our technology, in part through confidentiality agreements with our employees, consultants and third parties. However, these parties may breach these agreements, and we may not have adequate remedies for any breach. Also, others may come to know about or determine our trade secrets through a variety of methods. In addition, the laws of certain countries in which we develop, manufacture or sell our products may not protect our intellectual property rights to the same extent as the laws of the United States.
+
+Our financial results could be adversely impacted if we fail to develop, introduce and sell new products or fail to develop and implement new manufacturing technologies.
+
+Like many semiconductor companies, which frequently operate in a highly competitive, quickly changing environment marked by rapid obsolescence of existing products, our future success depends on our ability to develop and introduce new products that customers choose to buy. We introduce significant numbers of products each year, which are an important source of revenue for us. If we fail to introduce new product designs in a timely manner or are unable to manufacture products according to the requirements of these designs, or if our customers do not successfully introduce new systems or products incorporating ours, or market demand for our new products does not exist as anticipated, our business, financial condition and results of operations could be seriously harmed.
+
+For us and many other semiconductor companies, introduction of new products is a major manufacturing challenge. The new products the market requires tend to be increasingly complex, incorporating more functions and operating at faster speeds than prior products. Increasing complexity generally requires smaller features on a chip. This makes manufacturing new generations of products substantially more difficult than prior generations. Ultimately, whether we can successfully introduce these and other new products depends on our ability to develop and implement new ways of manufacturing semiconductors. If we are unable to design, develop, manufacture, market and sell new products successfully, our business, financial condition and results of operations would be seriously harmed.
+
+Our ability to meet our cash requirements depends on a number of factors, many of which are beyond our control.
+
+Our ability to meet our cash requirements (including our debt service obligations) is dependent upon our future performance, which will be subject to financial, business and other factors affecting our operations, many of which are beyond our control. We cannot assure that our business will generate sufficient cash flows from operations to fund our cash requirements. If we are unable to meet our cash requirements from operations, we would be required to fund these cash requirements by alternative financings. The degree to which we may be leveraged could materially and adversely affect our ability to obtain financing for working capital, acquisitions or other purposes, could make us more vulnerable to industry downturns and competitive pressures, or could limit our flexibility in planning for, or reacting to, changes and opportunities in our industry, which may place us at a competitive disadvantage compared to our competitors. There can be no assurance that we will be able to obtain alternative financing, that any such financing would be on acceptable terms, or that we will be permitted to do so under the terms of our existing financing arrangements. In the absence of such financing, our ability to respond to changing business and economic conditions, make future acquisitions, react to adverse operating results, meet our debt service obligations or fund required capital expenditures or increased working capital requirements may be adversely affected.
+
+Interruptions in the availability of raw materials can seriously harm our financial performance.
+
+ 
+
+Our semiconductor manufacturing operations require raw materials that must meet exacting standards. We generally have more than one source available for these materials, but for certain of our products there are only a limited number of suppliers capable of delivering the raw materials that meet our standards. If we need to use other companies as suppliers, they must go through a qualification process, which can be difficult and lengthy. In addition, for certain of our products the raw materials we need for our business could become more scarce as worldwide demand for semiconductors increases. Interruption of our sources of raw materials could seriously harm our business, financial condition and results of operations.
+
+ 
+
+
+
+Page 12
+
+
+
+--------------------------------------------------------------------------------
+
+Problems in the performance of other companies we hire to perform certain manufacturing tasks can seriously harm our financial performance.
+
+A high percentage of our products are assembled, packaged and tested at our manufacturing facility located in the Philippines. We rely on independent subcontractors to assemble, package and test the balance of our products. This reliance involves certain risks, because we have less control over manufacturing quality and delivery schedules, whether these companies have adequate capacity to meet our needs and whether or not they discontinue or phase-out assembly processes we require. We cannot be certain that these subcontractors will continue to assemble, package and test products for us, and it might be difficult for us to find alternatives if they do not do so.
+
+The complex nature of our manufacturing activities makes us highly susceptible to manufacturing problems and these problems can have substantial negative impact on us when they occur.
+
+Making semiconductors is a highly complex and precise process, requiring production in a tightly controlled, clean environment. Even very small impurities in our manufacturing materials, difficulties in the wafer fabrication process, defects in the masks used to print circuits on a wafer or other factors can cause a substantial percentage of wafers to be rejected or numerous chips on each wafer to be nonfunctional. We may experience problems in achieving an acceptable success rate in the manufacture of wafers, and the likelihood of facing such difficulties is higher in connection with the transition to new manufacturing methods. The interruption of wafer fabrication or the failure to achieve acceptable manufacturing yields at any of our facilities would seriously harm our business, financial condition and results of operations. We may also experience manufacturing problems in our assembly and test operations and in the introduction of new packaging materials.
+
+We may not be able to use all of our existing or future manufacturing capacity, which can negatively impact our business.
+
+We have, in the past spent, and spend, significant amounts of money to upgrade and increase our wafer fabrication, assembly and test manufacturing capability and capacity. If we do not need some of this capacity and capability for any of a variety of reasons, including inadequate demand or a significant shift in the mix of product orders that makes our existing capacity and capability inadequate or in excess of our actual needs, our fixed costs per semiconductor produced will increase, which will harm our business, financial condition and results of operations. In addition, if the need for more advanced products requires accelerated conversion to technologies capable of manufacturing semiconductors having smaller features, or requires the use of larger wafers, we are likely to face higher operating expenses and may need to write-off capital equipment made obsolete by the technology conversion, either of which could seriously harm our business and results of operations. For example, in response to various downturns and changes in our business, we have not been able to use all of our existing equipment and we have restructured our operations. These restructurings have resulted in material charges, which have negatively affected our business. If the downturn continues, we could incur additional restructuring charges, which could further negatively affect our business.
+
+Our operations and financial results could be severely harmed by certain natural disasters.
+
+Our headquarters, some manufacturing facilities and some of our major vendors’ facilities are located near major earthquake faults. We have not been able to maintain earthquake coverage at reasonable costs. Instead, we rely on self-insurance and preventative/safety measures. If a major earthquake or other natural disaster occurs, we may need to spend significant amounts to repair or replace our facilities and equipment and we could suffer damages that could seriously harm our business, financial condition and results of operations.
+
+Our business, results of operations and financial condition will be seriously harmed if we fail to compete successfully in our highly competitive industry and markets.
+
+The semiconductor industry is intensely competitive. This intense competition results in a difficult operating environment for us and most other semiconductor companies that is marked by erosion of average selling prices over the lives of each product, rapid technological change, limited product life cycles and strong domestic and foreign competition in many markets. A primary cause of this highly competitive environment is the strength of our competitors. The industry consists of major domestic and international semiconductor companies, many of which have substantially greater financial, technical, marketing, distribution and other resources than we do. We face competition from other domestic and foreign high-performance integrated circuit manufacturers, many of which have advanced technological capabilities and have increased their participation in markets that are important to us. 
+
+ 
+
+
+
+Page 13
+
+
+
+--------------------------------------------------------------------------------
+
+Our ability to compete successfully in the rapidly evolving high performance portion of the semiconductor technology industry depends on many factors, including:
+
+•          our success in developing new products and manufacturing technologies; 
+
+•          the quality and price of our products; 
+
+•          the diversity of our product line; 
+
+•          the cost effectiveness of our design, development, manufacturing and marketing efforts; 
+
+•          our customer service;
+
+•          our customer satisfaction;
+
+•          the pace at which customers incorporate our products into their systems;
+
+•          the number and nature of our competitors and general economic conditions, and 
+
+•          our access to and the availability of capital.
+
+Although we believe we currently compete effectively in the above areas to the extent they are within our control, given the pace of change in the industry, our current abilities are not a guarantee of future success. If we are unable to compete successfully in this environment, our business, operating results and financial condition will be seriously harmed.
+
+We must build semiconductors based on our forecasts of demand, and if our forecasts are inaccurate, we may have large amounts of unsold products or we may not be able to fill all orders.
+
+We order materials and build semiconductors based primarily on our internal forecasts, and secondarily on existing orders, which may be cancelled under many circumstances. Consequently, we depend on our forecasts as a principle means to determine inventory levels for our products and the amount of manufacturing capacity that we need. Because our markets are volatile and subject to rapid technological and price changes, our forecasts may be wrong, and we may make too many or too few of certain products or have too much or too little manufacturing capacity. Also, our customers frequently place orders requesting product delivery almost immediately after the order is made, which makes forecasting customer demand even more difficult, particularly when supply is abundant. These factors also make it difficult to forecast quarterly operating results. If we are unable to predict accurately the appropriate amount of product required to meet customer demand, our business, financial condition and results of operations could be seriously harmed, either through missed revenue opportunities because inventory for sale was insufficient or through excessive inventory that would require write-offs.
+
+We must spend heavily on equipment to stay competitive, and will be adversely impacted if we are unable to secure financing for such investments.
+
+In order to remain competitive, semiconductor manufacturers generally must spend heavily on equipment to maintain or increase technology and design development and manufacturing capacity and capability. We have budgeted for approximately $57 million in expenditures on equipment in fiscal 2003 and anticipate significant continuing capital expenditures in subsequent years. In the past, we have reinvested a substantial portion of our cash flow from operations in technology, design development and capacity expansion and improvement programs.
+
+If we are unable to decrease costs for our products at a rate at least as fast as the rate of the decline in selling prices for such products, we may not be able to generate enough cash flow from operations to maintain or increase manufacturing capability and capacity as necessary. In such a situation, we would need to seek financing from external sources to satisfy our needs for manufacturing equipment and, if cash flow from operations declines too much, for operational cash needs as well. Such financing, however, may not be available on terms that are satisfactory to us or at all, in which case our business, financial condition and results of operations would be seriously harmed.
+
+We compete with others to attract and retain key personnel, and any loss of, or inability to attract, such personnel would harm us.
+
+To a greater degree than most non-technology companies, we depend on the efforts and abilities of certain key management and technical personnel. Our future success depends, in part, upon our ability to retain such personnel, and to attract and retain other highly qualified personnel, particularly product and process engineers. We compete for these individuals with other companies, academic institutions, government entities and other organizations. Competition for such personnel is intense and we may not be successful in hiring or retaining new or existing qualified personnel. 
+
+ 
+
+
+
+Page 14
+
+
+
+--------------------------------------------------------------------------------
+
+We believe that stock option grants are critical to our ability to attract and retain personnel. The New York Stock Exchange has proposed rules effective June 30, 2003 that would require, subject to certain exceptions, stockholder approval for equity compensation plans, including stock option plans. If these rules go into effect, our ability to hire or retain highly qualified personnel may be seriously impacted due to an inability to grant stock options and other equity based compensation if we are unable to obtain stockholder approval for such new plans in a timely manner or at all.
+
+If we lose existing qualified personnel or are unable to hire new qualified personnel as needed, our business, financial condition and results of operations could be seriously harmed.
+
+We face additional problems and uncertainties associated with international operations that could seriously harm us.
+
+International revenues accounted for 57% of our total revenues in fiscal 2002. Long-lived assets are held primarily in the United States with 11% held in the Philippines and 1% in other foreign countries. (See Note 19 of our consolidated financial statements included in this report). Our Philippine assembly and test operations, as well as our international sales, face risks frequently associated with foreign operations, including:
+
+•          currency exchange fluctuations, 
+
+•          political instability, 
+
+•          changes in local economic conditions, 
+
+•          the devaluation of local currencies, 
+
+•          import and export controls, and
+
+•          changes in tax laws, tariffs and freight rates. 
+
+To the extent any such risks materialize, our business, financial condition and results of operations could be seriously harmed.
+
+We are subject to many different environmental regulations, and compliance with them may be costly.
+
+We are subject to many different governmental regulations related to the storage, use, discharge and disposal of toxic, volatile or otherwise hazardous chemicals used in our manufacturing process. Compliance with these regulations can be costly. In addition, over the last several years, the public has paid a great deal of attention to the potentially negative environmental impact of semiconductor manufacturing operations. This attention and other factors may lead to changes in environmental regulations that could force us to purchase additional equipment or comply with other potentially costly requirements. If we fail to control the use of, or to adequately restrict the discharge of, hazardous substances under present or future regulations, we could face substantial liability or suspension of our manufacturing operations, which could seriously harm our business, financial condition and results of operations.
+
+We depend on third parties to transport our products.
+
+We rely on independent carriers and freight haulers to move our products between manufacturing plants and our customers. Any transport or delivery problems because of their errors, or because of unforeseen interruptions in their activities due to factors such as strikes, political instability, terrorism, natural disasters and accidents, could seriously harm our business, financial condition and results of operations and ultimately impact our relationship with our customers.
+
+We may fail to integrate our business and technologies with those of companies that we have recently acquired and that we may acquire in the future.
+
+We completed one acquisition in fiscal 2002, six acquisitions in fiscal 2001, and four acquisitions in fiscal 2000 and may pursue additional acquisitions in the future. If we fail to integrate these businesses successfully or properly, our quarterly and annual results may be seriously harmed. Integrating these businesses, people, products and services with our existing business could be expensive, time-consuming and a strain on our resources. Specific issues that we face with regard to prior and future acquisitions include:
+
+•          integrating acquired technology or products;
+
+•          integrating acquired products into our manufacturing facilities;
+
+•          assimilating the personnel of the acquired companies;
+
+•          coordinating and integrating geographically dispersed operations;
+
+•          our ability to retain customers of the acquired company;
+
+•          the potential disruption of our ongoing business and distraction of management;
+
+•          the maintenance of brand recognition of acquired businesses;
+
+•          the failure to successfully develop acquired in-process technology, resulting in the impairment of amounts currently capitalized as intangible assets;
+
+•          unanticipated expenses related to technology integration;
+
+•          the development and maintenance of uniform standards, corporate cultures, controls, procedures and policies;
+
+•          the impairment of relationships with employees and customers as a result of any integration of new management personnel; and
+
+•          the potential unknown liabilities associated with acquired businesses.
+
+ 
+
+
+
+Page 15
+
+
+
+--------------------------------------------------------------------------------
+
+We may incur losses in connection with loans made under our stock purchase assistance plan.
+
+Cypress has outstanding loans, consisting of principal and cumulative accrued interest, of $106.4 million to employees and former employees under the shareholder-approved 2001 Employee Stock Purchase Assistance Plan. (See Note 13 to our Consolidated Financial Statements included in this report for a further description of this plan.) Cypress made the loans to employees for the purpose of purchasing Cypress common stock. Each loan is evidenced by a full recourse promissory note executed by the employee in favor of Cypress and is secured by a pledge of the shares of Cypress’s common stock purchased with the proceeds of the loan. The primary benefit to Cypress from this program is increased employee retention. In accordance with the plan, the CEO and the Board of Directors do not participate in this program. To date, there have been immaterial write-offs. As of December 29, 2002, Cypress has a loss reserve against these loans of $16.0 million, including an increase to the reserve of $14.8 million recorded during 2002. In determining the increase to this reserve, management considered various factors, including an independent fair value analysis of these employee and former employee loans and the underlying collateral. At December 29, 2002, the difference between the carrying value of the loans and the underlying common stock collateral was $61.6 million. While the loans are secured by the shares of our stock purchased with the loan proceeds, the value of this collateral would be adversely affected if our stock price declined significantly. Our liquidity and results of operations would be adversely affected if a significant amount of these loans were not repaid. Similarly, if our stock price were to decrease, our employees bear greater repayment risk and we would have increased risk to our liquidity. However, Cypress is willing to pursue every available avenue, including those covered under the Uniform Commercial Code, to recover these loans by pursuing employees’ personal assets should the employees not repay these loans. 
+
+We maintain self-insurance for certain liabilities of our officers and directors.
+
+Our certificate of incorporation, by-laws and indemnification agreements require us to indemnify our officers and directors for certain liabilities that may arise in the course of their service to us. We self-insure with respect to potential indemnifiable claims. If we were required to pay a significant amount on account of these liabilities for which we self-insure, our business, financial condition and results of operations could be seriously harmed.
+
+Executive Officers of the Registrant
+
+Certain information regarding each of our current executive officers is set forth below:
+
+ 
+
+Name
+  
+ Age
+  
+ Position
+  
+ Executive
+Officer
+Since
+ 
+
+--------------------------------------------------------------------------------
+  
+ 
+--------------------------------------------------------------------------------
+  
+ 
+--------------------------------------------------------------------------------
+  
+ 
+--------------------------------------------------------------------------------
+ 
+ 
+  
+  
+  
+  
+  
+  
+ 
+T. J. Rodgers
+  
+ 55
+  
+ President, Chief Executive Officer and Director 
+  
+ 1982
+ 
+ 
+  
+  
+  
+  
+  
+  
+ 
+Antonio R. Alvarez
+  
+ 46
+  
+ Executive Vice President, Memory Products Division
+  
+ 1993
+ 
+ 
+  
+  
+  
+  
+  
+  
+ 
+Emmanuel T. Hernandez
+  
+ 47
+  
+ Executive Vice President, Finance and Administration
+Chief Financial Officer
+  
+ 1994
+ 
+ 
+  
+  
+  
+  
+  
+  
+ 
+Ralph H. Schmitt
+  
+ 42
+  
+ Executive Vice President, Sales and Marketing
+  
+ 2000
+ 
+ 
+  
+  
+  
+  
+  
+  
+ 
+Christopher Seams
+  
+ 40
+  
+ Executive Vice President, Worldwide Manufacturing &
+Research and Development
+  
+ 2002
+ 
+
+
+
+Except as set forth below, each of our executive officers has been engaged in his principal occupation described above during the past five years. There is no family relationship between any of our directors or executive officers. 
+
+T.J. Rodgers is a co-founder of Cypress Semiconductor Corporation and has been a Director and its President and Chief Executive Officer since 1982. Mr. Rodgers serves as a director of SolarFlare Communications, Infinera, ION America and SunPower.
+
+Antonio R. Alvarez joined Cypress in May 1987 as a senior technical engineer. Mr. Alvarez was transferred to our former subsidiary, Aspen Semiconductor Corporation, in April 1988 as the manager of BiCMOS technology. In October 1989, Mr. Alvarez returned to the corporate office as Vice President, Research and Development. In February 1993, Mr. Alvarez became responsible for Fab 1 when it was merged with the research and development department. In 1998, Mr. Alvarez also became responsible for the Memory Products Division. Mr. Alvarez was named Executive Vice President in April 1999. In 2001, responsibilities for research and development were transferred to Mr. Christopher Seams.
+
+
+
+Page 16
+
+
+
+--------------------------------------------------------------------------------
+
+Emmanuel T. Hernandez joined Cypress in June 1993 as Corporate Controller. In January 1994, Mr. Hernandez was promoted to Senior Vice President, Finance and Administration, and Chief Financial Officer. Prior to joining Cypress, Mr. Hernandez held various financial positions with National Semiconductor Corporation from 1976 through 1993. Mr. Hernandez was named Executive Vice President in May 1998. Mr. Hernandez serves as a board member of Xicor, Inc. ON Semiconductor and SunPower.
+
+Ralph H. Schmitt joined Cypress in 1987 as our first account manager. In 1991 he became responsible for the Mid-Atlantic sales region. In 1993 he was named Director of Worldwide Strategic Accounts. In 1995 Mr. Schmitt left Cypress to found GroupTec LLC, a Manufacturers’ Representative. He was a Partner and President of this firm. Mr. Schmitt rejoined Cypress in January 1998 as Sales Director with responsibility for transitioning the sales and marketing organization to align with Cypress’s shift to a market-based strategy. He was appointed Vice President, Segment Sales and Marketing in September 1999 and named Vice President, Sales and Marketing in June 2000. Mr. Schmitt was named an Executive Vice President in July 2000.
+
+Christopher Seams joined Cypress in 1990 and held a variety of positions in process and assembly technology research and development and manufacturing operations. In 2001, Mr. Seams became responsible for Research and Development. He was appointed Executive Vice President, Manufacturing and Research and Development in November 2002. He serves as a board member of 1ST Silicon, Ronal Systems and SunPower.

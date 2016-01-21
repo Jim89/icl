@@ -1,0 +1,638 @@
+ITEM 1.   BUSINESS  
+
+ 
+
+Cautionary Statement Regarding Forward-Looking Statements 
+
+ 
+
+The statements in this report include forward-looking statements. These forward-looking statements are based on current expectations and beliefs and involve numerous risks and uncertainties that could cause actual results to differ materially from expectations. These forward-looking statements should not be relied upon as predictions of future events as we cannot assure you that the events or circumstance reflected in these statements will be achieved or will occur. You can identify forward-looking statements by the use of forward-looking terminology including “believes,” “expects,” “may,” “will,” “should,” “seeks,” “approximately,” “intends,” “plans,” “pro forma,” “estimates,” or “anticipates” or the negative of these words and phrases or other variations of these words and phrases or comparable terminology. The forward-looking statements relate to, among other things, operating results; anticipated cash flows; capital expenditures; gross margins; adequacy of resources to fund operations and capital investments; our ability to achieve cost reductions in the amounts and in the timeframes anticipated; our ability to transition new product introductions effectively; our ability to produce microprocessors in the volume required by customers on a timely basis; our ability to maintain average selling prices of microprocessors despite aggressive marketing and pricing strategies of our competitors; our ability to introduce in a timely manner and achieve market acceptance for our eighth-generation microprocessors and produce them in the volumes required by the market at acceptable yields; our ability, and the ability of third parties, to provide timely infrastructure solutions, such as motherboards and chipsets, to support our microprocessors; a recovery in the economy leading to increased demand for our products; a recovery in the communication and networking industries leading to an increase in the demand for Flash memory products; the effect of foreign currency hedging transactions; the process technology transitions in our submicron integrated circuit manufacturing facilities located in Dresden, Germany (Fab 30) and Austin, Texas (Fab 25); and the financing and further construction of the Fujitsu AMD Semiconductor Limited (FASL) manufacturing facilities. For a discussion of the factors that could cause actual results to differ materially from the forward-looking statements, see the “Financial Condition” and “Risk Factors” sections set forth in “Management’s Discussion and Analysis of Financial Condition and Results of Operations” beginning on page 15 below and such other risks and uncertainties as set forth below in this report or detailed in our other Securities and Exchange Commission reports and filings. 
+
+ 
+
+General 
+
+ 
+
+We are a semiconductor manufacturer with manufacturing facilities in the United States, Europe and Asia and sales offices throughout the world. We design, manufacture and market industry-standard digital integrated circuits, or ICs, that are used in many diverse product applications such as personal computers, workstations, servers, communications equipment and automotive and consumer electronics. Our products consist of microprocessors, Flash memory devices and personal connectivity solutions. 
+
+ 
+
+We were incorporated under the laws of Delaware on May 1, 1969. Our mailing address and executive offices are located at One AMD Place, Sunnyvale, California 94086, and our telephone number is (408) 732-2400. Unless otherwise indicated, references in this report to “AMD,” “we” and “us” include our subsidiaries. We make our filings with the SEC available on the Investor Relations page of our website, “www.amd.com,” free of charge. 
+
+ 
+
+For financial information about geographic areas and for segment information with respect to sales, operating results and identifiable assets, refer to the information set forth in Note 9 of our consolidated financial statements on page 63 below. 
+
+ 
+
+For a discussion of the risk factors related to our business operations, please see the “Cautionary Statement Regarding Forward-Looking Statements” above, and the “Risk Factors” and “Financial Condition” sections set 
+
+ 
+
+1 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+forth in “Management’s Discussion and Analysis of Financial Condition and Results of Operations” beginning on page 15 below. 
+
+ 
+
+The IC Industry 
+
+ 
+
+The IC market has grown dramatically over the past decade, driven primarily by the demand for electronic business and consumer products. Today, virtually all electronic products use ICs, including personal computers, or PCs, and related peripherals, wired and wireless voice and data communications and networking products including cellular phones, facsimile and photocopy machines, home entertainment equipment, industrial control equipment and automobiles. 
+
+ 
+
+The market for ICs can be divided into separate markets for digital and analog devices. We participate in the market for digital ICs. The three types of digital ICs used in most electronic systems are: 
+
+ 
+
+  •   microprocessors, which are used for control and computing tasks, and complementary chipset devices, which perform essential logic functions that support the microprocessors;  
+
+ 
+
+  •   memory circuits, which are used to store data and programming instructions; and  
+
+ 
+
+  •   logic circuits, which are employed to manage the interchange and manipulation of digital signals.  
+
+ 
+
+Within the digital IC market, we primarily participate in the microprocessor and Flash memory device markets. In addition, we participate in the emerging system-on-a-chip, or SoC, embedded processor market for personal connectivity devices. 
+
+ 
+
+The Microprocessor Market 
+
+ 
+
+A microprocessor is an IC that serves as the central processing unit, or CPU, of a computer system. It generally consists of millions of transistors that process system data and control other devices in the system, acting as the brain of the computer. The performance of a microprocessor is typically the most critical factor impacting the performance and efficiency of a PC and other similar devices. One indicator of microprocessor performance is work-per-cycle, or how many instructions are executed per cycle. The second indicator of performance is its clock speed, the rate at which its internal logic operates, which is measured in units of hertz, or cycles processed per second. Other factors in microprocessor performance include memory storage and access speed. Developments in circuit design and manufacturing process technologies have resulted in dramatic advances in microprocessor performance over the past two decades. 
+
+ 
+
+Improvements in the performance characteristics of microprocessors and decreases in production costs resulting from advances in process technology have increased the demand for microprocessors over time. The greatest demand for microprocessors today is from PC manufacturers. With few exceptions, these manufacturers require x86 microprocessors that are compatible with the Microsoft® Windows® operating system. Factors which we believe are expected to stimulate growth include an anticipated replacement cycle for older PC systems, lower-priced PC systems, enhanced product features and improved economic conditions. 
+
+ 
+
+The microprocessor market is characterized by intense competition, with rapid advances in product design and process technology driving short product life cycles and rapid product obsolescence. Intel has dominated the market for microprocessors used in PCs for many years. 
+
+ 
+
+The Memory Market 
+
+ 
+
+Memory ICs store data and instructions and are characterized as either volatile or non-volatile. Volatile devices lose stored information after electrical power is shut off while non-volatile devices retain stored information after electrical power is shut off. Volatile memory ICs primarily consist of Dynamic Random Access Memory, or DRAM, devices and Static Random Access Memory, or SRAM, devices. Non-volatile memory ICs 
+
+ 
+
+2 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+include Flash memory, Read-Only Memory (ROM), Erasable Programmable Read-Only Memory (EPROM) and Electrically Erasable Programmable Read-Only Memory (EEPROM) devices. 
+
+ 
+
+We primarily produce Flash memory devices. We also sell a very limited number of EPROM devices as sales of EPROM devices have been steadily declining for the past few years as customers switch over to Flash memory devices. Several factors have contributed to an increasing demand for memory devices in recent years, including the: 
+
+ 
+
+  •   increasing use and functionality of cellular phones;  
+
+ 
+
+  •   increasing use of PCs to perform memory-intensive graphics and multimedia functions;  
+
+ 
+
+  •   volume of memory required to support faster microprocessors;  
+
+ 
+
+  •   proliferation of increasingly complex PC software; and  
+
+ 
+
+  •   increasing performance requirements of workstations, servers and networking and telecommunications equipment.  
+
+ 
+
+The Flash memory market has grown significantly over the past five years. Flash memory devices have a size and cost advantage over EEPROM devices, which utilize a larger, more expensive memory cell. Flash memory devices also provide greater flexibility and ease of use when compared to other non-volatile memory devices, such as ROM and EPROM, because Flash memory devices can be electrically rewritten to update parameters or system software. ROM devices cannot be rewritten and EPROM devices require information to be erased using ultraviolet light before they can be rewritten. Flash memory devices can be used to provide storage of control programs and system-critical data in communication devices such as cellular telephones and routers. In networking applications, Flash memory devices are used in hubs, switches and routers to enable systems to store firmware and reprogrammed Internet addresses and other routing information. Flash memory devices are also used in PC cards. PC cards are inserted into notebook and sub-notebook computers or personal digital assistants, or PDAs, to provide added data storage. 
+
+ 
+
+The Personal Connectivity Markets 
+
+ 
+
+We are entering the system-on-a-chip, or SoC, embedded microprocessor market for personal connectivity devices. Embedded processors are general purpose devices typically used in products with a single or a limited number of applications. These products have limited user interface and programmability. We are targeting personal connectivity devices in four main product segments: computing devices such as smart handheld devices, web pads, thin clients and PDAs; access devices such as gateways, routers and access points; entertainment devices such as set-top-boxes, portable gaming and music devices; and automotive driver information devices such as in-car navigation and entertainment systems. The applications software running on these devices typically requires highly integrated SoCs that have high performance, low power embedded microprocessors. 
+
+ 
+
+Reporting Segments 
+
+ 
+
+In 2002, we participated in the digital IC market through our Core Products and Foundry Services segments. Our Core Products segment consists of our microprocessor products, memory products and other IC products. In 2002, microprocessors included our AMD Athlon™ and AMD Duron™ microprocessors. Memory products included Flash memory devices and EPROM devices. Other IC products included embedded processors, platform products, which primarily consist of chipsets, and networking products. Our Foundry Services segment consisted of fees from Legerity, Inc., our former voice communication products subsidiary, and Vantis Corporation, our former programmable logic devices subsidiary, for products sold to them. We sold Legerity in 2000 and Vantis in 1999. In June 2002, we closed the fabrication facility where we manufactured products for Legerity and Vantis, although we continued to sell products to them that we manufactured before the facility closed. In 2003, we do not expect any further sales to Legerity. We may continue to sell products to Vantis through the third quarter of 2003. 
+
+ 
+
+3 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+ 
+
+Core Products 
+
+ 
+
+Our Core Products segment ($2.663 billion, or 99 percent, of our 2002 net sales) includes microprocessor, memory and other IC products. 
+
+ 
+
+PC Processors 
+
+ 
+
+In 2002, most of our microprocessor product sales were from our seventh-generation x86 Microsoft Windows® compatible AMD Athlon and AMD Duron microprocessors. We based AMD Athlon and AMD Duron microprocessors on superscalar RISC, or reduced instruction set computer, architecture. RISC architecture allows microprocessors to perform fewer types of computer instructions thereby allowing the microprocessor to operate at a higher speed. We also designed our AMD Athlon and AMD Duron microprocessors to be compatible with operating system software such as Windows XP, Windows 2000, Windows NT®, Windows 98 (and Windows predecessor operating systems), Linux, NetWare® and UNIX. 
+
+ 
+
+Historically, each generation of x86 microprocessors has improved both in terms of architectural performance or instructions per clock cycle, and frequency, also referred to as “clock speed.” In October 2001, we introduced the AMD Athlon XP processor for high performance desktop computers. The AMD Athlon XP processor family features QuantiSpeed™ architecture for rapid execution of applications and 3DNow!™ Professional technology to enhance digital multimedia performance. With the introduction of the AMD Athlon XP processor, we began positioning our processors based on overall performance, which is a function of both architecture and frequency measured in megahertz. We believe overall performance is a better indicator of CPU capability than simply raw megahertz or clock speed. Since frequency cannot be solely relied upon as a measure of system performance, we quantify our overall performance in terms of model numbers to position our products against comparable Intel products designated only by their clock speed. 
+
+ 
+
+We currently offer products for the desktop PC, mobile computing, server and workstation markets. Our x86 microprocessors for the desktop PC market consist of the AMD Athlon XP processor and the AMD Duron processor. Our x86 microprocessors for the mobile computing market consist of the mobile AMD Athlon XP, the mobile AMD Athlon 4 and the mobile AMD Duron processors. Our AMD Athlon MP products focus on the server and workstation markets. 
+
+ 
+
+We plan to begin shipping our eighth-generation microprocessors in 2003. These processors include AMD Opteron™ processors for the server and workstation markets, which we plan to introduce in April 2003, and AMD Athlon 64 processors for the desktop and mobile markets, which we plan to introduce in September 2003. These processors are 64-bit processors that are fully compatible with, and increase the performance of, existing 32-bit software. These processors support HyperTransport technology, which is a high bandwidth communications interface we invented, and have integrated memory controllers that enable substantially higher performance than existing, non-integrated memory controller architectures. We expect our advanced architecture to provide users with even greater performance improvements as operating systems and software applications begin leveraging the benefits of our 64-bit architecture. To that end, we announced in April 2002 that we are collaborating with Microsoft to incorporate 64-bit support for our AMD Opteron and AMD Athlon 64 processors in the Windows operating system. We believe that the backward compatibility of these processors will allow migration from current 32-bit operating systems and applications to future 64-bit operating systems and applications on a common hardware platform. 
+
+ 
+
+Increasing microprocessor product revenues in 2003 depends on our ability to maintain or increase average selling prices for our microprocessors, growth in unit shipments of our PC processors, our ability to introduce in a timely manner and achieve market acceptance for our AMD Opteron and AMD Athlon 64 processors and increasing market acceptance of the newest versions of the AMD Athlon microprocessors. 
+
+ 
+
+The microprocessor market is characterized by short product life cycles and migration to ever-higher performance microprocessors. To compete successfully against Intel in this market, we must transition to new 
+
+ 
+
+4 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+process technologies at a fast pace and offer higher-performance microprocessors in significantly greater volumes. We also must achieve manufacturing yield and volume goals while producing these higher-performance microprocessors in order to offer these products at competitive prices. 
+
+ 
+
+Intel has dominated the market for microprocessors used in PCs for many years. As a result, Intel has been able to control x86 microprocessor and PC system standards and dictate the type of products the market requires of Intel’s competitors. In addition, the financial strength of Intel allows it to market its products aggressively, target our customers and our channel partners with special incentives and to discipline customers who do business with us. These aggressive activities can result in lower limit sales and average selling prices for us and adversely affect our margins and profitability. Intel also exerts substantial influence over PC manufacturers and their channels of distribution through the “Intel Inside” brand and other marketing programs. As long as Intel remains in this dominant position, we may be materially and adversely affected by its: 
+
+ 
+
+  •   pricing and allocation strategies and actions;  
+
+ 
+
+  •   product mix and introduction schedules;  
+
+ 
+
+  •   product bundling, marketing and merchandising strategies;  
+
+ 
+
+  •   control over industry standards, PC manufacturers and other PC industry participants, including motherboard, chipset and basic input/output system (BIOS) suppliers; and  
+
+ 
+
+  •   user brand loyalty.  
+
+ 
+
+We expect Intel to maintain its dominant position in the marketplace as well as to continue to invest heavily in research and development, new manufacturing facilities and other technology companies. Intel has substantially greater financial resources than we do and accordingly expends substantially greater amounts on research and development than we do. 
+
+ 
+
+Intel also dominates the PC system platform. As a result, PC original equipment manufacturers, or OEMs, are highly dependent on Intel, less innovative on their own and, to a large extent, distributors of Intel technology. In marketing our microprocessors to OEMs, we depend on third-party companies other than Intel for the design and manufacture of core-logic chipsets, graphics chips, motherboards, BIOS software and other components. In recent years, many of these third-party designers and manufacturers have lost significant market share to Intel or exited the business. In addition, these companies produce chipsets, motherboards, BIOS software and other components to support each new generation of Intel’s microprocessors, and Intel has significant leverage over their business opportunities. 
+
+ 
+
+To compete with Intel in the microprocessor market in the future, we intend to continue to form close relationships with third-party designers and manufacturers of chipsets, motherboards, graphics chips, BIOS software and other components. Similarly, we intend to expand our chipset and system design capabilities and to offer OEMs licensed system designs incorporating our processors and companion products. We cannot be certain, however, that our efforts will be successful. 
+
+ 
+
+We do not currently plan to develop microprocessors that are bus interface protocol compatible with Intel microprocessors because our patent cross-license agreement with Intel does not extend to microprocessors that are bus interface protocol compatible with Intel’s sixth and subsequent generation processors. Thus, our current and future microprocessor products are not designed to function with motherboards and chipsets designed to work with Intel microprocessors. Our ability to compete with Intel will depend on our ability to ensure that PC platforms are designed to support our microprocessors. A failure of the designers and producers of motherboards, chipsets and other system components to support our microprocessor offerings would have a material adverse effect on us. 
+
+ 
+
+5 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+ 
+
+Memory Products 
+
+ 
+
+Flash Memory Devices.    Our Flash memory devices are used in cellular telephones, networking equipment and other applications that require memory to be non-volatile and electrically rewritten. Our products may be categorized into four main architectures consisting of conventional, MirrorBit™, performance and multi-chip packages. 
+
+ 
+
+Our conventional architecture serves the low-end value space of the Flash memory market. We continue to satisfy customer demand in this area with our Am29F and Am29LV product families. These products are typically used for their non-volatile storage as well as their ease of in-system re-programmability. 
+
+ 
+
+In 2002, we began shipping our new MirrorBit family of Flash memory devices, which uses a proprietary process technology to store two bits of data in a single memory cell. As a result, we believe that MirrorBit increases performance relative to traditional Flash memory architecture while operating at voltage levels equivalent to single-bit Flash memory devices. Our MirrorBit technology offers a significantly reduced cost structure and enables high-density devices without compromising device performance or reliability. We currently offer a family of MirrorBit products ranging from 16 Megabit through 128 Megabit, and we are currently sampling a 256 Megabit device. We expect to introduce a 512 Megabit device in 2003. 
+
+ 
+
+Our performance architecture serves the high-end space of the Flash memory market. We continue to address customer demands in this area with our simultaneous read/write architecture, our high performance burst and page mode products and our high performance dual operation devices. Burst denotes the amount of data sent or received in one intermittent operation, while a page is the group of memory cells that can be accessed as part of a single operation. These high performance features are needed for the feature-rich applications and data storage capability desired in these products. We intend to continue to address the growing performance requirements of this space by expanding our product offerings, improving our burst mode and page mode access speeds and widening the data signal transmission path or “data-bus” width. 
+
+ 
+
+Delivery of memory subsystems in multi-chip packages, or MCPs, is a major trend in the Flash memory business today. Currently, the largest consumers of Flash memory devices are mobile phone manufacturers. They are especially interested in MCPs due to the significant improvements possible in form factor and performance. We offer a broad portfolio of Flash memory MCPs across a range of densities to satisfy our customers’ particular needs. We intend to continue to develop products for this growing market. 
+
+ 
+
+We expect competition in the market for Flash memory devices to increase in 2003 and beyond as existing manufacturers introduce new products and industry-wide production capacity increases. 
+
+ 
+
+In 2002, all of our Flash memory devices were manufactured in Japan by Fujitsu AMD Semiconductor Limited (FASL), our joint venture with Fujitsu Limited, with additional devices produced under FASL’s foundry arrangements with us. We manufacture Flash memory devices for FASL in our fabrication facility in Austin, Texas, Fab 25. 
+
+ 
+
+Other ICs 
+
+ 
+
+Embedded Processors.    In February 2002, we completed the acquisition of Alchemy Semiconductor, Inc., a company that designed, developed and marketed low-power, high-performance microprocessors for the non-PC Internet Appliance market. The Alchemy™ embedded processor products are now part of our Personal Connectivity Solutions, or PCS, products. Our Alchemy embedded processors, the Au processor family, are developed for personal connectivity devices such as PDAs, web tablets and portable and wired Internet access devices and gateways. Our Au processors involve high integration system-on-a-chip capability that enables multiple capabilities to be integrated on a single chip to provide greater product functionality and integration. All of these products have an architecture that provides a 32-bit MIPS® instruction set. They support Microsoft Windows, CE.NET, Linux, VxWorks and other operating systems. In 2002, we also continued to provide older- 
+
+ 
+
+6 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+generation x86 microprocessors that have been modified to target embedded networking, telecom, PC peripheral and consumer electronics applications. 
+
+ 
+
+Wireless LAN Products.    In November 2002, we announced our first product for the wireless local area network (WLAN) market, the Alchemy Solutions Wireless LAN Am1772™ chipset. These chipsets are designed for low power consumption, reduced additional components, compact design and increased battery life. 
+
+ 
+
+Platform Products.    Our platform products include chipsets and motherboard reference design kits designed to support our microprocessors for use in PCs. The primary purpose of these products is to ensure that there is continued availability of chipset products to support AMD processors in the event of a supply gap from third-party providers. Such supply gaps can occur from time to time when a third-party manufacturer is unable to make chipset products available to the market at the same time that our microprocessor products are introduced. 
+
+ 
+
+Networking Products.    Our networking products include logic devices that are used in the data communication and networking industry to establish and manage connectivity. 
+
+ 
+
+Our product portfolio encompasses the following local area network (LAN) products: 
+
+ 
+
+  •   home networking controllers and physical layer products;  
+
+ 
+
+  •   Ethernet controllers supporting the enterprise and small business networking areas;  
+
+ 
+
+  •   Ethernet physical layer and repeater products, which are used in enterprise and small business systems solutions; and  
+
+ 
+
+  •   Ethernet physical layer and switch products, which are used in enterprise, small business and telecommunication systems.  
+
+ 
+
+We do not intend to develop new networking products or to enhance our existing networking products. 
+
+ 
+
+Foundry Services 
+
+ 
+
+Our Foundry Services segment ($34 million in sales, or one percent of our 2002 net sales) consists of fees for products sold to Vantis and Legerity. As described above, we no longer manufacture products for Legerity or Vantis, although we may continue to sell products previously manufactured to Vantis through the third quarter of 2003. 
+
+ 
+
+Research and Development; Manufacturing Technology 
+
+ 
+
+Manufacturing technology is a key determinant in the improvement of most semiconductor products. Each new generation of manufacturing process technology has resulted in products with greater performance. We have devoted significant resources in developing manufacturing process technologies used in the production of ICs. In order to remain competitive, we must continue to maintain our process technology leadership. In particular, we have made and continue to make significant investments in process technologies and in strategic relationships with industry leading companies relating to manufacturing process technology development. We may not realize our expected return on these investments if we fail to continue to gain market acceptance for our products, if the market for our microprocessor or Flash memory products should significantly deteriorate or if we are unable to realize the full benefits of our strategic relationships. In addition, if we are unable to remain competitive with respect to process technology, we will be materially and adversely affected. 
+
+ 
+
+Our efforts concerning process technologies are focused in two major areas: logic technology used for manufacturing our microprocessors and non-volatile memory technology used for manufacturing our Flash memory products. During 2002, we converted our microprocessor manufacturing from 180 nanometer process technology to 130 nanometer process technology. As of year-end 2002, all of our microprocessors were 
+
+ 
+
+7 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+manufactured using our 130 nanometer process technology. Our manufacturing facility in Dresden, Germany (Fab 30) uses 130 nanometer manufacturing process to produce our most advanced microprocessors, including our AMD Athlon XP processor. 
+
+ 
+
+Flash memory device production at year-end 2002 was on 170, 250 and 350 nanometer process technologies. We are transitioning some of our Flash memory devices to production on 130 nanometer process technology in 2003. 
+
+ 
+
+In 2002, we entered into several strategic relationships with industry leading companies. Through these relationships, we intend our manufacturing facilities and processes to remain state-of-the-art, while improving our cost structure. For example, in December 2002, we changed our logic process development strategy and entered into an agreement with IBM to jointly develop new logic process technologies for use in future high-performance microprocessor products. As a result of this agreement, we are ramping down silicon processing associated with logic research and development in our Submicron Development Center (SDC) in Sunnyvale, California and will be moving this work to IBM’s facility in East Fishkill, New York. In addition, in June 2002 we entered into a joint venture alliance with Infineon Technologies and Dupont Photomasks to construct and operate an advanced research and development and pilot line photomask facility in Dresden, Germany. 
+
+ 
+
+Our expenses for research and development were $816 million in 2002, $651 million in 2001 and $642 million in 2000. These expenses represented 30 percent of sales in 2002, 17 percent of net sales in 2001 and 14 percent of net sales in 2000. 
+
+ 
+
+Competition 
+
+ 
+
+The IC industry is intensely competitive. Products compete on performance, quality, reliability, price, adherence to industry standards, software and hardware compatibility, marketing and distribution capability, brand recognition and availability. Technological advances in the industry result in frequent product introductions, regular price reductions, short product life cycles and increased product capabilities that may result in significant performance improvements. 
+
+ 
+
+In each area of the digital IC market in which we participate, we face competition from different companies. With respect to microprocessors, Intel holds a dominant market position. With respect to Flash memory products, our principal competitors are Intel, STMicroelectronics N.V., Sharp Electronics Corporation, Atmel Corporation, Samsung, Toshiba and Fujitsu, our joint venture partner in FASL. With respect to PCS products, our principal competitors are Broadcom, Hitachi, Intel, Intersil, Motorola, Texas Instruments and STMicroelectronics. 
+
+ 
+
+Manufacturing Facilities 
+
+ 
+
+Our current IC manufacturing facilities are described in the chart set forth below: 
+
+ 
+
+Facility Location
+      Wafer Size
+
+(Diameter in
+
+Inches)
+    Production
+
+Technology
+
+(in Nanometers)
+      Approximate
+
+Clean Room
+
+(Square Footage)
+ 
+
+--------------------------------------------------------------------------------
+ 
+Austin, Texas
+                    
+Fab 25
+      8
+    130 and 170
+      120,000
+ 
+Aizu-Wakamatsu, Japan
+                    
+FASL JV1(1)
+      8
+    350
+      70,000
+ 
+FASL JV2(1)
+      8
+    250 and 350
+      91,000
+ 
+FASL JV3(1)
+      8
+    130 and 170
+      118,000
+ 
+Dresden, Germany
+                    
+Fab 30
+      8
+    130
+      115,100
+ 
+
+--------------------------------------------------------------------------------
+(1)   We own 49.992 percent of FASL. Fujitsu owns 50.008 percent of FASL.  
+
+ 
+
+8 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+ 
+
+We also have foundry arrangements for the production of certain of our products. 
+
+ 
+
+Research and development is conducted at our SDC, a 42,000 square-foot facility located in Sunnyvale, California. In addition, some development work takes place at our Fab 25 and Fab 30 manufacturing facilities. In 2003, we expect that silicon processing associated with research and development for logic process technologies will move to IBM’s New York facility. Research and development with respect to our non-volatile memory technology used for manufacturing our Flash memory products will continue to be conducted at our SDC. 
+
+ 
+
+Our current assembly and test facilities are described in the chart set forth below: 
+
+ 
+
+Facility Location
+      Approximate
+
+Assembly & Test
+
+Square Footage
+    Activity
+ 
+
+--------------------------------------------------------------------------------
+ 
+Penang, Malaysia
+      310,000
+    Assembly & Test
+ 
+Bangkok, Thailand
+      78,000
+    Assembly & Test
+ 
+Singapore
+      234,000
+    Test
+ 
+Suzhou, China
+      30,250
+    Assembly & Test
+ 
+
+ 
+
+As set forth above, nearly all product assembly and final testing of our products are performed at our facilities in Penang, Malaysia; Bangkok, Thailand; Suzhou, China and Singapore; or by subcontractors in the United States and Asia. We also depend on foreign foundry suppliers and joint ventures for the manufacture of a portion of our finished silicon wafers and have international sales operations. The political and economic risks associated with our operations in foreign countries include: 
+
+ 
+
+  •   expropriation;  
+
+ 
+
+  •   changes in a specific country’s or region’s political or economic conditions;  
+
+ 
+
+  •   trade protection measures and import or export licensing requirements;  
+
+ 
+
+  •   difficulty in protecting our intellectual property;  
+
+ 
+
+  •   changes in foreign currency exchange rates and currency controls;  
+
+ 
+
+  •   changes in freight and interest rates;  
+
+ 
+
+  •   disruption in air transportation between the United States and our overseas facilities; and  
+
+ 
+
+  •   loss or modification of exemptions for taxes and tariffs.  
+
+ 
+
+Certain Material Agreements.    Descriptions of certain material contractual relationships we have relating to FASL and Fab 30 are set forth on page 26 below. A description of our contractual relationship with IBM is set forth on page 8 above. 
+
+ 
+
+Marketing and Sales 
+
+ 
+
+Our products are marketed and sold under the AMD trademark. We employ a direct sales force through our principal facilities in Sunnyvale, California, and field sales offices throughout the United States and abroad, primarily Europe and Asia Pacific. We also sell our products through third-party distributors and independent representatives in both domestic and international markets pursuant to nonexclusive agreements. The distributors also sell products manufactured by our competitors. No OEM customer accounted for more than ten percent of net sales in 2002 and 2001. In 2000, one of our OEMs, Compaq, accounted for approximately 11 percent of net sales. No distributor accounted for ten percent or more of net sales in 2002, 2001 and 2000. 
+
+ 
+
+We intend to build upon our position as a global supplier of integrated circuits for the personal and networked computer and communications markets by expanding our focus to include emerging markets such as China, India, Russia and Latin America. In particular, in 2002, we focused on expanding our participation in 
+
+ 
+
+9 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+China’s microprocessor, embedded processor and Flash memory markets. For example, in the fourth quarter of 2002, we signed a research and development joint venture agreement with China Basic Education Software Company, Ltd., to develop hardware platforms for China’s information technology education market. 
+
+ 
+
+Distributors typically maintain an inventory of our products. Generally, we sell to distributors under terms allowing the distributors certain rights of return and price protection on any inventory of our products held by them. The price protection and return rights we offer to our distributors could materially and adversely affect us if there is an unexpected significant decline in the price of our products. 
+
+ 
+
+In 2002, approximately 72 percent of our sales were outside North America. Our international sales operations entail political and economic risks, including expropriation, currency controls, exchange rate fluctuations, changes in freight rates and changes in rates and exemptions for taxes and tariffs. 
+
+ 
+
+Raw Materials 
+
+ 
+
+Certain raw materials we use in the manufacture of our products are available from a limited number of suppliers. For example, we are dependent on key chemicals from a limited number of suppliers and rely on a few foreign companies to supply the majority of certain types of the IC packages we purchase. Interruption of supply or increased demand in the industry could cause shortages and price increases in various essential materials. If we were unable to procure certain of these materials, we might have to reduce our manufacturing operations. Such a reduction could have a material adverse effect on our business. To date, we have not experienced significant difficulty in obtaining the raw materials required for our manufacturing operations. 
+
+ 
+
+Environmental Regulations 
+
+ 
+
+Our business involves the use of hazardous materials. If we fail to comply with governmental regulations related to the use, storage, handling, discharge or disposal of toxic, volatile or otherwise hazardous chemicals used in our manufacturing processes, we may be subject to fines, suspension of production, alteration of our manufacturing processes or cessation of our operations. Such regulations could require us to procure expensive remediation equipment or to incur other expenses to comply with environmental regulations. Any failure to control the use of, disposal or storage of, or adequately restrict the discharge of, hazardous substances could subject us to future liabilities and could have a material adverse effect on our business. Violations of environmental laws may result in criminal and civil liabilities. 
+
+ 
+
+Intellectual Property and Licensing 
+
+ 
+
+We have been granted over 5,300 United States patents and have several thousand patent applications pending in the United States. In certain cases, we have filed corresponding applications in foreign jurisdictions. We expect to file future patent applications in both the United States and abroad on significant inventions, as we deem appropriate. 
+
+ 
+
+In May 2001, we signed a 10-year cross-license agreement with Intel Corporation. In addition, we have entered into numerous cross-licensing and technology exchange agreements with other companies under which we both transfer and receive technology and intellectual property rights. Although we attempt to protect our intellectual property rights, in the United States and abroad, through patents, copyrights, trade secrets and other measures, we may not be able to adequately protect our technology or other intellectual property or prevent others from independently developing similar technology. Any patent licensed by us or issued to us could be challenged, invalidated or circumvented, or rights granted thereunder may not provide a competitive advantage to us. Further, patent applications that we file may not be issued. Despite our efforts to protect our rights, others may independently develop similar products, duplicate our products or design around our patents and other rights. In addition, it is difficult to cost-effectively monitor compliance with, and enforce, our intellectual property rights on a worldwide basis. 
+
+ 
+
+10 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+ 
+
+From time to time, we have been notified that we may be infringing intellectual property rights of others. If any such claims are asserted against us, we may seek to obtain a license under the third party’s intellectual property rights. We cannot assure you that all necessary licenses can be obtained on satisfactory terms, or at all. We could decide, in the alternative, to resort to litigation to challenge such claims. Such challenges could be extremely expensive and time-consuming and could have a material adverse effect on us. We cannot assure you that litigation related to the intellectual property rights of us or others will always be avoided or successfully concluded. 
+
+ 
+
+Backlog 
+
+ 
+
+We manufacture and market standard lines of products. Consequently, a significant portion of our sales are made from inventory on a current basis. Sales are made primarily pursuant to purchase orders for current delivery or agreements covering purchases over a period of time, which orders or agreements may be revised or canceled without penalty. Generally, in light of current industry practice and experience, we do not believe that such agreements provide meaningful backlog figures or are necessarily indicative of actual sales for any succeeding period. 
+
+ 
+
+Employees 
+
+ 
+
+On February 23, 2003, we employed approximately 12,146 employees, none of whom are represented by collective bargaining arrangements. We believe that our relationship with our employees is good. 

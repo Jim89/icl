@@ -1,0 +1,747 @@
+Item 1.     Business 
+
+ 
+
+Corporate Information 
+
+ 
+
+Tessera, Inc. was incorporated in Delaware in May 1990. In January 2003, pursuant to a corporate restructuring, Tessera Technologies, Inc., a newly formed Delaware corporation, became the parent holding company of Tessera, Inc. The primary purpose of the restructuring was to terminate certain rights of first refusal previously held by some of Tessera, Inc.’s stockholders with respect to sales of Tessera, Inc. stock. Tessera Technologies, Inc. has no material assets other than its shares of Tessera, Inc., and conducts all of its business and operations through Tessera, Inc. We do not intend to cause or permit shares of the capital stock of Tessera, Inc. to be issued or sold to any other person. However, this holding company structure could result in our stockholders having subordinate rights, as compared to any future stockholders of Tessera, Inc., in a liquidation, dissolution or reorganization of Tessera, Inc. 
+
+ 
+
+Our principal executive offices are located at 3099 Orchard Drive, San Jose, California 95134. Our telephone number is (408) 894-0700. We maintain a website at www.tessera.com. The reference to our website address does not constitute incorporation by reference of the information contained on this website. 
+
+ 
+
+We own or have rights to trademarks and trade names that we use in conjunction with the operation of our business, including Tessera and Tessera Technologies. This annual report also includes trademarks and trade names of other parties. 
+
+ 
+
+In this annual report, the “Company,” “Tessera,” “we,” “us” and “our” refer to Tessera Technologies, Inc. and, for periods prior to our corporate restructuring in January 2003 or if the context otherwise requires, Tessera, Inc., which is our wholly-owned subsidiary. 
+
+ 
+
+Overview 
+
+ 
+
+We develop semiconductor packaging technology that meets the demand for miniaturization and increased performance of electronic products. We license our technology to our customers, enabling them to produce semiconductors that are smaller and faster, and incorporate more features. These semiconductors are utilized in a broad range of electronics products including digital cameras, MP3 players, personal computers, personal digital assistants, video game consoles and wireless phones. In addition, by using our technology, we believe that our customers are also able to reduce the time-to-market and development costs of their semiconductors. 
+
+ 
+
+Our patented technology enables our customers to assemble semiconductor chips into chip-scale packages, or CSPs, that are almost as small as the chip itself. Our technology also enables multiple chips to be stacked vertically in a single three-dimensional multi-chip package that occupies almost the same circuit board area as a CSP. By reducing the size of the semiconductor package and shortening electrical connections between the chip and the circuit board, our technology allows further miniaturization and increased performance and functionality of electronic products. We achieve these benefits without sacrificing reliability by allowing movement within the package, thus addressing critical problems associated with thermally-induced stress which can occur when packages decrease in size. 
+
+ 
+
+We derive license fees and royalties based upon our intellectual property and generate fees for related services. Our technology has been widely adopted and is currently licensed to more than 45 companies, including Intel, Renesas, Sharp Corporation, Texas Instruments and Toshiba. We believe that more than 100 companies across the semiconductor supply chain have invested in the materials, equipment and assembly infrastructure needed to manufacture products that incorporate our technology. As a result, our technology has been incorporated into more than three billion semiconductors worldwide, including more than one billion semiconductors shipped in 2003. According to Gartner Dataquest, the market for chip-scale packaging is expected to grow from 6.2 billion units in 2003 to 18.9 billion in 2006, representing a compound annual growth rate of 45%. We believe that we are well-positioned to take advantage of this significant expected growth in CSPs. 
+
+ 
+
+3 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+Industry Background 
+
+ 
+
+Packaged semiconductor chips, which we refer to as semiconductors, are essential components in a broad range of communications, computing, and consumer electronic products. According to the Semiconductor Industry Association, worldwide semiconductor sales totaled $166.4 billion in 2003 and are expected to grow to $219.6 billion in 2006. Many electronic products require increasingly complex semiconductors that are smaller and higher-performing, integrate more features and functions, and are less expensive to produce than previous generations of semiconductors. Satisfying the demand for these complex semiconductors requires advances in semiconductor design, manufacturing and packaging technologies. 
+
+ 
+
+The disaggregation of the semiconductor industry and the emergence of intellectual property companies 
+
+ 
+
+Historically, most semiconductor companies were vertically integrated. They designed, fabricated, packaged and tested their semiconductors using internally developed software design tools and manufacturing processes and equipment. As the cost and skills required for designing and manufacturing complex semiconductors have increased, the semiconductor industry has become disaggregated, with companies concentrating on one or more individual stages of the semiconductor development and production process. This disaggregation has fueled the growth of fabless semiconductor companies, design tool vendors, semiconductor equipment manufacturers, third-party semiconductor manufacturers, or foundries, semiconductor assembly, package and test companies and intellectual property companies that develop and license technology to others. 
+
+ 
+
+While specialization has enabled greater development and manufacturing efficiency, it has also created an opportunity for intellectual property companies that develop and license technology to meet fundamental, industry-wide challenges. These intellectual property companies gain broad adoption of their technology throughout the industry by working with companies within the semiconductor supply chain to invest in the infrastructure needed to support their technology. This collaboration and investment benefits semiconductor companies by enabling them to bring new technology to market faster and more cost-effectively, without having to make the investment themselves. 
+
+ 
+
+Demand for system-level miniaturization and increased performance 
+
+ 
+
+Miniaturization of electronic products, or system-level miniaturization, is a significant challenge for manufacturers of electronic products and their suppliers, including semiconductor companies. Digital cameras, MP3 players, personal computers, personal digital assistants, video game consoles, wireless phones and other electronic products are being made smaller with improved performance and an increasing number of advanced features. Semiconductor companies have traditionally responded to these challenges by shrinking the size of the basic semiconductor building block, or transistor, allowing for more transistors to be integrated on a single chip. For decades, the consistent reduction in transistor size has resulted in higher-performance, lower-cost chips that require less silicon area. In addition, transistors have become small enough to make it economical to combine multiple functions, such as logic, memory and analog functions, on a single chip, in what is commonly referred to as a system-on-a-chip. 
+
+ 
+
+Importance of semiconductor packaging 
+
+ 
+
+While the integration of increased functionality on a chip is critical to the miniaturization of electronic products, its impact has been limited by packaging technology, which has not kept pace with the advancements achieved by chip integration. Semiconductor chips are typically assembled in packages that act as the physical and electrical interface between the chip and the printed circuit board. The package protects the chip from breakage, contamination and stress. In addition, the package enables a chip to be easily tested prior to its incorporation into a system, enabling high system yields lowering the total system cost. Traditional semiconductor packages are much larger than the chip itself and occupy significant circuit board and system area. Also, traditional packaging technologies are less capable of accommodating faster semiconductor speeds due to the package’s longer electrical connections. Due to these limitations, traditional semiconductor packages are not well suited to meet the increasing demand for product miniaturization, functionality and performance. As a result, in addition to continuing advancements in chip integration, advanced packaging technology is required to achieve further miniaturization and higher performance cost-effectively. 
+
+ 
+
+4 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+Our Solution 
+
+ 
+
+We are a leading provider of intellectual property for chip-scale and multi-chip packaging that meets the increasing demand for miniaturization and performance of electronic products. We license a substantial portion of our intellectual property under our Tessera Compliant Chip, or TCC, license. This license primarily covers our core chip-scale and multi-chip packaging patents. In addition, we support the adoption of our technology by providing our customers with engineering services focused on addressing key issues related to the miniaturization and performance of electronics products. Our packaging technology provides the following benefits which are not provided by traditional packaging technologies: 
+
+ 
+
+Miniaturization.    Our CSP technology enables fully-packaged chips to be almost as small as the chip itself, which permits increased product miniaturization and functionality. Our multi-chip packaging technology extends this benefit by enabling multiple semiconductors to be stacked vertically, while occupying about the same circuit board area as a CSP. For example, our technology is broadly used to produce Flash memory and static random access memory, or SRAM, devices stacked in a multi-chip package utilized in wireless phones. As a result, we believe our multi-chip technology will enable electronic products to achieve new levels of miniaturization. 
+
+ 
+
+High performance.    Our technology offers shorter electrical connections between the chip and circuit board and between adjacent chips. Shorter connections allow information to be more rapidly transferred between the semiconductors and the system, yielding better system performance. Our technology has been widely adopted for use in high-speed memory applications, such as high-performance personal computers, network switches and routers, set-top boxes, workstations and video game consoles, such as the Sony PlayStation®2. 
+
+ 
+
+High reliability.    The miniaturization of semiconductors often presents reliability problems because the shorter connections are more vulnerable to breakage due to thermally-induced stress and mechanical shock. Overcoming these problems has been one of the most significant technical challenges in shrinking semiconductor packages to the size of the chip itself. Our technology alleviates these problems by allowing movement within the package. As a result, our technology provides high reliability without the increased package size or cost of competing technologies for a broad range of applications that require miniaturization. 
+
+ 
+
+Cost effectiveness.    The significant investment made by semiconductor chip makers, assemblers, and material and equipment providers in the manufacturing infrastructure that supports our technology enables high-volume production and broad availability of semiconductors that incorporate our technology. This in turn has reduced the cost of manufacturing products that incorporate our technology, allowing it to be used in cost-sensitive semiconductor applications such as dynamic random access memory, or DRAM, Flash memory or SRAM. We believe that this broad adoption and high volume production of our technology will further increase its cost-effectiveness. 
+
+ 
+
+Our Strategy 
+
+ 
+
+Our objective is to be the leading developer and licensor of chip-scale and multi-chip packaging technologies that meet the increasing demand for miniaturization and performance in a broad range of communication, computing and consumer electronic products. The following are key elements of our strategy: 
+
+ 
+
+Expand the market penetration of our CSP technology.    Our patented CSP technology has been incorporated in over three billion semiconductors worldwide. As a result of the broad adoption of our technology and existing infrastructure that supports our technology, we believe that we are well positioned to benefit from the substantial growth projected for the CSP market. We intend to further increase our share of the CSP market by: 
+
+ 
+
+  • continuing to target and optimize our technology for large, growing product markets such as digital cameras, MP3 players, personal computers, personal digital assistants, video game consoles and wireless phones;  
+
+ 
+
+5 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+  • making continued design, process and cost improvements that drive the incorporation of our technology in new semiconductor applications, such as application specific integrated circuits, or ASIC semiconductors, high-performance DRAM, and other logic applications; and  
+
+ 
+
+  • identifying and approaching companies whose current products potentially incorporate our technology, offering them licenses to our technology, and when necessary, enforcing our intellectual property rights to obtain compensation for the use of our technology.  
+
+ 
+
+Accelerate the market acceptance of our three-dimensional multi-chip packaging technology.    Our three-dimensional multi-chip packaging technology extends our CSP technology by enabling multiple chips to be stacked vertically, while occupying about the same circuit board area as a CSP. This technology is designed for products in which miniaturization and feature integration are critical, including digital cameras, MP3 players, personal digital assistants and wireless phones. We intend to accelerate the adoption of our three-dimensional multi-chip packaging technology by: 
+
+ 
+
+  • collaborating with our customers to develop multi-chip packages to meet their specific product requirements;  
+
+ 
+
+  • capitalizing on the existing materials, equipment and assembly infrastructure that supports our CSP technology; and  
+
+ 
+
+  • continuing to reduce the cost of manufacturing semiconductors that incorporate our multi-chip technology through internal development and collaboration with leading semiconductor materials and equipment companies.  
+
+ 
+
+Provide engineering services to develop and promote the adoption of our technology.    We intend to continue to use our engineering services to accelerate the adoption of our technology, better understand our customers’ advanced packaging requirements, and develop and broaden our intellectual property portfolio. For example, we provide our customers with a broad range of services, such as package design, prototype manufacturing and reliability analysis, to help them develop products that incorporate our technology. This collaboration allows us to better understand our customers’ future product and packaging technology requirements. We have generated a substantial portion of our service revenues by providing our engineering services to various government agencies. These relationships contribute to the development of our advanced packaging technologies such as three-dimensional multi-chip packaging. 
+
+ 
+
+Utilize and enhance the infrastructure supporting our technology.    For more than a decade, we have collaborated with our infrastructure partners to help them develop and make widely available low-cost materials, equipment and assembly capacity to manufacture products that incorporate our technology. We design new technologies that are compatible with this existing infrastructure, which facilitates more rapid adoption of these new technologies. We plan to continue to work with our infrastructure partners to expand the adoption of our technology. 
+
+ 
+
+Broaden our intellectual property portfolio.    We intend to continue to broaden our patent portfolio through internal development, strategic relationships and acquisitions, to enhance the competitiveness and size of our current businesses and diversify into markets and technologies that complement our current businesses. For example, we intend to extend our intellectual property portfolio in the area of radio frequency, or RF, module packaging technology for a broad range of wireless applications. We also intend to continue to utilize our core competency in aggregating and licensing intellectual property to grow and expand our business. 
+
+ 
+
+Create demand by collaborating with system manufacturers and electronic manufacturing service providers.    We work with leading system manufacturers and electronic manufacturing service providers to increase demand for our chip-scale and multi-chip packaging technology. Through these relationships, we align our research and development efforts to better meet their needs. This helps us to develop technologies such as packaging for RF modules, which can be used in new, growing markets, such as Bluetooth, global positioning systems and Wi-Fi. 
+
+ 
+
+6 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+Our Technology and Services 
+
+ 
+
+We derive the majority of our revenues from license fees and royalties associated with our TCC license. Our TCC license grants a worldwide right to develop, assemble, use and sell certain CSPs and multi-chip packages. The licensed technology primarily includes issued patents and pending patent applications during the term of the license. We also license components of our intellectual property portfolio outside of the TCC license, such as module and passive component technology suitable for RF products. In addition, we provide a broad range of engineering, assembly and infrastructure services to our customers. 
+
+ 
+
+Our Technology 
+
+ 
+
+Our packaging technology is incorporated into semiconductors for use in a broad range of communication, computing and consumer electronics applications. These semiconductors include: 
+
+ 
+
+  • Digital signal processor, or DSP, semiconductors, Flash memory, SRAM, and certain ASIC semiconductors, for use in wireless communication and digital consumer products, such as digital cameras, MP3 players, personal digital assistants and wireless phones. These markets are expected to enjoy strong growth. For example, Gartner Dataquest projects the market for CSP-based DSP semiconductors will grow from 396 million units in 2003 to 754 million units in 2006, representing a compound annual growth rate of 24%. Gartner Dataquest also projects the combined Flash memory and SRAM markets to grow from 1.8 billion units in 2003 to 2.7 billion units in 2006, a compound annual growth rate of 13%.  
+
+ 
+
+  • DRAM, for use in computing, networking and home entertainment applications, such as personal computers, network switches and routers, set-top boxes and video game consoles. According to Gartner Dataquest, the market for CSP-based DRAM is expected to grow from 374 million units in 2003 to 4.0 billion units in 2006, a compound annual growth rate of 120%.  
+
+ 
+
+Chip-Scale Package Technology Platforms 
+
+ 
+
+Although most of our licensees have developed their own proprietary packages incorporating our intellectual property, we have developed the following CSP platforms which are included in our TCC license: 
+
+ 
+
+Micro Ball Grid Array, or µBGA®, Platform.    Our µBGA® platform includes the lead-bonded µBGA® package and the µBGA®-W package, an alternative that uses wire-bonding as opposed to lead bonding as the package’s internal electrical interconnect. In the µBGA® platform the chip is oriented face-down in the package with its contacts facing the circuit board. We believe this CSP platform offers the best combination of features to meet the requirements of high-performance DRAM semiconductors. 
+
+ 
+
+µBGA®-F Platform.    The µBGA®-F platform has the chip oriented face-up in the package, with its contacts facing away from the circuit board, and utilizes standard wire-bonding for the package’s internal electrical interconnect. The technology underlying this platform has been broadly adopted and incorporated into a large number of customer-developed proprietary packages for DSP semiconductors, Flash memory, SRAM and ASIC semiconductors used in wireless communication and consumer electronics products. 
+
+ 
+
+Multi-Chip Package Technology Platforms 
+
+ 
+
+Our technology is incorporated into a number of three-dimensional multi-chip packages used in wireless communication and digital consumer applications, such as digital cameras, MP3 players, personal digital assistants and wireless phones. These packages include various combinations of ASIC, DSP, Flash memory and SRAM semiconductors. In addition, we have developed a family of three-dimensional multi-chip platforms, which are collectively referred to as the µZTM Stacked Package family, to extend this innovative technology into new applications to meet the growing demand for higher levels of integration in computing, communications and consumer electronics. 
+
+ 
+
+7 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+We also offer our PyxisTM RF Module platform, which incorporates RF technology in a three-dimensional platform for wireless applications. In addition to wireless phones, which typically incorporate multiple RF sections or modules, several initiatives such as Bluetooth and Wi-Fi are aimed at incorporating additional RF capability into a broad range of handheld, computing and consumer electronic products. 
+
+ 
+
+We expect these platforms to build upon the existing CSP infrastructure and to enable further miniaturization and increased performance and functionality for a broad range of cost-sensitive, high volume applications. Each platform was developed to resolve complex, technical and business challenges inherent in the miniaturization of electronic products. 
+
+ 
+
+We offer the following multi-chip platforms: 
+
+ 
+
+µZTM Chip Stack Platform.    The µZTM chip stack platform consists of two or more semiconductors, stacked vertically on top of each other and wire-bonded to the package substrate. This is a cost-effective, versatile platform that can be used in a broad range of semiconductors and product applications. The technology underlying this platform has been broadly adopted and incorporated into a large number of customer-developed proprietary stacked multi-chip packages for Flash memory, SRAM, and ASIC semiconductors, that are used in wireless communication and consumer electronics products. 
+
+ 
+
+µZTM Fold-Over Stacked Platform.    We have recently introduced our µZTM Fold-Over Stacked platform to solve an industry-wide problem associated with the integration of different types of functional blocks, such as processor, memory and various analog blocks, onto a single system-on-a-chip. For example, this package enables DSP, ASIC and different memory semiconductors to be fully packaged, tested and then integrated, resulting in a high-yielding system-in-a-package. The µZTM Fold-Over Stacked platform provides a cost-effective solution that meets wireless phone package height requirements and saves valuable circuit board space, enabling wireless products that are smaller and lighter with more functionality. 
+
+ 
+
+µZTM Ball Stacked Platform.    We have also recently introduced our µZTM Ball Stacked platform as a multi-chip solution that enables the integration of high-performance DRAM while occupying 25% less circuit board area with 60% of the height of a traditional DRAM package. Because each semiconductor can be individually tested prior to being assembled in the multi-chip package, common yield problems associated with competing technologies can be overcome. Our µZTM Ball Stacked platform can be used for cost-sensitive, high-volume applications, including DRAM modules for high-performance personal computers, workstations and network switches and routers. 
+
+ 
+
+PyxisTM RF Module Platform.    With the proliferation of wireless technology, new industry standards are emerging, including Bluetooth and Wi-Fi, that require additional RF modules in a full range of wireless communication and digital consumer products. Our newly developed PyxisTM RF Module platform uses CSP technology to enable highly-integrated RF modules. This versatile package platform provides an integration and miniaturization path for radio-in-a-package, Bluetooth, Wi-Fi and other complex RF modules. The PyxisTM module platform enables integration of chips and other components in a single, low-cost package solution. This platform is targeted at cost-sensitive, high-volume wireless, handheld and digital consumer products. 
+
+ 
+
+8 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+The following table provides a summary of the key features and semiconductor and system applications for each of our package technologies and the related platforms, all of which, except the PyxisTM RF platform, are included in our standard TCC license: 
+
+ 
+
+              
+
+--------------------------------------------------------------------------------
+   
+Chip-Scale
+Package
+Technology     Technology
+Platform     Key Features     Semiconductor
+Applications     System Applications   
+
+--------------------------------------------------------------------------------
+   
+  µBGA®     •   Small
+
+•   High performance
+
+•   High reliability
+     
+
+    
+
+    
+   DRAM, Flash, SRAM      Digital TV, game console, personal computer, set-top box, server,
+wireless phone     
+
+--------------------------------------------------------------------------------
+   
+  µBGA®W     •   Small
+
+•   High performance
+
+•   High reliability
+
+•   Wire-bond
+     
+
+    
+
+    
+
+    
+   DRAM     Digital TV, game console, personal computer, servers, set-top box     
+
+--------------------------------------------------------------------------------
+   
+  µBGA®F     •   Small
+
+•   Design flexibility
+
+•   Low cost
+
+•   Wire-bond
+     
+
+    
+
+    
+
+    
+   ASIC, DSP, Flash, SRAM      Digital camera, MP3 player,
+personal digital assistant, wireless
+phone     
+
+--------------------------------------------------------------------------------
+   
+Multi-Chip Package Technology       µZTM Chip Stack     •   Vertical stack
+
+•   Small
+
+•   Wire-bond
+
+•   Design flexibility
+     
+
+    
+
+    
+
+    
+   Flash / SRAM stack      Digital camera, MP3 player,
+personal digital assistant, wireless
+phone     
+
+--------------------------------------------------------------------------------
+   
+  µZTM Fold-Over Stack      •   Pre-test
+
+•   Stacked logic and memory
+
+•   Enables system-in-a-package
+
+•   Small
+
+•   Low profile
+
+•   2-4 semiconductor stack
+
+•   High reliability
+     
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+   Numerous logic / memory configurations       Digital camera, MP3 player,
+personal digital assistant, wireless
+phone     
+
+--------------------------------------------------------------------------------
+   
+  µZTM Ball Stack     •   Pre-test
+
+•   Stacked memory
+
+•   Small
+
+•   Low profile
+
+•   2-8 semiconductor stack
+
+•   High reliability
+     
+
+    
+
+    
+
+    
+
+    
+
+    
+   DRAM, Flash, numerous logic / memory configurations        Digital camera, MP3 player,
+personal computer, personal digital
+assistant, server, wireless phone     
+
+--------------------------------------------------------------------------------
+   
+  PyxisTM RF Module      •   High-density RF module
+
+•   Small
+
+•   Low profile
+
+•   Integration of semiconductors and other components
+     
+
+    
+
+    
+
+     
+   RF modules     Bluetooth, global positioning
+system, personal digital assistant, Wi-Fi, wireless phone     
+
+--------------------------------------------------------------------------------
+   
+
+ 
+
+Our Services 
+
+ 
+
+We provide our customers and partners with engineering, assembly and infrastructure services that we believe accelerate the adoption of our technology for a broad range of cost-sensitive, high-volume applications. We provide engineering services to semiconductor makers and assemblers, system manufacturers, electronic manufacturing service companies and government agencies and their contractors to enable the development of new packaging technologies. Most of our service revenues are derived from government-related engineering services. 
+
+ 
+
+Engineering services.    Our engineering services include customized package design and prototyping, modeling, simulation, failure analysis and reliability testing and related training services. We provide these services to semiconductor makers and assemblers, system manufacturers, electronic manufacturing service 
+
+ 
+
+9 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+companies and government agencies and their contractors. We believe that offering these services accelerates the incorporation of our intellectual property into our customers’ products and aids in our understanding of their future packaging requirements. 
+
+ 
+
+Assembly services.    We provide training and consulting services to assist semiconductor assemblers in designing, implementing, upgrading and maintaining their CSP assembly lines. We also offer services to help customers address process, equipment, materials and other manufacturing-related issues. This allows our assembly customers to bring their manufacturing lines incorporating our technology into production more rapidly and cost-effectively. 
+
+ 
+
+Infrastructure services.    We offer evaluation, qualification, cost reduction and cost analysis services to companies that develop and manufacture equipment and materials to support the infrastructure needed to manufacture semiconductors that incorporate our technology. These services enable infrastructure customers to evaluate the impact of their specific materials and equipment on the manufacturability and reliability of our technology. 
+
+ 
+
+Customers 
+
+ 
+
+Our technology is currently licensed to more than 45 companies. For the year ended December 31, 2003, Texas Instruments accounted for 28.4% of total revenue. 
+
+ 
+
+We have a TCC license with Texas Instruments, dated January 1, 2002, that covers the types of BGA packages that were the subject of our legal proceeding against Texas Instruments in the U.S. District Court. Under this license Texas Instruments paid an upfront license fee and agreed to pay ongoing royalties on a quarterly basis. The license has termination provisions for breach, change of control, and bankruptcy. In addition, Texas Instruments may unilaterally terminate the license by giving six months prior notice at any time. Unless earlier terminated, the license will terminate on December 31, 2013. If the license is not terminated prior to December 31, 2013, Texas Instruments will have a fully paid-up license under the Tessera patents subject to the license. Any termination of the agreement would result in a loss by Texas Instruments of its right to use our intellectual property. 
+
+ 
+
+The following is a list of our current licensees and, where indicated, our current sublicensees: 
+
+ 
+
+     
+Semiconductor Manufacturers
+
+--------------------------------------------------------------------------------
+    Semiconductor Assemblers
+
+--------------------------------------------------------------------------------
+    Semiconductor Material Suppliers
+
+--------------------------------------------------------------------------------
+ 
+Advanced Micro Devices Inc.
+
+Cochlear Corporation
+
+Hitachi, Ltd.
+
+Hynix Semiconductor America, Inc.
+
+Intel Corp.
+
+Mitsubishi Electric and Electronics USA, Inc.
+
+Oki Electric Industry Co., Ltd. (OKI)
+
+Renesas Technology Corp.*
+
+ROHM Corp.
+
+Sanyo Electric Co., Ltd.
+
+Seiko Epson Corp.
+
+Sharp Corporation
+
+Siemens AG
+
+Sony Corp.
+
+ST Microelectronics NV
+
+Texas Instruments, Inc.
+
+Toshiba
+    Advanced Semiconductor Engineering, Inc. (ASE)
+
+Akita Electronics Systems Co., Ltd.*
+
+Amkor Technology, Inc.
+
+ChipMOS Technologies, Inc.
+
+ChipPAC, Inc.
+
+EEMS Italia, SpA
+
+Hitachi Cable, Ltd.
+
+Mitsui High-tec Inc.
+
+Renesas Northern Japan Semiconductor, Inc.*
+
+Renesas Eastern Japan Semiconductor, Inc.*
+
+Orient Semiconductor Electronics Ltd (OSE)
+
+Payton Technology Corp.
+
+Plexus Corp.
+
+Powertech Technology Inc. (PTI)
+
+Shinko Electric Industries Co.
+
+Siliconware Precision Industries Co., Ltd. (SPIL)
+
+United Test and Assembly Center Ltd. (UTAC)
+
+United Test Center Inc. (UTC)
+
+University of Alaska
+
+Walton Advanced Electronics, Ltd.
+    3M Company
+Compeq Manufacturing Inc.
+Hitachi Cable, Ltd.
+Hitachi, Ltd.
+LG Electronics Inc.
+LG Micron Ltd.
+Mitsui Mining & Smelting Co., Ltd.
+North Corporation
+Samsung Electro-Mechanics Co., Ltd.
+Samsung Techwin Co., Ltd.
+Shinko Electric Industries Co.
+Sunright Limited 
+
+--------------------------------------------------------------------------------
+* denotes a TCC sublicensee  
+
+ 
+
+10 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+In addition to the licensees and sublicensees mentioned above, we license our Pyxis™ RF Module technology to Paratek Microwave, Inc. 
+
+ 
+
+Most semiconductor material suppliers are licensed under our TCMT license, which requires these licensees to pay us a license fee but not royalties. 
+
+ 
+
+The license agreement we entered into with Samsung on May 17, 1997 is currently the subject of litigation. The matter is described in more detail in “—Legal Proceedings” below. 
+
+ 
+
+Sales and Marketing 
+
+ 
+
+Our sales activities focus primarily on developing strong, direct relationships at the technical, marketing and executive management levels with leading companies in the semiconductor industry to license our technologies and sell our services. We also sell our engineering services to system manufacturers and government agencies and their contractors. Marketing activities include identifying and promoting application-based technologies for specific, vertical market needs, such as wireless communications or computing, and identifying major business opportunities for current and future product development. Product marketing focuses on identifying the needs and product requirements of our customers. Product marketing also manages the development of all of our technology throughout the development cycle and creates the required marketing materials to assist with the adoption of the technology. Marketing communications focuses on advertising and communications that promote the adoption of our technology. 
+
+ 
+
+Research and Development 
+
+ 
+
+We believe that our success depends in part on our ability to achieve the following in a cost-effective and timely manner: 
+
+ 
+
+  • develop new technologies that meet the changing needs of our customers and their markets;  
+
+ 
+
+  • improve our existing technologies to enable growth into new application areas; and  
+
+ 
+
+  • expand our intellectual property portfolio.  
+
+ 
+
+Our research and development employees work closely with our sales and marketing employees, as well as our customers and partners, to bring new products incorporating our technology to market in a timely, high quality and cost-efficient manner. We also work closely with material and equipment infrastructure providers to identify new technologies and improve existing technologies for use in the assembly and manufacture of semiconductor packages that incorporate our technology. 
+
+ 
+
+Our service contracts involve research and development for commercial entities and government agencies. For example, some of our development activities for the µZ™ Fold-Over Stack package technology were partially funded through service contracts with one of our semiconductor company licensees. 
+
+ 
+
+Our research and development efforts currently focus on two major areas: 
+
+ 
+
+Chip-scale packaging.    Our CSP efforts focus on developing specific technologies for incorporation of our CSP technology into new applications, developing prototypes and supporting customers or infrastructure providers with improvements to products for existing applications. 
+
+ 
+
+Multi-chip packaging.    Our multi-chip packaging efforts focus on working with customers to incorporate our technology into their products and applications, developing prototypes and developing new, custom technologies to meet the needs of future applications. 
+
+ 
+
+We have additional research and development efforts underway in a number of areas related to the miniaturization of electronic products, including areas relating to materials, equipment, packaging, interconnect, assembly and testing of semiconductors and three-dimensional modules. 
+
+ 
+
+11 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+Intellectual Property 
+
+ 
+
+Our future success and competitive advantage depend upon our continued ability to develop and protect our intellectual property. To protect our intellectual property, we rely on a combination of patents, trade secrets and trademarks. We also attempt to protect our trade secrets and other proprietary information through confidentiality agreements with licensees, customers and potential customers and partners, and through proprietary information agreements with employees and consultants. 
+
+ 
+
+Our patents address advanced single and multi-chip packaging, related processes, and complementary technologies. We have made and continue to make considerable investments in expanding and defending our patent portfolio. See “—Legal Proceedings” for a description of material legal proceedings in which we have recently been involved. 
+
+ 
+
+As of December 31, 2003, our intellectual property portfolio included 270 issued U.S. patents, 38 issued international patents, 112 additional pending U.S. patent applications and 40 additional pending international patent applications. Our patents have expiration dates ranging from January 25, 2009 to September 19, 2021. We continually file new patent applications for new developments in our technology. There are many countries in which we currently have no issued patents; however, products incorporating our technology that are sold in jurisdictions where patents have issued must be licensed in order to avoid infringing our intellectual property. 
+
+ 
+
+As of December 31, 2003, we had 15 U.S. trademark registrations and 35 international trademarks and had five domestic and international trademark applications pending. 
+
+ 
+
+Competition 
+
+ 
+
+As a developer and licensor of semiconductor packaging technology, we compete with other technologies, as opposed to other companies selling products. These competing technologies come principally from the internal design groups of a number of semiconductor and package assembly companies. Many of these companies are licensees, or potential licensees, of ours. In fact, many of our licensees consider packaging research and development to be one of their core competencies. 
+
+ 
+
+Semiconductor companies that have their own package design and manufacturing capabilities include Texas Instruments Incorporated, Micron Technology, Inc., and the semiconductor divisions of Fujitsu Microelectronics, Inc., IBM Instruments, Inc., Motorola, Inc., Sharp Corporation and Samsung Electronics Co. Ltd. Among the advanced packaging technologies developed by such companies are flip-chip and chip-on-board technologies that compete with our CSP and multi-chip technologies. Our technologies also compete with technologies developed by the internal design groups of package assembly companies such as Advanced Semiconductor Engineering, Inc., Amkor Technology, Inc. and ChipPAC, Inc. 
+
+ 
+
+We believe the principal competitive factors in the selection of semiconductor package technology by potential customers are: 
+
+ 
+
+  • proven technology;  
+
+ 
+
+  • cost;  
+
+ 
+
+  • size and circuit board area;  
+
+ 
+
+  • performance;  
+
+ 
+
+  • reliability; and  
+
+ 
+
+  • available infrastructure.  
+
+ 
+
+We believe that our CSP and multi-chip technologies compete favorably in each of these factors with other advanced packaging technology solutions. 
+
+ 
+
+12 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+Employees 
+
+ 
+
+As of December 31, 2003, we had 86 employees, with 16 in sales, marketing and licensing, 53 in research and development (including employees who perform engineering, assembly and infrastructure services under our service agreements with third parties) and 17 in finance and administration. We have never had a work stoppage among our employees and no personnel are represented under collective bargaining agreements. We consider our relations with our employees to be good. 

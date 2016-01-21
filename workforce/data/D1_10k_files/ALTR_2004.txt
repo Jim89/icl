@@ -1,0 +1,808 @@
+ITEM 1.   Business.  
+
+ 
+
+Founded in 1983, Altera Corporation designs, manufactures, and markets: (1) programmable logic devices, or PLDs; (2) HardCopy™ devices; (3) pre-defined design building blocks known as intellectual property, or IP, cores; and (4) associated development tools. Our headquarters facility is located at 101 Innovation Drive, San Jose, California 95134, and our Web site is www.altera.com. Our common stock trades on the Nasdaq National Market under the symbol “ALTR.” 
+
+ 
+
+Our PLDs, which consist of field-programmable gate arrays, or FPGAs, and complex programmable logic devices, or CPLDs, are semiconductor integrated circuits that are manufactured as standard chips that our customers program to perform desired logic functions within their electronic systems. Our HardCopy devices enable our customers to move from a PLD to a low-cost, high-volume, non-programmable implementation of their designs. Our customers can license IP cores from us for implementation of standard functions in their PLD designs. Customers develop, compile, and verify their PLD designs, and then program their designs into our PLDs using our proprietary development software, which operates on personal computers and engineering workstations. 
+
+ 
+
+We were one of the first suppliers of complementary metal oxide semiconductor, or CMOS, PLDs and are currently a global leader in this market. Today, we offer a broad range of PLDs that offer unique features as well as differing densities and performance specifications. Our products serve a wide range of customers within the communications, computer and storage, consumer, and industrial market segments. An overview of typical PLD applications within these markets is shown in the table on the next page. 
+
+ 
+
+2 
+
+
+
+--------------------------------------------------------------------------------
+
+Index to Financial Statements
+     
+Market Segment
+
+--------------------------------------------------------------------------------
+    Market Sub-Segment
+
+--------------------------------------------------------------------------------
+    Application/Product
+
+--------------------------------------------------------------------------------
+ 
+Communications
+    Networking
+    •     Routers
+
+•     Switches
+ 
+   
+     Wireline
+    •     Access Systems
+
+•     Metro Area Networks
+
+•     Optical Networks
+ 
+   
+     Wireless
+    •     Cellular Base Stations
+
+•     Wireless Local Area Networks
+ 
+   
+Computer and Storage
+    Computer
+    •     Mainframes
+
+•     Servers
+ 
+   
+     Office Automation
+    •     Copiers
+
+•     Multi-Function Peripherals
+
+•     Printers
+ 
+   
+     Storage
+    •     Redundant Array of Inexpensive Disks (RAID) Systems
+
+•     Storage Area Networks
+ 
+   
+Consumer
+    Broadcast
+    •     Studio Editing
+
+•     Satellite Equipment
+
+•     Broadcasting Equipment
+ 
+   
+     Entertainment
+    •     Audio/Video Systems
+
+•     Broadband Equipment
+
+•     Video Display Systems
+ 
+   
+Industrial(1)
+    Automotive
+    •     Car Entertainment Systems
+
+•     Navigation Systems
+ 
+   
+     Instrumentation
+    •     Manufacturing Systems
+
+•     Medical Diagnostic Systems
+
+•     Test Equipment
+ 
+   
+     Military
+    •     Guidance and Control
+
+•     Radar Systems
+
+•     Secure Communications
+ 
+   
+     Security/Energy Management
+    •     Automatic Teller Machines (ATMs)
+
+•     Card Readers
+
+•     Energy Management Systems
+ 
+
+ 
+
+(1)   The “Industrial” market segment was formerly referred to as the “Industrial and Automotive” market segment.  
+
+ 
+
+Digital Logic Overview 
+
+ 
+
+Three principal types of digital integrated circuits are used in most electronic systems: (1) processors, (2) memory, and (3) logic. 
+
+ 
+
+  •   Processors, which include microprocessors, microcontrollers, and digital signal processors, are typically used for control and central computing tasks;  
+
+ 
+
+  •   Memory is used to store programming instructions and data; and  
+
+ 
+
+  •   Logic is typically used to manage the interchange and manipulation of digital signals within a system.  
+
+ 
+
+While system designers employ a relatively small number of standard architectures to meet their processor and memory needs, they require a wide variety of logic circuits to differentiate their end products. 
+
+ 
+
+3 
+
+
+
+--------------------------------------------------------------------------------
+
+Index to Financial Statements
+The majority of the digital logic market is made up of three product sub-segments: (1) application-specific integrated circuits, or ASICs; (2) application-specific standard products, or ASSPs; and (3) PLDs. In a broad sense, all of these products are competitive with each other as they generally may be used in the same types of applications in electronic systems. However, differences in cost, performance, density, flexibility, ease-of-use, and time-to-market dictate the extent to which they may be directly competitive for particular applications. The table below summarizes key characteristics of ASIC, ASSP, and PLD products from the perspective of the end customer. 
+
+ 
+
+       
+     ASIC
+
+--------------------------------------------------------------------------------
+    ASSP
+
+--------------------------------------------------------------------------------
+    PLD
+
+--------------------------------------------------------------------------------
+ 
+Customizable
+    Yes, by chip fabrication facility    No    Yes, by end user 
+    
+Erasability/Re-programmability
+    No    No    Yes 
+    
+Relative Time-to-Market
+    Slow    Fast    Fast 
+    
+Relative Unit Cost
+    Low    Moderate    Moderate to High 
+    
+Customer’s Development Cost
+    High    Low    Moderate 
+
+ 
+
+ASICs, also referred to as standard cells, are defined by the end customer and customized during manufacturing at the chip fabrication facility. As a result, a given ASIC has a fixed function for use by a single customer in a single application. ASSPs are defined by the ASSP supplier and sold as standard devices that cannot be customized by the end user. Rather than being built for a single customer as in the case of an ASIC, an ASSP is built for a specific type of application and is typically targeted and sold to a limited number of customers. For simplicity, an ASSP may be viewed as an ASIC developed for more than one customer. In contrast to the fixed nature of both ASICs and ASSPs, PLDs are customized by the end customer and hence can be used in a wide range of applications. As a result, a given PLD is typically sold to hundreds or thousands of customers. 
+
+ 
+
+The inherent flexibility of PLDs provides significant advantages over ASICs, including design change simplicity, shorter design cycles, and lower development cost. In contrast to ASIC users, PLD users program their design directly into the PLD and can have custom chips that are fully functioning and verified at the time the design is completed, bypassing the lengthy and complex cycles involved in the verification and fabrication of ASICs. As a result of user programmability, PLD customers may experiment with and revise their designs in a relatively short amount of time and with minimum development cost. The ease-of-use and time-to-market advantages of PLDs are complemented by the added benefit of field upgradeability, which generally enables PLD users to modify the PLD design after the electronic system has been shipped. 
+
+ 
+
+Due to their programmability, however, PLDs generally have a larger die size and associated higher per-unit cost when compared to ASICs. While the customized manufacturing of ASICs can result in more optimized chip performance and lower per-unit cost than PLDs, ASICs require higher up-front costs and longer manufacturing lead times. 
+
+ 
+
+Historically, due to their lower per-unit costs, ASICs have been viewed as more cost effective than PLDs for large-volume, low-cost applications such as consumer electronics. Consequently, the unit volume of a PLD implementation is typically lower than that for an ASIC implementation. Additionally, some customers may choose to prototype with PLDs for initial engineering development and then re-design to an ASIC in volume production for lower per-unit cost. While such re-designs have always been an aspect of the PLD business, we believe that the following factors are driving electronic systems manufacturers to use PLDs for their systems’ entire life cycle: (1) the continual reduction in the price premium of programmable logic; (2) the ever-shortening product life cycle of many electronic systems; and (3) the use of more advanced chip manufacturing technology, which elevates the risk of ASICs and the up-front costs of design, verification and mask development, known as non-recurring engineering costs, or NREs. 
+
+ 
+
+ASSPs have been used in applications where specific fixed functions are needed, such as in implementing certain electronic industry standards where little differentiation is required. However, the fixed functionality of ASSPs limits the range of applications they can address. In contrast to ASSPs, the flexibility found in PLDs allows users to define circuitry 
+
+ 
+
+4 
+
+
+
+--------------------------------------------------------------------------------
+
+Index to Financial Statements
+to suit their value-added and differentiated system architecture, rather than restrict their system architecture based upon the ASSP manufacturer’s device specification. Furthermore, the emergence of IP design blocks in PLDs has allowed the implementation of standardized functions otherwise performed by ASSPs. 
+
+ 
+
+We believe that the adoption of more advanced chip manufacturing technology, which is increasing the total cost of chip development, is reducing the cost advantage of ASICs and ASSPs. The cost and time for us to develop a PLD is comparable to the cost and time for others to develop an ASIC or ASSP. Since each of our PLDs is sold to hundreds or thousands of customers, we spread development costs and generate revenue across a wide customer base. In contrast, ASIC and ASSP suppliers build fixed, custom chips for a single customer or for a single application. Because it is increasingly difficult for ASIC and ASSP suppliers to identify opportunities that generate enough revenue relative to the high development costs, ASIC suppliers are imposing ever-higher up-front costs and minimum order quantities on the customer, and ASSP manufacturers are developing fewer products. 
+
+ 
+
+Strategy and Competition 
+
+ 
+
+We believe that the increasing cost associated with the use of advanced chip manufacturing technology is driving the development and use of standard, programmable digital integrated circuits. As in microprocessors and memories, PLDs provide the flexibility for the end user to change and define circuits without incurring the cost, risk and delays of custom chip fabrication. Consequently, we believe that customers will increasingly use PLDs rather than ASICs or ASSPs, despite the higher per-unit cost of PLDs. 
+
+ 
+
+We believe that competitive pressures to improve chip functionality, performance, reliability, and cost are driving customers increasingly towards high-density PLDs. With high-density PLD solutions, system designers require fewer, if any, separate microprocessor, memory, or logic chips, thereby allowing them to reduce the size and cost of their systems. Programmability allows the user to quickly develop and modify custom circuitry, thereby enhancing time-to-market and reducing risk. 
+
+ 
+
+In order to capture a larger percentage share of the semiconductors purchased by our customers, we are focused on providing the most advanced programmable solutions. To accomplish this goal, we strive to offer our customers: 
+
+ 
+
+  •   PLDs with the speed, density, functionality, and package types to meet their specific needs;  
+
+ 
+
+  •   HardCopy devices that enable our customers to move from a PLD to a low-cost, high-volume structured ASIC implementation of their designs;  
+
+ 
+
+  •   Optimized, pre-verified system-level IP cores to speed their design process;  
+
+ 
+
+  •   State-of-the-art development tools that offer low cost and ease of use and compatibility with other industry-standard electronic design automation, or EDA, tools; and  
+
+ 
+
+  •   A complete customer support system.  
+
+ 
+
+We believe that the greatest opportunity for our growth is displacing ASICs and ASSPs. We compete with other PLD vendors to realize this opportunity and for market share within the PLD market. The programmable logic market is highly concentrated with three vendors accounting for an overwhelming majority of the total market: ourselves, Xilinx, Inc., and Lattice Semiconductor Corporation. Within the PLD market, sales of CPLDs and FPGAs constitute the majority of revenues and are often viewed as two distinct sub-segments of the PLD market. Generally, CPLDs and FPGAs do not compete directly for the same customer designs as they are distinct in their applications. Altera was an early entrant in the CPLD sub-segment and, by our estimates, has held market share in the mid-40% range for more than five years. The FPGA sub-segment has outgrown the CPLD sub-segment, and it is generally accepted by participants and observers of the industry that this trend will continue. We believe that in 2003 we had a 29% share in the FPGA sub-segment, up from 27% in 2002, and that maintaining or increasing market share in this sub-segment is critical to our long term growth. 
+
+ 
+
+Competition between vendors is most intense in the “design-win” phase of the customer’s design. The design win phase refers to the customer’s selection of a particular vendor’s product for use in the customer’s electronic system. 
+
+ 
+
+5 
+
+
+
+--------------------------------------------------------------------------------
+
+Index to Financial Statements
+Because each vendor’s product offering is proprietary, the cost to switch PLD devices after a system has been designed and prototyped is very high — almost prohibitive. Therefore, customers rarely switch PLD vendors after this initial selection. From the time a design-win is secured it is often as long as two years, and sometimes longer, before the customer starts volume purchases of our devices. Typically the customer selects the PLD vendor device relatively early in the customer’s design program. It takes several years from that point before the customer has completed its entire system design, built prototypes, sampled the marketplace for customer acceptance, made any modifications, and established volume manufacturing capacity. Thus, movements in PLD market share often occur some time after the change in relative competitiveness that gave rise to the market share shift. Because of this time lag, market share is a lagging indicator of relative competitive strength. Because it is extremely difficult to forecast the degree of success or timing of a customer’s program, and because the end markets are so fragmented (there are over 10,000 PLD customers) it is difficult even for PLD vendors to gauge their competitive strength in securing design wins as of a particular point in time. 
+
+ 
+
+Principal competitive factors in the programmable logic sub-segment include: 
+
+ 
+
+  •   Technical innovation;  
+
+ 
+
+  •   Device performance and features;  
+
+ 
+
+  •   The capability of software development tools and IP cores;  
+
+ 
+
+  •   Pricing and availability;  
+
+ 
+
+  •   Quality and reliability;  
+
+ 
+
+  •   Technical service and customer support;  
+
+ 
+
+  •   Manufacturing and operational competence; and  
+
+ 
+
+  •   Customer familiarity with existing vendors and entrenched products.  
+
+ 
+
+We believe that we compete favorably with respect to these factors and that our proprietary device architecture and our installed base of software development systems may provide some competitive advantage. We have been able to introduce new product families that, as compared to their predecessors, provide greater functionality at a lower price for any given density because of unique architectural innovation and advanced technologies. 
+
+ 
+
+We also believe that in certain circumstances these new product families compete favorably against ASICs and ASSPs, as well as against other types of chips such as microcontrollers, microprocessors, and digital signal processors. The functionality offered by these other types of chips can be implemented in PLDs using pre-built and pre-verified IP cores. An IP core is typically offered in either a “hard” or “soft” form. A hard IP core is embedded into the actual circuitry of our chips. A soft IP core is a licensed design file that our customers incorporate into their design and program onto the PLD. By incorporating more functionality and logic capacity on a programmable fabric while providing the necessary design tools and IP cores to design a reliable system, we believe we can build upon the advantages of PLDs over competing solutions. 
+
+ 
+
+As is true of the semiconductor industry as a whole, the digital logic segment and the PLD sub-segment are intensely competitive and are characterized by rapid technological change, rapid rates of product obsolescence, and price erosion. All of these factors may influence our future operating results. For a discussion of risk factors associated with our strategy and competition, see “Item 7: Risk Factors” — “Our financial results depend on our ability to compete successfully in the highly competitive semiconductor industry” and “Our future success depends on our ability to define, develop, and sell new products that achieve market acceptance.” 
+
+ 
+
+6 
+
+
+
+--------------------------------------------------------------------------------
+
+Index to Financial Statements
+Products 
+
+ 
+
+Our products consist primarily of devices, IP cores, and proprietary development tools. A brief overview of these products follows. 
+
+ 
+
+Devices 
+
+ 
+
+Our devices fall into the following four categories: (1) FPGAs, (2) CPLDs, (3) low-cost, high-volume structured ASIC devices, and (4) configuration devices that store the programming code for our FPGAs. These devices span multiple architectures and device families, with a total of more than 1,000 product options. Each device family offers unique functional benefits and differing density and performance specifications. Our latest device families, which are typically designed into new end equipment, are summarized and described on the next page. Certain of our more mature device families, which are not now typically designed into new end equipment but may still comprise significant portions of our total revenue, have been omitted from the table below. 
+
+ 
+
+         
+Family
+
+--------------------------------------------------------------------------------
+    Device Category
+
+--------------------------------------------------------------------------------
+    Focus
+
+--------------------------------------------------------------------------------
+    Process Geometry
+
+--------------------------------------------------------------------------------
+    Logic Capacity
+
+--------------------------------------------------------------------------------
+ 
+Stratix II
+    FPGA    High Density, Feature-Rich, Highest Performance    90 nm    15,600 to 179,000 Equivalent Logic Elements 
+     
+Stratix
+    FPGA    High Density, Feature-Rich, High Performance    130 nm    10,570 to 79,040 Logic Elements 
+     
+Cyclone
+    FPGA    Low Cost, High Volume    130 nm    2,910 to 20,060 Logic Elements 
+     
+Stratix GX
+    IP-Based FPGA    High Performance Transceivers    130 nm    10,570 to 41,250 Logic Elements 
+     
+MAX II
+    CPLD    Low Cost High Performance    180 nm    128 to Over 1,000 Equivalent Macrocells 
+     
+MAX 3000A
+    CPLD    Low Cost High Performance    300 nm    32 to 512 Macrocells 
+     
+HardCopy Stratix
+    Structured ASIC Devices    Low Cost High Volume    130 nm    16,640 Logic Elements and Above 
+
+ 
+
+General-Purpose FPGAs 
+
+ 
+
+Our general-purpose FPGA products, consisting of our Stratix™, Cyclone™, APEX™ II, APEX, FLEX®, and ACEX® product families, are built using the most advanced CMOS static random access memory, or SRAM, process technology and address a broad range of applications in communications, computing and storage, consumer, and industrial markets. The basic logic building block in a general-purpose FPGA is the logic element. With more logic elements, an FPGA can support more logic circuitry. In addition to the number of logic elements, the amount of embedded RAM within general-purpose FPGAs is also important in user device selection. Our general-purpose FPGAs will provide up to 179,000 equivalent logic elements and up to 9 megabits of RAM in a single device, while offering competitive logic core and I/O performance levels. 
+
+ 
+
+Some of our major and more recently introduced general-purpose FPGAs are more fully described below: 
+
+ 
+
+STRATIX II: The Stratix II architecture was publicly announced in September 2003 with shipments planned in 2004. Based on a newly developed architecture optimized for a 90-nanometer, or nm, process, the Stratix II device family: (1) provides all the features and capability of the original Stratix architecture, (2) boosts device density up to 179,000 equivalent logic elements, and (3) includes a new logic fabric for improved logic efficiency and over 50% increase in performance over Stratix devices. 
+
+ 
+
+7 
+
+
+
+--------------------------------------------------------------------------------
+
+Index to Financial Statements
+STRATIX: Based on a 130-nanometer process, the Stratix device family: (1) is presently available in densities ranging from 10,570 to 79,040 logic elements, (2) includes up to 7 megabits of embedded RAM, and (3) contains embedded digital signal processing, or DSP, blocks that are useful in applications such as wireless communications, digital entertainment, military, and medical equipment. 
+
+ 
+
+CYCLONE: Cyclone devices are built on a 130-nanometer process, and offer powerful functionality at a low cost. With up to 20,060 logic elements and 288 kilobits of RAM, Cyclone devices can integrate many complex functions. The combination of a low-cost structure with abundant device resources makes Cyclone devices ideal for high-volume applications across all our served markets in areas such as digital set-top boxes, DVD player/recorder systems, automotive telematics, and plasma displays. 
+
+ 
+
+Embedded IP-Based FPGAs 
+
+ 
+
+As a complement to our general-purpose FPGAs, our embedded IP-based FPGAs combine a general-purpose FPGA architecture with embedded IP cores. Together, these two elements comprise a fully integrated and flexible, customizable solution for use in targeted applications. Our embedded IP-based FPGAs consist of our Excalibur™ devices, which are well-suited for applications requiring high-performance embedded microprocessors, and our Stratix GX and Mercury™ devices, which are best employed in applications that need embedded transceiver capability for ultra high-speed data transfer. 
+
+ 
+
+Our embedded IP-based FPGAs are more fully described below: 
+
+ 
+
+STRATIX GX: The Stratix GX device family combines 3.125 Gbps per channel transceiver technology with our Stratix FPGA architecture. Stratix GX devices are built on a 130-nanometer, all-layer-copper SRAM process and contain up to 20 transceiver channels, offering system architects a low-risk path to 3.125 Gbps transceiver capability. Stratix GX devices are ideal for implementing common interface protocols, including proprietary systems that require data rates up to 3.125 Gbps, while providing lower power per channel than competing solutions. Devices in this family range in density from 10,570 to 41,250 logic elements and contain up to 3 megabits of RAM. 
+
+ 
+
+EXCALIBUR: Our Excalibur solution combines logic, memory, and an embedded processor core for implementation in a wide range of applications from 3G base stations, embedded routers, microcontrollers, and network processors to industrial control and factory automation. The Excalibur PLD family integrates of the ARM®-based hard core embedded processor licensed from ARM Limited and provides our customers with enhanced integration and royalty-free access to leading technology for applications requiring the complexity of an ARM processor and the flexibility of a general-purpose FPGA. 
+
+ 
+
+CPLDs 
+
+ 
+
+Our CPLD products, consisting of our MAX® and Classic™ product families, are built using CMOS floating-gate process technology and address a wide range of high-speed glue logic functions found in a broad range of electronics equipment in the communications, computing and storage, consumer, and industrial markets. Glue logic enables the interaction of multiple subsystem components. The basic logic building block in a general-purpose CPLD is the macrocell. Therefore, the total number of macrocells within CPLDs is often used to gauge relative logic density. Another critical metric used in gauging CPLD performance is the total propagation delay, or tPD, from an input pin to an output pin. Our MAX CPLDs provide over 1000 macrocells in a single device with tPD specifications as fast as 3.5 nanoseconds. 
+
+ 
+
+Some of our major CPLDs are more fully described below: 
+
+ 
+
+MAX II: The MAX II architecture was publicly announced in September 2003 with shipments planned in 2004. Based on a newly developed architecture, the MAX II device family will reduce costs by up to 50 percent or more, consume 90 percent less power, and increase performance by as much as 50 percent over existing CPLD families. Density will range from 128 to over 1,000 equivalent macrocells. 
+
+ 
+
+8 
+
+
+
+--------------------------------------------------------------------------------
+
+Index to Financial Statements
+MAX 3000A: The MAX 3000A device family is among the most widely used CPLD families in the industry. This device family provides low-cost, high-density, high-speed, I/O-intensive programmable logic solutions for a broad range of glue logic applications, including state machines, control functions, and address decoding. Devices in this family range in density from 32 to 512 macrocells and provide tPD values as fast as 3.5 nanoseconds. 
+
+ 
+
+HardCopy Structured ASIC Devices 
+
+ 
+
+Our HardCopy products, described below, offer customers a migration path from a high-density FPGA to a low-cost, high-volume structured ASIC device for high-volume production applications. In contrast to traditional ASICs, in which every mask layer is custom and unique to the customer’s design, “structured ASICs” share a common set of base layers and the customer’s design is instantiated on the device by customizing only the last few mask layers. Structured ASIC devices deliver most of the performance attributes of leading process ASICs but with reduced development costs and shorter production lead-times. 
+
+ 
+
+HARDCOPY: For designs implemented in the largest members of our Stratix II, Stratix, and APEX families, our HardCopy structured ASIC devices offer our customers an automated process to a masked implementation of their designs using common base arrays. HardCopy device base arrays are developed from equivalent FPGAs by removing the configuration circuitry, programmable routing, and programmability for logic and memory. This process reduces the die size while maintaining the FPGA architecture, easing the migration of the customer design to a HardCopy device. As a result, HardCopy devices extend the flexibility and time-to-market advantages of high-density FPGAs to high-volume, more cost-sensitive applications traditionally served by fixed ASICs. HardCopy devices offer up to a 70% die size reduction from the original FGPA, resulting in a lower cost for customers seeking a high-volume production solution in our highest density FPGAs. HardCopy designs may also be employed to gain significant increases in performance and reductions in power consumption relative to the high-density FPGA design. Additionally, to further facilitate the replacement of ASIC designs, the HardCopy design flow allows designers the option to go directly to a HardCopy device, bypassing the FPGA design phase. 
+
+ 
+
+Intellectual Property Cores 
+
+ 
+
+IP cores are pre-verified building blocks that implement standard system-level functions that customers incorporate in their PLD design by using our proprietary development software. Soft IP cores available for use in our devices consist of our Nios® soft core embedded processor and our portfolio of MegaCore® functions, which we license to our customers, and our Altera Megafunction Partners Program, or AMPPSM, cores, which are licensed to our customers by third parties. 
+
+ 
+
+The Nios embedded processor utilizes a reduced instruction set computing, or RISC, architecture and is a cost-competitive and flexible alternative to discrete microcontroller solutions. The Nios embedded processor can be efficiently implemented in all of our newer FPGA devices. The Nios II soft core embedded processor, publicly announced in September 2003 for shipments planned in 2004, provides up to a 300% improvement in price/performance when compared to the original Nios embedded processor. 
+
+ 
+
+With IP cores, system designers can focus more time and energy on improving and differentiating the unique aspects of their system design, rather than spending time designing common off-the-shelf functions. IP cores are essential to providing our customers solutions that enable higher levels of integration and faster time to market. Today, we offer a broad range of soft IP cores for various system blocks for DSP algorithms, bus interfaces, memory controllers, telecommunications, data communications, microprocessors, and peripherals. Prior to licensing a soft IP core, customers may download an encrypted soft IP core from our web site and verify that it works in their own system design. While licensing soft IP cores represents a small portion of our total revenues, we believe a broad product offering in this area is necessary to compete with ASIC and ASSP suppliers as well as PLD suppliers. 
+
+ 
+
+Development Tools 
+
+ 
+
+Our proprietary development tools, consisting primarily of the Quartus® II and MAX+PLUS® II software, enable our customers to successfully complete all necessary PLD design steps. Our tools enhance engineering productivity by 
+
+ 
+
+9 
+
+
+
+--------------------------------------------------------------------------------
+
+Index to Financial Statements
+facilitating design entry, design compilation, design verification, and device programming during the initial design and subsequent design revisions. 
+
+ 
+
+Our development tools can be used on a variety of computer platforms and have built-in interfaces with other engineering design software, thus making it possible for customers to utilize their existing design environment. Our Quartus II and MAX+PLUS II software development tools run under the Microsoft Windows, UNIX (including Solaris and HP-UX), and Linux operating environments. Our development tools also provide interfaces to many industry-standard EDA tools, including those offered by Mentor Graphics Corporation, Synplicity, Inc., Synopsys, Inc., and Cadence Design Systems, Inc. 
+
+ 
+
+Like soft IP cores, our development tools generate a small portion of our total revenues but are a critical and necessary element of our product portfolio because they are used to program our devices and can drive our success in competing for design wins against ASIC and ASSP suppliers as well as PLD suppliers. 
+
+ 
+
+Research and Development 
+
+ 
+
+Our research and development activities have focused primarily on PLDs and on the associated IP cores and development software and hardware. We have developed these related products in parallel to provide comprehensive design support to customers upon device introduction. As a result of our research and development efforts, we have introduced during the past three years a number of new families, including the Stratix, Stratix GX, Cyclone, and HardCopy device families, as well as major enhancements to our IP core offering and the Quartus II development platform. We have also redesigned a number of our products to accommodate new wafer fabrication processes. 
+
+ 
+
+Our research and development expenditures were $178.5 million in 2003, $182.8 million in 2002, and $170.9 million in 2001. We expense all research and development costs that have no alternative future use as incurred. We intend to continue to spend substantial amounts on research and development in order to continue to develop new products and achieve market acceptance for such products, particularly in light of the industry pattern of short product life cycles and intense competition within the digital logic market. 
+
+ 
+
+Patents, Trademarks, and Licenses 
+
+ 
+
+We generally rely on intellectual property law, including patent, copyright, trademark, and trade secret laws, to establish and maintain our proprietary rights in products and technology. As of December 31, 2003, more than 632 patents relating to various aspects of our products and technology had been issued to us in the United States. We also have a number of other patents issued in other countries as well as a number of patent applications currently pending. Also, we have used, registered, and applied to register certain trademarks and service marks to distinguish our products, technologies, and services from those of our competitors in the United States and foreign countries. In addition, we file registrations in the United States under the Semiconductor Chip Protection Act to protect our chip designs. 
+
+ 
+
+We have also entered into technology licensing agreements that give us rights to design, manufacture, and package products using certain intellectual property owned by others. In July 2001, we entered into a settlement agreement with Xilinx under which we settled all pending litigation with Xilinx. As part of the settlement agreement, we entered into a royalty-free patent cross license agreement with Xilinx, including a prohibition of further patent litigation between the two companies through July 2006. In connection with the settlement agreement, we paid Xilinx a one-time payment of $20.0 million. Similarly, in July 2001, we entered into a settlement agreement with Lattice under which we settled all pending patent litigation. As part of the settlement agreement, we entered into a royalty-free patent cross license agreement with Lattice, including a multi-year prohibition of further patent litigation between the two companies. No payments were made by Altera or Lattice as part of the settlement. 
+
+ 
+
+When necessary, we seek to enforce our intellectual property rights. Although we believe that protection afforded by our intellectual property rights has value, the rapidly changing technology in the semiconductor industry makes our future success dependent primarily on the innovative skills, technological expertise, and management abilities of our employees 
+
+ 
+
+10 
+
+
+
+--------------------------------------------------------------------------------
+
+Index to Financial Statements
+rather than on our patent, trademark, or other proprietary rights. For a discussion of risk factors associated with our patents, trademarks, and licenses, see “Item 3,” “Item 7: Risk Factors” — “Our intellectual property rights may not provide meaningful protection from our competitors” and “We may face significant costs arising from intellectual property litigation,” and “Note 11: Litigation” to our Consolidated Financial Statements. 
+
+ 
+
+Marketing and Sales 
+
+ 
+
+We market our products worldwide through a network of third-party distributors, independent sales representatives, and direct sales personnel. From time to time, we may add or remove independent sales representatives or third party distributors from our selling organization as we deem appropriate. 
+
+ 
+
+Altera Distributors 
+
+ 
+
+We engage distributors in all major geographic markets that we serve. These distributors are franchised by several component manufacturers to sell a wide variety of products to many customers, and they may sell competing products or solutions. We have contracts with our distributors, which can be terminated by either party in a relatively short period of time. The main roles of the independent distributors are to provide demand creation for the broad base of customers and order fulfillment services. 
+
+ 
+
+All of our distributors stock inventory of our products. The distributors purchase products from us at a set distributor cost which is denominated in US dollars. Title and risk of loss generally transfer upon delivery to the distributor or upon shipment from our stocking locations, which are primarily located at the independent subcontractors we employ for test and assembly services in the Asia Pacific region or our warehouse in San Jose. Upon shipment to the distributor, we defer the net margin on the sale in accordance with our revenue recognition policy. The deferral of the net margin on the sale to the distributor is recorded in current liabilities under deferred income and allowances on sales to distributors. All payments to us are denominated in US dollars. For a detailed discussion of our revenue recognition policy, see “Item 7: Critical Accounting Estimates — Revenue Recognition.” 
+
+ 
+
+Once customer demand has been created and a design is ready to move into production, the order fulfillment process begins. Regardless of whether Altera, the independent sales representative, or the distributor created the demand, a local distributor will process and fulfill over 95% of all orders from customers. The distributor is the legal seller of the products and as such they bear all risks generally related to the sale of commercial goods, such as credit loss, inventory shrinkage and theft, as well as foreign currency fluctuations. 
+
+ 
+
+In accordance with our distribution agreements and industry practice, we have granted the distributors the contractual right to return certain amounts of unsold product on a periodic basis and also to receive price concessions for unsold product in the case of a subsequent decrease in list prices. In addition, we also provide a mechanism for the distributor to seek a price discount in order to meet a high volume and/or competitive situation. This process is standard business practice in the industry and we engage in some level of discounting with every distributor. All discounts are managed on a case-by-case basis and require Altera approval in advance. These discounts are contingent on an actual sale being made by the distributor to the end customer on the terms and conditions agreed upon by Altera. Discounts are material and are paid on a periodic basis by means of a credit memo to the distributors account. 
+
+ 
+
+For the year ended December 31, 2003, worldwide sales through distributors for subsequent resale to original equipment manufacturers, or OEMs, or their subcontract manufacturers accounted for over 95% of total sales. In 2003, 2002, and 2001, two distributors each accounted for more than 10% of sales. Arrow Electronics, Inc., is our largest distributor and on a worldwide basis accounted for 51% of sales in 2003, 53% of sales in 2002, and 54% of sales in 2001. Altima Corporation, which services the Japanese market, accounted for 16% of sales in 2003, 14% of sales in 2002, and 13% of sales in 2001. 
+
+ 
+
+For a discussion of the risk factors associated with our distribution model, see “Item 7: Risk Factors” — “We depend on distributors to generate sales and fulfill our customer orders.” See also “Note 2: Concentrations of Credit Risk” to our Consolidated Financial Statements. 
+
+ 
+
+11 
+
+
+
+--------------------------------------------------------------------------------
+
+Index to Financial Statements
+Altera Sales, Marketing, and Customer Support 
+
+ 
+
+Altera also maintains a dedicated global sales and marketing organization to create customer demand and manage the network of distributors and independent sales representatives. In general, Altera focuses its direct demand creation efforts on a limited number of key accounts, as well as providing technical, business, and marketing support to the distributors and independent sales representatives. The independent sales representatives are mostly located in North America and in select European countries. The independent sales representatives create demand and provide customer support in a defined territory and, in many cases, with a defined set of customers. They stock no inventory and provide no order fulfillment services. All of our contracts with independent sales representatives may be terminated by either party in a relatively short period of time. 
+
+ 
+
+Customer support and service are important aspects of selling and marketing our products. We provide several levels of technical user support, including applications assistance, design services, and customer training. Also, our applications engineering staff publishes data sheets and application notes, conducts technical seminars, and provides design assistance via the Internet and electronic links to the customer. 
+
+ 
+
+Throughout the United States, we have domestic sales offices in numerous major metropolitan areas. In addition, we maintain international sales support offices in the metropolitan areas of Bangalore, Beijing, Helsinki, Hong Kong, London, Munich, Ottawa, Paris, Seoul, Shanghai, Shenzhen, Stockholm, Stuttgart, Taipei, Tokyo, and Turin. 
+
+ 
+
+No single end customer accounted for more than 10% of our sales in 2003, 2002, or 2001. International sales constituted 67% of sales in 2003, 60% of sales in 2002, and 55% of sales in 2001. We expect international sales to continue to grow in the future. 
+
+ 
+
+For a detailed description of our sales by geographic region, see “Item 7” and “Note 12: Segment and Geographic Information” to our Consolidated Financial Statements. For a discussion of the risk factors associated with our foreign operations, see “Item 7: Risk Factors” — “We depend on international sales for a majority of our total sales” and “Our business is subject to tax risks associated with being a multinational corporation.” 
+
+ 
+
+Backlog 
+
+ 
+
+Our backlog consists mostly of distributor orders, as well as limited OEM orders, that are for delivery within the next three months. Our backlog of orders on December 31, 2003, was approximately $292.4 million, compared to $183.3 million on December 31, 2002. The increase in backlog is attributable to an increase in sales, together with an increase in advance orders made by our distributors and OEMs. 
+
+ 
+
+Historically, backlog has been a poor predictor of future customer demand. While our backlog can increase during periods of high demand and supply constraints, our orders are generally cancelable without significant penalty at the option of the purchaser within a short period of time. Further, we defer recognition of revenue on shipments to distributors until the product is resold. For all of these reasons, backlog as of any particular date should not be used as a reliable predictor of sales for any future period. 
+
+ 
+
+Manufacturing 
+
+ 
+
+Wafer Supply 
+
+ 
+
+We do not directly manufacture our silicon wafers. Instead, our silicon wafers are produced by independent semiconductor foundries. This enables us to take advantage of these suppliers’ high-volume economies of scale and also gives us direct and timely access to advancing process technology. We purchase nearly all of our silicon wafers from Taiwan Semiconductor Manufacturing Company, or TSMC, and the remaining portion from Sharp Corporation. In the past, we have used other foundry vendors, and we may establish additional foundry relationships as such arrangements become economically useful or technically necessary. For a discussion of risk factors associated with our wafer supply arrangements, see “Item 7: Risk Factors” — “We depend entirely on independent subcontractors to supply us with 
+
+ 
+
+12 
+
+
+
+--------------------------------------------------------------------------------
+
+Index to Financial Statements
+finished silicon wafers” and “Conditions outside the control of our independent subcontractors may impact their business operations.” 
+
+ 
+
+Testing and Assembly 
+
+ 
+
+After wafer manufacturing is completed, each wafer is tested using a variety of test and handling equipment. Such wafer testing is accomplished at TSMC, Sharp, and our San Jose pilot line facility, which is used primarily for new product development. This testing is performed on equipment owned by us and consigned to our vendors. 
+
+ 
+
+Resulting wafers are then shipped to various assembly suppliers in Asia, where good die are separated into individual chips that are then encapsulated in packages. We employ a number of independent suppliers for assembly purposes. This enables us to take advantage of these subcontractors’ high-volume economies of scale and supply flexibility, and gives us direct and timely access to advancing packaging technology. We purchase almost all of our assembly services from Amkor Electronics, Inc., in Korea and the Philippines, ASAT Limited in Hong Kong, and Advanced Semiconductor Engineering, Inc., or ASE, in Malaysia and Taiwan. 
+
+ 
+
+Following assembly, each of the packaged units receives final testing, marking, and inspection prior to shipment to customers. We obtain almost all of our final test and back-end operation services from Amkor, ASAT, and ASE. Final testing by these assembly suppliers is accomplished through the use of our proprietary test software, as well as hardware that is consigned to or owned by such suppliers. On our behalf, these suppliers also warehouse and ship our products to our OEMs and distributors. 
+
+ 
+
+For a discussion of risk factors associated with our testing and assembly arrangements, see “Item 7: Risk Factors” — “We depend on independent subcontractors, located in Asia, to assemble and test our semiconductor products” and “Conditions outside the control of our independent subcontractors may impact their business operations.” 
+
+ 
+
+Executive Officers of the Registrant 
+
+ 
+
+Our executive officers and their ages are as follows: 
+
+ 
+
+     
+Name
+
+--------------------------------------------------------------------------------
+    Age
+
+--------------------------------------------------------------------------------
+    Position
+
+--------------------------------------------------------------------------------
+ 
+John P. Daane
+    40    President and Chief Executive Officer
+ 
+Denis M. Berlan
+    54    Executive Vice President and Chief Operating Officer
+ 
+Erik R. Cleage
+    43    Senior Vice President, Marketing
+ 
+John R. Fitzhenry
+    54    Vice President, Human Resources
+ 
+Lance M. Lissner
+    54    Senior Vice President, Business Development
+ 
+George A. Papa
+    55    Senior Vice President, Worldwide Sales
+ 
+Jordan S. Plofsky
+    43    Senior Vice President, Applications Business Groups
+ 
+Nathan M. Sarkisian
+    45    Senior Vice President and Chief Financial Officer
+ 
+Katherine E. Schuelke
+    41    Vice President, General Counsel and Secretary
+ 
+
+ 
+
+There are no family relationships among our executive officers or between any executive officer and any of our directors. 
+
+ 
+
+John P. Daane joined us as our President and Chief Executive Officer in November 2000, and was elected as one of our directors in December 2000 and our Chairman of the Board in May 2003. Prior to joining us, Mr. Daane spent 15 years at LSI Logic Corporation, a semiconductor manufacturer, most recently as Executive Vice President, Communications Products Group, with responsibility for ASIC technology development and the Computer, Consumer, and Communications divisions. Mr. Daane earned his bachelors degree from the University of California, Berkeley in 1986. 
+
+ 
+
+Denis M. Berlan joined us in December 1989 as Vice President, Product Engineering and was named Vice President, Operations and Product Engineering in October 1994. In January 1996, he was named Vice President, Operations. In January 1997, he was named Executive Vice President and Chief Operating Officer. He was previously employed by 
+
+ 
+
+13 
+
+
+
+--------------------------------------------------------------------------------
+
+Index to Financial Statements
+Advanced Micro Devices, Inc., or AMD, a semiconductor manufacturer, and by Lattice Semiconductor Corporation, a semiconductor manufacturer, in engineering management capacities. Mr. Berlan received his M.S.E.E. in 1972 and Ph.D. in 1977 from the University of Grenoble in France and an M.B.A. in 1987 from the University of Santa Clara. 
+
+ 
+
+Erik R. Cleage joined us as International Marketing Manager in February 1986. He became Director, Japan and Asia Pacific Sales in April 1989, was appointed Vice President, Marketing in August 1990 and Senior Vice President, Marketing in January 1999. Previously, he was employed by AMD and Fairchild Semiconductor Corporation, a semiconductor manufacturer, in various positions. Mr. Cleage earned his bachelor of science degree in electrical engineering from Stanford University in 1981. 
+
+ 
+
+John R. Fitzhenry joined us in May 1995 as Vice President, Human Resources. From February 1983 to May 1995, he was employed by Apple Computer, Inc., a manufacturer of personal computers, in various human resource management positions. Mr. Fitzhenry earned his bachelors degree from the University of California, Santa Barbara in 1971 and his J.D. from the University of the Pacific, McGeorge School of Law in 1976. 
+
+ 
+
+Lance M. Lissner joined us in May 1998 as Vice President of Business Development and Investor Relations and was appointed Senior Vice President, Business Development in November 2000. Prior to that time, Mr. Lissner was a corporate officer of Measurex Corporation, a developer of computer-integrated measurement, control, and information systems, where he was employed since 1973 and held various positions in sales, marketing, engineering, and business development. Mr. Lissner earned his bachelors degree from Harvey Mudd College in 1972 and his masters degree from Stanford University in 1973. 
+
+ 
+
+George A. Papa joined us in February 2002 as Senior Vice President, Worldwide Sales. From February 2000 to February 2002, Mr. Papa served as Vice President of Worldwide Sales of the Communications Business Group of Marvell Semiconductor, Inc., a semiconductor company. From March 1997 to February 2000, he served as Vice President of Worldwide Sales for Level One Communications, Inc., a subsidiary of Intel Corporation, a semiconductor company. From February 1991 to March 1997, Mr. Papa served as Vice President of North American Sales for Siemens Corporation, a diversified global technology company. Mr. Papa earned his bachelors degree from Northeastern University in 1971. 
+
+ 
+
+Jordan S. Plofsky joined us in February 2001 as Senior Vice President, Vertical Markets and Embedded Processor Products and became Senior Vice President, Applications Business Groups in March 2002. Prior to joining us, Mr. Plofsky was employed by LSI Logic from October 1996 to February 2001, most recently as Executive Vice President, Enterprise Infrastructure Group from November 2000 to February 2001 and Vice President and General Manager, Networking Products Division from June 1998 to November 2000. Mr. Plofsky earned a bachelors degree from the University of Illinois, Urbana-Champaign in 1982. 
+
+ 
+
+Nathan M. Sarkisian joined us in June 1992 as Corporate Controller. He was appointed Vice President, Finance and Chief Financial Officer in August 1995 and Senior Vice President and Chief Financial Officer in March 1998. Prior to joining us, Mr. Sarkisian held various accounting and financial positions at Fairchild Semiconductor and at Schlumberger Limited, an oil field services company. Mr. Sarkisian earned a bachelors degree from Stanford University in 1981 and an M.B.A. from Harvard University in 1992. 
+
+ 
+
+Katherine E. Schuelke joined us in March 1996 as Corporate Attorney. She became Senior Corporate Attorney in July 1997 and Assistant General Counsel and Assistant Secretary in July 1999. In October 2001, she was appointed Vice President, General Counsel and Secretary. Prior to March 1996, Ms. Schuelke was an attorney at the law firm of Morrison & Foerster LLP for seven years. Ms. Schuelke earned a bachelors degree from the State University of New York at Buffalo in 1986 and a J.D. from New York University in 1989. 
+
+ 
+
+Employees 
+
+ 
+
+As of December 31, 2003, we had 1,995 regular employees. Of these employees, 1,263 were located in the United States, and 732 were employed in 17 other countries. None of our employees is represented by a labor union. We have not experienced any work stoppages, and we believe that our employee relations are good. 
+
+ 
+
+14 
+
+
+
+--------------------------------------------------------------------------------
+
+Index to Financial Statements
+Additional Information 
+
+ 
+
+Our annual report on Form 10-K, quarterly reports on Form 10-Q, current reports on Form 8-K, and amendments to reports filed pursuant to Sections 13(a) and 15(d) of the Securities Exchange Act of 1934, as amended, are available free of charge on our Web site at www.altera.com, when such reports are available on the Securities and Exchange Commission Web site. 

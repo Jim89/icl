@@ -1,0 +1,492 @@
+ITEM 1. BUSINESS.
+
+GENERAL
+
+Altera Corporation ("Altera" or the "Company") designs, manufactures and markets
+programmable logic devices ("PLDs") and associated development tools.
+Programmable logic devices are semiconductor integrated circuits ("chips" or
+"ICs") that offer on-site programmability to customers using the Company's
+proprietary software, which operates on personal computers and engineering
+workstations. Founded in 1983, Altera was the first supplier of Complementary
+Metal Oxide Semiconductor ("CMOS") programmable logic devices and is currently a
+global leader in this market. The Company offers a broad line of CMOS
+programmable logic devices that address high-speed, high-density and low-power
+applications. The Company's products serve a wide range of markets, including
+telecommunications, data communications, electronic data processing (EDP) and
+industrial applications.
+
+STRATEGY
+
+According to Dataquest, the CMOS logic market consists of the following
+segments: semi-custom or application specific integrated circuits ("ASICs"),
+standard logic, full custom devices and other forms of logic ICs, including
+chipsets. The ASIC segment is comprised of programmable logic, gate arrays and
+cell-based ICs (also referred to as standard cells). In a broad sense, all of
+these devices are indirectly competitive as they generally may be used in the
+same types of applications in electronic products. However, differences in cost,
+performance, density, flexibility, ease-of-use and time-to-market dictate the
+extent to which they may be directly competitive for particular applications.
+
+Programmable logic's primary advantage is that it allows for quicker design
+cycles, meeting customers' needs for quick time-to-market. Programmable logic
+allows customers to experiment and iterate their designs in a relatively short
+amount of time and with minimum cost. In most instances, this is quicker and
+easier than achieving a design in a deterministic fashion. This advantage is
+amplified by the ability to have working silicon at the time the design is
+finalized.
+
+Another advantage of programmable logic is that, particularly for small volume
+applications, it lowers the per unit cost of producing customized components.
+While programmable logic inherently consumes more silicon (because of its
+generality and on-chip programming overhead), in many cases, depending on the
+complexity of the design and total unit requirements, this higher per unit cost
+is more than offset by the high fixed costs of layout and mask-making required
+to produce a custom IC. The cost advantage is further enhanced by the need to
+hold less inventory and the fact that customization occurs closer to the end
+application.
+
+Due to PLD cost decreases through high-volume manufacturing and the use of
+emerging process technologies, Altera has been able to introduce new product
+families that, as compared to their predecessors, provide more functionality at
+a much lower price for any given density. These new product families achieve the
+integration, density, performance and cost advantages of other ASIC solutions.
+The Company believes that its competitiveness within the ASIC segment in these
+areas, along with the inherent advantages of programmable logic discussed above,
+will enable it to compete for designs traditionally served by other ASICs. In
+the short term, the lower prices associated with the Company's new product
+offerings have slowed its sales growth. However, Altera believes that these new
+product offerings will be important to sustaining long-term sales growth as they
+broaden the appeal of programmable logic. See "Competition."
+
+
+                                       2
+
+<PAGE>   3
+
+PRODUCTS
+
+Altera sells a wide range of products, with a total of more than 1,000 product
+options among its PLD families. The Company offers PLDs in two fundamental
+technologies: its MAX products, which use floating-gate process technology, and
+its FLEX and APEX products, which use SRAM-based process technology. Altera's
+proprietary development tools, the MAX+PLUS II and Quartus software provides
+design development and programming support for all its PLDs. Altera also offers
+hardware used in programming PLDs.
+
+Devices:
+
+Altera offers a wide range of general-purpose PLD families. Each device family
+offers unique features as well as differing density and performance
+specifications for implementing particular applications. Some of Altera's major
+device families include the following:
+
+MAX 7000, MAX 7000A and MAX 7000B: The MAX 7000, MAX 7000A and MAX 7000B device
+families are among the fastest and most widely used high-density programmable
+logic families in the industry. Devices in these families range from 600 to
+10,000 usable gates and up to 256 pins and provide several enhanced features,
+including support for the JTAG boundary-scan test circuitry and in-system
+programmability ("ISP"). ISP functionality allows devices to be programmed after
+they are soldered onto the printed circuit board, thereby minimizing the
+possibility of lead damage or electrostatic discharge exposure. The MAX 7000
+device family, which includes 5.0-V MAX 7000 devices and 5.0-V ISP-based MAX
+7000S devices, the 3.3-V MAX 7000A device family and the industry's fastest
+programmable logic solution, the 2.5 V MAX 7000B device family, are fabricated
+on advanced CMOS EEPROM processes, providing a high-density, high-speed,
+I/O-intensive programmable logic solution.
+
+MAX 9000: The MAX 9000 device family offers the efficient macrocell architecture
+of MAX 7000 devices with higher densities. Devices in this family range from
+6,000 to 12,000 usable gates and up to 356 pins. The EEPROM-based MAX 9000
+devices are PCI-compliant and offer ISP capability.
+
+FLEX 8000: The SRAM-based FLEX 8000 device family uses the Altera-patented
+FastTrack Interconnect structure, a continuous routing structure that allows for
+fast, predictable interconnect delays. Devices in this family range from 2,500
+to 16,000 usable gates and up to 304 pins. FLEX 8000 devices have a 5.0-V supply
+voltage and can interface with 3.3-V device through the MultiVolt(TM) I/O
+feature. These SRAM-based devices provide low standby power and in-system
+reconfigurability.
+
+FLEX 6000: Altera's SRAM-based FLEX 6000 family delivers the flexibility and
+time-to-market advantage of programmable logic at prices that are competitive
+with gate arrays. Devices in this family range from 10,000 to 24,000 usable
+gates and up to 256 pins and include devices that operate at both 5.0-V and
+3.3-V supply voltages. Featuring the very efficient OptiFLEX architecture, FLEX
+6000 devices provide a flexible and cost-effective alternative to gate arrays
+for high-volume production. Every feature in the OptiFLEX architecture is
+targeted at producing maximum performance and utilization in the smallest
+possible die area.
+
+FLEX 10K, FLEX 10KA and FLEX 10KE: Altera's SRAM-based FLEX 10K, FLEX 10KA and
+FLEX 10KE device families offer a combination of logic and embedded memory on a
+single chip architecture. Devices in these PLD families range from 10,000 to
+250,000 usable gates and up to 672 pins. With these high densities, the FLEX
+10K, FLEX 10KA and FLEX 10KE families may be used to address the increasing
+levels of integration needed to accommodate today's complex system-on-a-chip
+designs. The FLEX 10K family includes 0.5- and 0.42-micron devices, the FLEX
+10KA family includes 0.35- and 0.3-micron devices and the FLEX 10KE family
+includes 0.25- and 0.22-micron devices.
+
+APEX 20K and APEX 20KE: Altera's SRAM-based APEX 20K and APEX 20KE device
+families offer complete system-level integration on a single device. Devices in
+these families are planned to range from 30,000 to over 1.5 million usable gates
+and up to 1,020 pins. With high densities and performance enhancements, the APEX
+20K and APEX 20KE families deliver the latest in design flexibility and
+efficiency for high-performance, system-on-a-programmable-chip design. APEX 20K
+devices, which operate at a 2.5-V supply voltage, and APEX 20KE devices, which
+will operate at a 1.8-V supply voltage, employ the innovative MultiCore
+architecture, which combines and enhances the strengths of Altera's three
+previous PLD architectures. The APEX 20K and APEX 20KE devices first became
+available in March and April 1999, respectively, and are supported by Altera's
+Quartus development software.
+
+
+
+                                       3
+<PAGE>   4
+
+Development Tools:
+
+The Company's development system software and hardware are used to design and
+implement logic designs on its PLDs. Altera's MAX+PLUS II and Quartus software
+development tools run under the Microsoft Windows 95 and NT operating
+environments on personal computers in addition to the UNIX environment on SUN,
+HP and IBM workstations. The Company also provides interfaces to many industry
+standard electronic design automation ("EDA") tools, including those offered by
+Cadence Design Systems, Inc., Mentor Graphics Corporation and Synopsys, Inc. The
+Company also sells hardware for programming its PLDs.
+
+MARKETING, SALES AND CUSTOMERS
+
+The Company markets its products in the United States and Canada through a
+network of direct sales personnel, independent sales representatives and
+electronics distributors. The Company also has domestic sales management offices
+in major metropolitan areas throughout the United States. The Company's direct
+sales personnel and independent sales representatives focus on major strategic
+accounts. Distributors generally focus selling activities on the broad base of
+small and medium-size customers, as well as demand fulfillment services to
+Altera's major strategic accounts.
+
+In the United States, Altera's distributors currently include Arrow Electronics
+Inc. and Wyle Electronics (a division of VEBA Electronics AG, which is owned by
+VEBA AG, Germany's fourth largest company). These distributors are responsible
+for creating customer demand from their base of customers, providing technical
+support and other value-added services and filling customers' orders. From time
+to time, the Company expects that it may add or delete distributors from its
+selling organization as it deems appropriate to the level of business.
+
+The Company's international business is supported by a network of distributors
+throughout Europe and Asia. The Company has representation in every major
+European country, Israel, Australia, South America and various countries
+throughout the Pacific Rim including Japan. International sales support offices
+are located in the metropolitan areas of Helsinki, Hong Kong, Hsinchu (Taiwan),
+London, Ottawa, Paris, Seoul, Stockholm, Stuttgart, Tokyo and Turin.
+
+Customer service and support are important aspects of selling and marketing the
+Company's products. Altera provides several levels of technical user support,
+including applications assistance, design services and customer training. The
+Company's applications engineering staff publishes data sheets and application
+notes, conducts technical seminars and provides design assistance via Internet
+and electronic links to the customer's design station. Customer service is
+supported with inventory maintained both by Altera and at distributors'
+locations to provide short-term delivery of chips.
+
+During each of the last three years, international sales constituted nearly half
+of the Company's total sales. Through 1999, all international sales were
+denominated in U.S. dollars. The Company's international sales are subject to
+those risks common to all international activities, including governmental
+regulation, possible imposition of tariffs or other trade barriers and currency
+fluctuations.
+
+In the year ended December 31, 1999, worldwide sales through distributors
+accounted for over 90% of total sales. In 1999, the three largest distributors
+accounted for 34%, 19% and 13% of sales. In 1998, the three largest distributors
+accounted for 30%, 21% and 11% of sales, whereas in 1997, they accounted for
+32%, 18% and 11% of sales, respectively. No single end customer accounted for
+more than 10% of the Company's sales in 1999, 1998 or 1997. International sales
+constituted 44%, 45% and 45% of sales in 1999, 1998 and 1997, respectively.
+
+COMPETITION
+
+The ASIC Segment:
+
+According to Dataquest, the CMOS logic market consists of the following
+segments: ASICs, standard logic, full custom devices and other forms of logic
+ICs, including chipsets. The ASIC segment is comprised of programmable logic,
+gate arrays and cell-based ICs (also referred to as standard cells). In a broad
+sense, all of these devices are indirectly competitive as they generally may be
+used in the same types of applications in electronic products. However,
+differences in cost, performance, density, flexibility, ease-of-use and
+time-to-market dictate the extent to which they may be directly competitive for
+particular applications. As PLDs have increased in density and performance and
+decreased in cost, they have become more directly competitive with other ASICs,
+especially gate arrays. With the introduction of the Company's FLEX 10K family
+and new APEX 20K family, which are Altera's highest density PLDs, along with its
+FLEX 6000 devices, which are designed and priced to be very competitive with
+lower density gate arrays, the Company seeks to grow by directly competing with
+other companies in the ASIC segment. Many of the companies in the ASIC segment
+have substantially greater financial, technical and marketing resources than the
+Company. There can be no assurance that the Company will be successful in
+competing in the ASIC segment of the CMOS logic market.
+
+
+                                       4
+<PAGE>   5
+
+The Programmable Logic Sub-Segment:
+
+The principal factors of competition in the programmable logic sub-segment
+include the capability of software development tools and system-level functional
+programming blocks, product performance and features, quality and reliability,
+pricing, technical service and support, the ability to respond rapidly to
+technical innovation and customer service. The Company believes it competes
+favorably with respect to these factors and that its proprietary device
+architecture and its installed base of development systems with proprietary
+software may provide some competitive advantage. However, as is true of the
+semiconductor industry as a whole, the PLD sub-segment is intensely competitive
+and is characterized by rapid technological change, rapid rates of product
+obsolescence and price erosion resulting from both product obsolescence and
+price competition. All of these factors may influence the Company's future
+operating results.
+
+The Company experiences significant direct competition from a number of other
+companies which are in the programmable logic sub-segment. The Company's
+competition in this market sub-segment is from suppliers of products that are
+marketed as either field-programmable gate arrays ("FPGAs") or complex PLDs
+("CPLDs").
+
+Companies that currently compete with Altera in its core business may have
+proprietary wafer manufacturing ability, preferred vendor status with many of
+the Company's customers, extensive marketing power and name recognition, greater
+financial resources than those of the Company and other significant advantages
+over the Company. Additionally, the semiconductor industry as a whole includes
+many large domestic and foreign companies that have substantially greater
+financial, technical and marketing resources than the Company. The Company
+expects that as the dollar volume of the programmable logic sub-segment grows,
+the attractiveness of this sub-segment to larger, more powerful competitors will
+continue to increase. Substantial direct or indirect competition could have a
+material adverse effect on the Company's future sales and operating results.
+
+MANUFACTURING
+
+The Company does not directly manufacture its silicon wafers. Altera's wafers
+are produced using various semiconductor foundry wafer fabrication service
+providers. This enables Altera to take advantage of these suppliers' high volume
+economies of scale, as well as direct and more timely access to advancing
+process technology.
+
+Altera presently has its primary wafer supply arrangements with three
+semiconductor vendors: Sharp, TSMC, and WaferTech. The Company may negotiate
+additional foundry contracts and establish other sources of wafer supply for its
+products as such arrangements become economically useful or technically
+necessary. Although there are a number of new state-of-the-art wafer fabrication
+facilities currently under construction around the world, semiconductor foundry
+capacity can become limited quickly and without much notice. Furthermore, since
+only newer fabrication or substantially retrofitted facilities are able to
+manufacture wafers that incorporate leading edge technologies, any significant
+decrease in capacity of these facilities would have a material adverse effect on
+the Company's ability to obtain wafer supply for its newer products.
+Accordingly, there can be no assurance that any shortage in foundry
+manufacturing capacity will not result in production problems for the Company in
+the future.
+
+In June 1996, the Company, TSMC and several other partners formed a joint
+venture called WaferTech, LLC ("WaferTech") to build and operate a wafer
+manufacturing plant in Camas, Washington. In return for a $140.4 million cash
+investment, the Company received an 18% equity ownership in the joint-venture
+company and certain rights and obligations to procure output from the fab at
+market prices. In January 1999, Altera purchased from another joint venture
+partner, Analog Devices, an additional 5% equity ownership interest in WaferTech
+for approximately $37.5 million. This further investment in WaferTech provides
+the Company with additional rights and obligations to future foundry output. In
+October 1999, the Company made a $23.0 million cash investment in WaferTech,
+which did not change the Company's ownership interests in WaferTech or its
+rights and obligations to future foundry output. The Company also has an
+obligation to guarantee a pro rata share of debt incurred by WaferTech up to a
+maximum of $45 million. In May 1998, WaferTech secured a loan facility of up to
+$350 million which was subsequently reduced to $225 million in December 1998.
+This facility was increased to $350 million in 1999. To date, the Company has
+not been called upon to guarantee this or any other debt incurred by WaferTech.
+WaferTech began its initial wafer production shipments in October 1998. Based on
+WaferTech's production projections, the Company believes that it will meet its
+minimum purchase obligations from WaferTech through at least 2000. There can be
+no assurance that WaferTech will remain sufficiently capitalized or on schedule
+with its production projections, and WaferTech's failure to do so could have a
+material adverse effect on the Company's future operating results.
+
+The Company depends upon its foundry vendors to produce wafers at acceptable
+yields and to deliver them to the Company in a timely manner. The manufacture of
+advanced CMOS semiconductor wafers is a highly complex process, and the Company
+has from time to time experienced difficulties in obtaining acceptable yields
+and timely deliveries from its suppliers. Good production yields are
+particularly important to the Company's business, including its ability to meet
+customers' demand for products and to
+
+
+                                       5
+<PAGE>   6
+ maintain profit margins. Wafer production yields are dependent on a wide
+variety of factors, including the level of contaminants in the manufacturing
+environment, impurities in the materials used and the performance of personnel
+and equipment. As is common in the semiconductor industry, the Company has
+experienced and expects to experience production yield problems from time to
+time. Difficulties in production yields can often occur when the Company is
+beginning production of new products or transitioning to new processes. These
+difficulties can potentially result in significantly higher costs and lower
+product availability. For example, in the second quarter of 1999, difficulties
+with a vendor's manufacturing process limited the availability of packaging
+material (piece parts) used in certain of the Company's new and proprietary
+FineLine BGA(TM) ("ball-grid array") packages causing limited production. This
+in turn limited shipments of the Company's new FLEX 10KE product family.
+Management expects to continue to introduce new and established products using
+new process technologies and may encounter similar start-up difficulties during
+the transition to such process technologies. Further, production throughput
+times vary considerably among the Company's wafer suppliers, and the Company may
+experience delays from time to time in processing some of its products which
+also may result in higher costs and lower product availability. The Company
+expects that, as is customary in the semiconductor business, in order to
+maintain or enhance its competitive position, it will continue to convert its
+fabrication process arrangements to larger wafer sizes and smaller circuit
+geometries, to more advanced process technologies or to new suppliers. Such
+conversions entail inherent technological risks that can adversely affect
+yields, costs and delivery lead time. In addition, if for any reason the Company
+were required to seek alternative sources of supply, shipments could be delayed
+significantly while such sources are qualified for volume production, and any
+significant delay could have a material adverse effect on the Company's
+operating results. After wafer manufacturing is completed, each wafer is tested
+using a variety of test and handling equipment. Such wafer testing is
+accomplished at Sharp, TSMC, WaferTech and the Company's Pilot Line facility in
+San Jose (which is used primarily for new product development). This testing is
+performed on equipment owned by the Company and consigned to the vendors.
+
+Resulting wafers are shipped to various Asian assembly suppliers, where good die
+are separated into individual chips that are then encapsulated in ceramic or
+plastic packages. As is the case with the Company's wafer supply business, the
+Company employs a number of independent suppliers for assembly purposes. This
+enables the Company to take advantage of subcontractor high volume
+manufacturing, related cost savings, speed and supply flexibility. It also
+provides the Company with timely access to cost-effective advanced process and
+package technologies. Altera purchases almost all of its assembly services from
+ASAT (Hong Kong), ASE (Malaysia) and AMKOR (Korea and the Philippines).
+
+Following assembly, each of the packaged units receives final testing, marking
+and inspection prior to shipment to customers. The Company obtains almost all of
+its final test and back-end operation services from ASE, AMKOR and ASAT. Final
+testing by these assembly suppliers is accomplished through the use of Altera's
+proprietary test software and hardware, which is consigned to or owned by such
+suppliers and/or third-party commercial testers. These suppliers also handle
+shipment of the products to the Company's customers.
+
+Additionally, almost all of the manufacturing, assembly, testing and packaging
+of Altera's development system hardware products is performed by outside
+contractors. Although the Company's wafer fabrication, assembly and other
+subcontractors have not recently experienced any serious work stoppages, the
+economic, social and political situations in countries where certain
+subcontractors are located are unpredictable and can be volatile. Any prolonged
+work stoppages or other inability of the Company to manufacture and assemble its
+products would have a material adverse effect on the Company's operating
+results. Furthermore, economic risks, such as extreme currency fluctuations,
+adverse changes in tax laws, tariff or freight rates or interruptions in air
+transportation, could have a material adverse effect on the Company's operating
+results.
+
+BACKLOG
+
+The Company's backlog of released orders as of December 31, 1999 was
+approximately $309.4 million as compared to approximately $142.6 million at
+December 31, 1998. The Company's backlog consists of OEM customer-released
+orders that are requested for delivery within the next six months and
+distributor orders that are requested for delivery within the next three months.
+The Company produces standard products that may be shipped from inventory within
+a short time after receipt of an order. The Company's business has been
+characterized by a high percentage of orders with near-term delivery schedules
+(turns orders). At times, due to high demand and supply constraints in certain
+products, lead times can lengthen, causing an increase in backlog. However,
+orders constituting the Company's current backlog are cancelable without
+significant penalty at the option of the purchaser, thereby decreasing backlog
+during periods of lower demand. In addition, distributor shipments are subject
+to price adjustments. As discussed in the Notes to the Consolidated Financial
+Statements under Item 8 herein, the Company adopted a new revenue recognition
+method in the fourth quarter of 1997 with an effective date of January 1, 1997,
+which involves the deferral of revenue recognition on shipments to distributors
+until the product is resold to the end customers. Distributor orders accounted
+for over 90% of the Company's backlog as of December 31, 1999. Historically,
+backlog has been a poor predictor of future customer demand. For all of these
+reasons, backlog as of any particular date should not be used as a predictor of
+sales for any future period.
+
+
+                                       6
+<PAGE>   7
+
+RESEARCH AND DEVELOPMENT
+
+The Company's research and development activities have focused primarily on
+general-purpose programmable logic devices and on the associated development
+software and hardware. The Company has developed these related products in
+parallel to provide software support to customers simultaneous with circuit
+introduction. As a result of the Company's research and development efforts, it
+has introduced a number of new PLD families, such as the FLEX 6000, FLEX 10KE,
+FLEX 10KA, MAX 3000A, MAX 7000A, MAX 7000B, APEX 20K and APEX 20KE device
+families. The Company has also redesigned a number of its products to
+accommodate their manufacture on new wafer fabrication processes. In 1999, the
+Company also released Quartus, its fourth generation software. Additionally, the
+Company typically releases new versions of its proprietary software on a
+quarterly basis.
+
+The Company's research and development expenditures in 1999, 1998 and 1997, were
+$86.1 million, $59.9 million and $54.4 million, respectively. The Company has
+not capitalized research and development or software costs to date. The Company
+intends to continue to spend substantial amounts on research and development in
+order to continue to develop new products and achieve market acceptance for such
+products, particularly in light of the industry pattern of short product life
+cycles and increasing competition within the CMOS logic market. Even if such
+goals are accomplished, there can be no assurance that these products will
+achieve significant market acceptance. If the Company were unable to
+successfully define, develop and introduce competitive new products, and enhance
+its existing products, its future operating results would be adversely affected.
+
+PATENTS AND LICENSES
+
+The Company owns numerous United States patents and has additional pending
+United States patent applications on its semiconductor products. The Company
+also has technology licensing agreements with Vantis, Cypress and Intel, giving
+the Company royalty-free rights to design, manufacture and package products
+using certain patents they control.
+
+Although the Company's patents and patent applications may have value in
+discouraging competitive entry into the Company's market segment and the Company
+believes that its current licenses will assist it in developing additional
+products, there can be no assurance that any valuable new patents will be
+granted to the Company, that the Company's patents will provide meaningful
+protection from competition or that any additional products will be developed
+based on any of the licenses that the Company currently holds. The Company
+believes that its future success will depend primarily upon the technical
+competence and creative skills of its personnel, rather than on its patents,
+licenses, or other proprietary rights.
+
+In the future, the Company may decide to incur litigation expenses to enforce
+its intellectual property rights against third parties. There is no assurance
+that any such litigation would be successful or that the Company's patents would
+be upheld if challenged.
+
+The Company, in the normal course of business, from time to time receives and
+makes inquiries with respect to possible patent infringements. As a result of
+inquiries received from third parties, it may be necessary or desirable for the
+Company to obtain additional licenses relating to one or more of its current or
+future products. There can be no assurance that such additional licenses could
+be obtained, and, if obtainable, could be obtained on conditions which would not
+have a material adverse effect on the Company's operating results. In addition,
+if patent litigation ensued, there can be no assurance that these third parties
+would not succeed in obtaining significant monetary damages or an injunction
+against the manufacture and sale of one or more of the Company's product
+families.
+
+EMPLOYEES
+
+As of December 31, 1999, the Company had 1,398 regular employees. The success of
+the Company is dependent in large part upon the continued service of its key
+management, technical, sales and support employees and on its ability to
+continue to attract and retain additional qualified employees. The competition
+for such employees is intense and the loss of key employees could have an
+adverse effect on the Company.

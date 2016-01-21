@@ -1,0 +1,1263 @@
+Item 1.  Business
+
+Company Overview
+
+     EMCORE  Corporation,  a  New  Jersey  Corporation,  designs,  develops  and
+manufactures  compound  semiconductor  materials and is a leading  developer and
+manufacturer of the tools and manufacturing processes used to fabricate compound
+semiconductor  wafers  and  devices.   Established  in  1986,  EMCORE  offers  a
+comprehensive  portfolio  of  compound  semiconductor  products  for the rapidly
+expanding  broadband  and  wireless  communications  and  solid  state  lighting
+markets.  EMCORE's  product  philosophy  embodies  state of the art  technology,
+material  science  expertise  and a shared  vision of our  customers'  goals and
+objectives  to be leaders and pioneers in the rapidly  growing world of compound
+semiconductors.   EMCORE's  product  line  features:   optical   components  for
+high-speed  data  and  telecommunications;  solar  cells  for  global  satellite
+communications;  electronic materials for high bandwidth communications systems,
+such as Internet access and wireless  telephones;  MOCVD tools for the growth of
+GaAs, AIGaAs, InP, InGaP, InGaAIP, InGaAsP, GaN, InGaN, AIGaN, and SiC epitaxial
+materials used in numerous  applications,  including data and telecommunications
+modules,  cellular  telephones,  solar  cells  and  high  brightness  LEDs.  Our
+customers include Agilent Technologies Ltd., AMP, Inc., Anadigics Inc., Corning,
+Inc.,  General  Motors  Corp.,   Hewlett  Packard  Co.,  Honeywell  Int'l  Inc.,
+Boeing-Spectrolab, JDS Uniphase Corp., Loral Space & Communications Ltd., Lucent
+Technologies,  Inc.,  Motorola,  Inc., Nortel Networks Corp., Siemens AG's Osram
+GmbH  subsidiary,  TriQuint  Semiconductor,  Inc.  and more  than a dozen of the
+largest  electronics  manufacturers  in Japan.  For  further  information  about
+EMCORE, visit http://www.emcore.com.
+
+Industry Overview
+
+     Recent advances in information technologies have created a growing need for
+efficient,  high-performance  electronic  systems  that  operate  at  very  high
+frequencies,   have  increased  storage  capacity,   computational  and  display
+capabilities and can be produced  cost-effectively in commercial volumes. In the
+past,  electronic  systems  manufacturers  have  relied on  advances  in silicon
+semiconductor  technology  to meet many of these  demands.  However,  the newest
+generation  of  high-performance   electronic  and  optoelectronic  applications
+require certain functions that are generally not achievable using  silicon-based
+components.
+
+     Compound  semiconductors have emerged as an enabling technology to meet the
+complex  requirements of today's  advanced  information  systems.  Many compound
+semiconductor  materials have unique physical properties that allow electrons to
+move at least four times faster than through silicon-based  devices.  Advantages
+of compound semiconductor devices over silicon devices include:
+
+     o    higher operating speeds;
+     o    lower power consumption;
+     o    reduced noise and distortion; and
+     o    light emitting and detecting optoelectronic properties.
+
+     Compound  semiconductor devices can be used to perform individual functions
+as discrete devices,  such as VCSELs, RF materials,  solar cells, HB LEDs and MR
+sensors.  Compound  semiconductor  devices can also be combined into  integrated
+circuits,  such as transmitters,  receivers and alphanumeric displays.  Although
+compound  semiconductors  are more expensive to manufacture  than  silicon-based
+devices,   electronics   manufacturers  are  increasingly  integrating  compound
+semiconductor devices into their products in order to achieve higher performance
+in applications targeted for a wide variety of markets.  These include satellite
+communications,     data    communications,     telecommunications,     wireless
+communications,  consumer and automotive electronics, computers and peripherals,
+and lighting.
+
+     The  following  factors have  resulted in an increased  demand for compound
+semiconductor  products and systems that enable electronic systems manufacturers
+to reach the market faster with large volumes of  high-performance  products and
+applications:
+
+     o    widespread  deployment of fiber optic  networks and the increasing use
+          of optical systems within these networks;
+     o    launch of new wireless services and wireless high-speed data systems;
+     o    rapid build-out of satellite communications systems;
+     o    increasing use of infrared  emitters and optical detectors in computer
+          systems;
+     o    emergence of advanced consumer electronics applications,  such as DVDs
+          and  flat  panel  displays;
+     o    increasing use of high-performance  electronic devices in automobiles;
+          and
+     o    anticipated  conversion  to HB LEDs  from  incandescent,  halogen  and
+          compact fluorescent lighting.
+
+     The  following  chart  summarizes  the  principal   markets,   examples  of
+applications for compound  semiconductor  devices,  products incorporating these
+devices and certain benefits and characteristics of these devices.
+<PAGE>
+
+<TABLE>
+<CAPTION>
+Market                    Representative Applications        Products                 Benefits/Characteristics
+<S>                       <C>                                <C>                      <C>
+Data communications       High-speed fiber optic networks    VCSEL components         Increased network capacity
+                            and optical links (including       and arrays             Increased data transmission
+                            Gigabit Ethernet,                HB LEDs                    speeds
+                            asynchronous transfer mode       Lasers                   Increased bandwidth
+                            or ATM, and FibreChannel         RF materials
+                            networks)
+
+Wireless                  Cellular telephones                HB LEDs                  Improved display visibility
+Communication             Pagers                             RF materials             Improved signal to noise
+                          PCS handsets                                                  performance
+                          Direct broadcast systems                                    Lower power consumption
+                                                                                      Increased network capacity
+                                                                                      Reduced network congestion
+                                                                                      Extended battery life
+
+Telecommunications        High capacity fiber optic trunk    VCSEL components         Increased data transmission
+                            lines                              and arrays               speeds
+                                                             Lasers                   Increased bandwidth
+                                                             RF materials
+
+Satellite                 Power modules for satellites       Solar cells              Radiation tolerance
+Communications            Satellite to ground                RF materials             Conversion of more light
+                            communication                                               to power than silicon
+                                                                                      Reduced launch costs
+                                                                                      Increased bandwidth
+
+Lighting                  Flat panel displays                HB LEDs                  Lower power consumption
+                          Solid state lighting               Miniature lamps          Longer life
+                          Outdoor signage and display
+                          Digital readout signals
+
+Automotive electronics    Engine sensors                     MR sensors               Reduced weight
+                          Dashboard displays                 HB LEDs                  Lower power consumption
+                          Indicator lights                                            Lower emissions
+                          Antilock brake systems
+
+Computers and             Local area networks                VCSEL components         Increased data transmission speeds
+Peripherals               Chip-to-chip and board-to-board      and arrays             Increased bandwidth
+                            optical links                    Transceivers
+
+Consumer electronics      DVDs                               HB LEDs                  Improved display visibility
+                          CD-Roms                            VCSEL components         High-speed data transmission
+                          Telephones                           and arrays             Low power requirements
+                          Radios                             Integrated circuits
+                          Calculators                        Lasers
+</TABLE>
+
+Compound Semiconductor Process Technology
+
+     Compound  semiconductors  are composed of two or more  elements and usually
+consist of a metal such as gallium,  aluminum or indium and a non-metal  such as
+arsenic,  phosphorous  or nitrogen.  The  resulting  compounds  include  gallium
+arsenide,  indium  phosphide,  gallium  nitride,  indium  antimonide  and indium
+aluminum phosphide.  The performance  characteristics of compound semiconductors
+are  dependent  on the  composition  of  these  compounds.  Many  of the  unique
+properties  of compound  semiconductor  devices are  achieved by the layering of
+different  compound  semiconductor  materials in the same  device.  This layered
+structure  creates an optimal  configuration to permit the emission or detection
+of light and the detection of magnetic fields.
+
+     Accordingly,  the  composition and properties of each layer and the control
+of the layering  process,  or epitaxy,  are  fundamental  to the  performance of
+advanced  electronic and  optoelectronic  compound  semiconductor  devices.  The
+variation of thickness and  composition  of layers  determines the intensity and
+color of the light emitted or detected and the  efficiency of power  conversion.
+The ability to vary the intensity,  color and efficiency of light generation and
+detection enables compound  semiconductor devices to be used in a broad range of
+advanced information systems.
+
+     Compound   semiconductor  device   manufacturers   predominantly  use  four
+different  methods to deposit  compound  materials:  (i) molecular beam epitaxy;
+(ii) vapor phase  epitaxy;  (iii) liquid phase  epitaxy;  and (iv) metal organic
+chemical  vapor  deposition  ("MOCVD").   The  use  of  molecular  beam  epitaxy
+technology  can  yield  wafers  having  high  thickness   uniformity.   Compound
+semiconductor  materials  fabricated  using vapor phase  epitaxy or liquid phase
+epitaxy technologies often have high electronic and optical properties. However,
+due to the nature of the  underlying  processes,  none of these  methods  can be
+easily  scaled  up to  high  volume  production,  which  is  necessary  for  the
+commercial  viability  of  compound  semiconductor  devices.  All of these  four
+methods used to  manufacture  compound  semiconductor  devices  pose  technical,
+training  and  safety  challenges  that are not  present in the  manufacture  of
+silicon devices.  The production  systems typically  require expensive  reactant
+materials,  use of certain  toxic  chemicals  and tight  control  over  numerous
+manufacturing parameters.  The key differences between MOCVD and the three other
+methods are that compound  semiconductor wafers fabricated using MOCVD generally
+possess a better combination of uniformity and optical and electronic properties
+and are easier to produce in high volumes than wafers  manufactured by the three
+more  traditional  methods.   Currently,  MOCVD  technology  is  being  used  to
+manufacture a broad range of compound semiconductor devices.
+
+     Historically,  manufacturers  that use  compound  semiconductor  devices in
+their  products  have met research,  pilot  production  and capacity  needs with
+in-house systems and  technologies.  However,  as the need for the production of
+commercial volumes of high-performance  compound  semiconductor  devices and the
+variety of these devices increase,  manufacturers are often unable to meet these
+requirements using in-house solutions.  In response to these growing demands for
+higher volumes of a broad range of higher performance devices, manufacturers are
+increasingly  turning  to  outside  vendors  to meet  their  needs for  compound
+semiconductor wafers and devices.
+
+The EMCORE Solution
+
+     EMCORE  provides  a broad  range of  compound  semiconductor  products  and
+services intended to meet its customers' diverse technology requirements. EMCORE
+has developed  extensive  materials science  expertise,  process  technology and
+MOCVD  production  systems to address its customers' needs and believes that its
+proprietary  TurboDisc(R)  deposition  technology makes possible one of the most
+cost-effective  production  processes for the commercial  volume  manufacture of
+high-performance  compound  semiconductor  wafers  and  devices.  This  platform
+technology  provides the basis for the  production  of various types of compound
+semiconductor wafers and devices and enables EMCORE to address the critical need
+of manufacturers to cost-effectively  get to the market faster with high volumes
+of new and improved high-performance  products.  EMCORE's compound semiconductor
+products and services include:
+
+     o    materials and process development;
+     o    design and development of devices;
+     o    MOCVD production systems; and
+     o    manufacture of wafers and devices in high volumes.
+
+     Customers can take advantage of EMCORE's vertically  integrated approach by
+purchasing   custom-designed  wafers  and  devices  from  EMCORE,  or  they  can
+manufacture  their own  devices  in-house  using a TurboDisc  production  system
+configured to their specific needs.
+
+Strategy
+
+     EMCORE's  objective  is to  capitalize  on its  position  in MOCVD  process
+technology  and  production  systems to become the leading  supplier of compound
+semiconductor  wafers,  devices  and  production  systems.  The key  elements of
+EMCORE's strategy include:
+
+     Apply Core Technology  Across  Multiple  Applications.  EMCORE  continually
+leverages its  proprietary  core  technology to develop  compound  semiconductor
+products for multiple  applications  in a variety of markets.  These  activities
+include  developing new products for targeted  applications as well as expanding
+existing products into new applications. For example, EMCORE's array transceiver
+program  is  being  expanded  to meet  customer  demands  for a new  transponder
+product.  Other  existing  products,  which  EMCORE  intends to introduce in new
+applications, include VCSELs for communications products and HB LEDs for broader
+lighting applications;
+
+     Target High Growth  Market  Opportunities.  EMCORE's  strategy is to target
+high growth market  opportunities  where  performance  characteristics  and high
+volume  production  efficiencies can give compound  semiconductors a competitive
+advantage  over other devices.  Historically,  while  technologically  superior,
+compound  semiconductors  have not been widely  deployed  because  they are more
+expensive to manufacture than  silicon-based  semiconductors  and other existing
+solutions.  EMCORE believes that as compound semiconductor  production costs are
+reduced,  new customers will be compelled to use these products because of their
+higher performance characteristics.  For example, EMCORE has reduced the average
+cost of compound  semiconductor  solar cells to the point  where  customers  are
+replacing  silicon-based solar cells because of the compound semiconductor solar
+cells' higher  overall  efficiency,  better  end-of-life  performance  and lower
+weight;
+
+     Partner  with Key  Industry  Participants.  EMCORE  seeks to  identify  and
+develop long-term  relationships with leading companies in targeted  industries.
+EMCORE develops these  relationships in a number of ways that include long-term,
+high-volume  supply  agreements,   joint  ventures,  an  acquisition  and  other
+arrangements.  For example,  EMCORE  entered  into a joint  venture with General
+Electric  Lighting for the  development and marketing of white light and colored
+HB LED products for automotive,  traffic,  flat panel display and other lighting
+applications.  EMCORE  has also  signed a Joint  Development  Manufacturing  and
+Marketing Agreement with JDS Uniphase for the joint development, manufacture and
+marketing of a family of array  transceivers for cost effective,  high bandwidth
+optical networking  products.  EMCORE intends to actively seek similar strategic
+relationships  with other key  customers and industry  participants  in order to
+further expand its technological and production base; and
+
+     Continue Investment to Maintain Technology Leadership.  Through substantial
+investment in research and  development,  EMCORE seeks to expand its  leadership
+position in  compound  semiconductor  production  systems,  wafers and  devices.
+EMCORE works with its customers to identify  specific  performance  criteria and
+uses this  information to enhance the performance of its production  systems and
+to further  expand its process and materials  science  expertise,  including the
+development of new low-cost,  high-volume  wafers and devices for its customers.
+In addition,  EMCORE's  development efforts are focused on continually  lowering
+the production costs of its products.
+
+Products
+
+Production Systems
+
+     EMCORE is a leading  supplier of MOCVD  compound  semiconductor  production
+systems,  with more than 300 systems  shipped as of September  30, 2000.  EMCORE
+believes  that its TurboDisc  production  systems  offer  significant  ownership
+advantages over competing  systems and that the high throughput  capabilities of
+its TurboDisc  production  systems make  possible  superior  reproducibility  of
+thickness,  composition,  electronic  properties and layer accuracy required for
+electronic  and  optoelectronic  devices.  Each system can be customized for the
+customer's throughput,  wafer size and process chemistry requirements.  EMCORE's
+production  systems  also achieve a high degree of  reliability  with an average
+time available for production, based on customer data, of approximately 95%.
+
+     EMCORE believes its TurboDisc  production systems enable the lowest cost of
+ownership for the  manufacture of compound  semiconductor  materials.  The major
+components of the cost of ownership include yield, throughput,  direct costs and
+capital  costs.  Yield  primarily  relates to  material  uniformity,  which is a
+function of the precision of the physical and chemical processes by which atomic
+layers are  deposited.  Throughput,  the volume of wafers  produced  per unit of
+time,  includes both the time required for a process cycle and the handling time
+between process steps.  Direct costs include  consumables  used in manufacturing
+and  processing  and the clean room space  required for the  equipment.  Capital
+costs include the cost of acquisition and installation of the process equipment.
+
+     EMCORE's  proprietary  TurboDisc  technology  utilizes a unique  high speed
+rotating   disk  in  a  stainless   steel   growth   chamber   with   integrated
+vacuum-compatible  loading chambers. To produce a wafer, a bare substrate,  such
+as gallium arsenide,  sapphire or germanium, is placed on a wafer carrier in the
+TurboDisc  growth  chamber  and  subjected  to  high  temperatures.  Based  on a
+predetermined formula, metal organic gases are released into the growth chamber.
+These  gases  decompose  on  the  hot,  rapidly  spinning  wafer.  Semiconductor
+materials are then  deposited on the substrate in a highly uniform  manner.  The
+resulting  wafer  thus  carries  one  or  more  ultra-thin  layers  of  compound
+semiconductor  material  such as  gallium  arsenide,  gallium  nitride or indium
+aluminum  phosphide.  The TurboDisc  technology not only produces  uniformity of
+deposition   across  the  wafer,   but  also  offers   flexibility  for  diverse
+applications with improved material results and increased  production rates. The
+unique  precision  control  of  reactant  gas flow in the  TurboDisc  technology
+platform  allows users to scale easily from research to commercial  volumes with
+substantially reduced time and effort. Upon removal from the growth chamber, the
+wafer is transferred to a device  processing  facility for various steps such as
+photolithography, etching, masking, metallization and dicing. Upon completion of
+these steps,  the devices are then sent for packaging and  incorporation  in the
+customer's product.
+
+
+     EMCORE's  next  generation  of  TurboDisc  products  are being  designed to
+provide a number of innovations including:
+
+     o    new reactor design to improve efficiency;
+     o    cassette-to-cassette wafer handling to increase automation;
+     o    digital control system to reduce noise;
+     o    real-time process control and data acquisition on WindowsNT platform;
+     o    modular component design to ease outsourcing and upgrading; and
+     o    improved temperature control.
+
+Wafers and Devices
+
+     Since its inception, EMCORE has worked closely with its customers to design
+and  develop  process  technology  and  material  science  expertise  for use in
+production systems for its customers' end-use applications. EMCORE has leveraged
+its process and materials science knowledge base to manufacture a broad range of
+compound  semiconductor  wafers and devices such as VCSELs, RF materials,  solar
+cells, HB LEDs and MR sensors.
+
+     Within  most of these  product  lines,  EMCORE  has  established  strategic
+relationships  through  joint  ventures,  long-term  supply  agreements  and  an
+acquisition. A summary of these relationships is found below:
+<PAGE>
+
+<TABLE>
+<CAPTION>
+
+
+                      PRODUCTS AND STRATEGIC RELATIONSHIPS
+
+Product Line                  Company                Nature of Relationship                  Application
+<S>                           <C>                    <C>                                     <C>
+Vertical cavity               JDS Uniphase           Joint Development Manufacturing         Array transceivers
+surface-emitting lasers                              and Marketing Agreement                 Array transponders
+(VCSELs)
+                              Agilent                Long-term supply agreement              Gigarray(R)VCSEL arrays for
+                                                                                             use in parallel optical
+                                                                                             transceivers
+
+Radio frequency (RF)          Motorola               Long-term supply agreement               Digital wireless, fiber optic
+materials                     Anadigics                                                       and cellular applications
+
+Solar cells                   Space Systems/         Long-term supply agreement               Solar panels in
+                              Loral                                                           communications
+                                                                                              satellite powered
+                              Lockheed Martin        Strategic partner                        systems
+                              Missiles and Space
+
+High-brightness               General Electric       GELcore joint venture for the            Traffic lights
+light-emitting diodes         Lighting               development, marketing and               Miniature lamps
+ (HB LEDs)                                           distribution of white light              Automotive lighting
+                                                     and colored HB LED                       Flat panel displays
+                                                     products
+
+                              Uniroyal               Uniroyal Optoelectronics joint           Other lighting applications
+                              Technology             venture for the
+                              Corporation            manufacture
+                                                     of HB LED wafers and
+                                                     package-ready devices
+
+Magneto resistive (MR)        General Motors         Long-term supply agreement               Cam and crank shaft sensors
+sensors                       Corporation
+</TABLE>
+
+VCSELs
+
+     Vertical cavity surface-emitting lasers ("VCSELs") are semiconductor lasers
+that emit light in a cylindrical beam. VCSELs offer significant  advantages over
+traditional laser diodes used in fiber optic communications, including:
+
+     o    greater control over beam size and wavelength;
+     o    reduced manufacturing complexity and packaging costs;
+     o    lower power consumption; and
+     o    higher frequency performance.
+
+     Leading  electronic  systems  manufacturers  are integrating  VCSELs into a
+broad  array of  end-market  applications  including  Internet  access,  digital
+cross-connect  telecommunications  switches,  DVD, and fiber optic switching and
+routing, such as Gigabit Ethernet.
+
+     In December 1997, EMCORE acquired  MicroOptical  Devices,  Inc. ("MODE"), a
+development stage company primarily dedicated to the research and development of
+enabling VCSEL technologies. In February 1998, EMCORE announced Gigalase(R), its
+first  commercial  high speed VCSEL laser  operating  at 1.25 Gbps.  In December
+1998, EMCORE announced its second VCSEL product,  Gigarray(R), a VCSEL array. In
+March 2000,  EMCORE debuted the industry's first commercial 2.5 Gbps 850nm oxide
+VCSEL,  the Gigalase(R)  with  OxideGuide(TM),  and in August 2000 announced the
+availability  of its first 850 nm 1x4 and 1x12 Oxide  VCSEL  arrays and its high
+speed gallium arsenide (GaAs) photodetector  arrays. The 1x4 array is capable of
+up to 10 Gbps transmission  speeds,  while the 1x12 has a transmission  speed of
+30Gbps.  EMCORE's  photodetector  arrays  operate up to speeds of 3.125Gbps  and
+provide the efficiency required for high speed data transmission.
+
+     In January 2000,  EMCORE  entered into a three-year  supply  agreement with
+Agilent, a leading supplier of fiber optic transceivers and integrated  circuits
+for infrastructure products for the Internet. Under this agreement,  EMCORE will
+manufacture  Gigarray(R) VCSEL arrays for use in parallel optical  transceivers.
+The initial  purchase  order under the  agreement is  contingent  upon  EMCORE's
+development of a component  that meets  Agilent's  specifications.  EMCORE began
+shipping commercial product in December 2000.
+
+     In June 2000, EMCORE signed a Joint Development Manufacturing and Marketing
+Agreement with JDS Uniphase for the joint development, manufacture and marketing
+of a family of array  transceivers  for the Very Short Reach  OC-192 and related
+markets.  Recent  industry  forecasts  indicate that the market  opportunity for
+high-speed optical transceivers, including 2.5 gigabit per channel arrays and 10
+gigabit  serial  devices will exceed $3.4  billion by the year 2004.  EMCORE has
+completed  alpha testing and began  shipping  prototype  array  transceivers  in
+December 2000.
+
+RF Materials
+
+     Radio frequency ("RF") materials are compound semiconductor  materials that
+transmit and receive communications.  Compound semiconductor RF materials have a
+broader   bandwidth  and  superior   performance  at  higher   frequencies  than
+silicon-based  materials.  EMCORE currently produces 4-inch and 6-inch InGaP HBT
+and pHEMT materials that are used by its wireless customers for power amplifiers
+for GSM, TDMA, and CDMA multiband wireless handsets. InGaP HBT materials provide
+higher linearity,  higher power added efficiency as well as greater  reliability
+than first generation AlGaAs HBT technologies, and have become the technology of
+choice for next generation HBT-based power amplifiers for wireless handsets.  In
+addition,  recent  developments  and transfers to production of enhancement mode
+pHEMT technologies have demonstrated their continued competitiveness for handset
+applications.
+
+     EMCORE is also exploring  opportunities to market RF materials to its fiber
+optic  customers for use in high speed digital  components  for OC-48 and OC-192
+fiber optic  communication  and to its power  satellite  customers for satellite
+communication  applications.  EMCORE  believes  that its ability to produce high
+volumes of RF  materials  at a low cost will  facilitate  their  adoption in new
+applications and products.
+
+     In May 2000,  EMCORE  signed  an  agreement  with  Motorola  to meet  their
+requirements for epitaxial tools,  wireless electronic materials and technology.
+This relationship  includes supplying Motorola with epitaxial process technology
+and multiple MOCVD  production  tools, as well as purchase orders for electronic
+device epitaxial  wafers.  Motorola also announced that EMCORE was awarded their
+Standard  Supplier  Designation,  making EMCORE the only  qualified  supplier of
+MOCVD tools for Motorola's compound semiconductor factories.
+
+     In October 2000 EMCORE  received a $10.7  million  order from  Anadigics to
+supply  6-inch  GaAs HBT and pHEMT  wafers for their  fiber  optic and  wireless
+communications  devices.  Anadigics will be using  EMCORE's  materials for power
+amplifiers  for  GSM,  TDMA  and  CDMA  multi-band  wireless  handsets  and  for
+high-speed digital components for OC-192 data communication applications.
+
+Solar Cells
+
+     Compound  semiconductor  solar cells are used to power  satellites  because
+they are more resistant to radiation  levels in space and convert  substantially
+more light to power,  therefore weigh less per unit of power than  silicon-based
+solar cells. These  characteristics  increase  satellite life,  increase payload
+capacity  and  reduce  launch  costs.  In  fiscal  2000,  EMCORE  announced  the
+manufacture and shipment of the world's highest efficiency  dual-junction  solar
+cell for  satellite  applications.  EMCORE  also  announced  the  production  of
+high-efficiency triple junction solar cells with a minimum average efficiency of
+26%.  EMCORE began  shipping the triple  junction  solar cells in December 2000.
+EMCORE is currently involved in several solar cell projects:
+
+     o    EMCORE's  solar cells were  selected  for use on two Space  Technology
+          Research Vehicles (STRV 1c&1d). These microsatellites are scheduled to
+          be launched in November, 2001 by Arianspace. EMCORE's solar cells have
+          been  selected  for  two  European  communication  satellite  programs
+          scheduled for launch in 2002.  Additionally,  EMCORE's solar cells are
+          being  used for two  Japanese  scientific  programs  sponsored  by the
+          National Space Development Agency of Japan (NASDA);
+
+     o    EMCORE is also  working  with TRW,  Boeing and  Lockheed  to  identify
+          programs suitable for our high efficiency solar cells;
+
+     o    In April  2000,  EMCORE  signed a  Memorandum  of  Understanding  with
+          Angewandte  Solarenergie-ASE  GmbH to provide  solar cell material for
+          use in the  manufacture  of their solar cells.  Under this  agreement,
+          EMCORE will provide Epi processing and other services;
+
+     o    In November 1999, EMCORE entered into a Technical Assistance Agreement
+          with Loral and Mitsubishi Electric Corporation;
+
+     o    In November  1998,  EMCORE signed a long-term  supply  agreement  with
+          Space  Systems/Loral,  a wholly  owned  subsidiary  of  Loral  Space &
+          Communications.   Under  this  agreement,   EMCORE  supplies  compound
+          semiconductor high efficiency gallium arsenide solar cells for Loral's
+          satellites.  To date,  EMCORE has received  purchase orders from Space
+          Systems/Loral  that total $32.3 million and services this agreement at
+          our new facility in Albuquerque, New Mexico;
+
+     o    In November 1998,  EMCORE  received a $2.2 million  contract under the
+          U.S. Air Force's Broad Agency Announcement Program for the development
+          of high-efficiency advanced solar cells; and
+
+     o    In September  1998,  EMCORE  entered into an agreement  with  Lockheed
+          Martin  Missiles  and Space,  a  strategic  business  unit of Lockheed
+          Martin Corporation,  to provide technical  management and support of a
+          Cooperative Research and Development Agreement between Lockheed Martin
+          and   Sandia    National    Laboratory   for   the   advancement   and
+          commercialization  of a new  compound  semiconductor  high  efficiency
+          solar cell. Pursuant to this strategic agreement,  (1) Lockheed Martin
+          will grant EMCORE a sub-license for all related intellectual  property
+          developed on behalf of or in conjunction  with Lockheed Martin and (2)
+          EMCORE and Lockheed  Martin will jointly qualify and validate the high
+          efficiency solar cells for operational satellite use.
+
+HB LEDs
+
+     High-brightness  light-emitting diodes ("HB LEDs") are solid state compound
+semiconductor  devices  that  emit  light.  The  global  demand  for HB  LEDs is
+experiencing  rapid  growth  because HB LEDs have a long  useful  life,  consume
+approximately  10% of the power consumed by incandescent or halogen lighting and
+improve display  visibility.  In February 1998,  EMCORE and Uniroyal  Technology
+Corporation  formed  Uniroyal  Optoelectronics,  a joint venture to manufacture,
+sell and distribute HB LED wafers and package-ready devices.
+
+     In May 1999, EMCORE and General Electric  Lighting formed GELcore,  a joint
+venture  to  develop  and  market HB LED  lighting  products.  General  Electric
+Lighting and EMCORE have agreed that this joint  venture  will be the  exclusive
+vehicle for each party's participation in solid state lighting. GELcore combines
+EMCORE's   materials  science   expertise,   process   technology  and  compound
+semiconductor  production  systems with General  Electric  Lighting's brand name
+recognition and extensive  marketing and  distribution  capabilities.  GELcore's
+long-term  goal is to develop  products  to  replace  traditional  lighting.  In
+September 2000, GELcore acquired Ecolux, Inc. adding  LED-signaling  products to
+its growing line of LED products.
+
+MR Sensors
+
+     Magneto  resistive ("MR") sensors are compound  semiconductor  devices that
+possess sensing  capabilities.  MR sensors improve vehicle  performance  through
+more  accurate  control  of engine  and crank  shaft  timing,  which  allows for
+improved spark plug efficiency and reduced  emissions.  In January 1997,  EMCORE
+initiated  shipments  of  compound  semiconductor  MR sensors  using  technology
+licensed  to  EMCORE  from  General  Motors.   This  license  allows  EMCORE  to
+manufacture and sell products to anyone using this  technology.  As of September
+30,  2000,  EMCORE has  delivered  over 10.7 million  devices to General  Motors
+Powertrain  for  crank and cam speed and  position  sensing  applications  for 5
+different engine builds under 20 different vehicle platforms.
+
+Customers
+
+     EMCORE's  rapidly  expanding  customer  base  includes  many of the largest
+semiconductor,  telecommunications,  consumer  goods and computer  manufacturing
+companies in the world.  A number of EMCORE's  customers  are listed  below.  In
+addition,  EMCORE  has sold its  products  to more  than a dozen of the  largest
+electronics manufacturers in Japan.
+
+<TABLE>
+<S>                            <C>                                      <C>
+Agilent Technologies           IBM                                      Philips AG
+AMP Incorporated               JDS Uniphase                             Rockwell International
+Anadigics                      L.M. Ericsson AB                         Siemens AG - Osram
+Boeing-Spectrolab              Loral Space and Communications           Texas Instruments
+Corning                        Lucent Technologies                      Thomson CSF
+General Motors                 Motorola                                 TriQuint Semiconductor
+Hewlett Packard                Nortel Networks
+Honeywell                      Northrop Grumman
+</TABLE>
+
+     EMCORE has a comprehensive  total quality  management  program with special
+emphasis  on total  customer  satisfaction.  EMCORE  seeks to  encourage  active
+customer involvement with the design and operation of its production systems. To
+accomplish  this,  EMCORE  conducts user group  meetings  among its customers in
+Asia, Europe and North America.  At annual meetings,  EMCORE's customers provide
+valuable  feedback on key operations,  process oriented  services,  problems and
+recommendations  to help improve EMCORE products.  This direct customer feedback
+has enabled  EMCORE to  constantly  update and improve the design of its systems
+and processes.  Changes that affect the reliability and capabilities of EMCORE's
+systems are  embodied in new designs to enable  current and future  customers to
+utilize systems which EMCORE believes are high quality and cost-efficient.
+
+Marketing and Sales
+
+     EMCORE markets and sells its wafers, devices and systems through its direct
+sales force in North America,  Europe,  Taiwan and through  representatives  and
+distributors  elsewhere  in Asia.  To market and service its  products in China,
+Japan and  Singapore,  EMCORE  relies on a single  marketing,  distribution  and
+service  provider,  Hakuto Co., Ltd.  EMCORE's  agreements with Hakuto expire in
+March 2008. Hakuto has exclusive distribution rights for certain EMCORE products
+in Japan.  Hakuto has marketed and serviced  EMCORE's  products since 1988, is a
+minority  shareholder  in  EMCORE  and the  President  of  Hakuto is a member of
+EMCORE's  Board of  Directors.  In August 1999,  EMCORE  entered into a two-year
+distribution  agreement with DI Systems to market and service EMCORE's  products
+in South Korea.  EMCORE has sales offices in California and Taiwan, ROC in order
+to efficiently service EMCORE's rapidly expanding customer base in these areas.
+
+     EMCORE's sales and marketing,  senior  management and technical  staff work
+closely with existing and potential customers to provide compound  semiconductor
+products that meet their  customers'  needs.  EMCORE seeks to match a customer's
+requirements to an existing design or a modification of a standard design,  such
+as a change in platform or process design. When necessary, EMCORE will work with
+the customer to develop the  appropriate  design  process and to  configure  and
+manufacture the production  system to meet the customer's  needs.  Also,  EMCORE
+will   produce   samples   to   demonstrate   conformance   to  the   customer's
+specifications.  For  production  systems,  the period of time from the  initial
+contact with the customer to the  customer's  placement of an order is typically
+two to nine  months or longer.  EMCORE's  sales  cycle for  wafers  and  devices
+usually runs three to nine months, during which time EMCORE develops the formula
+of elements  necessary to meet the customer's  specifications  and qualifies the
+materials  which may also require the delivery of samples.  EMCORE believes that
+the marketing,  management and engineering  support  involved in this process is
+beneficial in developing competitive differentiation and long-term relationships
+with its customers.
+
+Service and Support
+
+     EMCORE  maintains a worldwide  service and support network  responsible for
+on-site   maintenance  and  process   monitoring  on  either  a  contractual  or
+time-and-materials  basis. Customers may purchase annual service contracts under
+which EMCORE is required to maintain an inventory  of  replacement  parts and to
+service the equipment upon the customer's request. EMCORE also sells replacement
+parts from inventory to meet customer needs.  EMCORE pursues a program of system
+upgrades for  customers to increase the  performance  of older  systems.  EMCORE
+generally does not offer  extended  payment terms to its customers and generally
+adheres to a warranty  policy of one year.  Consistent  with industry  practice,
+EMCORE  maintains an inventory of components for servicing  systems in the field
+and it  believes  that  its  inventory  is  sufficient  to  satisfy  foreseeable
+short-term  customer  requirements.  EMCORE has a  warehouse  depot in Taiwan to
+provide improved service to its Asian customers.
+
+Research and Development
+
+     To maintain and improve its  competitive  position,  EMCORE's  research and
+development  efforts are focused on  designing  new  proprietary  processes  and
+products,  improving the performance of existing systems, wafers and devices and
+reducing  costs in the product  manufacturing  process.  EMCORE has dedicated 29
+TurboDisc  systems  for  both  research  and  production  that  are  capable  of
+processing  virtually  all compound  semiconductor  materials.  The research and
+development  staff  utilizes  x-ray,  optical  and  electrical  characterization
+equipment which provide instant data allowing for shortened  development  cycles
+and rapid  customer  response.  EMCORE  expects that it will  continue to expend
+substantial resources on research and development.
+
+     EMCORE also  competes for research and  development  funds.  In view of the
+high cost of  development,  EMCORE  solicits  research  contracts  that  provide
+opportunities   to   enhance   its  core   technology   base  or   promote   the
+commercialization  of targeted  products.  EMCORE is also  positioned  to market
+technology and process  development  expertise directly to customers who require
+it for their own product development efforts.
+
+Intellectual Property and Licensing
+
+     EMCORE's success and competitive  position for production  systems,  wafers
+and devices  depend  significantly  on its ability to maintain trade secrets and
+other intellectual property  protections.  Our strategy is to rely on both trade
+secrets  and  patents.  A "trade  secret" is  information  that has value to the
+extent it is not generally  known,  not readily  ascertainable by others through
+legitimate means and protected in a way that maintains its secrecy.  Reliance on
+trade secrets is only an effective  business  practice  insofar as trade secrets
+remain  undisclosed  and  a  proprietary  product  or  process  is  not  reverse
+engineered or  independently  developed.  In order to protect its trade secrets,
+EMCORE  takes  certain  measures  to ensure  their  secrecy,  such as  executing
+non-disclosure agreements with its employees, joint venture partners,  customers
+and  suppliers.  EMCORE also has an  aggressive  program to actively  patent all
+areas of its technology.
+
+     To date,  EMCORE has been issued  twelve  (12) U.S.  patents and others are
+either  pending  (20 patent  applications  filed) or under  in-house  review (40
+disclosures  and draft  patent  applications).  These U.S.  patents  will expire
+between 2005 and 2013. None of these U.S.  patents claim any material aspects of
+current or planned commercial  versions of EMCORE's systems,  wafers or devices.
+EMCORE only relies on trade secrets to protect its intellectual property when it
+believes  publishing patents would make it easier for others to reverse engineer
+EMCORE's proprietary processes.
+
+     EMCORE is a licensee of certain  VCSEL  technology  and  associated  patent
+rights owned by Sandia Corporation. The Sandia license grants EMCORE:
+
+     o    non-exclusive  rights  to  develop,   manufacture  and  sell  products
+          containing  Sandia  VCSEL  technologies  under five U.S.  patents that
+          expire between 2007 and 2015; and
+     o    non-exclusive  rights to employ a  proprietary  oxidation  fabrication
+          method in the  manufacture of VCSEL products under a sixth U.S. patent
+          that expires in 2014.  EMCORE's success and competitive  position as a
+          producer of VCSEL products  depends on the  continuation of its rights
+          under the Sandia  license,  the scope and duration of those rights and
+          the  ability of Sandia to protect  its  proprietary  interests  in the
+          underlying technology and patents.
+
+     In 1992, EMCORE received a royalty bearing,  non-exclusive  license under a
+patent held by Rockwell International  Corporation which relates to an aspect of
+the manufacturing process used by its TurboDisc systems. In October 1996, EMCORE
+initiated  discussions  with Rockwell to receive  additional  licenses to permit
+EMCORE to use this  technology to  manufacture  and sell compound  semiconductor
+wafers and  devices.  In November  1996,  EMCORE  suspended  these  negotiations
+because of litigation  surrounding the validity of the Rockwell  patent.  EMCORE
+also ceased making  royalty  payments to Rockwell  under the license  during the
+pendency of the litigation. In January 1999, the case was settled and a judgment
+was  entered in favor of  Rockwell.  As a result,  EMCORE may be required to pay
+royalties to Rockwell for certain of its past sales of wafers and devices to its
+customers  who did not hold  licenses  directly from  Rockwell.  Management  has
+reviewed and assessed its likely  royalty  obligations  and believes that it has
+the appropriate  amounts reserved at both September 30, 1999 and 2000. If EMCORE
+is required to pay Rockwell  amounts in excess of its  reserves,  its  business,
+financial  condition and results of operations could be materially and adversely
+affected.
+
+Environmental Regulations
+
+     EMCORE  is  subject  to  federal,  state  and  local  laws and  regulations
+concerning the use, storage, handling, generation, treatment, emission, release,
+discharge and disposal of certain materials used in its research and development
+and  production   operations,   as  well  as  laws  and  regulations  concerning
+environmental  remediation  and employee  health and safety.  The  production of
+wafers  and  devices  involves  the  use of  certain  hazardous  raw  materials,
+including,  but not  limited to,  ammonia,  phosphine  and  arsene.  If EMCORE's
+control  systems  are  unsuccessful  in  preventing  release  of  these or other
+hazardous  materials,  EMCORE could  experience a  substantial  interruption  of
+operations.  EMCORE has  retained an  environmental  consultant  to advise it in
+complying  with  applicable   environmental  and  health  and  safety  laws  and
+regulations,  and believes  that it is  currently,  and in the past has been, in
+compliance with all such laws and regulations.
+
+Backlog
+
+     As of September 30, 2000,  EMCORE had an order  backlog of $125.0  million,
+scheduled to be shipped through September 30, 2001. This represented an increase
+of $81.9  million or 190% since  September  30, 1999.  This  increase  primarily
+relates to increased  production  systems bookings,  orders for solar cells from
+Loral and  epitaxial  wafers  from  Motorola.  EMCORE  only  includes in backlog
+customer  purchase  orders  that have  been  accepted  by  EMCORE  and for which
+shipment  dates have been  assigned  within the 12 months to follow and research
+contracts that are in process or awarded.  Wafer and device agreements extending
+longer than one year in duration are included in backlog only for the ensuing 12
+months.  EMCORE  receives  partial  advance  payments or irrevocable  letters of
+credit on most production system orders. EMCORE recognizes revenue from the sale
+of its systems and materials upon shipment. For research contracts with the U.S.
+government and commercial  enterprises  with durations  greater than six months,
+EMCORE  recognizes  revenue  to the extent of costs  incurred  plus a portion of
+estimated  gross  profit,  as stipulated  in such  contracts,  based on contract
+performance.
+
+Manufacturing
+
+     EMCORE's  manufacturing  operations are located at EMCORE's headquarters in
+Somerset,  New  Jersey  and in  Albuquerque,  New  Mexico  and  include  systems
+engineering  and  production,  wafer  fabrication  and design and  production of
+devices.  Many of EMCORE's  manufacturing  operations are computer  monitored or
+controlled to enhance reliability and yield. EMCORE manufactures its own systems
+and outsources some components and sub-assemblies, but performs all final system
+integration,  assembly and testing.  EMCORE fabricates wafers and devices at its
+facilities  in  Somerset,  New  Jersey  and  Albuquerque,  New  Mexico and has a
+combined  clean room area totaling  approximately  41,000 square feet.  EMCORE's
+joint venture with Uniroyal  Technology  Corporation  manufactures HB LED wafers
+and package-ready devices at its Tampa, Florida  manufacturing  facility. In May
+1998,  EMCORE  received  ISO 9001  and QS 9002  quality  certifications  for its
+Somerset,  New Jersey  facility.  In November  1999,  EMCORE  received  ISO 9001
+quality   certification   for  its  newly   completed  solar  cell  facility  in
+Albuquerque,  New Mexico.  In September  2000,  EMCORE received ISO 9001 quality
+certification for its new Array Transceiver Division in Albuquerque, New Mexico.
+In December 2000,  EMCORE received ISO 9001 quality  certification for its VCSEL
+facility in Albuquerque, New Mexico.
+
+     Outside  contractors  and  suppliers  are used to supply raw  materials and
+standard  components  and to  assemble  portions  of  end  systems  from  EMCORE
+specifications.  EMCORE  depends on sole, or a limited  number of,  suppliers of
+components and raw materials. EMCORE generally purchases these single or limited
+source products through standard purchase orders.  EMCORE also seeks to maintain
+ongoing  communications  with its  suppliers to guard against  interruptions  in
+supply and has, to date,  generally been able to obtain sufficient supplies in a
+timely manner.  EMCORE maintains  inventories it believes are sufficient to meet
+its near term  needs.  EMCORE  implemented  a vendor  program  through  which it
+inspects  quality  and  reviews  suppliers  and  prices in order to  standardize
+purchasing  efficiencies  and design  requirements  to maintain as low a cost of
+sales as possible.  However, operating results could be materially and adversely
+affected  by a  stoppage  or delay of  supply,  receipt  of  defective  parts or
+contaminated  materials,  and  increase in the pricing of such parts or EMCORE's
+inability  to  obtain  reduced   pricing  from  its  suppliers  in  response  to
+competitive pressures.
+
+Competition
+
+     The  markets  in which  EMCORE  competes  are  highly  competitive.  EMCORE
+competes with several  companies for sales of MOCVD  systems  including  Aixtron
+GmbH and  Nippon-Sanso  K.K.  Ltd. The primary  competitors  for EMCORE's  wafer
+foundry include Epitaxial  Products Inc.,  Hitachi-Cable,  Kopin Corporation and
+Quantum  Epitaxial  Designs,  Inc. EMCORE's  principal  competitors for sales of
+VCSEL-related  products  include  Honeywell,  Inc.  and Mitel  Corporation.  The
+principal competitors for MR sensors are Honeywell,  Inc.,  Matshushita Electric
+Industrial  Co.  Ltd.,  Siemens AG  Osterreich,  Electrotechnik  and Asahi Kasei
+Electronic  Co., Ltd.. The principal  competitors for HB LEDs and EMCORE's joint
+ventures with Uniroyal  Technology  Corporation  and General  Electric  Lighting
+include the Phillips  Electronics  and Hewlett  Packard  Company joint  venture,
+Siemens  AG's Osram GmbH  subsidiary,  Nichia  Chemical  Industries  and Toshiba
+Corporation.  EMCORE also faces  competition from  manufacturers  that implement
+in-house  systems  for their own use. In  addition,  EMCORE  competes  with many
+research  institutions and universities for research  contract  funding.  EMCORE
+also sells its products to current competitors and companies with the capability
+of  becoming  competitors.  As the  markets  for  EMCORE's  products  grow,  new
+competitors  are likely to emerge and present  competitors  may  increase  their
+market share.
+
+     EMCORE  believes  that the  primary  competitive  factors in the markets in
+which EMCORE's products compete are yield, throughput,  performance,  breadth of
+product  line,   customer   satisfaction,   customer   commitment  to  competing
+technologies  and, in the case of production  systems,  capital and direct costs
+and size of installed base.  Competitors  may develop  enhancements to or future
+generations  of competitive  products that offer superior price and  performance
+factors.  EMCORE  believes that in order to remain  competitive,  it must invest
+significant   financial   resources  in  developing  new  product  features  and
+enhancements and in maintaining customer satisfaction worldwide.
+
+Employees
+
+     At September 30, 2000, EMCORE had 625 employees, including 328 employees in
+manufacturing  operations,  185  employees in research and  development  and 112
+employees in sales and general  administration.  This  represents an increase of
+257  employees or 70% from  September 30, 1999.  None of EMCORE's  employees are
+covered by a collective bargaining agreement.  EMCORE considers its relationship
+with its employees to be good.
+
+Risk Factors
+
+Our Rapid Growth Places A Strain on Our Resources.
+
+     We are experiencing rapid growth,  having added a significant number of new
+employees  within  the  last  year.  We have  also  expanded  our  manufacturing
+facilities in Albuquerque,  New Mexico and in Somerset,  New Jersey. This growth
+has placed and will  continue to place a significant  strain on our  management,
+financial,  sales and other employees and on our internal  systems and controls.
+If we are unable to effectively  manage  multiple  facilities and multiple joint
+ventures in geographically distant locations, our business,  financial condition
+and results of operations will be materially and adversely affected. We are also
+in  the  process  of  installing  new  manufacturing  software  for  all  of our
+facilities and are evaluating  replacing our accounting and purchasing  systems.
+Most of the new manufacturing  software is customized to our particular business
+and  manufacturing  processes.  It will  take  time and  require  evaluation  to
+eliminate any of the  malfunctions in the software and to train personnel to use
+the new software.  In this  transition we may  experience  delays in production,
+cost overruns and disruptions in our operations.
+
+We Expect To Continue to Incur Operating Losses.
+
+     We  started  operations  in  1984  and  as of  September  30,  2000  had an
+accumulated  deficit of $108.9 million.  We incurred net losses of $36.4 million
+in fiscal 1998,  $22.7  million in fiscal 1999 and $25.5 million in fiscal 2000.
+We expect to continue to incur losses.  To support our growth, we have increased
+our expense levels and our investments in inventory and capital equipment.  As a
+result,  we will need to significantly  increase  revenues and profit margins to
+become and stay  profitable.  If our sales and profit margins do not increase to
+support the higher levels of operating expenses and if our new product offerings
+are not successful, our business,  financial condition and results of operations
+will be materially and adversely affected.
+
+Since The Technology In The Compound Semiconductor
+Industry Rapidly Changes, We Must Continually Improve
+Existing Products, Design And Sell New Products And
+Manage The Costs Of Research And DevelopmentIn Order
+To Effectively Compete.
+
+     We compete in markets characterized by rapid technological change, evolving
+industry  standards and  continuous  improvements  in products.  Due to constant
+changes in these markets,  our future success  depends on our ability to improve
+our  manufacturing  processes,  tools and products.  For example,  our TurboDisc
+production systems must remain competitive on the basis of cost of ownership and
+process  performance.  To  remain  competitive  we  must  continually  introduce
+manufacturing tools with higher capacity and better production yields.
+
+     We have recently  introduced a number of new  products,  and, in connection
+with recent  joint  ventures and internal  development,  we will be  introducing
+additional  new  products  in the  near  future.  The  commercialization  of new
+products  involves   substantial   expenditures  in  research  and  development,
+production and marketing. We may be unable to successfully design or manufacture
+these new products and may have difficulty penetrating new markets. In addition,
+many of our new products are being incorporated into our customers' new products
+for new applications, such as high-speed computer networks.
+
+     Because it is generally not possible to predict the amount of time required
+and  the  costs  involved  in  achieving  certain   research,   development  and
+engineering objectives, actual development costs may exceed budgeted amounts and
+estimated product development schedules may be extended. Our business, financial
+condition and results of operations may be materially and adversely affected if:
+
+     o    we are unable to improve our existing products on a timely basis;
+     o    our new products are not introduced on a timely basis;
+     o    we incur budget  overruns or delays in our  research  and  development
+          efforts; or
+     o    our new products experience reliability or quality problems.
+
+Fluctuations In Our Quarterly Operating Results May
+Negatively Impact Our Stock Price.
+
+     Our revenues and operating results may vary  significantly  from quarter to
+quarter  due to a number  of  factors  particular  to  EMCORE  and the  compound
+semiconductor  industry.  Not all of these  factors  are in our  control.  These
+factors include:
+
+     o    the  volume  and  timing  of  orders  for our  products,  particularly
+          TurboDisc systems, which have an average selling price in excess of $1
+          million;
+     o    the timing of our  announcements  and introduction of new products and
+          of similar announcements by our competitors;
+     o    downturns in the market for our customers' products;
+     o    regional economic  conditions,  particularly in Asia where we derive a
+          significant portion of our revenues; and
+     o    price volatility in the compound semiconductor industry.
+
+     These  factors may cause our  operating  results  for future  periods to be
+below the  expectations  of analysts and investors.  This may cause a decline in
+the price of our common stock.
+
+Our Joint Venture Partners, Who Have Control
+Of These Ventures, May Make Decisions That
+We Do Not Agree With And That Adversely
+Affect Our Net Income.
+
+     We do not have a majority  interest  in our joint  ventures  with  Uniroyal
+Technology  Corporation or General Electric  Lighting.  These joint ventures are
+governed by a board of managers  with  representatives  from both the  strategic
+partner and us. Many  fundamental  decisions must be approved by both parties to
+the joint  venture,  which means we will be unable to direct the  operation  and
+direction of these joint  ventures  without the  agreement of our joint  venture
+partners.  If we are unable to agree on  important  issues with a joint  venture
+partner, the business of that joint venture may be delayed or interrupted, which
+may, in turn, materially and adversely affect our business,  financial condition
+and results of operations.
+
+     We have  devoted and will be  required  to  continue to devote  significant
+funds and  technologies  to our joint  ventures  to develop  and  enhance  their
+products.  In  addition,  our  joint  ventures  will  require  that  some of our
+employees devote much of their time to joint venture projects. This will place a
+strain on our  management,  scientific,  financial and sales  employees.  If our
+joint ventures are unsuccessful in developing and marketing their products,  our
+business,  financial  condition and results of operations  may be materially and
+adversely affected.
+
+     General  Electric  Lighting  and EMCORE have agreed that our joint  venture
+will be the sole  vehicle  for each  party's  participation  in the solid  state
+lighting  market.  General  Electric  Lighting  and EMCORE  have also  agreed to
+several  limitations  during the life of the venture and thereafter  relating to
+use that each of us can make of the joint venture's technology.  One consequence
+of  these  limitations  is that in  certain  circumstances,  such as a  material
+default by us, we would not be permitted to use the joint  venture's  technology
+to compete against General Electric Lighting in the solid state lighting market.
+
+Since A Large Percentage of Our Revenues Are
+from Foreign Sales, Certain Export Risks May\
+Disproportionately Affect Our Revenues.
+
+     Sales  to  customers  located  outside  the  United  States  accounted  for
+approximately  39.1% of our  revenues in fiscal  1998,  52.6% of our revenues in
+fiscal 1999 and 38.6% of our revenues in fiscal 2000. Sales to customers in Asia
+represent the majority of our international sales. We believe that international
+sales will  continue to account for a  significant  percentage  of our revenues.
+Because of this, the following  export risks may  disproportionately  affect our
+revenues:
+
+     o    political and economic  instability  may inhibit export of our systems
+          and devices and limit potential customers' access to U.S. dollars;
+     o    shipping and installation costs of our systems may increase;
+     o    we may  experience  difficulties  in the  timeliness  of collection of
+          foreign  accounts  receivable  and be forced to write off  receivables
+          from foreign customers;
+     o    a strong  dollar  may make our  systems  less  attractive  to  foreign
+          purchasers   who  may  decide  to   postpone   making   such   capital
+          expenditures;
+     o    tariffs and other  barriers may make our systems and devices less cost
+          competitive;
+     o    we may have  difficulty  in staffing and  managing  our  international
+          operations;
+     o    the laws of certain foreign  countries may not adequately  protect our
+          trade secrets and intellectual property; and
+     o    potentially  adverse tax  consequences  to our  customers may make our
+          systems and devices not cost-competitive.
+
+We Will Lose Sales If We Are Unable To Obtain
+Government Authorization To Export Our Products.
+
+     Exports of our  products  to  certain  destinations,  such as the  People's
+Republic of China,  Malaysia and Taiwan, may require pre-shipment  authorization
+from U.S. export control authorities, including the U.S. Departments of Commerce
+and State. Authorization may be conditioned on end-use restrictions.  On certain
+occasions,  we have been denied authorization,  particularly with respect to the
+People's  Republic  of  China.  Failure  to  receive  these  authorizations  may
+materially and adversely affect our revenues and in turn our business, financial
+condition  and results of operations  from  international  sales.  Additionally,
+export jurisdiction  relating to exports of satellites and associated components
+has not been  definitively  settled.  Such  exports may in the future  require a
+license from the  Department of State.  This may cause delays in shipping  solar
+cells abroad. Delays in receiving export licenses for solar cells may materially
+and adversely affect our revenues and in turn our business,  financial condition
+and results of operations.
+
+
+Our Products Are Difficult To Manufacture And
+Small Manufacturing Defects Can Adversely Affect
+Our Production Yields And Our Operating Results.
+
+     The  manufacture  of our TurboDisc  systems is a highly complex and precise
+process.  We increasingly  outsource the  fabrication of certain  components and
+sub-assemblies  of our  systems,  often to sole  source  suppliers  or a limited
+number  of  suppliers.  We  have  experienced  occasional  delays  in  obtaining
+components and subassemblies  because the manufacturing  process for these items
+is very complex and requires long lead times. The revenues derived from sales of
+our TurboDisc systems will be materially and adversely affected if we are unable
+to obtain a high  quality,  reliable and timely supply of these  components  and
+subassemblies.  In addition,  any reduction in the precision of these components
+will result in sub-standard end products and will cause delays and interruptions
+in our production cycle.
+
+     We  manufacture  all  of  our  wafers  and  devices  in  our  manufacturing
+facilities and our joint venture with Uniroyal  Technology  Corporation plans to
+manufacture  HB LED wafers and  package-ready  devices at its  facility.  Minute
+impurities,  difficulties in the production process,  defects in the layering of
+the devices' constituent compounds,  wafer breakage or other factors can cause a
+substantial  percentage of wafers and devices to be rejected or numerous devices
+on each  wafer to be  non-functional.  These  factors  can  result in lower than
+expected  production  yields,  which  would  delay  product  shipments  and  may
+materially and adversely affect our operating  results.  Because the majority of
+our costs of manufacture are relatively  fixed, the number of shippable  devices
+per  wafer  for  a  given  product  is  critical  to  our   financial   results.
+Additionally,  because we  manufacture  all of our products at our facilities in
+Somerset,  New Jersey and  Albuquerque,  New Mexico,  and our joint venture with
+Uniroyal Technology Corporation will manufacture HB LED wafers and package-ready
+devices  at  its  sole  facility  in  Tampa,   Florida,   any   interruption  in
+manufacturing  resulting  from fire,  natural  disaster,  equipment  failures or
+otherwise  would  materially  and  adversely  affect  our  business,   financial
+condition and results of operations.
+
+We Face Lengthy Sales and Qualifications Cycles
+for Our Products and, In Many Cases, Must Invest
+A Substantial Amount of Time and Funds Before
+We Receive Orders.
+
+     Sales of our  TurboDisc  systems  primarily  depend upon the  decision of a
+prospective  customer to increase its  manufacturing  capacity,  which typically
+involves a significant  capital  commitment by the customer.  Customers  usually
+place  orders with us on average two to nine  months  after our initial  contact
+with them.  We often  experience  delays in obtaining  system sales orders while
+customers  evaluate  and receive  internal  approvals  for the purchase of these
+systems. These delays may include the time necessary to plan, design or complete
+a new or expanded  compound  semiconductor  fabrication  facility.  Due to these
+factors, we expend substantial funds and sales, marketing and management efforts
+to sell our compound  semiconductor  production systems.  These expenditures and
+efforts may not result in sales.
+
+     In order to expand our materials production capabilities, we have dedicated
+a number of our  TurboDisc  systems to the  manufacture  of wafers and  devices.
+Several of our products  are  currently  being tested to determine  whether they
+meet customer or industry  specifications.  During this qualification period, we
+invest significant resources and dedicate substantial production capacity to the
+manufacture  of these new products,  prior to any  commitment to purchase by the
+prospective  customer  and  without  generating  significant  revenues  from the
+qualification  process. If we are unable to meet these  specifications or do not
+receive sufficient orders to profitably use the dedicated  production  capacity,
+our business,  financial condition and results of operations would be materially
+and adversely affected.
+
+Industry Demand For Skilled Employees, Particularly
+Scientific And Technical Personnel With Compound
+Semiconductor Experience, Exceeds The Number Of
+Skilled Personnel Available.
+
+     Our future success  depends,  in part, on our ability to attract and retain
+certain  key  personnel,   including  scientific,   operational  and  management
+personnel.  We anticipate that we will need to hire additional skilled personnel
+to continue to expand all areas of our business.  The competition for attracting
+and retaining these employees,  especially  scientists,  is intense.  Because of
+this intense competition for these skilled employees, we may be unable to retain
+our existing personnel or attract additional  qualified employees in the future.
+If we are  unable  to  retain  our  skilled  employees  and  attract  additional
+qualified  employees  to keep up with our  expansion,  our  business,  financial
+condition and results of operations will be materially and adversely affected.
+
+Protecting Our Trade Secrets And Obtaining Patent
+Protection Is Critical To Our Ability To Effectively
+Compete For Business.
+
+     Our success and competitive position depend on protecting our trade secrets
+and other intellectual  property.  Our strategy is to rely both on trade secrets
+and patents to protect our manufacturing  and sales processes and products,  but
+reliance on trade  secrets is only an  effective  business  practice  insofar as
+trade secrets  remain  undisclosed  and a proprietary  product or process is not
+reverse  engineered  or  independently  developed.  We take certain  measures to
+protect our trade secrets,  including executing  non-disclosure  agreements with
+our  employees,  joint venture  partners,  customers and  suppliers.  If parties
+breach these agreements or the measures we take are not properly implemented, we
+may not have an  adequate  remedy.  Disclosure  of our trade  secrets or reverse
+engineering of our proprietary  products,  processes or devices could materially
+and  adversely  affect  our  business,   financial   condition  and  results  of
+operations.
+
+     Although we currently  hold 12 U.S.  patents,  these patents do not protect
+any  material  aspects  of the  current or planned  commercial  versions  of our
+systems,  wafers or devices.  We are  actively  pursuing  patents on some of our
+recent  inventions,  but these patents may not be issued.  Even if these patents
+are issued,  they may be challenged,  invalidated or circumvented.  In addition,
+the laws of certain other countries may not protect our intellectual property to
+the same extent as U.S. laws.
+
+We May Require Licenses To Continue To Manufacture
+And Sell Certain Of Our Compound Semiconductor
+Wafers And Devices, The Expense Of Which May
+Adversely Affect Our Results Of Operations.
+
+     The compound semiconductor,  optoelectronics, and fiberoptic communications
+industries are characterized by frequent  litigation  regarding patent and other
+intellectual property rights. From time to time we have received and may receive
+in the future,  notice of claims of infringement  of other parties'  proprietary
+rights and licensing offers to commercialize third party patent rights. Although
+we are not currently  involved in any litigations  relating to our  intellectual
+property, we cannot assure that:
+
+     o    infringement  claims  (or claims for  indemnification  resulting  from
+          infringement claims) will not be asserted against us,
+
+     o    future assertions will not result in an injunction against the sale of
+          infringing products or otherwise significantly impair our business and
+          results of operations; or
+
+     o    we will not be required to obtain  licenses,  the expense of which may
+          adversely affect our results of operations and profitability.
+
+     In October 1999, we were  contacted by Rockwell  International  Corporation
+regarding whether EMCORE required  additional licenses from Rockwell to continue
+to  manufacture  and sell MOCVD wafers and devices to customers  who do not hold
+licenses from Rockwell International  Corporation.  Since that time we have been
+in discussions with Rockwell  regarding the necessity and cost of obtaining such
+a license.  Although the patent to which  Rockwell  referred  expired in January
+2000,  we may be required to pay  additional  royalties  for certain of our past
+sales of wafers and devices to customers.  If we are required to pay significant
+royalties in connection with these sales, our business,  financial condition and
+results of operations may be materially and adversely affected.
+
+Interruptions In Our Business And A Significant Loss
+Of Sales To Asia May Result If Our Primary Asian
+Distributor Fails To Effectivel  Market And Service
+Our Products.
+
+     We rely on a single marketing,  distribution and service  provider,  Hakuto
+Co.  Ltd.  to market  and  service  many of our  products  in  Japan,  China and
+Singapore.  Hakuto is one of our shareholders and Hakuto's president is a member
+of our Board of Directors. We have distributorship  agreements with Hakuto which
+expire in March 2008 and give Hakuto exclusive  distribution  rights for certain
+of our products in Japan. Hakuto's failure to effectively market and service our
+products  or  termination  of our  relationship  with  Hakuto  could  result  in
+significant  delays or  interruption  in our marketing  and service  programs in
+Asia.  This  could  materially  and  adversely  affect our  business,  financial
+condition and results of operations.
+
+Our  Management's  Stock  Ownership  Gives  Them
+The Power To Control Business Affairs And Prevent
+A Takeover That Could Be Beneficial To Unaffiliated
+Shareholders.
+
+     Certain members of our management, specifically Thomas J. Russell, Chairman
+of our Board,  Reuben F.  Richards,  President,  Chief  Executive  Officer and a
+director,  and Robert Louis-Dreyfus,  a director,  are former members of Jesup &
+Lamont Merchant  Partners,  L.L.C. They collectively  beneficially own more than
+20% of our  common  stock.  Accordingly,  such  persons  will  continue  to hold
+sufficient  voting power to control our business and affairs for the foreseeable
+future.  This  concentration  of ownership may also have the effect of delaying,
+deferring or  preventing a change in control of our company,  which could have a
+material adverse effect on our stock price.
+
+Unsuccessful Control Of The Hazardous Raw Materials
+Used In Our Manufacturing Process Could Result In
+Costly Remediation Fees, Penalties Or Damages Under
+Environmental And Safety Regulations.
+
+     The production of wafers and devices involves the use of certain  hazardous
+raw materials,  including, but not limited to, ammonia, phosphine and arsine. If
+our control systems are  unsuccessful in preventing a release of these materials
+into the environment or other adverse  environmental  conditions occur, we could
+experience interruptions in our operations and incur substantial remediation and
+other costs. Failure to comply with environmental and health and safety laws and
+regulations  may  materially  and  adversely  affect  our  business,   financial
+condition  and results of  operations.
+
+Our Business Or Our Stock Price Could Be Adversely
+Affected By Issuance Of Preferred Stock.
+
+     Our board of directors  is  authorized  to issue up to 5,882,352  shares of
+preferred  stock  with such  dividend  rates,  liquidation  preferences,  voting
+rights,  redemption  and  conversion  terms  and  privileges  as  our  board  of
+directors,  in its sole  discretion,  may  determine.  The issuance of shares of
+preferred  stock may  result in a decrease  in the value or market  price of our
+common stock,  or our board of directors  could use the preferred stock to delay
+or discourage  hostile bids for control of us in which  shareholders may receive
+premiums for their  common stock or to make the possible  sale of the company or
+the  removal  of our  management  more  difficult.  The  issuance  of  shares of
+preferred  stock  could  adversely  affect the  voting  and other  rights of the
+holders of common stock.
+
+Certain  Provisions Of New Jersey Law And Our Charter
+May Make A Takeover Of Our Company  Difficult Even If
+Such Takeover Could Be Beneficial To Some Of Our
+Shareholders.
+
+     New Jersey law and our certificate of  incorporation,  as amended,  contain
+certain  provisions  that could  delay or prevent a  takeover  attempt  that our
+shareholders  may  consider in their best  interests.  Our board of directors is
+divided into three classes.  Directors are elected to serve staggered three-year
+terms and are not subject to removal except for cause by the vote of the holders
+of at least 80% of our capital  stock.  In addition,  approval by the holders of
+80% of our voting stock is required  for certain  business  combinations  unless
+these transactions meet certain fair price criteria and procedural  requirements
+or are approved by two-thirds of our continuing directors.  We may in the future
+adopt other  measures  that may have the effect of delaying or  discouraging  an
+unsolicited takeover, even if the takeover were at a premium price or favored by
+a  majority  of  unaffiliated  shareholders.  Certain of these  measures  may be
+adopted without any further vote or action by our shareholders.
+
+The Price Of Our Common Stock Has Fluctuated
+Widely In The Last Year And May Fluctuate
+Widely In The Future.
+
+     Our  common  stock is  traded  on the  NASDAQ  National  Market,  which has
+experienced  and  may  continue  to  experience  significant  price  and  volume
+fluctuations  that could  adversely  affect the market price of our common stock
+without  regard to our  operating  performance.  In  addition,  we believe  that
+factors such as quarterly  fluctuations  in financial  results,  earnings  below
+analysts'  estimates,  and financial  performance and other  activities of other
+publicly traded companies in the semiconductor industry could cause the price of
+our common stock to fluctuate substantially. In addition, in recent periods, our
+common  stock,  the stock market in general,  and the market for shares of small
+capitalization  and semiconductor  industry-related  stocks in particular,  have
+experienced  extreme price  fluctuations  which have often been unrelated to the
+operating  performance of affected  companies.  Any similar  fluctuations in the
+future could adversely affect the market price of our common stock.
+
+     Our stock price has  fluctuated  widely in the last year and may  fluctuate
+widely in the future. Since September 30, 1999, our stock price has been as high
+as $86.50  per share and as low as $6.03 per share.  Volatility  in the price of
+our common stock may be caused by other  factors  outside of our control and may
+be unrelated or disproportionate to our operating results.
+
+Forward-Looking Statements
+
+     Statements  contained  in this  Annual  Report on Form  10-K  which are not
+historical facts are  forward-looking  statements  within the meaning of Section
+21E of the  Securities  Exchange  Act of 1934,  as  amended.  A  forward-looking
+statement may contain words such as "plans," "hopes,"  "believes,"  "estimates,"
+"will continue to be," "will be," "continue to," "expect to," "anticipate that,"
+"to be" or "can impact."
+
+     Management  cautions that  forward-looking  statements are subject to risks
+and uncertainties  that could cause our actual results to differ materially from
+those projected in such forward-looking statements.
+
+     Further, our future business, financial condition and results of operations
+could  differ  materially  from  those  anticipated  by  such  forward-  looking
+statements  and are subject to risks and  uncertainties  including the risks set
+forth above.  Moreover,  neither any other person nor we assumes  responsibility
+for the accuracy and  completeness  of the  forward-looking  statements.  We are
+under no duty to update any of the forward-looking  statements after the date of
+this Annual Report on Form 10-K to conform such  statements to actual results or
+to changes in our expectations.

@@ -1,0 +1,1461 @@
+ITEM 1            BUSINESS
+
+OVERVIEW
+
+Exar Corporation ("Exar" or the "Company") designs, develops and markets
+high-performance, high-bandwidth mixed-signal (analog and digital) silicon
+solutions for the worldwide communications infrastructure. The Company uses
+its high-speed, analog and mixed-signal design expertise, system-level
+knowledge and standard CMOS process technologies to offer integrated
+circuits, or ICs, for the communications markets that address asynchronous
+transmission standards, such as T/E carrier and ATM. The Company is
+leveraging this expertise to develop products based on optical transmission
+standards, such as SONET/SDH. Additionally, Exar provides solutions for the
+serial communications market as well as the video and imaging markets. Exar's
+major customers include Alcatel, Cisco, Hewlett-Packard, Lucent, Nokia and
+Tellabs.
+
+INDUSTRY BACKGROUND
+
+         Communications technology has evolved from simple analog voice
+signals transmitted over networks of copper telephone lines to complex analog
+and digital voice and data signals transmitted over hybrid networks of media,
+such as copper, coaxial and fiber optic cables. This evolution has been
+driven by large increases in the number of users and the complexity and
+variety of the data transmitted over networks, resulting from:
+
+          -   the substantial growth in the Internet and its transformation from
+              a text-based medium to a multimedia platform containing pictures,
+              video and sound;
+
+          -   the growth of wireless communications; and
+
+          -   the increased demand for remote network access and higher speed,
+              higher bandwidth communication between local area networks, or
+              LANs, and wide area networks, or WANs.
+
+         The majority of installed communications systems were designed to
+transmit only voice communications, and are therefore inadequate for the
+high-bandwidth transmission of both voice and data. As a result, new
+equipment is being deployed to augment existing transmission media and
+increase their bandwidth. Access to the public network is typically based on
+asynchronous technologies, such as T/E carrier over copper wire. The demand
+for greater bandwidth is driving a migration from lower-speed T1/E1 to
+higher-speed T3/E3 transmission rates. The T1/E1 standard permits the
+transmission of data at 1.5 Mbps/2.0 Mbps, and the T3/E3 standard permits the
+transmission of data at 45 Mbps/34 Mbps. The backbone of the public network
+is built on an optical fiber transmission medium that employs synchronous
+technologies such as SONET/SDH. Similar to the utilization of faster
+transmission rates over copper wire, SONET/SDH protocols such as OC-3 (155
+Mbps) and OC-12 (622 Mbps) are being upgraded to OC-48 (2.5 Gbps) and OC-192
+(10 Gbps) to increase the bandwidth over a single optical fiber.
+
+         To address the evolving requirements of communications networks,
+OEMs must develop and introduce increasingly sophisticated systems at a rapid
+rate. To achieve the performance and functionality required of these systems,
+communications OEMs utilize increasingly complex communications ICs, which
+now account for a significant portion of the value-added proprietary content
+of these systems. As a result of the rapid pace of new equipment
+introductions, the proliferation of transmission standards, and the
+difficulty of designing and producing these ICs, equipment suppliers are
+increasingly outsourcing the design and production of the ICs incorporated
+into their systems.
+
+                                      2
+
+<PAGE>
+
+         These trends have created a significant opportunity for IC suppliers
+that can design cost-effective solutions for high-speed communications. The
+worldwide T/E carrier IC market has experienced steady growth, and Dataquest
+estimates that it will reach $616 million by 2003. The ATM IC market is
+expected to grow at a compound annual growth rate of 28%, from $309 million
+in 1998 to nearly $1.1 billion in 2003, according to Dataquest. The SONET/SDH
+IC market reached $510 million in 1998, and Dataquest expects that it will
+grow at a compound annual growth rate of 22% to $922 million by 2002.
+
+         The key ICs contained in a typical communications system include
+physical interface, access control, channel processor, bus interface and
+switch fabric devices. The physical interface device consists of a
+transmitter and receiver that, when integrated, is called a transceiver.
+Transceivers interface with the physical transmission media, such as copper
+wire or optical fiber. Most of these high-speed, mixed-signal ICs convert
+parallel digital inputs into a single analog bit stream that is up to 32
+times faster than the original signal. Transceivers therefore serve as a
+bridge between analog transmission media and the digital devices that process
+data. Access control circuits are digital ICs that format, or frame, the data
+and perform error checking. The bus interface manages the transfer of data
+along numerous channels between elements, such as the channel processor and
+the switch fabric, which work together to shape, route and control the data.
+
+         Because physical interface and access control ICs interface with the
+transmission media and are critical to increasing bandwidth, these ICs must
+offer high-speed and robust performance. Therefore, communications equipment
+OEMs seek IC suppliers that possess extensive analog and digital expertise to
+provide high-speed, mixed-signal solutions to bridge the analog physical
+world and the digital computing environment. This must be coupled with
+system-level expertise so that a supplier can quickly bring to market
+high-performance, highly-reliable ICs with optimal feature sets.
+
+THE EXAR SOLUTION
+
+         Exar designs, develops and markets high-performance, high-bandwidth
+mixed-signal ICs for use in the worldwide communications infrastructure. The
+Company's analog and mixed-signal design expertise, combined with its systems
+understanding, enables the Company to provide physical interface and access
+control solutions for WAN communications equipment. Exar currently offers ICs
+based upon the T/E carrier and ATM transmission standards and is leveraging
+its expertise to develop products based upon the SONET/SDH transmission
+standards. In addition, the Company provides solutions for the serial
+communications market and the video and imaging markets. Exar believes its
+products offer its customers the following benefits:
+
+          -   increased bandwidth through the integration of multiple channels
+              on a single device;
+
+          -   reduced system noise/jitter to improve data integrity;
+
+          -   reduced overall system cost through the integration of multiple
+              functions on a single device; and
+
+          -   accelerated time to market by allowing them to focus on core
+              competencies and outsource standards-based solutions.
+
+Key elements of the Company's solution include:
+
+LEADING ANALOG AND MIXED-SIGNAL DESIGN EXPERTISE. Exar has over 28 years of
+experience in developing analog and mixed-signal ICs. As a result, the
+Company has developed a significant base of knowledge in these areas and a
+library of design elements. For example, the Company believes that it has
+particularly strong expertise in the design of high-speed, low-jitter phase
+lock loops, which are key elements in Exar's mixed-signal transceiver
+products. As a result, Exar can provide its customers with products that
+typically exceed standard specifications and allow them flexibility in
+designing other parts of their systems.
+
+BROAD PRODUCT OFFERINGS. Exar offers a variety of physical interface and
+access control products based upon the T1/E1, T3/E3 and ATM transmission
+standards. Exar is currently developing multiple channel products for each
+transmission standard enabling its customers to minimize board space and
+overall cost in multi-port applications. The Company is also developing
+products based upon SONET/SDH standards.
+
+                                      3
+
+<PAGE>
+
+COMPREHENSIVE SOLUTIONS TO ENHANCE SYSTEM INTEGRATION. The combination of
+Exar's design and system level expertise allows it to provide a solution that
+encompasses hardware, software and applications support. Using its solutions,
+Exar believes that OEMs can efficiently integrate the Company's devices into
+their systems, better leverage their development resources and reduce their
+time to market.
+
+COMPELLING PRICE/PERFORMANCE SOLUTIONS. The Company uses its systems
+expertise and its analog, digital and mixed-signal design techniques to
+architect high-performance products based on standard CMOS process
+technologies. Exar believes that these CMOS processes are proven, stable,
+predictable and able to meet the application speed and power/performance
+requirements at a lower price point than other semiconductor manufacturing
+processes.
+
+STRATEGY
+
+         Exar's objective is to be the leading provider of high-performance,
+high-bandwidth IC solutions for the worldwide communications infrastructure.
+To achieve this objective, Exar employs the following strategies:
+
+FOCUS ON HIGH-GROWTH COMMUNICATIONS MARKETS. Exar targets high-growth
+communications markets, including T/E carrier, ATM and SONET/SDH. The Company
+has built substantial expertise in the areas of analog and mixed-signal
+design, systems architecture and applications support. Exar believes that the
+integration of these capabilities enables the Company to develop solutions
+addressing the high-bandwidth requirements of communications systems OEMs.
+
+LEVERAGE ANALOG AND MIXED-SIGNAL DESIGN EXPERTISE TO PROVIDE INTEGRATED
+SYSTEM LEVEL SOLUTIONS. Utilizing Exar's strong analog and mixed-signal
+design expertise, the Company can integrate mixed-signal physical interface
+devices with digital access control devices. The Company is currently
+developing products that integrate transceivers with framers on a single IC
+and are exploring opportunities to integrate other functions. These
+configurations would enable OEMs to use less board space and reduce their
+overall system cost.
+
+EXPAND THE COMPANY'S REVENUE CONTENT PER SYSTEM. Exar's analog and mixed
+signal design expertise has enabled the Company to build what it believes to
+be a technological lead and a strong market position in T3/E3 transceivers.
+The Company is leveraging this lead and its established customer
+relationships to capture design wins for its access control products, thereby
+increasing the Company's overall revenue content per system.
+
+STRENGTHEN AND EXPAND STRATEGIC OEM RELATIONSHIPS. Exar's customer base
+includes Alcatel, Cisco, Lucent, Nokia and Tellabs. To promote the early
+adoption of its solutions, the Company actively seeks collaborative
+relationships with strategic OEMs during product development. The Company
+believes that OEMs recognize the value of its early involvement because
+designing their system products in parallel with the Company's development
+can accelerate their time to market. In addition, Exar believes that
+collaborative relationships help the Company to obtain early design wins and
+to reduce the risk of market acceptance of its new products.
+
+LEVERAGE BROAD PRODUCT PORTFOLIO TO ACCELERATE COMMUNICATIONS PRODUCT
+DEVELOPMENT. Exar believes it has developed a strong presence in the serial
+communications market as well as the video and imaging markets, where the
+Company has leading industry customers, proven technological capabilities and
+a strong product portfolio. The Company's design expertise has enabled it to
+offer a diverse portfolio of both industry standard and proprietary universal
+asynchronous receiver transmitters, or UARTs. The Company also has
+established important customer relationships in Taiwan for its
+high-performance, low-power video products and continues to work closely with
+key customers such as Hewlett-Packard for its imaging products. Exar's sales
+to these markets provide the Company with resources to invest in and
+accelerate its communications product development.
+
+USE STANDARD CMOS PROCESS TECHNOLOGIES TO PROVIDE COMPELLING
+PRICE/PERFORMANCE SOLUTIONS. Exar primarily designs its products to be
+manufactured using standard CMOS processes. The Company believes that these
+processes are proven, stable and predictable and benefit from the extensive
+semiconductor manufacturing infrastructure devoted to CMOS processes.
+Therefore, the Company believes that it can achieve a given level of
+performance at a lower cost than others employing alternative processes.
+
+                                      4
+
+<PAGE>
+
+LEVERAGE FABLESS SEMICONDUCTOR MODEL. Exar has longstanding relationships
+with world-class third-party assembly, test and wafer foundries to
+manufacture the Company's ICs. The Company's fabless approach allows it to
+avoid substantial capital spending, obtain competitive pricing, reduce time
+to market, reduce technology and product risks, and facilitate the migration
+of the Company's products to new process technologies, which reduce costs and
+optimize performance. By leveraging the fabless model, Exar can focus on its
+core competencies of IC design and development.
+
+PRODUCTS
+
+         Exar designs, develops and markets high-performance, high-bandwidth
+physical interface and access control solutions for the worldwide
+communications infrastructure. The Company's current IC products for the
+communications market are designed to respond to the growing demand for
+high-speed networking equipment based on transmission standards such as T/E
+carrier, ATM and SONET/SDH. The Company also designs, develops and markets IC
+products that address the needs of the serial communications market and the
+video and imaging markets. Exar uses its design methodologies to develop
+products ranging from application specific standard products, or ASSPs,
+designed for industry-wide applications, to semi-custom solutions for
+specific customer applications. These complementary products enable the
+Company to offer a range of solutions for its customers' applications.
+
+COMMUNICATIONS
+
+         Exar's products for T/E carrier, ATM and SONET/SDH applications
+include high-speed analog, digital and mixed-signal physical interface and
+access control ICs. The physical interface ICs consist of a transmitter and
+receiver that, when integrated, is called a transceiver chip. Transceivers
+interface with the physical transmission media. Most of these high-speed,
+mixed-signal ICs convert parallel digital inputs into a single analog bit
+stream that is up to 32 times faster than the original signal. Access control
+circuits are digital circuits that format, or frame, the data and perform
+error checking. The figure below illustrates where the Company products are
+employed within WAN equipment.
+
+                TYPES OF COMMUNICATIONS ICs USED IN WAN EQUIPMENT
+
+                                 [GRAPHIC]
+
+Exar's communications products include transmitters and receivers,
+transceivers, framers, ATM user network interfaces, or ATM UNIs, a jitter
+attenuator and an M13 multiplexer. These products are used in SONET/SDH
+multiplexers, private branch exchanges (PBX), central office switches and
+digital cross connects. The Company introduced in early 1999 and began volume
+production in October 1999 its second generation physical interface solution,
+an integrated single chip transceiver. Subsequently, the Company announced a
+dual channel and triple channel version of this transceiver that meets the
+same performance levels while requiring less board space and lower overall
+power in multi-port applications. The Company recently introduced its
+integrated, single IC jitter attenuator, a proprietary solution that allows
+OEMs to meet difficult jitter tolerance specifications while reducing overall
+system costs. Exar's access control products include framers, ATM UNIs and an
+M13 multiplexer. These newer products are achieving greater market acceptance
+as Exar's strong transceiver products have allowed it to compete for adjacent
+component opportunities. The Company also supplies a family
+
+                                      5
+
+<PAGE>
+
+of V.35 transceiver and multiprotocol products used for high-speed data
+transmission, primarily in networking equipment such as routers and bridges.
+
+         The following table describes some of the Company's key
+communications products:
+
+<TABLE>
+<CAPTION>
+
+------------------------------------------------------------------------------------------------------------------------------------
+                       PRODUCT DESCRIPTION                                                   APPLICATIONS
+------------------------------------------------------------------------------------------------------------------------------------
+<S>                                                                <C>
+T3/E3/STS-1 1-channel/2-channel transceiver and
+   T3/E3/STS-1 1-channel receiver and transmitter                  SONET/SDH multiplexers and digital cross connects
+------------------------------------------------------------------------------------------------------------------------------------
+T3/E3 jitter attenuator                                            Multiplexers, switches and digital cross connects
+------------------------------------------------------------------------------------------------------------------------------------
+T3/E3 M13 multiplexer                                              Multiplexers, frame relay and Internet access switches
+------------------------------------------------------------------------------------------------------------------------------------
+T3/E3 framer                                                       Multiplexers and digital cross connects
+------------------------------------------------------------------------------------------------------------------------------------
+T3/E3 ATM UNIs                                                     ATM switches/routers/hubs
+------------------------------------------------------------------------------------------------------------------------------------
+4-channel E1 transceiver and framer                                Routers, Internet access equipment, frame relay and ATM
+                                                                     switches/routers/hubs
+------------------------------------------------------------------------------------------------------------------------------------
+Multi-channel E1 transceivers                                      Multiplexers, frame relay and ATM switches/routers/hubs
+------------------------------------------------------------------------------------------------------------------------------------
+T1/E1 clock adaptors                                               Frame relay access devices and remote access servers
+------------------------------------------------------------------------------------------------------------------------------------
+Multiprotocol serial interface                                     Multiplexers, access equipment and routers
+------------------------------------------------------------------------------------------------------------------------------------
+V.35 serial interface                                              Multiplexers, access equipment and routers
+------------------------------------------------------------------------------------------------------------------------------------
+</TABLE>
+
+         The Company expects to introduce a number of new communications ICs
+in the current fiscal year to provide an expanded line of T/E carrier
+products as well as SONET/SDH products. The T/E carrier products are expected
+to include multi-channel transceivers, framers and ATM UNIs. SONET/SDH
+product introductions are expected to start at the OC-48 (2.5 Gbps) rate, and
+subsequently introduce OC-3 (155 Mbps) and OC-12 (622 Mbps) products.
+
+SERIAL COMMUNICATIONS
+
+         UARTs convert data streams from parallel to serial, enabling a
+serial data stream to communicate with a central processing unit, or CPU.
+Exar sells its UART products to the remote access, data collection,
+industrial automation and handheld/mobile markets. Many of these products
+include high performance features, such as automated flow control and large
+First-In First-Out, or FIFO, buffers. The Company has designed a highly
+integrated quad, or four channel, UART with FIFO circuitry, which the Company
+believes is the de facto industry standard for quad FIFO UARTs used in
+multi-channel networking applications.
+
+         The following table describes the Company's key serial
+communications products:
+
+<TABLE>
+<CAPTION>
+
+------------------------------------------------------------------------------------------------------------------------------------
+                       PRODUCT DESCRIPTION                                                   APPLICATIONS
+------------------------------------------------------------------------------------------------------------------------------------
+<S>                                                                <C>
+8-channel PCI UART with 64 byte FIFO                               PCI interface for network control management
+------------------------------------------------------------------------------------------------------------------------------------
+8-channel UART with 64 byte FIFO                                   Network management, remote access servers and point of
+                                                                   sale systems
+------------------------------------------------------------------------------------------------------------------------------------
+Single/Dual/Quad channel UART with 128 byte FIFO                   Process control systems
+------------------------------------------------------------------------------------------------------------------------------------
+Single/Quad channel UART with 64 byte FIFO                         Personal digital assistants and GPS
+------------------------------------------------------------------------------------------------------------------------------------
+Single/Dual/Quad channel UART with 16 byte FIFO                    Hub management, high-speed modems and PC I/O cards
+------------------------------------------------------------------------------------------------------------------------------------
+</TABLE>
+
+                                      6
+
+<PAGE>
+
+<TABLE>
+<CAPTION>
+<S>                                                                <C>
+Dual channel UART with 8 byte FIFO                                 Process control systems, switches and serial port equipment
+------------------------------------------------------------------------------------------------------------------------------------
+Dual channel UART with 16 byte FIFO                                Process control systems, switches and serial port equipment
+------------------------------------------------------------------------------------------------------------------------------------
+Dual channel UART                                                  Serial port equipment
+------------------------------------------------------------------------------------------------------------------------------------
+</TABLE>
+
+         During the current fiscal year, the Company expects to expand its
+family of PCI multi-channel UARTs to include quad channel as well as dual
+channel devices.
+
+VIDEO AND IMAGING
+
+         The video market is composed of several segments, including digital
+still cameras, or DSCs, PC video cameras, security cameras, camcorders and
+digital camcorders. Among these applications, one of the fastest growing
+segments is DSCs, which Dataquest forecasts will grow from 6.2 million units
+in 1999 to 13.0 million units in 2003. To create images that are more
+comparable to film cameras and include features such as steady-shot and
+digital zoom, DSCs and digital camcorders are requiring higher resolution and
+higher speed data acquisition subsystems, also known as analog front ends, or
+AFEs, and analog-to-digital converters, or ADCs.
+
+         Exar supplies high-performance ADCs and integrated AFEs for products
+such as DSCs, digital copiers, scanners and multifunctional peripherals, or
+MFPs, which incorporate scanning, faxing and copying functions in a single
+integrated system. The Company uses advanced design techniques and process
+technologies to integrate low-power converter architectures with surrounding
+analog functions, reducing total system cost.
+
+         The following table describes some of the Company's key video and
+imaging products:
+
+<TABLE>
+<CAPTION>
+
+----------------------------------------------------------------------------------------------------------------------------------
+                       PRODUCT DESCRIPTION                                                   APPLICATIONS
+----------------------------------------------------------------------------------------------------------------------------------
+<S>                                                                <C>
+10bit/18 or 27 Msps AFEs                                           DSCs, camcorders and video conferencing
+----------------------------------------------------------------------------------------------------------------------------------
+3-channel 12, 14 or 16bit/6 or 12 Msps AFEs                        Scanners, MFPs and digital color copiers
+----------------------------------------------------------------------------------------------------------------------------------
+10bit/20 or 40 Msps ADC                                            High-end DSCs and broadcast video
+----------------------------------------------------------------------------------------------------------------------------------
+8bit/6 Msps ADC                                                    Video boards, scanners and battery powered devices
+----------------------------------------------------------------------------------------------------------------------------------
+8, 10 or 12 bit serial input DAC (digital-to-analog converter)     Voltage control and power control for wireless equipment
+----------------------------------------------------------------------------------------------------------------------------------
+</TABLE>
+
+
+         During the current fiscal year, the Company plans to focus its
+product development efforts on video applications, specifically for DSCs and
+digital camcorders. These applications require higher resolution and speed.
+Key planned product introductions include 12bit/24 Msps and 10bit/45 Msps
+AFEs in single and dual channel configurations.
+
+SALES AND CUSTOMERS
+
+         Exar markets its products in the United States through 25
+independent sales representatives and four independent, non-exclusive
+distributors, as well as through the Company's own direct sales force. The
+Company currently has sales support offices in or near Atlanta, Boston,
+Chicago, Dallas, Los Angeles and Fremont. The Company is represented
+internationally by 26 sales representatives and distributors. In addition,
+the Company is represented in Europe by its wholly-owned subsidiaries, Exar
+Ltd. and Exar SARL, and in the Asia/Pacific Region by its wholly-owned
+subsidiaries, Exar Japan and Exar Taiwan.
+
+                                      7
+
+<PAGE>
+
+Some of the Company's larger customers include the following:
+
+<TABLE>
+<CAPTION>
+------------------------------------------------------------------------------------------------------------------
+             COMMUNICATIONS                       SERIAL COMMUNICATIONS                      VIDEO AND IMAGING
+------------------------------------------------------------------------------------------------------------------
+<S>                                        <C>                                  <C>
+-  Alcatel Alsthom S.A.                     - Cisco Systems, Inc.                - Eastman Kodak Company
+-  Cisco Systems, Inc.                      - Digi International, Inc.           - Hewlett-Packard Company
+-  Lucent Technologies, Inc.                - LM Ericsson Telephone Co.          - Hitachi, Ltd.
+-  Marconi Communications Plc.              - Pitney Bowes, Inc.                 - Logitech International S.A.
+-  Nokia Corporation                        - Symbol Technologies, Inc.          - Microtek International, Inc.
+-  Tellabs, Inc.                                                                 - NEC Corporation
+                                                                                 - Pretek Electronics Corp.
+------------------------------------------------------------------------------------------------------------------
+</TABLE>
+
+         Through the fiscal year ended March 31, 2000, no single customer
+accounted for more than 10% of the Company's sales.
+
+
+MANUFACTURING
+
+         Exar outsources all of its fabrication and assembly, as well as the
+majority of its testing operations. This fabless manufacturing model allows the
+Company to focus on its core competencies of product design and development.
+
+         The Company uses world-class independent wafer foundries, such as
+Chartered Semiconductor Manufacturing, or Chartered, and Taiwan Semiconductor
+Manufacturing Company, or TSMC. Chartered and TSMC manufacture all of the
+Company's CMOS products. Rohm Co. Ltd. manufactures all of the Company's
+Bipolar products and Chartered manufactures most of the Company's BiCMOS
+products. The Company does not have long term supply agreements with Chartered
+or TSMC. The Company's supply agreement with Rohm expires in 2006. The majority
+of the Company's current products are implemented in standard CMOS. The Company
+uses CMOS manufacturing processes to take advantage of that technology's lower
+power consumption, cost-effectiveness, foundry availability and ever-increasing
+speed. Currently, most of the Company's new product development is being
+implemented in CMOS.
+
+         Wafers are usually shipped to the Company's subcontractors in Asia for
+wafer test and assembly, where they are cut into individual die and packaged.
+Most of the Company's assembly work is performed by independent contractors in
+Hong Kong, Indonesia, the Philippines and Japan. Following assembly, final test
+and quality assurance is performed either at the Company's Fremont, California
+facility or at its subcontractors' facilities in Asia. The Company conducts
+electrical testing of both wafers and packaged ICs. The combination of various
+functions makes the test process for analog and mixed-signal devices
+particularly difficult. Test operations require the programming, maintenance
+and use of sophisticated computer-based test systems and complex automatic
+handling systems.
+
+         RESEARCH AND DEVELOPMENT
+
+         Exar believes that the continued introduction of new products in its
+target markets is essential to its growth. As of March 31, 2000, the Company's
+research and development staff consisted of 110 employees, 60 of whom hold
+advanced engineering degrees. The Company has successfully recruited 24
+engineers during the fiscal year ended March 31, 2000, while experiencing
+minimal attrition. Over the next year, EXAR will seek to significantly increase
+the Company's engineering headcount to add more design and application
+personnel. In the fiscal year ended March 31, 2000, the Company's
+communications research and development spending increased 59.4% over the
+previous fiscal year. To support its growth, Exar intends to continue spending
+approximately 20% of revenue on research and development activities.
+
+COMPETITION
+
+         The semiconductor industry is intensely competitive and is
+characterized by rapid technological change and a history of price reduction as
+production efficiencies are achieved in successive generations of products.
+Although the market for analog
+
+                                      8
+
+<PAGE>
+
+and mixed-signal integrated circuits is generally characterized by longer
+product life cycles and less dramatic price reductions than the market for
+digital integrated circuits, the Company faces substantial competition in
+each market in which the Company participates. Competition in the Company's
+markets is based principally on technical innovation, product features,
+timely introduction of new products, quality and reliability, performance,
+price, technical support and service. The Company believes that it competes
+favorably in all of these areas.
+
+         Because the IC markets are highly fragmented, the Company generally
+encounters different competitors in its various market areas. Competitors with
+respect to the Company's communications products include Conexant, PMC-Sierra
+and TranSwitch. In addition, the expansion of the Company's communications
+product portfolio may in the future bring it into competition with other
+established communications IC companies, such as Applied Micro Circuits Corp.
+and Vitesse. Competitors in the Company's other markets include Analog Devices,
+Philips and Texas Instruments.
+
+BACKLOG
+
+         Exar defines backlog to include OEM orders and distributor orders for
+which a delivery schedule has been specified for product shipment occurring
+primarily during the succeeding six months.
+
+At March 31, 2000, Exar's backlog was approximately $20.6 million, compared
+with $12.4 million at March 31, 1999. The increase in the Company's backlog was
+primarily due to the growth in orders for communication devices.
+
+Sales are made pursuant to purchase orders for current delivery of standard
+items or agreements covering purchases over a period of time, which are
+frequently subject to revision and cancellation. Lead times for the release of
+purchase orders depend upon the scheduling practices of the individual
+customer, and the rate of bookings varies from month to month. In addition,
+Exar's distributor agreements generally permit the return of up to 10% of the
+purchases annually for purposes of stock rotation and also provide for credits
+to distributors in the event Exar reduces the price of any product. Because of
+the possibility of changes in delivery schedules, quantity actually purchased,
+cancellations of orders, distributor returns or price reductions, Exar's
+backlog as of any particular date may not be representative of actual sales for
+any succeeding period. Customers can cancel a significant portion of their
+backlog at their discretion without substantial penalty.
+
+INTELLECTUAL PROPERTY RIGHTS
+
+         The Company has 71 patents issued and 17 patent applications pending
+in the U.S. The Company has 10 patents issued and 24 patent applications
+pending in various foreign countries. None of the Company's domestic and
+foreign patents that have been issued will expire in the near future unless the
+Company chooses not to pay renewal fees. To protect the Company's intellectual
+property, the Company also relies on a combination of mask work registrations,
+trademarks, copyrights, trade secrets, employee and third-party nondisclosure
+agreements and licensing arrangements. The Company has also entered into
+license agreements from time to time to gain access to externally developed
+products or technologies.
+
+         There can be no assurance that others will not independently develop
+substantially equivalent intellectual property or otherwise gain access to the
+Company's trade secrets or intellectual property, or disclose such intellectual
+property or trade secrets, or that the Company can meaningfully protect its
+intellectual property. Furthermore, there can be no assurance that the
+Company's pending patent applications or any future applications will be
+approved, or that any issued patents will provide the Company with competitive
+advantages, or will not be challenged by third parties, or that if challenged,
+will be found to be valid or enforceable, or that the patents of others will
+not have an adverse effect on the Company's ability to do business.
+Furthermore, there can be no assurance that others will not independently
+develop similar products, duplicate the Company's products, or design around
+any patents that may be issued to the Company.
+
+         The Company cannot be sure that its products or technologies do not
+infringe patents that may be granted in the future pursuant to pending patent
+applications or that the Company's products do not infringe any patents or
+proprietary rights of third parties. From time to time, the Company receives
+communications from third parties alleging patent infringement. In the event
+that any relevant claims of third-party patents are upheld as valid and
+enforceable, the Company could be prevented from selling the Company's
+products or could be required to obtain licenses from the owners of these
+patents or be required to redesign the Company's products to avoid
+infringement. The Company cannot assure you that licenses would be available
+to the Company on acceptable terms, or at all, or that the Company would be
+successful in any attempts to redesign its
+
+                                      9
+
+<PAGE>
+
+products or processes to avoid infringement. The Company's failure to obtain
+these licenses or to redesign the Company's products could harm its business.
+
+EMPLOYEES
+
+         As of March 31, 2000, the Company employed 276 full-time employees,
+with 46 in administration, 110 in engineering and product development, 45 in
+operations and 75 in marketing and sales. Of the 110 engineering and product
+development employees, 60 hold advanced degrees. The Company's ability to
+attract, motivate and retain qualified personnel is essential to its continued
+success. None of the Company's employees is represented by a collective
+bargaining agreement, nor has the Company ever experienced any work stoppage.
+The Company believes its employee relations are good.
+
+FACILITIES
+
+         Exar's executive offices, marketing and sales, research and
+development and engineering operations are located in Fremont, California in
+two buildings that the Company owns consisting of approximately 151,000 square
+feet. The Company also owns approximately 5.3 acres of undeveloped property
+adjacent to its headquarters, which is presently being held for future office
+expansion. The Company leases additional space for sales offices in Foxboro,
+Massachusetts; Atlanta, Georgia; Plano, Texas; Palatine, Illinois; Irvine,
+California; Kawasaki, Japan; Velizy, France; East Sussex, England; Remseck and
+Munich, Germany; and Taipei, Taiwan.
+
+                                      10
+
+<PAGE>
+
+                                   MANAGEMENT
+
+         The names of the Company's executive officers and directors, and their
+ages as of March 31, 2000, are as follows:
+
+<TABLE>
+<CAPTION>
+NAME                                       AGE                                     POSITION
+----                                       ---                                     --------
+<S>                                       <C>   <C>
+Donald L. Ciffone, Jr...................    44  Chief Executive Officer, President and Director
+Michael Class...........................    42  Vice President, Worldwide Sales
+Roubik Gregorian........................    50  Chief Technology Officer, Senior Vice President/General Manager,
+                                                Communications Division
+Ronald W. Guire.........................    51  Executive Vice President, Chief Financial Officer, Secretary and Director
+Susan J. Hardman........................    38  Vice President, Corporate Marketing
+Thomas W. Jones.........................    52  Vice President, Reliability and Quality Assurance
+Thomas R. Melendrez.....................    46  Corporate Vice President, General Counsel
+Stephen W. Michael......................    53  Vice President, Operations Division
+John Sramek.............................    49  Vice President and General Manager, Video and Imaging Division
+Raimon L. Conlisk.......................    77  Chairman of the Board of Directors
+Frank P. Carrubba.......................    62  Director
+James E. Dykes..........................    62  Director
+Richard Previte.........................    65  Director
+</TABLE>
+
+         DONALD L. CIFFONE, JR. joined Exar as Chief Executive Officer and
+President in October 1996 and was appointed director at that time. From August
+1996 to October 1996, Mr. Ciffone was Executive Vice President of Toshiba
+America, the U.S. semiconductor subsidiary of Toshiba Semiconductor. Prior to
+joining Toshiba, he served from 1991 to 1996 in a variety of senior management
+positions at VLSI Technology, Inc. From 1978 to 1991, Mr. Ciffone held a
+variety of marketing and operations positions at National Semiconductor, Inc.
+Mr. Ciffone holds an M.B.A. from the University of Santa Clara.
+
+         MICHAEL CLASS joined Exar as Director of Western Area Sales in 1996.
+In January 1998, he was promoted to the position of Vice President, North
+American/European Sales and was promoted to Vice President, Worldwide Sales in
+July, 1999. Mr. Class has over 20 years of experience in the semiconductor
+industry, most recently with IC Works, Inc. as Area Sales Manager for Western
+U.S. and Canada. Prior to joining IC Works, Mr. Class held various sales
+management positions with Intel Corporation and VLSI from 1979 to 1995. He
+holds a B.S. in Electrical Engineering from Lehigh University and an M.B.A.
+from LaSalle University.
+
+         ROUBIK GREGORIAN joined Exar in March 1995 as Vice President, Startech
+Division, when the Company acquired Startech Semiconductor, Inc., where he
+served as President. He was appointed Chief Technology Officer and Vice
+President of the Communications Division in June 1996, and to his current
+position as Chief Technology Officer, Senior Vice President/General Manager,
+Communications Division, in June 1998. Prior to joining Startech in 1994, Dr.
+Gregorian was Vice President of Research and Development and Chief Technology
+Officer for Sierra Semiconductor, Inc. Dr. Gregorian has been issued 16 patents
+and received his M.S.E.E. and Ph.D. in Electrical Engineering from the
+University of California at Los Angeles, as well as an M.S.E.E. from Tehran
+University.
+
+         RONALD W. GUIRE joined Exar in July 1984 and has been a director since
+June 1985. He has served as Chief Financial Officer since May 1985 and
+Executive Vice President since July 1995. Mr. Guire is also Chairman of the
+Board of Xetel Corporation, an electronics contract manufacturer. Mr. Guire was
+a partner in the certified public accounting firm of Graubart & Co. from 1979
+until he joined Exar in July 1984. Mr. Guire holds a B.S. in Accounting from
+California College of Commerce.
+
+         SUSAN J. HARDMAN joined Exar in February 1997 and became Vice
+President, Corporate Marketing in February 2000. Prior to this position, she
+served as Senior Director of Business Development as well as Director of
+Marketing for the Company's communication products. Ms. Hardman has over 16
+years experience in the semiconductor industry. From 1989 to 1997, Ms.
+Hardman was with VLSI in a variety of management positions, most recently as
+Director of Product Marketing for
+
+                                      11
+
+<PAGE>
+
+VLSI's networking products division. From 1983 to 1989, she was with Motorola
+holding a variety of engineering roles. Ms. Hardman holds a B.S. in Chemical
+Engineering from Purdue University and an M.B.A. from the University of
+Phoenix.
+
+         THOMAS W. JONES joined Exar as Director of Total Quality Management in
+October 1992 and became Director of Reliability and Quality Assurance in
+November 1992. He was promoted to his current position of Vice President,
+Reliability and Quality Assurance in July 1995. Mr. Jones has over 30 years of
+industry experience, most recently with LSI Logic, Inc., as Director of Quality
+Assurance. Mr. Jones joined LSI in September 1990. In December 1989, Mr. Jones
+joined Elcon Products International as Director of Manufacturing. From 1970 to
+December 1989, he was with Siliconix, where he held various management
+positions including Director of Operations and Director of Quality and
+Reliability. Mr. Jones holds a B.S.E.E. equivalent degree from Port Talbot
+College of Technology.
+
+         THOMAS R. MELENDREZ joined Exar in April 1986 as Corporate Attorney.
+He was promoted to Director, Legal Affairs in July 1991, and again to Corporate
+Vice President, Legal Affairs in March 1993. In March 1996, Mr. Melendrez was
+promoted to his current position of Corporate Vice President, General Counsel.
+Mr. Melendrez has over 20 years legal experience in the semiconductor and
+related industries. He received a B.A. from the University of Notre Dame and a
+J.D. from the University of San Francisco.
+
+         STEPHEN W. MICHAEL joined Exar as Vice President New Market
+Development in September 1992. In July 1995, he was appointed to his current
+position of Vice President, Operations Division. Mr. Michael has over 20 years
+of semiconductor industry experience, most recently as Vice President and
+General Manager, Analog and Custom Products with Catalyst Semiconductor. He
+joined Catalyst in 1987 and served in various senior positions.
+
+         JOHN SRAMEK joined Exar as Group Manager for the Micro Power Business
+Unit in June of 1994 and served in a variety of senior marketing positions
+until his promotion to his current position as Vice President, Video and
+Imaging Division, in February 1998. Mr. Sramek has over 20 years of experience
+in sales and product marketing in the semiconductor industry with a variety of
+companies including Micro Power Systems, Inc., Harris Semiconductor and Genrad
+Inc. Mr. Sramek holds a B.A. in English Literature and a B.S. in Electrical
+Engineering from Bucknell University and an M.B.A. from the University of Santa
+Clara.
+
+         RAIMON L. CONLISK joined Exar as a director in August 1985, was
+appointed Vice Chairman of the Board in August 1990, and was appointed Chairman
+of the Board in April 1995. Mr. Conlisk has also served as a director since
+1991 and was appointed Chairman of the Board in December 1997 of SBE, Inc., a
+manufacturer of communications and computer products. From 1977 to 1999, Mr.
+Conlisk was President of Conlisk Associates, a management consulting firm
+serving high-technology companies in the United States and foreign countries.
+From 1991 to 1998, Mr. Conlisk served as a director of Xetel Corporation, a
+contract manufacturer of electronic equipment. Mr. Conlisk was also President
+from 1984 to 1989, a director from 1970 and Chairman from 1989 until retirement
+in June 1990, of Quantic Industries, Inc., a privately held manufacturer of
+electronic systems. From 1970 to 1973 and from 1987 to 1990, Mr. Conlisk served
+as a director of the American Electronics Association.
+
+         FRANK P. CARRUBBA joined Exar as a director in August 1998. Dr.
+Carrubba served as Executive Vice President and Chief Technical Officer of
+Royal Philips Electronics, headquartered in Eindhoven, the Netherlands, from
+1991 to 1997. From 1982 to 1991, Dr. Carrubba was with the Hewlett-Packard
+Company, where he was a member of the Group Management Committee and was
+Director of H-P Laboratories. Prior to joining Hewlett-Packard, he spent 22
+years as a member of the technical staff at IBM Corporation's Thomas J. Watson
+Research Laboratory in Yorktown Heights, New York. Dr. Carrubba was one of the
+original designers of RISC Architecture, for which he was named Inventor of the
+Year in 1992. Dr. Carrubba is also a Director of Coherent, Inc., a developer
+and manufacturer of lasers, laser systems and precision optics.
+
+         JAMES E. DYKES joined Exar as a director in May 1994. Mr. Dykes served
+as President and CEO of the Signetics division of North American Philips
+Corporation, a manufacturer of industrial and consumer electronics, from 1989 to
+1993 and, from 1987 to 1988, as President and CEO of TSMC, a semiconductor
+foundry in Taiwan. Prior to joining TSMC, Mr. Dykes held various management
+positions with other semiconductor and related companies, including General
+Electric Company, a diversified international manufacturer of defense,
+electrical and other products, and Harris Semiconductor, Inc., a manufacturer
+of integrated circuits. From August 1994 to June 1997, Mr. Dykes served as
+President and Chief Operating Officer of Intellon Corp., a wireless network
+communications company. From July 1997 to July 1998, Mr. Dykes served as
+
+                                      12
+
+<PAGE>
+
+Executive Vice President, Corporate Development of the Thomas Group, Inc., a
+management services company. Mr. Dykes is also a director of the Thomas Group
+Inc., Cree Research, Inc., a developer of blue light-emitting diodes, and
+Thesus Logic, Inc., a privately held semiconductor company.
+
+         RICHARD PREVITE joined Exar as a director in October 1999. Mr.
+Previte is Chief Executive Officer and Chairman of the Board of Directors of
+marketFusion. He was a director from 1990 to April 2000 and Vice Chairman
+from 1999 to April 2000 of the Board of Directors of Advanced Micro Devices,
+or AMD. Additionally, Mr. Previte served as Chairman of the Board from 1997
+to June 1999, and acted as Chief Executive Officer from February 1999 to June
+1999 of Vantis Corporation, a subsidiary of AMD. Mr. Previte served as
+President of AMD from 1990 to 1999, Executive Vice President and Chief
+Operating Officer from 1989 to 1990 and Chief Financial Officer and Treasurer
+from 1969 to 1989.
+
+RISK FACTORS
+
+In addition to the other information contained in this Annual Report on Form
+10-K and other reports filed by the Company with the Securities and Exchange
+Commission, you should consider the following factors in evaluating the Company
+and its business. If any of the following risks actually occur, the Company's
+business could be harmed. This could cause the price of EXAR's stock to
+decline. This Annual Report on Form 10-K contains forward-looking statements
+that involve risks and uncertainties, including statements about future plans,
+objectives, intentions and expectations. Many factors, including those
+described below, could cause actual results to differ materially from those
+discussed in any forward-looking statement.
+
+THE COMPANY'S OPERATING RESULTS FLUCTUATE SIGNIFICANTLY BECAUSE OF A NUMBER OF
+FACTORS, MANY OF WHICH ARE BEYOND THE COMPANY'S CONTROL.
+
+         The Company's operating results fluctuate significantly. Some of the
+factors that affect the Company's quarterly and annual results, many of which
+are difficult to control or predict, are:
+
+      -    the reduction, rescheduling or cancellation of orders by customers;
+
+      -    fluctuations in the timing and amount of customer requests for
+           product shipments;
+
+      -    fluctuations in the manufacturing output, yields and inventory levels
+           of the Company's suppliers;
+
+      -    changes in the mix of products that the Company's customers purchase;
+
+      -    the Company's ability to introduce new products on a timely basis;
+
+      -    the announcement or introduction of products by the Company's
+           competitors;
+
+      -    the availability of third-party foundry capacity and raw materials;
+
+      -    competitive pressures on selling prices;
+
+      -    the amounts and timing of costs associated with product warranties
+           and returns;
+
+      -    the amounts and timing of investments in research and development;
+
+      -    market acceptance of the Company's products;
+
+
+      -    costs associated with acquisitions and the integration of acquired
+           operations;
+
+      -    the ability of the Company's customers to obtain components from
+           their other suppliers;
+
+      -    general conditions in the communications and semiconductor
+           industries;
+
+      -    fluctuations in interest rates; and
+
+                                      13
+
+<PAGE>
+
+      -    general economic conditions.
+
+THE COMPANY'S MARKETS ARE SUBJECT TO RAPID TECHNOLOGICAL CHANGE; THEREFORE, THE
+COMPANY'S SUCCESS DEPENDS ON ITS ABILITY TO DEVELOP AND INTRODUCE NEW PRODUCTS.
+
+         The markets for the Company's products are characterized by:
+
+      -    rapidly changing technologies;
+
+      -    changing customer needs;
+
+      -    frequent new product introductions and enhancements;
+
+      -    increased integration with other functions; and
+
+      -    rapid product obsolescence.
+
+         To develop new products for the Company's target markets, the Company
+must develop, gain access to and use leading technologies in a cost-effective
+and timely manner and continue to expand its technical and design expertise. In
+addition, the Company must have its products designed into its customers'
+future products and maintain close working relationships with key customers in
+order to develop new products that meet their changing needs.
+
+         In addition, products for communications applications are based on
+continually evolving industry standards. The Company's ability to compete will
+depend on its ability to identify and ensure compliance with these industry
+standards. As a result, the Company could be required to invest significant
+time and effort and to incur significant expense to redesign its products to
+ensure compliance with relevant standards.
+
+The Company cannot assure you that it will be able to identify new product
+opportunities successfully, develop and bring to market new products, achieve
+design wins or respond effectively to new technological changes or product
+announcements by its competitors. In addition, the Company may not be
+successful in developing or using new technologies or in developing new
+products or product enhancements that achieve market acceptance. The Company's
+pursuit of necessary technological advances may require substantial time and
+expense. Failure in any of these areas could harm its operating results.
+
+THE COMPANY'S FUTURE SUCCESS DEPENDS IN PART ON THE CONTINUED SERVICE OF ITS
+KEY ENGINEERING AND MANAGEMENT PERSONNEL AND ITS ABILITY TO IDENTIFY, HIRE AND
+RETAIN ADDITIONAL PERSONNEL.
+
+         There is intense competition for qualified personnel in the
+semiconductor industry, in particular the highly skilled design, applications
+and test engineers involved in the development of new communications ICs.
+Competition is especially intense in the Silicon Valley, where the Company's
+corporate headquarters is located. The Company may not be able to continue to
+attract and retain engineers or other qualified personnel necessary for the
+development of its business or to replace engineers or other qualified
+personnel who may leave it's employ in the future. The Company's anticipated
+growth is expected to place increased demands on its resources and will likely
+require the addition of new management and engineering personnel and the
+development of additional expertise by existing management personnel. Loss of
+the services of, or failure to recruit, key engineers or other technical and
+management personnel could harm its business.
+
+THE COMPANY DEPENDS ON THIRD PARTY FOUNDRIES TO MANUFACTURE ITS ICS.
+
+The Company does not own or operate a semiconductor fabrication facility. Most
+of its products are based on CMOS processes. Although two foundries manufacture
+its products based on CMOS processes, most are manufactured at a single
+foundry. In addition, one foundry manufactures most of the Company's BiCMOS
+products. The Company does not have long-term wafer supply agreements with its
+CMOS foundries that guarantee wafer or product quantities, prices, delivery or
+lead times, as its CMOS foundries manufacture its products on a purchase order
+basis. The Company provides these foundries with rolling forecasts of its
+production requirements; however, the ability of each foundry to provide wafers
+to the Company is limited by the foundry's available capacity. Therefore, the
+Company's CMOS foundries could choose to
+
+                                      14
+
+<PAGE>
+
+prioritize capacity for other customers or reduce or eliminate deliveries to
+it on short notice. Accordingly, the Company cannot be certain that these
+foundries will allocate sufficient capacity to satisfy its requirements. In
+addition, the Company cannot be certain that it will continue to do business
+with its foundries on terms as favorable as its current terms. Other
+significant risks associated with the Company's reliance on third-party
+foundries include:
+
+      -    the lack of control over delivery schedules;
+
+      -    the unavailability of, or delays in obtaining access to, key process
+           technologies;
+
+      -    limited control over quality assurance, manufacturing yields and
+           production costs; and
+
+      -    potential misappropriation of the Company's intellectual property.
+
+         The Company could experience a substantial delay or interruption in
+the shipment of its products or an increase in its costs due to the following:
+
+      -    a sudden demand for semiconductor devices;
+
+      -    a manufacturing disruption experienced by one or more of the
+           Company's foundries or sudden reduction or elimination of any
+           existing source or sources of semiconductor devices;
+
+      -    time required to identify or qualify alternative manufacturing
+           sources for existing or new products; or
+
+      -    failure of the Company's suppliers to obtain the raw materials and
+           equipment used in the production of its ICs.
+
+TO SECURE FOUNDRY CAPACITY, THE COMPANY MAY BE REQUIRED TO ENTER INTO FINANCIAL
+AND OTHER ARRANGEMENTS WITH FOUNDRIES, AND SUCH AGREEMENTS MAY RESULT IN THE
+DILUTION OF ITS EARNINGS OR THE OWNERSHIP OF ITS STOCKHOLDERS OR OTHERWISE HARM
+ITS OPERATING RESULTS.
+
+         Allocation of a foundry's manufacturing capacity may be influenced by
+a customer's size or the existence of a long-term agreement with the foundry.
+To address foundry capacity constraints, the Company and other semiconductor
+companies that rely on third-party foundries have utilized various
+arrangements, including equity investments in or loans to foundries in exchange
+for guaranteed production capacity, joint ventures to own and operate
+foundries, or "take or pay" contracts that commit a company to purchase
+specified quantities of wafers over extended periods. While the Company is not
+currently a party to any of these arrangements, it may decide to enter into
+these arrangements in the future. The Company cannot be sure, however, that
+these arrangements will be available to it on acceptable terms, if at all. Any
+of these arrangements could require the Company to commit substantial capital
+and, accordingly, could require it to obtain additional debt or equity
+financing. This could result in the dilution of its earnings or the ownership
+of its stockholders or otherwise harm its operating results.
+
+IF THE COMPANY'S FOUNDRIES DISCONTINUE THE MANUFACTURING PROCESSES NEEDED TO
+MEET ITS DEMANDS, OR FAIL TO UPGRADE THE TECHNOLOGIES NEEDED TO MANUFACTURE ITS
+PRODUCTS, THE COMPANY MAY FACE PRODUCTION DELAYS.
+
+The Company's wafer and product requirements typically represent a small
+portion of the total production of the foundries that manufacture its products.
+As a result, the Company is subject to the risk that a foundry will cease
+production on an older or lower-volume process that it uses to produce its
+parts. Additionally, the Company cannot be certain its foundries will continue
+to devote resources to the production of its products or continue to advance
+the process design technologies on which the manufacturing of its products is
+based. Each of these events could increase the Company's costs and harm its
+ability to deliver its products on time.
+
+THE MARKETS IN WHICH THE COMPANY PARTICIPATES ARE INTENSELY COMPETITIVE.
+
+The Company's target markets are intensely competitive. The Company's ability
+to compete successfully in its target markets depends on the following factors:
+
+                                      15
+
+<PAGE>
+
+      -    designing new products that implement new technologies;
+
+      -    subcontracting the manufacture of new products and delivering them in
+           a timely manner;
+
+      -    product quality and reliability;
+
+      -    technical support and service;
+
+      -    timely product introduction;
+
+      -    product performance;
+
+      -    product features;
+
+      -    price;
+
+      -    end-user acceptance of the Company's customers' products;
+
+      -    compliance with evolving standards; and
+
+      -    market acceptance of competitors' products.
+
+         In addition, the Company's competitors or customers may offer new
+products based on new technologies, industry standards or end-user or customer
+requirements, including products that have the potential to replace or provide
+lower-cost or higher-performance alternatives to its products. The introduction
+of new products by the Company's competitors or customers could render the
+Company's existing and future products obsolete or unmarketable. In addition,
+the Company's competitors and customers may introduce products that integrate
+the functions performed by its ICs on a single IC, thus eliminating the need
+for the Company's products.
+
+         Because the IC markets are highly fragmented, the Company generally
+encounters different competitors in its various market areas. Competitors with
+respect to the Company's communications products include Conexant Systems Inc.,
+PMC-Sierra, Inc. and TranSwitch Corporation. In addition, the expansion of the
+Company's communications product portfolio may in the future bring it into
+competition with other established communications IC companies, such as Applied
+Micro Circuits Corp. and Vitesse Semiconductor Corporation. Competitors in the
+Company's other markets include Analog Devices Incorporated, Philips
+Electronics and Texas Instruments Incorporated. Many of the Company's
+competitors have greater financial, technical and management resources than the
+Company does. Some of these competitors may be able to sell their products at
+prices below which it would be profitable for the Company to sell its products.
+
+IF THE COMPANY IS UNABLE TO FURTHER PENETRATE THE MARKETS FOR COMMUNICATIONS
+ICS, OR IF THESE MARKETS FAIL TO GROW AS EXPECTED, ITS REVENUES COULD STOP
+GROWING AND MAY DECLINE.
+
+         A significant portion of the Company's revenues in recent periods has
+been, and is expected to continue to be, derived from sales of communications
+ICs, particularly products based on the T/E carrier and ATM transmission
+standards. In order for the Company to be successful, it must continue to
+penetrate these markets. Furthermore, if these markets fail to grow as
+expected, the Company's business could be harmed.
+
+THE COMPANY EXPECTS THAT REVENUES CURRENTLY DERIVED FROM NON-COMMUNICATIONS
+PRODUCTS WILL DECLINE IN FUTURE PERIODS, AND ITS BUSINESS WILL BE HARMED IF ITS
+COMMUNICATIONS PRODUCTS FAIL TO COMPENSATE FOR THIS DECLINE.
+
+The Company does not intend to increase its funding of development efforts
+relating to its video and imaging and other non-communications products, and as
+a result revenues from these products may decline in future periods. In
+addition, the markets for these products are subject to extreme price
+competition, and the Company may not be able to reduce its costs in response to
+declining average selling prices. Even if the Company reduces its costs, its
+customers in these markets may not
+
+                                      16
+
+<PAGE>
+
+purchase these products. Moreover, these markets may decrease in size in the
+future. If the Company's communications products fail to compensate for any
+revenue shortfall, its business could be harmed.
+
+THE COMPANY'S DEPENDENCE ON THIRD-PARTY SUBCONTRACTORS TO ASSEMBLE AND TEST ITS
+PRODUCTS SUBJECTS IT TO A NUMBER OF RISKS, INCLUDING AN INADEQUATE SUPPLY OF
+PRODUCTS AND HIGHER MATERIALS COSTS.
+
+The Company depends on independent subcontractors for the assembly and testing
+of its products. The Company's reliance on these subcontractors involves the
+following significant risks:
+
+      -    reduced control over delivery schedules and quality;
+
+      -    the potential lack of adequate capacity during periods of excess
+           demand;
+
+      -    difficulties selecting and integrating new subcontractors;
+
+      -    limited warranties on products supplied to the Company;
+
+      -    potential increases in prices due to capacity shortages and other
+           factors; and
+
+      -    potential misappropriation of the Company's intellectual property.
+
+         These risks may lead to delayed product delivery or increased costs,
+which would harm the Company's profitability and customer relationships.
+
+THE COMPANY'S RELIANCE UPON FOREIGN SUPPLIERS EXPOSES IT TO RISKS ASSOCIATED
+WITH INTERNATIONAL OPERATIONS.
+
+The Company uses semiconductor wafer foundries and assembly and test
+subcontractors throughout Asia for most of its products. The Company intends to
+continue transferring its testing and shipping operations to foreign
+subcontractors. The Company's dependence on these subcontractors involves the
+following substantial risks:
+
+      -    political and economic instability;
+
+      -    disruption to air transportation from Asia;
+
+      -    changes in tax laws, tariffs and freight rates; and
+
+      -    compliance with local or foreign regulatory reguirements.
+
+         These risks may lead to delayed product delivery or increased costs,
+which would harm the Company's profitability and customer relationships.
+
+THE COMPANY'S RELIANCE ON FOREIGN CUSTOMERS COULD CAUSE FLUCTUATIONS IN ITS
+OPERATING RESULTS.
+
+         International sales accounted for 32.8% and 36.5% of net sales for
+fiscal years 2000 and 1999, respectively. International sales may account for an
+increasing portion of the Company's revenues, which would subject it to the
+following risks:
+
+      -    changes in regulatory requirements;
+
+      -    tariffs and other barriers;
+
+      -    timing and availability of export licenses;
+
+      -    political and economic instability;
+
+                                      17
+
+<PAGE>
+
+      -    difficulties in accounts receivable collections;
+
+      -    difficulties in staffing and managing foreign subsidiary and branch
+           operations;
+
+      -    difficulties in managing distributors;
+
+      -    difficulties in obtaining governmental approvals for communications
+           and other products;
+
+      -    limited intellectual property protection;
+
+      -    foreign currency exchange fluctuations;
+
+      -    the burden of complying with and the risk of violating a wide variety
+           of complex foreign laws and treaties; and
+
+      -    potentially adverse tax consequences.
+
+         In addition, because sales of the Company's products have been
+denominated to date primarily in United States Dollars (except in Japan, where
+the Company transacts a portion of its business in Japanese Yen), increases in
+the value of the United States Dollar could increase the relative price of the
+Company's products so that they become more expensive to customers in the local
+currency of a particular country. Future international activity may result in
+increased foreign currency denominated sales. Furthermore, because some of the
+Company's customer purchase orders and agreements are governed by foreign laws,
+the Company may be limited in its ability to enforce its rights under these
+agreements and to collect damages, if awarded.
+
+THE COMPANY RELIES ON ITS DISTRIBUTORS AND SALES REPRESENTATIVES TO SELL MANY
+OF ITS PRODUCTS.
+
+The Company sells many of its products through distributors and sales
+representatives. The Company's distributors and sales representatives could
+reduce or discontinue sales of its products. They may not devote the resources
+necessary to sell the Company's products in the volumes and within the time
+frames that it expects. In addition, the Company depends upon the continued
+viability and financial resources of these distributors and sales
+representatives, some of which are small organizations with limited working
+capital. These distributors and sales representatives, in turn, depend
+substantially on general economic conditions and conditions within the
+semiconductor industry. The Company believes that its success will continue to
+depend upon these distributors and sales representatives. If some or all of the
+Company's distributors and sales representatives experience financial
+difficulties, or otherwise become unable or unwilling to promote and sell its
+products, the Company's business could be harmed.
+
+BECAUSE THE COMPANY'S COMMUNICATIONS ICS TYPICALLY HAVE LENGTHY SALES CYCLES,
+THE COMPANY MAY EXPERIENCE SUBSTANTIAL DELAYS BETWEEN INCURRING EXPENSES
+RELATED TO RESEARCH AND DEVELOPMENT AND THE GENERATION OF SALES REVENUE.
+
+         Due to the communications IC product cycle, it usually takes the
+Company more than 12 months to realize volume shipments after it first contacts
+a customer. The Company first works with customers to achieve a design win,
+which may take nine months or longer. The Company's customers then complete the
+design, testing and evaluation process and begin to ramp up production, a
+period which typically lasts an additional three months or longer. As a result,
+a significant period of time may elapse between the Company's research and
+development efforts and its realization of revenue, if any, from volume
+purchasing of the Company's communications products by its customers.
+
+THE COMPANY'S BACKLOG MAY NOT RESULT IN FUTURE REVENUE.
+
+         Due to possible customer changes in delivery schedules and
+cancellations of orders, the Company's backlog at any particular date is not
+necessarily indicative of actual sales for any succeeding period. A reduction
+of backlog during any particular period, or the failure of the Company's
+backlog to result in future revenue, could harm the Company's business.
+
+                                      18
+
+<PAGE>
+
+THE COMPANY'S OPERATING EXPENSES ARE RELATIVELY FIXED, AND IT MAY ORDER
+MATERIALS IN ADVANCE OF ANTICIPATED CUSTOMER DEMAND. THEREFORE, THE COMPANY HAS
+LIMITED ABILITY TO REDUCE EXPENSES QUICKLY IN RESPONSE TO ANY REVENUE
+SHORTFALLS.
+
+         The Company's operating expenses are relatively fixed, and, therefore,
+it has limited ability to reduce expenses quickly in response to any revenue
+shortfalls. Consequently, the Company's operating results will be harmed if its
+revenues do not meet its revenue projections. The Company may experience
+revenue shortfalls for the following reasons:
+
+      -    significant pricing pressures that occur because of declines in
+           average selling prices over the life of a product;
+
+      -    sudden shortages of raw materials or fabrication, test or assembly
+           capacity constraints that lead the Company's suppliers to allocate
+           available supplies or capacity to other customers and, in turn, harm
+           the Company's ability to meet its sales obligations; and
+
+      -    the reduction, rescheduling or cancellation of customer orders.
+
+         In addition, the Company typically plans its production and inventory
+levels based on internal forecasts of customer demand, which is highly
+unpredictable and can fluctuate substantially. From time to time, in response
+to anticipated long lead times to obtain inventory and materials from the
+Company's outside suppliers and foundries, it may order materials in advance of
+anticipated customer demand. This advance ordering may result in excess
+inventory levels or unanticipated inventory write-downs if expected orders fail
+to materialize.
+
+PERIODS OF RAPID GROWTH AND EXPANSION COULD CONTINUE TO PLACE A SIGNIFICANT
+STRAIN ON THE COMPANY'S LIMITED PERSONNEL AND OTHER RESOURCES.
+
+         To manage the Company's possible future growth effectively, the
+Company will be required to continue to improve its operational, financial and
+management systems and to successfully hire, train, motivate and manage its
+employees. In addition, the integration of past and future potential
+acquisitions and the evolution of the Company's business plan will require
+significant additional management, technical and administrative resources. The
+Company cannot be certain that it will be able to manage the growth and
+evolution of its current business effectively.
+
+EXAR HAS IN THE PAST AND MAY IN THE FUTURE MAKE ACQUISITIONS, WHICH WILL
+INVOLVE NUMEROUS RISKS. EXAR CANNOT ASSURE THAT IT WILL BE ABLE TO ADDRESS
+THESE RISKS SUCCESSFULLY WITHOUT SUBSTANTIAL EXPENSE, DELAY OR OTHER
+OPERATIONAL OR FINANCIAL PROBLEMS.
+
+         The risks involved with acquisitions include:
+
+      -    diversion of management's attention;
+
+      -    failure to retain key personnel;
+
+      -    amortization of acquired intangible assets;
+
+      -    customer dissatisfaction or performance problems with an acquired
+           company;
+
+      -    the cost associated with acquisitions and the integration of acquired
+           operations; and
+
+      -    assumption of known or unknown liabilities or other unanticipated
+           events or circumstances.
+
+The Company cannot assure that it will be able to address these risks
+successfully without substantial expense, delay or other operational or
+financial problems.
+
+                                      19
+<PAGE>
+
+THE COMPANY MAY NOT BE ABLE TO PROTECT ITS INTELLECTUAL PROPERTY RIGHTS
+ADEQUATELY.
+
+The Company's ability to compete is affected by its ability to protect its
+intellectual property rights. The Company relies on a combination of patents,
+trademarks, copyrights, mask work registrations, trade secrets, confidentiality
+procedures and non-disclosure and licensing arrangements to protect its
+intellectual property rights. Despite these efforts, the Company cannot be
+certain that the steps it takes to protect its proprietary information will be
+adequate to prevent misappropriation of the Company's technology, or that its
+competitors will not independently develop technology that is substantially
+similar or superior to the Company's technology.
+
+         More specifically, the Company cannot be sure that its pending patent
+applications or any future applications will be approved, or that any issued
+patents will provide it with competitive advantages or will not be challenged by
+third parties. Nor can the Company be sure that, if challenged, the Company's
+patents will be found to be valid or enforceable, or that the patents of others
+will not have an adverse effect on the Company's ability to do business.
+Furthermore, others may independently develop similar products or processes,
+duplicate the Company's products or processes or design around any patents that
+may be issued to it.
+
+THE COMPANY COULD BE HARMED BY LITIGATION INVOLVING PATENTS AND OTHER
+INTELLECTUAL PROPERTY RIGHTS.
+
+         As a general matter, the semiconductor industry is characterized by
+substantial litigation regarding patent and other intellectual property rights.
+The Company may be accused of infringing the intellectual property rights of
+third parties. Furthermore, the Company has certain indemnification obligations
+to customers with respect to the infringement of third-party intellectual
+property rights by its products. The Company cannot be certain that infringement
+claims by third parties or claims for indemnification by customers or end users
+of its products resulting from infringement claims will not be asserted in the
+future or that such assertions, if proven to be true, will not harm its
+business.
+
+         Any litigation relating to the intellectual property rights of third
+parties, whether or not determined in the Company's favor or settled by the
+Company, would at a minimum be costly and could divert the efforts and attention
+of its management and technical personnel. In the event of any adverse ruling in
+any such litigation, the Company could be required to pay substantial damages,
+cease the manufacturing, use and sale of infringing products, discontinue the
+use of certain processes or obtain a license under the intellectual property
+rights of the third party claiming infringement. A license might not be
+available on reasonable terms, or at all.
+
+EARTHQUAKES AND OTHER NATURAL DISASTERS MAY DAMAGE THE COMPANY'S FACILITIES OR
+THOSE OF ITS SUPPLIERS.
+
+The Company's corporate headquarters in Fremont, California is located near
+major earthquake faults that have experienced earthquakes in the past. In
+addition, some of its suppliers are located near fault lines. In the event of a
+major earthquake or other natural disaster near its headquarters, the Company's
+operations could be harmed. Similarly, a major earthquake or other natural
+disaster near one or more of the Company's major suppliers, like the one that
+occurred in Taiwan in September 1999, could disrupt the operations of those
+suppliers, which could limit the supply of the Company's products and harm its
+business.
+
+THE COMPANY'S STOCK PRICE IS VOLATILE.
+
+         The market price of the Company's common stock has fluctuated
+significantly to date. In the future, the market price of its common stock could
+be subject to significant fluctuations due to:
+
+         -    quarter-to-quarter variations in the Company's anticipated or
+              actual operating results;
+
+         -    announcements or introductions of new products;
+
+         -    technological innovations or setbacks by the Company or its
+              competitors;
+
+         -    conditions in the communications and semiconductor markets;
+
+                                      20
+
+<PAGE>
+
+         -   the commencement of litigation;
+
+         -   changes in estimates of the Company's performance by securities
+             analysts;
+
+         -   announcements of merger or acquisition transactions; and
+
+         -   general economic and market conditions.
+
+         In addition, the stock market in recent years has experienced extreme
+price and volume fluctuations that have affected the market prices of many high
+technology companies, including semiconductor companies, and that have often
+been unrelated or disproportionate to the operating performance of companies.
+These fluctuations may harm the market price of the Company's common stock.
+
+THE ANTI-TAKEOVER PROVISIONS OF THE COMPANY'S CERTIFICATE OF INCORPORATION AND
+OF THE DELAWARE GENERAL CORPORATION LAW MAY DELAY, DEFER OR PREVENT A CHANGE OF
+CONTROL.
+
+The Company's board of directors has the authority to issue up to 2,250,000
+shares of preferred stock and to determine the price, rights, preferences and
+privileges and restrictions, including voting rights, of those shares without
+any further vote or action by its stockholders. The rights of the holders of
+common stock will be subject to, and may be harmed by, the rights of the holders
+of any shares of preferred stock that may be issued in the future. The issuance
+of preferred stock may delay, defer or prevent a change in control, as the terms
+of the preferred stock that might be issued could potentially prohibit the
+Company's consummation of any merger, reorganization, sale of substantially all
+of its assets, liquidation or other extraordinary corporate transaction without
+the approval of the holders of the outstanding shares of preferred stock. In
+addition, the issuance of preferred stock could have a dilutive effect on the
+Company's stockholders. The Company's stockholders must give 120 days advance
+notice prior to the relevant meeting to nominate a candidate for director or
+present a proposal to the Company's stockholders at a meeting. These notice
+requirements could inhibit a takeover by delaying stockholder action. The
+Company may trigger its stockholder rights plan in the event its board of
+directors does not agree to an acquisition proposal. The rights plan may make it
+more difficult and costly to acquire the Company. The Delaware anti-takeover law
+restricts business combinations with some stockholders once the stockholder
+acquires 15% or more of the Company's common stock. The Delaware statute makes
+it more difficult for the Company to be acquired without the consent of its
+board of directors and management.
+
+IF THE COMPANY HAS NOT ADEQUATELY PREPARED FOR THE TRANSITION TO YEAR 2000, ITS
+BUSINESS, OPERATING RESULTS AND FINANCIAL CONDITION COULD SUFFER.
+
+         The Company has executed a plan designed to make its computer systems,
+applications, computer and manufacturing equipment and facilities Year 2000
+ready. To date, none of the Company's systems, applications, equipment or
+facilities have experienced material difficulties from the transition to Year
+2000, nor has the Company been notified that any of its suppliers have had any
+such difficulties. However, due to the breadth of potential issues related to
+the Year 2000, the Company cannot guarantee that it will not experience any
+problems in the future and the final determination may take several months.
+Where practicable, the Company has attempted to mitigate its risks with respect
+to any failures of its critical external suppliers related to the Year 2000. The
+effect on the Company's results of operations from any failure of its systems,
+applications, equipment or facilities, or its critical external suppliers,
+related to the Year 2000 issue cannot yet be determined.

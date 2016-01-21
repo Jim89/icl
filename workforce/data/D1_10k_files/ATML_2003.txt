@@ -1,0 +1,285 @@
+ITEM 1. BUSINESS 
+
+FORWARD LOOKING STATEMENTS 
+
+     Investors are cautioned that certain statements in this Annual Report on Form 10-K and in the documents incorporated herein by reference are forward looking statements that involve risks and uncertainties. Words such as “expects,” “anticipates,” “intends,” “plans,” “believes,” “seeks,” “estimates,” “views,” and variations of such words and similar expressions are intended to identify such forward looking statements. These statements are based on current expectations and projections about our business and the semiconductor industry and assumptions made by the management and are not guarantees of future performance. Therefore, actual events and results may differ materially from those expressed or forecasted in the forward looking statements due to risk factors identified in Item 7, Management’s Discussion and Analysis of Financial Condition and Results of Operations, in the section entitled “Trends, Uncertainties and Risks” on page 27, and similar discussions in our other filings with the Securities and Exchange Commission. The Company undertakes no obligation to update any forward looking statements in this Form 10-K. In this report, all share numbers and per share amounts have been adjusted to reflect our 2-for-1 stock split in the form of a 100% stock dividend to stockholders of record as of August 11, 2000. 
+
+BUSINESS 
+
+General 
+
+     Semiconductor integrated circuits (ICs) are key components in almost all electronic products and systems produced today. Their capacity to process and store information gives manufacturers of electronic products a powerful ability to add new features, adapt to changing demands and quickly develop new products. As additional semiconductor elements are packed into smaller areas, ICs offer valuable new capabilities important to manufacturers of end products. 
+
+     We design, develop, manufacture and sell a wide range of IC products. We develop and commercialize nonvolatile memory that continues to store information after power is turned off. We leverage our expertise in nonvolatile memories by combining them with microcontrollers, digital signal processors and other logic to meet the evolving and growing needs of our customers. These complex system-on-a-chip solutions for a broad array of markets are manufactured using our multiple leading edge process technologies, including complementary metal oxide semiconductor (CMOS), double-diffused metal oxide semiconductor (DMOS), logic, CMOS logic, bipolar, bipolar CMOS (BiCMOS), silicon germanium (SiGe), SiGe BiCMOS, analog, bipolar double diffused CMOS (BCDMOS) and radiation tolerant process technologies. We develop these process technologies ourselves to ensure they provide the maximum possible performance. We manufacture more than 90% of our products in our own wafer fabrication facilities, or fabs. We believe our broad portfolio of manufacturing capabilities allows us to produce ICs that enable our customers to rapidly introduce leading edge electronic products that are differentiated by higher performance, advanced features, lower cost, smaller size, longer battery life and more memory. Our products are used primarily in the following markets: communications, consumer electronics and computing, storage, automotive, security and imaging. 
+
+     We were originally incorporated in California in December 1984. In October 1999 we were reincorporated in Delaware. Our principal offices are located at 2325 Orchard Parkway, San Jose, California 95131, and our telephone number is (408) 441-0311. Our internet address is: www.atmel.com; however, the information in, or that can be accessed through, our website is not part of this report. Our annual reports on Form 10-K, quarterly reports on Form 10-Q, current reports on Form 8-K, and amendments to such reports are available, free of charge, through our website as soon as reasonably practicable after we electronically file such material with, or furnish it to, the Securities and Exchange Commission, or SEC. 
+
+  
+
+Products 
+
+     Our products consist primarily of advanced logic, mixed-signal, nonvolatile memory, radio frequency and system-level integration semiconductor solutions. 
+
+2 
+
+
+
+--------------------------------------------------------------------------------
+
+
+Table of Contents
+
+     Our business has four operating segments (see Note 13 of Notes to Consolidated Financial Statements). Each segment offers products that compete in one or more of the end markets described below under the caption “Principal Markets and Customers.” 
+
+  •   Application specific integrated circuit (ASIC) segment includes full custom application specific integrated circuits, semicustom gate arrays and semicustom cell-based integrated circuits (CBICs) designed to meet specialized single-customer requirements for their high performance devices in a broad variety of applications. In addition, this business unit includes field programmable gate arrays (FPGAs), programmable logic devices (PLDs), imaging sensors and processors, audio processors, data communication processors and data acquisition and control circuits for general sale to multiple customers who use them in products for telecommunications, computers, networking, image processing, industrial, automotive, avionics and smart card applications. 
+  
+  •   Microcontrollers segment includes a variety of microcontrollers including microcontrollers containing embedded nonvolatile memory. 
+  
+  •   Nonvolatile Memories segment includes Flash memories, electrically erasable programmable read only memories (EEPROMs), and erasable programmable read only memories (EPROMs) for use in a broad variety of customer applications. 
+  
+  •   Radio Frequency (RF) and Automotive segment includes radio frequency and analog circuits for the telecommunications, automotive and industrial markets. 
+
+
+     Within each operating segment, we offer our customers products with a range of speed, density, power usage, specialty packaging and other features. 
+
+ASIC 
+
+     ASICs. We manufacture and market semicustom gate arrays and cell-based integrated circuits, as well as full custom ASICs, to meet customer requirements for high-performance logic devices in a broad variety of customer-specific applications. These logic devices are designed to achieve highly integrated solutions for particular applications by combining a variety of logic functions on a single chip rather than using a multi-chip solution. 
+
+     Our CMOS gate array product family satisfies high gate count and high-performance requirements, primarily in computer, avionics and military applications. Our gate array family consists of devices ranging from 35,000 gates to more than 10,000,000 gates. 
+
+     We design and manufacture CBICs in a range of products that includes standard digital and analog functions, as well as nonvolatile memory elements and large pre-designed macro functions all mixed on a single chip. Our ASIC products are targeted primarily at customers whose high-end applications require high-speed, high-density or low or mixed-voltage devices. 
+
+     FPGAs. We believe our FPGA designs are well suited for data and computation intensive applications and afford our customers migration paths among various logic solutions as their volume and cost requirements change. Our AT6000 FPGAs are being used in graphics, image processing, networking and telecommunications applications, often as a co-processor to a digital signal processor (DSP) to speed-up certain software routines by implementing them in hardware. Our AT40K family of FPGAs with FreeRAM and Cache Logic® offer distributed RAM without loss of logic resources as well as a reconfigurable solution for adaptive DSP and other computationally intensive applications. The devices range in density from 2,000 to 150,000 usable gates. Our customers can use industry standard computer aided engineering (CAE) tools to design both the AT6000 and AT40K FPGA families into their products. We have also introduced a family of reconfigurable FPGA Serial Configuration EEPROMs that can replace one-time-programmable devices. These devices may be used for configuring not only our FPGAs but also those from other FPGA makers. Additionally, FPGA to gate array conversion (ULC) is available for both military and commercial applications. 
+
+     The Field Programmable System Level Integrated Circuit (FPSLICTM ) family of devices combines an AVR microcontroller core, standard peripherals and SRAM program and data memory, along with significant amounts of AT40K FPGA cells which can be programmed by users to quickly and easily customize the IC’s function. These devices were the industry’s first such combination of so-called “hard macro” reduced instruction set (RISC)-based 
+
+3 
+
+
+
+--------------------------------------------------------------------------------
+
+
+Table of Contents
+
+microcontroller and memory functions with on-chip FPGA customizable functions. The family is offered with unique co-verification development tools that allow a system designer to perform microcontroller software verification concurrently with FPGA hardware verification. 
+
+     Sensors. Our line-up of imaging and sensing products include CCD and CMOS image sensors and processors that cover the market from entry level to the high resolution required for professional, medical, automotive and military applications. Our portfolio of ICs covers innovative image processor technology needed to satisfy our customer’s needs for complex image processors and industrial grade image sensors, and can also be integrated into complete digital camera modules 
+
+     PLDs. We have developed a line of PLDs, ranging from 500 to 15,000 gates that are reprogrammable and incorporate nonvolatile elements from our EEPROM technology. These devices are sometimes used as prototyping and pre-production devices and allow for later conversion to gate array products for volume production. For these situations, we offer customers the ability to migrate from FPGAs or PLDs (either their own or competitors’) to our gate arrays with minimal conversion effort. We offer CMOS PLDs with high performance and low power consumption. 
+
+     Smart Cards. We offer a range of secure memory products that address the entire smart card market, from low complexity, serial products to highly complex Cryptocontroller products. These products provide customers with advanced security solutions, both for contact and contactless cards. Our contact smart cards range from 1Kbit to 256Kbit in memory density. Our contactless smart cards range from 1Kbit to 64Kbit in memory density. 
+
+     Custom ASICs. We work closely with certain customers to develop and manufacture custom ASIC products so we can provide them ASIC products on a sole-source basis. To develop gate arrays and CBICs, our customers’ system designers require sophisticated development aids. These CAE tools include logic synthesizers, logic circuit simulators, timing analysis and verification tools, test pattern generators and testability graders, automated circuit placement and interconnection programs and mask tooling generators. 
+
+Microcontrollers 
+
+     Our Microcontroller business unit offers a variety of products to serve the commercial and aerospace marketplaces for embedded controls. The cornerstone of the product portfolio is two 8-bit microcontroller architectures targeted at the high volume embedded control segment. They are the 8051 and AVR microcontrollers. The 8051 family consists of microcontrollers containing read only memory, one time programmable memory, or Flash memory and microcontrollers without memories plus application specific products designed to enable MP3, CAN or smart card reader systems. The AVR microcontroller family uses a RISC architecture that is optimized for C language code density and low power operation. Both microcontroller families are offered as standard products, as building blocks in our ASIC library or as application specific products. The microcontroller families offer a large variety of memory densities, package types and peripheral options including analog capability. 
+
+     Additionally, under license agreements, we make and sell secure versions of an 8-bit microcontroller to serve smart card markets, standard and secure versions of ARM core-based 32-bit microcontrollers to serve high performance embedded processing applications, and high reliability versions of the Motorola Power PC and 68000 microprocessor families to serve military and industrial applications. 
+
+     We are a supplier to the aerospace industry, delivering radiation-tolerant and radiation-hard SRAM, Dual Port RAM, FIFO, ASIC and 32-bit SPARC processors. 
+
+Nonvolatile Memories 
+
+     EPROMs. The worldwide EPROM market is intensely competitive and characterized by commodity pricing. Our strategy is to target the high-performance end of this market by offering faster speed, higher density and lower power usage devices. We currently offer EPROMs with access speeds of 150 nanoseconds to 45 nanoseconds and densities of 256 kilobits to 8 megabits. These products are generally used to contain the operating programs of embedded microcontroller or DSP-based systems, such as hard disk drives, CD-ROM drives and modems. 
+
+     Parallel-Interface EEPROMs. We supply high performance in-system programmable parallel-interface EEPROMs. We believe that our parallel-interface EEPROM products, all of which are full featured, represent the most complete parallel-interface EEPROM product family in the industry. We have maintained this leadership role through early introductions of high speed, high capacity and low power consumption CMOS devices. We are the 
+
+4 
+
+
+
+--------------------------------------------------------------------------------
+
+
+Table of Contents
+
+sole-source supplier for several customers for certain parallel-interface EEPROM devices. In the design of this product family, we have emphasized device reliability, achieved partly through the incorporation of on-chip error detection and correction features. These products are generally used to contain frequently updated data in communications infrastructure equipment and avionics navigation systems. 
+
+     Serial-Interface EEPROMs. We used our parallel-interface EEPROM technology and sub-micron fabrication capability to enter the serial-interface EEPROM market. This move allowed us to substantially broaden our EEPROM product offerings to include most package and temperature configurations required by customers in certain segments of the serial-interface EEPROM market such as the 2-wire, 3-wire, 4-wire and serial peripheral interface (SPI) market segments. As with the parallel-interface EEPROM family, we believe our serial-interface EEPROM products represent the most complete family in the industry. The serial-interface EEPROM product line incorporates many of the reliability, speed and other features of our parallel-interface EEPROM products. These products are generally used to contain user-preference data in cellular and cordless telephones, home appliances, automotive applications and computer peripherals or stored value data in smart cards. 
+
+     Flash Memories. Flash memories represent the latest technology in nonvolatile devices that can be reprogrammed in-system. Flash memories offer a middle ground in price and features between EPROMs, which can be reprogrammed only a few times and only if removed from a system, and relatively more expensive parallel-interface EEPROMs, in which any individual byte of data can be reprogrammed on the device in-system tens to hundreds of thousands of times. Our Flash memories, based on our EEPROM technology, were the industry’s first Flash memories that could be reprogrammed using only a single 5-volt power source, a single 3-volt power source, a single 2.7-volt power source or a single 1.8-volt power source as opposed to the heavier, larger and more expensive 12-volt power sources typically utilized by many EPROM-based Flash memories. These lower power requirements are particularly important in portable telecommunications and consumer electronic products and other systems where small size and weight and longer battery life are critical customer requirements. We have expanded our Flash product offerings by introducing a range of products based on our more cost-effective Flash technology. We currently offer Flash memories with capacities of 256 kilobits to 64 megabits in each IC. 
+
+     The flexibility and ease of use of our Flash memories make them an attractive alternative to EPROMs in systems where program information stored in memory must be rewritten after the system leaves its manufacturing environment. In addition, many customers use Flash memories within their system manufacturing cycle, affording them in-system diagnostic and test programming prior to reprogramming for final shipment configuration. The reprogrammability of Flash memories also serves to support later system upgrades, field diagnostic routines and in-system reconfiguration, as well as capturing voice and data messages for later review. 
+
+     DataFlash. The DataFlash product family represents one of our newest innovations in nonvolatile memory. DataFlash products are designed to easily and efficiently handle large amounts of frequently changing data, ideally addressing the needs of digital voice storage, digital image storage, and text/data storage applications such as digital answering machines, cellular phones, fax machines, digital cameras and computer peripherals where small size is an important factor. 
+
+     To minimize cost, footprint size and power consumption, DataFlash products utilize our latest Flash technology for the core memory array combined with the simple SPI from the serial-interface EEPROMs. Other architectural features include dual on-chip SRAM buffers and error detection logic, as well as additional command and device status logic. 
+
+     Our memory products are used to provide nonvolatile program and data storage in digital systems for a variety of applications and markets, including computing, telecommunications, data communications, consumer electronics, automotive, industrial/instrumentation and military/avionics. 
+
+RF and Automotive 
+
+     Our RF products are designed to service the automotive, telecommunications, consumer and industrial markets. Our focus is to design and supply high-frequency products for many types of wireless communications devices in the frequency range of 0.1 to 4.8 GHz. These products, manufactured using SiGe technology, are used in two-way pagers, digitally enhanced cordless telecommunications, mobile telephones, and cellular base stations, among other applications. 
+
+     For automotive applications, this segment offers a family of read, read/write and encryption identification ICs, which are used for wireless access control and operate at a frequency in the range of 100 kHz to 800 MHz. 
+
+5 
+
+
+
+--------------------------------------------------------------------------------
+
+
+Table of Contents
+
+These ICs are used in combination with a reader IC to make possible contactless identification for a wide variety of applications. Typical applications include access control and tracking of consumer goods. 
+
+     Within this segment another product family uses RF technology for remote keyless entry for automobiles, as well as for many other remote control applications, such as air conditioning control, garage door openers, outside wireless temperature monitoring and security home alarm systems. 
+
+     We also specialize in providing intelligent load driver ICs suited for the rugged automotive environment. These ICs are manufactured in BCDMOS technology, a 0.8-micron mixed signal high voltage technology providing analog-bipolar, high voltage DMOS power and CMOS logic function on a single chip. The applications for these automotive products are primarily motor and actuator drivers and smart valve controls. 
+
+Technology 
+
+     From our inception, we have focused our efforts on developing advanced CMOS processes that can be used to manufacture reliable nonvolatile elements for memory and logic integrated circuits. We believe we are a leader in single and multiple-layer metal CMOS processing, which enables us to produce high-density, high-speed and low-power memory and logic products. 
+
+     We attempt to meet customers’ demands for constantly increasing functionality on ever-smaller ICs by increasing the number of layers we use to build the circuits on a wafer and by reducing the size of the transistors and other components in the circuit. To accomplish this we develop and introduce new wafer manufacturing techniques as necessary. For example, to allow smaller circuit dimensions by smoothing out surface irregularities between layers, we introduced chemical-mechanical planarization to our wafer manufacturing process and now use it in all our fabrication facilities. We also provide our fabrication facilities with state-of-the-art manufacturing equipment and development resources that allow us to produce ICs with increasingly smaller feature sizes. Our current ICs incorporate effective feature sizes as small as 0.18-microns. We are developing processes that support effective feature sizes as small as 0.13-microns. 
+
+     We broadened our technology focus by developing expertise for designing and manufacturing high frequency RF products, which are used primarily in cellular telephones and cordless applications. In order to achieve high frequency with high efficiency and very low noise, a SiGe technology was developed. This technology is based on well-established bipolar silicon process technology, with one of the key process steps, the epitaxial layer, modified by adding germanium to the silicon. The current minimum feature size supports the design of very small RF receivers and transceivers as well as power amplifiers. This technology is designed to replace galium arsenide (GaAs) technology, which is commonly used for power amplifiers in cellular telephones. 
+
+     In order to extend the capabilities of SiGe, Atmel has begun to combine the high-frequency features of SiGe with CMOS in order to integrate high-density logic parts and RF analog functions on a single integrated circuit. We believe this SiGe/CMOS technology will enable Atmel to provide single-chip system solutions to the marketplace. 
+
+Principal Markets and Customers 
+
+     Communications. Communications, including wireless and wireline telecommunications and data networking, is currently our largest end user market. For the wireless market, we provide nonvolatile memory, standard and secure microcontrollers, and baseband and RF ASICs that are used in global standard for mobile communications (GSM) and code-division multiple access (CDMA) mobile phones and their base stations, as well as two-way pagers, mobile radios, 900 MHz cordless phones and their base stations. We also have a range of products based on the IEEE 802.11 wireless LAN standard, and on Bluetooth, a new short-range wireless protocol that enables instant connectivity between electronic devices. Our principal customers in the wireless market include Ericsson, Motorola, Nokia, Philips, Qualcomm, Samsung and Siemens. 
+
+     We also serve the data networking and wireline telecommunications markets, which continue to evolve due to the rapid adoption of new technologies. For these markets, we provide ASIC, nonvolatile memory and programmable logic products that are used in the switches, routers, cable modem termination systems and digital subscriber line (DSL) access multiplexers, that are currently being used to build internet infrastructure. Our principal data networking and wireline telecommunications customers include Alcatel, and Siemens. 
+
+6 
+
+
+
+--------------------------------------------------------------------------------
+
+
+Table of Contents
+
+     Consumer Electronics. Our products are also used in a broad variety of consumer electronics products. We provide multimode audio processors and MPEG2-based decoders with programmable transport for complex digital audio streams used in digital TVs, set top boxes and DVD players. For digital cameras, we provide a single chip digital camera processor solution, as well as medium and high-resolution image sensors. We provide demodulators and decoders for cable modems. We also offer media access controllers for wireless local area networks (LANs) and baseband controllers and network protocol stacks for voice-over-internet-protocol (VoIP) telephone terminals. In addition, we provide secure, encryption enabled, tamper resistant circuits for smart cards and embedded PC security applications. Our principal consumer electronics customers include FujiFilm, GemPlus, Invensys, LG Electronics, Matsushita, Philips, Samsung and Schlumberger. 
+
+     Computing, Storage and Printing. The computing and computing peripherals markets are also growing because of the growth of the Internet. For computing applications, we provide Flash memory, universal serial bus (USB) hubs and ASICs for personal computers and servers. Our biometric security IC verifies a user’s identity by scanning a finger. In today’s security conscious environment we believe this IC is finding applications where access to information, equipment and similar resources needs to be controlled or monitored. For storage applications, we provide servo controllers, laser drivers, read channels, and data interfaces for data storage subsystems, hard drives and DVD players. We provide ASICs, nonvolatile memory and microcontrollers for laser printers, inkjet printers, copy machines and scanners. Our principal customers in these markets include Hewlett-Packard, IBM, Intel and Seagate. 
+
+Manufacturing 
+
+     We currently manufacture our products at our wafer fabrication facilities located in Colorado Springs, Colorado; Heilbronn, Germany; Nantes, France; and Rousset, France. We have an additional facility in North Tyneside, UK, which was kept in a low state of operational readiness during 2002 due to excess manufacturing capacity. We are currently developing fabrication processes in our North Tyneside facility. 
+
+     As a result of the economic downturn in the semiconductor industry that began in the fourth quarter 2000, we have taken actions to suspend or reduce our manufacturing capacity and costs to a level that meets demand for our products in order to achieve profitability. Expensive manufacturing equipment has been underutilized or sold at significantly discounted prices, and employee and other manufacturing costs reduced. In the third quarter 2002 we announced closure of the Company’s 8-inch wafer fabrication facility at Irving, Texas. This facility was acquired in 2000, and the Company originally intended to commence commercial production in the second half of 2002. However, given the market conditions in the semiconductor industry, we reassessed our overall manufacturing capacity against the potential anticipated demand and decided to close the facility. The fabrication facility is available for sale and was placed on the market in August 2002. We intend to complete a sale as soon as possible; however the timing of a final sale is uncertain given the current market for semiconductor manufacturing facilities. See Note 6 of Notes to Consolidated Financial Statements. 
+
+     Reducing our wafer fabrication capacity involves significant potential costs and delays, including approvals and requirements of various governmental and judicial bodies and loss of governmental subsidies. We may experience labor union or other difficulties when implementing any additional downsizing that we may be required to make if the current downturn continues or worsens. Any such difficulties that we experience would harm our business and operating results. 
+
+     The deteriorating market conditions we experienced in 2001 and 2002 may continue or worsen, causing our wafer fabrication capacity to continue to be underutilized, and our inability to quickly reduce fixed costs such as depreciation and other fixed operating expenses necessary to operate our wafer manufacturing facilities would continue to harm our operating results. If net revenues do not increase sufficiently in future periods to meet these costs, our business would be harmed. 
+
+     If market demand for our products increases during 2003 and 2004, we believe that we will be able to substantially meet our production needs from our wafer fabrication facilities through the end of 2004, although this date may vary depending on, among other things, our rate of growth. We will need to hire, train and manage additional production personnel in order to increase our production capacity from current levels. To remain technologically and economically competitive, we must continuously implement new manufacturing technologies such as 0.13-micron line widths in our wafer manufacturing facilities regardless of demand for our products. If the recent downturn continues beyond the first or second half of 2003 or worsens, our efforts to implement these new technologies while reducing costs consistent with demand may be significantly impaired. 
+
+7 
+
+
+
+--------------------------------------------------------------------------------
+
+
+Table of Contents
+
+     The cost of expanding our manufacturing capacity at our existing facilities, acquiring additional facilities, maintaining existing or additional facilities and implementing new manufacturing technologies is typically funded through a combination of available cash resources, cash from operations and additional lease, debt or equity financing. We may not be able to generate the cash from operations or obtain the additional financing necessary to fund the maintenance or expansion of our manufacturing facilities or the implementation of new manufacturing technologies. 
+
+     The fabrication of our integrated circuits is a highly complex and precise process, requiring production in a tightly controlled, clean environment. Minute impurities, difficulties in the fabrication process, defects in the masks used to print circuits on a wafer, or other factors can cause a substantial percentage of wafers to be rejected or numerous die on each wafer to be nonfunctional. We may experience problems in achieving acceptable yields in the manufacture of wafers, particularly in connection with the expansion of our manufacturing capacity and related transitions. The interruption of wafer fabrication or the failure to achieve acceptable manufacturing yields at any of our wafer fabrication facilities would harm our business. 
+
+     As a result of these and other factors we may be unable to achieve adequate wafer manufacturing output in any expanded or new facility in a timely manner, and our revenues may not increase in proportion to the anticipated increase in manufacturing capacity associated with any expanded or new facility. 
+
+     Once we have fabricated the wafers, we test the individual circuits on them to identify those that do not function. This saves us the cost of putting mechanical packages around circuits whose failure can be determined in advance. After this initial testing we send the wafers to one of our independent assembly contractors, located in China, Hong Kong, Japan, Malaysia, the Philippines, South Korea, or Taiwan where they are cut into individual chips, assembled into packages and in some cases given a final test. Most of the packaged integrated circuits, however, are shipped back to our production facilities where we perform final testing before shipping them to customers. Our reliance on independent subcontractors to assemble our products into packages involves significant risks, including reduced control over quality and delivery schedules, a potential lack of capacity at our subcontractors and a risk the subcontractor may abandon assembly processes we need. We cannot be sure that our current assembly subcontractors will continue to assemble, package and test products for us. In addition, because our assembly subcontractors are located in foreign countries, we are subject to some risks commonly associated with contracting with foreign suppliers, including currency exchange fluctuations, political and economic instability, trade restrictions and changes in tariff and freight rates. As a result, we may experience production delays, insufficient volumes or inadequate quality of assembled products, any of which could harm our operations. To mitigate these risks we execute a strategy of qualifying multiple subcontractors in different countries. However, there can be no guarantee that any strategy will eliminate our risk. 
+
+     We reduce the unit cost of our products by producing as many wafers as possible in each plant, by shrinking circuits to fit the most possible on each wafer and by keeping production expenses low. We normally expect to produce at unit costs low enough to provide satisfactory profit margins. 
+
+     The raw materials and equipment we use to produce our integrated circuits are available from several suppliers and we are not dependent upon any single source of supply. Some materials have been in short supply in the past and lead times for new equipment have lengthened on occasion, but we did not experience serious difficulties in obtaining raw materials or equipment in 2002. 
+
+     Environmental Compliance. We are subject to a variety of federal, state and local governmental regulations related to the discharge or disposal of toxic, volatile or otherwise hazardous chemicals used in our manufacturing processes. Increasing public attention has been focused on the environmental impact of semiconductor operations. Although we have not experienced any material adverse effect on our operations from environmental regulations, any changes in such regulations or in their enforcement may impose the need for additional capital equipment or other requirements. If for any reason we fail to control the use of, or to restrict adequately the discharge of, hazardous substances under present or future regulations, we could be subject to substantial liability or our manufacturing operations could be suspended. 
+
+Marketing and Sales 
+
+     We market our products worldwide to a diverse base of original equipment manufacturers (OEMs) serving primarily commercial markets. In the United States and Canada, we sell our products to large OEM accounts primarily through manufacturers’ representatives and through national and regional distributors. Our agreements with our representatives and distributors are generally terminable by either party on short notice, subject to local 
+
+8 
+
+
+
+--------------------------------------------------------------------------------
+
+
+Table of Contents
+
+laws. We support this sales network from our headquarters in San Jose, California and through North American regional offices in Southern California, Colorado, Florida, Illinois, Massachusetts, Michigan, Minnesota, New Jersey, North Carolina, Oregon, Texas and Ontario, Canada. Sales to North American OEMs and distributors, as a percentage of worldwide net revenues, were 15% and 7% in 2002, 17% and 8% in 2001 and 26% and 10% in 2000, respectively. Additionally, we have 17 sales offices outside of North America. 
+
+     We generate our revenue by selling our products to original equipment manufacturers (OEMs) and distributors. Our policy is to recognize revenue from sales to customers when the rights and risks of ownership have passed to the customer, when persuasive evidence of an arrangement exists, the product has been delivered, the price is fixed and determinable and collection of the resulting receivable is reasonably assured. 
+
+     We allow certain distributors, primarily based in the United States, extensive rights of return and other credits for price protection. Given the uncertainties associated with the levels of returns and other credits issuable to these distributors, we defer recognition of revenue from sales to these distributors until they have resold our products. Sales to certain other primarily non-US based distributors carry either no or very limited rights of return. We have historically been able to estimate returns and other credits from these distributors and accordingly have historically recognized revenue from sales to these distributors on shipment, with a related allowance for potential returns established at the time of our sale. 
+
+     We sell to foreign customers primarily through international representatives, who are managed from our foreign sales offices. We maintain sales offices in Finland, France, Germany, Hong Kong, Italy, Japan, Korea, Singapore, Sweden, Switzerland, Taiwan and U.K. Our sales outside North America were approximately 78%, 75% and 64% of total revenues in 2002, 2001 and 2000. See Note 13 of Notes to Consolidated Financial Statements. Although the U.S. government imposes some restrictions on export sales we have not experienced any serious difficulties because of them. We expect revenues from our international sales will continue to represent a significant portion of our total revenues. International sales are subject to a variety of risks, including those arising from currency fluctuations, tariffs, trade barriers, taxes, export license requirements and foreign government regulations. 
+
+Research and Development 
+
+     We believe significant investment in research and development is vital to our success, growth and profitability, and we will continue to devote substantial resources, including management time, to this activity. Our primary objectives are to increase performance of our existing products, to develop new wafer processing and design technologies, and to draw upon these technologies to create new products. If we are unable to design, develop, manufacture, market and sell new products successfully, our operating results will be harmed. Our new product development, process development, or marketing and sales efforts may not be successful, our new products may not achieve market acceptance, and price expectations for our new products may not be achieved. 
+
+     During 2002, 2001 and 2000 we spent $253 million, $268 million and $252 million, on research and development. Research and development expenses are charged to operations as incurred. We expect these expenditures will increase in the future as and when business conditions improve. 
+
+Competition 
+
+     We compete in markets that are intensely competitive and characterized by rapid technological change, product obsolescence and price decline. Throughout our product line, we compete with a number of large semiconductor manufacturers, such as AMD, Fujitsu, Hitachi, Intel, LSI Logic, Microchip, Sharp and STMicroelectronics. Some of these competitors have substantially greater financial, technical, marketing and management resources than we do. As we have introduced new products we are increasingly competing directly with these companies, and we may not be able to compete effectively. We also compete with emerging companies that are attempting to sell products in specialized markets that our products address. We compete principally on the basis of the technical innovation and performance of our products, including their speed, density, power usage, reliability and specialty packaging alternatives, as well as on price and product availability. In 2002 and 2001 we experienced significant price competition in our nonvolatile memory business and especially for EPROM and Flash products. We expect continuing competitive pressures in our markets from existing competitors and new entrants, new technology and weak demand, which, among other factors, will likely maintain the recent trend of declining average selling prices for our products. 
+
+9 
+
+
+
+--------------------------------------------------------------------------------
+
+
+Table of Contents
+
+     In addition to the factors described above, our ability to compete successfully depends on a number of factors, including the following: 
+
+  •   our success in designing and manufacturing new products that implement new technologies and processes 
+  
+  •   our ability to offer integrated solutions using our advanced nonvolatile memory process with other technologies 
+  
+  •   the rate at which customers incorporate our products into their systems 
+  
+  •   product introductions by our competitors 
+  
+  •   the number and nature of our competitors in a given market, and 
+  
+  •   general market and economic conditions. 
+
+
+     Many of these factors are outside of our control, and we may not be able to compete successfully in the future. 
+
+Patents and Licenses 
+
+     We maintain a portfolio of United States patents and we have patent applications on file with the U.S. Patent and Trademark Office. We also operate an internal program to identify patentable developments and we file patent applications wherever necessary to protect our proprietary technologies. However, because technology changes very rapidly in the semiconductor industry, we believe our continued success depends primarily on the technological and innovative skills of our employees and their abilities to rapidly commercialize discoveries. 
+
+     The semiconductor industry is characterized by vigorous protection and pursuit of intellectual property rights or positions, which have on occasion resulted in significant and often protracted and expensive litigation. We have from time to time received, and may in the future receive, communications from third parties asserting patent or other intellectual property rights covering our products or processes. In the past, we have received specific allegations from major companies alleging that certain of our products infringe patents owned by such companies. In order to avoid the significant costs associated with our defense in litigation involving such claims, we may license the use of the technologies that are the subject of these claims from such companies and be required to make corresponding royalty payments, which may harm our operating results. 
+
+     We have in the past been involved in intellectual property infringement lawsuits which harmed our operating results, and we are currently involved in two lawsuits alleging patent infringement. See Item 3, Legal Proceedings. Although we intend to vigorously defend against any such lawsuits, we may not prevail given the complex technical issues and inherent uncertainties in patent and intellectual property litigation. Moreover, the cost of defending against such litigation, in terms of management time and attention, legal fees and product delays, could be substantial, whatever the outcome. If any patent or other intellectual property claims against us are successful, we may be prohibited from using the technologies subject to these claims, and if we are unable to obtain a license on acceptable terms, license a substitute technology, or design new technology to avoid infringement, our business and operating results may be significantly harmed. 
+
+     We have several cross-license agreements with other companies. In the future, it may be necessary or advantageous for us to obtain additional patent licenses from existing or other parties, but these license agreements may not be available to us on acceptable terms, if at all. 
+
+Employees 
+
+     At December 31, 2002, we employed approximately 7,550 persons. Our future success depends in large part on the continued service of our key technical and management personnel and on our ability to continue to attract and retain qualified employees, particularly those highly skilled design, process and test engineers involved in the manufacture of existing products and the development of new products and processes. The competition for such personnel is intense, and the loss of key employees, none of whom is subject to an employment agreement for a specified term or a post-employment non-competition agreement, could harm our business. 
+
+10 
+
+
+
+--------------------------------------------------------------------------------
+
+
+Table of Contents
+
+Backlog 
+
+     We make a significant portion of our sales to satisfy recently received purchase orders. We also accept purchase orders for deliveries covering periods up to approximately one year. However, all purchase orders can be revised or cancelled by the customer without penalty. Considering these practices and our experience, we do not believe our record of customer purchase orders provides meaningful backlog figures or that it is reliable enough to predict actual sales for future periods. 
+
+Geographic Areas 
+
+     In 2002, 22% of our sales were made to customers in North America, 43% to customers in Asia, 33% to customers in Europe, and 2% to customers in other regions. As described in Note 13 of Notes to Consolidated Financial Statements, 21% of our sales were made to customers in the United States. We determine where our sales are made by the destination of our products when they are shipped. At the end of 2002 we owned long-lived assets in the United States amounting to $351 million, in France, $448 million, in Germany, $25 million and in the UK, $215 million. 
+

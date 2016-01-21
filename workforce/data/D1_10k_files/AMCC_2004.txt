@@ -1,0 +1,575 @@
+Item 1.    Business. 
+
+ 
+
+In this annual report on Form 10-K, “Applied Micro Circuits Corporation”, “AMCC”, the “Company”, “we”, “us” and “our” refer to Applied Micro Circuits Corporation and all of our consolidated subsidiaries. 
+
+ 
+
+Applied Micro Circuits Corporation was incorporated and commenced operations in California in 1979. AMCC was reincorporated in Delaware in 1987. Our principal executive offices are located at 6290 Sequence Drive, San Diego, California 92121, and our phone number is 858-450-9333. Our website is located at www.amcc.com. The information that can be accessed on or through our website is not intended to be part of this report. Various documents concerning us that are electronically filed with or furnished to the SEC, including our annual reports on Form 10-K, quarterly reports on Form 10-Q, and current reports on Form 8-K are available, free of charge, on our website. Our common stock trades on the Nasdaq National Market under the symbol “AMCC”. 
+
+ 
+
+Overview 
+
+ 
+
+We design, develop and market technology products for the communications and storage equipment markets. Our products are essential for the transport, processing, switching, routing and storage of information worldwide. We utilize a combination of design expertise coupled with system-level knowledge and multiple technologies to offer integrated circuit, or IC, products, as well as printed circuit board assemblies or PCBAs, for these markets. We generate revenues in the communications market primarily through sales of our IC products to communications equipment manufacturers, such as Alcatel, Ciena, Cisco, Fujitsu, Hitachi, Huawei, JDS Uniphase, Juniper, Lucent, Marconi, NEC, Nortel, Siemens, and Tellabs. In the storage market, we generate revenues primarily through sales of our host bus adaptor boards, or HBAs, to original equipment manufacturers, or OEMs, such as EMC, Hitachi Data Systems, Network Appliance, StorageTek and Sun Microsystems. 
+
+ 
+
+In September 2003 and January 2004, we purchased assets and licensed intellectual property associated with IBM’s PowerPRS Switch Fabric product line (the PRS Business) for approximately $50 million in cash to complement our existing switch fabric product portfolio. In October 2003, we completed the acquisition of all outstanding shares of JNI Corporation (JNI), a provider of Fibre Channel hardware and software products that are critical elements of storage networks, for approximately $196.4 million in cash. During the fourth quarter of fiscal 2004, we signed a definitive agreement to acquire 3Ware, Inc. 3Ware provides high-performance, high capacity Serial ATA (SATA) storage solutions for emerging storage applications such as disk-to-disk backup, near-line storage, network-attached storage (NAS), video, and high-performance computing. Subsequent to year 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+end, on April 1, 2004, we paid approximately $145.0 million in cash to complete this transaction. In addition, on April 13, 2004, we announced a definitive agreement to acquire intellectual property and a portfolio of assets associated with IBM’s 400 series of embedded PowerPC® standard products, (the Embedded Processor Business) for approximately $227.9 million in cash. The PowerPC 400 series product line delivers performance and a rich mix of features for Internet, communication, data storage, consumer and imaging applications. We plan to continue evaluating strategic opportunities as they arise, including business combinations, strategic relationships, capital infusions and the purchase and sale of assets. 
+
+ 
+
+Industry Background 
+
+ 
+
+The Communications Industry 
+
+ 
+
+Communications technology has evolved considerably over the last several years due to the substantial growth in the Internet and wireless communications. The emergence of new applications, such as wireless web devices, as well as the increase in demand for higher speed, higher bandwidth and remote network access have increased network bandwidth requirements. 
+
+ 
+
+The increase in volume and complexity of this network traffic has led to the development of new technologies for use in these networks. These technologies provide substantially greater transmission capacity, are less error prone and are easier to maintain than copper networks. For example, the Synchronous Optical Network, or SONET, standard in North America and Japan and the Synchronous Data Hierarchy, or SDH, standard in the rest of the world became the standards for the transmission of signals over optical fiber. The SONET/SDH standards facilitate high data integrity and improved network reliability, while reducing maintenance and other operation costs by standardizing interoperability among equipment from different vendors. With data and video traffic being added in abundance to voice traffic, Asynchronous Transfer Mode, or ATM, emerged as a transmission protocol complementary to SONET/SDH to optimize bandwidth utilization. With exponential increases in data traffic and very modest increases in voice traffic, data has become the dominant traffic over all networks today. Because of the bandwidth growth and cost pressures in today’s datacentric networks, more advanced optical networking technologies, such as Dense Wave Division Multiplexing, or DWDM, have been adopted. DWDM is the optical multiplexing of different wavelengths of light down a single fiber. Each wavelength is the equivalent of an independent optical channel. DWDM greatly increases the capacity of installed fiber. Complementing DWDM transmission capabilities are technologies such as optical Add-Drop Multiplexers, or ADMs, and cross-connects which can more efficiently switch large optical datapaths through the network. Other protocols, such as multi-protocol level switching, or MPLS, have emerged that are better suited for data traffic while providing for the low latency and quality of service needs of voice and video traffic. The SONET/SDH standards have also evolved to more efficiently handle these new protocols with general framing protocol and virtual concatenation. In addition, emerging technologies such as multi-service provisionary platforms, or MSPPs, and multi-service switches, or MSSs, allow for the convergence of voice and data. 
+
+ 
+
+The combination of increased traffic and emerging technologies has placed added pressure on the existing communications network infrastructure and made many systems’ architectures inadequate. In the late 1990’s, communication service providers and equipment suppliers were affected by the inadequacy of systems’ architectures and began investing in data networks to meet the rapidly growing demands of their customers. In addition, deregulation of the communications industry and privatization of many European carriers resulted in increased market competition. The abundance of available capital in the public and private markets accelerated the build-out of new network infrastructure. Additional telecommunication companies, or carriers were launched with the goal of capturing significant market share. All of these factors drove a significant increase in capital spending on networking equipment by both the incumbent and emerging carriers. 
+
+ 
+
+During this period of rapid expansion, our customers placed increased orders with us and their other suppliers to ensure that they had the components needed to fulfill the expected growth in demand for networking equipment. In retrospect, it appears that OEMs ordered more devices than they needed to secure component 
+
+ 
+
+2 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+delivery. This resulted in inventory levels expanding at the OEMs, contract manufacturers, distributors, and component suppliers. 
+
+ 
+
+This environment changed suddenly at the end of our fiscal 2001. As capital markets tightened, the communications industry and the overall economy began to slow down. Many of the incumbent carriers decreased capital expenditures on networking equipment in an effort to stabilize their financial condition and many of the emerging carriers were unable to attract sufficient customers and failed. 
+
+ 
+
+Due to this downturn, we experienced a significant drop in sales and orders of our products, and a sharp increase in order cancellations during fiscal 2002 and 2003. Over the last three fiscal years, we have focused on reducing our expenses, maintaining our strong position in the communications IC market by strategically investing in new products and more recently diversifying our business into other growth markets, such as the storage market. 
+
+ 
+
+The Storage Industry 
+
+ 
+
+The volume of business-critical data generated, processed, stored and manipulated has grown dramatically over the last decade. Managing the increase in stored data is one of the most important challenges for organizations today. Traditionally, enterprises accessed stored networked data using a server-centric architecture known as direct attached storage. In this architecture, a single server controls access to each storage device, and stored data is only available to applications running on the server directly connected to the storage device. For large enterprises that rely on significant storage networks, this creates a bottleneck that can degrade overall network performance, drain server processing power, complicate network management and increase costs. To address these issues, large enterprises have deployed emerging networked storage architectures, including Storage Area Networks, or SANs, to access, share and manage data storage. A SAN is a dedicated network of interconnected servers and data storage devices using a switching element to enable data sharing at gigabit speeds. SANs provide an open, scalable platform for storage access in data intensive environments. 
+
+ 
+
+The rapid adoption of SANs was made possible by the emergence of the Fibre Channel interconnect protocol. Fibre Channel is a computer communications protocol designed to meet the many requirements related to the increasing demand for high performance information transfer. As a result of its broad range of features, many industry analysts consider Fibre Channel to be the most reliable and scalable communications technology available today for high speed transmissions of blocks of data. Because Fibre Channel technology is so effective in handling data block transmissions, it can be implemented in a wide variety of applications, including enterprise resource planning, digital video transmission and editing and data warehousing. To date, Fibre Channel technology has been most widely accepted and deployed in SANs, but a number of next generation technologies are currently under development, including iSCSI, that are expected to provide new alternatives for server to storage connectivity that have the potential to expand the adoption and flexibility of SANs. 
+
+ 
+
+The Communications IC and Storage Opportunities 
+
+ 
+
+Communications IC 
+
+ 
+
+Industry analysts report that network traffic continues to grow. The continuing adoption of broadband technology and next-generation wireless devices is expected to drive additional data traffic through the network infrastructure in the future. To address these opportunities, OEMs are looking to develop systems that are more economically suitable to capitalize on these opportunities. To achieve the performance and functionality required by such systems, these OEMs must utilize more complex ICs to address both the cost and functionality of a system. As a result of the pace of new product introductions, the proliferation of standards to be accommodated and the costs and difficulty of designing and producing the required ICs, equipment suppliers have increasingly outsourced these ICs to semiconductor firms with specialized expertise. These trends have created a significant opportunity for IC suppliers that can design cost-effective solutions for the transmission of data. IC suppliers must utilize a variety of skills and technologies to satisfy the requirements of communications OEMs. These OEMs require IC suppliers that possess system-level expertise and can quickly bring to market high- 
+
+ 
+
+3 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+performance, highly reliable, power-efficient ICs. These OEMs seek suppliers with a wide skills base including both analog and digital expertise to provide a more complete solution that enables faster integration into the system design and higher performance. 
+
+ 
+
+Application specific integrated circuits, or ASICs, are custom products that are designed for only a single customer or OEM, and can be sold only to that OEM. Application specific standard products, or ASSPs, are standards based products that are designed for, and can be used by, multiple OEMs. Our customers are looking for ways to accelerate their time-to-market, reduce research and development cost, and ensure interoperability of components in their systems. ASSPs generally can be designed into the systems and brought to market in less time and for less cost. We believe that as more companies realize the development cost and time-to-market benefits that ASSPs provide, they will be more apt to use ASSPs in the future. Most of our products are ASSPs, and we believe that the trend towards greater usage of ASSPs in communications and storage area network systems will continue. 
+
+ 
+
+Storage 
+
+ 
+
+The proliferation of the Fibre Channel standard for SAN has resulted in the increased need for Fibre Channel equipment and software. Servers and other storage elements are connected in a SAN through the use of Host Bus Adaptors, or HBAs. The HBA market has been growing steadily over the past five years as the need for networked storage has increased. The major OEM’s providing networked storage solutions typically use HBAs developed and manufactured by outside companies such as us, Emulex and Qlogic. It is important to storage users that the HBAs interoperate with a variety of servers, storage elements and switches. Thus, a great deal of attention is placed on ensuring this interoperability. This emphasis on interoperability places high barriers to entry into the HBA market and requires products which have been proven in field applications, as well as large, capital-intensive interoperability labs. 
+
+ 
+
+In addition to HBAs, the other equipment elements within a SAN contain a significant amount of IC content. The functions of these ICs include Fibre Channel interconnect, control, management, and switching. The growing demand for networked storage has fueled the development of new technologies targeted to capitalize on this growing opportunity. Such technologies include 4 Gigabits per second, or Gbps Fibre channel, iSCSI and SATA storage. The emergence of new technologies and faster, more complex storage networks requires the storage providers, or OEMs, to develop systems that achieve the performance and functionality required by such systems. Accordingly, these OEMs must utilize more complex ICs. As a result of the pace of new product introductions, the proliferation of standards to be accommodated and the costs and difficulty of designing and producing the required ICs, equipment suppliers are outsourcing these ICs to semiconductor firms with specialized expertise. These trends have created an opportunity for IC suppliers that can design cost-effective solutions for the storage environment. IC suppliers must utilize a variety of skills and technologies to satisfy the requirements of networked storage OEMs. These OEMs require IC suppliers that possess system-level expertise and can quickly bring to market high-performance, highly reliable, cost and power-efficient ICs. 
+
+ 
+
+AMCC Strategy 
+
+ 
+
+Our objective is to be the leading supplier of technology products for the transport, switching, routing and storage of information worldwide. Our strategy for achieving this objective includes: 
+
+ 
+
+Focus on the Market Leading Systems within the Communications and Storage Markets 
+
+ 
+
+We target key OEM product families that hold significant and/or rapidly growing market share. We have built substantial competencies focused on the specific requirements of these key OEM product families in the areas of semiconductor process technology, mixed-signal, very dense digital design, and substantial expertise in systems architecture, software and applications support. We believe that the integration of these capabilities enables us to optimize solutions addressing the high-bandwidth connectivity requirements of market leading equipment suppliers. 
+
+ 
+
+4 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+Acquire Complementary Businesses, Products or Technologies 
+
+ 
+
+A key element of our business strategy involves acquiring new businesses, products or technologies that allow us to reduce the time required to develop and bring to market new technologies and products, complement our existing product offerings, expand our market coverage, or enhance our technological capabilities. In September 2003 and January 2004, we purchased assets and licensed intellectual property associated with IBM’s PowerPRS Switch Fabric product line for approximately $50.0 million in cash to complement our existing switch fabric product portfolio. In October 2003, we completed the acquisition of all of the outstanding shares of JNI Corporation, a provider of Fibre Channel hardware and software products that are critical SAN elements, for approximately $196.4 million in cash. In April 2004, we acquired 3ware, Inc. for approximately $145.0 million in cash, which expanded our product offerings in the storage market. In May 2004, we purchased assets and licensed intellectual property associated with IBM’s 400 series of embedded PowerPC standard products for approximately $227.9 million in cash to complement our existing product portfolio in both the communications and storage markets. We plan to continue evaluating strategic opportunities as they arise, including business combinations, strategic relationships, capital infusions and the purchase and sale of assets. 
+
+ 
+
+Increase the Number of Products we Provide to Address Specific Protocols and Networking Functions 
+
+ 
+
+We focus our new product development efforts and acquisition activities on product lines that are complementary to our current product portfolio in order to broaden the number of products we provide to address specific protocols and networking functions. For example, our current product offerings include physical layer products, overhead processor products, and higher layer products for communications applications, and HBAs and RAID controllers for enterprise storage applications. Both communications and enterprise storage applications may use general purpose processors, like the 400 series PowerPC processors acquired from IBM in May 2004. We believe that we will be able to increase our sales to existing customers and increase our market share in the communications and storage enterprise markets by taking advantage of product synergies and integration opportunities. 
+
+ 
+
+Increase our Market Share in Non-Solaris Storage Environments 
+
+ 
+
+Our HBAs have achieved their greatest market acceptance in computing environments built with high-end servers from Sun Microsystems due to our products’ interoperability with the Sun Solaris operating system. To increase our revenues and grow our storage business we are focusing significant marketing and qualification efforts on building market share with our newer products that interoperate with other operating systems. 
+
+ 
+
+Provide a Time-to-Market and Development Cost Advantage to Our Communications Equipment OEMs 
+
+ 
+
+Due to the extended downturn in the communications industry, our OEM customers have become more efficient with their engineering resources and have significantly cut equipment development budgets. Our strategy is to provide our customers with a complete portfolio of IC products. We believe this comprehensive solution strategy provides our customers with guaranteed interoperability, pre-designed subsystems, better cost economics, and system-level expertise. The result for the OEM is faster time-to-market, better performance and lower development cost. To continue these customer benefits in future generations of products, we are pursuing an aggressive product integration strategy to provide greater functionality in fewer ICs. 
+
+ 
+
+5 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+Products and Customers 
+
+ 
+
+Communications Products 
+
+ 
+
+Our semiconductor products are used in a wide variety of communications equipment, including routers, optical and digital cross connects, next-generation voice and media gateways, ADMs, MSPPs, MSSs, digital subscriber line access multiplexers, or DSLAMs and wireless base stations and access points. We provide our customers with a complete portfolio of IC products, including physical layer products such as transceivers, overhead processing products such as framers and mappers, and higher layer products such as network processors, traffic managers and switch fabrics. We have different types of communications IC products which are categorized by the order in which they receive and transmit signals and information within communication equipment. These categories are: 
+
+ 
+
+Physical Layer:    Our physical layer ICs transmit and receive signals in a very high-speed serial format and reduce overall system “noise” through the inclusion of highly efficient dispersion compensation methodologies. This low noise capability permits the transmission of signals over greater distances with fewer errors. Our physical layer ICs also convert high-speed serial formats to low-speed parallel formats for the framing layer and vice versa. 
+
+ 
+
+We introduced our first generation of physical layer products in 1993. We have since developed several generations of these products improving cost, power, functionality, and performance. During fiscal 2004, we introduced the S19235 and S19237 10 Gbps Complementary Metal Oxide Semiconductor, or CMOS, Transceiver devices, the S3394, our next generation Electronic Dispersion Compensation device as part of the DispersionXX™ system solution, and a new OC3/OC12 Transceiver device called the S1213. Our current customers for physical layer products include Alcatel, Ciena, Cisco, Fujitsu, Hitachi, JDS Uniphase, Juniper, Lucent, Marconi, Nortel, Tellabs, Huawei, and ZTE. 
+
+ 
+
+Framing Layer:    Our framing layer ICs transmit and receive signals to and from the physical layer in a parallel format and are used in high-speed transmission equipment, MSPPs, ADMs, digital and optical cross-connects, edge and core routers, and DWDM. These ICs support a number of functions, including framing, overhead processing payload synchronization, performance monitoring, forward error correction, and mapping the data payload to/from the transmission format. The framing layer ICs then pass the data either directly to a switch fabric product, which switches the information to its destination, or to a network processor, which further processes the data prior to forwarding it to a switch fabric product. Framing layer ICs also process signals received from the network processing and switching layers for transmission to the physical layer on their return to the optical network. 
+
+ 
+
+In fiscal 2004 we introduced our second generation enhanced forward error correction device called Rubicon. We also introduced our first Local Area Network, or LAN Protocol Mapping device called Volta, which allows our customers’ systems to map LAN signals (like Gigabit Ethernet or Fibre Channel) into the existing Wide Area Network, or WAN, infrastructure for transport across the WAN network. We also introduced the Evros and Tigris devices as part of our multi-sourcing switching solution for high density termination of data services utilizing Plesiochronous Digital Hierarchy, or PDH/SONET/SDH protocols. Our current customers for framing layer products include Ciena, Cisco, Lucent, Marconi, NEC, Nortel, Tellabs, Fujitsu, Huawei, and ZTE. 
+
+ 
+
+Network Processing and Traffic Manager Layer:    Our network processor ICs are software programmable processors that receive and transmit signals from and to the framing layer and perform the processing of packet and cell headers, including such functions as real-time parsing, matching and table look-up, as well as bit stream manipulations, such as adding, deleting, substituting, appending and pre-pending. They can perform intelligent packet classification for policy-based network services. Our traffic managers interface with the network processors and perform the queuing and buffering functions required on packets and cells. Traffic managers usually interface with network processors on one side and switch fabric devices on the other. 
+
+ 
+
+6 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+During fiscal 2004, we announced the nP3700, an integrated 5Gbps network processor and traffic management device. Along with the application software stacks, it supports a mix of DSI Layer-2 protocols on all client channels. In addition to high-performance packet processing and fine-grained traffic management, the nP3700 includes specialized co-processors that perform functions such as classification, policing, and coherent database management for excellent line-rate performance for a broad range of applications from DSLAMs, Edge Routers, MSSs and MSPPs. Our current customers for network processors and traffic manager devices include Alcatel, Cisco, Fujitsu, Nortel, Lucent, Huawei and Juniper. 
+
+ 
+
+Switching Layer:    Our switch fabric ICs switch the information in the proper priority and to the proper destinations. During fiscal 2004, we broadened our portfolio of switch fabric devices by acquiring the PRS business from IBM. The PRS business includes packet routing switch fabric devices such as the PRS 28.4G, PRS 64G, 64Gu and the Q-64G. The PRS business also includes queuing managers like UDASL, C48 and C192. In addition, we introduced a new PRS 80G / C48X and C192X switch devices delivering higher overspeed for demanding Ethernet and Packet over SONET applications. Our current customers for switching layer products include Alcatel, CNT/Inrange, Fujitsu, Huawei, Lucent, Maranti, Marconi, Mitsubishi, Motorola, Nortel, Siemens and Tellabs. 
+
+ 
+
+Storage Products 
+
+ 
+
+Our current products for the storage product include a suite of Fibre Channel HBAs, InfiniBand connectivity modules, and adaptor based Peripheral Component Interconnect, or PCI, Redundant Array of Inexpensive Disks, or RAID, solutions for parallel and serial ATA storage. 
+
+ 
+
+Fibre Channel HBAs:    We design, manufacture and sell a suite of Fibre Channel HBAs, management software and related device driver software. An HBA is a PCBA that fits standard sockets on motherboards for servers and workstations that enable high-speed data transfer within the SAN. Communication between the HBA and the operating system is regulated by device driver software that is included with the HBA. The device driver software also provides a high-reliability data path from a user’s application to a storage device across a SAN. Working in conjunction with our device driver software, our HBAs work in many SAN topologies, interoperate with major operating systems and can be used with the PCI, PCI-X, cPCI, PCI express and SBus interfaces. Our HBAs are widely deployed in demanding SAN environments by Global 1000 enterprises. 
+
+ 
+
+We offer Fibre Channel HBAs in a variety of price, performance and feature sets. Our FibreStar products incorporate our proprietary ASICs. Our ASICs were the first Fibre Channel controllers to operate at a 2 Gb rate. They incorporate an efficient, proprietary data flow architecture and a high performance embedded processor that enables a highly integrated Fibre Channel subsystem design that delivers full Fibre Channel bandwidth. We also sell the ASICs separately to OEMs for products such as SAN controllers for disk arrays, tape libraries, switches and other SAN devices. 
+
+ 
+
+The FibreStar line of products is designed with high-performance, cut-through architecture, low CPU utilization, a highly efficient physical layer design and a modular software structure. Our PC Server DriverSuite is a single, integrated software driver platform that enables our FibreStar HBAs to operate under all major PC server operating systems, including Microsoft Windows 2003 and Windows 2000. The Unix DriverSuite complements the PC Server DriverSuite and is designed to allow FibreStar HBAs to operate in demanding Unix environments, including Solaris and Linux. We also offer our EZ Fibre management software with our HBAs to simplify the installation and configuration of HBAs in SANs and to provide diagnostic and monitoring information to SAN administrators. 
+
+ 
+
+HCA Modules:    A host channel adapter, or HCA, is an interface that resides within a server and communicates directly with the server’s memory and processor as well as with the InfiniBand network fabric. When placed on a PCBA similar to a HBA, it is referred to as an HCA module under the naming guidelines set forth by the InfiniBand Architecture specification. An HCA module guarantees delivery of data, performs 
+
+ 
+
+7 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+advance memory access and can recover from transmission errors. Our HCA products combine Mellanox Technologies’ InfiniBridge 10 Gb ASIC with our driver software technology. The dual-port IBX-4x02 achieves 10 Gb data link speeds in each direction for each 4x port. In full duplex mode, the result is a total of 40 Gb speed per HCA module. Our HCA IBX-4x02 was the first high performance 10 Gb InfiniBand HCA module delivered to market. 
+
+ 
+
+RAID Connectors:    PCI RAID Adaptors. Through our acquisition of 3ware, we design, manufacture and sell a host of PCI RAID adaptors for both parallel and serial ATA storage. A PCI RAID adaptor is a PCBA that fits standard sockets on motherboards for servers and enables high reliability access and storage of data onto storage disk drives. Communication between the adapter and the operating system is regulated by device driver software that is included with the adapter. Our adaptors operate with Linux and Windows operating systems with various performance, port counts and functionality. We implement our RAID functionality using a 5th generation packet-switched RAID architecture, StorSwitchTM. This architecture is implemented in proprietary ASICs we developed. 
+
+ 
+
+The 3ware 7000 series is a parallel ATA adaptor first introduced in 1999. The 8000 series when introduced in August, 2002 was the industry’s first SATA RAID adaptor. The 8000 series provides very high data transfer rates while performing RAID functionality and is available in 2, 4, 8 and 12 port configurations. In April 2004, we introduced the 9000 series of SATA RAID controllers. The 9000 series enables a new class of SATA RAID storage solutions for rich media content servers. The 9000 series is available in 4, 8 and 12 port configurations. 
+
+ 
+
+Embedded Processor Products 
+
+ 
+
+Through our acquisition of the Embedded Processor Business in May 2004, we have enhanced our standard products portfolio for the communications and storage markets, and have also diversified into other markets which make use of embedded processors. Our embedded processor products are comprised of approximately 150 ICs which utilize IBM’s PowerPC 4xx processor cores in various speed grades, together with many different functions, to perform numerous tasks in products sold by our customers. Our customers in the communications market utilize these products in applications including wireless base stations, access points, networking hubs, edge routers and switches. Our customers in the storage market utilize these products in controllers, switches, adapters, servers, RAID systems and work stations. Our customers in the pervasive computing market utilize these products in printers, internet access and gaming devices. 
+
+ 
+
+Automated Test Equipment, Military and High-Speed Computing Products 
+
+ 
+
+We are not currently developing new products for the Automated Test Equipment, or ATE, or military markets, but we continue to sell ASIC products to customers such as Agilent, Harris, IBM, LTX, Northrop Grumman, Raytheon, Schlumberger, Teradyne and Texas Instruments. The majority of these products were manufactured in our internal wafer manufacturing facility, which closed in fiscal 2003. During fiscal 2004, we continued to fill last-time-buy orders for these products. Our high-speed computing products were not manufactured in our internal wafer manufacturing facility, and we will continue to sell these products for the foreseeable future. The revenue from such products is expected to be modest. 
+
+ 
+
+Technology 
+
+ 
+
+We utilize our technological and design competencies to solve the problems of high-speed analog, digital and mixed-signal circuit designs for optical communications systems and provide the essential technology products for the transport, switching, routing and storage of information worldwide. We blend systems and software expertise with high-performance, high-bandwidth silicon integration to deliver communications ICs and software for global Communication Networks, Fibre Channel HBAs for SANs, and hardware and software solutions for high-growth storage markets such as SATA RAID. 
+
+ 
+
+8 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+Knowledge of Communications ICs and Enterprise Storage 
+
+ 
+
+Our systems architects, design engineers and technical marketing and applications engineers have a thorough understanding of the fiber optic communications and enterprise storage systems for which we design and build ASSPs. Using this systems expertise, we develop semiconductor and storage connectivity devices to meet the OEMs’ high-bandwidth requirements. By understanding the systems into which our products are designed, we believe that we are better able to anticipate and develop solutions optimized for the various cost, power and performance trade-offs faced by our customers. We believe that our systems knowledge also enables us to develop more comprehensive, interoperable solutions. This allows us to develop products that fulfill customers’ system needs from fiber-through-switch fabrics, enabling faster integration into their products. 
+
+ 
+
+Design of Communications ICs and Storage Solutions 
+
+ 
+
+We have developed multiple generations of products that integrate both analog and digital elements on the same IC, while balancing the difficult trade-offs of speed, power and timing inherent in very dense high-speed applications. We were one of the first companies to embed analog phase locked loops in bipolar chips with digital logic for high-speed data transmission and receiver applications. Since the introduction of our first on-chip clock recovery and clock synthesis products in 1993, we have refined these products and have successfully integrated multiple analog functions and multiple channels on the same IC. The mixing of digital and analog signals poses difficult challenges for IC designers, particularly at high frequencies. We have gained significant expertise in mixed-signal IC designs through the development of multiple product generations. We will continue to apply these competencies in the development of more complex products in the future. 
+
+ 
+
+We have developed storage connectivity products that interoperate with all SAN topologies and major operating systems and interfaces. We were the first company to offer Fibre Channel controllers that operate at a 2 Gbps rate and were the first to deliver a high performance 10 Gbps InfiniBand HCA module to market. We intend to continue working closely with leaders in the storage, networking and computing industries to design and develop new and enhanced storage connectivity products. We believe that establishing strategic relationships with technology partners is essential to ensure that we continue to design and develop competitive products that integrate well with solutions from other leading participants in the storage markets. 
+
+ 
+
+Research and Development 
+
+ 
+
+Our research and development expertise and efforts are focused on the development of high-performance analog, digital and mixed-signal IC’s for the communications and storage markets, Fibre Channel host bus adapters and related software drivers and tools for storage applications, and hardware and software solutions for storage markets such as SATA RAID. We also develop high-performance libraries and design methodologies that are optimized for these applications. Our primary research and development facilities are located in San Diego and Sunnyvale, California and Andover, Massachusetts in the United States; LaGaude, France and Netanya, Israel. During the fiscal years ended March 31, 2004, 2003 and 2002, we expended $112.6 million, $131.9 million and $154.6 million on research and development activities, respectively. 
+
+ 
+
+Our IC product development is focused on building high-performance, high-gate-count digital and analog-intensive designs that are incorporated into well-documented blocks that can be reused for multiple products. We have made, and will continue to make, significant investments in advanced design tools to leverage our engineering staff. Our product development is driven by the imperatives of reducing design cycle time, increasing first-time design correctness, adhering to disciplined, well documented design processes, and continuing to be responsive to customer needs. We are also developing high-performance final assembly packages for our products in collaboration with our packaging suppliers and our customers. 
+
+ 
+
+Our PCBA product development efforts are focused on building high-performance Fibre Channel HBA and SATA RAID adaptors, and related software drivers, tools and products. Before a new product is developed, our 
+
+ 
+
+9 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+research and development engineers work with marketing managers and customers to develop a comprehensive requirements specification. After the product is designed and commercially released, our engineers continue to work with customers on early design-in efforts to understand requirements for future generations and upgrades. We have established a system integration lab, or SIL, in San Diego to provide comprehensive functional and system level integration/interoperability testing between our connectivity products and various computer platforms and network environments. To facilitate expanded market penetration of our products and technology, our integration test methodologies and software are continually evolving as we strive to deliver best in class testing capabilities that we can offer to major storage suppliers and OEMs. We conduct functionality testing at our SIL in formal, repeatable processes using documented product specifications and features to verify the operation of both our hardware and our software. The overall goal is to ensure enterprise class performance and interoperability in real world deployments. 
+
+ 
+
+Manufacturing 
+
+ 
+
+Manufacturing of Integrated Circuits 
+
+ 
+
+The manufacturing of ICs requires a combination of competencies in advanced silicon technologies, package design and manufacturing, and high speed test and characterization. We have obtained access to advanced CMOS and SiGe processes through foundry relationships. We have substantial experience in the development and use of plastic and ceramic packages for high-performance applications. The selection of the optimal package solution is a vital element of the delivery of high-performance products and involves balancing cost, size, thermal management, and technical performance. We purchase our ceramic packages from several vendors including IBM, Kyocera America, Motorola and NTK Ceramics and our plastic packaging from Amkor, ASE, ASAT and IBM. 
+
+ 
+
+ 
+
+Wafer Fabrication 
+
+ 
+
+During fiscal 2003, we closed our internal wafer fabrication facility in San Diego. As a result, we are a fabless company, meaning we do not own or operate foundries for the production of silicon wafers from which our products are made. We will continue to use external foundries such as IBM, Taiwan Semiconductor Manufacturing Corporation, or TSMC, and United Microelectronics Corporation, or UMC, for a majority of our production of silicon wafers. Subcontracting our manufacturing requirements eliminates the high fixed cost of owning and operating a semiconductor wafer fabrication facility and enables us to focus our resources on design and test applications where we believe we have greater core competencies and competitive advantages. 
+
+ 
+
+Assembly and Testing 
+
+ 
+
+Our wafer probe and other product testing is conducted at our internal testing facility as well as at independent test subcontractors. After testing is complete, the majority of our products are sent to multiple subcontractors located in Asia and the United States for assembly. Following assembly, some of the devices are tested at the subcontractors and returned to us ready for shipment to our customers; or to us for final testing and marking prior to shipment to customers. Certain of these services are available from a limited number of sources and lead times are occasionally extended. 
+
+ 
+
+Manufacturing of Printed Circuit Board Assemblies 
+
+ 
+
+We believe most component parts used in our Fibre Channel HBAs and RAID adaptors are standard off-the-shelf items which can be purchased from two or more sources, other than our proprietary ASICs and certain integrated circuits. We select suppliers on the basis of functionality, manufacturing capacity, quality and cost. Whenever possible and practicable, we strive to have at least two manufacturing locations for each product. Our contract manufacturers generally purchase the components for our products, and assemble them to our specifications. 
+
+ 
+
+10 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+Sales and Marketing 
+
+ 
+
+Our sales and marketing strategy is to develop strong, engineering-intensive relationships with the design teams of the market leading platforms at our customers. We maintain close working relationships with these customers so our marketing team can focus on identifying and developing new products that will meet their needs in the future, involving us in the early stages of our customers plans to design new equipment. We sell our products both directly and through a network of independent manufacturers’ representatives and distributors. Our direct sales force is technically trained. Expert technical support is critical to our customers’ success and we provide such support through our field applications engineers, technical marketing team and engineering staff, as well as through our extranet technical support web site. 
+
+ 
+
+We augment this strategic account sales approach with domestic and foreign distributors that service primarily smaller accounts purchasing standard products. In North America, we have one primary distributor. Internationally, we sell our products through manufacturers’ representatives and distributors. Typically, these distributors handle a wide variety of products, including those that compete with our products, and fill orders for many customers. Most of our sales to distributors are made under agreements allowing for price protection and right of return on stipulated quantities of unsold merchandise. Our sales headquarters is located in San Diego, California. We maintain sales offices throughout the world. Net revenues generated from each category of our products is summarized in Item 7, “Management’s Discussion and Analysis of Financial Condition and Results of Operations.” Information regarding net revenue generated from each of our significant customers, as well as domestic and foreign revenue from the sale of our products, is provided in Note 10 to the Consolidated Financial Statements. 
+
+ 
+
+Backlog 
+
+ 
+
+Our sales are made primarily pursuant to standard purchase orders for the delivery of products. Quantities of our products to be delivered and delivery schedules are frequently revised to reflect changes in customers’ needs; customer orders generally can be cancelled or rescheduled without significant penalty to the customer. For these reasons, our backlog as of any particular date is not representative of actual sales for any succeeding period, and therefore, we believe that backlog is not necessarily a good indicator of future revenue. 
+
+ 
+
+Competition 
+
+ 
+
+In the communications IC markets, we compete primarily against companies such as Agere, Broadcom, Intel, Mindspeed, PMC-Sierra, and Vitesse. Our principal competitors in the PCBA market are Adaptec, Emulex, Qlogic, Agilent, Hewlett-Packard and LSI Logic. As a result of our acquisition of IBM’s 400 series of embedded PowerPC standard products in May 2004, our list of competitors has been expanded to include large technology companies such as Motorola and IBM. In addition, certain of our customers and potential customers have internal IC or storage design or manufacturing capability with which we compete. 
+
+ 
+
+The communications IC and storage markets are highly competitive and are subject to rapid technological change, evolving standards, short product life cycles, and price erosion. We typically face competition at the design stage when our customers are selecting which components to use in their next generation equipment. In the storage market, our products can be qualified at any time, and are generally distinguished through a combination of pricing, features and reliability. We believe that the principal factors of competition for the markets we serve include: product performance, quality, reliability, integration, price, and time-to-market, as well as the Company’s reputation and level of customer support. Our ability to successfully compete in these markets depends on our ability to design and subcontract the manufacture of new products that implement new technologies and gain end market acceptance in a time efficient and cost effective manner. 
+
+ 
+
+11 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+Proprietary Rights 
+
+ 
+
+We rely in part on patents to protect our intellectual property. We have been issued approximately 120 patents, which principally cover certain aspects of the design and architecture of our IC and enterprise storage products. In addition, we have over 200 inventions in various stages of the patenting process in the United States and abroad. There can be no assurance that our pending patent applications or any future applications will be approved, or that any issued patents will provide us with competitive advantages or will not be challenged by third parties or that if challenged, will be found to be valid or enforceable, or that the patents of others will not have an adverse effect on our ability to do business. There can be no assurance that others will not independently develop similar products or processes, duplicate our products or processes or design around any patents that may be issued to us. 
+
+ 
+
+To protect our intellectual property, we also rely on a combination of mask work protection under the Federal Semiconductor Chip Protection Act of 1984, trademarks, copyrights, trade secret laws, employee and third-party nondisclosure agreements and licensing arrangements. 
+
+ 
+
+As a general matter, the semiconductor and enterprise storage industries are characterized by substantial litigation regarding patent and other intellectual property rights. In the past we have been, and in the future may be, notified that we may be infringing on the intellectual property rights of third parties. We have certain indemnification obligations to customers with respect to the infringement of third party intellectual property rights by our products. There can be no assurance that infringement claims by third parties or claims for indemnification by customers or end users of our products resulting from infringement claims will not be asserted in the future or that such assertions, if proven to be true, will not materially adversely affect our business, financial condition or operating results. In the event of any adverse ruling in any such matter, we could be required to pay substantial damages, which could include treble damages, cease the manufacture, use and sale of infringing products, discontinue the use of certain processes or obtain a license under the intellectual property rights of the third party claiming infringement. There can be no assurance that a license would be available on reasonable terms or at all. Any limitations on our ability to market our products, any delays and costs associated with redesigning our products or payments of license fees to third parties or any failure by us to develop or license a substitute technology on commercially reasonable terms could have a material adverse effect on our business, financial condition and operating results. 
+
+ 
+
+Environmental Matters 
+
+ 
+
+We are subject to a variety of federal, state and local governmental regulations related to the use, storage, discharge and disposal of toxic, volatile or otherwise hazardous chemicals that were used in our manufacturing process. Any failure to comply with present or future regulations could result in the imposition of fines, the suspension of production or a cessation of operations. Such regulations could require us to acquire costly equipment or incur other significant expenses to comply with environmental regulations or clean up prior discharges. Since 1993, we have been named as a potentially responsible party, also known as a PRP, along with a large number of other companies that used Omega Chemical Corporation in Whittier, California to handle and dispose of certain hazardous waste material. We are a member of a large group of PRPs that has agreed to fund certain remediation efforts at the Omega Chemical site, which efforts are ongoing. As of 2003, we closed our wafer fabrication facility in San Diego, and the property has been returned to the landlord. 
+
+ 
+
+12 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+EMPLOYEES 
+
+ 
+
+As of March 31, 2004, we had 723 full-time employees: 70 in administration, 464 in research and development, 68 in operations, and 121 in marketing and sales. Our ability to attract and retain qualified personnel is essential to our continued success. None of our employees are covered by a collective bargaining agreement, nor have we ever experienced any work stoppage. 
+
+ 
+
+Executive Officers of the Registrant 
+
+ 
+
+Our executive officers and their ages as of May 31, 2004, are as follows: 
+
+ 
+
+     
+Name
+
+--------------------------------------------------------------------------------
+    Age
+
+--------------------------------------------------------------------------------
+    Position
+
+--------------------------------------------------------------------------------
+ 
+David M. Rickey
+    48    Chairman of the Board of Directors, Chief Executive Officer and President 
+Roger A. Smullen, Sr.
+    68    Vice Chairman of the Board 
+Timothy M. Heenan
+    45    Senior Vice President, Operations and Quality 
+Candace H. Kilburn
+    50    Senior Vice President, Human Resources and Community Relations 
+Brent E. Little
+    40    Senior Vice President and General Manager, Storage Business 
+Faye Pairman
+    46    Senior Vice President, Storage 
+Stephen M. Smith
+    45    Senior Vice President, Chief Financial Officer 
+Ramakrishna R. Sudireddy
+    37    Senior Vice President, Engineering 
+Thomas L. Tullie
+    39    Senior Vice President, Worldwide Sales and General Manager of Communications Business 
+Joseph Vithayathil
+    51    Senior Vice President, Business Development 
+
+ 
+
+David M. Rickey re-joined us in February 1996 as President, Chief Executive Officer and as a Director. In August 2000, Mr. Rickey was appointed Chairman of the Board. From August 1993 to May 1995, Mr. Rickey served as our Vice President of Operations. From May 1995 to February 1996, Mr. Rickey served as Vice President of Operations at NexGen, a semiconductor company. Previously, for eight years, Mr. Rickey was employed by Northern Telecom, Inc., a telecommunications manufacturer now known as Nortel Networks Corporation, where he led the wafer fab engineering and manufacturing operations in both Ottawa, Canada and San Diego, California. Mr. Rickey has earned B.S. degrees from both Marietta College (summa cum laude) and Columbia University. In addition, Mr. Rickey received a M.S. in Materials Science and Engineering from Stanford University. 
+
+ 
+
+Roger A. Smullen, Sr. was elected Vice Chairman of the Board in August 2000. Mr. Smullen served as the Chairman of the Board from October 1982 to August 2000. Mr. Smullen also served as our Acting Vice President, Operations from August 1997 through October 1997 and our Chief Executive Officer from April 1983 until April 1987. Previously, he was Senior Vice President of Operations of Intersil, Inc.’s semiconductor division. In 1967, Mr. Smullen co-founded National Semiconductor Corporation, a manufacturer of integrated circuits. Prior to that, he was Director of Integrated Circuits at Fairchild Semiconductor, a manufacturer of integrated circuits. Mr. Smullen is currently a Director of Micro Linear Corporation, a manufacturer of integrated circuits. He holds a B.S. in Mechanical Engineering from the University of Minnesota. 
+
+ 
+
+Timothy M. Heenan joined us in October 2000 through the acquisition of MMC Networks. Mr. Heenan was promoted to Vice President of Operations in August 2001 and to Senior Vice President in September 2003. Prior to joining MMC Networks, Mr. Heenan was the Director of Test Operations at Cirrus Logic, Inc., where he was responsible for worldwide manufacturing test operations. Before his tenure at Cirrus Logic, Mr. Heenan held various engineering positions at Signetics Corporation. Mr. Heenan holds a B.S. degree in Materials Engineering from Rensselaer Polytechnic Institute and a M.S. degree in Engineering Management from Santa Clara University. 
+
+ 
+
+13 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+Candace H. Kilburn joined us in September 1996 as Director of Human Resources and was promoted to Vice President in August 1999 and to Senior Vice President in December 2003. From 1990 to 1996, Ms. Kilburn served as Director of Human Resources with Buck Knives Inc., where she was responsible for international human resources. She has also held positions at Handyman Corporation and Rohr Industries. Ms. Kilburn earned a B.S. in Business Administration from United States International University, and a M.B.A. from Chapman University. She is designated as a Senior Professional in Human Resources, a certified Employee Benefits Specialist, and has two certificates in Human Resources Management. 
+
+ 
+
+Brent E. Little joined us in 1991 and was promoted to Senior Vice President in January 2001. Prior to his current position as Senior Vice President and General Manager, Storage Business, Mr. Little led our marketing group as the Senior Vice President, Corporate Marketing. Before being promoted to Senior Vice President in 2001, Mr. Little held several marketing management positions with us, including Director of Strategic Marketing and Director of Marketing for ASIC products. Prior to joining us, Mr. Little worked as Business Development Manager for Analysis and Technology, Inc. and worked with the U.S. Navy as a Project Engineer. Mr. Little earned a B.S. in Electrical Engineering from the University of California, Santa Barbara. 
+
+ 
+
+Faye Pairman joined AMCC in 2004 when AMCC acquired 3ware. At 3ware, she served as President and Chief Executive Officer. Ms. Pairman has more than 15 years experience in marketing, sales and executive management. Prior to joining 3ware, Ms. Pairman served eight years in numerous management and executive positions with Adaptec, including VP and General Manager of Storage Networking Solutions Group, Host Interface Solutions Group, and Distribution Products Group. She has also held marketing management positions at SuperMac Technology and the Eastman Kodak Company. Ms. Pairman earned a B.A. from the University of the Pacific and a Masters in Business Administration degree from the Harvard Graduate School of Business Administration. 
+
+ 
+
+Stephen M. Smith joined us in October 1999. Mr. Smith was promoted to Senior Vice President and Chief Financial Officer in April 2003. Prior to this time, Mr. Smith held various positions with us, including Vice President, Business Development and Vice President, Controller. From May 1998 to October 1999, Mr. Smith worked at ST Microelectronics, a semiconductor company, as the Director of a key strategic business unit. Additionally, Mr. Smith worked for ST Microelectronics from January 1993 until May 1997 as the Director of Finance, Region Americas. From May 1997 to May 1998, Mr. Smith served as Vice President, Finance for Vixel Corporation, a Fibre Channel company. Mr. Smith also spent eight years with Northern Telecom, Inc., where he held a number of financial management positions. Mr. Smith holds a B.S. degree from Arizona State University. 
+
+ 
+
+Ramakrishna R. Sudireddy joined us in March 1999 when AMCC acquired Cimaron Communications. Mr. Sudireddy was promoted to Senior Vice President in January 2001. Before co-founding Cimaron in January 1998, Mr. Sudireddy founded Siltek Corporation in 1996, and served as its Vice President of Research and Development until 1997. From 1991 to 1996, Mr. Sudireddy was a Member of Technical Staff at AT&T Bell Laboratories. Mr. Sudireddy has a M.S. in Computer Engineering from the University of Massachusetts at Lowell, and a B.S. in Electrical Engineering from Nagarjuna University in Guntur, India. 
+
+ 
+
+Thomas L. Tullie joined us as Vice President, Sales in August 1996. Mr. Tullie was promoted to Senior Vice President in January 2001. From 1989 to 1996, Mr. Tullie held several strategic sales management positions, most recently as Director of East Coast Sales, at S-MOS Systems, a semiconductor company. Prior to joining S-MOS Systems, Mr. Tullie was a designer in the workstations group of Digital Equipment Corporation. Mr. Tullie earned a B.S. degree from the University of Massachusetts and an M.B.A. from Clark University. 
+
+ 
+
+Joseph Vithayathil joined us as Senior Vice President of Business Development in June 2003. From June 2001 to December 2002 he served as a Board Member and CEO for Bigsur Communications, which he founded. Prior to founding Bigsur Communications which was sold to Broadcom, Mr. Vithayathil was Vice President of Marketing and Sales for Newport Communications from June 1999 to June 2001. In May 1995 he founded Baysoft (now Ampersand) where he served as CEO, Chairman and Board Member. Prior to that time 
+
+ 
+
+14 
+
+
+
+--------------------------------------------------------------------------------
+
+Table of Contents
+Mr. Vithayathil held multiple marketing positions for semiconductor companies including Philips Electronics and Synergy Semiconductor, and was involved in strategic product planning at National Semiconductor. Mr. Vithayathil earned a M.B.A. degree from Harvard University, a M.S. degree from Washington University, St. Louis, Missouri, and a B.S.E.E. degree from the Indian Institute of Technology. 

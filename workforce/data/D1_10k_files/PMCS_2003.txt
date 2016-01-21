@@ -1,0 +1,671 @@
+ITEM 1.  Business
+
+PMC-Sierra,  Inc.  designs,  develops,  markets  and  supports a broad  range of
+high-performance  integrated  circuits primarily used in the  telecommunications
+and data networking  industries.  We have more than 120 different  semiconductor
+devices  that are sold to leading  equipment  manufacturers,  who in turn supply
+their equipment  principally to  communications  network  service  providers and
+enterprises.  We provide superior  semiconductor  solutions for our customers by
+leveraging our intellectual  property,  design  expertise and systems  knowledge
+across a broad range of applications.
+
+PMC-Sierra   was   incorporated   in  the  State  of   California  in  1983  and
+reincorporated  in the State of Delaware in 1997. Our Common Stock trades on the
+Nasdaq  National  Market under the symbol  "PMCS" and is included in the S&P 500
+index.
+
+Our principal executive offices are located at 3975 Freedom Circle, Santa Clara,
+California 95054, and our phone number is (408) 239-8000.  Our internet homepage
+is located at  www.pmc-sierra.com;  however,  the information in, or that can be
+accessed through,  our home page is not part of this report.  Our annual reports
+on Form 10-K,  quarterly reports on Form 10-Q,  current reports on Form 8-K, and
+amendments  to such  reports  are  available,  free of charge,  on our  Internet
+homepage as soon as reasonably  practicable  after we  electronically  file such
+material with, or furnish it to, the Securities and Exchange Commission, or SEC.
+
+Our fiscal year ends on the last Sunday of the calendar year.  Fiscal years 2002
+and 2001 each consisted of 52 weeks. Fiscal year 2000 consisted of 53 weeks. For
+ease of presentation, we have referred to December 31 as our fiscal year end for
+all years.
+
+In this Annual Report on Form 10-K,  "PMC-Sierra",  "PMC", "the Company",  "us",
+"our" or "we", means PMC-Sierra, Inc. together with our subsidiary companies.
+
+FORWARD-LOOKING STATEMENTS
+
+This Annual  Report and the  portions  of our Proxy  Statement  incorporated  by
+reference  into this  Annual  Report  contain  forward-looking  statements  that
+involve risks and uncertainties. We use words such as "anticipates", "believes",
+"plans", "expects",  "future", "intends", "may", "will", "should",  "estimates",
+"predicts",  "potential",  "continue",  "becoming",  "transitioning" and similar
+expressions to identify such forward-looking statements.
+
+These  forward-looking  statements  apply  only as of the  date  of this  Annual
+Report.   We  undertake  no  obligation   to  publicly   update  or  revise  any
+forward-looking  statements,  whether  as a result  of new  information,  future
+events or  otherwise.  Our actual  results  could differ  materially  from those
+anticipated in these forward-looking  statements for many reasons, including the
+risks we face as  described  under  "Factors  That You  Should  Consider  Before
+Investing in  PMC-Sierra"  and  elsewhere in this Annual  Report.  Investors are
+cautioned not to place undue reliance on these forward-looking statements, which
+reflect  management's  analysis only as of the date hereof. Such forward-looking
+statements include statements as to, among others:
+
+o        business strategy;
+
+o        sales, marketing and distribution;
+
+o        wafer fabrication capacity;
+
+                                       2
+<PAGE>
+
+o        competition and pricing;
+
+o        significant accounting policies and accounting estimates;
+
+o        customer networking product inventory levels, needs and order levels;
+
+o        demand for networking equipment;
+
+o        net revenues;
+
+o        gross profit;
+
+o        research and development expenses;
+
+o        marketing, general and administrative expenditures;
+
+o        interest and other income;
+
+o        capital resources sufficiency;
+
+o        capital expenditures;
+
+o        restructuring activities, expenses and associated annualized savings;
+         and
+
+o        our business outlook.
+
+
+INDUSTRY OVERVIEW
+
+The global  markets for  communications  equipment  that  contain  our  products
+continued to decline in 2002 primarily due to excess  capacity in  communication
+service  provider  infrastructures,  excess inventory levels in the supply chain
+and a slowing global  macro-economy.  Despite the fact that  connectivity to the
+Internet  increased and web-based  applications  drove higher data  transmission
+volumes,  service  providers in North America and Europe reduced spending on new
+networking  equipment in 2002. This was largely the result of an overbuilding of
+the  network  infrastructure  in the late  1990's  and early  2000 when  capital
+markets  fueled  rapid  expansion  of data  networks  and  start-up  competitive
+services.  Following this  expansionary  period,  many of the incumbent  service
+providers  realized  they had excess  capacity  in their  systems  and could not
+sustain  such high  levels of  spending  on new  equipment.  In  addition,  many
+competitive service providers were unable to generate sufficient revenues to pay
+for their new systems and were subsequently acquired, broken up and divested, or
+filed for bankruptcy.
+
+The  contraction  in capital  spending on networking  equipment in 2001 and 2002
+resulted in fewer orders for our customers' equipment, and therefore a reduction
+in  demand  for our  products.  We sell more  than 120  different  semiconductor
+devices to the leading original  equipment  manufacturers  (OEMs) that, in turn,
+sell  their  equipment  to end  customers  such  as  telecommunications  service
+providers and  enterprises.  The overall  reduction in service  provider capital
+spending,  combined  with high levels of  inventories  throughout  the  industry
+supply chain, resulted in lower demand for our devices. While equipment spending
+in the enterprise market (primarily corporations,  institutions and governments)
+was relatively stable compared to service providers, it was not enough to offset
+a broader  decline  in  activity  across  the  global  communications  equipment
+industry.
+
+Many service  providers  consider it  important  to add capacity and  technology
+capability  to  limited  aspects  of  their  networks  as data  traffic  and the
+associated  revenues are key growth drivers for their  operations going forward.
+To capture a growing portion of this competitive  market,  service providers are
+transitioning  their networks from  voice-centric  to data-centric  systems.  In
+addition,  network utilization rates are increasing,  absorbing excess capacity,
+but also slowing data transmission speed through service providers' networks. In
+this environment, it is critical for service providers to upgrade their networks
+with more  efficient  equipment  enabling  them to lower  operating  costs while
+handling  the  increasing  amount of traffic.  The service  providers  must also
+upgrade equipment while lowering capital spending.
+
+                                       3
+<PAGE>
+
+In simple terms, the Internet is a hybrid series of networks comprised of copper
+wires,  coaxial cables, and fiber optic cables.  These networks carry high-speed
+traffic in the form of electrical and optical  signals that are  transmitted and
+received  by complex  networking  equipment.  To ensure this  equipment  and the
+various networks can easily  communicate with each other, the OEMs and makers of
+communications  semiconductors have developed numerous communications  standards
+and protocols for the industry.  These  communications  protocols make it easier
+for  complex  high-speed  data  traffic  to be sent and  received  reliably  and
+efficiently - - whether intra-office, across the country, or internationally.
+
+One industry  standard that packages  information  into a fixed-size cell format
+for  transportation  across networks is ATM or Asynchronous  Transfer Mode. Many
+service  providers  deploy  equipment that handles this protocol  because it can
+support voice, video, data, and multimedia applications simultaneously.
+
+Another  established  industry  standard is called SONET or Synchronous  Optical
+Network for high capacity data communication  over fiber optic systems.  This is
+used in the Americas and parts of Asia, with the equivalent standard in the rest
+of the world called SDH or Synchronous Digital Hierarchy.
+
+In addition to using SONET to increase the  bandwidth,  or capacity of, in their
+networks,  many  system  operators  have  also  deployed  equipment  that uses a
+technology called dense wave division  multiplexing.  Rather than transmitting a
+single  light signal over an optical  fiber,  dense wave  division  multiplexing
+allows many  different  light  signals  (each of a different  wavelength)  to be
+transmitted  simultaneously.  By deploying this technique at higher transmission
+rates, carriers can move more signals across transmission lines.
+
+IP is a transport protocol that maintains network information and routes packets
+across  networks.  While IP  packets  are larger and can hold more data than ATM
+cells,  service  providers often have  difficulty  providing the same quality of
+service with IP because it is not optimized for  time-sensitive  signals such as
+video and voice services.
+
+Ethernet is another  protocol that is used  extensively in data  transmission in
+local area networks  (LAN) and is now being used in wide area networks  (WAN) as
+well.  Service  providers  are  beginning  to deploy  ethernet  because they are
+familiar  with the  protocol  and it is a  relatively  efficient  way to  handle
+increasing amounts of data moving from the LAN to the WAN.
+
+In some service  provider  networks,  a traffic  bottleneck  can occur where the
+high-speed  long-haul traffic is handed off to networking equipment in the metro
+area or where storage networks are being  inter-connected.  In general,  service
+providers have invested less to enhance the infrastructure in these areas and as
+a result,  many of these  systems  have  insufficient  capacity  to  handle  the
+increasing level of data traffic.
+
+In response, many OEMs are designing faster and more complex equipment to handle
+the higher  volumes in the network.  This  equipment must be able to accommodate
+various  protocols  and  formats,  including  cell-based  ATM  and  packet-based
+Internet Protocol (IP).
+
+To accommodate  these  different  protocols and the growing demand for services,
+many service  providers are requiring  OEMs to provide more complex,  integrated
+solutions  in a shorter  time  period.  At the same time,  some of the OEMs have
+undergone  significant  corporate  restructurings  and have fewer  resources and
+technical staff internally to design their own custom solutions.  This,  coupled
+with  the  rising  cost of  custom  semiconductors,  has  resulted  in the  OEMs
+outsourcing  more of their  communications  integrated  circuit  requirements to
+companies such as PMC-Sierra. This has brought about the acceleration of the use
+of standard products of the kind that PMC-Sierra designs and develops.
+
+                                       4
+<PAGE>
+
+By  leveraging  the  knowledge  and  technical  expertise of  companies  such as
+PMC-Sierra, the OEMs are able to focus their efforts on their core competencies.
+In many cases,  it can take several  years before a new silicon chip or chip set
+can be designed,  manufactured,  tested,  and released to full  production for a
+customer.  It is essential,  therefore,  that  companies  like  PMC-Sierra  that
+develop the chips to be  incorporated  into the OEM equipment  work very closely
+with their OEM customers so that together they can optimally  meet the equipment
+needs of the service providers.
+
+
+PRODUCTS
+
+We  have  more  than  120  revenue-producing  products  in  our  portfolio.  Our
+networking  products  comprise  communications   semiconductors  -  -  including
+microprocessors  - -  that  are  used  in  many  different  types  of  equipment
+throughout  the network  infrastructure.  While our current  networking  product
+development  efforts  are  focusing  on  all  the  four  areas  of  the  network
+infrastructure  described  below,  less  than 10% of our  current  revenues  are
+derived from the storage and consumer  markets.  One of our key strategies is to
+broaden into these markets.
+
+Our  non-networking  segment,  comprised  of a single  chip  used in a  consumer
+medical   device,   wound  down  in  the  second  quarter  of  2002,  with  only
+insignificant revenues thereafter to meet remaining customer requirements.
+
+Our  networking  products are sold  primarily  into four areas of the  worldwide
+network  infrastructure,  which we call Metro, Access,  Enterprise/Storage,  and
+Consumer-related  markets.  Many of our products are designed with  standardized
+interfaces  between  chips so our  customers  can easily  develop and  implement
+solutions involving multiple PMC-Sierra products.
+
+The  following  briefly  describes  PMC-Sierra's  view  of  the  Metro,  Access,
+Enterprise/Storage and Consumer-related areas of the internet infrastructure and
+some  typical  equipment  that may  include our chips and  chipsets.  Due to the
+complexity  of the  telecommunications  network,  it is not  possible to sharply
+delineate the networking  functions or markets served. In addition,  many of our
+products  may be used in  multiple  classes  of  networking  equipment  that are
+deployed  across all of the market  areas  identified  below,  while some of our
+other  products  have  highly  specialized   applications.   For  example,   our
+microprocessors can be used in many networking  equipment  applications (such as
+high-speed  routers or networked  printers),  while our Paladin chip may only be
+used in a single application  (power  amplification for wireless base stations).
+In some situations,  different OEMs might use our chips or chipsets in equipment
+addressing more than one of the market areas noted below.
+
+   o     Access:  this  area of the  telecommunications  network  infrastructure
+         encompasses wired and wireless equipment that aggregates  transmissions
+         from the home or office and connects  that traffic to the metro and the
+         wide area network (WAN). For example,  our semiconductors would be used
+         in  equipment  such as digital  subscriber  line  access  multiplexers,
+         wireless  base  stations,  add-drop  multiplexers  (which  add and drop
+         signals and streams of data from optical  networks) and switches (which
+         direct the data traffic to other destinations within the network).
+
+                                       5
+<PAGE>
+
+   o     Metro: the metropolitan,  or metro area, of the internet infrastructure
+         is predominantly a fiber optic-based  network that provides  high-speed
+         communications  and data transfer over a city center or regional  area.
+         This portion of the network  manages  traffic inside its own region and
+         manages traffic between the access and long-haul transport networks for
+         inter-city  or  international  transmission.  Our  products are used in
+         metro  equipment  such as switches  and routers that gather and process
+         signals in  different  protocols,  and then  transmit  them to the next
+         destination as quickly and efficiently as possible.
+
+   o     Enterprise/Storage: this area of the network includes equipment that is
+         deployed  primarily  in the  office for data  communications  and other
+         local area  network  applications.  Our  products are used in equipment
+         such as medium to high-end laser jet printers in the office, as well as
+         switches  and storage  devices  that enable data to be  transferred  to
+         local telecommunications networks. It includes network attached storage
+         equipment  and storage area networks for the  management,  transmission
+         and  storage  of  large  amounts  of  data  utilized  by   enterprises,
+         corporations and government agencies.
+
+   o     Consumer:   this  area  includes   telecommunications   equipment  used
+         primarily by individuals in their homes for entertainment purposes. For
+         example,  some of our lower-end  microprocessors  are used in equipment
+         such  as  set-top  boxes,   high-definition   TVs  and  personal  video
+         recorders.
+
+Our chips and chipsets can also be divided into the broadly  defined  functional
+categories  identified  below. As with  descriptions of the network,  particular
+categories may overlap and a device may be present in more than one category. In
+addition,  some products,  particularly  multiple chip sets, integrate different
+functions and could be classified in one or more categories.  For example,  some
+of our products both convert  high-speed analog signals to digital signals,  and
+also split or combine various transmission signals.
+
+   o     Line interface units: these devices,  also referred to as transceivers,
+         transmit and receive signals over a physical medium such as wire, cable
+         or fiber.  The line  interface  unit  determines  the speed and  timing
+         characteristics of the signals, and may also convert them from a serial
+         stream of data into a parallel stream before they are further processed
+         for transmission to the next destination.
+
+   o     Framers  and  mappers:  before  the  data  can  be  sent  to  the  next
+         destination, it must be converted into a proper format for transmission
+         in the network.  For example,  the framing  function  arranges the bits
+         into different size formats, commonly referred to as "cell" or "packet"
+         formats,  and attaches the  appropriate  information  to the formats to
+         ensure  they  reach  their  destinations.  In  turn,  this  data may be
+         inserted into other  frames,  such as SONET  frames,  for  transmission
+         across high-speed fiber optics.
+
+   o     Packet and cell  processors:  these  devices  examine  the  contents of
+         cells,  or  packets,  and  perform  various  management  and  reporting
+         functions.  For  instance,  a switch or router may use a packet or cell
+         processor  to  determine  if a  signal  is  voice  or video in order to
+         allocate the proper  amount of  bandwidth.  Service  providers  can use
+         information  gathered  by the cell or  packet  processor  to  determine
+         customers' network usage and charge the appropriate service fee.
+
+   o     Traffic  managers  and  switch  fabrics:   traffic  managers  organize,
+         schedule and queue cells and packets  into and out of switches.  Switch
+         fabrics  interconnect  the wires and  fibers,  allowing  the data to be
+         routed to its intended destination.
+
+                                       6
+<PAGE>
+
+   o     Serializers/Deserializers:  these devices  convert  networking  traffic
+         between slower speed parallel  streams and higher speed serial streams.
+         OEMs  use  serial   streams  to  reduce   networking   equipment   line
+         connections,  and  parallel  streams to allow them to apply  lower cost
+         traffic management technologies.
+
+   o     Microprocessors: these devices perform the high-speed computations that
+         help  identify  and  control  the flow of signals  and data in the many
+         different  types  of  network  equipment  used  in the  communications,
+         enterprise and consumer markets.
+
+
+STRATEGY
+
+Our  high-speed  semiconductor  solutions  are based on our strong  knowledge of
+network applications,  system requirements and networking protocols.  To achieve
+our goal of growing and profitably  expanding our business,  we are pursuing the
+following key strategies:
+
+Leverage technical expertise across diverse base of applications:
+
+We have a history of analog, digital, mixed signal and microprocessor  expertise
+and we integrate many functions and protocols into our products. We leverage our
+common technologies and intellectual property across a broad range of networking
+equipment.  Many  OEMs  recognize  they can  obtain  highly  complex,  broadband
+communications  technology  "off the shelf" from  companies  such as  PMC-Sierra
+rather than dedicating their own resources to develop custom chips. We intend to
+take advantage of our customers'  growing  requirements to outsource more of the
+silicon  content  in their  networking  equipment  which  will allow the OEMs to
+reduce their development costs and improve  time-to-market while differentiating
+their products in other ways.
+
+Broaden our business into the Enterprise, Storage and Consumer markets:
+
+The  majority  of our  products  are used by OEMs  that  sell  their  networking
+equipment to telecommunications service providers worldwide. Over the past year,
+however,  we have been  focused  on  directing  many of our  existing  and newly
+designed    products   into   new   markets.    For   example,    our   advanced
+serialization/de-serialization  devices  are now being used in  transceiver  and
+serial  backplane   applications  in  storage  area  networking  and  enterprise
+networking  equipment.  Our lower-speed  microprocessors are being designed into
+advanced multi-function devices as well as going into consumer applications such
+as personal  video  recorders,  set-top  boxes and  high-definition  TVs. We are
+working  closely with some of the largest  players in the enterprise and storage
+markets  to help  these  customers  design and  develop  standard  semiconductor
+solutions that will lower their costs and improve their time to market.
+
+Increase our presence in Asian markets:
+
+Over the past decade,  we have been  developing  strong  relationships  with our
+Asian  customers.  In 2002,  just under  one-third  of our total  revenues  were
+generated in the Asia Pacific region. Some of our largest customers in Japan and
+Korea include Fujitsu,  Ricoh, NEC, Samsung and LG Electronics.  In addition, we
+are gaining new customers, many of which are located in the People's Republic of
+China,   such  as  ZTE,   Huawei   Technologies,   Fiberhome   Telecommunciation
+Technologies,  and Alcatel  Shanghai Bell.  These customers are broadening their
+product  offerings to meet the growing  network  infrastructure  requirements in
+China and other Asian markets.  To improve our customer  service and penetration
+into this  region,  we  appointed a new vice  president to head our Asia Pacific
+sales and support team, headquartered in Shanghai.  PMC-Sierra plans to continue
+increasing  the  number  of  sales/marketing   personnel  in  our  Asia  Pacific
+operations and to add new distribution capabilities in the regional markets.
+
+                                       7
+<PAGE>
+
+Provide first-class products, customer service and technical support:
+
+We work very closely with our  customers to ensure they get the best service and
+technical support required to assist them with their development efforts. As the
+marketplace for telecommunications  equipment suppliers slowly consolidates,  we
+believe  our  largest  customers  and their  products  will  take an  increasing
+percentage of the overall market in their areas of expertise.  Customers such as
+Cisco, Hewlett Packard, Lucent, Nortel, Alcatel,  Samsung,  Fujitsu, Ricoh, ZTE,
+Huawei and Juniper are aligning their design and  manufacturing  operations with
+key suppliers like PMC-Sierra.
+
+
+SALES, MARKETING AND DISTRIBUTION
+
+Our sales and  marketing  strategy  is to have our  products  designed  into our
+customers'  equipment  by  developing  superior  products  for which we  provide
+premium service and technical support.  We maintain close working  relationships
+with many of our  customers.  Our marketing  team is focused on  developing  new
+products  that meet the needs of our  customers  in our target  markets.  We are
+often involved in the early stages of design concerning our customers' plans for
+new equipment.  This helps us determine if our existing  products can be used in
+their new equipment or if new devices need to be considered for the application.
+To assist us in our planning process, we are in regular contact with our largest
+customers to discuss industry trends,  emerging  standards and their new product
+requirements.
+
+To  promote  our  products,   our  marketing   team  is  actively   involved  in
+demonstrating our devices with other industry suppliers and providing  technical
+information  at trade shows held in North  America,  Asia and Europe.  Technical
+support is  essential  to our  customers'  success,  and we provide this through
+field application engineers,  technical marketing and factory systems engineers.
+We also  provide  more  detailed  information  and support for our product  line
+through our corporate website and special customer-accessible extranet sites. We
+believe that providing  comprehensive product service and support is critical to
+shortening  customers'  design cycles and maintaining a competitive  position in
+the networking market.
+
+We sell our products  both  directly and through  distributors  and  independent
+manufacturers'  representatives.  In 2002,  approximately 36% of our orders were
+shipped through our distributors;  approximately 45% were sent by us directly to
+contract  manufacturers  selected by OEMs; and the balance were sent directly to
+our OEM customers.
+
+Our largest  distributor  is Memec Group  Holdings  Ltd.  which  represents  our
+products worldwide (excluding Japan, Israel, Taiwan and Australia).  Many of our
+customers  are seeking to reduce supply chain costs and are  requesting  that we
+ship more of our  products  directly  to the  contract  manufacturers  they have
+selected.  Based on this trend,  we expect that over time our largest  customers
+will  require  that we ship a higher  percentage  of their  orders  directly  to
+contract  manufacturers  and a lower  percentage  will be  shipped  through  our
+distributors.
+
+                                       8
+<PAGE>
+
+A summary of our domestic and  international  net revenues and long-lived assets
+is presented in Note 13 to the Consolidated Financial Statements in Item 8. More
+than half of our net revenues were generated in the United States in each of the
+three years ended December 31, 2002.
+
+For a  discussion  of  risks we face due to our  international  operations,  see
+"Management's  Discussion  and  Analysis of Financial  Condition  and Results of
+Operations - Factors That You Should Consider Before Investing in PMC-Sierra" in
+Item 7.
+
+Cisco Systems and  Hewlett-Packard  each  represented  more than 10% of our 2002
+revenues based on total sales to end customers  through  distributors,  contract
+manufacturers  or direct sales. Our sales outside of the United States accounted
+for 45% of total revenue in 2002, 42% in 2001, and 38% in 2000.
+
+
+MANUFACTURING
+
+We are a fabless  company,  meaning we do not own or operate  foundries  for the
+production of silicon wafers from which our products our made.  Instead,  we use
+independent foundries and chip assemblers for the manufacture of our products.
+
+Typically,  the  manufacture of our chips requires 12-16 weeks. We refer to this
+as our lead-time.  Based on this lead-time, our team of production planners will
+initiate a purchase order with an independent  foundry to fabricate the required
+wafers.  The wafers once fabricated must be probed,  or inspected,  to determine
+usable from  unusable chip parts,  referred to as die, on the wafer.  The wafers
+are sent to an outside assembly house where they are cut and the good die are in
+turn packaged into chips. The chips are then run through various  electrical and
+visual tests before delivery to the customer. With most of our products, we have
+the option to probe the wafers or test the final chips  in-house or  subcontract
+the probing or testing to independent subcontractors.
+
+We receive more than 90% of the silicon wafers from which we derive our products
+from  Chartered   Semiconductor   Manufacturing   Ltd.   ("Chartered"),   Taiwan
+Semiconductor  Manufacturing  Corporation  ("TSMC"),  and IBM. These independent
+foundries produce our networking  products at feature sizes down to 0.13 micron.
+By using  independent  foundries to fabricate our wafers,  we are better able to
+concentrate our resources on designing, development and testing of new products.
+In addition,  we avoid much of the fixed capital and operating costs  associated
+with owning and operating fabrication or chip assembly facilities.
+
+We have supply agreements with both Chartered and TSMC. We have made deposits to
+secure access to wafer fabrication  capacity under both of these agreements.  At
+December 31, 2002 and 2001, we had $22 million in deposits with these companies.
+Under these agreements,  the foundries must supply certain  quantities of wafers
+per year. Neither of these agreements have minimum unit volume  requirements but
+we are obliged under one of the  agreements to purchase a minimum  percentage of
+our  total  annual  wafer  requirements  provided  that the  foundry  is able to
+continue to offer competitive  technology,  pricing,  quality and delivery.  The
+agreements may be terminated if either party does not comply with the terms.
+
+Wafers  supplied by outside  foundries  must meet our incoming  quality and test
+standards.  We conduct a portion of our test operations on advanced mixed signal
+and digital test equipment in our Burnaby facility. The remainder of our testing
+is performed predominantly by independent U.S. and Asian companies.
+
+
+                                       9
+<PAGE>
+
+RESEARCH AND DEVELOPMENT
+
+Our  current  research  and  development  efforts are  targeted  at  integrating
+multiple  channels  or  functions  on single  chips,  broadening  the  number of
+products we provide to address varying protocols and networking  functions,  and
+increasing the speeds at which our chips operate.
+
+At the  end of  fiscal  2002,  we  had  design  centers  in  the  United  States
+(California,  Oregon,  Maryland,  and  Pennsylvania),  Canada (British Columbia,
+Saskatchewan,  Manitoba, Ontario and Quebec), Ireland, and India. On January 16,
+2003,  we announced a corporate  restructuring  to further  reduce our operating
+expenses.  As a result of this  restructuring,  we will be  closing  our  design
+centers in Maryland, Ireland and India during 2003.
+
+We spent $137.7  million in 2002,  $201.1 million in 2001, and $178.8 million in
+2000 on research and development.
+
+In 2000, we also expensed $38.2 million of in process  research and development,
+$31.5 million of which related to the acquisition of Malleable  Technologies and
+$6.7 million of which related to the acquisition of Datum Telegraphic.
+
+
+BACKLOG
+
+We sell primarily pursuant to standard purchase orders. Our customers frequently
+revise the quantity  actually  purchased  and the shipment  schedules to reflect
+changes in their needs.  We believe  orders placed for delivery in excess of six
+months are not firm orders.  As of December  31,  2002,  our backlog of products
+scheduled  for shipment  within six months  totaled  $36.6  million.  Unless our
+customers  cancel or defer to a subsequent  year a portion of this  backlog,  we
+expect this entire  backlog to be filled in 2003.  Our backlog of products as of
+December 31, 2001 for shipment within six months totaled $35.7 million.
+
+Our backlog includes backlog to our major  distributor,  which may not result in
+revenue,  as we do not recognize  shipments to our major  distributor as revenue
+until our distributor has sold our products  through to the end customer.  Also,
+our customers may cancel, or defer to a future period, a significant  portion of
+the backlog at their discretion  without penalty.  Accordingly,  we believe that
+our backlog at any given time is not a meaningful indicator of future revenues.
+
+
+COMPETITION
+
+We typically face competition at the design stage when our networking  customers
+determine  which  communications  semiconductor  components to use in their next
+generation equipment designs.
+
+Most of our  customers  choose a particular  semiconductor  component  primarily
+based on whether the component:
+
+   o        meets the functional requirements,
+
+   o        addresses the required protocols,
+
+   o        interfaces easily with other components in a design,
+
+   o        meets power usage requirements, and
+
+   o        is priced competitively.
+
+                                       10
+<PAGE>
+
+OEMs are  becoming  more  price  conscious  than in the past as a result  of the
+downturn in the telecommunications  industry, and as semiconductors sourced from
+third party suppliers  comprise a greater portion of the total materials cost in
+OEM  equipment.  We have also  experienced  aggressive  price  competition  from
+competitors  that are seeking to enter into the markets in which we participate.
+These  circumstances may make some of our products less competitive,  and we may
+be forced to decrease our prices significantly to win a design.
+
+In addition to price,  OEMs will also  consider the quality of the supplier when
+determining  which component to include in a design.  Many of our customers will
+consider  the  breadth  and  depth of the  supplier's  technology,  as using one
+supplier for a broad range of technologies can often simplify and accelerate the
+design of next generation equipment. OEMs will also consider a supplier's design
+execution  reputation,  as many OEMs  design  their  next  generation  equipment
+concurrently  with the  component  design.  As well,  consideration  is given to
+whether the OEM has pre-qualified the supplier,  as this ensures that components
+made by that supplier will meet the OEM's quality standards.
+
+Our  competitors  may be classified  into three major groups.  First, we compete
+against  established  peer-group  semiconductor  companies  that  focus  on  the
+communications  semiconductor  business.  These companies include Agere Systems,
+Applied  Micro  Circuits  Corporation,   Broadcom,  Exar  Corporation,  Conexant
+Systems,  Marvell Technology Group,  Multilink Technology  Corporation,  Silicon
+Image, Transwitch and Vitesse Semiconductor.  These companies are well financed,
+have  significant   communications   semiconductor   technology   assets,   have
+established sales channels, and depend on the market in which we participate for
+the bulk of their revenues.
+
+Other  competitors  include  major  domestic  and  international   semiconductor
+companies,  such  as  Agilent,  Cypress  Semiconductor,  Intel,  IBM,  Infineon,
+Integrated  Device  Technology,  Maxim  Integrated  Products,  Motorola,  Nortel
+Networks and Texas Instruments.  These companies are concentrating an increasing
+amount of their  substantial  financial  and other  resources  on the markets in
+which we participate.
+
+Emerging companies also provide  competition in our segment of the semiconductor
+market. We are aware of venture-backed companies that focus on specific portions
+of our broad range of products.  These companies  could  introduce  technologies
+that may make one or more of our integrated circuits obsolete.
+
+Over the next few years,  we expect  additional  competitors,  some of which may
+also have greater  financial and other  resources,  to enter the market with new
+products.
+
+We are also  expanding  into some  markets,  such as the  storage  and  wireless
+infrastructure  and  generic  microprocessor   markets,  that  have  established
+incumbents  with  substantial  financial  and  other  resources.  Some of  these
+incumbents  derive a majority of their earnings from these markets.  We expect a
+strong increase in competition in these markets.
+
+
+                                       11
+<PAGE>
+
+LICENSES, PATENTS AND TRADEMARKS
+
+We rely in part on patents to protect our  intellectual  property  and have been
+awarded  137  U.S.  and  63  foreign  patents  for  circuit  designs  and  other
+innovations used in the design and architecture of our products. In addition, we
+have 102 patent  applications  pending in the U.S. Patent and Trademark  office,
+and 8  patent  applications  pending  in other  countries.  Our  patents  expire
+typically  20 years  from the  patent  application  date if  accepted,  with our
+existing patents expiring between 2010 and 2021.
+
+We do not consider our business to be materially  dependent upon any one patent,
+although  we believe  that a strong  portfolio  of patents  combined  with other
+factors  such  as  our  innovative  ability,  technological  expertise  and  the
+experience  of  our  personnel  are  important  to  compete  effectively  in the
+industry.  A portfolio of patents also provides the  flexibility to negotiate or
+cross  license  intellectual  property  with other  semiconductor  companies  to
+incorporate other features in our products.
+
+To protect  our other  intellectual  property  we rely on mask work  protection,
+trademarks,   copyrights,   trade   secret  laws,   employee   and   third-party
+nondisclosure agreements, and licensing arrangements.
+
+Our only material license is the MIPS microprocessor  architecture  license from
+MIPS Technologies  Inc., on which our  microprocessor-based  products are based.
+While the desktop  microprocessor market is dominated by the Intel Corporation's
+"x86"  complex  instruction  set  computing,  or  CISC,  architecture,   several
+microprocessor  architectures  have  emerged for other  microprocessor  markets.
+Because of their higher performance and smaller space requirements,  most of the
+competing architectures, like the MIPS architecture, are reduced instruction set
+computing,  or RISC  architectures.  The MIPS  architecture is widely  supported
+through   semiconductor   design  software,   operating  systems  and  companion
+integrated  circuits.  Because  this  license  is the  architecture  behind  our
+microprocessors,  we must be able to retain the MIPS license in order to produce
+our follow-on microprocessor products.
+
+PMC and its logo are our registered  trademarks and service marks.  We own other
+trademarks  and service  marks not  appearing in this Annual  Report.  Any other
+trademarks used in this Annual Report are owned by other entities.
+
+
+EMPLOYEES
+
+As of December 31, 2002, we had 1,099  employees,  including 679 in Research and
+Development, 118 in Production and Quality Assurance, 203 in Marketing and Sales
+and 99 in Administration. In January 2003, we announced a restructuring which we
+expect  to  reduce  our  headcount  to 924  employees.  Our  employees  are  not
+represented by a collective  bargaining  agreement and we have never experienced
+any related work stoppage. We believe our employee relations are good.

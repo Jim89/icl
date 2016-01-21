@@ -1,0 +1,362 @@
+Item 1.    Business 
+ 
+Rambus Inc. (“We” or “Rambus”) designs, develops and markets chip-to-chip interface solutions that enhance the performance and cost-effectiveness of its customers’ chip and system products. These solutions include multiple chip-to-chip interface products, which can be grouped into two major categories: memory 
+
+1 
+
+
+--------------------------------------------------------------------------------
+
+interfaces and logic interfaces. Our memory interface products provide an interface between memory chips and logic chips. Our logic interface products provide an interface between two logic chips. 
+ 
+Our chip-to-chip interface solutions increase the data transfer rate between semiconductor chips, leading to increased bandwidth, and are used in a broad range of computing, consumer electronics and network communications applications. Our interfaces help to ensure that chip-to-chip transfer rates are not the bottleneck or limiting factor in the ability of chip and system companies to deliver ongoing improvement in overall system and application performance from product generation to product generation. The concept known as Moore’s Law, which describes ongoing improvement in on-chip transistor density and speed over time, could have diminished impact if the industry is not also able to provide means to transfer data at ever higher speeds between chips and systems. 
+ 
+We sell licenses to semiconductor and system companies who then incorporate our interface products into their chips and systems. We also perform engineering services for companies to help them successfully integrate our interface products into their chip and system products. In addition, we believe that our patented technology has been incorporated into various memory and controller devices, including those that support the SDRAM and DDR standards or extensions or derivatives of those standards. Accordingly, we have offered to license and have licensed a number of companies manufacturing such products. 
+ 
+Background 
+ 
+The performance of computers, consumer electronics and other electronic systems is typically constrained by the speed of its slowest element. Semiconductors within these systems have continued to increase in complexity, approximately doubling transistor count every few years according to Moore’s Law, while also increasing in frequency at a similar rate. Ideally, the frequency of these on-chip transistors should be the same as the frequency of data transfers between chips. Over the last decade, however, this has not been the case: on-chip frequencies are outstripping chip-to-chip frequencies at an ever-increasing rate. For example, today’s fastest Pentium 4 processors operate on chip in excess of 3,000 MHz (3.0 GHz), but transfer data between chips using a 533 MHz front-side bus. As a result of chip-to-chip interface frequencies not keeping up with on-chip frequencies continuing advances in microprocessor speeds face potentially diminishing returns in increasing overall system performance. 
+ 
+Our Chip-to-Chip Interface Products 
+ 
+For more than a decade, we have been developing our products and expertise in chip-to-chip interfaces that enable increased system bandwidth and application performance. During this period, we have made ongoing innovations in high-speed chip-to-chip interfaces and broadened our portfolio to deliver industry-leading memory and logic interface products. 
+ 
+Memory Interface Products 
+ 
+We currently have two memory interface products: RDRAM™ and Yellowstone. Our memory interfaces are integrated in DRAM devices and in memory controllers which connect to those DRAM devices. The RDRAM memory interface has been integrated into RDRAM memory devices and memory controllers from a number of chip manufacturers. Devices incorporating RDRAM memory interfaces are shipping in high volume, offering high performance and bandwidth for personal computers, servers, video game consoles, projectors, printers, digital TVs, set-top boxes, routers and switches. Leading chip companies such as Intel Corporation (“Intel”), Samsung Electronics Co., Ltd. (“Samsung”), and Toshiba Corporation (“Toshiba”) sell chips that incorporate RDRAM interfaces. Personal computers that incorporate RDRAM devices offer the highest performance available in the industry, according to independent benchmark tests. Leading PC manufacturers such as Dell Computer Corporation (“Dell”) and Gateway, Inc. (“Gateway”) offer products incorporating RDRAM devices. In addition, consumer electronics products from leading companies such as Sony Corporation (“Sony”) and Matsushita 
+
+2 
+
+
+--------------------------------------------------------------------------------
+
+Electric Industrial Co., Ltd. (“Matsushita”), incorporate RDRAM products to achieve high system bandwidth at low system cost. Today’s RDRAM solutions offer data rates of over one gigabit per second and memory module bandwidth of over four gigabytes per second, with a roadmap to offer over 10 gigabytes per second. 
+ 
+Our newest memory interface, codenamed Yellowstone, has recently been demonstrated on test chips, and is available for integration into memory and controller chips for next-generation consumer electronics, computer graphics and networking applications. Yellowstone test chips operate at over three gigabit per second data rates (several times that available today), with a roadmap to twice that, and enable system memory bandwidths up to 100 gigabytes per second. Yellowstone achieves this speed by, among other things, transferring 8 bits of data per clock cycle using Octal Data Rate (ODR) technology, by using very low voltage differential bi-directional signaling (DRSL), and by using Rambus’ more recently introduced FlexPhase™ technology, all of which enables ultra-high data rates using low cost infrastructure for cost-sensitive applications. Toshiba has announced that it is the first customer to license the Yellowstone interface for incorporation into future memory chips. 
+ 
+Logic Interface Products 
+ 
+We currently offer a logic interface product, called RaSer™, which is a high speed serial link for chip-to-chip communications between logic chips in a broad range of computing, networking and communications applications. Our RaSer interface products are compatible with a number of industry standards used in computers and network communications (such as XAUI for 10 Gigabit Ethernet, Fibre Channel, PCI Express®, and Infiniband®) as well as very high speed solutions that enable significant improvements in bandwidth. For example, the RaSer X product family has been demonstrated at up to 10 gigabits per second over network backplanes, enabling significant improvement in bandwidth and capacity of today’s enterprise systems without adding system cost. 
+ 
+Target Markets, Applications and Customers 
+ 
+We partner with leading chip and system customers to solve their critical interface problems, working with them from chip design to system integration through volume production. Our interface products are incorporated into a broad range of high-volume applications that fall into three major categories: computing, consumer electronics and network communications. 
+ 
+In computing, our interfaces are targeted for use in personal computers, servers, workstations and peripherals such as printers and video projectors. Our major semiconductor customers in this area include Intel and Samsung. The major system companies in this area that utilize chips with our interfaces include Dell and Gateway. 
+ 
+In consumer electronics, our interfaces have been incorporated into a broad range of applications, including video game consoles, digital TVs and set-top boxes. Our major semiconductor customers in this area include Samsung and Toshiba. The major system companies in this area that utilize chips with our interfaces include Matsushita and Sony. 
+ 
+In network communications, our interface products are incorporated into network processors and other chips for use in line cards, routers and switches. Our major semiconductor customers in this area include Intel and Samsung. The major system companies in this area that utilize chips with our interfaces include Cisco Systems, Inc. (“Cisco”) and Juniper Networks, Inc. (“Juniper”). 
+ 
+Our Strategy 
+ 
+Our key product strategies are as follows: 
+ 
+Develop Core Technology:    Develop core technology that gives us a fundamental competitive advantage in memory and logic interfaces. 
+
+3 
+
+
+--------------------------------------------------------------------------------
+
+ 
+Partner With Leading Customers:    Partner with leading chip and system customers to solve their critical input/output (I/O) problems and incorporate our solutions in their high-growth products. 
+ 
+Develop Infrastructure and Market:    Develop the infrastructure and market to ensure interoperability and availability of products that incorporate our solutions. 
+ 
+Implement Flexible Business Model:    Sell our customer-specific and standard solutions and core technologies to maximize long-term shareholder value, drive continued innovation and market leadership. 
+ 
+Our Business Model 
+ 
+We sell interface licenses on a nonexclusive and worldwide basis to semiconductor and system companies that manufacture and sell products that incorporate our interfaces. Our customer relationships include business agreements that incorporate one or more of the following types of compensation: license fees, royalties and engineering service fees. 
+ 
+We also sell licenses to companies to incorporate our patented inventions for uses other than those fully compliant with our designs, including for use in synchronous DRAM (“SDRAM”) and double data-rate (“DDR”) memory devices and memory controllers. 
+ 
+For more information regarding the revenues generated by our licensing arrangements with customers, please see the “Revenues” section in Management’s Discussion and Analysis, beginning on page 19. 
+ 
+Design and Manufacturing 
+ 
+Our chip-to-chip interfaces have been developed with high volume manufacturing processes in mind. Typically, a new licensee receives an implementation package from us which contains the information needed to incorporate our chip-to-chip interfaces in the licensee’s application. For memory interfaces, there are separate implementation packages for memory devices and logic devices. An implementation package typically includes a specification, a generalized circuit layout database, and test parameter software. Many licensees have contracted to have us produce the specific implementation required to optimize the generalized circuit layout for the licensee’s manufacturing process, package and printed circuit board layout. In such cases, the licensee provides specific design rules and transistor models for the licensee’s process. 
+ 
+We have developed our chip-to-chip interfaces such that they may be manufactured using familiar, industry-standard CMOS semiconductor processes, including those available from leading semiconductor manufacturers. 
+ 
+Research and Development 
+ 
+Our ability to compete in the future will be substantially dependent on our ability to advance our chip-to-chip interfaces in order to meet changing market needs. To this end, our engineers are developing new interfaces and new versions of existing interfaces that will allow chip-to-chip data transfer at higher speeds, as well as provide other improvements. We have assembled a team of highly skilled engineers whose activities are focused on further development of our chip-to-chip interfaces as well as adaptation of current interfaces to specific customers’ processes. Because of the complexity of these activities, our design and development process is a multi-disciplinary effort requiring expertise in system architecture, digital and analog circuit design and layout, semiconductor process characteristics, packaging, printed circuit board routing, signal integrity and high-speed testing techniques. 
+ 
+As of September 30, 2002, we had 126 employees in our engineering departments, representing 71% of our total human resources. Approximately 66% of engineering employees have advanced technical degrees and 17% have PhDs. In fiscal 2002, 2001 and 2000, research and development expenses were approximately 
+
+4 
+
+
+--------------------------------------------------------------------------------
+
+$22.3 million, $18.2 million and $11.5 million, respectively. In addition, because our license and service agreements often call for engineering support by us, a portion of our total engineering costs have been allocated to cost of contract revenues, even though these engineering efforts have direct applicability to our technology development. We expect that we will continue to invest substantial funds in research and development activities. 
+ 
+Competition 
+ 
+Our interface products primarily compete by providing superior performance, as well as offering customers improved time to market, reduced implementation risk and competitive system-level price performance. We believe that our principal competition in memory interfaces comes from, and will continue to come from, our licensees and prospective licensees, some of which are evaluating, developing and selling products based on technologies that they contend or may contend do not require a license from us. For example, most DRAM suppliers are producing DDR, which is rapidly growing in market share and typically sells for lower prices than RDRAM. While we have been successful in negotiating SDRAM-compatible and DDR-compatible licenses that include the payment of royalties with some semiconductor manufacturers, other manufacturers have not agreed to a license, three of which are in litigation with us. See Item 3 titled “Legal Proceedings” for more detail regarding this litigation. 
+ 
+In addition, semiconductor and systems companies, working on their own and/or through various formal standards setting bodies or other industry groups, have in the past, and are continuing to develop interface standards that compete with our interface products. These efforts include efforts by certain Rambus licensees. For example, one standard setting body, JEDEC, is thought to be developing DDR-2 and DDR-3, which are being characterized by some as extensions of DDR. We also face competition from certain semiconductor companies that are now marketing semiconductors that combine logic and DRAM on the same chip. Such technology, called “embedded DRAM,” eliminates the need for an external chip-to-chip interface. Embedded DRAM is well suited for applications where component space saving and power consumption are important, such as in the graphics subsystems of notebook PCs. Competition from embedded DRAM could increase in the future. 
+ 
+In the RaSer interface business, we face additional competition from semiconductor companies who sell discrete transceiver chips for use in various types of systems, as well as competitors who license similar serial link interface cells. At the 10 gigabit per second speed, competition will also come from optical technology sold by system and semiconductor companies. 
+ 
+Patents and Intellectual Property Protection 
+ 
+We have an active program to protect our intellectual property, primarily through the filing of patent applications and the defense of issued patents against infringement. As of September 30, 2002, we held 169 United States patents on various aspects of our technology, with expiration dates ranging from 2010 to 2020, and had applications pending for an additional 188 United States patents. As of September 30, 2002, we held 32 foreign patents and had 73 additional foreign patent applications pending in Europe and Asia. In addition, we attempt to protect our trade secrets and other proprietary information through agreements with licensees and systems companies, proprietary information agreements with employees and consultants and other security measures. We also rely on trademarks and trade secret laws to protect our intellectual property. 
+
+5 
+
+
+--------------------------------------------------------------------------------
+
+RISK FACTORS 
+ 
+We face current and potential litigation stemming from our efforts to protect our patents and intellectual property. 
+ 
+In fiscal 2000 and 2001 as we extended our licensing program to SDRAM-compatible and DDR-compatible products, we became involved in litigation related to such efforts. As of September 30, 2002, we were in litigation with three such potential SDRAM-compatible and DDR-compatible licensees. In each of these cases, we have claimed infringement of our patents whereas the potential licensees have generally sought damages and a determination that the Rambus patents at suit are invalid and not infringed. These potential licensees have also relied upon defenses and counterclaims based on allegations that Rambus acted improperly during its 1991-96 participation in the JEDEC standard setting organization. While our preference in all these cases is to achieve settlements resulting in SDRAM-compatible and DDR-compatible licenses, we have attracted significant litigation and there can be no assurance that such settlements will take place, that we will prevail if there is no settlement or that additional litigation will not be brought against us. In addition, related litigation has been brought by the U.S. Federal Trade Commission, by a purported class of Rambus shareholders, by shareholders purporting to bring derivative claims, and by a purported class of memory purchasers. Future litigation may be necessary to protect our patents and other intellectual property rights, to protect our trade secrets, or to determine the validity and scope of the proprietary rights of others, and there can be no assurance that we would prevail in any future litigation. 
+ 
+Any of these matters, whether or not determined in our favor or settled by us, is costly and could and does divert the efforts and attention of our management and technical personnel from normal business operations, which could have a material adverse effect on our business, financial condition and results of operations. Adverse determinations or adverse interim results in litigation could result in, and/or have already resulted in, at least on an interim basis, our losing certain rights, including the loss of the right to sue others for violating our proprietary rights, our being subjected to significant liabilities, our being required to seek licenses from third parties, our being prevented from licensing our patented technology, or our being required to renegotiate with current licensees on a temporary or permanent basis, any, or all, of which could have a material adverse effect on our business, financial condition and results of operations. 
+ 
+In any potential dispute involving our patents or other intellectual property, our licensees could also become the target of litigation. While we generally do not indemnify our licensees, some of our license agreements provide limited indemnities and some require us to provide technical support and information to a licensee that is involved in litigation involving use of our technology. In addition, we are obligated to indemnify certain licensees under the terms of certain RDRAM license agreements, and we may agree to indemnify others in the future. Our support and indemnification obligations could result in substantial expenses. In addition to the time and expense required for us to supply such support or indemnification to our licensees, a licensee’s development, marketing and sales of licensed semiconductors could be severely disrupted or shut down as a result of litigation, which in turn could have a material adverse effect on our business, financial condition and results of operations. 
+ 
+We experience unpredictable and fluctuating operating results. 
+ 
+Because many of our revenue components fluctuate and are difficult to predict, and our expenses are largely independent of revenues in any particular period, it is difficult for us to accurately forecast revenues and profitability. 
+ 
+Royalties accounted for 95% of total revenues in the fourth quarter of fiscal 2002 and 92% of total revenues in the full fiscal year. We believe that royalties will continue to represent the majority of total revenues in future periods. Royalty revenues are challenging to predict and make accurate financial forecasts difficult to achieve. Such royalties are recognized in the quarter in which we receive a report from a licensee regarding the shipment of licensed devices in the prior quarter, and are dependent upon fluctuating sales volumes and prices of licensed devices, all of which are beyond our ability to control or assess in advance. Some of the quarterly fluctuation in 
+
+6 
+
+
+--------------------------------------------------------------------------------
+
+royalties is due to the seasonal shipment patterns of systems incorporating our interface products. Because a systems company can change its source of licensed devices at any time, and because the new source could have different royalty rates, any such change by a systems company, particularly one which accounts for substantial volumes of licensed devices, could have a sudden and significant adverse effect on our revenues. 
+ 
+Accurate prediction of revenues from new licenses is difficult because the development of a business relationship with a potential licensee is a lengthy process, frequently spanning a year or more, and the fiscal period in which a new license agreement will be entered into, if at all, and the financial terms of such an agreement are difficult to predict. Engineering services, which are dependent upon the varying level of assistance desired by licensees and, therefore, the revenue from these services is also difficult to predict. Adding to the complexity of making accurate financial forecasts is the fact that certain expenses associated with a particular contract are not typically incurred evenly over the contract period, whereas contract fees associated with that contract are recognized ratably over the period during which the post-contract customer support is expected to be provided after delivery has occurred. 
+ 
+Our business is subject to a variety of additional risks which could materially adversely affect quarterly and annual operating results, including: 
+ 
+  •   semiconductor and system companies’ acceptance of our interface products;  
+
+ 
+  •   the loss of any strategic relationships with system companies or licensees;  
+
+ 
+  •   semiconductor or system companies discontinuing major products incorporating our interfaces;  
+
+ 
+  •   announcements or introductions of new technologies or products by us or our competitors;  
+
+ 
+  •   changes in our, chip and system companies’ development schedules and levels of expenditure on research and development;  
+
+ 
+  •   the potential that licensees could terminate or fail to make payments under their current contracts; and  
+
+ 
+  •   changes in our strategies.  
+
+ 
+We are dependent upon a limited number of licensees. 
+ 
+To date, we neither manufacture nor sell devices containing our memory or logic chip-to-chip interfaces. In general, we license our interfaces to semiconductor or system companies. Our business strategy is dependent upon our ability to make our interfaces widely available to system companies through multiple semiconductor manufacturers and to license our patented inventions, and there can be no assurance that we will be successful in maintaining our relationships with our current licensees or in entering into new relationships with additional licensees. We face numerous risks in successfully obtaining Rambus chip-to-chip interface licenses on terms consistent with our business model, including, among others: 
+ 
+  •   the lengthy and expensive process of building a relationship with a potential licensee before there is any assurance of a license agreement with such party;  
+
+ 
+  •   persuading large semiconductor companies to work with, to rely for critical interfaces on, and to disclose proprietary manufacturing technologies to a smaller company such as ourselves;  
+
+ 
+  •   persuading potential licensees to bear certain development costs associated with adopting our interfaces and to make the necessary investment to successfully produce memory and logic devices and controllers; and  
+
+ 
+  •   successfully transferring technical know-how to licensees.  
+
+
+7 
+
+
+--------------------------------------------------------------------------------
+
+ 
+Our financial results are materially dependent upon the PC main memory market segment and Intel. 
+ 
+Memory interfaces for performance PC’s generate an important part of our revenue, as does our patent cross-license with Intel. To date, the only broad sales of RDRAM interfaces in this market is via chipsets developed by Intel which allow RDRAM memory devices to connect to Pentium 4 processors. There can be no assurance that the pricing of RDRAM memory devices will be reduced to a competitive level or that Intel chipsets with RDRAM interfaces will be successful in penetrating the market segment for PC main memory. Furthermore, Intel has, in the past, changed its roadmap to eliminate certain products using RDRAM interfaces, and there can be no assurance that Intel’s emphasis or priorities will not further change in the future, resulting in less attention and fewer resources being devoted to developing chipsets supporting RDRAM memory devices. The chipset roadmap that Intel has disclosed to the industry has been reported to not include any future chipsets using RDRAM interfaces after the current 850E chipset and there are indications that the 850E chipset may be phased out by the second quarter of 2003. Also, there can be no assurance that Rambus and Intel will continue to be able to work together successfully over an extended period of time or that Intel will not continue to develop or adopt competing technologies in the future. Furthermore, there can be no assurances that our second chipset licensee, Silicon Integrated Systems Corporation, will be successful with their products that utilize the RDRAM interface. 
+ 
+We are subject to revenue concentration risks at both the licensee and the system company levels. 
+ 
+In fiscal 2002, 2001, and 2000, revenues from our top five licensees accounted for approximately 84%, 75% and 54% of our revenues, respectively. Intel is the largest licensee by a substantial amount. In fiscal 2002, revenues from our top three licensees, Intel, Toshiba and Samsung, each accounted for greater than 10% of our total revenues. In fiscal 2001, revenues from our top five licensees, Hitachi, Ltd. (“Hitachi”), Intel, NEC Corporation (“NEC”), Samsung and Toshiba, each accounted for greater than 10% of our total revenues. In fiscal 2000, revenues from our top three licensees, NEC, Samsung and Toshiba, each accounted for greater than 10% of our total revenues. We expect that we will continue to experience significant revenue concentration for the foreseeable future. 
+ 
+Many of our licensees, including Intel, have the right to cancel their licenses, and the loss of any of our top five licensees would have a material adverse effect on us. Because the revenues derived from various licensees vary from period to period depending on the addition of new contracts, industry consolidation, the expiration of deferred revenue schedules under existing contracts, and the volumes and prices at which the licensees have recently sold licensed semiconductors to system companies, the particular licensees which account for revenue concentration have varied from period to period. These variations are expected to continue in the foreseeable future, although we anticipate that revenue will continue to be concentrated in a limited number of licensees. 
+ 
+The royalties we receive are a function of the adoption of our interfaces at the system company level. System companies purchase semiconductors containing Rambus interfaces from our licensees and, other than for RaSer interfaces, generally do not have a direct contractual relationship with us. Our licensees generally do not provide detail as to the identity or volume of licensed semiconductors purchased by particular system companies. As a result, we face difficulty in analyzing the extent to which our future revenues will be dependent upon particular system companies. System companies face intense competitive pressure in their markets, which are characterized by extreme volatility, frequent new product introductions and rapidly shifting consumer preferences, and there can be no assurance as to the unit volumes of licensed semiconductors that will be purchased by these companies in the future or as to the level of royalty-bearing revenues that our licensees will receive from sales to these companies. There can be no assurance that a significant number of other system companies will adopt our interfaces or that our dependence upon particular system companies will decrease in the future. 
+ 
+We are dependent upon the sales made by systems companies. 
+ 
+Although sales of semiconductors to system companies which have adopted our interfaces for their products are not made directly by us, such sales directly affect the amount of royalties we receive from semiconductors. Therefore, our success is partially dependent upon the adoption of our chip-to-chip interfaces by system companies, particularly those that develop and market high-volume business and consumer products such as PCs 
+
+8 
+
+
+--------------------------------------------------------------------------------
+
+and video game consoles. We are subject to many risks beyond our control that influence the success or failure of a particular system company, including, among others: 
+ 
+  •   competition faced by the system company in its particular industry;  
+
+ 
+  •   market acceptance of the system company’s products;  
+
+ 
+  •   the engineering, sales and marketing and management capabilities of the system company;  
+
+ 
+  •   technical challenges unrelated to our interfaces faced by the system company in developing its products; and  
+
+ 
+  •   the financial and other resources of the system company.  
+
+ 
+The process of persuading system companies to adopt our chip-to-chip interface can be lengthy and, even if adopted, there can be no assurance that our interfaces will be used in a product that is ultimately brought to market, achieves commercial acceptance or results in significant royalties to us. We must dedicate substantial resources to market to, and support, system companies, in addition to supporting the sales, marketing and technical efforts of our licensees in promoting our interfaces to system companies. Even if a systems company develops a product based on our interface, success in the market will depend in part on a supply of semiconductors from our licensees in sufficient quantities and at commercially attractive prices. Because we do not control the business practices of our licensees, we have no ability to establish the prices at which the chips containing our interfaces are made available to system companies or the degree to which our licensees promote our interfaces to system companies. 
+ 
+Our memory interface products may not be adopted by market leaders. 
+ 
+An important part of our strategy for our memory interfaces is to penetrate markets by working with leaders in those markets. This strategy is designed to encourage other participants in those markets to follow such leaders in adopting Rambus interfaces. Should a high profile industry participant adopt our interfaces for one or more of its products but fail to achieve success with those products, other industry participants’ perception of our interfaces could be adversely affected. Any such event could reduce future sales of semiconductors built with Rambus interfaces. Likewise, were a market leader to adopt and achieve success with a competing interface, our reputation and sales could be adversely affected. In addition, some industry participants have adopted, and others may in the future adopt, a strategy of disparaging the Rambus solution adopted by their competitors. The failure of RDRAM devices to maintain or gain market share would have a material adverse effect on our business, financial condition and results of operations. 
+ 
+We have no control over the pricing or manufacturing policies of our licensees. 
+ 
+Our licensees have complete control over the pricing of their products, and there can be no assurance that licensee products using or containing Rambus interfaces will be competitively priced or will sell in significant volumes. Furthermore, RDRAM manufacturers are responsible for their own manufacturing processes, and we have no role in the manufacture of RDRAM devices. For example, we have no influence on decisions in regard to any process changes or on whether or when to “shrink” or otherwise change a design to reduce the cost of the chips. There can also be no assurance that yields of RDRAM memory devices to the full 800 MHz or 1066 MHz specification will maintain satisfactory levels to meet demand. 
+ 
+One important requirement for our memory interfaces is for any premium in the price of memory and controller devices over alternatives to be reasonable in comparison to the perceived benefits of the interfaces. However, there can be no assurance that the price premium for Rambus memory interfaces over alternatives can be reduced sufficiently to allow the development of Rambus memory interfaces as high volume solutions. In addition, because of the extra interface circuitry and other features, an RDRAM chip is somewhat larger than a standard SDRAM. Therefore, a manufacturer will generally produce fewer RDRAM devices than standard 
+
+9 
+
+
+--------------------------------------------------------------------------------
+
+SDRAM for a given wafer size and an RDRAM chip will be somewhat more expensive than the standard SDRAM version. 
+ 
+Our financial results are materially dependent on the DRAM market, which may experience declines in DRAM price and unit volume per system. 
+ 
+In fiscal 2002, a material portion of our royalties was derived from the sale of DRAM. Royalties on DRAM are, except under the modified agreements as described in the Royalty Revenues section of Management’s Discussion and Analysis of Financial Condition and Results of Operations on page 20, based on the volumes and prices of DRAM manufactured and sold by our licensees. The royalties we receive, therefore, are, to a significant extent, influenced by many of the risks faced by the DRAM market in general, including constraints on the volumes shipped during periods of shortage and reduced average selling prices (ASPs) during periods of surplus. The DRAM market is intensely competitive and generally is characterized by declining ASPs over the life of a generation of chips. Such price decreases, and the corresponding decreases in per unit royalties we receive, can be sudden and dramatic. Compounding the effect of price decreases is the fact that, under certain of our RDRAM license agreements, royalty rates decrease as a function of time or volume. There can be no assurance that decreases in DRAM prices or in our royalty rates will not have a material adverse effect on our business, results of operations and financial condition. There can be no assurance that we will be successful in maintaining or increasing our share of any market. 
+ 
+We must respond to rapid technological change in the semiconductor industry by developing new products in a timely manner while relying on our fundamental technology. 
+ 
+The semiconductor industry is characterized by rapid technological change, with new generations of semiconductors being introduced periodically and with ongoing evolutionary improvements. Since beginning operations in 1990, we have derived most of our revenue from our chip-to-chip interface technologies and expect that this dependence on our fundamental technology will continue for the foreseeable future. Also, customer acceptance of our chip-to-chip interfaces is critical to our future success. The introduction or market acceptance of competing interfaces which render our chip-to-chip interfaces less desirable or obsolete would have a rapid and material adverse effect on our business, results of operations and financial condition. The announcement of new chip-to-chip interfaces by us could cause licensees or system companies to delay or defer entering into arrangements for the use of our interfaces, which could have a material adverse effect on our business, financial condition and results of operations. We are dependent on the industry to develop test solutions which are adequate to test our interfaces and to supply such test solutions to our customers. Our operating results will depend to a significant extent on our ability to introduce enhancements and new generations of our chip-to-chip interfaces which keep pace with other changes in the semiconductor industry and which achieve rapid market acceptance. We must continually devote significant engineering resources to addressing the ever-increasing need for higher speed chip-to-chip interfaces associated with increases in the speed of microprocessors and other controllers. Technical innovations of the type that will be required for us to be successful are inherently complex and require long development cycles, and there can be no assurance that our development efforts will ultimately be successful. In addition, these innovations must be completed before changes in the semiconductor industry have rendered them obsolete, must be available when system companies require these innovations, and must be sufficiently compelling to cause semiconductor manufacturers to enter into licensing arrangements with us for the new technologies. There can be no assurance that we will be able to meet these requirements. Moreover, significant technological innovations generally require a substantial investment before their commercial viability can be determined. There can be no assurance that we will have the financial resources necessary to fund future development, that our licensees will continue to share certain research and development costs with us as they have in the past, or that revenues from enhancements or new generations of our interfaces, even if successfully developed, will exceed the costs of development. 
+
+10 
+
+
+--------------------------------------------------------------------------------
+
+ 
+We face intense competition. 
+ 
+The semiconductor industry is intensely competitive and has been characterized by price erosion, rapid technological change, short product life cycles, cyclical market patterns and increasing foreign and domestic competition. All major DRAM manufacturers, including RDRAM licensees, produce versions of DRAM such as SDRAM and DDR which compete with RDRAM devices. These companies are much larger and have better access to financial, certain technical and other resources than we do. 
+ 
+We believe that our principal competition for memory interfaces may come from our licensees and prospective licensees, some of which are evaluating and developing products based on technologies that they contend or may contend will not require a license from us. Companies are also beginning to take a system approach similar to ours in solving the application needs of system companies. Most DRAM suppliers have been producing DDR devices, for example, which use a technology that doubles the memory bandwidth without increasing the clock frequency. While we believe we have valid and enforceable patents covering this and other technology used in DDR and SDRAM devices, and while we have been successful in negotiating SDRAM-compatible and DDR-compatible licenses with some DRAM manufacturers, other manufacturers have not agreed to a license and are in litigation with us. 
+ 
+JEDEC, a standards setting body, including semiconductor and systems companies, is thought to be developing extensions of DDR known as DDR-2 and DDR-3. To the extent that these alternatives might provide comparable system performance at lower or similar cost than RDRAM and Yellowstone memory devices, or are perceived to require the payment of lower royalties, or to the extent other factors influence the industry, our licensees and prospective licensees may adopt and promote the alternative technologies. There can be no assurance that our future competition will not have a material adverse effect on our business, results of operations and financial condition. While we may determine that such alternative technologies, when and if developed, infringe our patents, there can be no assurance that we would be able to negotiate agreements that would result in royalties being paid to us without litigation, which could be costly and the result of which would be uncertain. 
+ 
+In addition, certain semiconductor companies are now marketing semiconductors which combine logic and DRAM on the same chip. Such technology, called “embedded DRAM,” eliminates the need for an external chip-to-chip interface to memory. Embedded DRAM is well suited for applications where component space saving and power consumption are critical, such as in the graphics subsystems of notebook PCs. There can be no assurance that competition from embedded DRAM will not increase in the future. 
+ 
+In the RaSer interface business, we face additional competition from semiconductor companies who sell discrete transceiver chips for use in various types of systems, as well as competitors who license similar serial link interface cells. At the 10 gigabit per second speed, competition will also come from optical technology sold by system and semiconductor companies. 
+ 
+We may be unable to protect our intellectual property. 
+ 
+While we have an active program to protect our proprietary inventions through the filing of patents, there can be no assurance that our pending United States or foreign patent applications or any future United States or foreign patent applications will be approved, that any issued patents will protect our intellectual property or will not be challenged by third parties, that we will be successful in litigation relating to our patents, that the patents of others will not have an adverse effect on our ability to do business or that the pending action of the Federal Trade Commission will not significantly limit our ability to enforce certain of its key patents. Furthermore, there can be no assurance that others will not independently develop similar or competing interfaces or design around any patents that may be issued to us. 
+ 
+We attempt to protect our trade secrets and other proprietary information through agreements with licensees and systems companies, proprietary information agreements with employees and consultants and other security measures. We also rely on trademarks and trade secret laws to protect our intellectual property. Despite these 
+
+11 
+
+
+--------------------------------------------------------------------------------
+
+efforts, there can be no assurance that others will not gain access to our trade secrets, or that we can meaningfully protect our intellectual property. In addition, effective trade secret protection may be unavailable or limited in certain foreign countries. Although we intend to protect our rights vigorously, there can be no assurance that such measures will be successful. 
+ 
+We believe that it is important to develop and maintain uniform RDRAM and Yellowstone memory interface compatibility to enable interoperability between different semiconductor devices that incorporate our memory interfaces. Our contracts for memory interfaces generally prevent a licensee from using licensee-developed patented improvements related to our interfaces to block other licensees from using the improvements or requiring them to pay additional royalties related to their use of our chip-to-chip interfaces. Specifically, the contracts generally require licensees to grant us a royalty-free cross-license on patented licensee intellectual property related to the implementation of our interfaces, which we then sublicense to other licensees that have entered into similar arrangements. Nonetheless, there is no assurance that such a blocking arrangement will not occur in the future. 
+ 
+We face certain risks associated with international licenses. 
+ 
+In fiscal 2002, 2001 and 2000, international revenues constituted approximately 55%, 81% and 82% of our total revenues, respectively. For additional information concerning international revenues, see Note 12 in the Notes to Consolidated Financial Statements on page 52. We expect that revenues derived from international licensees will continue to represent a significant portion of our total revenues in the future. To date, all of the revenues from international licensees have been denominated in United States dollars. However, to the extent that such licensees’ sales to systems companies are not denominated in United States dollars, any royalties that we receive as a result of such sales could be subject to fluctuations in currency exchange rates. In addition, if the effective price of licensed semiconductors sold by our foreign licensees were to increase as a result of fluctuations in the exchange rate of the relevant currencies, demand for licensed semiconductors could fall, which in turn would reduce our royalties. We do not use derivative instruments to hedge foreign exchange rate risk. In addition, international operations and demand for the products of our licensees are subject to a variety of risks, including: 
+ 
+  •   tariffs, import restrictions and other trade barriers;  
+
+ 
+  •   changes in regulatory requirements;  
+
+ 
+  •   longer accounts receivable payment cycles;  
+
+ 
+  •   adverse tax consequences;  
+
+ 
+  •   export license requirements;  
+
+ 
+  •   foreign government regulation;  
+
+ 
+  •   political and economic instability; and  
+
+ 
+  •   changes in diplomatic and trade relationships.  
+
+ 
+In particular, the laws of certain countries in which we currently license, or may in the future license, our technology require significant withholding taxes on payments for intellectual property, which we may not be able to offset fully against our United States tax obligations. We are subject to the further risk that tax authorities in those countries may re-characterize certain engineering fees as license fees, which could result in increased tax withholdings and penalties. Our licensees are subject to many of the risks described above with respect to systems companies which are located in different countries, particularly home video game console and PC manufacturers located in Asia and elsewhere. There can be no assurance that one or more of the risks associated with international licenses of our technology will not have a direct or indirect material adverse effect on our business, financial condition and results of operations. Moreover, the laws of certain foreign countries in which our technology is, or may in the future be, licensed may not protect our intellectual property rights to the same extent as the laws of the United States, thus increasing the possibility of infringement of our intellectual property. 
+
+12 
+
+
+--------------------------------------------------------------------------------
+
+ 
+We depend on key personnel, particularly qualified engineers and senior management. 
+ 
+Our success depends to a significant extent on our ability to identify, attract, motivate and retain qualified technical, sales, marketing, finance and executive personnel. Because our future success is dependent upon our ability to continue to enhance and introduce new generations of our interfaces, we are particularly dependent upon our ability to identify, attract, motivate and retain qualified engineers with the requisite educational background and industry experience. Competition for qualified engineers, particularly those with significant industry experience, is intense. We are also dependent upon our senior management personnel, most of whom have worked together at Rambus for many years. The loss of the services of any of the senior management personnel or a significant number of our engineers could be disruptive to our development efforts or business relationships and could have a material adverse effect on our business, financial condition and results of operations. It is not our practice to enter into employment contracts with our employees and do not maintain key person life insurance. 
+ 
+We are not experienced in managing rapid growth. 
+ 
+We may not be equipped to successfully manage any future periods of rapid growth or expansion, which could be expected to place a significant strain on our limited managerial, financial, engineering and other resources. Our licensees and system companies rely heavily on our technological expertise in designing, testing and manufacturing products incorporating our chip-to-chip interface technologies. In addition, relationships with new Rambus licensees or system companies generally require significant engineering support. As a result, any increases in adoption of our interfaces will increase the strain on our resources, particularly our engineers. Any delays or difficulties in our research and development process caused by these factors or others could make it difficult for us to develop future generations of our interface technologies and to remain competitive. In addition, the rapid rate of hiring new employees could be disruptive and could adversely affect the efficiency of our research and development process. The rate of our future expansion, if any, in combination with the complexity of the interfaces involved in our licensee-based business model, may demand an unusually high level of managerial effectiveness in anticipating, planning, coordinating and meeting our operational needs as well as the needs of the licensees and system companies. Additionally, we may be required to reorganize our managerial structure in order to more effectively respond to the needs of customers. Given the small pool of potential licensees and target systems companies, the adverse effect resulting from our lack of effective management in any of these areas will be magnified. Inability to manage the expansion of our business would have a material adverse effect on our business, financial condition and results of operations. 
+ 
+General economic conditions may further reduce our revenues and harm our business. 
+ 
+We are subject to risks arising from adverse changes in domestic and global economic conditions. Because of the economic slowdown in the United States and in other parts of the world, many industries are delaying or reducing technology purchases and investments. The impact of this slowdown on us is difficult to predict, but if businesses or consumers defer or cancel purchases of new products which incorporate our chip-to-chip interface technology, our royalty revenues could further decline, which would have an adverse effect on our results of operations and could have an adverse effect on our financial condition. 
+ 
+Our operations are primarily located in California and, as a result, are subject tonatural disasters. 
+ 
+Our business operations depend on our ability to maintain and protect our facility, computer systems and personnel, which are primarily located in the San Francisco Bay area. The San Francisco Bay area is in close proximity to known earthquake fault zones. Our facility and transportation for our employees are susceptible to damage from earthquakes and other natural disasters, such as fires, floods and similar events. Although we maintain general business insurance against fires and some general business interruptions, there can be no assurance that the amount of coverage will be adequate in any particular case. 
+
+13 
+
+
+--------------------------------------------------------------------------------
+
+ 
+Our stock price is extremely volatile. 
+ 
+The trading price of our Common Stock has been subject to very wide fluctuations which may continue in the future in response to, among other things, the following: 
+ 
+  •   adverse development related to the risk factors described in this “Risk Factors” section;  
+
+ 
+  •   progress, or lack of progress, or perceptions thereof in the development of products that incorporate our chip-to-chip interfaces by licensees, or in the development of products by system companies using our chip-to chip interfaces;  
+
+ 
+  •   our signing or not signing new licensees;  
+
+ 
+  •   new litigation or developments in current litigation;  
+
+ 
+  •   announcements of our technological innovations or new products by ourselves, our licensees or our competitors; and  
+
+ 
+  •   developments with respect to patents or proprietary rights and other events or factors.  
+
+ 
+The trading price of our Common Stock could also be subject to wide fluctuations in response to the publication of reports and changes in financial estimates by securities analysts, and it is possible that our actual results in one or more future periods will fall short of those estimates by securities analysts. In addition, the equity markets have experienced volatility that has particularly affected the market prices of equity securities of many high technology companies and that often has been unrelated or disproportionate to the operating performance of such companies. These broad market fluctuations may adversely affect the market price of Rambus Common Stock. 
+ 

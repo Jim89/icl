@@ -1,0 +1,535 @@
+ITEM 1. BUSINESS
+
+     Integrated  Device  Technology,  Inc.  ("IDT"  or the  "Company")  designs,
+develops,   manufactures   and  markets  a  broad   range  of   high-performance
+semiconductor  products and modules.  Applications  for IDT's products  include:
+data  networking  and  telecommunications  equipment,  such  as  routers,  hubs,
+switches,  cellular  base  stations and other  devices;  storage  area  networks
+(SANs); other networked peripherals and servers; and personal computers.
+
+     The Company  markets its  products on a worldwide  basis  primarily to OEMs
+(original equipment  manufacturers)  through a variety of channels,  including a
+direct  sales force,  distributors  and  independent  sales  representatives.  A
+significant   portion  of  the  Company's  sales  are  to  contract   electronic
+manufacturers (CEMs). Certain of the Company's larger OEM customers buy products
+from these CEMs which incorporate IDT products.
+
+     The Company  attempts  to  differentiate  its  products  from  competitors'
+products  through advanced  architectures  and features,  enhanced  performance,
+reduced system cost and packaging options.  IDT fabricates  substantially all of
+its semiconductor wafers using advanced CMOS (complementary metal oxide silicon)
+process technology in its own wafer fabrication facilities.
+
+     In  fiscal  2000,  the  Company   completed  the   acquisition  of  Quality
+Semiconductor, Inc. ("QSI"). QSI had been engaged in the design, development and
+marketing of high-performance logic and networking semiconductor products.
+
+     IDT was incorporated in California in 1980 and  reincorporated  in Delaware
+in  1987.  The  terms  the  "Company"  and  "IDT"  refer  to  Integrated  Device
+Technology, Inc. and its consolidated subsidiaries, unless the context indicates
+otherwise.
+
+PRODUCTS AND MARKETS
+
+     The Company  operated in three  business  segments  during the three fiscal
+     years ended April 2, 2000:
+
+         o    Communications and High-Performance Logic
+
+         o    SRAMs and Other
+
+         o    x86 Microprocessors
+
+---------------------
+Trademark  notice:   RISController,  SuperSync,  and  Zero  Bus  Turnaround  are
+trademarks  of  Integrated  Device  Technology,  Inc.  QSI and  QuickSwitch  are
+trademarks  of  Quality  Semiconductor,  Inc.,  a  wholly  owned  subsidiary  of
+Integrated Device Technology,  Inc. ZBT is a registered  trademark of Integrated
+Device  Technology,  Inc.,  and the  architecture  is  supported  by Micron  and
+Motorola.
+
+                                        2
+
+<PAGE>
+
+     The   Communications   and   High-Performance    Logic   segment   includes
+communications memories, communications  applications-specific standard products
+(ASSPs),   embedded  RISC   microprocessors  and   high-performance   logic  and
+clock-management  devices.  The  SRAMs  and  Other  segment  consists  mainly of
+high-speed SRAMs (static random access memories).
+
+     Products  in the SRAM and Other  segment  are  generally  characterized  as
+commodity (or industry  standard)  products which typically have exhibited lower
+gross  margins  and  high  unit  volumes.  Products  in the  Communications  and
+High-Performance  Logic segment,  with the exception of some logic devices, tend
+to have lower unit sales and higher margins. Products in these segments are also
+manufactured using different levels of process technology. A significant portion
+of the wafers  produced for the SRAMs and Other segment are  fabricated at IDT's
+advanced technology,  eight-inch wafer production facility in Hillsboro, Oregon.
+Most  wafers for the  Communications  and  High-Performance  Logic  segment  are
+produced at IDT's  older,  six-inch  facility  located in  Salinas,  California,
+although  certain new  communications  memories,  network  products and embedded
+processors are being introduced into production at the Hillsboro facility.
+
+     The  Company  offers   approximately   1,750  products  in  11,200  product
+configurations.  IDT's  product  design  efforts are  focused on  differentiated
+components and  integration of its components  into single  devices,  modules or
+subsystems to meet the needs of its customers.
+
+     During fiscal 2000, the  Communications and  High-Performance  Logic, SRAMs
+and Other and x86 Microprocessors  segments accounted for approximately 71%, 28%
+and 1% respectively, of total IDT revenues of $701.7 million.
+
+Communications and High-Performance Logic Segment
+
+     Communications    Products   and   Networking   Devices.    The   Company's
+communications  products in this segment are either  proprietary or have limited
+alternative sources of supply. These include FIFO memories, multi-port memories,
+and communications ASSPs that offer high-performance features for communications
+and networking systems. FIFO memories are used as rate buffers to transfer large
+amounts of data at high speeds between  separate  devices or pieces of equipment
+operating at different speeds within a system,  when the order of the data to be
+transferred  needs to be controlled.  New families of FIFO memories also perform
+data organizing  functions such as adapting the width and speed of incoming data
+to  system  requirements.  Multi-port  memory  products  are used to speed  data
+transfers  and act as the link  between  multiple  microprocessors  and the same
+memory bank, or between  microprocessors  and  peripherals.  These  products are
+currently used primarily in peripheral  interface,  wireless  communications and
+networking  products,  including  switches and  wireless  base  stations.  IDT's
+network  products family uses emerging  network  technology  designed to support
+higher  bandwidth  applications in the  convergence of voice,  data and wireless
+networks.
+
+     IDT is a  leading  supplier  of  both  synchronous  and  asynchronous  FIFO
+memories and has increasingly focused its resources on the design of synchronous
+FIFO  memories.  Synchronous  FIFO  memories  have been gaining  greater  market
+acceptance  because  they are faster and provide an easier user  interface  than
+asynchronous FIFO memories.  IDT's family of 9-bit,  18-bit and 36-bit Sync FIFO
+memories  are  being  used  in  many  newer,   more  powerful   networking   and
+telecommunications  products.  IDT believes that the  SuperSync(TM) II family of
+FIFO  memories  provides  the  highest  density  (4-Mbit),  highest  performance
+(133MHz) and broadest feature sets commercially available.
+
+     The Company is also a leading supplier of multi-port memory products. IDT's
+family of  multi-port  memories is composed of dual-port  asynchronous  devices,
+four-port  products,  and  synchronous  dual-port  devices,  including  what the
+Company  believes  to  be  the  highest-density  (1-Mbit),   highest-performance
+(166MHz) and widest word-width (x36) dual-ports commercially available.
+
+     Communications  ASSP  products  include  an  ATM  switching  chipset,   ATM
+segmentation   and   reassembly   controllers,   and  physical   interface   and
+muxing/demuxing  devices that are used to  interconnect  systems and  facilitate
+data transmission in networks.
+
+                                        3
+
+<PAGE>
+
+Logic  and  Clock  Management  Products.   IDT  is  a  leading  manufacturer  of
+high-speed,   byte-wide  and  double-density  16-bit  CMOS  logic  circuits  for
+high-performance applications. Logic circuits control data communication between
+various elements of electronic  systems,  such as between a microprocessor and a
+memory circuit.  IDT offers a wide range of logic circuits products that support
+bus  and  backplane  interfaces,  memory  interfaces  and  other  logic  support
+applications  where high speed and low power are critical.  IDT's logic circuits
+are used in a broad range of markets.  The Company recently  introduced Advanced
+Low Voltage  CMOS (ALVC) and Low Voltage  CMOS (LVC) logic  products.  These low
+voltage  products  are  expected to  represent a rapidly  growing  sector of the
+high-performance logic market.
+
+     IDT's 16-bit logic products are available in small, thin packages, enabling
+board area to be reduced.  These products are designed for applications in which
+small size, low power and extra low noise are as important as high speed.
+
+     The  Company  also offers a family of clock  drivers and clock  generators.
+These devices, placed at critical positions in a system, correct the degradation
+of timing  that  occurs the  further  the  impulses  travel from the main system
+clock.
+
+     IDT completed its  acquisition  of QSI in fiscal 2000.  QSI's  products are
+largely   complementary   to  IDT's   logic   product   lines  and  include  the
+QuickSwitch(R) bus switch and TurboClock(TM) clock management families.
+
+     Embedded   RISC   Microprocessors.   IDT  markets   its   RISController(TM)
+microprocessors  which  represent a broad line of 32-bit and 64-bit  stand alone
+processors and integrated  processors based on the MIPS  architecture.  IDT is a
+leading  supplier  of  MIPS  processors  to the  communications  and  networking
+markets.
+
+     The Company focuses its RISC microprocessor  marketing efforts primarily on
+the embedded controller market.  Embedded  controllers are microprocessors  that
+control a single device such as a network  router or switch,  printer or set-top
+box. The Company  provides its customers with integrated  solutions for embedded
+control,  including engineering tools such as RTOS (Real Time Operating System),
+compilers, reference designs and technical support.
+
+     Shortly after the end of fiscal 2000, IDT  introduced its first  integrated
+processor  based on its RC32300 32-bit core.  This device  incorporates an SDRAM
+controller,  PCI bridge, and two serial ports. The RC32334 utilizes IDT's unique
+IPBus, a hardware  interconnect  approach that enables more rapid integration of
+intellectual property (IP) blocks with the CPU core. This product represents the
+first in what is expected to be a family of integrated processors from IDT.
+
+SRAMs and Other Segment
+
+     SRAMs are memory circuits used for storage and retrieval of data during the
+operation of a communications or computing system.  Unlike DRAMs (dynamic random
+access  memories),  SRAMs do not require  electrical  refreshment  of the memory
+contents  to ensure data  integrity,  allowing  them to operate at high  speeds.
+SRAMs  include  substantially  more  circuitry  than DRAMs,  resulting in higher
+production  costs for a given amount of memory,  and  generally  command  higher
+selling prices than the equivalent density traditional DRAM products. The market
+for  SRAMs is  fragmented  by  differing  demands  for  speed,  power,  density,
+organization and packaging.
+
+     Historically,  the Company focused primarily on the cache memory segment of
+the SRAM market.  But, in fiscal 2000, the PC/server cache segment represented a
+very  small  percentage  of  IDT's  SRAM  revenues,  and it is not  expected  to
+contribute  significantly  to the  Company's  future  revenues.  IDT's family of
+ZBT(R) (Zero Bus  Turnaround(TM))  SRAMs  eliminate wait states between read and
+write cycles and are targeted at meeting the  specific  needs of  communications
+customers.
+
+     To provide SRAM products that meet the varying needs of its customers,  IDT
+offers  16K,  64K,  256K,  1-Mbit  and  4-Mbit  SRAMs  in  a  number  of  speed,
+organization,  power and packaging configurations.  Higher density SRAM products
+and  products  with  additional  features  believed to be  important to the data
+networking markets, are in the development stage.
+
+                                        4
+
+<PAGE>
+
+x86 Microprocessors Segment
+
+     The Company  completed  the sale of x86  intellectual  property and its x86
+design subsidiary to Via Technologies,  Inc. ("Via"), a Taiwanese  company,  and
+its  partners  in  fiscal  2000  (see  Note  14 to  the  Consolidated  Financial
+Statements). The Company also entered into a patent cross license agreement with
+Via  relating to certain  non-x86 IDT  patents.  The Company  does not expect to
+realize any future revenues from the sale of x86 products.
+
+Customers
+
+     The Company  markets and sells its products on a worldwide  basis primarily
+to OEMs in its three  business  segments.  Products  in the  Communications  and
+High-Performance  Logic segment are sold primarily to communications  customers.
+Although  products in the SRAMs and Other segment are general purpose in nature,
+IDT supplies the majority of its products in this segment to its  communications
+customers. Customers often purchase products from more than one of the Company's
+product  families.  No one OEM direct customer  accounted for 10% or more of the
+Company's  revenues in fiscal 2000,  1999 or 1998. A significant  portion of the
+Company's sales are to CEMs. When  considering  sales through all sales channels
+(OEM direct,  distribution and contract manufacturing),  one end customer, Cisco
+Systems,  Inc.  ("Cisco"),  accounts,  in  aggregate,  for more  than 10% of the
+Company's  revenues.  Because of  limitations in the amount of end customer data
+made  available  to IDT by its  CEM  customers,  IDT is not  able  to  precisely
+determine the aggregate percentage of its sales which are attributable to Cisco.
+However,  based  upon  the  best  available  information,   IDT  estimates  that
+end-customer  sales  to  Cisco  range  between  approximately  15-20%  of  IDT's
+revenues, depending on product mix consumed.
+
+Marketing and Sales
+
+     IDT markets and sells its  products  primarily to OEMs through a variety of
+channels,  including a direct sales force,  distributors  and independent  sales
+representatives. The Company also markets and sells products to CEMs.
+
+     The Company had 73 direct sales  personnel in the United States as of April
+2, 2000. Such personnel are based at the Company's  headquarters and in 18 sales
+offices  in  Alabama,   California,   Colorado,  Florida,  Illinois,   Maryland,
+Massachusetts,  Minnesota, New Jersey, North Carolina, Oregon and Texas, and are
+primarily  responsible  for  marketing and sales in those U.S.  areas.  IDT also
+utilizes three national distributors, Avnet, Inc., Wyle Laboratories and Insight
+Electronics,  Inc.,  and several  regional  distributors  in the United  States.
+Worldwide sales to Avnet, Inc.  accounted for approximately  19%, 22% and 15% of
+the Company's revenues in fiscal 2000, 1999 and 1998, respectively. In addition,
+IDT uses independent  sales  representatives,  which generally take orders on an
+agency  basis  while  the  Company   ships   directly  to  the   customer.   The
+representatives  receive  commissions  on all  products  shipped to customers in
+their geographic area.
+
+     In addition, the Company had 71 direct sales personnel and 14 sales offices
+located  outside of the  United  States as of April 2,  2000.  Sales  activities
+outside North America are generally  conducted by IDT's subsidiaries  located in
+France, Germany, Hong Kong, Israel, Italy, Korea, Japan,  Singapore,  Sweden and
+the United Kingdom. The Company also has sales offices in Taiwan,  Malaysia, the
+Netherlands and Finland.  A significant  portion of export sales continues to be
+made  through  international  distributors  in Europe,  Asia-Pacific  and Japan.
+During fiscal 2000, 1999 and 1998,  non-U.S.  sales accounted for  approximately
+38%,  37% and 39% of total  revenues,  respectively.  Sales  outside  the United
+States,  except for Japan, are generally  denominated in the U.S. dollar.  Sales
+and other financial information for foreign operations is included in Note 11 of
+the Notes to Consolidated  Financial Statements contained elsewhere in this Form
+10-K. Export sales are subject to certain risks, including currency controls and
+fluctuations,  changes in local  economic and political  conditions,  import and
+export control, and changes in tax laws, tariffs and freight rates.
+
+     The  Company's  distributors  typically  maintain  an  inventory  of a wide
+variety of products,  including  products  offered by IDT's  competitors.  IDT's
+distributors  provide  inventory  management  and  logistics  programs for their
+customers and also handle small or rush orders. A portion of the Company's sales
+is made to distributors  under  agreements  which allow certain rights of return
+and price  protection on products unsold by the  distributors.  Related revenues
+and costs of revenues  thereon are deferred until the products are resold by the
+distributors.
+
+                                        5
+
+<PAGE>
+
+Manufacturing
+
+     IDT  believes  that  maintaining  its  own  wafer  fabrication   capability
+facilitates the  implementation of advanced process  technologies,  provides the
+Company with a reliable source of supply of  semiconductors  and allows it to be
+more flexible in shifting  production  according to product demand.  The Company
+currently operates sub-micron wafer fabrication facilities in Hillsboro,  Oregon
+and Salinas,  California.  The Oregon  facility  first  contributed  to revenues
+beginning in fiscal  1997.  The 192,000  square foot  facility,  which  produces
+substantially  all of the wafers  fabricated  for IDT's SRAMs and Other segment,
+contains a 48,000  square  foot,  class 1 (less than one  particle 0.5 micron or
+greater in size per cubic foot),  eight-inch wafer fabrication line. The Salinas
+facility,  first placed in production  in fiscal 1986,  includes a 24,000 square
+foot, class 3 (less than three particles 0.5 micron or greater in size per cubic
+foot),   six-inch  wafer   fabrication  line.  Most  wafers  for  the  Company's
+Communications  and  High-Performance  Logic segment are produced at the Salinas
+plant.
+
+     IDT supplements its internal wafer  fabrication  capacity with  subcontract
+wafer manufacturing capacity.
+
+     In fiscal  2000,  as part of the merger with QSI,  the  Company  acquired a
+41,000 square foot wafer fabrication  facility with  approximately  5,500 square
+feet of clean room space in Sydney,  Australia,  and other manufacturing  assets
+which were used to produce wafers for logic product families  acquired from QSI.
+In May  2000,  the  Company  completed  the  sale of  these  and  other  surplus
+manufacturing assets.
+
+     IDT also operates two  component  assembly and test  facilities,  a 145,000
+square foot facility in Penang, Malaysia and a 176,000 square-foot facility near
+Manila, the Philippines.  Substantially all of the Company's test operations and
+a significant  portion of its assembly operations are performed at its Malaysian
+and Philippines facilities. IDT also uses subcontractors,  principally in Korea,
+the  Philippines  and  Malaysia,   to  perform  certain   assembly  and  burn-in
+operations.  If IDT were unable to assemble or test products offshore, or if air
+transportation to these locations were curtailed, the Company's operations could
+be materially adversely affected.  Additionally,  foreign  manufacturing exposes
+IDT to certain risks generally associated with doing business abroad,  including
+foreign governmental regulations,  currency controls and fluctuation, changes in
+local economic and political conditions, import and export controls, and changes
+in tax laws,  tariffs and freight rates.  In addition to this offshore  assembly
+and test  capability,  the Company has the capacity for  low-volume,  quick-turn
+assembly  in its Santa  Clara,  California  facilities  as well as limited  test
+capabilities in Salinas.
+
+     The  Company  utilizes  proprietary  CMOS  process  technology   permitting
+sub-micron  geometries  in its  fabrication  facilities.  The  majority of IDT's
+current products are manufactured using its proprietary 0.5, 0.35, 0.25 and 0.18
+micron processes. The Company is expanding use of its 0.18 micron CMOS processes
+in its Hillsboro facility. The Company continues to develop advanced versions of
+its 0.18 micron processes as well as processes below 0.18 microns.
+
+     Wafer fabrication involves a highly sophisticated,  complex process that is
+extremely sensitive to contamination. Integrated circuit manufacturing costs are
+primarily  determined  by circuit  size  because the yield of good  circuits per
+wafer generally  increases as a function of smaller die. Other factors affecting
+costs include wafer size, number of process steps,  costs and  sophistication of
+manufacturing  equipment,  packaging type,  process  complexity and cleanliness.
+IDT's  manufacturing  process is complex,  involving a number of steps including
+wafer  fabrication,  plastic or ceramic  packaging,  burn-in and final test. The
+Company  continually makes changes to its  manufacturing  process to lower costs
+and improve yields. From time to time, the Company has experienced manufacturing
+problems that have caused delays in shipments or increased costs.  Manufacturing
+problems at its wafer fabrication,  assembly or test facilities could materially
+adversely affect the Company's results of operations.
+
+     The Company is dependent on a limited  number of suppliers of raw materials
+(see "Factors Affecting Future Results.")
+
+                                        6
+
+<PAGE>
+
+Backlog
+
+     The  Company's  backlog  of orders  as of April 2,  2000 was  approximately
+$288.6  million  ($142.1  million as of March 28,  1999).  The  Company  defines
+backlog as all confirmed,  unshipped  orders.  IDT manufactures and markets both
+products with limited or no second sources and industry-standard products. Sales
+are generally made pursuant to purchase orders,  which are frequently revised to
+reflect  changes in the  customer's  requirements.  The Company has also entered
+into master purchase agreements with many of its OEM customers. These agreements
+do not  require  the  OEMs  to  purchase  minimum  quantities  of the  Company's
+products.  Product  deliveries  are  scheduled  upon the  Company's  receipt  of
+purchase  orders under the related OEM  agreements.  Generally,  these  purchase
+orders and OEM agreements,  especially those for standard  products,  also allow
+customers  to  reschedule  delivery  dates and cancel  purchase  orders  without
+significant  penalties.  Orders,  especially for industry standard products, are
+frequently made with very short lead times, rescheduled, revised or canceled. In
+addition,  distributor orders are subject to price adjustments both prior to and
+after shipment.  For these reasons, IDT believes that backlog should not be used
+as an indicator of future revenues.
+
+Research and Development
+
+     IDT's competitive position has been established, to a large extent, through
+its emphasis on the development of both  proprietary  and  enhanced-performance,
+industry standard products, as well as the development of the Company's advanced
+CMOS processes. IDT believes that its focus on continually advancing its process
+technologies  has  allowed  the  Company  to  achieve  cost  reductions  in  the
+manufacture of most of its products.  The Company believes that a continued high
+level of  research  and  development  expenditures  is  necessary  to retain its
+competitive position.  The Company maintains research and development centers in
+Santa Clara, California;  Hillsboro, Oregon; and Atlanta, Georgia. In June 2000,
+the Company  announced  that it is opening a design  center near Dallas,  Texas.
+Also,  with the  acquisition  of QSI,  the  Company  now has a design  center in
+Sydney,  Australia.  Research and development  expenditures,  as a percentage of
+revenues,  were  approximately  15%, 24% and 20% in fiscal 2000,  1999 and 1998,
+respectively.
+
+     The Company's product  development  activities are focused on the design of
+new circuits  that provide new features and enhanced  performance  primarily for
+growing  communications  markets  applications.  In the communications  products
+area, IDT's efforts are concentrated on the development of advanced  synchronous
+FIFO  memories,   more   sophisticated   multi-port   memory  products  for  the
+communications   market  and  other  families  of  products  which  feature  the
+integration of the Company's logic and memory  technologies.  Additionally,  the
+Company continues its efforts to develop a family of specialty  products for the
+network  products market and a family of lower voltage logic devices for a broad
+range of  applications.  The  Company is  emphasizing  the design of  integrated
+RISC-based  controllers for internet related embedded control applications.  The
+Company also  continues to refine its CMOS  process  technology  to increase the
+speed and  density of  circuits  in order to  provide  customers  with  advanced
+products at competitive prices. The Company continues to refine its CMOS process
+technology focusing on 0.18 micron and below geometry processes,  and converting
+the production of products to newer generation processes.
+
+Competition
+
+     The semiconductor industry is intensely competitive and is characterized by
+rapid technological advances,  cyclical market patterns, price erosion, evolving
+industry standards,  occasional  shortages of materials,  intellectual  property
+disputes, high capital equipment costs and uncertain availability of and control
+over   manufacturing   capacity.   Many  of  the  Company's   competitors   have
+substantially   greater  technical,   marketing,   manufacturing  and  financial
+resources than IDT. In addition,  several foreign competitors receive assistance
+from their  governments in the form of research and development loans and grants
+and reduced capital costs,  which could give them a competitive  advantage.  The
+Company competes in different product areas, to varying degrees, on the basis of
+technical  innovation  and  performance  of its  products,  as well as  quality,
+product  availability  and price. As described  under the heading  "Products and
+Markets," products in the SRAMs and Other segment can generally be characterized
+as commodity-type items and tend to be most price sensitive.
+
+                                        7
+
+<PAGE>
+
+     IDT's  competitive  strategy  is  to  differentiate  its  products  through
+high-performance, innovative configurations, proprietary features and breadth of
+product  offerings.  Price  competition,  introductions of new products by IDT's
+competitors, delays in product introductions by IDT or other competitive factors
+could have a material adverse effect on the Company in the future.
+
+     While  IDT has a  majority  share in the  markets  for FIFO and  multi-port
+products,  some of the products  offered by IDT compete  with  similar  products
+offered  by Cypress  Semiconductor  Corporation  ("Cypress")  as well as certain
+custom memory or logic products.  IDT's RISC-based  microprocessors compete with
+products  offered  by other  vendors  of such  microprocessors,  such as Quantum
+Effect Devices Inc. and NEC Corporation, and with microprocessors based on other
+architectures,  such as those offered by Intel and Motorola,  Inc. ("Motorola").
+IDT's  competitors for logic sales include both U.S. and foreign  manufacturers,
+such as Texas Instruments  Incorporated and Pericom  Semiconductor  Corporation.
+Certain of IDT's network  products  compete with products offered by PMC-Sierra,
+Inc.
+
+     In markets  where IDT competes to sell industry  standard SRAM  components,
+market supply and pricing  strategies of  competitors  significantly  impact the
+price the Company  receives  for its  products.  In fiscal  years  1996-1998,  a
+significant  increase  in market  supply of  industry  standard  SRAM  parts was
+attributable  to  IDT's  principally  foreign  competitors  shifting  additional
+production  capacity to these parts.  The decline in average  selling prices for
+industry standard SRAM parts during this period was, therefore,  attributable to
+increases in available SRAM supply from competitors such as Samsung Electronics,
+Winbond Electronics Corp., United  Microelectronics Corp. (UMC), other Taiwanese
+and Korean  companies as well as U.S.-based  companies with Taiwanese and Korean
+sourced SRAM  wafers,  and to their market  pricing  strategies,  at a time when
+market demand slowed as customers reduced the level of inventories  carried. The
+Company's  U.S.-based  competitors  in the SRAM area include  Cypress and Micron
+Technology, Inc. ("Micron").
+
+Intellectual Property and Licensing
+
+     IDT  recognizes  that its  intellectual  property  is a valuable  corporate
+asset,  and continues to invest heavily in protecting these assets for advancing
+the  goals of its  business.  A number  of the  Company's  circuit  designs  are
+registered  pursuant to the Semiconductor  Chip Protection Act of 1984. This Act
+gives protection  similar to copyright  protection for the patterns which appear
+on integrated circuits and prohibits competitors from making photographic copies
+of such  circuits.  The Company  intends to continue its efforts to increase the
+breadth of its patent  portfolio.  There can be no  assurance  that any  patents
+issued to the Company will not be challenged,  invalidated or circumvented, that
+the rights granted thereunder will provide competitive advantages to the Company
+or that the Company's  efforts  generally to protect its  intellectual  property
+rights will be successful.
+
+     In recent  years,  there has been a growing trend of companies to resort to
+litigation to protect their  semiconductor  technology from  unauthorized use by
+others.  In the past, the Company has been involved in patent  litigation  which
+adversely  affected  its  operating  results.  Although the Company has obtained
+patent licenses from certain semiconductor  manufacturers,  the Company does not
+have  licenses  from a number of  semiconductor  manufacturers  who have a broad
+portfolio of patents.
+
+     IDT has been notified that it may be infringing  patents  issued to certain
+parties,  and is currently involved in licensing  negotiations.  There can be no
+assurance that additional claims alleging  infringement of intellectual property
+rights, including infringement of patents that have been or may be issued in the
+future, will not be made against the Company in the future or that licenses,  to
+the extent required,  will be available.  Should licenses from any such claimant
+be  unavailable,  or not be available on terms  acceptable  to the Company,  the
+Company may be  required  to  discontinue  its use of certain  processes  or the
+manufacture,  use and sale of  certain  of its  products,  to incur  significant
+litigation costs and damages or to develop non-infringing  technology. If IDT is
+unable to obtain  any  necessary  licenses,  pass any  increased  cost of patent
+licenses on to its customers or develop non-infringing  technology,  the Company
+could be materially  adversely  affected.  In addition,  IDT has received patent
+licenses from several  companies that expire over time, and the failure to renew
+or renegotiate certain of these licenses could have a material adverse effect on
+the Company.
+
+                                        8
+
+<PAGE>
+
+Environmental Regulation
+
+     Federal,  State and local  provisions  regulate the  discharge and disposal
+into  the   environment  of  certain   materials   used  in  the   semiconductor
+manufacturing  process.  The  Company's  manufacturing  and  assembly  and  test
+facilities  are designed to comply with  existing  regulations,  and the Company
+believes  that its  activities  conform  to  present  regulations.  The  Company
+believes that it has been conducting its operations  with all necessary  permits
+and without  material adverse impact  attributable to environmental  regulation.
+However,  there  can  be no  assurance  that  future  additions  or  changes  to
+environmental  regulations  will not impose upon the Company the requirement for
+significant capital expenditure.  Further, any failure by the Company to control
+the use of, or to restrict adequately the discharge of hazardous materials under
+present or future regulations could subject it to substantial liability or could
+cause its manufacturing  operations to be suspended.  In addition,  IDT could be
+held financially  responsible for remedial measures if its properties were found
+to be  contaminated  whether  or  not  the  Company  was  responsible  for  such
+contamination.
+
+Employees
+
+     At April 2, 2000, IDT and its  subsidiaries  employed  approximately  4,800
+people  worldwide,  of  whom  1,400  were  in  Malaysia  and  1,200  were in the
+Philippines.  IDT's success depends in part on its ability to attract and retain
+qualified personnel,  who are generally in great demand. Since its founding, the
+Company  has  implemented  policies  enabling  its  employees  to share in IDT's
+success such as  participation in stock option,  stock purchase,  profit sharing
+and bonus  plans for key  contributors.  IDT has never had a work  stoppage.  No
+employees are represented by a collective bargaining agreement,  and the Company
+considers its employee relations to be good.

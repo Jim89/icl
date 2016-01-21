@@ -1,0 +1,566 @@
+Item 1. Business
+
+General
+
+JDS Uniphase Corporation is the result of a merger between Uniphase Corporation ("Uniphase") and JDS FITEL Inc. ("JDS FITEL"), pursuant to which they combined their operations on June 30, 1999. Historic information included or incorporated by reference in this Annual Report on Form 10-K that is specific to Uniphase Corporation or JDS FITEL Inc. is specifically described as "Uniphase" or "JDS FITEL" information, respectively. References to "we," "us", "our" , the "Company" and "JDS Uniphase" refer to the combined entity resulting from the merger.
+
+We are a leading provider of advanced fiber optic components and modules. These products are sold to the world's leading telecommunications and cable television system and subsystem providers, which are commonly referred to as OEMs and include established system providers, such as Alcatel, Ciena, Cisco, Corning, Lucent, Marconi, Motorola, Nortel, Scientific Atlanta, Siemens and Tyco, along with emerging system providers, such as Corvis, ONI Systems, Juniper Networks and Sycamore. These telecommunication system and subsystem providers use these components and modules as the building blocks for the systems that they ultimately supply to telecommunications carriers such as AT&T, WorldCom, Qwest and Sprint.
+
+Our products are basic building blocks for fiber optic networks and perform both optical-only, commonly referred to as "passive" functions, and optoelectronic, commonly referred to as "active" functions, within fiberoptic networks. Our products include semiconductor lasers, high-speed external modulators, transmitters, amplifiers, couplers, multiplexers, circulators, tunable filters, optical switches and isolators for fiberoptic applications. We also supply our OEM customers with test instruments for both system production applications and network installation. In addition, we design, manufacture and market laser subsystems for a broad range of OEM applications, optical display and projection products used in computer displays and other similar applications and light interference pigments used in security products and decorative surface treatments.
+
+The Company was incorporated in Delaware in October 1993. We are the product of several strategic mergers and acquisitions, including the June 30, 1999 combination of Uniphase and JDS FITEL. During 2000 alone we acquired the following companies and businesses, in chronological order: AFC Technologies ("AFC"), Ramar Corporation ("Ramar"), EPITAXX, Inc. ("EPITAXX"), SIFAM Limited ("SIFAM"), Oprel Technologies Inc. ("Oprel"), IOT Limited ("IOT"), Optical Coating Laboratory, Inc. ("OCLI"), Cronos Integrated Microsystems, Inc. ("Cronos"), Fujian Casix Lasers Inc. ("Casix") and E-TEK Dynamics, Inc. ("E-TEK"). 
+
+
+Industry Background
+
+Businesses and consumers are increasingly accessing public telecommunications networks to communicate, collect and distribute information. The explosive growth of the Internet, coupled with the increasing volume of data and video traffic across corporate and public internets and intranets has fueled the continuing and rapidly growing demand for more network capacity in both telecommunications and cable television networks. In response to this growing demand, telecommunications service providers have been deploying new fiberoptic systems or upgrading existing fiberoptic systems in order to significantly increase the capacity of their networks. Given the inherently faster speed of light signals in fiberoptic networks and their immunity from electromagnetic interference, fiberoptic systems have become the preferred solution for increasing network capacity. Today, fiberoptic cable is the primary medium for long-haul telecommunications and cable television networks and is making inroads to replace copper in the shorter distance metropolitan, or metro markets that serve larger metropolitan and other public networks with transmission distances of less than 100 kilometers.
+
+Demands for increased capacity in fiberoptic networks have led, in recent years, to a proliferation of an advanced method of transmitting multiple signals at slightly different wavelengths through a single fiber to achieve efficient use of fiber capacity. This technique, which is referred to as wavelength division multiplexing, or WDM, requires separate source lasers emitting slightly different wavelengths for each signal or "channel''. Each signal or "channel" carries a separate voice or data transmission. Once the signal is generated, more complex modulators and optical amplifiers control and amplify the signal in the network to ensure that the voice or data transmission signal reaches its destination quickly and reliably. WDM systems, which were originally designed for eight separate wavelengths or channels in 1996, are currently being developed to carry over 160 separate channels. This increasingly complex design for WDM systems has contributed to the need for telecommunications system suppliers to rely on third party, merchant suppliers, to provide higher performance components and, ultimately, integrated combinations of components, or "modules".
+
+A typical WDM system consists of a large number of interdependent active optoelectronic and passive optical components. An active component is a device that has both optical and electronic properties while a passive component only performs its functions in the optical domain. Generally, active components generate, encode, amplify or detect optical signals, while passive components are used to mix, filter, adjust and stabilize the optical signals in advanced fiberoptic networks. Both active and passive components are needed to achieve a system's specifications for speed, performance and reliability. To minimize the number of components, and thereby reduce costs and improve system reliability, telecommunications equipment manufacturers are increasingly requiring the integration of multiple components into single, integrated modules, which combine a number of components into a single functional unit within the network architecture. For example, a module such as an Erbium Doped Fiber Amplifier (EDFA) is comprised of multiple passive and active components. According to Ryan Hankin Kent, Inc. or "RHK" (a market research company specializing in telecommunications), the market for EDFAs alone is expected to grow from $790 million in 1999 to $3.9 billion in 2003. 
+
+The current demand for increased capacity in fiberoptic telecommunications and cable television networks has caused the complexity and performance requirements of newly deployed fiberoptic networks to substantially increase while product life cycles for these network systems decrease. OEM system suppliers are under pressure from their customers to provide higher capacity and more complex, and at the same time more flexible, systems in shorter time periods and at reduced costs. These same pressures apply at all levels of their system products, including components and modules. These increasing performance requirements and associated development costs are making it more difficult for many OEM suppliers to compete effectively by vertically integrating their own components and modules. The growing complexity of these network systems also results in a substantial increase in the number of components that the OEM supplier must utilize to achieve desired system level performance. For example, next-generation systems are expected to reach transmission speeds of 40 Gbp/s with channel counts surpassing 160. There will need to be source lasers, modulators, and receivers for every channel, as well as more powerful amplifiers and additional components to combat spectral issues that develop in the signal at 40 Gbp/s. At the same time, the need for increased flexibility within a fiberoptic network, combined with cost reduction pressures, is driving demand for systems that reduce, and ultimately, eliminate altogether, the need for electronic switching and regeneration of optical signals. The goal of these so called "all optical" networks is to keep a signal entirely in the optical domain from beginning to end of the network. To accomplish this, optical components will need to perform every function in the network, many of which are currently accomplished by electronics.
+
+All of these factors, the increasing system performance requirements, the need for more components and modules to provide the higher channel counts and higher transmission speeds demanded by the market, the increasing complexity of these components and modules, along with the need to reduce costs and shorten time to market, are making it more difficult for the established telecommunications system providers to design, develop and manufacture these components and modules, while at the same time providing the network backbone to meet the market demand. Moreover, emerging system providers, which typically have little or no internal component manufacturing capability, must rely exclusively on a robust supply chain from merchant component and module suppliers to meet their needs.
+
+In lieu of qualifying a different vendor for each of these components, OEM system suppliers are seeking fewer vendors for a greater variety of components and integrated modules. A single vendor of multiple components or modules has the ability to design these products to interact more effectively within a network infrastructure and to optimize performance between them when installed in a single network system. Given these factors, there is an increasing trend by established OEMs to reduce the level of their vertical integration at the component and module level and to focus on the overall system design and architecture of their products, which has historically been the primary means by which those OEM system suppliers have differentiated themselves from their competitors. Coupled with the developing demand from emerging system suppliers, the merchant component manufacturers are facing unprecedented demand.
+
+Our Technology and Products
+
+Our product offering consists of a broad range of components and modules enabling our customers to satisfy all of their requirements through "one- stop" shopping at a single supplier. We have two principal operating segments: Components and Modules. Financial information about our segments and geographical regions are included in Note 10 to our consolidated financial statements included in our Current Report on Form 8-K filed with the SEC on September 1, 2000 and is herein incorporated by reference.
+
+Components
+
+Our component products include both active and passive products. Active products include source lasers for cable television and telecommunications, pump lasers, external modulators, photodetectors, receivers, and integrated laser modulator assemblies. Passive components include isolators, WDM couplers, monitor tap couplers, gratings, circulators, optical switches, tunable filters, micro-electro-mechanical-systems, wavelength lockers and switches. 
+
+Source Lasers. At the beginning of the network, a source laser powers the initial signal that will be transmitted over the network. These source lasers are characterized by their wavelength and power levels and operate most efficiently at the 1550-nanometer wavelength range for general telecommunications networks and 1310-nanometer or 1550-nanometer for cable television telecommunications networks. Power, which is measured in milliwatts, generally determines the ability of the source laser to transmit over longer distances, with higher power source lasers enabling greater initial transmission distances. A single source laser is required for each channel in a WDM system. 
+
+We supply both 1550-nanometer and 1310-nanometer diode lasers as sources for telecommunications and cable television transmitters. These lasers are either continuous wave for use with external modulators or directly modulated. For long-haul WDM systems, lasers at up to 20 milliwatts of power are produced to operate at the many desired optical wavelengths and used in conjunction with current 2.5 and 10 gigabit per second external lithium niobate modulators, and 40 gigabit per second lithium niobate modulators in development. Directly modulated 2.5 gigabit per second lasers are used for short-reach fiberoptic systems. For cable television, higher power (60 milliwatts) 1550-nanometer continuous wave lasers are used for externally modulated trunk transmitters and directly modulated 1310-nanometer analog lasers are used for distribution transmitters.
+
+Modulators. Modulators turn the source light on and off to encode and send the information throughout the network. Modulation can be achieved either by directly turning the laser light source on and off or externally by transmitting or alternating a continuous source laser signal to achieve the same on and off effect. Lower performance, shorter distance network systems are better suited for direct modulation, while other systems are designed to utilize external modulators to encode the information signal. We produce both direct and external modulators used in fiberoptic telecommunications systems.
+
+Pump Lasers. Pump lasers are used in optical amplifiers within networks to regenerate the light signal that naturally suffers loss over distance within the network. The advent of the optical amplifier in the early 1990s has permitted the development of today's advanced fiberoptic networks by eliminating the need within those networks to convert attenuated optical signals back into the electrical domain to amplify these signals for continued transmission over distances now exceeding 600 kilometers. Optical amplifiers each contain from one to six pump lasers depending on amplifier performance requirements. 
+
+We supply 980-nanometer pump lasers that are used in optical amplifiers. These pumps are used to energize the erbium-doped fiber that comprises the amplifier. Output power from the pump modules is in the range of 70 to 200 milliwatts. Optical amplifiers are commonly used in 1550-nanometer fiber systems that exceed 60 kilometers in length. 
+
+Optical Photodetectors and Receivers. Receivers and photodetectors detect the optical signals and convert them back into an electronic signals. We supply optical photodetectors and receivers for fiberoptic telecommunications and cable television networks. Receivers are used in WDM products for each channel at both sides of the fiberoptic link as wavelength translation is required. Photodetectors are used throughout a network to monitor a variety of statistics including power levels and channel count.
+
+Couplers, Filters, Isolators and Circulators. WDM couplers are used to split and combine signals in an optical network. We supply WDM demultiplexers and access/bi-directional couplers. Many of these products are based on thin- film filters, microlenses and/or special optical materials. The WDM products are generally used at the receiver and have one output port for each system wavelength. 
+
+Isolator products are used to cause light signals in a network to propagate in one direction within a network, but prevent that signal from returning in the opposite direction. Circulators are similar to isolators in causing light in a system to flow in only one direction, but are different in that circulators incorporate multiple ports and use these multiple ports to perform a routing function within the network. We supply various types of isolators, circulators and we also produce tunable narrow-bandpass filters that are wavelength-tunable by voltage control.
+
+Switches and Attenuators. Optical switches are used to route and switch signals to different destinations within networks. Attenuators are used to adjust the power of the optical signal to be compatible with the optical receivers within a network system. 
+
+We supply fixed and variable attenuators and switches. The attenuators are used in multiple locations in a network, including at the receiver for performance optimization. Switches are being widely used for path protection, shared signal monitoring and bandwidth provisioning. Switches will also be key in future networks for other reconfigurability and cross-connect applications. We also supply custom design switching modules of sub-assemblies primarily for optical-path protection. The complexity of these switches varies and is determined in large part by the number of fiber paths that come in and out of the switch, and we offer switches with as many as 32 inbound and 32 outbound light paths.
+
+We also supply a line of switches and attenuators based on the micro-electro- mechanical-systems ("MEMS") technology which uses traditional semiconductor process techniques to produce compact, high-performance, and reliable applications at a low cost in high volume. 
+
+Fiber Bragg Gratings. We supply fiber Bragg gratings to separate and filter multiple wavelengths of light propagating in the same fiber. These gratings are generally used in signal monitoring, dispersion compensation and gain flattening applications.
+
+Wavelength Lockers. We supply wavelength lockers that are used to stabilize the wavelength of lasers used in dense WDM transmission systems. These lockers ensure that, over the lifetime of the system, the wavelength of a source laser does not drift to interfere with an adjacent wavelength channel. The locker operates by filtering and detecting a small amount of the source-laser light and providing a stabilizing feedback signal to the laser.
+
+Modules
+
+Capitalizing on our broad range of active and passive components, we also develop and manufacture modules for telecommunications and cable television systems. Modules are assemblies of optical and optoelectronic components, and can be combined with a limited amount of electronics, in a single compact package. Our module products include amplifiers, add-drop multiplexers, transmitters, transceivers and test instruments for optical components. A brief description of our module products are as follows:
+
+Amplifiers. We supply both Raman and EDFA optical amplifiers. These amplifiers are designed to boost the WDM optical signals without reconversion to electrical signal and permit an optical signal to travel a greater distance between electronic terminals and regenerators. These modules include multiple passive and active components such as couplers, isolators, pump combiners and pump lasers.
+
+Add-Drop Multiplexers. We supply add-drop multiplexers that allow systems to add and drop optical signals without reconversion to an electrical signal. For example, a system operating from San Francisco to New York can drop one signal in Chicago and add another allowing for greater network flexibility. The modules include multiple components such as switches, fiber Bragg gratings and attenuators.
+
+Transmitters. We manufacture transmitters that combine source lasers, modulators, wavelength lockers and electronic drivers so that the signal is created and encoded in a single package.
+
+Transceivers. In addition to transmitters we also offer transceivers that combine transmitters with receivers so that signals can be generated and encoded or received and detected in a single package. These modules would be installed at the beginning and end of a system.
+
+Cable Television Transmitters and Amplifiers. In cable television networks we supply externally modulated transmitters for trunk-line applications, directly modulated transmitters for the distribution portion of cable television networks, return-path lasers for interactive communications and transmitters providing both analog and digital signals to the recipient. 
+
+
+Telecommunications Specialty Modules and Instruments. We supply a number of specialty products for multi-gigabit fiberoptics systems. In particular, we provide some of the transmit/receive instrumentation modules used to design and test such systems. We also provide a variety of variable-bit rate receivers and OC-48 transmit/receive products that operate over extended temperature ranges.
+
+Test Instruments. Test instruments are used for testing and measuring optical components. Many of the test instruments were originally developed for evaluating our own optical components during the design and production phases. An example of a test instrument is the series polarization meter, which performs high resolution measurement of polarization dependent loss (an important parameter for optical amplifier components used in undersea applications) in real time. This allows for dynamic fine-tuning of components during assembly. Other test instruments include return loss meters, broadband noise sources and swept wavelength test systems (certain of which allow for high speed optical spectral analysis of components such as dense WDM demultiplexers), controllable attenuators and programmable switches. Controllable attenuators include manually adjustable or programmable attenuators for laboratory and automated production testing. Network attenuators perform power management functions in WDM links. Programmable switches include matrix switches, which are used mainly in automated test stations for manufacturing or reliability testing. Switches are also key building blocks for network elements such as remote fiber testing systems and automated fiber patch panels.
+
+Other Products
+
+In addition to our core optical components and modules business, we also manufacture and supply laser subsystems for a broad range of OEM applications, optical display and projection products used in computer displays and other similar applications and light interference pigments used in security products and decorative surface treatments.
+
+Our principal laser subsystem products consist of air-cooled argon gas laser subsystems, which generally emit blue or green light, Helium-Neon laser subsystems, which generally emit red or green light, and solid state lasers, which generally emit infrared, blue or green light. These systems consist of a combination of a laser head containing the lasing medium, power supply, cabling and packaging, including heat dissipation elements. 
+
+Optical display and projection products control the brightness, contrast and resolution of next generation display products including computer displays, digital image projectors, flat panel displays, scanners and personal digital assistants (commonly known as PDAs). 
+
+Light interference pigments achieve unique color shifting characteristics in security products and decorative surface treatments. Security related products include bank notes, passports, credit cards, tax stamps and brand protection labels. Decorative surface treatments include automotive paint, cosmetics, electronic cases and apparel.
+
+ 
+
+Company Strategy
+
+Our goal is to maintain and expand our position as a leading merchant supplier of advanced components and modules to the rapidly growing telecommunications and cable television networking marketplace. The key elements of our business strategy are as follows:
+
+Offer a Comprehensive Portfolio of Fiberoptic Components. We seek to position ourselves as a "one-stop'' source for an increasingly greater variety of components and for both the established network system providers as well as the burgeoning number of emerging system providers. As our customers continue to reduce the number of suppliers of components and modules for their systems, we strive to provide the capacity and expertise to effectively partner with our customers to provide a comprehensive solution to their component and module needs.
+Develop Modules to Improve Customer Time-to-Market. Our customers continue to seek an increase in the level of integration in the optoelectronic and optical products that they purchase from their suppliers. We believe that reductions in the number of component integration and manufacturing steps required at the customer level enable these customers to better focus their time and resources on aspects of their business that leverage their core competencies and their competitive advantages over other system providers. Through close relationships with our customers, we try to understand their needs at an early stage in their product development cycles and to design our products to meet these specific performance and time-to-market needs. We believe that our core competencies in both passive and active components will enable us to design our module-level solutions quickly and effectively. 
+Increase Manufacturing Capacity. As customer demand for our products continues to grow, we are focused on significantly increasing our manufacturing capacity through a number of initiatives including facility expansion, enhanced manufacturing efficiencies, automation and outsourcing. We continue to add people, space and equipment at our facilities throughout the world while simultaneously initiating development efforts that involve both enhancement and optimization of existing manufacturing techniques and development of new, more automated manufacturing solutions. In addition, we are also looking to outsource certain steps of the manufacturing process where partners may help remove production bottlenecks and create a more cost-effective process and scalable process.
+Maintain Technology Leadership and High Product Reliability. We consider our technological and product leadership and our existing customer relationships to be critical to our continued success. We believe one of the barriers to entry in the long-haul, metro and submarine telecommunications markets is the life-test and quality control criteria established by Telcordia, one of the world's foremost commercial research and development organizations for communications applications. Our new product development often leverages our existing Telcordia test data, enabling us to use our significant library of life-test and quality control data to qualify new products more quickly than our competitors, who may have less available test data. Our research and development efforts continue to focus on the advanced technologies critical to our success in meeting our customers demands for higher channel count systems, increased power, higher speed modulation, all optical networking and module level integration.
+Partner with our Customers. We work closely with our customers from initial product design through to manufacturing and delivery. By engaging with our customers at every level, we seek to partner with them at the early stages of system development so that we can provide them with all of their component and module needs through customized design and manufacturing. Maintaining strong customer relationships is critical to our company's growth and every effort is made to ensure that our customers' needs are met. 
+Seek Complementary Mergers and Acquisitions. The telecommunications industry is experiencing rapid consolidation and realignment because of globalization, deregulation and rapidly changing competitive technologies such as fiberoptics for cable television, wireless communications and the Internet. We have grown in part by acquiring or merging with telecommunications businesses and may continue to do so in the future. We frequently evaluate strategic opportunities and intend in the future to actively pursue acquisitions of additional products, technologies and businesses. 
+Although we expect to be successful in implementing our strategy, our statements about our strategy are forward looking. We cannot predict the future and many factors, some within and some outside of our control may cause us to fail to achieve one or more of our strategic goals. Some of these factors are discussed under "Risk Factors" below.
+
+ 
+
+Recent Developments
+
+On July 10, 2000, we entered into a definitive agreement to merge with SDL, Inc., a Delaware corporation, in a transaction valued at approximately $41 billion based on July 7, 2000 closing stock prices. The merger agreement provides for the exchange of 3.8 shares of our Common Stock for each common share of SDL. Completion of the transaction is subject to customary closing conditions, including the approval of stockholders' of both companies and regulatory approvals. Following completion of the transaction, SDL will operate as our wholly-owned subsidiary. SDL, Inc. designs, manufactures and sells semiconductor lasers, laser-based systems, and fiber optic related solutions. 
+
+A complete description of the transaction and the risks and uncertainties associated therewith are set forth in our Registration Statement on Form S-4 filed with the SEC on September 7, 2000 and this summary is qualified in its entirety by such Registration Statement. Among other things, the completion of the pending merger is subject to risks and uncertainties, including, without limitation, those risks and uncertainties described under the heading "Risk Factors" in the Registration Statement.
+
+Sales and Marketing
+
+We market our telecommunications components to OEMs through our direct sales force in North America, Asia, Europe and Australia. In addition, we sell our products through distributors and manufacturers' representatives in North America, Europe, Asia, South America, the Middle East and Australia. Selected OEM customers for telecommunications components include:
+
+Alcatel 
+ Juniper Networks 
+ ONI Systems 
+ 
+Ciena 
+ Lucent 
+ Scientific Atlanta 
+ 
+Cisco 
+ Marconi 
+ Siemens 
+ 
+Corning 
+ Motorola 
+ Sycamore 
+ 
+Corvis 
+ Nortel 
+ Tyco 
+   
+ 
+
+
+ 
+
+We market our laser subsystem products, optical display and projection products and light interference pigments through our direct sales force and worldwide network of representatives and distributors. 
+
+Customer Support and Service
+
+We believe that a high level of customer support is necessary to successfully develop and maintain long-term relationships with all our customers. With respect to our core telecommunications businesses, each relationship begins at the design-in phase and is maintained as customer needs change and evolve. We provide direct service and support to our OEM customers through our offices in North America and Europe.
+
+Research and Development
+
+During fiscal years 2000, 1999 and 1998, JDS Uniphase incurred research and development expenditures of $113.4 million, $27.0 million and $14.8 million, respectively.
+
+We are currently developing new and enhanced telecommunications components and modules and expanding our manufacturing capability for these products. Once the design of a product is complete, our engineering efforts shift to enhance both the performance of that product and our ability to manufacture it at higher volumes and at lower cost. For the telecommunications marketplace, we continue to increase the power output of our pump lasers and the number of source lasers available for multi-channel applications and to develop several other optical switching technologies. Higher performance modulators and transmitters are under development, as are advanced multi-gigabit modulators. We continue to develop packaging technology for a number of our optoelectronic components so as to enable us to supply more integrated, packaged modules to our customer base.
+
+ 
+
+Manufacturing
+
+The following table sets forth our main locations and the primary products manufactured at each location:
+
+Location 
+ Products 
+ 
+Canada, Nepean 
+ Optical amplifiers, wave division multiplexers, couplers, circulators, switches, tunable filters, isolators and test instruments for telecommunications, waveguides and attenuators 
+ 
+Netherlands, Eindhoven 
+ Source lasers, semiconductor optical amplifiers, pump lasers for optical amplifiers and polymer waveguide optical switches 
+ 
+Connecticut, Bloomfield 
+ Modulators and wavelength lockers 
+ 
+Switzerland, Zurich 
+ Pump lasers 
+ 
+Pennsylvania, Chalfont 
+ Cable television transmitters and amplifiers, transceivers for telecommunications 
+ 
+Florida, Melbourne 
+ Test instruments, transmitters and transceivers for telecommunications 
+ 
+Australia, Sydney 
+ Fiber Bragg gratings 
+ 
+California, San Jose 
+ Add-drop multiplexer modules, wave division multiplexers couplers, circulators, switches, isolators, optical amplifiers and laser subsystems 
+ 
+California, Santa Rosa 
+ Thin film filters, optical display and projection products and light interference pigments 
+ 
+United Kingdom, Plymouth 
+ Laser packaging for telecommunications, fused couplers 
+ 
+United Kingdom, Whitney 
+ Fiber Bragg gratings for 980nm pump lasers 
+ 
+New Jersey, Trenton 
+ Optical photodetectors and receivers 
+ 
+North Carolina, Raleigh-Durham 
+ Micro-electro-mechanical-systems 
+ 
+China, Fuzhou 
+ YVO4 and lithium niobate crystals 
+ 
+China, Shenzen 
+ Isolators and wave division multiplexers 
+ 
+Taiwan, Taipei 
+ Couplers and isolators 
+ 
+
+
+ 
+
+Sources and Availability of Raw Materials
+
+Our policy is to establish at least two sources of supply for materials whenever possible, although we do have some sole source supply arrangements. The loss or interruption of such arrangements could have an impact on our ability to deliver certain products on a timely basis.
+
+Competition
+
+The industries in which we sell our products are highly competitive. In all aspects of our business, we face intense competition from established competitors and the threat of future competition from new and emerging companies. Our overall competitive position depends upon a number of factors, including the price, performance and reliability of our products, the breadth of our product line, our level of customer service, the quality of our manufacturing processes, the compatibility of our products with existing telecommunications and cable television network architectures and our ability to participate in the growth of emerging technologies.
+
+In the telecommunications markets, we face competition from companies that have substantially greater financial, engineering, research, development, manufacturing, marketing, service and support resources, greater name recognition than us and long-standing customer relationships. These competitors include, without limitation, Alcatel, Agilent, Avanex, Chorum, Coherent, Corning, Fujitsu, Furukawa, Harmonic, Lightpath Technologies, Lucent, Motorola, New Focus, Nortel, Pirelli, SDL, Sumitomo Cement Opto Electronics Group and Tyco.
+
+Patents and Proprietary Rights
+
+Intellectual property rights that apply to our various products include patents, trade secrets and trademarks. Because of the rapidly changing technology and a broad distribution of patents in the optoelectronics industry, our intention is not to rely primarily on intellectual property rights to protect or establish our market position. We do not intend to broadly license our intellectual property rights unless we can obtain adequate consideration or enter into acceptable patent cross-license agreements. We hold approximately 375 U.S. patents and 383 Foreign patents.
+
+Backlog
+
+Backlog consists of written purchase orders for products for which we have assigned shipment dates within the following 12 months. As of June 30, 2000 our backlog was approximately $931 million including the backlog acquired from E-TEK as compared to a backlog of approximately $156 million at June 30, 1999. Orders in backlog are firm, but are subject to cancellation or rescheduling by the customer. Because of possible changes in product delivery schedules and cancellation of product orders and because our sales will often reflect orders shipped in the same quarter in which they are received, our backlog at any particular date is not necessarily indicative of actual sales for any succeeding period. Certain of our customers have adopted "just in time" techniques with respect to ordering the Company's products, which will cause us to have shorter lead times for providing products. Such shorter lead times are likely to result in lower backlog.
+
+Employees
+
+At June 30, 2000, we had a total of approximately 19,000 full-time employees worldwide, including 1,540 in research, development and engineering, 545 in sales, marketing and service, approximately 15,886 in manufacturing, and 1,041in general management, administration and finance. We intend to hire additional personnel during the next 12 months in each of these areas. Our future success will depend in part on our ability to attract, train, retain and motivate highly qualified employees, who are in great demand. There can be no assurance that we will be successful in attracting and retaining such personnel. Except for our Netherlands and Germany operations, our employees are not represented by any collective bargaining organization. Most hourly and salaried employees in the Netherlands are represented by the Philips Collective Labor Agreement. We have never experienced a work stoppage, slowdown or strike. We consider our employee relations to be good.
+
+ 
+
+Risk Factors
+
+
+Difficulties We May Encounter Managing Our Growth Could Adversely Affect Our Results Of Operations
+
+
+We have historically achieved growth through a combination of internally developed new products and acquisitions. Our growth strategy depends on our ability to continue developing new components, modules and other products for our customer base. However, along with internal new product development efforts as part of this strategy, we expect to continue to pursue acquisitions of other companies, technologies and complementary product lines. The success of each acquisition will depend upon:
+
+our ability to manufacture and sell the products of the businesses acquired;
+
+continued demand for these acquired products by our customers;
+our ability to integrate the acquired business' operations, products and personnel;
+
+our ability to retain key personnel of the acquired businesses; and
+
+our ability to expand our financial and management controls and reporting systems and procedures.
+
+Difficulties In Integrating New Acquisitions Could Adversely Affect Our Business
+
+
+Critical to the success of our growth is the ordered, efficient integration of acquired businesses into our organization and, with this end, we have in the past spent and continue to spend significant resources. If our integration efforts are unsuccessful, our businesses will suffer. We are the product of several substantial combinations, mergers and acquisitions, including, among others, the combination of Uniphase and JDS FITEL on June 30, 1999, and the acquisitions of OCLI on February 4, 2000 and E-TEK on June 30, 2000. Currently, we have a pending merger with SDL, Inc. which remains subject to stockholder and regulatory approvals. Each combination, merger and acquisition, presents unique product, marketing, research and development, facilities, information systems, accounting, personnel and other integration challenges. In the case of several of our acquisitions, including Uniphase Laser Enterprise in March 1997, Uniphase Netherlands in June 1998, and Cronos Integrated Microsystems, Inc. and Fujian Casix Laser, Inc. in April 2000, we acquired businesses that had previously been engaged primarily in research and development and that needed to make the transition from a research activity to a commercial business with sales and profit levels that are consistent with our overall financial goals. This transition is in its early stages at Cronos. It has also not yet been completed at Uniphase Netherlands, which continues to operate at higher expense levels and lower gross margins than those required to meet our profitability goals. Also, our information systems and those of the companies we acquired are often incompatible, requiring substantial upgrades to one or the other. Further, our current senior management is a combination of the prior senior management teams of Uniphase, JDS FITEL, and OCLI, several of whom have not previously worked with other members of management. Our integration efforts may not be successful, and may result in unanticipated operations problems, expenses and liabilities and the diversion of management attention. Consequently, our operating results would suffer.
+
+
+We often incur substantial costs related to our combinations, mergers and acquisitions. For example, we have incurred direct costs associated with the combination of Uniphase and JDS FITEL of approximately $12 million, incurred approximately $8 million associated with the acquisition of OCLI and incurred approximately $92 million associated with the acquisition of E-TEK. We expect to continue to incur substantial costs relating to our pending merger SDL, Inc. We may incur additional material charges in subsequent quarters to reflect additional costs associated with these and other combinations and acquisitions which will be expensed as incurred.
+
+
+If We Fail To Efficiently Integrate Our Sales And Marketing Forces, Our Sales Could Suffer
+
+
+Our sales force is and will in the future be a combination of our sales force and the sale forces of the businesses we acquired, which must be effectively integrated for us to remain successful. Our combinations, mergers and acquisitions often result in sales forces differing in products sold, marketing channels used and sales cycles and models applied. Accordingly, we may experience disruption in sales and marketing in connection with our efforts to integrate our various sales and marketing forces, and we may be unable to efficiently or effectively correct such disruption or achieve our sales and marketing objectives if we fail in these efforts. Our sales personnel not accustomed to the different sales cycles and approaches required for products newly added to their portfolio may experience delays and difficulties in selling these newly added products. Furthermore, it may be difficult to retain key sales personnel. As a result we may fail to take full advantage of the combined sales forces' efforts, and one company's sales approach and distribution channels may be ineffective in promoting another entity's products, all of which may materially harm our business, financial condition or operating results.
+
+
+We May Fail To Commercialize New Product Lines
+
+
+We intend to continue to develop new product lines to address our customers' diverse needs and the several market segments in which we participate. If we fail, our business will suffer. As we target new product lines and markets, we will further increase our sales and marketing, customer support and administrative functions to support anticipated increased levels of operations from these new products and markets as well as growth from our existing products. We may not be successful in creating this infrastructure nor may we realize any increase in the level of our sales and operations to offset the additional expenses resulting from this increased infrastructure. In connection with our recent acquisitions, we have incurred expenses in anticipation of developing and selling new products. Our operations may not achieve levels sufficient to justify the increased expense levels associated with these new businesses.
+
+
+Any Failure Of Our Information Technology Infrastructure Could Materially Harm Our Results Of Operations
+
+
+Our success depends, among other things, upon the capacity, reliability and security of our information technology hardware and software infrastructure. Any failure relating to this infrastructure could significantly and adversely impact the results of our operations. In connection with our growth, we have identified the need to update our current information technology infrastructure and expect to incur significant costs relating to this upgrade. Among other things, we are currently unifying our manufacturing, accounting, sales and human resource data systems using an Oracle platform, expanding and upgrading our networks and integrating our voice communications systems.
+
+
+We must continue to expand and adapt our system infrastructure to keep pace with our growth. Demands on infrastructure that exceed our current forecasts could result in technical difficulties. Upgrading the network infrastructure will require substantial financial, operational and management resources, the expenditure of which could affect the results of our operations. We may not successfully and in a timely manner upgrade and maintain our information technology infrastructure, and a failure to do so could materially harm our business, results of operations and financial condition.
+
+
+We Are Subject To Manufacturing Difficulties
+
+
+If We Do Not Achieve Acceptable Manufacturing Volumes, Yields Or Sufficient Product Reliability, Our Operating Results Could Suffer
+
+
+The manufacture of our products involves highly complex and precise processes, requiring production in highly controlled and clean environments. Changes in our manufacturing processes or those of our suppliers, or their inadvertent use of defective or contaminated materials, could significantly reduce our manufacturing yields and product reliability. Because the majority of our manufacturing costs are relatively fixed, manufacturing yields are critical to our results of operations. Some of our divisions have in the past experienced lower than expected production yields, which could delay product shipments and impair gross margins. These divisions or any of our other manufacturing facilities may not maintain acceptable yields in the future.
+
+
+For example, our existing JDS Uniphase Netherlands facility has not achieved acceptable manufacturing yields since the June 1998 acquisition, and there is continuing risk attendant to this facility and our manufacturing yields and costs. To the extent we do not achieve acceptable manufacturing yields or experience product shipment delays, our business, operating results and financial condition would be materially and adversely affected.
+
+
+As our customers' needs for our products increase, we must increase our manufacturing volumes to meet these needs and satisfy customer demand. Failure to do so may materially harm our business, operating results and financial condition. In some cases, existing manufacturing techniques, which involve substantial manual labor, may be insufficient to achieve the volume or cost targets of our customers. As such, we will need to develop new manufacturing processes and techniques, which are anticipated to involve higher levels of automation, to achieve the targeted volume and cost levels. In addition, it is frequently difficult at a number of our manufacturing facilities to hire qualified manufacturing personnel in a timely fashion, if at all, when customer demands increase over shortened time periods. While we continue to devote research and development efforts to improvement of our manufacturing techniques and processes, we may not achieve manufacturing volumes and cost levels in our manufacturing activities that will fully satisfy customer demands.
+
+
+If Our Customers Do Not Qualify Our Manufacturing Lines For Volume Shipments, Our Operating Results Could Suffer
+
+
+Customers will not purchase any of our products, other than limited numbers of evaluation units, prior to qualification of the manufacturing line for the product. Each new manufacturing line must go through varying levels of qualification with our customers. This qualification process determines whether the manufacturing line achieves the customers' quality, performance and reliability standards. Delays in qualification can cause a product to be dropped from a long term supply program and result in significant lost revenue opportunity over the term of that program. We may experience delays in obtaining customer qualification of our new facilities. If we fail in the timely qualification of these or other new manufacturing lines, our operating results and customer relationships would be adversely affected.
+
+
+Our Operating Results Suffer As A Result Of Purchase Accounting Treatment, Primarily Due To The Impact Of Amortization Of Goodwill And Other Intangibles Originating From Acquisitions
+
+
+Under U.S. generally accepted accounting principles that apply to us, we accounted for a number of business combinations using the purchase method of accounting. Under purchase accounting, we recorded the market value of our common shares and the exchangeable shares of our subsidiary, JDS Uniphase Canada Ltd., issued in connection with mergers and acquisitions with the fair value of the stock options assumed, which became options to purchase our common shares and the amount of direct transaction costs as the cost of acquiring these entities. That cost is allocated to the individual assets acquired and liabilities assumed, including various identifiable intangible assets such as in-process research and development, acquired technology, acquired trademarks and trade names and acquired workforce, based on their respective fair values. We allocated the excess of the purchase cost over the fair value of the net assets to goodwill.
+
+
+The impact of purchase accounting on our operating results is significant. The following table reflects the impact of in-process research and development expense (in the quarter the acquisition closed) and the prospective quarterly/annual amortization of purchased intangibles attributable to our significant mergers and acquisitions that have closed in the past four quarters (in millions):
+
+
+
+ 
+
+ 
+
+Entity
+ 
+In-process Research and Development
+ Quarterly Amortization of Purchased Intangibles
+ Annual Amortization of Purchased Intangibles
+ 
+        
+EPITAXX, INC.
+ $ 16.7
+ $ 17.1
+ $ 68.2
+ 
+OCLI
+ $ 84.1
+ $ 79.8
+ $ 319.1
+ 
+E-TEK
+ $ 250.6
+ $ 851.1
+ $3,404.4
+ 
+        
+        
+
+
+
+
+The impact of these mergers and acquisitions as well as other acquisitions consummated in the past five years resulted in amortization expense of $896.9 million for the fiscal year ended June 30, 2000 and is expected to result in amortization of $4.5 billion for the fiscal year ended June 30, 2001. 
+
+
+Additionally, we also incur other purchase accounting related costs and expenses in the period a particular transaction closes to reflect purchase accounting adjustments adversely impacting gross profit and costs of integrating new businesses or curtailing overlapping operations. Purchase accounting treatment of our mergers and acquisitions will result in a net loss for the foreseeable future, which could have a material and adverse effect on the market value of our stock.
+
+
+Our Stock Price Fluctuates Substantially
+
+
+The Unpredictability Of Our Quarterly Operating Results Could Cause Our Stock Price To Be Volatile Or Decline
+
+
+We expect to continue to experience fluctuations in our quarterly results, which in the future may be significant and cause substantial fluctuations in the market price of our stock. All of the concerns we have discussed under "Risk Factors" could affect our operating results, including, among others: 
+
+the timing of the receipt of product orders from a limited number of major customers;
+
+the loss of one or more of our major suppliers or customers;
+
+competitive pricing pressures;
+
+the costs associated with the acquisition or disposition of businesses;
+
+our ability to design, manufacture and ship technologically advanced products with satisfactory yields on a timely and cost-effective basis;
+
+the announcement and introduction of new products by us; and
+
+expenses associated with any intellectual property or other litigation.
+
+In addition to concerns potentially affecting our operating results addressed elsewhere under "Risk Factors," the following factors may also influence our operating results:
+
+
+our product mix;
+
+the relative proportion of our domestic and international sales;
+
+the timing differences between when we incur expenses to increase our marketing and sales capabilities and when we realize benefits, if any, from such expenditures; and
+
+fluctuations in the foreign currencies of our foreign operations.
+
+Furthermore, our sales often reflect orders shipped in the same quarter that they are received, which makes our sales vulnerable to short-term fluctuations in customer demand and difficult to predict. Also, customers may cancel or reschedule shipments, and production difficulties could delay shipments. In addition, we sell our telecommunications equipment products to OEMs who typically order in large quantities, and therefore, the timing of such sales may significantly affect our quarterly results. An OEM supplies system-level network products to telecommunications carriers and others and incorporates our products in these system-level products. The timing of such OEM sales can be affected by factors beyond our control, such as demand for the OEMs' products and manufacturing risks experienced by OEMs. In this regard, we have experienced rescheduling of orders by customers in each of our markets and may experience similar rescheduling in the future. As a result of all of these factors, our results from operations may vary significantly from quarter to quarter.
+
+
+In addition to the effect of ongoing operations on quarterly results, acquisitions or dispositions of businesses, our products or technologies have in the past resulted in, and may in the future, result in reorganization of our operations, substantial charges or other expenses, which have caused, and may in the future, cause fluctuations in our quarterly operating results and cash flows.
+
+
+Finally, our net revenues and operating results in future quarters may be below the expectations of public market securities analysts and investors. In such event, the price of our common stock and the exchangeable shares of our subsidiary, JDS Uniphase Canada Ltd., would likely decline, perhaps substantially.
+
+
+Factors Other Than Our Quarterly Results Could Cause Our Stock Price To Be Volatile Or Decline
+
+
+The market price of our common stock has been and, is likely to continue to be, highly volatile because of causes other than our historical quarterly results, such as:
+
+
+announcements by our competitors and customers of technological innovations or new products; 
+developments with respect to patents or proprietary rights; 
+governmental regulatory action; and 
+general market conditions.
+
+In addition, the stock market has from time to time experienced significant price and volume fluctuations that are unrelated to the operating performance of particular companies, which may cause the price of our stock to decline.
+
+
+Our Sales Would Suffer If One Or More Of Our Key Customers Substantially Reduced Orders For Our Products
+
+
+Our customer base is highly concentrated. Historically, orders from a relatively limited number of OEM customers accounted for a substantial portion of our net sales from telecommunications products. Two customers, Lucent and Nortel, each accounted for over 10% of our net sales for the quarter ended June 30, 2000. We expect that, for the foreseeable future, sales to a limited number of customers will continue to account for a high percentage of our net sales. Sales to any single customer may vary significantly from quarter to quarter. If current customers do not continue to place orders, we may not be able to replace these orders with new orders from new customers. In the telecommunications industry, our customers evaluate our products and competitive products for deployment in their telecommunications systems. Our failure to be selected by a customer for particular system projects can significantly impact our business, operating results and financial condition. Similarly, even if our customers select us, the failure of those customers to be selected as the primary suppliers for an overall system installation, could adversely affect us. Such fluctuations could materially harm our business, financial condition and operating results.
+
+
+Interruptions Affecting Our Key Suppliers Could Disrupt Production, Compromise Our Product Quality And Adversely Affect Our Sales
+
+
+We currently obtain various components included in the manufacture of our products from single or limited source suppliers. A disruption or loss of supplies from these companies or a price increase for these components would materially harm our results of operations, product quality and customer relationships. In addition, we currently utilize a sole source for the crystal semiconductor chip sets incorporated in our solid state microlaser products and acquire our pump diodes for use in our solid state laser products from Opto Power Corporation and GEC. We obtain lithium niobate wafers, gallium arsenide wafers, specialized fiber components and some lasers used in our telecommunications products primarily from Crystal Technology, Inc., Fujikura, Ltd., Philips Key Modules and Sumitomo, respectively. We do not have long-term or volume purchase agreements with any of these suppliers (other than for our passive products supplier described in this paragraph), and these components may not in the future be available in the quantities required by us, if at all. 
+
+
+We May Become Subject To Collective Bargaining Agreements
+
+Our employees who are employed at manufacturing facilities located in North America are not bound by or party to any collective bargaining agreements with it. These employees may become bound by or party to one or more collective bargaining agreements with us in the future. Some of our employees outside of North America, particularly in the Netherlands and Germany, are subject to collective bargaining agreements. If, in the future, any such employees become bound by or party to any collective bargaining agreements, then our related costs and our flexibility with respect to managing our business operations involving such employees may be materially adversely affected.
+
+
+Any Failure To Remain Competitive In Our Industry Would Impair Our Operating Results
+
+
+If Our Business Operations Are Insufficient To Remain Competitive In Our Industry, Our Operating Results Could Suffer
+
+
+The telecommunications and laser subsystems markets in which we sell our products are highly competitive. In all aspects of our business, we face intense competition from established competitors and the threat of future competition from new and emerging companies. Some of these competitors have substantially greater financial, engineering, manufacturing, marketing, service and support resources than we do and may have substantially greater name recognition, manufacturing expertise and capability and longer standing customer relationships than we do. Among these competitors are our customers. These customers are vertically integrated and either manufacture and/or are capable of manufacturing some or all of the products we sell to them. Finally, some of our customers have implemented and/or expanded their manufacturing capability for components they might otherwise purchase from us. To remain competitive, we believe it must maintain a substantial investment in research and development, expanding our manufacturing capability, marketing, and customer service and support. We may not compete successfully in all or some of our markets in the future, and we may not have sufficient resources to continue to make such investments, or we may not make the technological advances necessary to maintain our competitive position so that our products will receive industry acceptance. In addition, technological changes, manufacturing efficiencies or development efforts by our competitors may render our products or technologies obsolete or uncompetitive.
+
+
+Fiber Optic Component Average Selling Prices Are Declining
+
+
+Prices for telecommunications fiber optic components are generally declining because of, among other things, new and emerging fiber optic component and module suppliers, continued pricing pressure on optical suppliers, increased manufacturing efficiency, technological advances and greater unit volumes as telecommunications service providers continue to deploy fiber optic networks. We have in the past and may in the future experience substantial period to period fluctuations in average selling prices.
+
+We anticipate that average selling prices will decrease in the future in response to technological advances, to product introductions by competitors and by us or to other factors, including price pressures from significant customers. Therefore, we must continue to (1) timely develop and introduce new products that incorporate features that can be sold at higher selling prices and (2) reduce our manufacturing costs. Failure to achieve any or all of the foregoing could cause our net sales and gross margins to decline, which may have a material adverse effect on our business, financial condition and operating results.
+
+
+If We Fail To Attract And Retain Key Personnel, Our Business Could Suffer
+
+Our future depends, in part, on our ability to attract and retain key personnel. Our former Chief Executive Officer resigned on May 17, 2000, and was replaced by the then Chief Operating Officer, Jozef Straus, who was the former Chief Executive Officer of JDS FITEL, which merged with Uniphase in 1999. In addition, our research and development efforts depend on hiring and retaining qualified engineers. Competition for highly skilled engineers is extremely intense, and we are currently experiencing difficulty in identifying and hiring qualified engineers in many areas of our business. We may not be able to hire and retain such personnel at compensation levels consistent with our existing compensation and salary structure. Our future also depends on the continued contributions of our executive officers and other key management and technical personnel, each of whom would be difficult to replace. We do not maintain a key person life insurance policy on our chief executive officer, our chief operating officer or any other officer. The loss of the services of one or more of our executive officers or key personnel or the inability to continue to attract qualified personnel could delay product development cycles or otherwise materially harm our business, financial condition and operating results.
+
+
+Market Consolidation Has Created And Continues To Create Companies That Are Larger And Have Greater Resources Than Us
+
+In the recent past, there have been a number of significant acquisitions announced among our competitors and customers, including: 
+
+
+Lucent Technologies, Inc./Ortel Corporation;
+Corning Incorporated/NetOptix Corporation;
+Nortel Networks Corp./Xros, Inc.;
+Nortel Networks Corp./Core Tek, Inc.;
+Corning Incorporated/NZ Applied Technologies Corp.;
+Corning Incorporated/Oak Industries;
+Lucent Technologies, Inc./Chromatis Networks, Inc.; and
+Corning Incorporated/Optical Technologies (a division of Pirelli S.p.A.) 
+The effect on our operations that these completed and pending acquisitions, as well as future transactions, cannot be predicted with accuracy, but some of these competitors are aligned with companies that are larger or better established than us. As a result, these competitors may have access to greater financial, marketing and technical resources than us. Consolidation of these and other companies may also disrupt our marketing and sales efforts. 
+
+We Face Risks Related To Our International Operations And Sales
+
+
+Our customers are located throughout the world. In addition, we have significant offshore operations, including manufacturing facilities, sales personnel and customer support operations. Our operations outside of North America include facilities in Great Britain, Switzerland, the Netherlands, Germany, Australia, the People's Republic of China and Taiwan, ROC.
+
+Our international presence exposes us to risks not faced by wholly-domestic companies. Specifically, we face the following risks, among others:
+
+
+International sales are subject to inherent risks, including:
+
+
+unexpected changes in regulatory requirements; 
+tariffs and other trade barriers; 
+political, legal and economic instability in foreign markets, particularly in those markets in which we maintain manufacturing and research facilities; 
+difficulties in staffing and management; 
+language and cultural barriers; 
+seasonal reductions in business activities in the summer months in Europe and some other countries;
+integration of foreign operations; 
+longer payment cycles; 
+greater difficulty in accounts receivable collection; 
+currency fluctuations; and 
+potentially adverse tax consequences.
+
+Net sales to customers outside of North America accounted for approximately 23%, 40% and 38% of our net sales in 2000, 1999 and 1998, respectively. We expect that sales to customers outside of North America will continue to account for a significant portion of our net sales. We continue to expand our operations outside of the United States and to enter additional international markets, both of which will require significant management attention and financial resources.
+
+Since a significant portion of our foreign sales are denominated in U.S. dollars, our products may also become less price competitive in countries in which local currencies decline in value relative to the U.S. dollar. Our business and operating results may also be materially and adversely affected by lower sales levels that typically occur during the summer months in Europe and some other overseas markets. Furthermore, the sales of many of our OEM customers depend on international sales and consequently further exposes us to the risks associated with such international sales.
+
+
+If We Have Insufficient Proprietary Rights Or If We Fail To Protect Those We Have, Our Business Would Be Materially Impaired
+
+
+We May Not Obtain The Intellectual Property Rights We Require
+
+Numerous patents in the industries in which we operate are held by others, including academic institutions and our competitors. We may seek to acquire license rights to these or other patents or other intellectual property to the extent necessary for our business. Unless we are able to obtain such licenses on commercially reasonable terms, patents or other intellectual property held by others could inhibit our development of new products for our markets. While in the past licenses generally have been available to us where third-party technology was necessary or useful for the development or production of their products, in the future licenses to third-party technology may not be available on commercially reasonable terms, if at all. Generally, a license, if granted, includes payments by us of up-front fees, ongoing royalties or a combination thereof. Such royalty or other terms could have a significant adverse impact on our operating results. We are a licensee of a number of third-party technologies and intellectual property rights and are required to pay royalties to these third-party licensors on some of our telecommunications products and laser subsystems.
+
+
+Our Products May Be Subject To Claims That They Infringe The Intellectual Property Rights Of Others
+
+
+The industry in which we operate experiences periodic claims of patent infringement or other intellectual property rights. We have in the past and may from time to time in the future receive notices from third parties claiming that our products infringe upon third-party proprietary rights. Any litigation to determine the validity of any third-party claims, regardless of the merit of these claims, could result in significant expense to us and divert the efforts of our technical and management personnel, whether or not we are successful in such litigation. If we are unsuccessful in any such litigation, we could be required to expend significant resources to develop non-infringing technology or to obtain licenses to the technology that is the subject of the litigation. The Company is currently a defendant in litigation claiming damages for infringement of an expired wafer fabrication patent. We may not be successful in such development or such licenses may not be available on terms acceptable to us, if at all. Without such a license, we could be enjoined from future sales of the infringing product or products. We are currently a party to various claims regarding intellectual property rights, none of which are expected to have a material adverse effect on our business.
+
+
+Our Intellectual Property Rights May Not Be Adequately Protected
+
+Our future depends in part upon our intellectual property, including trade secrets, know-how and continuing technological innovation. We currently hold numerous U.S. patents on products or processes and corresponding foreign patents and have applications for some patents currently pending. The steps taken by us to protect our intellectual property may not adequately prevent misappropriation or ensure that others will not develop competitive technologies or products. Other companies may be investigating or developing other technologies that are similar to our own. It is possible that patents may not be issued from any application pending or filed by us and, if patents do issue, the claims allowed may not be sufficiently broad to deter or prohibit others from marketing similar products. Any patents issued to us may be challenged, invalidated or circumvented. Further, the rights under our patents may not provide a competitive advantage to us. In addition, the laws of some territories in which our products are or may be developed, manufactured or sold, including Asia, Europe or Latin America, may not protect our products and intellectual property rights to the same extent as the laws of the United States. 
+
+
+If We Fail To Successfully Manage Our Exposure To The Worldwide Financial Markets, Our Operating Results Could Suffer
+
+We are exposed to financial market risks, including changes in interest rates, foreign currency exchange rates and marketable equity security prices. We utilize derivative financial instruments to mitigate these risks. We do not use derivative financial instruments for speculative or trading purposes. The primary objective of our investment activities is to preserve principal while at the same time maximizing yields without significantly increasing risk. To achieve this objective, a majority of our marketable investments are floating rate and municipal bonds, auction instruments and money market instruments denominated in U.S. dollars. We hedge currency risks of investments denominated in foreign currencies with forward currency contracts. Gains and losses on these foreign currency investments are generally offset by corresponding gains and losses on the related hedging instruments, resulting in negligible net exposure to us. A substantial portion of our revenue, expense and capital purchasing activities are transacted in U.S. dollars. However, we do enter into these transactions in other currencies, primarily Canadian and European currencies. To protect against reductions in value and the volatility of future cash flows caused by changes in foreign exchange rates, we have established hedging programs. Currency forward contracts are utilized in these hedging programs. Our hedging programs reduce, but do not always entirely eliminate, the impact of foreign currency exchange rate movements. Actual results on our financial position may differ materially.
+
+
+If We Fail To Obtain Additional Capital At The Times, In The Amounts And Upon The Terms Required, Our Business Could Suffer
+
+
+We are devoting substantial resources for new facilities and equipment to the production of our products. Although we believe existing cash balances, cash flow from operations, available lines of credit, and proceeds from the realization of investments in other businesses will be sufficient to meet our capital requirements at least for the next 12 months, we may be required to seek additional equity or debt financing to compete effectively in these markets. We cannot precisely determine the timing and amount of such capital requirements and will depend on several factors, including our acquisitions and the demand for our products and products under development. Such additional financing may not be available when needed, or, if available, may not be on terms satisfactory to us.
+
+
+Our Currently Outstanding Preferred Stock And Our Ability To Issue Additional Preferred Stock Could Impair The Rights Of Our Common Stockholders
+
+Our board of directors has the authority to issue up to 799,999 shares of undesignated preferred stock and to determine the powers, preferences and rights and the qualifications, limitations or restrictions granted to or imposed upon any wholly unissued shares of undesignated preferred stock and to fix the number of shares constituting any series and the designation of such series, without the consent of our stockholders. The preferred stock could be issued with voting, liquidation, dividend and other rights superior to those of the holders of common stock. The issuance of preferred stock under some circumstances could have the effect of delaying, deferring or preventing a change in control. Each outstanding share of our common stock includes one-eighth of a right. Each right entitles the registered holder, subject to the terms of the rights agreement, to purchase from us one unit, equal to one one-thousandth of a share of series B preferred stock, at a purchase price of $600 per unit, subject to adjustment, for each share of common stock held by the holder. The rights are attached to all certificates representing outstanding shares of our common stock, and no separate rights certificates have been distributed. The purchase price is payable in cash or by certified or bank check or money order payable to our order. The description and terms of the rights are set forth in a rights agreement between us and American Stock Transfer & Trust Company, as rights agent, dated as of June 22, 1998, as amended from time to time.
+
+
+Some provisions contained in the rights plan, and in the equivalent rights plan that our subsidiary, JDS Uniphase Canada Ltd., has adopted with respect to our exchangeable shares, may have the effect of discouraging a third party from making an acquisition proposal for us and may thereby inhibit a change in control. For example, such provisions may deter tender offers for shares of common stock or exchangeable shares which offers may be attractive to the stockholders, or deter purchases of large blocks of common stock or exchangeable shares, thereby limiting the opportunity for stockholders to receive a premium for their shares of common stock or exchangeable shares over the then-prevailing market prices.
+
+
+Some Anti-Takeover Provisions Contained In Our Charter And Under Delaware Law Could Impair A Takeover Attempt
+
+
+We Are subject to the provisions of Section 203 of the Delaware General Corporation Law prohibiting, under some circumstances, publicly-held Delaware corporations from engaging in business combinations with some stockholders for a specified period of time without the approval of the holders of substantially all of our outstanding voting stock. Such provisions could delay or impede the removal of incumbent directors and could make more difficult a merger, tender offer or proxy contest involving us, even if such events could be beneficial, in the short term, to the interests of the stockholders. In addition, such provisions could limit the price that some investors might be willing to pay in the future for shares of our common stock. Our certificate of incorporation and bylaws contain provisions relating to the limitations of liability and indemnification of our directors and officers, dividing our board of directors into three classes of directors serving three-year terms and providing that our stockholders can take action only at a duly called annual or special meeting of stockholders. These provisions also may have the effect of deterring hostile takeovers or delaying changes in control or management of us.
+
+Forward-Looking Statements 
+
+Statements contained in this Annual Report on Form 10-K which are not historical facts are forward-looking statements within the meaning of Section 21E of the Securities Exchange Act of 1934, as amended. A forward-looking statement may contain words such as "plans," "hopes," "believes," "estimates," "will continue to be," "will be," "continue to," "expect to," "anticipate that," " to be" or "can impact." These forward-looking statements include statements relating to our expectations as to:
+
+
+the timing of our proposed acquisition of SDL and the likelihood of governmental or stockholder approval thereof, 
+the cost to complete our acquired in-process research and development and the expected amortization of such costs, 
+the amount (both in absolute dollars and as a percentage of net sales) of our expenditures for research and development, selling, general and administrative and capital acquisitions and improvements, 
+the sufficiency of existing cash balances and investments, together with cash flow from operations and available lines of credit to meet our liquidity and capital spending requirements at least through the next 12 months, 
+the development costs, anticipated completion, introduction and projected revenues from new and developing products and technologies including the Thermo Optic Waveguide Attenuator, Solid State Switch, WDM EDFA, WDM laser direct modulation, the Submount and RWG series products, CATV technologies, MEMS Devices, High Speed Modulators, High Speed Receivers and Transceivers, and Optical Network Monitors, 
+costs associated with prior, pending and future acquisitions and plans relating thereto, 
+fluctuations in our quarterly results and the price of our common stock, 
+expansion of our worldwide manufacturing capacity, 
+the growing complexity of network systems used in fiber optic telecommunications and cable television networks and the resulting demand for components and modules, 
+the reduction in the number of suppliers for components used by optical networks, 
+increasing demand for higher levels of integration in optoelectronic and optical products, 
+increasing demand for our products, 
+our plans to hire additional personnel in the near future, 
+our plans with respect to the licensing of our intellectual property rights, 
+the expectation that sales to a limited number of customers will continue to account for a high percentage of our net revenues, 
+the expectation that a significant portion of our net sales will be to customers outside of North America and 
+expectations of market growth. 
+Management cautions that forward-looking statements are subject to risks and uncertainties that could cause our actual results to differ materially from those projected in such forward-looking statements. These risks and uncertainties include the risk that
+
+
+the proposed SDL acquisition will not be completed, 
+R&D expenditures will be materially greater or less than those expected, 
+funds will be insufficient to meet our liquidity and capital resources requirements through the next 12 months, 
+development costs, anticipated completion, introduction and projected revenues from new and developing products and technologies may be materially different than anticipated and 
+future acquisitions may not be completed as expected, or at all. 
+Further, our future business, financial condition and results of operations could differ materially from those anticipated by such forward- looking statements and are subject to risks and uncertainties including the risks set forth above. Moreover, neither we nor any other person assumes responsibility for the accuracy and completeness of the forward-looking statements. We are under no duty to update any of the forward-looking statements after the date of this Annual Report on Form 10-K to conform such statements to actual results or to changes in our expectations.

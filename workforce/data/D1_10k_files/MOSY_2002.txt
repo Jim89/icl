@@ -1,0 +1,800 @@
+Item 1. Business
+
+Company Overview 
+
+        We design, develop, license and market memory technologies used by the semiconductor industry and electronic product manufacturers. We have developed a patented semiconductor memory technology, called 1T-SRAM, that offers a combination of high density, low power consumption and high speed at performance and cost levels that other available embedded memory technologies do not match. We license our 1T-SRAM technology on a non-exclusive and worldwide basis to companies that incorporate, or embed, memory on complex integrated circuits. 
+
+        From our inception in 1991 until 1998, we focused primarily on the development of innovative memory technologies and the sale of memory chips. Our memory chip development efforts in the early years of our existence yielded critical elements of the 1T-SRAM technology. By the fourth quarter of 1998, we completed the development of our 1T-SRAM technology and changed our primary strategic focus from selling memory chips to licensing our 1T-SRAM technology. 
+
+        Until the second quarter of 2001, we earned almost all of our revenue from the sale of memory chips from four product lines. Prior to 1999, most of our memory chips were designed and sold for use in the highly competitive personal computer market. In late 1998, we introduced our first 1T-SRAM memory chip and since then have discontinued or substantially reduced our sales from our other three product lines. The same high density, low power consumption and high speed features that characterize our 1T-SRAM technology make our 1T-SRAM memory chips attractive to customers that need these features in a single memory chip. Our 1T-SRAM memory chips compete with high performance SRAM chips offered by many other companies. Despite a large potential market for these chips, we intentionally limit this portion of our business by offering a narrow range of product configurations, maintaining a small sales organization and focusing our research and engineering resources on our licensing business instead of new chip development. Our limited development and sales of 1T-SRAM chips provide us with opportunities to earn revenue, validate high volume production of chips using our 1T-SRAM technology and build relationships with customers that may be future licensees. 
+
+        We generate revenue from intellectual property licensing, which consists of licensing revenue and royalty revenue. Our licensing revenue consists of fees paid for engineering development and engineering support services. We are entitled to receive royalties under each of our licensing 
+
+1
+
+
+--------------------------------------------------------------------------------
+
+
+agreements when our licensees manufacture or sell products that incorporate our technology. We anticipate that licensing and royalty revenues will represent the majority of our future revenues. 
+
+Industry Background 
+
+Trends in the Semiconductor Industry 
+
+        Electronic products play an increasingly important role in our lives, as evidenced by the growth of the personal computer, wireless communications, networking equipment and consumer electronics markets. These markets are characterized by intensifying competition, rapid innovation, increasing performance requirements and continuing cost pressures. To manufacture electronic products that achieve optimal performance and cost levels, semiconductor companies must produce integrated circuits that offer higher performance, greater functionality and lower cost. 
+
+        Two important measures of performance are speed and power consumption. Higher-speed integrated circuits can allow electronic products to operate faster, enabling the performance of more functions. Reducing the power consumption of integrated circuits contributes to increased battery life and reduced heat generation in electronic products. Reduced power consumption also enables integrated circuit designers to overcome costly design hurdles, such as meeting the thermal limitations of low-cost packaging materials. 
+
+        In addition to offering high-performance products, semiconductor companies must produce integrated circuits that are cost effective. High-density integrated circuits require less silicon, thus reducing their size and cost. Cost reduction can also be achieved by simplifying the integrated circuit's manufacturing process and improving manufacturing yield. Additionally, to avoid the high cost of substantial redesigns, semiconductor companies can use technology, which is scalable, which means it can be readily incorporated into multiple generations of manufacturing process technologies. Process technology generations are distinguished in terms of the dimension of the integrated circuit's smallest topographical features, as measured in microns (one millionth of a meter). The semiconductor industry has continuously developed advanced process technologies that enable the reduction of silicon area on integrated circuits and consequently lower costs. The industry is predominantly using 0.25-micron and 0.18-micron manufacturing process technology today. However, current designs are also being implemented in 0.15-micron and 0.13-micron manufacturing process technology, and are expected to migrate to 0.10-micron manufacturing process technologies in the future. 
+
+Importance of Integration 
+
+        For decades, the semiconductor industry has continuously increased the value of integrated circuits by improving their density, power consumption, speed and cost. The main driver for these improvements has been the success of shrinking the size of the basic semiconductor building block, or transistor. Transistors have become small enough to make it economical to combine multiple functions, such as microprocessors, memory, analog components and digital signal processors, on a single integrated circuit, in what is commonly referred to as System-on-a-Chip, or SOC. Highly integrated circuits such as SOCs often offer advantages in density, power consumption, speed and cost that cannot be matched using separate, discrete integrated circuits. SOCs are essential for most electronic products, such as cellular phones, video game consoles, networking equipment and internet appliances, to achieve desired performance at a reasonable cost. 
+
+Importance of Embedded Memory 
+
+        Historically, semiconductor companies implemented memory in separate integrated circuits. Rather than using separate memory chips, semiconductor companies today are embedding memory on highly integrated circuits in order to optimize performance and size. At the same time, the increasing sophistication of electronic products is driving a rapid increase in the amount of memory required. 
+
+2
+
+
+--------------------------------------------------------------------------------
+
+
+        The high cost of incorporating the memory component represents a major challenge to achieving high levels of integration. Embedded memory accounts for an increasing percentage of the size of a highly integrated circuit and is often the slowest or rate-limiting function in the circuit. Not only must integrated circuits contain a larger amount of embedded memory, this memory must be dense enough to be economically attractive and must offer sufficiently high speed and low power consumption. Embedded memory has become a crucial design consideration for determining the overall cost and performance of highly integrated circuits and the growing number of electronic products in which they are incorporated. 
+
+Traditional SRAM 
+
+        The most common form of embedded memory today utilizes traditional static random access memory, or SRAM technology, that we refer to as traditional SRAM. This technology is in the public domain and can be used by any semiconductor company. Traditional SRAM has the following characteristics— 
+
+•
+it operates at the same high speeds as other functions of the integrated circuit; 
+
+
+•
+it provides a simple and familiar interface that allows for quick design into an integrated circuit with less risk that the design will not function according to specification; and 
+
+
+•
+it utilizes the standard logic manufacturing process that is both economical and the most widely available. 
+        As memory requirements increase, however, traditional SRAM becomes relatively more expensive compared to the total cost of the integrated circuit. Specifically, traditional SRAM has the following drawbacks that can lead to higher cost— 
+
+•
+it requires a substantial amount of silicon area because of its low density; and 
+
+
+•
+it consumes a significant amount of power when operating at high speeds. 
+        To overcome the density limitations of traditional SRAM, some manufacturers have utilized embedded dynamic random access memory, or embedded DRAM. While embedded DRAM is denser than traditional SRAM, it is typically ten times slower. Manufacturing embedded DRAM also requires additional process steps and results in low yields, which translate into increased manufacturing time and cost. Additionally, because of its complex interface requirements, embedded DRAM is more difficult to incorporate on integrated circuits, leading to a higher risk of failure. As integrated circuit designers have experimented with embedded DRAM, they have discovered that these limitations of embedded DRAM preclude its use in almost all applications. Therefore, traditional SRAM continues to be the most widely used technology for embedded memory. One of the major challenges for the semiconductor industry today is to find an embedded memory solution that combines high density, low power consumption, high speed and low cost. 
+
+Solution 
+
+        We have developed an innovative memory technology, 1T-SRAM memory, which provides major advantages over traditional SRAM in density, power consumption and cost, thus making it more economical for designers to incorporate large amounts of embedded memory in their designs. In addition, 1T-SRAM technology offers all of the benefits of traditional SRAM, such as high speed, simple interface and ease of manufacturability. Its core circuitry is already production proven in 
+
+3
+
+
+--------------------------------------------------------------------------------
+
+
+millions of our memory chips and offers integrated circuit designers the following characteristics compared to traditional SRAM— 
+
+Parameters
+
+--------------------------------------------------------------------------------
+   Typical Characteristics of 1T-SRAM technology vs. traditional SRAM
+
+--------------------------------------------------------------------------------
+ 
+Density   Two to three times denser, using 50-70% less silicon for the same amount of memory 
+Power
+Consumption   Consumes less than one-quarter the power when operating at the same speed 
+Speed   Provides speeds equal to or greater than those offered by traditional SRAM, especially for larger memory sizes 
+
+        Our 1T-SRAM technology can achieve these advantages while utilizing standard logic manufacturing processes and providing the simple, standard SRAM interface that designers are accustomed to today. 
+
+High Density 
+
+        Embedded memory utilizing our 1T-SRAM technology is typically two to three times denser than traditional SRAM. Increased density enables manufacturers of electronic products, such as cellular phones and video game consoles, to incorporate additional functionality into a single integrated circuit, resulting in overall cost savings. Semiconductor designers can take advantage of the high density of 1T-SRAM technology and embed large quantities of high-performance memory and other components that in the past might not have been feasible. 
+
+Low Power Consumption 
+
+        Embedded memory utilizing our 1T-SRAM technology typically consumes less than one-quarter the power and generates less heat than traditional SRAM when operating at the same speed. This feature facilitates longer battery life and reliable operation using lower-cost packaging. 
+
+High Speed 
+
+        Embedded memory utilizing our 1T-SRAM technology typically provides speeds equal to or greater than the speeds of traditional SRAM, especially for larger memory sizes. Our 1T-SRAM memory can sustain random access cycle times of less than three nanoseconds. In today's 0.13-micron manufacturing process technology, our 1T-SRAM technology can operate with a random access frequency in excess of 350 megahertz for multi-megabit memory. 
+
+Manufacturing Process Independence 
+
+        We have been able to implement our technology without requiring the manufacturer to make any significant changes to either standard logic or alternative manufacturing processes. 1T-SRAM's portability, or the ease with which it can be implemented in different semiconductor manufacturing facilities, has been proven operational in the fabrication of chips at Taiwan Semiconductor Manufacturing Co., Ltd., or TSMC, United Microelectronics Corporation, or UMC, and Chartered Semiconductor Manufacturing Ltd., the world's three largest independent foundries. 1T-SRAM's scalability, or the ease with which it can be implemented in different generations of manufacturing processes, has already been demonstrated in the fabrication of chips in 0.25-micron, 0.18-micron, 0.15-micron and 0.13-micron process generations. We expect our technology to continue to scale readily to future process generations. This portability and scalability provides for wide availability, inexpensive implementation and quick product time to market for our licensees. 
+
+4
+
+
+--------------------------------------------------------------------------------
+
+
+Simplicity of Interface 
+
+        Our 1T-SRAM technology's internal circuitry connects to the simple, standard SRAM interface that designers are accustomed to today. Our use of this standard high-performance interface minimizes design time, thus optimizing time to market for our licensees. This simple interface also helps minimize the risk that integrated circuit designs will not operate according to specifications. 
+
+Strategy and Business Model 
+
+        Our goal is to establish our 1T-SRAM technology as the standard for the embedded memory market. We intend to achieve this goal by licensing our technology on a non-exclusive and worldwide basis to semiconductor companies and electronic product manufacturers. 
+
+        The following are integral aspects of our strategy and business model. 
+
+Proliferate Technology through a Diverse Distribution Strategy 
+
+        Our solution offers performance features and cost benefits that existing embedded memory solutions do not provide. We have strategic relationships with many companies, including Applied Micro Circuits Corporation, Broadcom, Chartered, Conexant, eSilicon, Galileo Technology, LSI Logic, Matsushita Communication Industrial, NEC, Nintendo, Pixelworks, Power X, SONY, TSMC, UMC, Via Technologies, and Globespan Virata. We license our technology to semiconductor companies who incorporate our technology into integrated circuits that they then sell to customers. We also license our technology to electronic product manufacturers, who then require their suppliers to adopt our technology. In addition, we engage in co-marketing activities with foundries, intellectual property companies and design companies to promote our technology to a wide base of customers. We believe that these distribution channels will broaden the acceptance and availability of our technology in the industry. As our technology becomes available through an increasing number of channels, we believe it will be less likely that customers will have to alter their procurement practices in order to acquire our technology. We intend to continue to expand significantly this base of strategic relationships to further proliferate our technology. 
+
+Target Large and Growing Markets 
+
+        Although our 1T-SRAM technology is applicable to many markets, we presently focus on the rapidly growing communications and consumer electronics sectors. These sectors increasingly require embedded memory solutions with higher density, lower power consumption, higher speeds and lower cost. We will also focus over the longer term on other markets that are projected to achieve strong, long-term growth. 
+
+Work Closely with our Licensees and Co-Marketers to Deliver Optimal Technology Solutions 
+
+        We intend to continue to work closely with our licensees and co-marketers to gain broad and detailed insight into their own and their customers' current and next-generation technology requirements. This insight helps us identify trends and focus our development efforts on optimizing our technology solution, resulting in shorter product time to market and lower costs. 
+
+Extend Technology Offerings 
+
+        Our goal is to continue to enhance our 1T-SRAM technology and increase our share of the embedded memory market. We will continue to develop our technology in order to offer even higher-density, lower-power-consumption, higher-speed and lower-cost designs for our licensees. We are currently developing new generations of 1T-SRAM technology in the 0.13-micron and 0.10-micron manufacturing process and intend to continue developing our technology for future processes. We will 
+
+5
+
+
+--------------------------------------------------------------------------------
+
+
+continue to invest heavily in research to develop related embedded memory technologies. Recently, we developed 1T-SRAM-M, a very low power memory, which operates with standby power more than an order of magnitude lower than 1T-SRAM standby power. 1T-SRAM-M is suitable for handheld battery powered applications such as cell phone handsets, personal digital assistants (PDA), and digital cameras. We have also introduced the 1T-SRAM-R, a version of 1T-SRAM, which includes built-in error checking and correction (ECC). 
+
+Leverage Memory Chips to Demonstrate Technology to Licensees 
+
+        Revenue from the sale of memory chips has constituted a majority of our historical revenue. Today, our memory chip selling efforts focus on 1T-SRAM memory chips. We expect to continue to generate 1T-SRAM memory chip revenue, as these products serve to demonstrate the manufacturability of our 1T-SRAM technology to licensees. Our direct involvement in these products also helps to keep our research and development efforts focused on delivering leading-edge technologies and meeting industry requirements. 
+
+Focus on Higher-Margin Licensing Model 
+
+        Our intellectual property licensing revenue consists of licensing revenue and royalties. This licensing revenue typically produces higher gross margins than can be achieved with the sale of our memory chips. We intend to focus on our intellectual property licenses as the major source of our future revenue. 
+
+Customer and Co-Marketing Relationships 
+
+        We offer our technology on a non-exclusive and worldwide basis to semiconductor companies, electronic product manufacturers, foundries, intellectual property companies and design companies through product development, technology licensing and co-marketing relationships. 
+
+        We form product development and licensing relationships directly with semiconductor companies and electronic product manufacturers. Generally, we require the prospective licensee to identify one or more specific projects for the use of our technology. The prospective licensee's implementation of the 1T-SRAM technology typically includes customized development. Usually, these relationships involve both engineering work to implement our technology in the specified product and licensing the technology for manufacture and sale of the product. Although the precise terms of each agreement vary, every agreement provides for the payment of contract fees to us at the beginning of the contract and the joint development of specifications and initial product design and engineering. The agreements usually provide for payment of additional contract fees to us upon the achievement of specified development milestones. The agreements also often provide for the payment of additional contract fees if we provide engineering support services related to the manufacture of the product. License agreement royalty provisions require the payment of royalties to us based on future sale or manufacture of products utilizing 1T-SRAM technology. Generally, our licenses grant rights only to use our technology as modified for the project covered by the license agreement or amendment. Usually, the license is nontransferable, nonexclusive and generally can be sublicensed, if at all, only to subsidiaries. Our license agreements generally have a fixed five-year term and are subject to renewal. 
+
+        Some of our agreements cover both the development and licensing aspects of the technology relationship. In other cases, we enter into an agreement with the prospective licensee covering only our initial project development work, non-refundable contract fees and a summary of acceptable license terms, including royalties, and subsequently enter into a separate comprehensive license agreement if the prospective licensee decides to complete development of its project. Each new project requires a separate agreement or the modification of an existing agreement. 
+
+6
+
+
+--------------------------------------------------------------------------------
+
+
+        Not all of our technology relationships will result in the manufacture and sale of royalty-bearing products by our licensees, from which we expect to earn most of our revenues in the future. Therefore, to increase the number of royalty-generating license agreements for our 1T-SRAM technology, an important element of our strategy is to offer this technology broadly in order to establish it as an industry standard. 
+
+        We form co-marketing relationships with dedicated foundries such as TSMC, UMC and Chartered Semiconductor Manufacturing Corporation. While these foundries generally do not provide third-party intellectual property directly to their customers, under our March 2001 license agreement, TSMC acquired the right to offer design services for 1T-SRAM macros, or pre-designed circuit blocks, solely to TSMC customers not currently under active contract with us that are using TSMC technologies to manufacture products at TSMC. We would receive royalties on silicon wafers manufactured by TSMC that incorporate our licensed technology. 
+
+        These foundries have cooperated with us to prove the manufacturability of integrated circuits utilizing our 1T-SRAM technology in their particular manufacturing process. The foundries can then offer their manufacturing services to our licensees, and semiconductor companies can fabricate integrated circuits incorporating our 1T-SRAM technology in any of these three largest independent foundries. These foundries are not obligated to actively market 1T-SRAM technology. Generally, our foundry co-marketing arrangements have a two-year term. 
+
+        We also have entered into a co-marketing agreement with an intellectual property company, Virage Logic, which has agreed to promote 1T-SRAM technology in association with its intellectual property. Our agreement with Virage Logic provides for co-development of a compiler, which is a software program that automatically designs the memory for a particular customer's memory requirements. Under this agreement, Virage Logic will sell a compiler incorporating our 1T-SRAM technology, and we will share in the revenue from each sale. Additionally, when the Virage Logic customer develops a product utilizing the 1T-SRAM compiler, that customer must enter into a license agreement directly with us. We would earn a royalty on subsequent product sales. This agreement has a three-year term, and is terminable by either party upon 90 days' notice. 
+
+7
+
+
+--------------------------------------------------------------------------------
+
+
+        The following table lists some of our most significant 1T-SRAM agreements, in reverse chronological order. 
+
+Company
+
+--------------------------------------------------------------------------------
+   Date
+--------------------------------------------------------------------------------
+   Application
+--------------------------------------------------------------------------------
+ 
+Matsushita Communications Industrial   Q4 2001   Custom application specific memory 
+eSilicon   Q4 2001   Communications 
+Globespan Virata   Q3 2001   Communications 
+TSMC   Q1 2001   Semiconductor Foundry 
+AMCC   Q1 2001   Communications 
+Power X   Q1 2001   Communications 
+SONY   Q4 2000   Custom application specific memory 
+Conexant   Q3 2000   Communications 
+Galileo Technology   Q3 2000   Communications 
+Via Technologies   Q2 2000   Application specific standard products (ASSPs) 
+LSI Logic   Q1 2000   Communications, application specific integrated circuits (ASICs) and application specific standard products (ASSPs) 
+Broadcom   Q1 2000   Communications 
+Allayer Communications   Q4 1999   Communications 
+Galileo Technology   Q4 1999   Communications 
+NEC   Q4 1999   Custom application specific memory 
+Pixelworks   Q4 1999   Imaging 
+NEC   Q3 1999   Custom application specific memory 
+Nintendo   Q3 1999   Video game consoles 
+NEC   Q1 1999   Application specific integrated circuits (ASICs) 
+
+        The following table illustrates our current co-marketing relationships, in reverse chronological order. 
+
+Company
+
+--------------------------------------------------------------------------------
+   Date
+--------------------------------------------------------------------------------
+   Application
+--------------------------------------------------------------------------------
+ 
+UMC   Q4 2001   Standard Macro Logic Process 
+Chartered   Q2 2000   Prove technology on Chartered's logic processes 
+UMC   Q2 2000   Port technology to UMC's standard logic processes 
+TSMC / Virage Logic   Q3 1999   MoSys and Virage Logic to co-develop compilers for TSMC's standard logic processes 
+TSMC   Q1 1999   Port technology to TSMC's standard logic processes 
+
+Research and Development 
+
+        Our ability to compete in the future will depend on improving our technology to meet the market's increasingly demanding performance and cost requirements. We have assembled a team of highly skilled engineers whose activities are focused on developing even higher-density, lower-power-consumption, higher-speed and lower-cost 1T-SRAM designs. We expect to continue to focus our research and development efforts on extending our 1T-SRAM technology and developing new memory technologies. We will also continue our focus on porting our technology to additional semiconductor 
+
+8
+
+
+--------------------------------------------------------------------------------
+
+
+manufacturing facilities and scaling our technology to new generations of manufacturing process technologies. 
+
+        As of December 31, 2001, we employed 44 engineers, representing 66% of our employees, with specific expertise in circuit design, layout and a variety of manufacturing processes. In June 2001, we established a design center in Seoul, South Korea where seven of our employees reside. For the years ended December 31, 2001, 2000 and 1999, research and development expenditures totaled approximately $4.4 million, $3.3 million and $3.1 million, respectively. 
+
+Technology 
+
+        Our innovative 1T-SRAM technology includes many new and proprietary features. Development of our memory chips during the early years of our existence was critical to validating elements of the 1T-SRAM technology we license today. This technology combines the high density advantages of DRAM with the high performance and utility of SRAM. Underlying this technology are several distinct pieces of proprietary circuitry. 
+
+Single-Transistor Memory Storage Cell 
+
+        The high density of our 1T-SRAM technology stems from the use of a single-transistor, or 1T, storage cell for each bit of information, which is similar to DRAM. Our 1T storage cell using one transistor and one capacitor represents a very significant improvement in density over the six-transistor storage cells used by traditional SRAM. 
+
+        The following diagrams, drawn to scale, but not to actual size, are electrical schematics of the traditional SRAM storage cell and our 1T-SRAM storage cell. The comparison of the two diagrams illustrates the small size and reduced complexity of the 1T-SRAM storage cell. This results in significant cost savings because less silicon space is required by 1T-SRAM storage cells. 
+
+[EDGAR REPRESENTATION OF PRINTED GRAPHIC] 
+
+[The graphic on the left, labeled "Six Transistor Storage Cell Schematic", illustrates the basic structure of a six transistor SRAM memory cell. The illustration shows word lines and bit lines connected by six transistors, which are represented by their normal electrical schematic symbols. The graphic on the right, labeled "1T-SRAM Storage Cell Schematic", illustrates the basic structure for a 1T-SRAM memory cell. This illustration shows a word line and bit line connected by one transistor, again represented by its normal electrical schematic symbol.] 
+
+[Underneath each of the schematics, there is a square that represents the area of the memory cell. The six transistor SRAM square is significantly larger than the 1T-SRAM square.] 
+
+[EDGAR REPRESENTATION OF PRINTED GRAPHIC] 
+
+[Graphic depicts MoSys' MultiBank partitioning technology used in 1T-SRAM. It consists of many rows and columns representing bank cells, with two-way horizontal arrows representing high speed data buses crossing through the banks and terminating at a rectangular column on the right, labeled "SRAM Interface".] 
+
+MultiBank Technology 
+
+        The high speed and low power consumption of 1T-SRAM are enabled by our MultiBank technology, as illustrated above. This technology efficiently partitions the memory into many, typically hundreds, of fast, small sub-blocks of memory, or banks, that can operate independently over high-speed data buses. Only one small bank containing the required memory data must be active for each access to the memory. Therefore, the remaining banks can stay in a low-power, standby mode, reducing the overall power consumption of the memory. 
+
+9
+
+
+--------------------------------------------------------------------------------
+
+
+Standard SRAM Interface 
+
+        Our technology incorporates all of the circuitry required to connect to the simple, high-performance interface to which integrated circuit designers are accustomed. Our 1T-SRAM technology appears to the rest of the integrated circuit and the designer as if it were traditional SRAM. 
+
+Ability to Use Standard Logic Manufacturing Process 
+
+        Another key area of innovation in our 1T-SRAM memory technology is the ability to use a standard logic manufacturing process. This characteristic is advantageous because standard logic is the most widely available process. As many of the other functions on an integrated circuit are implemented in a standard logic process, the ability to implement 1T-SRAM memories using the same process saves time and cost for the manufacturer. Other embedded memory technologies do not achieve the same density and performance using the standard logic process. 
+
+Licensed Technology and Memory Chips 
+
+        We license the 1T-SRAM technology in the form of customized memory designs and memory compilers. We also sell memory chips based on our 1T-SRAM technology, which constitute substantially all of our memory chip sales. 
+
+Licensed Memory Designs 
+
+        We offer standard 1T-SRAM memory designs and generate customized 1T-SRAM memory designs to meet a specific customer's design parameters. We also offer a variety of options for interface and power management. Our licensed memory designs can be ported to the manufacturing processes of leading foundries and semiconductor manufacturers. 
+
+        We continue to implement our 1T-SRAM technology on advanced generations of manufacturing processes. As a result, our licensees are able to implement their integrated circuits, incorporating 1T-SRAM embedded memory on the highest performance manufacturing processes available. The chart below illustrates the advances we have made in implementing and verifying 1T-SRAM technology on the latest generations of manufacturing processes. The processes with the smaller micron dimensions have higher random access speeds and typically enable larger capacity memories. 
+
+Process Generation
+
+--------------------------------------------------------------------------------
+   0.25-micron
+--------------------------------------------------------------------------------
+   0.18-micron
+--------------------------------------------------------------------------------
+   0.15-micron
+--------------------------------------------------------------------------------
+   0.13-micron
+--------------------------------------------------------------------------------
+ 
+Date of 1T-SRAM Verification   September 1999   January 2000   May 2000   April 2001 
+Typical Memory Capacity   1-16 megabits   1-32 megabits   1-48 megabits   1-64 megabits 
+Random Access Speed   100-250 MHz   100-350 MHz   100-400 MHz   100-450 MHz 
+
+Memory Compilers and Compiled Memory Solutions 
+
+        In January 2000, we announced 1T-SRAM compilers for TSMC's 0.18-micron and 0.15-micron standard logic processes as part of a joint development agreement with Virage Logic. Under this agreement, we will license these compilers to enable our licensees and their customers to automatically generate and configure 1T-SRAM designs. In addition to licensing the 1T-SRAM compilers, companies are able to license standard 1T-SRAM off-the-shelf memory designs from us. 
+
+Memory Chip Products 
+
+        SRAM memory chips satisfy a large market demand for high-speed memory chips used to store data in electronic products. There are several large companies that have chosen to manufacture SRAM chips using traditional technology. After completing the development of our 1T-SRAM technology in 1998, we began selling our first memory chips incorporating this technology. Like our 1T-SRAM 
+
+10
+
+
+--------------------------------------------------------------------------------
+
+
+embedded memory technology, our 1T-SRAM chips have small memory cell circuitry, require low power consumption and operate at high speeds, which makes them a cost effective memory chip solution for networking and communication applications, such as routers, switches and network processors. 
+
+        Manufacturers of such wired data communications applications typically purchase memory chips in industry standard sizes, speeds and configurations. The memory size of a chip indicates the number of memory storage bits on the chip; speed reflects the rate at which a processing system can access the memory; and configuration indicates the number of memory storage bits that can be accessed simultaneously. 
+
+        In order to appeal to manufacturers of wired data communications applications, we currently sell memory chips with memory size, speed and configuration specifications consistent with those offered by most memory chip suppliers. In general, we seek to design and sell memory chips with specifications used by a large group of communications product manufacturers. We believe that this strategy enables us to increase the return from the limited resources and development efforts that we have decided to invest in our IT-SRAM memory chip business. The table below details the range of memory sizes, speeds and configurations of our IT-SRAM memory chips. 
+
+Size (Megabits)
+
+--------------------------------------------------------------------------------
+   Speed (MHz)
+--------------------------------------------------------------------------------
+   Configuration (words × bits)
+--------------------------------------------------------------------------------
+ 
+4   66, 83, 100, 133, 150   64K × 64, 128K × 32 
+8   66, 83, 100, 133, 150, 166   256K × 32 
+9   66, 83, 100, 133, 150, 166, 200   256K × 36 
+36   133, 166, 200   1M × 36 
+
+        We sell these memory chips primarily to suppliers of communications equipment, such as Accton Technology Corporation, Alteon WebSystems, Cisco Systems, Inc., Delta Network and Electronics, Foundry Networks, Maxtek Technology, MCM Japan, Motorola and Polycom. We intend to continue limited development of new memory chips based on our 1T-SRAM technology by focusing on the development of larger memory size, lower power consumption and higher speed chips. 
+
+        We believe that designing and producing these 1T-SRAM memory chips significantly enhance our ability to promote and improve our 1T-SRAM technology. Sales of 1T-SRAM memory chips to suppliers of communications equipment also increase the visibility of our technology in this important market for licensing our 1T-SRAM technology. We lack manufacturing resources and other guaranteed sources of supply for 1T-SRAM memory chips, however, and intend to allocate most of our engineering resources to the development of 1T-SRAM technology in support of our licensing business. Currently, 1T-SRAM memory chips constitute the majority of our revenue, but we do not expect to significantly expand the scope of our products business beyond current levels. 
+
+        In addition to our 1T-SRAM memory chips, we have sold memory chips from three other product lines: 
+
+•
+multibank dynamic random access memory, or MDRAM, a proprietary memory chip for use primarily with graphics applications in personal computers, which we first shipped in 1996; 
+
+
+•
+MCACHE, our brand name for another proprietary line of personal computer memory chips, which we first shipped in 1996; and 
+
+
+•
+synchronous graphics random access memory, or SGRAM, an industry standard memory chip design for use primarily with graphics applications in personal computers, which we first shipped in 1997. 
+        We ceased shipping MCACHE in early 1999. By the end of the second quarter of 2000, we had ceased production of MDRAM chips, which we presently sell in limited amounts from remaining inventory. We presently ship SGRAM chips in low volumes only to support small orders from existing 
+
+11
+
+
+--------------------------------------------------------------------------------
+
+
+customers. In 2001, more than 90% of our product revenue was generated from 1T-SRAM memory chips. We anticipate that virtually all of our future product revenue will be derived from sales of 1T-SRAM memory chips. 
+
+Intellectual Property 
+
+        We regard our patents, copyrights, trademarks, trade secrets and similar intellectual property as critical to our success, and rely on a combination of patent, trademark, copyright, and trade secret laws to protect our proprietary rights. As of December 31, 2001, we held 40 U.S. patents on various aspects of our technology, with expiration dates ranging from 2011 to 2019. These 40 patents include claims relating to multibank partitioning, 1T-SRAM internal operation and circuit techniques, high-speed operation techniques, 1T-SRAM refresh management techniques and the interface of embedded 1T-SRAM storage cells in logic processes. We currently have 17 pending U.S. patent applications, and have received notices of allowance with respect to four of these applications. We also hold 20 foreign patents with expiration dates ranging from 2012 to 2019, and 19 pending foreign patent applications. There can be no assurance that others will not independently develop similar or competing technology or design around any patents that may be issued to us, or that we will be able to enforce our patents against infringement. 
+
+        The semiconductor industry is characterized by frequent litigation regarding patent and other intellectual property rights. While we have not received formal notice of any infringement of the rights of any third party, questions of infringement in the semiconductor field involve highly technical and subjective analyses. Litigation may be necessary in the future to enforce our patents and other intellectual property rights, to protect our trade secrets, to determine the validity and scope of the proprietary rights of others, or to defend against claims of infringement or invalidity, and there can be no assurance that we would prevail in any future litigation. Any such litigation, whether or not determined in our favor or settled by us, would be costly and would divert the efforts and attention of our management and technical personnel from normal business operations, which would have a material adverse effect on our business, financial condition and results of operations. Adverse determinations in litigation could result in the loss of our proprietary rights, subject us to significant liabilities, require us to seek licenses from third parties or prevent us from licensing our technology, any of which could have a material adverse effect on our business, financial condition and results of operations. Moreover, the laws of certain foreign countries in which our technology is or may in the future be licensed may not protect our intellectual property rights to the same extent as the laws of the United States, thus increasing the possibility of infringement of our intellectual property. 
+
+Sales and Marketing 
+
+1T-SRAM Technology Licensing 
+
+        We have a staff of six sales and marketing executives, as of December 31, 2001, who manage our 1T-SRAM technology licensing activities. One is located in Helsinki, Finland and is responsible for licensing activities in Europe and the Middle East. This group manages the negotiation of license agreements, provides technical support during the sales cycle to licensees and administers the contracts. We also have engaged one company to act as our non-exclusive licensing representative in Japan. As we have multiple sales channels through our relationships with semiconductor companies, foundries, intellectual property companies and design companies, we do not believe that we require a large internal sales force. Our marketing and promotional activities include participation in industry trade shows, distribution of collateral marketing material, publication of articles in trade journals and publicizing our licensing activities and technology achievements. Selling activity revolves around presentations and working sessions with the senior technical staff of target companies. 
+
+12
+
+
+--------------------------------------------------------------------------------
+
+
+Memory Chips 
+
+        A separate group of four individuals, as of December 31, 2001, is responsible for sales and marketing of memory chips. Marketing activities include the creation of marketing materials and articles for trade publications, as well as publicity of new memory chips. We also use 22 independent sales representatives throughout North America and Asia to promote our memory chips to their customers. 
+
+Competition 
+
+        In order to remain competitive, we believe we must continue to provide higher-density, lower-power-consumption, higher-speed and lower-cost technology solutions to the semiconductor industry and electronic product manufacturers. We believe that the principal competitive factors in our industry are— 
+
+•
+density and cost; 
+
+
+•
+power consumption; 
+
+
+•
+speed; 
+
+
+•
+portability to different manufacturing processes; 
+
+
+•
+scalability to different manufacturing process generations; 
+
+
+•
+interface requirements; and 
+
+
+•
+the ease with which technology can be customized for and incorporated into customers' products. 
+        We believe that our 1T-SRAM technology offers a high degree of overall performance improvement over traditional SRAM. Companies may also satisfy embedded memory needs through traditional SRAM and embedded DRAM. Traditional SRAM relies on publicly available process technology and circuit designs, which semiconductor companies can use without paying a royalty to us. Embedded DRAM utilizes the semiconductor manufacturer's own manufacturing process and a circuit design that is in the public domain. We believe that many semiconductor companies using embedded memory may prefer to license our technology instead of implementing either of these alternatives because of 1T-SRAM's overall advantages. 
+
+        The technological advantages offered by our 1T-SRAM technology might not be utilized in some applications. Our licensees and prospective licensees can meet their current needs for embedded memory using other memory solutions with different cost and performance parameters. For example, alternative solutions may be more cost-effective for memory block sizes of less than 128 kilobits. In addition, 1T-SRAM technology is not suitable for replacing lower-cost traditional DRAM memory chips if higher access speed is unnecessary. 
+
+        Moreover, some companies assess greater uncertainty and risk in relying on our newly established 1T-SRAM technology. As a result, our ability to compete effectively may be limited because such companies may prefer to use more established traditional memory solutions that are freely available without a license. 
+
+        Customers for our 1T-SRAM memory chips can choose to purchase SRAM memory chips from a number of companies, including Cypress Semiconductor Corporation, Integrated Device Technology, Inc., Micron Technology, Inc. and Samsung Corporation. These suppliers utilize traditional architecture and technology for their SRAM chips, which do not match the performance, low power and cost effectiveness of our 1T-SRAM memory chips for the applications needed by our current customers for these chips. However, these suppliers do have the advantage of supplying memory chips 
+
+13
+
+
+--------------------------------------------------------------------------------
+
+
+from their own wafer manufacturing plants and typically offer a broad range of memory products that includes devices other than SRAM memory chips. In addition, these companies have greater access to financial, technical and other resources. 
+
+Manufacturing 
+
+        We have designed the circuitry of our 1T-SRAM technology so that our licensees can manufacture it in standard logic process as well as other widely used embedded memory processes. 
+
+        For our stand-alone memory products, we implement a fabless manufacturing strategy by using relationships with independent foundries. Today, we rely exclusively upon TSMC for our stand-alone product manufacturing. We also use domestic and offshore subcontractors for assembly, testing and packaging. Assembly and test services provided by these subcontractors comply with the requirements of ISO-9000. We presently have no firm, written commitment with any semiconductor foundry for the fabrication of our memory chips. All fabrication is conducted on a purchase-order basis at an agreed price that is renegotiated from time to time. 
+
+Employees 
+
+        As of December 31, 2001, we had 67 full time employees, consisting of 44 in research and development, product engineering and manufacturing engineering, 10 in sales and marketing, 10 in finance and administration and 3 in operations management. We believe our future success will depend, in part, on our ability to continue to attract and retain qualified technical and management personnel, particularly highly skilled design engineers involved in new product development, for whom competition is intense. Our employees are not represented by any collective bargaining unit and we have not experienced any work stoppage. We believe that our employee relations are good. 
+
+
+Risk Factors 
+
+
+If any of the following risks actually occur, our business, results of operations and financial condition could suffer significantly. 
+
+Our success depends upon the semiconductor market's acceptance of our 1T-SRAM technology. 
+
+        The future prospects of our business depend on the acceptance by our target markets of our 1T-SRAM technology for embedded memory applications and any future technology we might develop. Our technology is intended to allow our licensees to develop embedded memory integrated circuits to replace other embedded memory applications with different cost and performance parameters. Our core technology solution utilizes a fundamentally different internal circuitry with which the industry is not familiar. Therefore, it might prove difficult to convince product designers of the viability of our embedded memory solution and to adopt our technology instead of other memory solutions which have proven effective in their products. In addition, we cannot assure you that our existing and proposed technology will perform the desired functions, will operate reliably on a long-term basis or otherwise will be technically successful, or that it will offer sufficient cost and performance benefits to achieve widespread market acceptance. 
+
+        An important part of our strategy to gain market acceptance is to penetrate new markets by targeting market leaders as licensees of our technology. This strategy is designed to encourage other participants in those markets to follow these leaders in adopting our technology. Should a high-profile industry participant adopt our technology for one or more of its products but fail to achieve success with those products, other industry participants' perception of our technology could be harmed. Any such event could reduce the number of future licenses of our technology. Likewise, we are a market leader to adopt and achieve success with a competing technology, our reputation and licensing program 
+
+14
+
+
+--------------------------------------------------------------------------------
+
+
+could be harmed. Failure of our technology to be adopted as an industry standard would inhibit our growth and prevent us from achieving anticipated revenues. 
+
+Our embedded memory technology is new and has had limited high volume production and the discovery of defects in this technology could prevent us from achieving market acceptance.
+
+        We entered into our first license of a significant portion of our 1T-SRAM technology for embedded memory applications in March 1999. Our technology was fabricated and verified to be operational in the most widely used standard logic manufacturing process generation in September 1999. While our licensees and we have evaluated and tested this technology, only three licensees have begun volume manufacture of products incorporating our technology. Complex technology like ours often contains errors or defects when first incorporated into customer products. The discovery of defects or problems regarding the reliability, quality or compatibility of our technology could require significant expenditures of capital and resources to fix, significantly delay or hinder market acceptance of our technology and damage our reputation. 
+
+Our lengthy licensing cycle and our licensees' lengthy product development cycles will make the operating results of our licensing business difficult to predict.
+
+        We anticipate difficulty in accurately predicting the timing and amounts of revenue generated from licensing our 1T-SRAM technology. The establishment of a business relationship with a potential licensee is a lengthy process, frequently spanning a year or more. Following the establishment of the relationship, the negotiation of licensing terms can be time consuming, and a potential licensee could require an extended evaluation and testing period. 
+
+        Once a license agreement is executed, the timing and amount of licensing and royalty revenue from our licensing business will remain difficult to predict. The completion of the licensees' development projects and the commencement of production will be subject to the licensees' efforts, development risks and other factors outside our control. Our royalty revenue may depend on such factors as the licensees' production and shipment volumes, the timing of product shipments and when the licensees report to us the manufacture or sale of products that include our 1T-SRAM technology. All of these factors will prevent us from making predictions of revenue with any certainty and could cause us to experience substantial period-to-period fluctuations in operating results. 
+
+        In addition, none of our licensees is under any obligation to incorporate our technology in any present or future product or to pursue the manufacture or sale of any product incorporating our technology. A licensee's decision to complete a project or manufacture a product is subject to changing economic, marketing or strategic factors. The long development cycle of our licensees' products increases the risk that these factors will cause the licensee to change its plans. In the past, a few licensees have discontinued development of products incorporating our technology. These customers' decisions were based on factors unrelated to our technology, but, as a result, it is unlikely that we will receive royalties in connection with those products. We expect that, from time to time, our licensees will discontinue a product line or cancel a product introduction, which could adversely affect our future operating results and business. 
+
+Anything that negatively affects the businesses of our licensees could negatively impact our revenue.
+
+        The timing and level of our royalties depend on our licensees' ability to market, produce and ship products incorporating our technology. Because we expect licensing and royalty revenue to be the largest source of our future revenue, anything that negatively affects a significant licensee or group of licensees could negatively affect our results of operations and financial condition. Many issues beyond our control influence the success of our licensees, including, for example, the highly competitive environment in which they operate, the strength of the markets for their products, their engineering capabilities and their financial and other resources. 
+
+15
+
+
+--------------------------------------------------------------------------------
+
+
+        Likewise, we have no control over the product development, pricing and marketing strategies of our licensees, which directly affect sales of their products and the corresponding royalties payable to us. A decline in sales of our licensees' royalty-generating products for any reason would reduce our royalty revenue. In addition, seasonal and other fluctuations in demand for our licensees' products could cause our operating results to fluctuate, which could cause our stock price to fall. 
+
+Our embedded memory technology might not integrate as well as anticipated with other semiconductor functions, which would slow or prevent adoption of our technology and reduce our revenue.
+
+        Our 1T-SRAM technology is new and incorporates a fundamentally different internal circuitry. Our licensees and we have conducted computer modeling and testing of integrated circuits utilizing our technology, and we have verified our technology to be operational in standard manufacturing processes by production and sale of proprietary integrated circuits that incorporate our 1T-SRAM technology, or 1T-SRAM memory chips. Nevertheless, detailed aspects of our technology could cause unforeseen problems in the efficient integration of our technology with other functions of particular integrated circuits. Any significant compatibility problems with our technology could reduce the attractiveness of our solution, impede its acceptance in the industry and result in a decrease in demand for our technology. 
+
+Market acceptance of our 1T-SRAM technology could be slowed or prevented if this technology presents manufacturing difficulties or contributes to a failure to achieve acceptable yields.
+
+        Semiconductor manufacturing yield could be adversely affected by difficulties in adapting our 1T-SRAM technology to our licensees' product design or to the manufacturing process technology of a particular foundry or semiconductor manufacturer. Yield problems might not be effectively determined or resolved until an actual product exists that can be analyzed and tested to identify process sensitivities relating to the parameters for designing integrated circuit layouts applicable to the targeted semiconductor fabrication process. We cannot assure you that products utilizing our technology will achieve or maintain acceptable manufacturing yields. Any weakness in manufacturing yields of integrated circuits utilizing our technology could impede the acceptance of our technology in the industry. 
+
+Our failure to continue to enhance our technology or develop new technology on a timely basis could diminish our ability to attract and retain licensees and product customers.
+
+        The existing and potential markets for memory products and technology are characterized by ever increasing performance requirements, evolving industry standards, rapid technological change and product obsolescence. These characteristics lead to frequent new product and technology introductions and enhancements, shorter product life cycles and changes in consumer demands. In order to attain and maintain a significant position in the market, we will need to continue to enhance our technology in anticipation of these market trends. 
+
+        In addition, the semiconductor industry might adopt or develop a completely different approach to utilizing memory for many applications, which could render our existing technology unmarketable or obsolete. We might not be able to successfully develop new technology, or adapt our existing technology, to comply with these innovative standards. 
+
+        Our future performance depends on a number of factors, including our ability to— 
+
+•
+identify target markets and relevant emerging technological trends, including new standards and protocols; 
+
+
+•
+develop and maintain competitive technology by improving performance and adding innovative features that differentiate our technology from alternative technologies; 
+16
+
+
+--------------------------------------------------------------------------------
+
+•
+enable the incorporation of enhanced technology in our licensees' and customers' products on a timely basis and at competitive prices; and 
+
+
+•
+respond effectively to new technological developments or new product introductions by others. 
+        We cannot assure you that the design and introduction schedules of any additions and enhancements to our existing and future technology will be met, that this technology will achieve market acceptance or that we will be able to license this technology on terms that are favorable to us. Our failure to develop future technology that achieves market acceptance could harm our competitive position and impede our future growth. 
+
+We depend substantially on our co-marketers to assist us in attracting potential licensees, and a loss or failure to increase the number of these relationships could inhibit our growth and reduce our revenue.
+
+        A significant part of our marketing strategy is dependent upon our co-marketing agreements with foundries and design companies. These co-marketers have existing relationships, and continually seek new relationships, with companies in the markets we target, and have agreed to utilize these relationships to introduce our technology to potential licensees. If we fail to maintain our current relationships with these co-marketers, we might fail to achieve anticipated growth. 
+
+We have a history of operating losses, and any future profitability is uncertain.
+
+        We recorded operating losses in each year from our inception through 1999. We had an accumulated deficit of $10.8 million as of December 31, 2001. From our inception through 1994, we were engaged primarily in research and product development. From 1995 through the third quarter of 1998, we focused on the sale of memory chips. We were profitable in the fourth quarter of 1997 and the first quarter of 1998 under our product sales business model, but, beginning in the fourth quarter of 1998, we altered our business plan to concentrate on developing and licensing our 1T-SRAM technology. Prior to the quarter ended September 30, 2000, we had recorded operating losses in each quarter since our adoption of this new business plan. We cannot assure you that we will be profitable on a quarterly or annual basis in the future. 
+
+Prior to fiscal 2000, our historical financial information does not reflect the recent changes to our business and strategy.
+
+        The historical financial information included in this 10-K does not reflect the many significant changes in our revenue structure that have occurred as a result of changes in our business model. Such historical financial information also does not reflect changes in our operations and expense structure that have resulted from this transition. While we expect to continue to generate revenue from memory chip sales, in the future we expect licensing and royalty revenue to be a majority of total revenue. The absence of ample historical financial information could make it more difficult for potential investors to evaluate the Company and our prospects, and could complicate our efforts to undertake meaningful financial planning. 
+
+Royalty amounts owed to us might be difficult to verify, and we might find it difficult, expensive and time consuming to enforce our license agreements.
+
+        The standard terms of our license agreements require our licensees to document the manufacture and sale of products that incorporate our technology and report this data to us after the end of each quarter. We must rely to a large extent upon the accuracy of these reports, as we do not have the capacity to independently verify this information. Though our standard license terms give us the right to audit the books and records of any licensee to attempt to verify the information provided to us in these reports, an audit of a licensee's records can be expensive and time consuming, and potentially detrimental to the business relationship. A failure to fully enforce the royalty provisions of our license agreements could cause our revenue to decrease and impede our ability to maintain profitability. 
+
+17
+
+
+--------------------------------------------------------------------------------
+
+
+We expect our revenue to be highly concentrated among a small number of licensees and customers, and our results of operations could be harmed if we lose and fail to replace this revenue.
+
+        We expect that royalty revenue will be highly concentrated among a few licensees for the foreseeable future. In particular, a substantial portion of our licensing revenue in 2001 has come from the licenses for integrated circuits to be used by Nintendo in its Gamecube and we expect the same source to represent a substantial portion of royalty revenue in 2002. Nintendo faces intense competitive pressure in the video game market, which is characterized by extreme volatility, frequent new product introductions and rapidly shifting consumer preferences. We cannot assure you that Nintendo's sales of product incorporating our technology will increase or remain at current levels and that we will continue to receive significant royalty revenue from Nintendo. 
+
+        Our product sales also are highly concentrated. Revenue derived from our two largest customers represented 21.7% and 18.6% of our total revenue, respectively in 2001. Revenue from our largest customer represented 26.2% of our total revenue in 2000, while our two largest customers represented 16.4% and 10.9% respectively, of our total revenue in 1999. We expect that a relatively small number of customers will continue to account for a substantial portion of our product revenue for the foreseeable future. 
+
+        As a result of this revenue concentration, our results of operations could be impaired by the decision of a single key licensee or customer to cease using our technology or products or by a decline in the number of products that incorporate our technology that are sold by a single licensee or customer or by a small group of licensees or customers. 
+
+Our revenue concentration might pose credit risks, which could negatively affect our cash flow and financial condition.
+
+        We might face credit risks associated with the concentration of our revenue among a small number of licensees and customers. As of December 31, 2001, two customers accounted for 54% of total receivables. As of December 31, 2000, two customers accounted for 57% of total receivables. Our failure to collect receivables from any customer that represents a large percentage of receivables on a timely basis, or at all, could adversely affect our cash flow or results of operations and might cause our stock price to fall. 
+
+We might not be able to protect and enforce our intellectual property rights, which could impair our ability to compete and reduce the value of our technology.
+
+        Our technology is complex and is intended for use in complicated integrated circuits. A very large number of new and existing products utilize embedded memory, and a large number of companies manufacture and market these products. Because of these factors, policing the unauthorized use of our intellectual property is difficult and expensive. We cannot be certain that we will be able to detect unauthorized use of our technology or prevent other parties from designing and marketing unauthorized products based on our technology. Although we are not aware of any past or present infringement of our patents, copyrights or trademarks, or any violation of our trade secrets, confidentiality procedures or licensing agreements, we cannot assure you that the steps taken by us to protect our proprietary information will be adequate to prevent misappropriation of our technology. Our inability to protect adequately our intellectual property would reduce significantly the barriers of entry for directly competing technologies and could reduce the value of our technology. Furthermore, we might initiate claims or litigation against third parties for infringement of our proprietary rights or to establish the validity of our proprietary rights. Litigation by us could result in significant expense and divert the efforts of our technical and management personnel, whether or not such litigation results in a determination favorable to us. 
+
+18
+
+
+--------------------------------------------------------------------------------
+
+
+Our existing patents might not provide us with sufficient protection of our intellectual property, and our patent applications might not result in the issuance of patents, either of which could reduce the value of our core technology and harm our business.
+
+        We rely on a combination of patents, trademarks, copyrights, trade secret laws and confidentiality procedures to protect our intellectual property rights. As of December 31, 2001, we held 40 patents in the United States, which expire at various times from 2011 to 2019, and 20 corresponding foreign patents. In addition, as of December 31, 2001, we had 17 patent applications pending in the United States and 19 pending foreign applications, and had received notice of allowance of four of these pending patent applications in the United States. We cannot assure that any patents will issue from any of our pending applications or that any claims allowed from pending applications will be of sufficient scope or strength, or issue in all countries where our products can be sold, to provide meaningful protection or any commercial advantage to us. Also, competitors might be able to design around our patents. Failure of our patents or patent applications to provide meaningful protection might allow others to utilize our technology without any compensation to us and impair our ability to increase our licensing revenue. 
+
+        Any claim that our products or technology infringe third-party intellectual property rights could increase our costs of operation and distract management and could result in expensive settlement costs or the discontinuance of our technology licensing or product offerings.
+
+        The semiconductor industry is characterized by vigorous protection and pursuit of intellectual property rights or positions, which has resulted in often protracted and expensive litigation. We are not aware of any currently pending intellectual property litigation or threatened claim against us. However, our licensees or we might, from time to time, receive notice of claims that we have infringed patents or other intellectual property rights owned by others. Litigation against us could result in significant expense and divert the efforts of our technical and management personnel, whether or not the litigation results in a determination adverse to us. In the event of an adverse result in any such litigation, we could be required to pay substantial damages, cease the licensing of certain technology or the sale of infringing products, and expend significant resources to develop non-infringing technology or obtain licenses for the infringing technology. We cannot assure you that we would be successful in such development or that such licenses would be available on reasonable terms, or at all. 
+
+The discovery of defects in our technology could expose us to liability for damages.
+
+        The discovery of a defect in our 1T-SRAM technology could lead our licensees to seek damages from us. Our standard license terms include provisions waiving implied warranties regarding our technology and limiting our liability to our licensees. We also maintain insurance coverage that is intended to protect us against potential liability for defects in our technology. We cannot be certain, however, that the waivers or limitations of liability contained in our license contracts will be enforceable, that insurance coverage will continue to be available on reasonable terms or in amounts sufficient to cover one or more large claims or that our insurer will not disclaim coverage as to any future claim. The successful assertion of one or more large claims that exceed available insurance coverage or changes in our insurance policies, including premium increases or the imposition of large deductible or co-insurance requirements, could cause our expenses to exceed our expectations and consequently harm our profitability. 
+
+19
+
+
+--------------------------------------------------------------------------------
+
+
+
+Our failure to compete effectively in the market for embedded memory technology and products could reduce our revenue.
+
+        Competition in the market for embedded memory technology and products is intense. Our licensees and prospective licensees can meet their need for embedded memory by using traditional memory solutions with different cost and performance parameters. If alternative technologies are developed that provide comparable system performance at lower cost than our 1T-SRAM technology or do not require the payment of comparable royalties, or if the industry generally demonstrates a preference for applications for which our 1T-SRAM technology does not offer significant advantages, our ability to realize revenue from our 1T-SRAM technology could be impaired. 
+
+        We might be challenged by competitive developers of alternative technologies who are more established, benefit from greater market recognition and have substantially greater financial, development, manufacturing and marketing resources than we have. These advantages might permit these developers to respond more quickly to new or emerging technologies and changes in licensee requirements. We cannot assure you that future competition will not have a material adverse effect on the adoption of our technology and our market penetration. 
+
+We might be unable to deliver our customized memory technology in the time frame demanded by our licensees, which could damage our reputation and harm our ability to attract future licensees. 
+
+        The majority of our licenses require us to customize our 1T-SRAM technology within a certain delivery timetable. Not all of the factors relating to this customization are within our control. We cannot assure you that we will be able to meet the time requirements under these licenses. Any failure to meet significant license milestones could damage our reputation in the industry and harm our ability to attract new licensees and could preclude our receipt of licensing fees. 
+
+We intend to grow rapidly, and our failure to manage this growth could reduce our potential revenue and threaten our future profitability. 
+
+        The efficient management of our planned expansion of the development, licensing and marketing of our technology will require us to continue to— 
+
+•
+implement and manage new marketing channels to penetrate different and broader markets for our 1T-SRAM technology; 
+
+
+•
+manage an increasing number of complex relationships with licensees and co-marketers and their customers and other third parties; 
+
+
+•
+improve our operating systems, procedures and financial controls on a timely basis; 
+
+
+•
+hire additional key management and technical personnel; and 
+
+
+•
+expand, train and manage our workforce and, in particular, our development, sales, marketing and support organizations. 
+        We cannot assure you that we will adequately manage our growth or meet the foregoing objectives. A failure to do so could jeopardize our future revenues and cause our stock price to fall. 
+
+If we fail to retain key personnel, our business and growth could be negatively affected. 
+
+        Our business has been dependent to a significant degree upon the services of a small number of executive officers and technical employees, including Dr. Fu-Chieh Hsu, our Chairman of the Board, President and Chief Executive Officer, and Dr. Wingyu Leung, our Executive Vice President and Chief Technical Officer. The loss of their services could negatively impact our technology development efforts and our ability to perform our existing agreements and obtain new customers. We generally have not 
+
+20
+
+
+--------------------------------------------------------------------------------
+
+
+entered into employment or non-competition agreements with any of our employees and do not maintain key-man life insurance on the lives of any of our key personnel. 
+
+We derive a significant amount of our revenue from sales of our proprietary integrated circuits and a decline in demand for these products could reduce our revenue substantially. 
+
+        Product revenues since 1998, when we changed our business strategy, have represented 58%, 90% and 100% of our total revenues for 2001, 2000 and 1999, respectively. Our product revenues fell from $4.7 million in the quarter ended December 31, 2000 to $3.2 million in the quarter ended December 31, 2001. The decline reflects a general weakness in demand for our customers' products and a corresponding inventory correction that resulted in reduced purchases of our memory chips. We cannot assure you that our customers will increase their orders in future periods. We cannot assure you that our memory chips will perform the desired functions, will operate reliably on a long-term basis or otherwise will be technically successful, or that we will be able to obtain adequate quantities of these products at commercially acceptable costs or on a timely basis. 
+
+A decline in the average selling prices of our memory chips could reduce our product revenue and gross profit. 
+
+        As has been typical in the semiconductor industry, we expect that the average unit selling prices of our memory chips will decline over the course of their commercial lives, principally due to the supply of competing products, falling demand from customers and product cycle changes. We experienced a significant decline in average selling prices for our primary memory chip from 1997 to 1998, with a corresponding decline in gross margin for that product. Declining average selling prices will adversely affect gross margins from the sale of our memory chips. We might not be able to adjust our costs rapidly or deeply enough to offset the pricing declines and, as a consequence, our product revenue and profit margins could fall. 
+
+We obtain the manufacture, assembly and testing of our products from third parties that we do not control and a loss of these services could harm our licensing business and decrease our product revenue. 
+
+        We are a fabless semiconductor company, and currently rely on Taiwan Semiconductor Manufacturing Co., Ltd., or TSMC, for the manufacture of all of our memory chips. We presently do not have a firm, written agreement with TSMC or any other semiconductor foundry that guarantees the fabrication of our memory chips. As a result, we cannot assure you that we will always be able to obtain these products in sufficient numbers and on a timely basis to meet our sales objectives. A failure to ensure the timely fabrication of our products could cause us to lose customers and could have a material adverse effect on our profits. If TSMC ceases to provide us with required production capacity with respect to our memory chips, we cannot assure you that we will be able to enter into manufacturing arrangements with other foundries on commercially reasonable terms, or that these arrangements, if established, will result in the successful manufacturing of our products. These arrangements might require us to share control over our manufacturing process technologies or to relinquish rights to our technology and might be subject to unilateral termination by the foundries. Even if such capacity is available from another manufacturer, we would need to qualify the manufacturer, which process could take six months or longer. We cannot assure you that we would be able to identify or qualify manufacturing sources that would be able to produce wafers with acceptable manufacturing yields. 
+
+        All of our semiconductor memory chip products are assembled and tested by third-party vendors, primarily in Taiwan. Our reliance on independent assembly and testing vendors involves a number of risks, including reduced control over delivery schedules, quality assurance and costs. The inability of 
+
+21
+
+
+--------------------------------------------------------------------------------
+
+
+these third-party contractors to deliver products of acceptable quality and in a timely manner could result in the loss of customers and a reduction in our product revenue. 
+
+        Our marketing efforts with respect to licensing our 1T-SRAM technology include the use of our 1T-SRAM memory chips to demonstrate the performance and manufacturability of the underlying technology and to facilitate acceptance of our technology by potential licensees. A loss of foundry capacity, assembly services or testing services for our memory chips, or any other failure to produce our 1T-SRAM memory chips, could materially impair our ability to market our technology to potential licensees and reduce our revenue. 
+
+The volatility of and uncertainties inherent in the semiconductor industry may make it difficult to plan our memory chip business and could cause our results of operations to fluctuate substantially. 
+
+        In the past, we have generally experienced significant fluctuations in our operating results due to significant economic downturns in the semiconductor industry. Specifically, in 1998 and again in late 2000, product demand fell, prices eroded and inventory levels fluctuated. Our ability to sell memory chips has also been hampered by alternating periods of manufacturing over-capacity and capacity constraints. Any recurrence of these conditions could cause us to experience substantial period-to-period fluctuations in revenues and costs associated with our memory chip business. 
+
+Our failure to successfully address the potential difficulties associated with our international operations could increase our costs of operation and negatively impact our revenue. 
+
+        We are subject to many difficulties posed by doing business internationally, including— 
+
+•
+foreign currency exchange fluctuations; 
+
+
+•
+unanticipated changes in local regulation; 
+
+
+•
+potentially adverse tax consequences, such as withholding taxes; 
+
+
+•
+difficulties regarding timing and availability of export and import licenses; 
+
+
+•
+political and economic instability; and 
+
+
+•
+reduced or limited protection of our intellectual property. 
+        Because we anticipate that licenses to companies that operate primarily outside the United States will account for a substantial portion of our licensing revenue in future periods, the occurrence of any of these circumstances could significantly increase our costs of operation, delay the timing of our revenue and harm our profitability. 
+
+Provisions of our certificate of incorporation and bylaws or Delaware law might delay or prevent a change of control transaction and depress the market price of our stock. 
+
+        Various provisions of our certificate of incorporation and bylaws might have the effect of making it more difficult for a third party to acquire, or discouraging a third party from attempting to acquire, control of our company. These provisions could limit the price that certain investors might be willing to pay in the future for shares of our common stock. Certain of these provisions eliminate cumulative voting in the election of directors, limit the right of stockholders to call special meetings and establish specific procedures for director nominations by stockholders and the submission of other proposals for consideration at stockholder meetings. 
+
+        We are also subject to provisions of Delaware law which could delay or make more difficult a merger, tender offer or proxy contest involving our company. In particular, Section 203 of the Delaware General Corporation Law prohibits a Delaware corporation from engaging in any business combination with any interested stockholder for a period of three years unless specific conditions are met. Any of 
+
+22
+
+
+--------------------------------------------------------------------------------
+
+
+these provisions could have the effect of delaying, deferring or preventing a change in control, including without limitation, discouraging a proxy contest or making more difficult the acquisition of a substantial block of our common stock. 
+
+        Our board of directors may issue up to 20,000,000 shares of preferred stock without stockholder approval on such terms as the board might determine. The rights of the holders of common stock will be subject to, and might be adversely affected by, the rights of the holders of any preferred stock that might be issued in the future. 
+
+Our stockholder rights plan could prevent stockholders from receiving a premium over the market price for their shares from a potential acquiror. 
+
+        We have adopted a stockholder rights plan, which entitles our stockholders to rights to acquire additional shares of our common stock generally when a third party acquires 15% of our common stock or commences or announces its intent to commence a tender offer for at least 15% of our common stock. This plan could delay, deter or prevent an investor from acquiring us in a transaction that could otherwise result in stockholders receiving a premium over the market price for their shares of common stock. 
+
+A limited number of stockholders will have the ability to influence the outcome of director elections and other matters requiring stockholder approval. 
+
+        Our executive officers, directors and entities affiliated with them, in the aggregate, beneficially own approximately 40% of our common stock. These stockholders acting together have the ability to exert substantial influence over all matters requiring the approval of our stockholders, including the election and removal of directors and any proposed acquisition, consolidation or sale of all or substantially all of our assets. In addition, they could dictate the management of our business and affairs. This concentration of ownership could have the effect of delaying, deferring or preventing a change in control, or impeding an acquisition, consolidation, takeover or other business combination, which might otherwise involve the payment of a premium for your shares of our common stock. 
+
+Any acquisitions we make could disrupt our business and harm our financial condition. 
+
+        As part of our growth strategy, we might consider opportunities to acquire other businesses or technologies that would complement our current offerings, expand the breadth of our markets or enhance our technical capabilities. To date, we have not made any acquisitions, and we are currently not subject to any agreement or letter of intent with respect to potential acquisitions. Acquisitions present a number of potential challenges that could, if not overcome, disrupt our business operations, increase our operating costs and reduce the value to us of the acquired company, including— 
+
+•
+integration of the acquired employees, operations, technologies and products with our existing business and products; 
+
+
+•
+focusing management's time and attention on our core business; 
+
+
+•
+retention of business relationships with suppliers and customers of the acquired company; 
+
+
+•
+entering markets in which we lack prior experience; and 
+
+
+•
+retention of key employees of the acquired company. 
+Potential volatility of the price of our common stock could negatively affect your investment. 
+
+        We cannot assure you that there will continue to be an active trading market for our common stock. Recently, the stock market, as well as our common stock, has experienced significant price and volume fluctuations. Market prices of securities of technology companies have been highly volatile and 
+
+23
+
+
+--------------------------------------------------------------------------------
+
+
+frequently reach levels that bear no relationship to the operating performance of such companies. These market prices generally are not sustainable and are subject to wide variations. If our common stock trades to unsustainably high levels, it is likely that the market price of our common stock will thereafter experience a material decline. 
+
+        In the past, securities class action litigation has often been brought against a company following periods of volatility in the market price of its securities. We could be the target of similar litigation in the future. Securities litigation could cause us to incur substantial costs, divert management's attention and resources, harm our reputation in the industry and the securities markets and reduce our profitability. 
+
+The price of our stock could decrease as a result of shares being sold in the market after our initial public offering. 
+
+        Sales of a substantial number of shares of common stock in the public market could adversely affect the market price of the common stock prevailing from time to time. The number of shares of our common stock available for sale in the public market is limited by restrictions under the Securities Act of 1933, as amended, or the Securities Act, but taking into account sales of stock made in accordance with the provisions of Rules 144(k), 144 and 701, substantially all the shares of common stock currently outstanding are eligible for sale in the public market. 
+
+        Dr. Fu-Chieh Hsu, our Chairman of the Board, President and Chief Executive Officer, Dr. Wingyu Leung, our Executive Vice President and Chief Technical Officer and Mark Eric Jones, our Vice President and General Manager each entered into a plan for selling a portion of their shares of common stock in the manner described under Rule 10b5-1 of the Securities Exchange Act of 1934. Each plan is non-discretionary and is administered by an independent brokerage firm. Plans for Drs. Hsu and Leung provide for the automatic sale of shares of common stock in 10,000 share blocks twice each week between January 28, 2002 and July 31, 2002. Mr. Jones' plan provides for automatic weekly sales that vary from 2,000 to 10,000 shares per week between February 21, 2002 and February 28, 2003, depending on the market price of our stock. Sales of the shares are further subject to the volume restrictions set forth in SEC Rule 144(e). Each plan provides for termination upon the completion of the specified trading program, the instruction of the stockholder, or the occurrence of other specified events, whichever is earliest. Under his plan, Dr. Hsu intended to sell 540,000 shares. Dr. Leung intended to sell 520,000 shares under his plan. All of the shares are sold through broker-dealers in ordinary market transactions. Dr. Hsu cancelled his plan on February 25, 2002 after 90,000 shares were sold in late January and February of 2002. Dr. Leung's and Mr. Jones' plans remain in effect. 
+
+24
+
+
+--------------------------------------------------------------------------------
+
+
+Executive Officers 
+
+        The following table sets forth certain information concerning the directors and executive officers of our company as of December 31, 2001. 
+
+Name
+
+--------------------------------------------------------------------------------
+   Age
+--------------------------------------------------------------------------------
+   Position
+--------------------------------------------------------------------------------
+ 
+Fu-Chieh Hsu   45   Chairman of the Board, President and Chief Executive Officer 
+Wingyu Leung   47   Executive Vice President and Chief Technical Officer and Director 
+Mark-Eric Jones   46   Vice President and General Manager—Intellectual Property 
+F. Judson Mitchell   65   Vice President, Finance & Administration, Chief Financial Officer and Secretary 
+Andre Hassan   42   Vice President and General Manager—Discrete Products 
+
+        Fu-Chieh Hsu.    Dr. Hsu has served as our Chairman of the Board since September 1991 and as our President and Chief Executive Officer since April 1992. Dr. Hsu also served as our Chief Financial Officer from April 1992 until May 1996. Prior to joining our company, Dr. Hsu was the President and Chairman of the Board of Myson Technology, Inc., a developer of high performance semiconductor products from August 1990 to August 1991. From May 1985 to August 1990, Dr. Hsu served as Vice President and Chief Technology Officer of Integrated Device Technology, Inc., a developer of high performance semiconductor products and modules. Dr. Hsu holds a B.S. in electrical engineering from National Taiwan University and an M.S. and a Ph.D. in electrical engineering from the University of California at Berkeley. 
+
+        Wingyu Leung.    Dr. Leung has served as our Vice President, Engineering and Chief Technical Officer and as a member of our board of directors since April 1992. Dr. Leung also served as our Secretary from April 1992 until May 1996 and again from May 1997 until August 2000. Prior to joining our company, Dr. Leung served as a technology consultant to several high technology companies, including Rambus, Inc., or Rambus, a developer of a high-speed chip-to-chip interface technology. Prior to that time, Dr. Leung served as a member of the technical staff of Rambus, and as a senior engineering manager at Integrated Device Technology, Inc., where he managed and participated in circuit design activities. Dr. Leung holds a B.S. in electrical engineering from the University of Maryland, an M.S. in electrical engineering from the University of Illinois and a Ph.D. in electrical engineering and computer science from the University of California at Berkeley. 
+
+        Mark-Eric Jones.    Mr. Jones has served as our Vice President and General Manager—Intellectual Property since October 1998. Prior to joining our company, Mr. Jones served as Director, Intellectual Property Division of Mentor Graphics Corporation, a developer of EDA tools and provider of intellectual property from January 1996 to September 1998. Mr. Jones founded 3SOFT, Inc., a developer of intellectual property and served as its President and Chief Executive Officer from May 1976 to January 1996. Mr. Jones holds a M.A. from Trinity College, University of Cambridge, United Kingdom. 
+
+        F. Judson Mitchell.    Mr. Mitchell has served as our Vice President of Finance and Administration and Chief Financial Officer since July 2000, and was appointed Secretary in August 2000. Prior to joining our company, Mr. Mitchell served as Vice President and Chief Financial Officer of Wavespan, Inc., a manufacturer of microwave radio links from November 1997 until December 1999. Prior to that time, Mr. Mitchell served as a financial consultant to high technology companies. Mr. Mitchell also served as Vice President and Chief Financial Officer of the DSP Group from August 1993 until September 1995. Mr. Mitchell has also served as Chief Financial Officer of 
+
+25
+
+
+--------------------------------------------------------------------------------
+
+
+Adaptec, Inc., IXYS Corporation and Finnigan Corporation. Mr. Mitchell holds a B.S. in Mechanical Engineering and an A.B. in Liberal Arts from Columbia College in New York and an M.B.A. from the Stanford Graduate School of Business. 
+
+        Andre Hassan.    Mr. Hassan has served as our Vice President and General Manager—Discrete Products since July 2001. Prior to this, Mr. Hassan was General Manager—Discrete Products from January 1999 to June 2001. Mr. Hassan was Director of Marketing from February 1996 to December 1998. Prior to joining our company, Mr. Hassan served as Strategic Marketing Manager for S3, Inc., a developer of semiconductor multimedia products from June 1994 to January 1996. Mr. Hassan holds a B.S. in electrical engineering from Worcester Polytechnic Institute. 

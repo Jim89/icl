@@ -1,0 +1,856 @@
+Item 1. Business
+
+Overview
+
+     We design, develop, manufacture and market proprietary, high-voltage,
+analog integrated circuits, commonly referred to as ICs, for use primarily in
+alternating current to direct current, or AC to DC, power conversion. We have
+targeted high-volume power supply markets including:
+
+     .    the cellular telephone market;
+
+     .    the personal computer market;
+
+     .    the cable and direct broadcast satellite decoder box market; and
+
+     .    various other consumer and industrial electronics markets.
+
+     Our ICs cost-effectively bring the benefits of high levels of integration
+to AC to DC switching supplies. We believe that the products in our TOPSwitch
+family of high-voltage ICs, introduced in 1994, were the first highly integrated
+power conversion ICs to achieve widespread market acceptance. We introduced
+TOPSwitch II, an enhanced family of our ICs, in April 1997, TinySwitch, a family
+of more energy-efficient power conversion ICs, in September 1998, TOPSwitch FX,
+a family with greater design flexibility, in March 2000 and TOPSwitch GX, a
+family capable of supplying output levels from 6 to 250 watts, in November 2000.
+
+Industry Background
+
+     Virtually every electronic device that plugs into a wall socket requires
+some type of power supply to convert high-voltage AC, provided by electric
+utilities, into low-voltage DC required by the devices. Additionally,
+rechargeable, portable products, such as cellular phones and laptop computers,
+also need an AC to DC power supply to recharge their batteries.
+
+     Before 1970, AC to DC power supplies used large, inefficient transformers,
+which operated at low frequencies to convert power from AC to DC. In the 1970s,
+the invention of high-voltage discrete semiconductors enabled the development of
+a new generation of AC to DC "switching" power supplies, which allowed the use
+of smaller, more efficient transformers to lower the voltage. Although these
+discrete switchers offered advantages over older technologies, over the years
+they have not kept pace with the technological advances made in the electronic
+devices they power.
+
+     As the pressures from market forces have increased, the limitations of
+discrete switchers have become more pronounced. Discrete switchers require
+numerous components which limit the power supply designers' ability to reduce
+the size, increase the functionality and improve the efficiency of switchers
+while at the same time meeting stringent market cost and energy efficiency
+requirements. In addition, discrete switchers involve a high level of
+
+                                       3
+<PAGE>
+
+design complexity, which limits the scalability of designs and increases
+time-to-market and development risks for new products.
+
+     Early attempts to replace discrete switchers with integrated switchers,
+using high-voltage analog ICs, did not achieve widespread acceptance in the
+marketplace because they were not cost-effective. We addressed this opportunity
+in 1994 by introducing our first cost effective IC, TOPSwitch. Our growth since
+that time validates our belief that a substantial market opportunity exists for
+high-voltage ICs that are cost effective and combine the benefits of integration
+that discrete switcher and earlier transformer technologies lack.
+
+Our Highly Integrated Solution
+
+     We have developed several families of high-voltage power conversion ICs,
+which we believe are the first highly integrated power conversion ICs to achieve
+widespread market acceptance. Since introducing our TOPSwitch family of products
+in 1994, we have shipped approximately 525 million TOPSwitch ICs. These patented
+ICs achieve a high level of system integration by combining a number of
+electronic components into a single IC. Our TOPSwitch and TinySwitch products
+enable many power supplies in the 0.5 to 150-watt power range to have a total
+cost equal to or lower than discrete switchers. Our TOPSwitch and TinySwitch
+products offer the following key benefits to power supplies:
+
+        .  Fewer Components, Reduced Size and Enhanced Functionality
+
+           Our highly integrated TOPSwitch ICs enable the design and production
+           of cost-effective switchers that use up to 50% fewer components and
+           have enhanced functionality compared to discrete-based solutions. For
+           example, our ICs provide thermal and short circuit protection without
+           increasing system cost, while discrete switchers must add additional
+           components and cost to provide these functions.
+
+        .  Improved Efficiency
+
+           Our integrated circuit also improves electrical efficiency, which
+           reduces power consumption and excess heat generation. Our patented
+           low-loss, high-voltage device, combined with its control circuitry,
+           improves overall electrical efficiency during both full operation and
+           stand-by mode.
+
+        .  Reduced Time-to-Market
+
+           Our integrated circuit makes power supply design simpler and once
+           customers have created designs using our ICs, they can apply that
+           design to new products, resulting in a shorter time-to-market and
+           reduced product development risk.
+
+        .  Wide Power Range and Scalability
+
+           Products in our current TOPSwitch families can address a power range
+           of 0.5 to 150 watts. The scalable architecture of these ICs allows
+           switcher designers to adapt their existing TOPSwitch-based designs to
+           a wide range of products to address many different power supply
+           markets.
+
+Strategy
+
+     Our objective is to be the leading provider of high-voltage power
+conversion ICs. We intend to pursue the following strategies to accelerate
+adoption of our products:
+
+        .  Target High-Volume Markets
+
+           Because of our products' scalability and ability to address a wide
+           power range, a small number of products address a wide variety of
+           customer needs, allowing us to take advantage of economies of scale
+           and making us more competitive.
+
+                                       4
+<PAGE>
+
+        .  Focus on Markets that Can Derive Significant Benefits from
+           Integration
+
+           We are initially focusing our efforts on those markets that are
+           particularly sensitive to size, portability, energy efficiency and
+           time to market issues. We achieved early success in the cellular
+           phone fast charger market, as cellular phone customers demanded more
+           portable travel chargers instead of stand-alone desktop chargers. We
+           have also achieved some success in the desktop PC market due to the
+           market's demand for stand-by power capability, and in the cable and
+           direct broadcast satellite decoder box market due to that market's
+           need for reducing component count and for shortening product design
+           cycles. As other markets emerge as significant opportunities for our
+           TOPSwitch products, we intend to focus our resources on the
+           development and penetration of those markets.
+
+        .  Deliver Systems Solutions and Provide Applications Expertise
+
+           To help potential customers decide to purchase our TOPSwitch
+           products, we offer comprehensive application design support. We
+           provide extensive application notes and production-ready reference
+           design boards. We also provide application-engineering support out of
+           our headquarters and through field application engineering labs
+           located in China, England, Germany, India, Japan, Korea and Taiwan.
+           We have committed substantial resources to system support by
+           dedicating approximately one-third of our technical workforce to
+           applications engineering. We believe our power supply systems
+           expertise and investment in field applications engineering provide us
+           significant competitive advantages.
+
+        .  Extend Technological Leadership in High-Voltage Analog ICs
+
+           Our proprietary device structures and fabrication processes as well
+           as analog circuit designs have resulted in 29 U.S. patents and 56
+           foreign patents. These patents, in combination with our other
+           intellectual property, form the basis of our TOPSwitch and TinySwitch
+           product families. We recently introduced an enhanced TOPSwitch
+           product family that provides improved power capability and system
+           cost advantages while preserving the design simplicity of our
+           original TOPSwitch products. We continue to improve our device
+           structures, wafer fabrication processes and analog circuit designs
+           and seek to obtain additional patents to protect our intellectual
+           property.
+
+        .  Leverage Patented Technology in Strategic Relationships
+
+           We have established relationships with Matsushita Electronics
+           Corporation, and with OKI Electric Industry in order to take
+           advantage of these companies' high volume manufacturing resources,
+           and in the case of Matsushita, generate royalty revenues. Our wafer
+           manufacturing relationships with Matsushita and OKI enable us to
+           focus on fundamental high-voltage silicon technology, product design
+           and marketing while minimizing fixed costs and capital expenditures.
+           Matsushita also has licensed the right to manufacture our products
+           for sale in certain geographic regions and for use in its own
+           products.
+
+Products
+
+     Below is a brief description of our products:
+
+        .  TOPSwitch Product Families
+
+           Our TOPSwitch high-voltage analog IC products are able to meet the
+           power conversion needs of a wide range of applications within high
+           volume markets. Sales of TOPSwitch products accounted for 98%, 97%
+           and 95% of our net revenues in 2000, 1999 and 1998, respectively.
+
+               .  TOPSwitch
+
+                                       5
+<PAGE>
+
+                  The TOPSwitch family was introduced in 1994 and consists of 13
+                  products. The key benefits of the TOPSwitch family compared to
+                  discrete switchers include fewer components, reduced size,
+                  enhanced functionality and lower cost in many applications.
+                  Our TOPSwitch products integrate a PWM controller, a high-
+                  voltage MOSFET and a number of other electronic components
+                  into a single 3 terminal IC. These products are produced in
+                  two high-voltage versions--a 350-volt version for the 115VAC-
+                  switcher markets, including the United States and Japan, and a
+                  700-volt version for the 230VAC-switcher markets, including
+                  Europe.
+
+               .  TOPSwitch II
+
+                  The TOPSwitch II family was introduced in April 1997 and
+                  consists of 11 products. The TOPSwitch II products further
+                  lower the switcher costs by improving the performance of
+                  TOPSwitch and addressing low power applications. The TOPSwitch
+                  II family uses the same proprietary architecture as the
+                  original TOPSwitch family, enabling switcher designers
+                  experienced with TOPSwitch to take advantage of the TOPSwitch
+                  II benefits without implementing a new architecture.
+
+               .  TinySwitch
+
+                  The TinySwitch family was introduced in September 1998 and
+                  consists of 5 products. The product line topology was
+                  specifically designed to address low power applications below
+                  10 watts. The TinySwitch family of high voltage ICs was the
+                  first family of chips to incorporate EcoSmart technology to
+                  address the growing global demand to reduce energy waste in a
+                  wide range of electronic products. It dramatically reduces the
+                  energy consumed during standby and no-load enabling our
+                  customers to meet governmental energy efficiency guidelines.
+
+               .  TOPSwitch-FX
+
+                  The TOPSwitch-FX family was introduced in March 2000 and
+                  consists of 6 products. This family offers engineers greater
+                  design flexibility to develop highly integrated power
+                  supplies. New features integrated into the TOPSwitch-FX parts
+                  continue to reduce the system cost of power supplies as well
+                  as improve their performance. In addition, this product line
+                  incorporates our energy saving EcoSmart technology to help
+                  meet the growing need for environmentally friendly power
+                  solutions. The family delivers up to 75 watts of power for use
+                  in markets such as cellular phone chargers, personal
+                  computers, set-top boxes and DVD players.
+
+               .  TOPSwitch-GX
+
+                  The TOPSwitch-GX family was introduced in November 2000 and
+                  consists of 11 products capable of supplying output power
+                  levels from 6 watts to 250 watts. TOPSwitch-GX is the first
+                  monolithic high voltage switching power IC capable of
+                  providing this level of power. The new family incorporates the
+                  features offered in earlier TOPSwitch product families as well
+                  as new ones through additional user configurable pins. This
+                  allows a higher level of end user design flexibility,
+                  resulting in improved power supply design optimization and
+                  lower system cost. Advanced EcoSmart technology offers
+                  improved standby energy efficiency. Applications for
+                  TOPSwitch-GX devices include laptop adapters, LCD monitors,
+                  printers, desktop computers, Internet appliances, DVD players
+                  and uninterruptible power supplies.
+
+                                       6
+<PAGE>
+
+        .  Other Products
+
+           Our products also include our SMP family, our INT family and a
+           limited number of custom products. Sales of these products accounted
+           for 2%, 3% and 5% of our net revenues in 2000, 1999 and 1998,
+           respectively. We expect revenue from these products to continue to
+           decline as a percentage of net revenues.
+
+               .  SMP
+
+                  The SMP family is the original line of power conversion
+                  products, which we developed for the AC to DC power supply
+                  market. These products are used in applications where switcher
+                  designers are willing to pay a premium price for additional
+                  features such as variable frequency.
+
+               .  INT
+
+                  The INT products are interface drivers for motor control
+                  applications, which utilize our high-voltage process
+                  technology.
+
+               .  Custom Products
+
+                  We also manufacture a limited number of custom products,
+                  including a hook switch for telephones.
+
+                                       7
+<PAGE>
+
+Markets and Customers
+
+     Our strategy is to target high-volume power supply markets and to initially
+focus on markets that can benefit the most from our highly integrated power
+conversion ICs. The following chart shows representative customers and end users
+of our products in power supplies in several major market segments.
+
+<TABLE>
+<CAPTION>
+Market Segment                                       Customers
+---------------------------------------              ---------------------------------------
+<S>                                                  <C>
+        .  Cellular Phones
+
+               Battery Chargers                      Eastcom, Ericsson Hyundai, ICC, Lucky
+                                                     Goldstar, Motorola and its subsidiaries,
+                                                     Mitsubishi, Nokia, Phihong Enterprises,
+                                                     Sagem, Salom, Samsung Electronics
+
+        .  Desktop Computers
+
+               Stand-by Power                        Acbel (API), Artesyn, Astec, Compaq,
+                                                     Dell, Delta Electronics, Hewlett
+                                                     Packard, Hipro, IBM, Intertek, Likom,
+                                                     Liteon, Minebea, Magnetek, SPI,
+                                                     Samsung, Seventeam, Sirtec Tiger
+
+        .  Cable and Direct Broadcast Satellite
+
+               Set-top Decoders                      Acbel (API), Amstrad, General
+                                                     Instruments, Grundig, Hughes, Magnetek,
+                                                     Motorola, Nokia, Pace, Pioneer,
+                                                     Samsung, Scientific Atlanta, Sony, UEC,
+                                                     Vestelcom
+
+        .  PC Peripherals
+
+               Multi-media Monitor & Audio           Altec, In-Focus,Compaq, Harman, JBL, Logitech,
+                                                     Lucky Goldstar, Sony
+               Universal Serial Bus                  LG, Samsung, Sony
+               Removable Mass Storage                Iomega, Seagate
+
+        .  Consumer
+
+               TV                                    Daewoo, Hitachi, Lucky Goldstar, Nokia, Philips,
+                                                     Samsung, Sharp, Sony,  Vestel, Xocexo, Zenith
+               VCR                                   Aiwa, Daewoo, Sony
+               DVD                                   Amoisonic, Orient Power, Shinco, Thakral
+
+        .  Industrial
+
+               Utility Meters                        Brainchild, Schlumberger, Siemens, Whisper
+               Uninterruptible Power Supply          APC, Exide Electronics, Powerware, Rompower
+
+        .  Home Appliances
+
+               Washing Machines, Air                 AKO-Werke, Bosch-Siemens, Changhong, Fisher-Paykel,
+               Conditioners, Dish                    General Electric, Hualing, Kelon, Lucky Goldstar,
+               Washers, Vacuum                       Meide, Miele, Samsung, Shanghai Sinyuan, Whirlpool
+               Cleaners
+</TABLE>
+
+                                       8
+<PAGE>
+
+ Description of Our Primary Markets
+
+        .  Cellular Phone Chargers
+
+           In the cellular phone market, size, portability and more recently,
+           energy efficiency are key market drivers for these products. We
+           believe a substantial market opportunity exists for small, energy
+           efficient power supplies for battery chargers. We estimate the total
+           available annual market for cell phone chargers was approximately 500
+           million units in 2000.
+
+        .  Desktop Computer Standby Power Supplies
+
+           Governmental authorities are promoting computer manufacturers to use
+           highly efficient stand-by power in new PCs to reduce the PCs' power
+           consumption when idle. Our TOPSwitch and TinySwitch products are
+           currently being used in computers to reduce the power consumed when
+           idle and to meet the market demand for more energy-efficient
+           computers. We estimate that the annual market for standby power
+           supplies for desktop PCs was approximately 110 million units in 2000.
+
+        .  Cable and Direct Broadcast Satellite Decoder Boxes
+
+           Cable and direct broadcast satellite decoder box manufacturers are
+           particularly sensitive to component count, set-top box size and the
+           ability to shorten their product design cycles. Our TopSwitch
+           products are currently helping them solve these problems and provide
+           other benefits inherent with an integrated solution. We estimate that
+           the annual market for power supplies in cable and direct broadcast
+           satellite decoder boxes was approximately 40 million units in 2000.
+
+        .  Other Markets
+
+           Although we currently focus on the above key markets, we also sell
+           products into a wide variety of other markets, which include PC
+           peripherals, modems, televisions, VCRs, DVD players, industrial
+           meters and home appliances. As these and other markets emerge as
+           significant opportunities for our IC products, we intend to focus our
+           resources on the development and penetration of these markets.
+
+Sales, Distribution and Marketing
+
+     We sell our products to original equipment manufacturers, OEMs, and
+merchant power supply manufacturers through a direct sales staff and through a
+worldwide network of independent sales representatives and distributors.. Our
+international sales representatives also act as distributors in Europe and Asia.
+In the United States, we use two national distributors and a number of regional
+sales representatives. We have sales offices in Corona Del Mar, California,
+Marietta, Georgia, Bloomingdale, Illinois, and Wakefield, Massachusetts, as well
+as in China, England, Germany, India, Japan, Korea and Taiwan. For 2000, direct
+sales to OEMs and merchant power supply manufacturers represented approximately
+50% of our net revenues while sales through distributors accounted for the
+remaining 50%. All distributors are entitled to certain return privileges based
+on sales revenue and are protected from price reductions affecting their
+inventories. Our distributors are not subject to minimum purchase requirements
+and the sales representatives and distributors can discontinue marketing any of
+our products at any time.
+
+     Our products are generally incorporated into a customer's power supply at
+the design stage. Our sales and marketing efforts are focused on facilitating
+the customer's use of our products in the design of new power supplies for
+specific applications. An important competitive factor in determining whether a
+customer decides to use our products in its designs is our commitment to provide
+comprehensive application design support. We publish comprehensive databooks and
+design guides, and provide to our current and prospective customers extensive
+application notes and production-ready reference design boards. In addition, we
+provide application-engineering support out of our headquarters, and our field
+application engineering labs provide local resources to support customers in key
+geographies. We focus particular efforts on building relationships with, and
+providing support to, industry-leading OEMs and merchant power supply
+manufacturers. We have committed substantial
+
+                                       9
+<PAGE>
+
+resources to system support by dedicating approximately one-third of our
+technical workforce to applications engineering.
+
+     Our end user base is highly concentrated, and a relatively small number of
+OEMs, directly or indirectly through merchant power supply manufacturers,
+accounted for a significant portion of our revenue in 2000 and 1999. We estimate
+that our top ten customers, including distributors which resell to large OEMs
+and merchant power supply manufacturers, accounted for 69%, 68% and 67% of our
+net revenues for 2000, 1999 and 1998, respectively. For 2000, Maxisum (Insight),
+and Synnex Technologies, both distributors, accounted for 22% and 10% of our net
+revenues, respectively. For 1999, these two distributors accounted for 16% and
+11% of our net revenues, respectively. For 1998, Maxisum and Synnex accounted
+for 22% and 13% of our net revenues, respectively. No other customers accounted
+for more than 10% of net revenues during 2000, 1999 and 1998. In 2000, 1999 and
+1998, international sales comprised 84%, 78% and 83%, respectively, of our net
+revenues.
+
+     Sales of our products are generally made pursuant to standard purchase
+orders, which are frequently revised to reflect changes in the customer's
+requirements. Product deliveries are scheduled upon our receipt of purchase
+orders. Generally, these orders allow customers to reschedule delivery dates and
+cancel purchase orders without significant penalties. For these reasons, we
+believe that purchase orders received, while useful for scheduling production,
+are not necessarily reliable indicators of future revenues.
+
+     In the Japanese market, we have a license agreement with Matsushita under
+which Matsushita sells its versions of our products. While we continued to sell
+products to our existing Japanese customers, in April 1997, as part of the
+license agreement, we agreed not to pursue new business in Japan until after
+June 2000. Our new license agreement with Matsushita, effective July 2000, does
+not have this restriction and we have begun to market our products again in
+Japan. We will continue to support our Japanese customers through our office in
+Japan.
+
+Technology
+
+        .     High-Voltage Transistor Structure and Process Technology
+
+              We have developed a patented high-voltage, power IC technology,
+              which uses our proprietary high voltage MOS transistor structure
+              and fabrication process and has resulted in 8 U.S. patents. The
+              technology enables us to integrate cost effectively on the same
+              monolithic IC, high-voltage n-channel transistors with industry
+              standard CMOS and bipolar components. The IC device structure and
+              the wafer fabrication process both contribute to the cost
+              effectiveness of our high-voltage technology. Recently introduced
+              novel, high-voltage technology further improves silicon efficiency
+              of the devices by using dual-conduction layers. The device
+              structure provides a transistor conduction capability that results
+              in a significantly more cost-effective high voltage device than
+              that of competing technologies. Our high voltage ICs have been
+              implemented on low cost silicon wafers using standard 5V silicon
+              processing techniques combined with our proprietary implant
+              process step, with relatively large feature sizes, up to a
+              3-micron CMOS process.
+
+        .     IC Design and System Technology
+
+              Our proprietary IC designs combine complex control circuits and
+              high-voltage transistors on the same monolithic IC and have
+              resulted in 19 U.S. patents. Our IC design technology takes
+              advantage of our high-voltage process to minimize the die size of
+              both the high-voltage device and control circuits and improve the
+              performance of our ICs versus alternative integration
+              technologies. We also have developed system expertise in switching
+              converters that have resulted in new innovative topologies that
+              reduce system cost, increase system performance and greatly
+              improve energy efficiency of power supplies compared to
+              alternative approaches. The combination of our IC design
+              technology and our system level expertise in switcher converters
+              has enabled us to develop revolutionary products such as the
+              highly integrated TOPSwitch, TOPSwitch-GX and TinySwitch family of
+              ICs and scalable architecture for integrated switchers.
+
+                                       10
+<PAGE>
+
+Research and Development
+
+     Our research and development efforts are focused on improving our
+high-voltage device structures, wafer fabrication processes, analog circuit
+designs and system level architecture. By these efforts, we seek to further
+reduce the costs of our products, and improve the cost effectiveness and enhance
+the functionality of our customers' power supplies. We have assembled a
+multidisciplined team of highly skilled engineers to meet our research and
+development goals. These engineers bring expertise in high-voltage structure and
+process technology, analog design and power supply systems architecture.
+
+     In 2000, 1999 and 1998, we spent $12.5 million, $10.8 million and $7.2
+million, respectively, on research and development efforts. We expect to
+continue to invest substantial funds in research and development activities. The
+development of high-voltage analog ICs is highly complex. We cannot guarantee
+that we will develop and introduce new products in a timely and cost-effective
+manner or that our development efforts will successfully permit our products to
+meet changing market demands.
+
+Intellectual Property and Other Proprietary Rights
+
+     We use a combination of patents, trademarks, copyrights, trade secrets and
+confidentiality procedures to protect our intellectual property rights. We hold
+29 U.S. patents and have generally filed for or received foreign patent
+protection on these patents resulting in 56 foreign patents to date. The U.S.
+patents have expiration dates ranging from 2006 to 2019. Eight of the U.S.
+patents are related to the device structure of the high-voltage transistor, ten
+are circuit patents that have been used in our products and three are circuit
+patents that provide the foundation for our TOPSwitch products. Two of the U.S.
+patents cover specific system applications using TOPSwitch. Additionally, we
+have six new circuit patents, which we believe will provide a basis for our new
+and future products. We are currently pursuing additional U.S. patent
+applications relating to improvements and extensions of our products. We cannot
+guarantee that our pending United States or foreign patent applications or any
+future United States or foreign patent applications will be approved, that any
+issued patents will protect our intellectual property or will not be challenged
+by third parties, or that the patents of others will not have an adverse effect
+on our ability to do business. Furthermore, we cannot guarantee that others will
+not independently develop similar or competing technology or design around any
+of our patents. We also hold 14 trademarks, five in the U.S., two in California,
+two in Taiwan, one in Korea, one in Hong Kong and three in Japan.
+
+     We regard as proprietary certain equipment, processes, information and
+knowledge that we have developed and used in the design and manufacture of our
+products. Our trade secrets include a proprietary high volume production process
+that produces our patented high-voltage ICs. We attempt to protect our trade
+secrets and other proprietary information through non-disclosure agreements,
+proprietary information agreements with employees and consultants and other
+security measures. Despite these efforts, we cannot guarantee that others will
+not gain access to our trade secrets, or that we can meaningfully protect our
+intellectual property. In addition, effective trade secret protection may be
+unavailable or limited in certain foreign countries. Although we intend to
+protect our rights vigorously, we cannot assure that such measures will be
+completely successful.
+
+     We have granted a perpetual non-transferable license to Matsushita to use
+our semiconductor patents and other intellectual property for our current
+high-voltage technology, including our TOPSwitch technology and improvements on
+the existing technology, which allows Matsushita to manufacture and design
+products for internal use and for sale or other distribution to Japanese
+companies and to subsidiaries of Japanese companies in Asia. To the extent the
+products they manufacture and design are not based on the TOPSwitch technology,
+Matsushita may make sales or other distribution to Asian companies in Asia.
+Matsushita has granted us perpetual cross licenses to the technology developed
+by them under their license rights. We have agreed not to license the technology
+licensed to Matsushita to other Japanese companies or their subsidiaries prior
+to July 2005. In exchange for its license rights, Matsushita has paid and will
+continue to pay to us licensing fees for a fixed period and has paid or will pay
+royalties on products using the licensed technology during fixed periods.
+
+     We have also granted a perpetual, non-transferable license to AT&T
+Microelectronics to use certain of our IC processes and device technologies in
+the products AT&T sells. In addition, pursuant to an agreement with
+
+                                       11
+<PAGE>
+
+MagneTek, Inc., we have granted MagneTek an exclusive, perpetual royalty-free
+license to manufacture lighting products that incorporate certain of our
+technology.
+
+Manufacturing
+
+     We contract with Matsushita and OKI to manufacture our wafers in foundries
+located in Japan. Our semiconductor products are assembled and packaged by
+independent subcontractors in China, Malaysia and the Philippines. We perform
+testing, finishing and shipping at our facility in San Jose, California. This
+fabless manufacturing model enables us to focus on our engineering and design
+strengths, minimize fixed costs on capital expenditures, and still have access
+to high-volume manufacturing capacity. Our products do not require leading edge
+process geometries for them to be cost-effective, and thus we can use Matsushita
+and OKI's older, low-cost facilities for wafer manufacturing. We use a
+proprietary and sensitive implant process and must interact closely with
+Matsushita and OKI to achieve satisfactory yields. Although we generally utilize
+standard IC packages for assembly, some materials and aspects of assembly are
+specific to our products. We require our manufacturers to use a high-voltage
+molding compound that is difficult to process and is available from only one
+supplier. This compound and its required processes, together with the other
+non-standard materials and processes needed to assemble our products, require a
+more exacting level of process control than normally required for standard
+packages. As a result we must be involved with our contractors on an active
+engineering basis to maintain and improve the process. We have developed process
+monitoring equipment to support this effort and must provide adequate
+engineering resources to provide similar support in the future.
+
+     Our wafer supply agreements with Matsushita and OKI expire in June 2005 and
+September 2003, respectively. Under the terms of our agreement with Matsushita,
+we establish minimum annual and monthly purchase and sale commitments annually
+with the mutual agreement of Matsushita. We also establish pricing by good faith
+agreement, subject to our right to most favored pricing. Under the terms of the
+OKI agreement, OKI has agreed to reserve a specified amount of production
+capacity and to sell wafers to us at fixed prices. Our agreements with both
+Matsushita and OKI provide for the purchase of wafers in Japanese yen.
+
+     We cannot assure you that we will be able to reach an agreement with either
+Matsushita or OKI to extend the term of their respective wafer supply
+agreements. Failure to reach, in a timely fashion, an extension of either
+agreement or to enter into a wafer supply arrangement with another manufacturer
+could result in material disruptions in supply. Contractual provisions limit the
+conditions under which we can enter into such arrangements with other Japanese
+manufacturers or their subsidiaries during the term of the agreement with
+Matsushita. In the event of a supply disruption with OKI or Matsushita, if we
+were unable to quickly qualify alternative manufacturing sources for existing or
+new products or if these sources were unable to produce wafers with acceptable
+manufacturing yields, our operating results would suffer.
+
+     We typically receive shipments from Matsushita or OKI approximately 8 to 10
+weeks after placing orders, and lead times for new products can be substantially
+longer. To provide sufficient time for assembly, testing and finishing, we
+typically need to receive wafers from Matsushita and OKI 4 to 6 weeks before the
+desired ship date to our customers. As a result of these factors and the fact
+that customers' orders can be made with little advance notice, we have only a
+limited ability to react to fluctuations in demand for our products. This could
+cause us to have excess or a shortage of inventory of a particular product. From
+time to time in the past we have been unable to fully satisfy customer requests
+as a result of these factors. Any significant disruptions in deliveries would
+materially adversely affect our business and operating results. We carry a
+substantial amount of inventory of tested wafers to help offset these factors to
+better serve our markets and meet customer demand.
+
+Competition
+
+     The high-voltage power supply industry is intensely competitive and
+characterized by extreme price sensitivity. Accordingly, the most significant
+competitive factor in the target markets for our products is cost effectiveness.
+Our products face competition from alternative technologies, including
+traditional linear transformers and discrete switcher power supplies. We believe
+that at current pricing, our families of high-voltage power conversion ICs offer
+favorable cost-performance benefits compared to linear and discrete switcher
+supplies in many high-volume applications. However, there has been sizeable
+overcapacity of discrete components, which
+
+                                       12
+<PAGE>
+
+resulted in significant price erosion for these products during 1999 and 2000. A
+continuation of the price decline of discrete components, such as high-voltage
+Bipolar and MOSFET transistors and PWM controller ICs, could adversely affect
+the cost effectiveness of the TOPSwitch products. Also, older alternative
+technologies like linear transformers are more cost-effective than discrete
+switchers and integrated switchers that use our ICs in certain power ranges for
+certain applications. If power requirements for certain applications in which
+our products are currently utilized, such as battery chargers for cellular
+telephones, drop below certain power levels, these older alternative
+technologies can be used more cost effectively than switchers. Our TinySwitch IC
+family, introduced in September 1998, was specifically designed to enhance the
+cost effectiveness of our integrated switcher solutions in the low power range.
+However, we cannot guarantee that our efforts in this area will be successful.
+
+     Recently, our TOPSwitch product families have begun to meet increased
+competition from hybrid and single high-voltage ICs similar to TOPSwitch. These
+competing products are being developed or have been developed and are being
+produced by companies such as ON Semiconductor, STMicroelectronics, Fairchild
+Semiconductor and Sanken Electric Company. We expect competition to increase as
+companies like these see the success we have had in converting older
+technologies to the integrated solutions enabled by our product offerings. To
+the extent these competitors' products are more cost effective than our
+products, our business, financial condition and operating results could be
+materially adversely affected. Many of our emerging competitors, including
+Motorola, STMicroelectronics, Samsung and Sanken, have significantly greater
+financial, technical, manufacturing and marketing resources than do we. In the
+context of a market where a high-voltage IC is designed into a customer's
+product and the provider of such ICs is therefore the sole source of the IC for
+that product, greater manufacturing resources may be a significant factor in the
+customer's choice of the IC because of the customer's perception of greater
+certainty in its source of supply.
+
+     Our ability to compete in our target markets also depends on such factors
+as:
+
+     .    timing and success of new product introductions by us and our
+          competitors;
+
+     .    the pace at which our customers incorporate our products into their
+          end user products;
+
+     .    availability of wafer fabrication and finished good manufacturing
+          capability;
+
+     .    availability of adequate sources of raw materials;
+
+     .    protection of our products by effective utilization of intellectual
+          property laws; and
+
+     .    general economic conditions.
+
+     We cannot assure you that our products will continue to compete favorably
+or that we will be successful in the face of increasing competition from new
+products and enhancements introduced by existing competitors or new companies
+entering this market. Our failure to compete successfully in the high-voltage
+power supply business would materially adversely affect our business, financial
+condition and operating results.
+
+Employees
+
+     As of December 31, 2000, we employed 237 full time personnel, consisting of
+94 in manufacturing, 58 in research and development, 30 in applications support,
+30 in sales and marketing and 25 in finance and administration.
+
+                                       13
+<PAGE>
+
+Executive Officers of Power Integrations
+
+     As of February 28, 2001, our executive officers, which are elected by and
+serve at the discretion of the board of directors, were as follows:
+
+<TABLE>
+<CAPTION>
+Name                          Position With Power Integrations                                      Age
+--------------------------    ------------------------------------------------------------      --------
+<S>                           <C>                                                               <C>
+Howard F. Earhart             Chairman of the Board, President and Chief Executive Officer          61
+Balu Balakrishnan             Vice President, Engineering and Strategic Marketing                   46
+Roderick D. Davies            Vice President, Operations                                            50
+Joyce Engberg                 Vice President, Information Technology                                51
+Richard S. Fassler            Vice President, Marketing                                             49
+Robert J. Lelieur             Acting Vice President, Finance and Chief Financial Officer            58
+Vladimir Rumennik             Vice President, Technology Development                                55
+Daniel M. Selleck             Vice President, Worldwide Sales                                       54
+Clifford J. Walker            Vice President, Corporate Development                                 49
+Alan D. Bickell(1)(2)         Director                                                              64
+Nicholas E. Brathwaite(2)     Director                                                              42
+R. Scott Brown(1)             Director                                                              59
+E. Floyd Kvamme(1)(2)         Director                                                              63
+Steven J. Sharp               Director                                                              59
+</TABLE>
+
+_________________
+
+(1)  Member of the compensation committee
+
+(2)  Member of the audit committee
+
+     Howard F. Earhart has served as our president, chief executive officer and
+as a director since January 1995. Mr. Earhart brings more than 30 years of
+executive management experience to Power Integrations. His management experience
+includes photographic film products at Eastman Kodak and consumer products at
+Memorex Corporation where he was president of the Consumer Products Group. Mr.
+Earhart also served as the CEO of Lin Data Corp. and Information Magnetics
+Corporation; both companies manufacture semiconductor-based components for the
+disk drive industry. He holds a B.S. in Chemical Engineering from Clarkson
+University.
+
+     Balu Balakrishnan has served as our vice president, engineering and
+strategic marketing since September 1997. From September 1994 to September 1997,
+Mr. Balakrishnan served as our vice president, engineering and marketing. Mr.
+Balakrishnan served as our vice president, design engineering from April 1989 to
+September 1994.
+
+     Roderick D. Davies has served as our vice president, operations since
+August 1999. In the previous eight years Mr. Davies held various positions,
+including vice president of the business unit management, and marketing and
+operations positions at International Rectifier, a worldwide supplier of power
+semiconductors used for power conversion.
+
+     Joyce Engberg has served as our vice president, information technology
+since February 1999. From January 1996 to January 1999, Ms. Engberg served as
+chief information officer of Spectrian, a manufacturer of RF power amplifiers.
+From January 1993 to January 1996, Ms. Engberg served as director of technical
+services of Consilium, a software company.
+
+                                       14
+<PAGE>
+
+     Richard S. Fassler has served as our vice president, marketing since
+January 2000. From 1986 to 2000, Mr. Fassler held various positions, most
+recently as the vice president of sales and marketing at IXYS Corporation, a
+designer and developer of power semiconductors.
+
+     Robert J. Lelieur has served as our acting vice president, finance and
+chief financial officer since September 2000. From September 1997 to September
+2000, Mr. Lelieur served as our director of finance. From July 1990 to September
+1997, Mr. Lelieur held various senior level financial positions at Advanced
+Computer Communications, a developer and manufacturer of inter-networking
+software products, and National Insurance Group, a high-tech developer of risk
+management services.
+
+     Vladimir Rumennik has served as our vice president, technology development
+since April 1991. From February 1990 to March 1991, Mr. Rumennik was our
+director of technology development. Prior to January 1990, Mr. Rumennik was a
+manager at Signetics, a semiconductor company and a subsidiary of Philips
+Semiconductor.
+
+     Daniel M. Selleck has served as our vice president, worldwide sales since
+May 1993. From February 1984 to May 1993, Mr. Selleck held various sales
+management positions with Philips Semiconductor including European regional
+sales manager and western area sales manager in the United States.
+
+     Clifford J. Walker has served as our vice president, corporate development
+since June 1995. From September 1994 to June 1995, Mr. Walker served as vice
+president of Reach Software, a software company. From December 1993 to September
+1994, Mr. Walker served as president of Morgan Walker, a consulting company.
+
+     Alan D. Bickell has served as a member of the board of directors since
+April 1999. Mr. Bickell retired in 1996 after more than 30 years with Hewlett
+Packard, serving as a corporate senior vice president and managing director of
+geographic operations since 1992.
+
+     Nicholas E. Brathwaite has served as a member of the board of directors
+since January 2000. Mr. Brathwaite currently serves as senior vice president and
+chief technology officer for Flextronics International, a provider of
+engineering, advanced electronics manufacturing and logistical services, and has
+held various engineering management positions with Flextronics since 1995. From
+1989 to 1995, Mr. Brathwaite held various management positions at nChip, a
+multi-chip module company.
+
+     R. Scott Brown has served as member of the board of directors since July
+1999. From 1985 to May 1999, Mr. Brown served as senior vice president of
+worldwide sales and support for Xilinx, Inc., a designer and developer of
+complete programmable logic solutions for use by electronic equipment
+manufacturers.
+
+     E. Floyd Kvamme has served as a member of the board of directors since
+September 1989. Mr. Kvamme has been a general partner of Kleiner Perkins
+Caufield & Byers, a venture capital company, since 1984. Mr. Kvamme also serves
+on the boards of Brio Technology, Harmonic Inc., National Semiconductor, Photon
+Dynamics and several private companies.
+
+     Steven J. Sharp is one of our founders and has served as a member of the
+board of directors since our inception. Mr. Sharp has served as president, chief
+executive officer and chairman of the board of TriQuint Semiconductor, a
+manufacturer of gallium arsenide integrated circuits, since September 1991.

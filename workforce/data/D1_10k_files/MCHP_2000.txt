@@ -1,0 +1,737 @@
+ITEM 1. BUSINESS
+
+     Microchip Technology Incorporated was incorporated in Delaware in 1989. In
+this Form 10-K, "we," "us," and "our" each refers to Microchip Technology
+Incorporated and its subsidiaries. Our executive offices are located at 2355
+West Chandler Boulevard, Chandler, Arizona 85224-6199 and our telephone number
+is (480) 786-7200. Our website address is microchip.com. The information on our
+website is NOT incorporated into this Form 10-K.
+
+     We develop and manufacture specialized semiconductor products used by our
+customers for a wide variety of embedded control applications. Our product
+portfolio comprises microcontrollers; application-specific standard products,
+referred to as ASSPs; and related mixed-signal and memory products. We market
+our products to the consumer, automotive, office automation, communications and
+industrial markets. We provide highly cost-effective embedded control and
+believe that our PIC(R) product family is a price/performance leader in the
+worldwide microcontroller market. Our embedded control products also offer the
+advantages of small size, low voltage operation and ease of development,
+enabling timely and cost-effective product integration by our customers. Our
+ASSP products include a variety of specialized integrated circuits, including
+our family of KEELOQ(R) security products for wireless communications. Our
+mixed-signal products consist of a variety of standalone analog devices used
+primarily in embedded control systems to convert or buffer input and output
+signals to or from a microcontroller. And, our memory products are primarily
+comprised of serial EEPROMs which are used primarily to provide non-volatile
+memory storage in embedded control systems.
+
+     Risks and uncertainties that may affect our future operating results are
+set forth throughout the following discussion of our business. Additional risk
+factors that may affect our future operating results are discussed in "Item 7 -
+Management's Discussion and Analysis of Financial Condition and Results of
+Operation," at page 13.
+
+     THIS FORM 10-K CONTAINS CERTAIN FORWARD-LOOKING STATEMENTS THAT INVOLVE
+RISKS AND UNCERTAINTIES, INCLUDING STATEMENTS REGARDING OUR STRATEGY, FINANCIAL
+PERFORMANCE AND REVENUE SOURCES. OUR ACTUAL RESULTS COULD DIFFER MATERIALLY FROM
+THE RESULTS ANTICIPATED IN THESE FORWARD-LOOKING STATEMENTS AS A RESULT OF
+CERTAIN FACTORS INCLUDING THOSE SET FORTH UNDER "ITEM 7 - MANAGEMENT'S
+DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS,"
+BEGINNING AT PAGE 13 , AND ELSEWHERE IN THIS FORM 10-K. ALTHOUGH WE BELIEVE THAT
+THE EXPECTATIONS REFLECTED IN THE FORWARD-LOOKING STATEMENTS ARE REASONABLE, WE
+CANNOT GUARANTEE FUTURE RESULTS, LEVELS OF ACTIVITY, PERFORMANCE OR
+ACHIEVEMENTS. YOU SHOULD NOT PLACE UNDUE RELIANCE ON THESE FORWARD-LOOKING
+STATEMENTS.
+
+INDUSTRY BACKGROUND
+
+     Competitive pressures require manufacturers to expand product functionality
+and provide differentiation while maintaining or reducing cost. To address these
+requirements, manufacturers use integrated circuit-based embedded control
+systems that provide an integrated solution for application-specific control
+requirements. Embedded control systems enable manufacturers to differentiate
+their products, replace less efficient electromechanical control devices, add
+product functionality and significantly reduce product costs. In addition,
+embedded control systems facilitate the emergence of complete new classes of
+products. Embedded control systems typically incorporate a microcontroller as
+the principal active, and sometimes sole, component.
+
+     A microcontroller is a self-contained computer-on-a-chip consisting of a
+central processing unit, non-volatile program memory, random access memory for
+data storage and various input/output capabilities. In addition to the
+microcontroller, a complete embedded control system incorporates
+application-specific software and may include specialized peripheral device
+controllers and external non-volatile memory components, such as EEPROMs to
+store additional program software.
+Embedded control systems enable our customers to:
+
+     *    differentiate their products
+     *    replace less efficient electromechanical control devices
+     *    add product functionality, and
+     *    significantly reduce product cost.
+
+                                       1
+<PAGE>
+Embedded control solutions have been incorporated into thousands of products and
+subassemblies in a wide variety of markets worldwide, including:
+
+     *    automotive air bag systems
+     *    remote control devices
+     *    handheld tools
+     *    appliances
+     *    portable computers
+     *    cordless and cellular telephones
+     *    motor controls, and
+     *    security systems.
+
+     The increasing demand for embedded control has made the market for
+microcontrollers one of the largest segments of the semiconductor market.
+Microcontrollers are currently available in 4-bit through 32-bit architectures.
+Although 4-bit microcontrollers are relatively inexpensive, typically costing
+under $1.00 each, they generally lack the minimum performance and features
+required by today's design engineers for product differentiation and are
+typically used only to produce basic functionality in products. While 16- and
+32-bit architectures provide very high performance, they are prohibitively
+expensive for most high-volume embedded control applications, typically costing
+more than $4.00 each. As a result, manufacturers of competitive, high-volume
+products have increasingly found 8-bit microcontrollers, that typically cost
+$1.00 to $8.00 each, to be the most cost-effective embedded control solution.
+For example, a typical new automobile may include one 32-bit microcontroller for
+engine control, three 16-bit microcontrollers for transmission control, audio
+systems and anti-lock braking, and up to 50 8-bit microcontrollers to provide
+other embedded control functions, such as door locking, automatic windows, sun
+roof, adjustable seats, electric mirrors, air bags, fuel pump, speedometer, and
+the security and climate control systems.
+
+     Most microcontrollers available today are ROM-based and must be programmed
+by the semiconductor supplier during manufacturing, resulting in six-to-20 week
+lead times for delivery of such microcontrollers. In addition to delayed product
+introduction, these long lead times can result in potential inventory
+obsolescence and factory shutdowns when changes to the firmware are required. To
+address time-to-market constraints, some suppliers have made EPROM, EEPROM, or
+Flash Memory-based programmable microcontrollers available for prototyping and
+preproduction runs. However, these microcontrollers have been relatively
+expensive, and manufacturers have still been required to send program code to
+the semiconductor factory for ROM programming as product changes are made. As a
+result, the long lead times for production volume microcontrollers have not been
+significantly reduced by traditional approaches.
+
+OUR PRODUCTS
+
+     Our strategic focus is on embedded control products, including
+microcontrollers, ASSPs, related mixed-signal and memory products, and
+application development systems.
+
+     MICROCONTROLLERS
+
+     We offer a broad family of microcontroller products featuring a unique,
+proprietary architecture marketed under the PIC(R) brand name. We have shipped
+more than one billion PIC(R) microcontrollers to customers worldwide since their
+introduction in 1990. Our PIC(R) products are designed for applications
+requiring high performance and low cost. They feature a variety of memory
+configurations, low voltage and power, small footprint and ease of use. We
+believe this product family is currently a price/performance leader in the
+overall microcontroller marketplace. Our performance results from an exclusive
+product architecture which features dual data and instruction pathways, referred
+to as a Harvard dual-bus architecture; a reduced instruction set, referred to as
+RISC; and variable length instructions; all of which provide significant speed
+advantages over the alternative single-bus, CISC architectures. Prices for our
+microcontroller products currently range from approximately $0.49 to $10.00 per
+unit.
+
+     Our original market focus was in the low-cost segment of the 8-bit
+microcontroller marketplace. With our baseline products, we built our current
+market position as the leading worldwide supplier of field programmable
+microcontrollers. Over the past five years, we have introduced more than 120 new
+microcontrollers targeted at the baseline, mid-range and high-end segments of
+the traditional 8-bit microcontroller marketplace. Additionally, with our
+scalable product architecture, we have successfully targeted both the lower end
+of the 16-bit microcontroller market as well as the higher end of the large
+4-bit microcontroller marketplace, significantly enlarging our addressable
+market. We believe that all of the additional market segments we have entered
+represent significant opportunities for future sales growth.
+
+                                       2
+<PAGE>
+     We have used our manufacturing experience and design and process technology
+to bring additional enhancements and manufacturing efficiencies to the
+development and production of our PIC(R) family of microcontroller products. Our
+extensive experience base has enabled us to develop our advanced, low cost user
+programmability feature by incorporating non-volatile memory, such as EPROM,
+EEPROM and Flash Memory, into the microcontroller in addition to masked ROM
+program memory being included into the microcontroller.
+
+     DEVELOPMENT SYSTEMS
+
+     We offer a comprehensive set of low cost and easy-to-learn application
+development tools. These tools enable system designers to quickly and easily
+program a PIC(R) microcontroller for specific applications and are a key factor
+for obtaining design wins. Our family of development tools operates in the
+standard Windows(R) environment on standard PC hardware. Entry-level systems,
+which include an assembler and programmer hardware, are priced at less than
+$200. A fully configured system, which also provides in-circuit emulation
+hardware, performance simulators and software debuggers, is priced at
+approximately $2,000. Customers moving from entry-level designs to those
+requiring real-time emulation are able to preserve their investment in software
+tools as they migrate to future PIC(R) devices since all the product families
+are assembly- and C- language compatible.
+
+     Many independent companies also develop and market application development
+tools and systems that support our standard microcontroller product
+architecture. We believe that familiarity with and adoption of our, and
+third-party, development systems by an increasing number of product designers
+will be an important factor in the future selection of our embedded control
+products. These development tools allow design engineers to develop thousands of
+application-specific products from our standard microcontrollers. Currently,
+there are more than 120 third-party tool suppliers worldwide whose products
+support the Company's proprietary microcontroller architecture.
+
+     ASSPS
+
+     Our application-specific standard products, referred to as ASSPs, are
+specialized products designed to perform specific end-user applications as
+opposed to our other products which are more general purpose in nature. Our ASSP
+device families currently include the KEELOQ(R) family of secure data
+transmission products, as well as other specialized integrated circuit devices.
+KEELOQ(R) security products are designed for low cost, secure, uni-directional
+communications and verification purposes. Applications include:
+
+     *    automotive remote keyless entry systems
+     *    automotive immobilizer systems
+     *    automatic garage and gate openers, and
+     *    smart cards.
+
+     MIXED-SIGNAL PRODUCTS
+
+     Our mixed-signal products consist of a growing portfolio of standalone
+analog devices that are used primarily in embedded control systems to convert or
+buffer input and output signals to or from a microcontroller. Our standalone
+analog product family was introduced to the market at the beginning of fiscal
+year 2000. As of the end of fiscal 2000, our mixed-signal portfolio consists of
+more than 15 standalone analog products, and those devices are being shipped to
+more than 1,000 end customers.
+
+     MEMORY PRODUCTS
+
+     Our memory products consist primarily of serial electrically erasable
+programmable read only memory, referred to as EEPROMs. We sell these devices
+primarily into the embedded control market, and we are one of the largest
+suppliers of such devices worldwide. EEPROM products are used for non-volatile
+program and data storage in systems where such data must be modified frequently.
+Serial EEPROMs have a very low I/O pin requirement, permitting production of
+very small devices. As a result, Serial EEPROMs are widely used to supply
+non-volatile memory in space-sensitive applications such as portable computers,
+cellular and cordless telephones, pagers and remote control devices.
+
+                                       3
+<PAGE>
+     Within this market, we have emphasized providing Serial EEPROMs to
+customers that require features such as:
+
+     *    highly compact packaging
+     *    low operating voltage
+     *    reduced power consumption
+     *    extended data retention, and
+     *    high endurance.
+
+     We address customer requirements by offering products with extremely small
+package sizes and very low operating voltage for both read and write functions
+(1.8 volts in contrast with the industry standard of 3.3 volts), together with a
+wide operating voltage range (1.8 to 5.5 volts). High performance circuitry and
+microcode are also available to reduce power consumption when a device is not in
+use, while permitting immediate operating capability when required. The products
+also feature long data retention and high erase/write endurance.
+
+     We currently offer a complete Serial EEPROM product family that meets three
+principal industry bus interface standards and is available in most standard
+density, configuration and packaging alternatives. Our Smart Serials(TM) line of
+specialized Serial EEPROMs with user-configurable architecture and other
+advanced features targets applications such as cellular telephones and data
+communications.
+
+MANUFACTURING
+
+     The ownership of our manufacturing resources is an important component of
+our business strategy, enabling us to maintain a high level of manufacturing
+control and to be one of the lowest cost producers in the embedded control
+industry. By owning our wafer fabrication and the majority of our test
+operations, and by employing proprietary statistical process control techniques,
+we have been able to achieve high production yields. Direct control over
+manufacturing resources allows us to shorten our design and production cycles.
+This control also allows us to capture the manufacturing and a portion of the
+assembly and testing profit margin. Wafer fabrication and wafer test facilities
+are located in Chandler, Arizona, which we refer to as Fab 1, and Tempe,
+Arizona, which we refer to as Fab 2. We perform product packaging and testing at
+our facilities located near Bangkok, Thailand. We also use third-party assembly
+and test contractors in several Asian countries.
+
+     Wafers are produced in Class 10 fabrication modules in Fab 1 and Fab 2. Fab
+1 currently contains approximately 27,000 square feet of usable clean room
+space, while Fab 2 currently contains approximately 50,000 square feet of usable
+clean room space. Fab 1 currently produces 5- and 6-inch wafers, while Fab 2
+currently produces 6-inch and 8-inch wafers. Wafer sort is performed in an 8,000
+square foot, Class 10,000 clean room, equipped with automated wafer handlers and
+test equipment. Fab 1 and Fab 2 are managed by the same management team and
+utilize similar production techniques.
+
+     During fiscal 2001, we intend to cease 5-inch wafer production, and,
+thereafter, Fab 1 will produce only 6-inch wafers. As part of our overall
+manufacturing rationalization plans, Fab 2 will produce only 8-inch wafers. By
+the end of fiscal 2001, 8-inch wafer production will represent approximately 78%
+of our total wafer fab capacity.
+
+     In support of our longer-term growth objectives, we recently signed an
+agreement to acquire a semiconductor manufacturing complex in Puyallup,
+Washington. We are currently conducting our due diligence investigation. Closing
+on the purchase is expected to occur by July 31, 2000. The Puyallup facility
+contains approximately 100,000 square feet of clean room space. We currently
+intend to commence installation of wafer processing equipment in October 2000,
+and we currently expect to commence volume production in August 2001. Initially,
+we will produce 8-inch wafers using our 0.7-micron and 0.5-micron process
+technologies.
+
+     We continue to transition products to smaller geometries and to larger
+wafer sizes to reduce future manufacturing costs. We also continue to increase
+our manufacturing capacity for 8-inch wafers and to transition products to our
+0.7-micron process. Other companies in the industry have experienced
+difficulties in transitioning to larger wafers and to smaller geometries,
+resulting in reduced manufacturing yields or delays in product deliveries. We
+believe that our transition to smaller geometries and to larger wafers is
+important for us to remain competitive. Our future operating results could be
+reduced if the transition is substantially delayed or inefficiently implemented.
+
+     THE FOREGOING STATEMENTS RELATED TO THE CESSATION OF 5-INCH WAFER
+PRODUCTION, CAPACITY UTILIZATION OF FAB 1 AND FAB 2, 8-INCH WAFER PRODUCTION BY
+THE END OF THE FISCAL 2001, THE ANTICIPATED CLOSING DATE OF THE PUYALLUP
+TRANSACTION, AND THE TIMING OF EQUIPMENT INSTALLATION AND VOLUME PRODUCTION AT
+THE PUYALLUP FACILITY ARE FORWARD LOOKING STATEMENTS. ACTUAL RESULTS COULD
+
+                                       4
+<PAGE>
+DIFFER MATERIALLY BECAUSE OF THE FOLLOWING FACTORS, AMONG OTHERS: INCREASED OR
+DECREASED CUSTOMER DEMAND FOR OUR PRODUCTS; THE AVAILABILITY OF EQUIPMENT AND
+OTHER SUPPLIES; SUPPLY DISRUPTION; CHANGES IN PRODUCT MIX; COMPETITIVE PRESSURES
+ON PRICES; AND OTHER ECONOMIC CONDITIONS.
+
+     We currently employ proprietary design and manufacturing processes in
+developing our microcontroller and memory products. We believe our processes
+afford us both cost-effective designs in existing and derivative products and
+greater functionality in new product designs. While many of our competitors
+develop and optimize separate processes for their logic and memory product
+lines, we use a common process technology for both microcontroller and
+non-volatile memory products. This allows us to more fully absorb our process
+research and development costs and to deliver new products to market more
+rapidly. Our engineers utilize advanced CAD tools and software to perform
+circuit design, simulation and layout, and our in-house photomask and wafer
+fabrication facilities enable us to rapidly verify design techniques by
+processing test wafers quickly and efficiently.
+
+     Currently, our Thailand facility tests approximately 90% of the products
+produced in Fab 1 and Fab 2. The 200,000 square foot Thailand test facility
+currently has the capacity to handle up to 120 million units per month. The
+Thailand facility also assembles approximately 45% of the products produced in
+Fab 1 and Fab 2. During fiscal 2001, we intend to add additional assembly and
+test capacity at our Thailand facility in order to allow us to respond to
+customer demand. Several third-party contractors located throughout Asia fulfill
+the balance of our assembly requirements. Final product test and burn-in
+functions are handled by advanced automated equipment.
+
+     THE FOREGOING STATEMENT RELATED TO OUR INTENTION TO ADD ADDITIONAL ASSEMBLY
+AND TEST CAPACITY AT OUR THAILAND FACILITY IS A FORWARD LOOKING STATEMENT.
+ACTUAL RESULTS COULD DIFFER MATERIALLY BECAUSE OF THE FOLLOWING FACTORS, AMONG
+OTHERS: CUSTOMER DEMAND FOR OUR PRODUCTS; DELAYS IN CONSTRUCTION AND
+FACILITIZATION OF THE ADDITIONAL ASSEMBLY AND TEST CAPACITY AT THE THAILAND
+FACILITY; THE AVAILABILITY OF EQUIPMENT AND OTHER SUPPLIES; SUPPLY DISRUPTION;
+LABOR UNREST; CHANGES IN PRODUCT MIX; COMPETITIVE PRESSURES ON PRICES; POLITICAL
+INSTABILITY AND EXPROPRIATION; AND OTHER ECONOMIC CONDITIONS.
+
+     At March 31, 2000, several third-party contractors located throughout Asia
+performed the majority of our assembly operations. Due primarily to cost, yield
+and cycle time considerations, we developed an in-house assembly operation
+during fiscal 2000 and shifted approximately 45% of our assembly operations to
+our Thailand facility. We will continue to depend on third-party contractors for
+the balance of our assembly requirements. Third-party assembly and test
+companies are experiencing high demand and utilization of their current capacity
+which could lead to capacity shortages in the industry.
+
+     THE FOREGOING STATEMENT RELATED TO THE CURRENT CAPACITY OF THIRD-PARTY
+ASSEMBLY AND TEST COMPANIES IS A FORWARD LOOKING STATEMENT. ACTUAL RESULTS COULD
+DIFFER MATERIALLY BECAUSE OF THE FOLLOWING FACTORS, AMONG OTHERS: AVAILABILITY
+OF SUFFICIENT CAPACITY OF THIRD-PARTIES; SUPPLY DISRUPTION; LABOR UNREST;
+CHANGES IN PRODUCT MIX; COMPETITIVE PRESSURES ON PRICES; POLITICAL INSTABILITY
+AND EXPROPRIATION; AND OTHER ECONOMIC CONDITIONS.
+
+     Our reliance on third parties involves some reduction in our level of
+control over the assembly and test portion of our business. While we review the
+quality, delivery and cost performance of these third-party contractors, our
+future operating results could suffer if any third-party contractor is unable to
+maintain assembly and test yields and costs at approximately their current
+levels. See also "Item 7 - Management's Discussion and Analysis of Financial
+Condition and Results of Operations - Gross Profit," at page 14.
+
+     Our reliance on foreign operations and maintenance of substantially all of
+our finished goods in inventory in foreign locations exposes us to foreign
+political and economic risks, including:
+
+     *    political, social and economic instability
+     *    trade restrictions and changes in tariffs
+     *    import and export license requirements and restrictions
+     *    difficulties in staffing and managing international operations
+     *    disruptions in international transport or delivery
+     *    fluctuations in currency exchange rates
+     *    difficulties in collecting receivables, and
+     *    potentially adverse tax consequences.
+
+     To date, we have not experienced any significant interruptions in our
+foreign business operations. If any of these risks materialize, our sales could
+decrease and our operations performance could suffer.
+
+                                       5
+<PAGE>
+     Due to the high fixed costs inherent in semiconductor manufacturing,
+increased manufacturing yields can have significant positive effects on gross
+profit and overall operating results. During fiscal 2000, we continued to focus
+on manufacturing productivity, and maintained average wafer fab line yields in
+excess of 90%. Our manufacturing yields are primarily driven by a comprehensive
+implementation of statistical process control, extensive employee training and
+selective upgrading of our manufacturing facilities and equipment. Maintenance
+of manufacturing productivity and yields are important factors in the
+achievement of our operating results. The manufacture and assembly of integrated
+circuits, particularly non-volatile, erasable CMOS memory and logic devices,
+such as those that we produce, are complex processes. These processes are
+sensitive to a wide variety of factors, including the level of contaminants in
+the manufacturing environment, impurities in the materials used and the
+performance of our fabrication personnel and equipment. As is typical in the
+semiconductor industry, we have from time to time experienced lower than
+anticipated manufacturing yields. Our operating results will suffer if we are
+unable to maintain yields at approximately the current levels.
+
+     Our semiconductor manufacturing operations require raw materials and
+equipment that must meet exacting standards. We generally have more than one
+source for these supplies, but there are only a limited number of suppliers
+capable of delivering various raw materials and equipment that meet our
+standards. In addition, the raw materials and equipment necessary for our
+business could become more difficult to obtain as worldwide use of
+semiconductors increases. We have faced supply shortages from time to time in
+the past, and on occasion our suppliers have told us they need more time than
+expected to fill our orders. An interruption of any raw materials or equipment
+sources could harm our business.
+
+RESEARCH AND DEVELOPMENT
+
+     Our current research and development, or R&D, activities focus on the
+design of new microcontroller, memory and mixed-signal products, ASSPs, new
+development systems, and software and application-specific software libraries.
+We are also developing new design and process technology to achieve further cost
+reductions and performance improvements in existing products. As of April 28,
+2000, 335 employees were engaged in research and development. In fiscal 2000,
+our R&D expenses were $45.6 million, as compared to $40.8 million in fiscal 1999
+and $38.4 million in fiscal 1998.
+
+     We are committed to continuing our investment in new and enhanced products,
+including development systems software, and in our design and manufacturing
+process technology. We believe these investments are significant factors in
+maintaining our competitive position. Our future operating results will depend
+to a significant extent on our ability to develop and introduce new products on
+a timely basis which can compete effectively on the basis of price and
+performance and which address customer requirements. The success of new product
+introductions depends on various factors, including:
+
+     *    proper new product selection
+     *    timely completion and introduction of new product designs
+     *    development of support tools and collateral literature that make
+          complex new products easy for engineers to understand and use, and
+     *    market acceptance of our customers' end products.
+
+     Because our products are complex, we have experienced delays from time to
+time in completing development of new products. In addition, our new products
+may not receive or maintain substantial market acceptance. We may be unable to
+design, develop and introduce competitive products on a timely basis, which
+could reduce our future operating results.
+
+     Our future success also depends upon our ability to develop and implement
+new design and process technologies. Semiconductor design and process
+technologies are subject to rapid technological change and require large
+research and development expenditures. Other companies in the industry have
+experienced difficulty in effecting transitions to smaller geometry processes
+and to larger wafers and, consequently, have suffered reduced manufacturing
+yields or delays in product deliveries. We believe that our transition to
+smaller geometries and to larger wafers is important for us to remain
+competitive. Our future operating results could be reduced if the transition is
+substantially delayed or inefficiently implemented.
+
+                                       6
+<PAGE>
+SALES AND DISTRIBUTION
+
+     We market our products worldwide through a direct sales organization and
+through distributors. In fiscal 2000, we derived 63% of our net sales from sales
+through distributors and 37% of our net sales from direct sales to original
+equipment manufacturers, referred to as OEM, customers.
+
+     Our direct sales force, currently consisting of 241 people, focuses on
+three geographical markets: the Americas, Europe and Asia. We currently maintain
+sales and support centers in major metropolitan areas in North America, Europe
+and Asia. A worldwide network of national and regional distributors augments our
+direct sales force.
+
+     Effective April 1, 2000, we terminated our contractual relationships with
+predominately all manufacturers' representatives in the Americas. We are
+currently adding additional resources to our existing direct sales force
+focusing on the Americas territories. We anticipate that all resources will be
+in place by June 30, 2000. See also the discussion on selling, general and
+administrative costs under "Item 7 - Management's Discussion and Analysis of
+Financial Condition and Results of Operations - Selling, General and
+Administrative," at page 16.
+
+     THE FOREGOING STATEMENTS RELATED TO THE ADDITION OF RESOURCES TO OUR
+AMERICAS' DIRECT SALES FORCE ARE FORWARD LOOKING STATEMENTS. ACTUAL RESULTS
+COULD DIFFER MATERIALLY BECAUSE OF THE FOLLOWING FACTORS, AMONG OTHERS: OUR
+ABILITY TO ATTRACT AND RETAIN QUALIFIED SALES PERSONNEL; AND GENERAL ECONOMIC
+CONDITIONS.
+
+     We believe that a strong technical service presence is essential to the
+continued development of the embedded control market. The majority of our field
+sales engineers, referred to as FSEs, field application engineers, referred to
+as FAEs, and sales management have technical degrees and have been previously
+employed in an engineering environment. We believe that the technical knowledge
+of our sales force is a key competitive advantage in the sale of field
+programmable products. Currently, we have at least one dedicated FAE in every
+sales and support center. The primary mission of our FAE team is to provide
+technical assistance to OEM customers and to conduct periodic training sessions
+for FSEs, manufacturer's representatives and distributor sales teams. The FAEs
+also frequently conduct technical seminars in major cities around the world.
+FAEs also work closely with our distributors and manufacturer's representatives
+to provide technical assistance in end-user support and to assist in the sales
+process.
+
+     As is common in the semiconductor industry, we provide limited price
+protection to our distributors. Under our current policy, distributors receive a
+credit for the difference, at the time of a price reduction, between the price
+they were originally charged for products in inventory and the reduced price
+which we subsequently charge distributors. From time to time, and on a
+case-by-case basis, distributors may also receive credit for specific
+transactions that we approve in advance. We also grant some distributors limited
+rights to return products. We do not recognize net sales and profit on sales to
+distributors that have rights of return and price protection until those
+distributors have resold the products to end-customers.
+
+     Distributors accounted for 63% of our net sales to customers in fiscal
+2000. Our largest distributor accounted for 14% of our total net sales for
+fiscal 2000. Generally, we do not have long-term agreements with our
+distributors and our distributors may terminate their relationship with us with
+little or no advanced notice. The loss of, or a disruption in the operations of,
+one or more of our distributors could reduce our future net sales in a given
+quarter and could result in an increase in inventory returns.
+
+     Foreign sales, primarily in Asia and Europe, represented 68% of our
+consolidated net sales in fiscal 2000, as compared to 69% in fiscal 1999 and 68%
+in fiscal 1998. International sales are predominately billed in U.S. Dollars.
+Although foreign sales are subject to certain government export restrictions, we
+have not experienced any material difficulties as a result of export
+restrictions to date.
+
+BACKLOG
+
+     As of April 28, 2000, our backlog was approximately $212.7 million, as
+compared to $73.8 million as of April 30, 1999. Our backlog includes all
+purchase orders scheduled for delivery within the subsequent 12 months.
+
+     We primarily produce standard products that can be shipped from inventory
+within a short time after we receive an order. Our business and, to a large
+extent, that of the entire semiconductor industry, is characterized by
+short-term orders and shipment schedules. Orders constituting our current
+backlog are subject to changes in delivery schedules, or to cancellation at the
+
+                                       7
+<PAGE>
+option of the purchaser without significant penalty. Thus, while backlog is
+useful for scheduling production, backlog as of any particular date may not be a
+reliable measure of sales for any future period. Orders received in a quarter
+for shipment in that quarter, which we refer to as turns orders, have become an
+increasingly important component of our quarterly operating results. Turns
+orders are more fully discussed in "Item 7 - Management's Discussion and
+Analysis of Financial Condition and Results of Operations - Results of
+Operations - Net Sales," at page 13.
+
+COMPETITION
+
+     The semiconductor industry is intensely competitive and has been
+characterized by price erosion and rapid technological change. We compete with
+major domestic and international semiconductor companies, many of which have
+greater market recognition and greater financial, technical, marketing,
+distribution and other resources than we with which to pursue engineering,
+manufacturing, marketing and distribution of their products. Emerging companies
+may also increase their participation in the market for embedded control
+applications.
+
+     In addition, our ability to compete successfully depends on a number of
+factors both within and outside our control, including:
+
+     *    the quality, performance, reliability, features, ease of use, pricing
+          and diversity of our products
+     *    the quality of our customer services and our ability to address the
+          needs of our customers
+     *    our success in designing and manufacturing new products including
+          those implementing new technologies
+     *    efficiency of production
+     *    adequate sources of raw materials and other supplies at acceptable
+          prices
+     *    the rate at which customers incorporate our products into their own
+          products
+     *    product introductions by our competitors
+     *    the number, nature and success of our competitors in a given market
+     *    general market and economic conditions, and
+     *    protection of our products and processes by effective utilization of
+          intellectual property laws.
+
+     Furthermore, capacity in the semiconductor industry is increasing over time
+and such increased capacity or improved product availability could adversely
+affect our competitive position.
+
+     We currently compete principally on the basis of the technical innovation
+and performance of our embedded control products, including their speed,
+functionality, density, power consumption, reliability and packaging
+alternatives, as well as on price and product availability. We believe that
+other important competitive factors in the embedded control market include ease
+of use, functionality of application development systems and technical service
+and support. We believe that we compete favorably with other companies on all of
+these factors, but we may be unable to compete successfully in the future, which
+could harm our business.
+
+     Historically, average selling prices in the semiconductor industry decrease
+over the life of any particular product. The overall average selling prices of
+our microcontroller products have remained relatively constant, while average
+selling prices of our memory products have, until recently, declined over time.
+We have experienced, and expect to continue to experience, pricing pressure in
+certain microcontroller product lines, due primarily to competitive conditions.
+We have been able to maintain average selling prices by continuing to introduce
+new products with more features and higher prices, thereby offsetting price
+declines in older products. We may be unable to maintain average selling prices
+for our microcontroller or other products as a result of increased pricing
+pressure in the future, which would reduce our operating results.
+
+PATENTS, LICENSES AND TRADEMARKS
+
+     Our success depends in part on our ability to obtain patents, licenses and
+other intellectual property rights covering our products and manufacturing
+processes. As of March 31, 2000, we owned 110 U.S. patents and 35 foreign
+patents, expiring on various dates between 2005 and 2019, and had an additional
+85 U.S. patent applications and 105 foreign patent applications pending. We
+intend to continue to seek patents on our inventions and manufacturing
+processes. The process of seeking patent protection can be long and expensive,
+and patents may not be issued from currently pending or future applications. In
+addition, our existing patents and any new patents that are issued may not be of
+sufficient scope or strength to provide meaningful protection or any commercial
+advantage to us. We may be subject to or may initiate interference proceedings
+in the U.S. Patent and Trademark Office, which can require significant financial
+and management resources. In addition, the laws of certain foreign countries do
+not protect our intellectual property rights to the same extent as the laws of
+
+                                       8
+<PAGE>
+the United States. We believe, however, that our continued success depends
+primarily on such factors as the technological skills and innovative abilities
+of our personnel rather than on our patents.
+
+     We have entered into certain intellectual property licenses and
+cross-licenses with other companies related to semiconductor products and
+manufacturing processes. As is typical in the semiconductor industry, we have
+from time to time received, and may in the future receive, communications
+alleging possible infringement of patents or other intellectual property rights
+of others. We investigate all such notices and respond as we believe is
+appropriate. Based on industry practice, we believe that in most cases we can
+obtain any necessary licenses or other rights on commercially reasonable terms,
+but we cannot assure that licenses would be on acceptable terms, that litigation
+would not ensue or that damages for any past infringement would not be assessed.
+Litigation, which could result in substantial cost to us and diversion of
+management effort, may be necessary to enforce our patents or other intellectual
+property rights, or to defend us against claimed infringement of the rights of
+others. The failure to obtain necessary licenses or other rights, or litigation
+arising out of infringement claims, could harm our business. See also "Item 3 -
+Legal Proceedings," at page 11.
+
+ENVIRONMENTAL REGULATION
+
+     We must comply with many different federal, state and local governmental
+regulations related to the use, storage, discharge and disposal of toxic,
+volatile or otherwise hazardous chemicals used in our manufacturing processes,
+including the Resource Conversation and Recovery Act, the Comprehensive
+Environmental Response, Compensation and Liability Act, the Superfund Amendment
+and Reauthorization Act, the Clean Air Act and the Water Pollution Control Act.
+We believe that we have obtained all of the environmental permits required to
+conduct our business. Although we believe that our activities conform to
+presently applicable environmental regulations, our failure to comply with
+present or future regulations could result in the imposition of fines,
+suspension of production or a cessation of operations. Any regulation could
+require us to acquire costly equipment or to incur other significant expenses to
+comply with environmental regulations. While we have not experienced any
+materially adverse effects on our operations from governmental regulations, any
+failure by us to control the use of our adequately restrict the discharge of
+hazardous substances could subject us to future liabilities. Environmental
+problems may occur that could subject us to future costs or liabilities.
+
+EMPLOYEES
+
+     As of April 28, 2000, we had 2,692 employees worldwide, including 1,923 in
+manufacturing, 335 in research and development, 295 in sales and marketing and
+139 in finance and administration. Approximately 39% of our employees work at
+our Thailand facility. No employees in the U.S. or Thailand are represented by a
+labor organization. We have never had a work stoppage and believe that our
+employee relations are good.
+
+     Our success depends to a significant extent upon the efforts and abilities
+of our senior management, engineering and other personnel. The competition for
+qualified engineering and management personnel is intense. We may be
+unsuccessful in retaining our existing key personnel or in attracting and
+retaining additional key personnel that we require. The loss of the services of
+one or more of our key personnel or the inability to add key personnel could
+harm our business. We have no employment agreements with any member of our
+senior management team.
+
+                                       9
+<PAGE>
+EXECUTIVE OFFICERS
+
+     The following sets forth certain information regarding our executive
+officers as of May 31, 2000:
+
+<TABLE>
+<CAPTION>
+Name                    Age                Position
+----                    ---                --------
+<S>                     <C>    <C>
+Steve Sanghi            44     Chairman of the Board, President and Chief Executive Officer
+Timothy B. Billington   57     Vice President, Manufacturing and Technology Group
+Mitchell R. Little      47     Vice President, Americas Sales
+Gordon W. Parnell       50     Vice President, Chief Financial Officer
+George P. Rigg          60     Vice President, Advanced Microcontroller and Systems Group
+</TABLE>
+
+     Mr. Sanghi has been President since August 1990, CEO since October 1991,
+and Chairman of the Board since October 1993. He has served as a director since
+August 1990. Mr. Sanghi holds an M.S. degree in Electrical and Computer
+Engineering from the University of Massachusetts and a B.S. degree in
+Electronics and Communication from Punjab University, India.
+
+     Mr. Billington has served as Vice President, Manufacturing and Technology
+Group since November 1998. From October 1994 to November 1998, he served as Vice
+President, Manufacturing Operations. Mr. Billington holds a B.S. degree in
+marketing from Abilene Christian University.
+
+     Mr. Little has served as Vice President, Americas Sales since April 1998.
+From November 1995 to April 1998, he served as Vice President, Standard
+Microcontroller and ASSP Division. From September 1993 to November 1995, he
+served as Vice President, Memory Products and ASSP Division. Mr. Little holds a
+BSET from United Electronics Institute.
+
+     Mr. Parnell has served as Vice President and Chief Financial Officer since
+May 2000. He served as Vice President, Controller and Treasurer from April 1993
+to May 2000. Mr. Parnell holds a finance/accounting qualification with the
+Association of Certified Accountants from Edinburgh College, Scotland.
+
+     Mr. Rigg has served as Vice President, Advanced Microcontroller and Systems
+Group since March 1997. From November 1995 to March 1997, he served as Vice
+President, Advanced Microcontroller and Technology Division. From June 1989 to
+November 1995, he served as Vice President, Logic Products Division. Mr. Rigg
+holds a B.S. degree in Physics from Manchester University, England.

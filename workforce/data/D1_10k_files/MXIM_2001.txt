@@ -1,0 +1,867 @@
+ITEM 1. BUSINESS
+
+Maxim Integrated Products, Inc. ("Maxim" or the "Company") designs, develops,
+manufactures, and markets a broad range of linear and mixed-signal integrated
+circuits, commonly referred to as analog circuits. The Company also provides a
+range of high-frequency design processes and capabilities that can be used in
+custom design. The analog market is highly fragmented and characterized by many
+diverse applications, a great number of product variations, and, as to many
+circuit types, relatively long product life cycles. Maxim's objective is to
+develop and market both proprietary and industry-standard analog integrated
+circuits that meet the increasingly stringent quality standards demanded by
+customers. Based on product announcements by its competitors, Maxim believes
+that in the past 18 years it has developed more products for the analog market,
+including proprietary and second-source products, than any of its competitors
+over the same period.
+
+On April 11, 2001, the Company acquired Dallas Semiconductor Corporation. The
+Company issued approximately 41.0 million shares of its common stock in exchange
+for all the outstanding common stock of Dallas Semiconductor. In addition, the
+Company assumed all stock options to purchase Dallas Semiconductor common stock
+for options to purchase approximately 5.9 million shares of the Company's common
+stock. The transaction has been accounted for as a pooling-of-interests.
+Accordingly, unless specifically stated otherwise, all financial data of the
+Company has been restated to include the historical financial data of Dallas
+Semiconductor. See Note 3 "Business Combination" of the Notes to Consolidated
+Financial Statements as set forth in the Company's Annual Report to Stockholders
+for the fiscal year ended June 30, 2001. At the time of the acquisition, Dallas
+Semiconductor's product line consisted of 390 proprietary base products sold to
+over 15,000 customers worldwide. Applications for those products include battery
+management, broadband telecommunications, wireless handsets, cellular base
+stations, networking, servers, data storage, and a wide variety of industrial
+equipment.
+
+The Company is a Delaware corporation that was originally incorporated in
+California in 1983. It is headquartered in Sunnyvale, California. The mailing
+address for the Company's headquarters is 120 San Gabriel Drive, Sunnyvale,
+California 94086, and the Company's telephone number is (408) 737-7600.
+Additional information about the Company is available on the Company's website
+at www.maxim-ic.com.
+
+THE ANALOG INTEGRATED CIRCUIT MARKET
+
+All electronic signals fall into one of two categories, linear or digital.
+Linear (or analog) signals represent real world phenomena, such as temperature,
+pressure, sound, or speed, and are continuously variable over a wide range of
+values. Digital signals represent the "ones" and "zeros" of binary arithmetic
+and are either on or off.
+
+Three general classes of semiconductor products arise from this partitioning of
+signals into linear or digital. There are those, such as memories and
+microprocessors, that operate only in the digital domain. There are linear
+devices such as amplifiers, references, analog multiplexers, and switches
+that operate primarily in the analog domain. Finally, there are mixed-signal
+devices that combine linear and digital functions on the same integrated circuit
+and interface between the analog and
+
+
+                                       4
+<PAGE>   5
+
+digital worlds. Maxim's strategy has been to target both the linear and
+mixed-signal markets, often collectively referred to as the analog market. With
+the acquisition of Dallas Semiconductor, Maxim has expanded its product
+offerings in the mixed signal area, which represented more than 90% of the
+revenues of Dallas Semiconductor during its last three fiscal years. In
+addition, Maxim has added some Dallas Semiconductor products that are
+exclusively or principally digital as well as a significant number of engineers
+skilled in digital design and software development. Although the acquisition has
+not substantially affected Maxim's strong focus on the linear and mixed signal
+market, it has significantly supplemented Maxim's capabilities in the digital
+area in ways that should enable development of new products, mixed signal and
+other, with very sophisticated digital characteristics. Risks associated with
+fulfilling this expectation are discussed in "Item 1., Trends, Risks and
+Uncertainties" below.
+
+The Company believes that, compared to the digital integrated circuit market,
+the analog market has generally been characterized by a wider range of standard
+products used in smaller quantities by a larger number of customers, and in many
+cases, by longer product life cycles and lower capital requirements as a result
+of generally using more mature manufacturing technologies. The Company believes
+that the widespread application of low-cost microprocessor-based systems and of
+digital communication technologies has affected the market for analog integrated
+circuits by increasing the need for interfaces with the analog world.
+
+The analog market is a highly fragmented group of niche markets, serving
+numerous and widely differing applications for instrumentation, industrial
+control, data processing, communications, military, video, and selected medical
+equipment. For each application, different users may have unique requirements
+for circuits with specific resolution, accuracy, linearity, speed, power, and
+signal amplitude capability, which results in a high degree of market
+complexity. Maxim's products can be used in a variety of applications, but serve
+only certain portions of the total analog market.
+
+PRODUCTS AND APPLICATIONS
+
+The Company believes that it addresses the requirements of the market by
+providing competitively priced products that add value to electronic equipment
+with superior quality and reliability.
+
+The Company's research and development programs emphasize development of
+technically innovative proprietary products. In addition, the Company also
+develops second source products used for industry-standard parts. In the
+Company's fiscal year 2001 product introduction year ending July 28, 2001, the
+Company introduced over 500 products compared to over 400 products in the
+Company's fiscal year 2000 product introduction year. The Company's products are
+available with numerous packaging alternatives, including packages for surface
+mount technology.
+
+The following table illustrates the major industries served by the Company and
+typical applications for which the Company's products can be used:
+
+
+
+                                       5
+<PAGE>   6
+<TABLE>
+<CAPTION>
+Industry                                    Typical Application
+-----------                                 -------------------
+<S>                                         <C>
+Communications .....................        Broadband Networks
+                                            Cable Systems
+                                            Cellular Base Stations
+                                            Central Office Switches
+                                            Direct Broadcast TV
+                                            DSL Modems
+                                            Fiber Optics
+                                            Optical Transceivers
+                                            Pagers
+                                            PBXs
+                                            Phones
+                                               o  Cellular/PCS
+                                               o  Cordless
+                                            Satellite Communications
+                                            T1/E1 and T3/E3
+                                            Video Communications
+                                            Wireless Communications
+
+Industrial Control ...................      Control of
+                                               o  Flow
+                                               o  Position
+                                               o  Pressure
+                                               o  Temperature
+                                               o  Velocity
+                                            Robotics
+
+Instrumentation ......................      Automatic Test Equipment
+                                            Analyzers
+                                            Data Recorders
+                                            Measuring Instruments
+                                               o  Electrical
+                                               o  Light
+                                               o  Pressure
+                                               o  Sound
+                                               o  Speed
+                                               o  Temperature
+                                               o  Time
+                                            Testers
+</TABLE>
+
+
+
+                                       6
+<PAGE>   7
+<TABLE>
+<S>                                         <C>
+Data Processing ......................      Bar-code Readers
+                                            Disk Drives
+                                            Global Positioning Systems
+                                            Hand-Held Computers/PDAs
+                                            Mainframes
+                                            Personal Computers
+                                            Printers
+                                            Point of Sale Terminals
+                                            Servers
+                                            Storage Systems
+                                            Tape Drives
+                                            Workstations
+</TABLE>
+
+
+The Company also sells products for military, video, and selected medical
+equipment.
+
+While Maxim's proprietary products have received substantial market acceptance,
+Maxim has experienced additional competition as Maxim's competitors have
+developed second source products for some of Maxim's successful innovative
+proprietary products. Typically in the semiconductor industry, when a
+proprietary product becomes second sourced, the credibility of the original
+design is enhanced, and there is an opportunity to increase total revenues as
+the potential customers' reluctance to design in a sole-source product is
+removed, but gross margins may be adversely affected due to increased price
+competition.
+
+PRODUCT QUALITY
+
+Maxim places strong emphasis on product quality from initial design through
+final quality assurance for the end product. In the product design phase, Maxim
+applies a set of circuit design rules that it believes result in enhanced
+product reliability. Upon receipt from Maxim's own fabrication facilities or
+from silicon foundries, a majority of processed wafers are tested for
+conformance with specific parameters. Products are individually tested using
+specialized test equipment and complex programs to ensure that they meet data
+sheet performance levels. In addition, long-term operating life and mechanical
+stress tests are routinely performed on samples to assure continued, long-term
+product performance. Maxim is in the process of making the design, fabrication,
+test operations, and quality assurance of Dallas Semiconductor consistent with
+Maxim's methodologies.
+
+MANUFACTURING
+
+Maxim uses its own wafer fabrication and, to a small extent, silicon foundries
+to produce wafers. The majority of processed wafers are subjected to parametric
+and functional testing at the Company's facilities. As is customary in the
+industry, the Company ships most of its processed wafers to foreign assembly
+subcontractors, located in the Philippines, Malaysia, Thailand and South Korea,
+where wafers are separated into individual integrated circuits and assembled
+into a variety of packages.
+
+After assembly has been completed, the majority of the assembled product is
+shipped to the Company's test facilities located in Cavite, the Philippines.
+During fiscal 2001, the Company doubled the square footage, which tripled the
+manufacturing space at its test facilities in Cavite, the Philippines. This
+expansion provided space to accommodate Dallas Semiconductor's offshore test
+
+
+                                       7
+<PAGE>   8
+
+and shipping operations. In addition, the Company established wafer sort
+operations at this facility with the capacity to electronically test and laser
+trim the majority of the Company's wafers. Prior to the merger, product
+assembled from wafers manufactured in the Dallas, Texas wafer fabrication
+facility was tested primarily at subcontractors located in the Philippines.
+Testing for Dallas product was also performed in a test facility located in
+Dallas, Texas. At the end of fiscal 2001, the majority of the testing of Dallas
+product was transferred to the Company's test facilities located in Cavite, the
+Philippines. Except for low volume Dallas product which will continue to be
+tested in Dallas, Texas, the Company intends to transfer the testing operations
+for remaining Dallas product to the Company's test facilities located in Cavite,
+the Philippines during the first quarter of fiscal 2002. The success of this
+move will depend in part on the Company's ability to effect the physical move of
+very sophisticated equipment and to bring that equipment into efficient
+operation quickly.
+
+In fiscal 2001, the Company hired employees and purchased capital equipment for
+a second test facility located in Samutprakam, Thailand. It is expected that
+this facility, as well as the facility in Cavite, the Philippines, will continue
+to expand test capacity as demand dictates. Currently, the Company's facilities
+located in Cavite, the Philippines and Samutprakam, Thailand combined have
+enough test manufacturing and shipping space to meet the Company's fiscal year
+2002 plan, subject always to normal and to unforeseen challenges in effecting
+such expansions.
+
+Once testing has been completed, the finished product is either shipped directly
+to customers worldwide or to other Company locations for ultimate sale to end
+customers.
+
+The broad range of products demanded by the analog integrated circuit market
+requires multiple manufacturing process technologies. Many different process
+technologies are currently used for wafer fabrication of the Company's products.
+Historically, wafer fabrication of analog integrated circuits has not required
+the state-of-the-art processing equipment necessary for the fabrication of
+advanced digital integrated circuits, although newer processes do utilize and
+require some of these facilities and equipment. In addition, hybrid products are
+manufactured using a complex multichip technology featuring thin-film,
+thick-film, and laser-trimmed resistors.
+
+For the majority of these technologies, the Company relies on its fabrication
+facilities in San Jose, California, Beaverton, Oregon, Dallas, Texas and, to a
+small extent, manufacturing subcontractors. The Company currently uses four
+subcontract silicon foundries that represent less than 5% of wafer production.
+None of the subcontractors currently used by Maxim is affiliated with Maxim.
+
+Most of the wafers produced in fiscal 2001 were manufactured at one of the
+Company's three wafer fabrication facilities. The Company's wafer fabrication
+facility located in Dallas, Texas was originally built in 1986 and expanded in
+1989, 1994 and 2001. This facility currently produces six-inch wafers. The
+Company is in the process of replacing six-inch production capacity at this
+facility with eight-inch wafer production. Once the production of eight-inch
+wafers has been fully implemented, it is the Company's intention to discontinue
+production of six-inch wafers at this facility. See Note 13 "Merger and Special
+Charges" of the Notes to Consolidated Financial Statements as set forth in the
+Company's Annual Report to Stockholders for the fiscal year ended June 30, 2001.
+In December 1989, the Company acquired a wafer fabrication facility in
+Sunnyvale, California capable of producing 3 micron CMOS and bipolar products.
+In May 1994, the Company acquired a mixed-class wafer fabrication facility in
+Beaverton, Oregon capable of producing CMOS and bipolar products. In November
+1997, the company acquired a sub-micron wafer fabrication
+
+
+                                       8
+<PAGE>   9
+
+facility in San Jose, California. The Company transferred production from the
+Sunnyvale facility to the Beaverton facility and suspended wafer production at
+the Sunnyvale facility in December 1998. The Beaverton, Oregon and San Jose,
+California wafer fabrication facilities currently manufacture six-inch wafers.
+The Company is in the process of expanding production capacity at its San Jose,
+California facility to include eight-inch wafer production. Once this has been
+completed, the Company intends to discontinue six-inch wafer production at this
+facility. See "Item 2., Properties" below.
+
+In the past and as sometimes happens in the semiconductor industry, the Company
+has experienced disruptions in the supply of processed wafers due to quality
+problems or failure to achieve satisfactory electrical yields. If the foundries
+used by the Company were unwilling or the Company's own internal wafer
+fabrication facilities were unable to produce adequate supplies of processed
+wafers conforming to the Company's quality standards, the Company's business and
+relationships with its customers could be adversely affected.
+
+Due to the relatively lengthy manufacturing cycle, the Company builds some of
+its inventory in advance of receiving orders from its customers. As a
+consequence of inaccuracies inherent in forecasting, inventory imbalances
+periodically occur that result in surplus amounts of some Company products and
+shortages of others. Such shortages can adversely affect customer relations and
+surpluses can result in larger-than-desired inventory levels, which can
+adversely affect the Company's financial position. Excess inventory issues can
+also arise when customers cancel orders. Finished products and work in process
+for those orders may be unsaleable. See "Item 1., Trends, Risks and
+Uncertainties - Factors Affecting Future Operating Results."
+
+SALES AND MARKETING
+
+In the United States and Canada, the Company sells its products through a direct
+sales and applications organization in nine regional sales offices and through
+its own and other unaffiliated distribution channels. As is customary in the
+industry, most domestic distributors are entitled to certain price rebates and
+product return privileges.
+
+International sales are conducted by 23 Maxim sales offices, 4 sales
+representative organizations and 62 distributors. The Company plans to
+consolidate and reorganize the Company's worldwide distribution channels in
+fiscal year 2002. The Company sells in both United States dollars and various
+foreign currencies. A majority of the Company's international sales are billed
+and payable in United States dollars and are therefore not directly subject to
+currency exchange fluctuations. A portion of the Company's sales from its United
+Kingdom, French, and German affiliates is denominated in the local currencies.
+The majority of the sales to customers and distributors located in Japan are
+denominated in yen. The Company enters into foreign currency forward contracts
+to protect the United States dollar value of its firm sales commitments and net
+monetary assets. Changes in the relative value of the dollar, however, may
+create pricing pressures for Maxim's products. In addition, various forms of
+protectionist trade legislation have been proposed in the United States and
+certain foreign countries. A change in current tariff structures or other trade
+policies could adversely affect the Company's foreign marketing strategies. In
+general, payment terms for foreign customers, distributors and others, are
+longer than for U.S. customers, and certain major foreign customers generally
+pay for product well beyond the scheduled payment dates. As is customary in the
+semiconductor industry, the Company's domestic distributors may market products
+competitive with Maxim's.
+
+
+                                       9
+<PAGE>   10
+
+International sales accounted for approximately 57%, 53%, and 53% of net
+revenues in fiscal 2001, 2000 and 1999, respectively. (See Note 12 "Segment
+Information" of the Notes to Consolidated Financial Statements as set forth in
+the Company's Annual Report to Stockholders for the fiscal year ended June 30,
+2001.)
+
+The Company also sells product directly to original equipment manufacturers. In
+particular, the Company has a long-term supply arrangement with Tektronix, Inc.
+for the supply of products manufactured by Tektronix prior to its sale in May
+1994 of its integrated circuits operation ("ICO") to the Company and for new
+designs created by Tektronix. This arrangement expires in May 2004, after which
+it becomes a month to month arrangement.
+
+As of June 30, 2001, the Company's backlog was approximately $234 million as
+compared to approximately $587 million at June 24, 2000. The Company includes in
+its backlog customer-released orders with firm schedules for shipment within the
+next 12 months. As is customary in the semiconductor industry, these orders may
+be canceled in most cases without penalty to the customers. In addition, the
+Company's backlog includes orders from domestic distributors as to which
+revenues are not recognized until the products are sold by the distributors.
+Accordingly, the Company believes that its backlog at any time should not be
+used as a measure of future revenues. All of the backlog numbers have been
+adjusted to be net of cancellations and estimated future U.S. distribution ship
+and debit pricing adjustments.
+
+The Company warrants its products to its customers generally for 12 months from
+shipment, but in certain cases for longer periods. Warranty expense to date has
+been minimal.
+
+RESEARCH AND DEVELOPMENT
+
+The Company believes that research and development is critical to its future
+success. Objectives for the research and development function include definition
+and design of innovative proprietary products that meet customer needs,
+development of second-source products, design of parts for high yield and
+reliability, and development of manufacturing processes and advanced packaging
+to support an expanding product line.
+
+Due to the research and development plans of the Company and the shortage of
+qualified design engineering talent, the Company does not always have the number
+of engineers required to meet its research and development goals.
+
+Research and development expenses were approximately $280.2 million, $216.8
+million, and $145.8 million in fiscal 2001, 2000, and 1999, respectively.
+
+COMPETITION
+
+The analog integrated circuit industry is intensely competitive, and virtually
+all major semiconductor companies presently compete with, or conceivably could
+compete with, some segment of the Company's business. Maxim's competitors are
+Anadigics Inc., Analog Devices, Inc., Applied Micro Circuits Corporation,
+Conexant Systems Inc., Infineon Technologies AG, Intersil Corporation, Linear
+
+
+                                       10
+<PAGE>   11
+
+Technology Corporation, Lucent Technologies, Micrel Inc., Microchip Technology
+Inc., Mitsubishi Corporation, Mitsui & Co. Ltd., Motorola Inc., National
+Semiconductor Corporation, ON Semiconductor Corporation, Philips Electronics
+N.V., RF Micro Devices Inc., Ricoh Company Ltd., Seiko Corporation, Semtech
+Corporation, STMicroelectronics N.V., Siliconix Inc., Sipex Corporation, Texas
+Instruments Inc., Vitesse Semiconductor Corporation and others, including
+start-up companies. Some of Maxim's competitors have substantially greater
+financial, manufacturing, and marketing resources than the Company, and some of
+Maxim's competitors have greater technical resources. The Company believes it
+competes favorably with these corporations primarily on the basis of technical
+innovation, product definition, quality, and service. There can be no assurance
+that competitive factors will not adversely affect the Company's future
+business.
+
+PATENTS, LICENSES, AND OTHER INTELLECTUAL PROPERTY RIGHTS
+
+The Company relies primarily upon know-how, rather than on patents, to develop
+and maintain its competitive position. There can be no assurance that others
+will not develop or patent similar technology or reverse engineer the Company's
+products or that the confidentiality agreements with employees, consultants,
+silicon foundries and other suppliers and vendors will be adequate to protect
+the Company's interests.
+
+The Company currently owns 420 U.S. patents and 90 foreign patents with
+expiration dates ranging from 2001 to 2019. In addition, the Company has applied
+for 163 U.S. patents, a large number of which have corresponding patent
+applications in multiple foreign jurisdictions. It is the Company's policy to
+seek patent protection for significant inventions that may be patented, though
+the Company may elect, in appropriate cases, not to seek patent protection even
+for significant inventions if other protection, such as maintaining the
+invention as a trade secret, is considered more advantageous. In addition, the
+Company has registered certain of its mask sets under the Semiconductor Chip
+Protection Act of 1984.
+
+There can be no assurance that any patent will issue on pending applications or
+that any patent issued will provide substantive protection for the technology or
+product covered by it. The Company believes that patent and mask work protection
+is of less significance in its business than experience, innovation, and
+management skill.
+
+Maxim has registered several of its trademarks with the U.S. Patent and
+Trademark Office and in foreign jurisdictions.
+
+Maxim is a party to a number of licenses, including patent licenses and other
+licenses obtained from Tektronix in connection with its acquisition of
+Tektronix's ICO in May 1994.
+
+Due to the many technological developments and the technical complexity of the
+semiconductor industry, it is possible that certain of the Company's designs or
+processes may involve infringement of patents or other intellectual property
+rights held by others. From time to time, the Company has received, and in the
+future may receive, notice of claims of infringement by its products on
+intellectual property rights of third parties. (See "Item 1., Trends, Risks and
+Uncertainties - Intellectual Property Litigation and Claims," and "Legal
+Proceedings") If any such infringements were to exist, the Company might be
+obligated to seek a license from the holder of the rights and
+
+
+                                       11
+<PAGE>   12
+
+might have liability for past infringement. In the past, it has been common
+semiconductor industry practice for patent holders to offer licenses on
+reasonable terms and rates. Although in some situations, typically where the
+patent directly relates to a specific product or family of products, patent
+holders have refused to grant licenses, though the practice of offering licenses
+appears to be generally continuing. However, no assurance can be given that the
+Company will be able to obtain licenses as needed in all cases or that the terms
+of any license that may be offered will be acceptable to Maxim. In those
+circumstances where an acceptable license is not available, the Company would
+need either to change the process or product so that it no longer infringes or
+else stop manufacturing the product or products involved in the infringement.
+
+ENVIRONMENTAL REGULATION
+
+Federal, state, and local regulations impose a variety of environmental controls
+on the storage, handling, discharge and disposal of certain chemicals and gases
+used in semiconductor manufacturing. The Company's facilities have been designed
+to comply with these regulations, and it believes that its activities are
+conducted in material compliance with such regulations. There can be no
+assurance, however, that interpretation and enforcement of current or future
+environmental regulations will not impose costly requirements upon the Company.
+Any failure of the Company to control adequately the storage, use, and disposal
+of regulated substances could result in future liabilities.
+
+Increasing public attention has been focused on the environmental impact of
+electronic manufacturing operations. While the Company to date has not
+experienced any materially adverse effects on its business from environmental
+regulations, there can be no assurance that changes in such regulations will not
+have a materially adverse effect on the Company's financial position or results
+of operations.
+
+EMPLOYEES
+
+The supply of skilled engineers required for Maxim's business is limited, and
+competition for such personnel is intense. The Company's growth also requires
+the hiring or training of additional middle-level managers. If the Company is
+unable to hire, retain, and motivate qualified technical and management
+personnel, its operations and financial results will be adversely affected.
+
+None of the Company's employees is subject to a collective bargaining agreement.
+
+As of June 30, 2001, Maxim had 6,317 employees, including Dallas Semiconductor
+employees.
+
+TRENDS, RISKS AND UNCERTAINTIES
+
+An investment in the securities of Maxim involves certain risks. In evaluating
+the Company and its business, prospective investors should give careful
+consideration to the factors listed below, in addition to the information
+provided elsewhere in this Annual Report on Form 10-K, in the documents
+incorporated herein by reference and in other documents filed with the
+Securities and Exchange Commission.
+
+
+                                       12
+<PAGE>   13
+
+Factors Affecting Future Operating Results
+
+The Company's future operating results are difficult to predict and may be
+affected by a number of factors.
+
+The semiconductor market has historically been cyclical and subject to
+significant economic downturns at various times. After a period of increasing
+demand that extended through fiscal 2000, more recently the semiconductor
+industry, including the portions in which the Company participates, has been
+experiencing dramatically decreased demand. Although some of the causes of this
+decrease are known, including significant excess inventories in the hands of
+equipment manufacturers and other potential customers, it remains unclear what
+all the causes may be and for what period the decrease in demand will continue.
+Maxim's ability to achieve future revenue growth depends on whether, and the
+extent to which, demand for its products increases and reflects real end user
+demand and whether customer cancellations and delays of outstanding orders
+decrease.
+
+Other key factors affecting the Company's revenues and operating results that
+could cause actual results to differ materially from past or predicted results
+include the timing of new product announcements or introductions by the Company
+and its competitors, competitive pricing pressures, fluctuations in
+manufacturing yields and manufacturing efficiency, adequate availability of
+wafers and other materials and manufacturing capacity, changes in product mix,
+and economic conditions in the United States and international markets. As a
+result of these and other factors, there can be no assurance that the Company
+will not experience material fluctuations in its future operating results on a
+quarterly or annual basis.
+
+The Company's ability to realize its quarterly revenue goals and projections is
+affected to a significant extent by its ability to match inventory and current
+production mix with the product mix required to fulfill orders on hand and
+orders received within a quarter for delivery in that quarter (referred to as
+"turns business"). This issue, which has been one of the distinguishing
+characteristics of the analog integrated circuit industry, results from the very
+large number of individual parts offered for sale and the very large number of
+customers combined with limitations on Maxim's and its customers' ability to
+forecast orders accurately and relatively lengthy manufacturing cycles. Because
+of this extreme complexity in the Company's business, no assurance can be given
+that the Company will achieve a match of inventory on hand, production units,
+and shippable orders sufficient to realize quarterly or annual revenue goals.
+
+In addition, in certain markets where end-user demand may be particularly
+volatile and difficult to predict, such as notebook computers and telephones,
+some Maxim customers place orders that require Maxim to manufacture product and
+have it available for shipment, even though the customer is unwilling to make a
+binding commitment to purchase all, or even any, of the product. At any given
+time, this situation could affect a portion of the Company's backlog. As a
+result, in any quarterly fiscal period, the Company is subject to the risk of
+cancellation of orders leading to a sharp fall-off of sales and backlog.
+Further, those orders may be for products that meet the customer's unique
+requirements so that those cancelled orders would, in addition, result in an
+inventory of unsaleable products, resulting in potential inventory write-offs.
+Because of lengthy manufacturing cycles for certain of the products subject to
+these uncertainties, the amount of unsaleable product could be substantial. The
+Company routinely estimates inventory reserves required for such product. Actual
+
+
+                                       13
+<PAGE>   14
+
+results may differ from these reserve estimates, and such differences may be
+material to Maxim's financial condition, gross margins, and results of
+operations.
+
+Dependence on New Products and Process Technologies
+
+The Company's future success will continue to depend on its continued ability to
+introduce new products and to develop new process technologies. Semiconductor
+design and process technology are subject to rapid technological change,
+requiring a high level of expenditures for research and development. Design and
+process development for the portions of the semiconductor market in which the
+Company participates are particularly challenging. The success of new product
+introductions is dependent on several factors, including proper new product
+selection, timely product introduction, achievement of acceptable production
+yields, and market acceptance. From time to time, Maxim has not fully achieved
+its new product introduction and process development goals. There can be no
+assurance that the Company will successfully develop or implement new process
+technologies or that new products will be introduced on a timely basis or
+receive substantial market acceptance.
+
+In addition, the Company's growth is dependent on its continued ability to
+penetrate new markets where the Company has limited experience and competition
+is intense. There can be no assurance that the markets being served by the
+Company will grow (in fact, it is natural, for example, that older markets do
+saturate and decline); that the Company's existing and new products will meet
+the requirements of such markets; that the Company's products will achieve
+customer acceptance in such markets; that competitors will not force prices to
+an unacceptably low level or take market share from the Company; or that the
+Company can achieve or maintain profitability in these markets.
+
+Manufacturing Risks
+
+The fabrication of integrated circuits is a highly complex and precise process.
+Minute impurities, contaminants in the manufacturing environment, difficulties
+in the fabrication process, defects in the masks used in the wafer manufacturing
+process, manufacturing equipment failures, wafer breakage, or other factors can
+cause a substantial percentage of wafers to be rejected or numerous dice on each
+wafer to be nonfunctional. The Company has from time to time experienced
+lower-than-expected production yields, which have delayed product shipments and
+adversely affected gross margins. There can be no assurance that the Company
+will not experience a decrease in manufacturing yields or that the Company will
+be able to maintain acceptable manufacturing yields in the future.
+
+The number of shippable dice per wafer for a given product is critical to the
+Company's results of operations. To the extent the Company does not achieve
+acceptable manufacturing yields or experiences delays in its wafer fabrication,
+assembly or final test operations, its results of operations could be adversely
+affected. During periods of decreased demand, fixed wafer fabrication costs
+could have an adverse effect on the Company's financial condition, gross
+margins, and results of operations.
+
+The Company is currently in the process of upgrading and expanding its wafer
+manufacturing capacity at its existing wafer manufacturing facilities in order
+to convert to eight-inch wafers and develop new processes in anticipation of
+increased customer demand for its products. Should the Company be unsuccessful
+in completing this expansion on time or should customer demand fail to
+
+
+                                       14
+<PAGE>   15
+
+increase and the Company no longer needs the additional capacity, the Company's
+financial position and results of operations could be adversely impacted.
+
+The Company manufactures over 95% of its wafer production requirements
+internally. Given the nature of the Company's products, it would be difficult to
+arrange for independent manufacturing facilities to supply such products. Any
+prolonged inability to utilize one of the Company's manufacturing facilities as
+a result of fire, natural disaster, unavailability of electric power or
+otherwise, would have a material adverse effect on the Company's results of
+operations.
+
+Competition
+
+The Company experiences intense competition from a number of companies, some of
+which have significantly greater financial, manufacturing, and marketing
+resources than the Company and some of which have greater technical resources
+than the Company and have intellectual property rights to which the Company is
+not privy. To the extent that the Company's proprietary products become more
+successful, competitors will offer second source products for some of those
+products, possibly causing some erosion of profit margins. See "Item 1.,
+Business - Competition."
+
+Dependence on Independent Distributors and Sales Representatives
+
+A significant portion of the Company's sales is realized through independent
+electronics distributors and a limited portion of the Company's sales is
+realized through independent sales representatives that are not under the
+control of the Company. A larger percentage of the sales of Dallas Semiconductor
+have been through distribution channels than the percentage for pre-acquisition
+Maxim. These independent sales organizations generally represent product lines
+offered by several companies and thus could reduce their sales efforts applied
+to the Company's products or terminate their representation of the Company.
+Payment terms for foreign distributors are substantially longer, either
+according to contract or by practice, than for U.S. customers. The inability to
+collect open accounts could adversely affect the Company's results of
+operations. Termination of a significant distributor, whether at the Company's
+or the distributor's initiative, could be disruptive to the Company's current
+business. If the Company were unable to find suitable replacements, terminations
+by significant distributors or representatives could have a material adverse
+impact on the Company. See "Item 1., Business - Sales and Marketing."
+
+Dependence on Independent Foundries, Subcontractors, and the Philippines Test
+Facility
+
+Although the Company has an internal capability to fabricate most of its wafers,
+Maxim remains dependent on outside silicon foundries for a small but important
+portion of its wafer fabrication. None of the foundries currently used by Maxim
+is affiliated with Maxim. As is typical in the semiconductor industry, from time
+to time, the Company has experienced disruptions in the supply of processed
+wafers from these foundries due to quality problems, failure to achieve
+satisfactory electrical yields, and capacity limitations. Procurement from
+foundries is done by purchase order and long-term contracts. If these foundries
+are unable or unwilling to produce adequate supplies of processed wafers
+conforming to the Company's quality standards, the Company's business and
+relationships with its customers for the limited quantities of products produced
+by these foundries would be adversely affected. Finding alternate sources of
+supply or initiating internal wafer processing for these products would not be
+economically feasible.
+
+
+                                       15
+<PAGE>   16
+
+Maxim relies on subcontractors located in the Philippines, Malaysia, Thailand,
+and South Korea to separate wafers into individual integrated circuits and
+package them. The Company performs wafer sort operations for the majority of its
+pre-acquisition wafers and final testing for about two-thirds of its
+pre-acquisition Maxim products at a Philippines facility owned by the Company.
+Product assembled from wafers manufactured in the Dallas, Texas wafer
+fabrication facility was tested primarily at subcontractors located in the
+Philippines. Although the Company has transferred the majority of the testing of
+Dallas Semiconductor product to the Company's Philippines test facility, no
+assurance can be given that the remaining transition will be completed on its
+planned schedule and cost. In the past, South Korea and the Philippines have
+experienced political disorders, labor disruptions, and natural disasters.
+Although the Company has been affected by these problems, none has materially
+affected the Company's revenues or costs to date. However, similar problems in
+the future or more aggravated consequences of current problems, could affect
+deliveries to Maxim of assembled, tested product, possibly resulting in
+substantial delayed or lost sales and/or increased expense. The Thailand test
+facility performs about one-third of the Company's final testing for
+pre-acquisition Maxim products but would not provide sufficient capacity to make
+up for a significant disruption in the Philippines test facility. See "Item 1.,
+Business - Manufacturing."
+
+Availability of Materials, Supplies, and Subcontract Services
+
+Over the past few years, the semiconductor industry has experienced a very large
+expansion of fabrication capacity and production worldwide. As a result of
+increasing demand from semiconductor manufacturers, availability of certain
+basic materials and supplies, such as polysilicon, silicon wafers, ultra-pure
+metals, lead frames and molding compounds, and of subcontract services, like
+epitaxial growth and ion implantation and assembly of integrated circuits into
+packages, have from time to time, over the past few years, been in short supply
+and may be expected to come into short supply again if overall industry demand
+increases in the future. Maxim devotes continuous efforts to maintain
+availability of all required materials, supplies, and subcontract services.
+However, Maxim does not have long-term agreements providing for all of these
+materials, supplies, and services, and shortages could occur as a result of
+capacity limitations or production constraints on suppliers that could have a
+materially adverse effect on Maxim's ability to achieve its planned production.
+
+A number of Dallas Semiconductor products, including nonvolatile SRAMs, use
+static memory circuits that are acquired from third parties. The Company
+anticipates that from time to time supplies of these circuits may not be
+sufficient to meet all customer requested delivery dates for products containing
+the circuits. As a result of any such shortages, future sales and earnings from
+products using these memory circuits, primarily nonvolatile SRAMs, could be
+adversely affected. Additionally, significant fluctuations in the purchase price
+for these circuits could affect gross margins for the products involved.
+
+In addition, suppliers of semiconductor manufacturing equipment are sometimes
+unable to deliver test and/or fabrication equipment to a schedule that meets the
+Company's requirements. Delays in delivery of equipment needed for planned
+growth could adversely affect the Company's ability to achieve its manufacturing
+and revenue plans in the future.
+
+
+                                       16
+<PAGE>   17
+
+Protection of Proprietary Information
+
+The Company relies primarily upon know-how, rather than on patents, to develop
+and maintain its competitive position. There can be no assurance that others
+will not develop or patent similar technology or reverse engineer the Company's
+products or that the confidentiality agreements upon which the Company relies
+will be adequate to protect its interests. Other companies have obtained patents
+covering a variety of semiconductor designs and processes, and the Company might
+be required to obtain licenses under some of these patents or be precluded from
+making and selling the infringing products, if such patents are found to be
+valid. There can be no assurance that Maxim would be able to obtain licenses, if
+required, upon commercially reasonable terms. See "Item 1., Business - Patents,
+Licenses, and Other Intellectual Property Rights," and "Item 1., Trends, Risks
+and Uncertainties - Intellectual Property Litigation and Claims."
+
+Intellectual Property Litigation and Claims
+
+The Company is subject to various legal proceedings (See "Item 3., Legal
+Proceedings") and other similar claims that involve possible infringement of
+patent or other intellectual property rights of third parties. Maxim is
+currently a defendant in a lawsuit brought by Linear Technology Corporation in
+which Linear alleges that Maxim has willfully infringed Linear Technology
+Corporation's patent relating to control circuits and methods for maintaining
+high efficiencies over broad current ranges in a switching regulator circuit.
+Linear Technology Corporation seeks unspecified actual and treble monetary
+damages and a permanent injunction against Maxim. In addition to the above, from
+time to time, the Company receives notices that its products or processes may be
+infringing the intellectual property rights of others. See "Item 1., Business -
+Patents, Licenses, and Other Intellectual Property Rights."
+
+If one or more of the Company's products or processes were determined to
+infringe any such intellectual property rights, a court might enjoin the Company
+from further manufacture and/or sale of the affected products. The Company would
+then need to obtain a license from the holders of the rights and/or to
+reengineer the Company's products or processes in such a way as to avoid the
+alleged infringement. In any of those cases, there can be no assurance that the
+Company would be able to obtain any necessary license on commercially reasonable
+terms or that the Company would be able to reengineer its products or processes
+to avoid infringement. An adverse result in litigation arising from such a claim
+could involve an injunction to prevent the sales of a material portion of the
+Company's products, a reduction or the elimination of the value of related
+inventories, and the assessment of a substantial monetary award for damages
+related to past sales.
+
+Foreign Trade and Currency Exchange
+
+Many of the materials and manufacturing steps in the Company's products are
+supplied by foreign companies or by the Company's operations abroad, such as its
+test operations in the Philippines. Approximately 57% of the Company's net
+revenues in fiscal year 2001 were from foreign customers. Accordingly, both
+manufacturing and sales of the Company's products may be adversely affected by
+political or economic conditions abroad. In addition, various forms of
+protectionist trade legislation have been proposed in the United States and
+certain foreign countries. A change in current tariff structures or other trade
+policies could adversely affect the Company's foreign manufacturing or marketing
+strategies. Currency exchange fluctuations could also increase the cost of
+components
+
+
+                                       17
+<PAGE>   18
+
+manufactured abroad and the cost of the Company's products to foreign customers
+or decrease the costs of products from the Company's foreign competitors.
+Although export sales are subject to government regulation, those regulations
+have not caused the Company significant difficulties to date. See "Item 1.,
+Business - Manufacturing" and "Item 1., Business - Sales and Marketing."
+
+Dependence on Key Personnel
+
+The Company's success depends to a significant extent upon the continued service
+of its president, John F. Gifford, its other executive officers, and key
+management and technical personnel, particularly its experienced engineers, and
+on its ability to continue to attract, retain, and motivate qualified personnel.
+The competition for such employees is intense. The loss of the services of Mr.
+Gifford or several of the Company's executive officers could have a material
+adverse effect on the Company. In addition, there could be a material adverse
+effect on the Company should the turnover rates for engineers and other key
+personnel increase significantly or should the Company be unable to continue to
+attract qualified personnel.
+
+The Company does not maintain any key person life insurance policy on any of its
+officers or employees.
+
+Merger Transition and Integration
+
+The Company acquired Dallas Semiconductor on April 11, 2001. Since that time,
+the Company has been in the process of integrating the personnel and operations
+of Dallas Semiconductor, with the goals of reducing cost and increasing
+efficiency and productivity. That process has been proceeding well in most
+regards, but no assurance can be given that the integration will be completed
+according to the Company's schedule or that the results of the integration will
+be successful.

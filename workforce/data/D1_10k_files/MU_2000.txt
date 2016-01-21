@@ -1,0 +1,731 @@
+ITEM 1.  BUSINESS
+
+     THE FOLLOWING DISCUSSION MAY CONTAIN TREND INFORMATION AND OTHER
+FORWARD-LOOKING STATEMENTS THAT INVOLVE A NUMBER OF RISKS AND UNCERTAINTIES.
+FORWARD-LOOKING STATEMENTS MADE INCLUDE, BUT ARE NOT LIMITED TO, STATEMENTS
+MADE IN: "SEMICONDUCTOR OPERATIONS - PRODUCTS AND SERVICES" REGARDING THE 128
+MEG SDRAM AS THE COMPANY'S PRIMARY PRODUCT IN 2001, THE SHIPPING OF THE
+COMPANY'S 256 MEG SDRAM, THE USE OF DDR SDRAMS IN HIGH-END SERVER,
+WORKSTATIONS AND DESKTOP PC APPLICATIONS AND THE COMPANY'S PLANS TO INCREASE
+THE NUMBER OF WAFERS DEDICATED TO SRAM AND FLASH PRODUCTS IN FUTURE PERIODS;
+SEMICONDUCTOR OPERATIONS - MANUFACTURING" REGARDING MANUFACTURING DISRUPTIONS
+AND REDUCED YIELDS AS A RESULT OF A CONVERSION TO 300MM WAFER PROCESSING;
+"SEMICONDUCTOR OPERATIONS RESEARCH AND DEVELOPMENT" REGARDING THE TRANSITION
+TO .15(u) AND .13(u) LINE-WIDTH PROCESS TECHNOLOGY; AND "INTERNATIONAL SALES"
+REGARDING THE GROWTH IN INTERNATIONAL SALES AS A RESULT OF INCREASED
+WORLDWIDE OPERATIONS. THE COMPANY'S ACTUAL RESULTS COULD DIFFER MATERIALLY
+FROM THE COMPANY'S HISTORICAL RESULTS OF OPERATIONS AND THOSE DISCUSSED IN
+THE FORWARD-LOOKING STATEMENTS. FACTORS THAT COULD CAUSE ACTUAL RESULTS TO
+DIFFER MATERIALLY INCLUDE, BUT ARE NOT LIMITED TO, THOSE IDENTIFIED IN "ITEM
+7. MANAGEMENT'S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF
+OPERATIONS - CERTAIN FACTORS." ALL PERIOD REFERENCES ARE TO THE COMPANY'S
+FISCAL PERIODS ENDED AUGUST 31, 2000, SEPTEMBER 2, 1999, OR SEPTEMBER 3,
+1998, UNLESS OTHERWISE INDICATED. ALL 1998 FINANCIAL DATA OF THE COMPANY HAS
+BEEN RESTATED TO INCLUDE THE RESULTS OF OPERATIONS OF RENDITION, INC., WHICH
+WAS MERGED WITH THE COMPANY ON SEPTEMBER 11, 1998.
+
+GENERAL
+
+     Micron Technology, Inc. and its subsidiaries (hereinafter referred to
+collectively as the "Company") principally design, develop, manufacture and
+market semiconductor memory products and personal computer ("PC") systems.
+Micron Technology, Inc. and its wholly-owned subsidiaries are hereinafter
+referred to collectively as "MTI." The Company's PC operations are conducted by
+Micron Electronics, Inc. ("MEI"), a 61% owned, publicly-traded subsidiary of
+MTI.
+
+     MTI, a Delaware corporation, was incorporated in 1978. MTI's executive
+offices are located at 8000 South Federal Way, Boise, Idaho 83716-9632 and its
+telephone number is (208) 368-4000. MEI's executive offices are located at 900
+East Karcher Road, Nampa, Idaho 83687-3045 and its telephone number is (208)
+898-3434.
+
+     The Company is organized into two primary operating segments pursuant to
+its principal product categories: "Semiconductor operations" and "PC
+operations." Sales to external customers for Semiconductor operations and PC
+operations constituted 86% and 14%, respectively, of the Company's total net
+sales for 2000. Reference is made to the information regarding net sales,
+operating profit and identifiable assets by reportable segments, under the
+heading "Operating Segment and Geographic Information" in the "Notes to
+Consolidated Financial Statements."
+
+
+RECENT EVENTS
+
+     On October 17, 2000, MTI and Kobe Steel, Ltd. ("Kobe Steel") announced that
+they had entered into a non-binding term sheet providing for the purchase by MTI
+of all of Kobe Steel's equity interest in KMT Semiconductor Limited ("KMT") for
+approximately $125 million. MTI currently has a 25% equity interest in KMT. It
+is anticipated that MTI will assume or repay all of KMT's debt, projected to
+approximate $325 million at closing. As of September 30, 2000, KMT had total
+assets approximating $750 million, including property, plant and equipment with
+a carrying value of approximately $530 million.
+
+     The term sheet anticipates that the parties will enter into a definitive
+acquisition agreement, subject to standard terms and conditions, including
+satisfactory due diligence and regulatory approvals. If these conditions are
+met, the transaction is expected to close in March 2001. There can be no
+assurance, however, that the pending transaction with Kobe Steel will be
+consummated. The following discussion regarding the Company's business does not
+reflect the proposed transaction with Kobe Steel.
+
+                                       2
+<PAGE>
+
+SEMICONDUCTOR OPERATIONS
+
+     PRODUCTS AND SERVICES
+
+     The Company's Semiconductor operations focus primarily on the design,
+development and manufacture of leading edge semiconductor memory products. The
+Company offers a wide variety of packaging and configuration options,
+architectures and performance characteristics to meet particular customer needs.
+
+         DYNAMIC RANDOM ACCESS MEMORY ("DRAM"). DRAM is the Company's primary
+semiconductor memory product. DRAMs are high density, low-cost-per-bit, random
+access memory components that store digital information in the form of bits and
+provide high-speed storage and retrieval of data. DRAMs are the most widely used
+semiconductor memory component in computer systems. DRAM sales (exclusive of
+intersegment sales) represented approximately 80%, 64% and 42% of the Company's
+total net sales in 2000, 1999, and 1998, respectively.
+
+         Synchronous DRAMs ("SDRAMs") are memory components that operate faster
+than standard DRAMs, due in part to the addition of a clock input that
+synchronizes all operations and allows PC systems to transfer data at faster
+rates, enabling subsystems to maintain pace with high speed CPUs and graphics
+engines. SDRAMs are currently the most popular and highest volume type of
+semiconductor memory and are used in computing (notebook and desktop PCs and
+servers), networking, communications, and consumer applications. The Company's
+primary product for 2000 was the 64 Meg SDRAM, available in multiple
+configurations, speeds and package types. The Company transitioned to the 128
+Meg SDRAM as its primary product in the fourth quarter of 2000 and expects that
+it will be its primary product in 2001. The Company offers PC100 and PC133 64
+Meg and 128 Meg SDRAMs. The Company expects to begin shipping 256 Meg SDRAMs in
+2001.
+
+         The Company continues to develop higher bandwidth DRAM products,
+including Double Data Rate ("DDR") SDRAM and Rambus-Registered Trademark-
+DRAM ("RDRAM-Registered Trademark-"). DDR SDRAM is a wide-bus memory solution
+that leverages existing SDRAM technology by supporting data transfers on both
+edges of each clock cycle effectively doubling the memory chip's data
+throughput. DDR SDRAMs are currently being used in high-end graphics and
+networking cards and the Company anticipates that they will be used in
+high-end server, workstation and desktop PC applications. RDRAM is a
+technology that uses a narrow-bus, high-speed memory interface and is
+expected to be used in high-performance computer and consumer electronics
+applications.
+
+         The Company continues to produce lower bandwidth DRAM products such as
+extended data out ("EDO") and fast page mode ("FPM") and lower density products
+such as the 16 Meg DRAM to support major original equipment manufacturer ("OEM")
+customer needs.
+
+         STATIC RANDOM ACCESS MEMORY ("SRAM"). SRAMs are semiconductor
+devices that perform memory functions similar to DRAMs, but do not require
+memory cells to be electronically refreshed. This simplifies system design
+for memory applications utilizing SRAM and allows SRAM to operate faster. The
+Company produces SRAMs for the high-performance or high-bandwidth
+applications that require a "buffer" or "cache" of high-speed memory to
+provide data access and data routing quickly. SRAMs are a key component in
+leading-edge telecommunications and networking applications where bandwidth
+is a critical system parameter. The Company currently produces SyncBurst-TM-
+SRAM and Zero Bus Turnaround ("ZBT-Registered Trademark-") SRAM products in
+volume and recently began sampling DDR SRAM AND Quad Data Rate ("QDR-TM-")
+SRAM products targeting the next generation of high performance computing,
+networking and communications applications. Sales of SRAM products
+represented approximately 2% of the Company's total net sales in 2000. The
+Company has made substantial investments in the development of its SRAM
+technology and plans to increase the number of wafers dedicated to production
+of SRAM in future periods.
+
+                                       3
+<PAGE>
+
+
+         FLASH MEMORY DEVICES ("FLASH"). Flash are non-volatile semiconductor
+devices that retain memory content when the power is turned off, and are
+electrically re-writeable. Flash is used in networking applications,
+workstations, servers, PCs, and handheld electronic devices such as digital
+cellular phones, digital cameras, and digital music players. The Company offers
+a variety of Flash devices in various densities including Boot Block Flash
+Memory, even-sectored Flash Memory, Compact Flash Cards, and Flash for the
+wireless cell phone market. Sales of Flash devices represented approximately 1%
+of the Company's total net sales in 2000. The Company has made substantial
+investments in the development of its Flash technology and plans to increase the
+number of wafers dedicated to production of Flash in future periods.
+
+
+     MANUFACTURING
+
+     The Company is a leading global manufacturer of semiconductor memory
+products with manufacturing facilities located in the United States, Italy,
+Singapore, Japan and United Kingdom. The Company's manufacturing facilities all
+operate 24 hours per day, 7 days per week. The Company develops leading-edge
+manufacturing process technology at its research and development wafer
+fabrication facility in Boise, Idaho, which is then deployed to its
+manufacturing fabs in Boise, Avezzano, Italy and its joint venture fabs, TECH
+Semiconductor Singapore Pte. Ltd. ("TECH") and KMT Semiconductor Limited
+("KMT"). (TECH and KMT are collectively referred to herein as the "JVs.")
+
+     The Company's process for manufacturing semiconductor products is complex,
+involving a number of precise steps, including wafer fabrication, assembly,
+burn-in and final test. Efficient production of semiconductor memory products
+requires utilization of advanced semiconductor manufacturing techniques and
+effective deployment of these techniques across multiple facilities. The
+Company's per unit product costs are a function of manufacturing costs and costs
+of product purchased from the JVs under supply agreements. Costs of products
+purchased from the JVs are based in part on discounts from average selling
+prices realized by the Company and are subject to significant fluctuations. The
+primary determinants of manufacturing cost are die size (since the potential
+number of good die per wafer increases with reduced die size), number of mask
+layers, the yield of acceptable die produced on each wafer and labor
+productivity. Other factors that contribute to manufacturing costs are wafer
+size, number of fabrication steps, cost and sophistication of manufacturing
+equipment, equipment utilization, process complexity, cost of raw materials,
+labor productivity, package type and cleanliness. The Company is continuously
+enhancing production processes, reducing the die size of existing products and
+increasing capacity utilization throughout worldwide operations. The Company has
+begun work on a 300-millimeter ("300mm") pilot line and is evaluating plans to
+perform large-scale manufacturing using 300mm wafer processing. The Company may
+experience disruptions in its manufacturing process and reduced yields as a
+result of a conversion to 300mm wafer processing.
+
+     Wafer fabrication occurs in a highly controlled, clean environment to
+minimize dust and other yield- and quality-limiting contaminants. Despite
+stringent manufacturing controls, dust particles, equipment errors, minute
+impurities in materials, defects in photomasks or other problems may cause a
+substantial percentage of wafers to be scrapped or individual circuits to be
+nonfunctional. Success of the Company's manufacturing operations depends largely
+on minimizing defects and thereby maximizing yield of high-quality circuits. In
+this regard, the Company employs rigorous quality controls throughout the
+manufacturing, screening and testing processes. The Company is able to recover
+many nonstandard devices by testing and grading them to their highest level of
+functionality.
+
+      After fabrication, each silicon wafer is separated into individual die.
+Functional die are connected to external leads by extremely fine wire and
+assembled into plastic packages. Each completed package is then inspected,
+sealed and tested. The assembly process uses high-speed automatic systems such
+as wire bonders, as well as semi-automatic plastic encapsulation and solder
+systems. The Company tests its products at various stages in the manufacturing
+process, performs high temperature burn-in on finished products and conducts
+numerous quality control inspections throughout the entire production flow. In
+addition, the Company uses its proprietary AMBYX line of intelligent test and
+burn-in systems to perform simultaneous circuit tests of all die during the
+burn-in process, capturing quality and reliability data and reducing testing
+time and cost. After test, the Company assembles the majority of its memory
+products into memory modules before sale to customers. Memory modules consist of
+an array of memory components attached to Company designed printed circuit
+boards ("PCBs") that connect to computer systems or other electronic devices.
+Memory components are attached to PCBs in a soldering process performed by
+screen printing machines and high speed automated pick and place machines.
+Completed modules are extensively tested by custom equipment and visual
+inspection.
+
+                                       4
+<PAGE>
+
+
+     Substantially all of the Company's manufacturing operations are dependent
+on electronic information systems. These information systems enable the Company
+to maximize the efficiency of its manufacturing operations by controlling
+equipment and processes, tracking key operational and engineering metrics,
+providing decision support and measuring overall operating results. Hardware or
+software failures in the information systems could disrupt the Company's
+manufacturing operations.
+
+     JOINT VENTURES. MTI participates in two joint ventures: TECH and KMT. TECH,
+which operates in Singapore, is a memory manufacturing joint venture among MTI,
+the Singapore Economic Development Board, Canon Inc. and Hewlett-Packard
+Company. KMT, which operates in Japan, is a memory manufacturing joint venture
+between MTI and Kobe Steel, Ltd. The JVs' semiconductor manufacturing facilities
+use the Company's product and process technology. For purposes of the discussion
+herein, production from the JVs is treated as production from the Company's
+Semiconductor operations.
+
+     The JVs supplied in excess of 35% of the total megabits of memory produced
+by the Company in 2000. MTI has agreed to purchase all of the production from
+the JVs, subject to specific terms and conditions. The Company generally
+purchases product from the JVs at prices that are determined quarterly and based
+in part on discounts from MTI's average selling prices. Certain joint venture
+partners have rights to buy a portion of TECH's output from MTI. MTI provides
+technology, engineering support, training and information system support to the
+JVs and performs assembly and test services on all JV products.
+
+     On October 17, 2000, MTI and Kobe Steel announced that they had entered
+into a non-binding term sheet providing for the purchase by MTI of all of Kobe
+Steel's equity interest in KMT. See "Business - Recent Events."
+
+
+     AVAILABILITY OF RAW MATERIALS
+
+     The Company's semiconductor operations require raw materials that meet
+exacting standards. The Company generally has multiple sources of supply,
+however, there are only a limited number of suppliers capable of delivering
+certain raw materials that meet our standards. Various factors, including
+increases in worldwide semiconductor manufacturing, could reduce the
+availability of raw materials such as silicon wafers, photomasks, chemicals,
+gases, lead frames and molding compound. The Company's semiconductor operations
+have not been interrupted in the past by shortages of raw materials.
+Nevertheless, shortages may occur from time to time in the future. Also, lead
+times for the supply of raw materials have been extended in the past. If the
+Company's supply of raw materials is interrupted or, lead times are extended,
+results of operations could be adversely affected.
+
+
+     MARKETING AND CUSTOMERS
+
+     The Company's semiconductor memory products are sold primarily to the PC,
+telecommunications and networking hardware markets. The Company supplies several
+major PC original equipment manufacturers with more than 30% of their memory
+requirements. Sales to Dell Computer Corporation and Compaq Computer Corporation
+both exceeded 10% of consolidated net sales for 2000. No customer individually
+accounted for 10% of consolidated net sales for 1999 and 1998.
+
+     The Company markets its semiconductor memory products primarily through its
+own direct sales force. The Company also sells products through independent
+sales representatives, distributors and its retail sales division, Crucial
+Technology. The Company maintains semiconductor sales offices in North America,
+Asia and Europe. Sales representatives are compensated on a commission basis and
+obtain orders subject to final acceptance by the Company. The Company makes
+shipments against these orders directly to the customer. Distributors carry the
+Company's products in inventory and typically sell a variety of other
+semiconductor products, including competitors' products. Semiconductor memory
+products sold through distributors approximated 14%, 11% and 11% of
+Semiconductor operations' net sales in 2000, 1999 and 1998, respectively. The
+Company also markets application specific DRAM under the SpecTek brand name.
+
+                                       5
+<PAGE>
+
+     The semiconductor memory industry is characterized by rapid technological
+change, relatively short product life cycles, frequent product introductions and
+enhancements, difficult product transitions and volatile market conditions. In
+the past, the semiconductor industry and the DRAM market in particular, have
+been highly cyclical. DRAMs have historically been considered commodity
+products, however, the DRAM market is currently in the process of segmenting,
+with diverse memory needs being driven by the different requirements of desktop
+and notebook PC's, servers, workstations, hand-helds, and communications,
+industrial and other applications that demand specific memory solutions. Many of
+the Company's customers require a thorough review or "qualification" of
+semiconductor memory products, which may take several months. As the Company
+further diversifies its product lines and reduces the die sizes of existing
+memory products, more products become subject to qualification. There can be no
+assurance that new products will be qualified for purchase by existing or
+potential customers.
+
+     BACKLOG
+
+     Cyclical industry conditions make it difficult for many customers to enter
+into long-term, fixed-price contracts and, accordingly, new order volumes for
+the Company's semiconductor memory products fluctuate significantly. Orders are
+typically accepted with acknowledgment that the terms may be adjusted to reflect
+market conditions at the delivery date. Customers can change delivery schedules
+or cancel orders without significant penalty. For the foregoing reasons, the
+Company does not believe that its backlog of semiconductor memory products as of
+any particular date is a reliable indicator of actual sales for any succeeding
+period.
+
+     PRODUCT WARRANTY
+
+     Because the design and production process for semiconductor memory is
+highly complex, it is possible that we may produce products that do not comply
+with customer specifications, contain defects, or are otherwise incompatible
+with end uses. To mitigate these issues, the Company generally provides a
+limited warranty that its semiconductor memory products are in compliance with
+specifications existing at the time of delivery. Under the Company's sales
+confirmation orders, liability for a stated warranty period is usually limited
+to replacement of defective items or return of amounts paid.
+
+     COMPETITION
+
+     The Company's Semiconductor operations experience intense competition from
+a number of companies, including Hitachi, Ltd., Hyundai Electronics Industries
+Co., Ltd., Infineon Technologies AG, NEC Corporation and Samsung Semiconductor,
+Inc. Some of the Company's competitors are large corporations or conglomerates,
+which may have greater resources to withstand downturns in the semiconductor
+memory market, invest in new technology and capitalize on growth opportunities.
+Like the Company, these competitors aggressively seek to improve yields, reduce
+die size and decrease mask levels in their product designs. These improvements
+could significantly increase worldwide supply leading to downward pressures on
+prices.
+
+     RESEARCH AND DEVELOPMENT
+
+     Substantially all of the Company's research and development efforts relate
+to its Semiconductor operations. To compete in the semiconductor memory
+industry, the Company must continue to develop technologically advanced products
+and processes. The Company believes that expansion of semiconductor product
+offerings is necessary to meet expected market demand for specific memory
+solutions. The Company's total research and development expenditures were $427
+million, $322 million and $286 million in 2000, 1999 and 1998, respectively.
+
+     Research and development expenses relating to the Company's
+Semiconductor operations vary primarily with personnel costs, the number of
+development wafers processed and the cost of advanced equipment dedicated to
+new product and process development. Process technology research and
+development efforts are focused on .15u and .13u line-width process
+technologies, which will enable the Company to transition to next generation
+products. Application of advanced process technology currently is
+concentrated on design of shrink versions of the Company's 128 Meg SDRAMs and
+on design and development of the Company's Flash, 256 Meg and 512 Meg
+
+                                       6
+<PAGE>
+
+SDRAMs, DDR SDRAM and SRAM memory products. Other research and development
+efforts are currently devoted to the design and development of embedded memory,
+RDRAM, and advanced DRAM technology ("ADT") products. The Company is also
+developing technology which enables the use of standard memory products and new
+memory applications.
+
+     Substantially all of the Company's operations use .18(u) line-width
+process technology. The Company began its transition to .15(u) line-width
+process technology in 2000 for its primary products and expects to continue
+its transition in 2001. The Company anticipates that it will move to .13(u)
+line-width process technology in the next few years as needed for the
+development of future generation semiconductor products.
+
+PC OPERATIONS
+
+     PC SYSTEMS
+
+     The PC industry is highly competitive and has been characterized by intense
+pricing pressure, generally low gross margin percentages, rapid technological
+advances in hardware and software, frequent introduction of new products and
+declining component costs. The Company's PC operations develop, market,
+manufacture, sell and support a wide range of desktop and notebook PC systems
+and network servers under the Micron and NetFrame brand names and sell, resell
+and support a variety of additional peripherals, software and services. The
+Company's PC systems are generally assembled to order ("ATO") with differing
+processing, memory and storage configurations as well as various operating
+systems and application software. Net sales of PC systems (exclusive of
+intersegment sales) represented 14%, 33% and 49% of the Company's total net
+sales for 2000, 1999, and 1998, respectively.
+
+     The Company markets its PC systems principally through two channels:
+"customer-direct" and "retail-direct." In the customer-direct channel the
+Company markets its products directly to customers through advertising,
+direct mail, telephone sales, field sales representatives and the Company's
+web site. Direct sales orders are received primarily via telephone,
+facsimile, the Internet and through the Company's direct sales force.
+Customers generally order systems configured with varying feature sets
+differentiated by microprocessor speed, hard drive capacity, amount of
+memory, monitor size and resolution and bundled software, as well as other
+features. Starting in March 2000, the Company also began to market PC systems
+through the retail-direct channel, wherein the Company has entered into
+agreements with a number of retailers including BestBuy, Outpost.com and
+Staples, to install and maintain "direct-to-the-manufacturer" kiosks at their
+retail stores. The Company operates its retail-direct program under the
+Velocity Net Direct brand name. Additionally, the Company sells PC systems
+through strategic relationships with third parties having large government
+procurement contracts. Pricing and terms for such procurement contracts are
+generally subject to re-negotiation or termination by third parties and
+governmental entities.
+
+     The Company's PC manufacturing process is designed to provide
+custom-configured products to its customers and includes assembling components,
+loading software and testing each system prior to shipment. Most components are
+held by suppliers in a third party logistics providers' warehouse and delivered
+as order flow demands. The Company's ATO manufacturing process promotes rapid
+inventory turnover and reduced inventory levels, while allowing the Company to
+efficiently manufacture customized computer systems. Generally, the Company
+assembles desktop PC systems and servers in its facilities. The Company defines
+the feature sets for its notebook PC systems which are assembled by suppliers
+and then tested according to the Company's standards. Certain of the components,
+subassemblies and software used by the Company are available only from a limited
+number of suppliers. In particular, the Company relies on two vendors for its
+supply of both the microprocessors used in its PC systems and the assembly of
+notebook computers. The Company has experienced shortages of these products in
+the past. Any interruption in the supply of the components, subassemblies and
+software used in the Company's PC systems, could adversely affect the results of
+operations.
+
+     Consumer customers may return PC products within 15 days of shipment for a
+full refund of the purchase price and commercial and government customers can
+return products within 30 days for a full refund. The Company sells desktop and
+notebook PC systems and servers with a limited warranty, consisting of a
+five-year limited warranty on the microprocessor and main memory, a three-year
+limited warranty on the hardware and one year on-site service provided by a
+third party. The PC operations limited warranty covers repair or replacement for
+defects in workmanship or materials.
+
+                                       7
+<PAGE>
+
+     e-SERVICES
+
+     Since the fourth quarter of 1999, the Company's PC operations have provided
+web-hosting, software application, data center/co-location and Internet access
+services through its HostPro subsidiary. Net sales of e-Services represented
+less than 1% of the Company's consolidated net sales for 2000. The Company
+markets its e-Services offerings through its HostPro web site and print, radio
+and on-line advertising. The Company's e-Services operations face intense
+competition from a large number of companies.
+
+INTERNATIONAL SALES
+
+     International sales totaled $2.8 billion for 2000 and included
+approximately $1.2 billion in sales to Europe and $1.1 billion in sales to Asia
+Pacific. International sales approximated $1.1 billion for 1999 and $599 million
+for 1998. The Company expects international sales to continue to increase as a
+result of growth in its worldwide operations.
+
+PATENTS AND LICENSES
+
+     As of August 31, 2000, the Company owned approximately 4,250 United States
+patents and 373 foreign patents. In addition, the Company has numerous United
+States and international patent applications pending.
+
+     The Company has a number of cross-license agreements with others. The
+agreements may require one-time and/or periodic royalty payments and expire at
+various times. One-time payments are typically capitalized and amortized over
+the shorter of the estimated useful life of the technology, the patent term or
+the term of the agreement. In the future, it may be necessary or advantageous
+for the Company to obtain additional patent licenses or to renew existing
+license agreements. The Company is unable to predict whether these license
+agreements can be obtained or renewed on terms acceptable to the Company. An
+adverse determination that the Company's manufacturing processes or products
+infringed on the product or process rights held by others could subject the
+Company to significant liabilities or require material changes in production
+processes or products, either of which could have a material adverse effect on
+the Company's business, results of operations and financial condition.
+
+     The Company and Rambus, Inc. ("Rambus") are engaged in litigation relating
+to certain of Rambus' patents. Lawsuits between the Company and Rambus have been
+filed in the United States, Germany, France, the United Kingdom and Italy. (See
+"Item 3. Legal Proceedings" and "Item 7. Management's Discussion and Analysis of
+Financial Condition and Results of Operations - Certain Factors.")
+
+EMPLOYEES
+
+     As of August 31, 2000, the Company had approximately 18,800 full-time
+employees, including approximately 15,900 in semiconductor operations and 2,900
+in PC operations. The Company has approximately 3,000 and 1,800 employees in
+Asia and Europe, respectively. The Company's Italian employees are represented
+by labor organizations that have entered into national and local labor contracts
+with the Company. The Company's employment levels can vary depending on market
+conditions and the level of the Company's production, research and product and
+process development and administrative support activities. Many of the Company's
+employees are highly skilled and the Company's continued success depends in part
+upon its ability to attract and retain such employees. The loss of key Company
+personnel could have an adverse effect on the Company's results of operations.
+
+                                       8
+<PAGE>
+
+ENVIRONMENTAL COMPLIANCE
+
+     Government regulations impose various environmental controls on discharges,
+emissions and solid wastes from the Company's manufacturing processes. The
+Company believes that its activities conform to present environmental
+regulations. In 2000, MTI continued to conform to the requirements of ISO 14001
+certification as confirmed by a successful independent surveillance audit. To
+continue certification, MTI met requirements in environmental policy,
+compliance, planning, management, structure and responsibility, training,
+communication, document control, operational control, emergency preparedness and
+response, record keeping and management review. While the Company has not
+experienced any materially adverse effects on its operations from environmental
+or other government regulations, changes in the regulations could necessitate
+additional capital expenditures, modification of operations or other compliance
+actions. Additionally, the extensive process required to obtain permits for
+expansion of facilities may affect how quickly the Company can respond to
+increases in market demand.
+
+                                       9
+<PAGE>
+
+OFFICERS AND DIRECTORS OF THE REGISTRANT
+
+     Officers of the Company are appointed annually by the Board of Directors.
+Directors of the Company are elected annually by the shareholders of the
+Company. Any directors appointed by the Board of Directors to fill vacancies on
+the Board serve until the next election by the shareholders. All officers and
+directors serve until their successors are duly chosen or elected and qualified,
+except in the case of earlier death, resignation or removal.
+
+     As of October 2, 2000, the following executive officers and directors of
+the Company were subject to the reporting requirements of Section 16(a) of the
+Securities Exchange Act of 1934, as amended.
+
+<TABLE>
+<CAPTION>
+Name                                  Age     Position
+----                                  ---     --------
+<S>                                  <C>      <C>
+Steven R. Appleton.................    40     Chairman, Chief Executive Officer and President
+Kipp A. Bedard.....................    41     Vice President of Corporate Affairs
+Robert M. Donnelly.................    61     Vice President of Memory Products
+D. Mark Durcan.....................    39     Chief Technical Officer and Vice President of
+                                              Research & Development
+Jay L. Hawkins.....................    40     Vice President of Operations
+Joel J. Kocher.....................    44     Chairman and Chief Executive Officer of Micron
+                                              Electronics, Inc.
+Roderic W. Lewis...................    45     Vice President of Legal Affairs, General Counsel
+                                              and Corporate Secretary
+Michael W. Sadler..................    42     Vice President of Sales and Marketing
+Wilbur G. Stover, Jr. .............    47     Vice President of Finance and Chief Financial
+                                              Officer
+James W. Bagley....................    61     Director
+Robert A. Lothrop..................    74     Director
+Thomas T. Nicholson................    64     Director
+Don J. Simplot.....................    65     Director
+Gordon C. Smith....................    71     Director
+William P. Weber...................    60     Director
+</TABLE>
+
+     STEVEN R. APPLETON joined MTI in February 1983 and has served in various
+capacities with the Company and its subsidiaries. Mr. Appleton first became an
+officer of MTI in August 1989 and has served in various officer positions,
+including overseeing the Company's semiconductor operations as President, Chief
+Executive Officer and Director of Micron Semiconductor, Inc. ("MSI"), then a
+wholly-owned subsidiary of MTI, from July 1992 to November 1994. From April 1991
+until July 1992 and since May 1994, Mr. Appleton has served on MTI's Board of
+Directors. Since September 1994, Mr. Appleton has served as the Chief Executive
+Officer, President and Chairman of the Board of Directors of MTI. Mr. Appleton
+also serves as a Director of MEI. Mr. Appleton holds a BA in Business Management
+from Boise State University.
+
+     KIPP A. BEDARD joined MTI in November 1983 and has served in various
+capacities with the Company and its subsidiaries. Mr. Bedard first became an
+officer of MTI in April 1990 and has served in various officer positions,
+including Vice President, Investor Relations, of MSI from July 1992 to January
+1994. Since January 1994, Mr. Bedard has served as Vice President of Corporate
+Affairs for MTI. Mr. Bedard holds a BBA in Accounting from Boise State
+University.
+
+     ROBERT M. DONNELLY joined MTI in September 1988 and has served in various
+technical positions with the Company and its subsidiaries. Mr. Donnelly first
+became an officer of MTI in August 1989 and has served in various officer
+positions, including Vice President, SRAM Products Group of MSI from July 1992
+to November 1994. Mr. Donnelly was named Vice President, SRAM Products Group for
+MTI in November 1994. Mr. Donnelly served as Vice President, SRAM Design and
+Product Engineering for MTI from October 1995 through November 1996, at which
+time he became Vice President of Memory Products. Mr. Donnelly holds a BS in
+Electrical Engineering from the University of Louisville.
+
+     D. MARK DURCAN joined MTI in 1984 and has served in various technical
+positions with the Company and its subsidiaries, including Process Integration
+Manager from December 1989 until May 1995 and Manager of Process Research and
+Development from May 1995 until June 1996. Mr. Durcan served as Vice President,
+Process
+
+                                       10
+<PAGE>
+
+Research and Development from June 1996 through June 1997, at which time he
+became Chief Technical Officer and Vice President of Research & Development. Mr.
+Durcan holds a BS and MS in Chemical Engineering from Rice University.
+
+     JAY L. HAWKINS joined MTI in March 1984 and has served in various
+manufacturing positions for the Company and its subsidiaries, including Director
+of Manufacturing for MSI from July 1992 to November 1994 and Director of
+Manufacturing for MTI from November 1994 to February 1996. Mr. Hawkins served as
+Vice President, Manufacturing Administration from February 1996 through June
+1997, at which time he became Vice President of Operations. Mr. Hawkins holds a
+BBA in Marketing from Boise State University.
+
+     JOEL J. KOCHER joined MEI in January 1998. Prior to joining MEI, Mr. Kocher
+was employed by Dell Computer Corporation from 1987 until September 1994, most
+recently serving as President of Worldwide Marketing, Sales and Service. In
+October 1994, Mr. Kocher joined Artistsoft, where he initially served as
+Executive Vice President and Chief Operating Officer and subsequently served
+from October 1995 until December 1996 as President, Chief Operating Officer and
+Director of Artistsoft. From December 1996 until August 1997, Mr. Kocher served
+as President and Chief Operating Officer at Power Computing Corporation. Since
+January 1998, Mr. Kocher has served as the President of MEI and since June 1998
+has also served as Chairman and Chief Executive Officer of MEI. Mr.
+Kocher holds a BBA in Marketing from the University of Florida.
+
+     RODERIC W. LEWIS joined MTI in 1991 and has served in various capacities
+with the Company and its subsidiaries, including Assistant General Counsel for
+MTI from August 1993 to April 1995. From April 1995 to July 1996, Mr. Lewis
+served as Vice President, General Counsel and Corporate Secretary for MEI. Mr.
+Lewis served as Vice President, General Counsel and Corporate Secretary for MTI
+from July 1996 until November 1996, at which time he became Vice President of
+Legal Affairs, General Counsel and Corporate Secretary. Mr. Lewis holds a BA in
+Economics and Asian Studies from Brigham Young University and a JD from Columbia
+University School of Law.
+
+     MICHAEL W. SADLER is Vice President of Sales and Marketing for Micron
+Technology, Inc. Mr. Sadler joined Micron Technology in 1992 as a Regional Sales
+Manager and has since held a series of increasingly responsible positions
+including Major Accounts Sales Manager, National Sales Manager, Director of
+Memory Sales, and Vice President of Sales. He was appointed to his current
+position in January 2000. Mr. Sadler holds a BS in Information Systems and an
+MBA from the University of Santa Clara.
+
+     WILBUR G. STOVER, JR. joined MTI in June 1989 and has served in various
+financial positions with the Company and its subsidiaries, including Vice
+President, Finance and Chief Financial Officer of MSI from August 1992 to
+September 1994. Since September 1994, Mr. Stover has served as MTI's Vice
+President of Finance and Chief Financial Officer. From October 1994 through
+September 1996, Mr. Stover served on MTI's Board of Directors. Mr. Stover holds
+a BA in Business Administration from Washington State University.
+
+     JAMES W. BAGLEY became the Chairman and Chief Executive Officer of Lam
+Research Corporation ("Lam"), a supplier of semiconductor manufacturing
+equipment, in August 1997, upon consummation of a merger of OnTrak Systems, Inc.
+("OnTrak"), a supplier of semiconductor manufacturing equipment, into Lam. From
+June 1996 to August 1997, Mr. Bagley served as the Chairman and Chief Executive
+Officer of OnTrak. Prior to joining OnTrak, Mr. Bagley was employed by Applied
+Materials, Inc., also a supplier of semiconductor manufacturing equipment, for
+15 years in various senior management positions, including Chief Operating
+Officer and Vice Chairman of the Board. Mr. Bagley is a member of the Board of
+Directors of Teradyne, Inc. He has served on MTI's Board of Directors since June
+1997. Mr. Bagley holds a BS in Electrical Engineering and MS in Electrical
+Engineering from Mississippi State University.
+
+     ROBERT A. LOTHROP served as Senior Vice President of J.R. Simplot Company,
+an agribusiness company, from January 1986 until his retirement in January 1991.
+From August 1986 until July 1992 and since May 1994, Mr. Lothrop has served on
+the Board of Directors of MTI. From July 1992 until November 1994, he served as
+a Director of MSI. Mr. Lothrop also serves as a Director of MEI. Mr. Lothrop
+holds a BS in Engineering from the University of Idaho.
+
+     THOMAS T. NICHOLSON has served as Vice President and a Director of Honda of
+Seattle and Toyota of Seattle since 1988. Mr. Nicholson has also served since
+May 2000 as Vice President of Mountain View Equipment
+
+                                       11
+<PAGE>
+
+
+Company and from 1982 to May 2000 served as President of Mountain View Equipment
+Company. He has served on MTI's Board of Directors since May 1980. Mr. Nicholson
+holds a BS in Agriculture from the University of Idaho.
+
+     DON J. SIMPLOT served as the President of Simplot Financial Corporation, a
+wholly-owned subsidiary of the J.R. Simplot Company, from February 1985 until
+January 1992. Since 1955, Mr. Simplot has served in various capacities with J.R.
+Simplot Company and presently serves as a Corporate Vice President. Since April
+1994, he has also served as a member of the Office of the Chairman of J.R.
+Simplot Company. Mr. Simplot is a member of the Board of Directors of IMPCO
+Technologies, Inc. He has served on MTI's Board of Directors since February
+1982.
+
+     GORDON C. SMITH has served as Chairman and Chief Executive Officer of G.C.
+Smith L.L.C., a holding company for ranch operations and other investments,
+since May 2000. Since September 1994, Mr. Smith has served as Secretary and
+Treasurer of SSI Management Corp., which manages food service, land, livestock
+and aircraft operations. Mr. Smith served in various management positions from
+July 1980 until January 1992 for Simplot Financial Corporation, a wholly-owned
+subsidiary of the J.R. Simplot Company. From May 1988 until his retirement in
+March 1994, Mr. Smith served as the President and Chief Executive Officer of the
+J.R. Simplot Company. From September 1996 until September 1999, he served as the
+President of Wesmar, Inc., a food service company. From February 1982 until
+February 1984 and since September 1990, he has served on MTI's Board of
+Directors. Mr. Smith holds a BS in Accounting from Idaho State University.
+
+     WILLIAM P. WEBER served in various capacities with Texas Instruments
+Incorporated, a semiconductor manufacturing company, and its subsidiaries from
+1962 until April 1998. From December 1986 until December 1993 he served as the
+President of Texas Instrument's worldwide semiconductor operations and from
+December 1993 until his retirement in April 1998, he served as Vice Chairman of
+Texas Instruments Incorporated. He is a member of the Board of Directors of
+Unigraphics Solutions, Inc. He has served on MTI's Board of Directors since July
+1998. Mr. Weber holds a BS in Engineering from Lamar University and a MS in
+Engineering from Southern Methodist University.
+
+     There is no family relationship between any director or executive officer
+of the Company.

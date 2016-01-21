@@ -1,0 +1,209 @@
+ITEM 1.     BUSINESS 
+SUMMARY 
+Skyworks Solutions, Inc. (“Skyworks” or the “Company”) is a leading wireless semiconductor company focused exclusively on radio frequency (“RF”) and complete cellular system solutions for mobile communications applications. We offer front-end modules, RF subsystems and cellular systems to leading wireless handset and infrastructure customers. 
+
+From the power amplifier, through the radio and to the baseband, we have developed one of the industry’s broadest product portfolios including leadership switches and power amplifier modules. Additionally, we offer a highly integrated direct conversion transceiver and have launched a comprehensive cellular system for next generation handsets. 
+
+With our extensive product portfolio and significant systems-level expertise, Skyworks is the ideal partner for both top-tier wireless manufacturers and new market entrants who demand simplified architectures, faster development cycles and fewer overall suppliers. 
+
+Skyworks was formed through the merger (“Merger”) of the wireless business of Conexant Systems, Inc. (“Conexant”) and Alpha Industries, Inc. (“Alpha”) on June 25, 2002. Immediately following the Merger, the Company purchased Conexant’s semiconductor assembly and test facility located in Mexicali, Mexico and certain related operations (the “Mexicali Operations”). Shortly thereafter, Alpha changed its corporate name to Skyworks Solutions, Inc. We are headquartered in Woburn, Massachusetts, and have executive offices in Irvine, California. We have design, engineering, manufacturing, marketing, sales and service facilities throughout North America, Europe, and the Asia/Pacific region. Our Internet address is www.skyworksinc.com. We make available on our Internet website free of charge our annual report on Form 10-K, quarterly reports on Form 10-Q, current reports on Form 8-K, Section 16 filings on Forms 3, 4 and 5, and amendments to those reports as soon as practicable after we electronically file such material with the Securities and Exchange Commission (“SEC”). The information contained in our website is not incorporated by reference in this Annual Report on Form 10-K. 
+
+INDUSTRY BACKGROUND 
+We believe that the wireless industry is on the verge of another substantial growth cycle. Traditional voice services offered by wireless carriers are being rapidly supplemented or augmented by the emergence of the next-generation wireless technologies and WiFi-based (802.11) wireless data applications. All of these new technologies are geared to make high-speed wireless data available on handset, PDA, notebook and other platforms in a variety of environments. 
+
+The cellular handset market has grown significantly over the past five years despite the broad technology slowdown in 2001 and 2002. According to market research firm EMC, handset sales have increased by approximately 300% from 1997 to 2002 with volume reaching 400 million units in 2002. Exiting 2002, the worldwide penetration rate of wireless services was at 18% and is expected to climb to 28% by 2005. This increased penetration implies that approximately 650 million new subscribers will begin using wireless services over the next three years, approaching the 1.8 billion worldwide subscriber mark in 2005 – roughly a fourth of the world’s population. 
+
+In parallel, handset growth is being driven by replacement units purchased by existing subscribers as carriers introduce updated models, smaller form factors, added features and new applications. In particular, color displays and camera phones are expected to be two major growth drivers in the coming years. According to the Shosteck Group, sales of color-display phones will increase from roughly 85 million units in 2002 to over 350 million units by 2005. Meanwhile, handsets with built-in cameras are forecasted to increase from 20 million units in 2002 to almost 250 million units by 2005. These new wireless phones will also feature higher data rate services driven by 2.5G and 3G standards such as GPRS, CDMA 2000, EDGE and WCDMA. According to EMC, the combination of new subscriber additions and higher replacement rates is expected to drive total handset sales from 400 million units in 2002 to approximately 544 million units in 2005. 
+
+In response to this rapidly growing market, handset original equipment manufacturers, or OEMs, are significantly shortening product development cycles, seeking simplified architectures and streamlining manufacturing processes. Traditional OEMs are shifting to low-cost suppliers around the world. In turn, original design manufacturers, or ODMs, and contract manufacturers, who lack RF and systems-level expertise, are entering the high-volume mobile phone market to support OEMs as well as to develop handset platforms of their own. ODMs and contract manufacturers seek to manage low-cost handset manufacturing and assembly, freeing OEMs to focus on marketing and distribution aspects of their business. Established handset manufacturers and new market entrants alike are demanding complete semiconductor system solutions that include the RF system, all baseband processing, protocol stack and user interface software, plus comprehensive reference designs and development platforms. With these solutions, traditional handset OEMs can accelerate time-to-market cycles with lower investments in engineering and system design. These solutions also enable ODMs to enter the high volume handset market without requiring significant investments in RF and systems-level expertise. 
+
+Similarly, cellular and personal communications services network operators are developing and deploying next generation services. These service providers are incorporating packet-switching capability in their networks to deliver data communications and Internet access to digital cellular and other wireless devices. Over the long term, service providers are seeking to establish a global network that can be accessed by subscribers at any time, anywhere in the world and that can provide subscribers with multimedia services. To meet this goal, OEMs that supply wireless infrastructure base stations to network operators are increasingly relying on mobile communications semiconductor suppliers that can provide highly integrated RF and mixed signal processing functionality. 
+
+Additionally, as service providers migrate cellular subscribers to data intensive next generation applications, base stations that transmit and receive signals in the backbone of cellular and personal communications services systems will be under further capacity constraints. To meet the related demand, OEMs will be challenged to increase base station transceiver performance and functionality, while reducing size, power consumption and overall system costs. 
+
+We believe that these market trends create a potentially significant opportunity for a broad-based wireless semiconductor supplier with a comprehensive product portfolio supported by specialized wireless manufacturing process technologies and a full range of systems-level expertise. 
+
+BUSINESS OVERVIEW 
+Skyworks is a leading wireless semiconductor company focused exclusively on RF and complete cellular system solutions for mobile communications applications. We offer front-end modules, RF subsystems and cellular systems to leading wireless handset and infrastructure customers. 
+
+Skyworks possesses a broad wireless technology capability and one of the most complete wireless communications product portfolios, coupled with customer relationships with virtually all major handset and infrastructure manufacturers. Our product portfolio includes almost every key semiconductor found within a digital cellular handset. 
+
+The following diagram illustrates our products that are used in a digital cellular handset: 
+
+
+ 
+
+Front End Modules — PA Modules are increasingly integrating band-select switches, t/r switches, diplexers, filters and other components to create a single chip front end solution
+
+o    Switch: performs the transmit and receive switching as well as band switching for cellular handsets  
+o    Power Amplifier (“PA”) Module: amplifies signal to provide sufficient energy to reach a base station  
+
+
+RF Subsystems/SPR™ Solution: combines the transceiver, PA and associated controller, SAW filters, and a switchplexer module that includes switches and low-pass filters in a compact 13x13mm MCM package 
+
+o    Receiver (“Rx”): receives the RF signal from the antenna, down-converts the signal and delivers it to the baseband  
+o    Transmitter (“Tx”): transmits the RF signal to the PA Module  
+o    DCR Transceiver (“Tx/Rx”): encompasses the complete RF transmit and receive functions  
+
+
+Complete Cellular Systems 
+
+o    Hardware: includes all the RF devices referenced above, as well as baseband processors that handle mixed-signal functions (converting analog signals to digital) and ARM/DSP digital devices that act as the cellular handset’s central processor  
+o    Software: complete handset software with protocol stack and customizable user interface ("MMI") 
+o    Worldwide Development Support: comprehensive layout, integration, factory and field test; necessary to bring new entrants to market quickly 
+
+
+Skyworks also offers a broad product portfolio addressing next-generation wireless infrastructure applications, including amplifier drivers, ceramic resonators, couplers and detectors, filters, synthesizers and front-end receivers. These components support a variety of RF and mixed signal processing functions within the wireless infrastructure. 
+
+We have a comprehensive RF and mixed signal processing and packaging portfolio, extensive circuit design libraries and a proven track record in component and system design. We believe that these capabilities position us to address the growing need of wireless infrastructure manufacturers for base station products with increased transceiver performance and functionality with reduced size, power consumption and overall system costs. 
+
+THE SKYWORKS ADVANTAGE 
+o    Best-in-Class Wireless Semiconductor and Systems Portfolio 
+o    Market Leadership in Key Product SegmentsCommitment to Technology Innovation 
+o    Commitment to Technology Innovation 
+o    Continuously Developing Unique Component and System Solutions 
+o    World-Class Manufacturing Capabilities and Scale  
+
+OUR STRATEGY 
+Skyworks’ vision is to become the premier supplier of wireless semiconductor solutions. Key elements in our strategy include: 
+
+Leveraging Core Technologies 
+Skyworks deploys technology building blocks such as radio frequency integrated circuits, analog/mixed-signal processing cores and digital baseband engines as well as software across multiple product platforms. We believe that this approach creates economies of scale in research and development and facilitates a reduction in the time to market for key products. 
+
+Increasing Integration Levels 
+High levels of integration enhance the benefits of our products by reducing production costs through the use of fewer external components, reduced board space and improved system assembly yields. By combining all of the necessary communications functions for a complete system solution, Skyworks can deliver additional semiconductor content, thereby offering existing and potential customers more compelling and cost-effective solutions. 
+
+Capturing an Increasing Amount of Semiconductor Content 
+We enable our customers to start with individual components as necessary, and then migrate up the product integration ladder. We believe that our highly integrated solutions will enable these customers to speed their time to market while focusing their resources on product differentiation through a broader range of more sophisticated, next-generation features. 
+
+Diversifying Customer Base 
+Skyworks supports virtually every wireless handset OEM including Nokia Corporation, Motorola, Inc., Samsung Electronics Co., Sony/Ericsson and LG Electronics, Inc. as well as emerging ODMs and contract manufacturers such as BenQ, Compal, Flextronics and Quanta. With the industry’s move towards outsourcing, we believe that we are particularly well-positioned to address the growing needs of new market entrants who seek RF and system-level integration expertise. 
+
+Delivering Operational Excellence 
+The Skyworks operations team leverages world-class manufacturing technologies and enables highly integrated modules as well as system-level solutions. Skyworks will vertically integrate where it can differentiate or will otherwise enter alliances and partnerships for leading-edge capabilities. These partnerships and alliances are designed to ensure product leadership and competitive advantage in the marketplace. We are focused on achieving the industry’s shortest cycle times, highest yields and ultimately the lowest cost structure. 
+
+MARKETING AND DISTRIBUTION 
+Our products are primarily sold through a direct Skyworks sales force. This team is globally deployed across all major market regions. In some markets we supplement our direct sales effort with independent manufacturers’ representatives, assuring broader coverage of territories and customers. We also utilize distribution partners, some of which are franchised globally with others specific to North American markets. 
+
+We maintain an internal marketing organization that is responsible for developing sales and advertising literature, print media such as product announcements and catalogs, as well as a variety of web-based content. Skyworks’ sales engagement begins at the earliest stages in a customer design. We strive to provide close technical collaboration with our customers at the inception of a new program. This partnership allows our team to facilitate customer-driven solutions, which leverage the unique strength of our portfolio while providing high value and greatly reduced time to market. 
+
+We believe that the technical and complex nature of our products and markets demands an extraordinary commitment to close ongoing relationships with our customers. As such, we strive to expand the scope of our customer relationship to include design, engineering, manufacturing, purchasing and project management. We also employ a collaborative approach in developing these partnerships by combining the support of our design teams, applications engineers, manufacturing personnel, sales and marketing staff and senior management. 
+
+We believe that maintaining frequent and interactive contact with our customers is paramount to our continuous efforts to provide world-class sales and service support. By listening and responding to feedback, we are able to mobilize actions to raise the level of customer satisfaction, improve our ability to anticipate future product needs, and enhance our understanding of key market dynamics. We are confident that diligence in following this path will position Skyworks to participate in numerous opportunities for growth in the future. 
+
+CUSTOMERS 
+During fiscal year 2003, Samsung Electronics Co. and Motorola, Inc. accounted for 15% and 11%, respectively, of the Company’s total net revenues. During fiscal year 2002, Samsung Electronics Co. and Motorola, Inc. accounted for 35% and 11%, respectively, of the Company’s total net revenues. As of September 30, 2003 Samsung Electronics Co. accounted for approximately 18% of the Company’s gross accounts receivable. The foregoing percentages are based on sales representing the wireless business of Conexant’s sales for the fiscal year 2002 up to the time of the Merger, and sales of the combined company for the post-Merger period from June 26, 2002 through the end of the fiscal year and for fiscal 2003. 
+
+INTELLECTUAL PROPERTY AND PROPRIETARY RIGHTS 
+We own or are licensed under numerous United States and foreign patents and patent applications related to our products, our manufacturing operations and processes and other activities. In addition, we own a number of trademarks and service marks applicable to certain of our products and services. We believe that intellectual property, including patents, patent applications, trade secrets and trademarks are of material importance to our business. We rely on patent, copyright, trademark, trade secret and other intellectual property laws, as well as nondisclosure and confidentiality agreements and other methods, to protect our confidential and proprietary technologies, devices, algorithms and processes. We cannot guarantee that these efforts will meaningfully protect our intellectual property, and others may independently develop substantially equivalent proprietary technologies, devices, algorithms or processes. In addition to protecting our proprietary technologies and processes, we strive to strengthen our intellectual property portfolio to enhance our ability to obtain cross-licenses of intellectual property from others, to obtain access to intellectual property we do not possess and to more favorably resolve potential intellectual property claims against us. We believe that our technological position depends primarily on our ability to develop new innovative products through the technical competence of our engineering personnel. 
+
+COMPETITIVE CONDITIONS 
+We compete on the basis of time to market; new product innovation; overall product quality and performance; price; compliance with industry standards; strategic relationships with customers; and protection of our intellectual property. Certain competitors may be able to adapt more quickly than we can to new or emerging technologies and changes in customer requirements, or may be able to devote greater resources to the development, promotion and sale of their products than we can. 
+
+Current and potential competitors also have established or may establish financial or strategic relationships among themselves or with our customers, resellers, suppliers or other third parties. These relationships may affect our customers’ purchasing decisions. Accordingly, it is possible that new competitors or alliances among competitors could emerge and rapidly acquire significant market share. We cannot provide assurances that we will be able to compete successfully against current and potential competitors. 
+
+RESEARCH AND DEVELOPMENT 
+Our products and markets are subject to continued technological advances. Recognizing the importance of such technological advances, we maintain a high level of research and development activities. We maintain close collaborative relationships with many of our customers to help identify market demands and target our development efforts to meet those demands. Our design centers are strategically located around the world to be in close proximity to our customers and to take advantage of key technical and engineering talent worldwide. We are focusing our development efforts on new products, design tools and manufacturing processes using our core technologies. 
+
+Our research and development expenditures for fiscal 2003, 2002 and 2001 were $151.8 million, $132.6 million and $111.1 million, respectively. 
+
+RAW MATERIALS 
+Raw materials for our products and manufacturing processes are generally available from several sources. It is our policy not to depend on a sole source of supply unless market or other conditions dictate otherwise. Consequently, there are limited situations where we procure certain components and services for our products from single or limited sources. We purchase materials and services against long-term agreements or on individual purchase orders. We do not carry significant inventories and have a limited number of long-term supply contracts with our suppliers. We believe we have adequate sources for the supply of raw materials and components for our manufacturing needs with suppliers located around the world. 
+
+Under supply agreements entered into with Conexant and Jazz Semiconductor, we receive wafer fabrication, wafer probe and certain other services from Jazz Semiconductor. Pursuant to these supply agreements, we are committed to obtain certain minimum wafer volumes from Jazz Semiconductor. Our expected minimum purchase obligations under these supply agreements are anticipated to be approximately $39 million and $13 million in fiscal 2004 and 2005, respectively. 
+
+BACKLOG 
+Our sales are made primarily pursuant to standard purchase orders for delivery of products, with such purchase orders officially acknowledged by us according to our own terms and conditions. Due to industry practice, which allows customers to cancel orders with limited advance notice to us prior to shipment with little or no penalty, we believe that backlog as of any particular date is not a reliable indicator of our future revenue levels. 
+
+ENVIRONMENTAL REGULATIONS 
+Federal, state and local requirements relating to the discharge of substances into the environment, the disposal of hazardous wastes, and other activities affecting the environment have had, and will continue to have, an impact on our manufacturing operations. Thus far, compliance with environmental requirements and resolution of environmental claims have been accomplished without material effect on our liquidity and capital resources, competitive position or financial condition. 
+
+We believe that our current expenditures for environmental capital investment and remediation necessary to comply with present regulations governing environmental protection and other expenditures for the resolution of environmental claims will not have a material adverse effect on our liquidity and capital resources, competitive position or financial condition. We cannot assess the possible effect of compliance with future requirements. 
+
+CYCLICALITY; SEASONALITY 
+The semiconductor industry is highly cyclical and is characterized by constant and rapid technological change. Product obsolescence, price erosion, evolving technical standards, and shortened product life cycles may contribute to wide fluctuations in product supply and demand. These and other factors, together with changes in general economic conditions, may cause significant upturns and downturns in the industry, and in our business. We have experienced periods of industry downturns characterized by diminished product demand, production overcapacity, excess inventory levels and accelerated erosion of average selling prices. These factors may cause substantial fluctuations in our revenues and our operational performance. We have experienced these cyclical fluctuations in our business in the past and may experience cyclical fluctuations in the future. 
+
+Sales of our products are subject to seasonal fluctuation and periods of increased demand in end-user consumer applications, such as mobile handsets. This generally occurs in the last calendar quarter ending in December. Sales of semiconductor products and system solutions used in these products generally increase just prior to this quarter and continue at a higher level through the end of the calendar year. 
+
+GEOGRAPHIC INFORMATION 
+Net revenues by geographic area are presented based upon the country of destination. Net revenues by geographic area are as follows (in thousands): 
+
+ Years Ended September 30,
+--------------------------------------------------------------------------------
+ 
+ 2003
+--------------------------------------------------------------------------------
+ 2002
+--------------------------------------------------------------------------------
+ 2001
+--------------------------------------------------------------------------------
+ 
+ United States     $ 87,691   $ 72,185   $ 63,948   
+ Other Americas       69,559     4,615     5,455   
+ 
+--------------------------------------------------------------------------------
+ 
+--------------------------------------------------------------------------------
+ 
+--------------------------------------------------------------------------------
+ 
+    
+         Total Americas       157,250     76,800     69,403   
+    
+South Korea       157,772     237,681     142,459   
+Other Asia-Pacific       218,817     114,974     23,898   
+ 
+--------------------------------------------------------------------------------
+ 
+--------------------------------------------------------------------------------
+ 
+--------------------------------------------------------------------------------
+ 
+    
+         Total Asia-Pacific       376,589     352,655     166,357   
+Europe, Middle East and Africa       83,950     28,314     24,691   
+ 
+--------------------------------------------------------------------------------
+ 
+--------------------------------------------------------------------------------
+ 
+--------------------------------------------------------------------------------
+ 
+      $ 617,789   $ 457,769   $ 260,451   
+ 
+--------------------------------------------------------------------------------
+ 
+--------------------------------------------------------------------------------
+ 
+--------------------------------------------------------------------------------
+ 
+
+Our revenues by geography do not necessarily correlate to end handset demand by region. For example, if we sell a power amplifier module to a customer in South Korea, we record the sale within the South Korea account although that customer, in turn, may integrate that module into a product sold to a service provider (its customer) in Africa, China, Europe, the Middle East, the Americas or within South Korea. 
+
+Long-lived assets by geographic area are as follows (in thousands): 
+
+ September 30,
+--------------------------------------------------------------------------------
+ 
+ 2003
+--------------------------------------------------------------------------------
+ 2002
+--------------------------------------------------------------------------------
+ 
+United States     $ 101,871   $ 109,975   
+Mexico       21,223     30,427   
+Other       4,671     3,371   
+ 
+--------------------------------------------------------------------------------
+ 
+--------------------------------------------------------------------------------
+ 
+      $ 127,765   $ 143,773   
+ 
+--------------------------------------------------------------------------------
+ 
+--------------------------------------------------------------------------------
+ 
+
+EMPLOYEES 
+As of October 3, 2003, the Company employed approximately 3,800 persons. Approximately 1,100 employees in Mexico are covered by collective bargaining agreements.  We believe our future success will depend in large part upon our continued ability to attract, motivate, develop and retain highly skilled and dedicated employees. 

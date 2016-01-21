@@ -1,0 +1,628 @@
+Item 1.   Business
+
+
+GENERAL
+
+     We are a systems oriented designer and manufacturer of analog and digital
+integrated circuits and discrete semiconductors for the communications and power
+management end-user markets. The majority of our revenue is derived from sales
+of our analog and mixed-signal products. We use our proprietary technologies and
+design capabilities to provide systems solutions for rapidly growing wireless
+applications. We own over 1,250 patents and have substantial expertise in the
+design and manufacturing of components that perform many of the essential
+functions relating to the supply, distribution and regulation of electric power
+in electronic products. Our core competencies include the design of analog,
+mixed-signal, digital signal processing, radio frequency and discrete power
+semiconductor products. Our products include components performing complex
+communications functions, such as our PRISM(R) chip sets for wireless data
+communications, digital radios and high speed converters in cellular base
+stations and power management integrated circuits and discrete semiconductors
+used in Internet servers and computers. We were formed on August 13, 1999
+through a series of transactions in which we and a wholly-owned subsidiary
+acquired the semiconductor business of Harris Corporation, or Harris.
+
+OUR BUSINESS STRATEGY
+
+     We provide systems level solutions for the growing integrated
+communications semiconductor market. Integrated communications semiconductors
+enable the convergence of voice, data and video communications. Within
+integrated communications, we are focused on several key markets including high
+data rate wireless connectivity, power management and communications integrated
+circuits for wireless and wired communications infrastructure. We use our
+expertise in digital and analog semiconductors and radio and software design in
+order to deliver chip sets, components, software and licensable application
+designs for communications equipment customers. For fiscal year 2000, we
+allocated about 92% of our research and development investment to the
+development of products for the integrated communications market.
+
+     Our business strategy emphasizes the following key elements:
+
+     o Focus on High Growth, Integrated Communications Markets.  In light of the
+       rapid expansion of communication applications and the increased
+       requirement for power management in electronic systems, we focus our
+       investments in these areas. We believe these markets have attractive
+       growth characteristics and enable us to draw on our core competencies.
+       Accordingly, we are pursuing opportunities in communications, wireless
+       and power management.
+
+     o Maintain Technology Leadership.  We focus our research and development
+       investments on integrated communications. We have 220 engineers working
+       on innovative wireless and power management architectures. We also have
+       significant experience in analog and mixed-signal process technology and
+       high volume manufacturing. In conjunction with these efforts, we will
+       continue to expand our strong intellectual property position by seeking
+       to increase our existing portfolio of over 1,250 patents.
+
+     o Provide Systems Level Solutions to Our Customers.  We design and develop
+       our semiconductors with a systems level approach that we believe enhances
+       the value of our products as they are designed into and incorporated in
+       our customers' electronic systems. This approach yields early integration
+       of our products into our customers' products, provides opportunities for
+       current design wins, and ultimately increases revenue as our solutions
+       are incorporated within a targeted end application.
+
+     o Focus on Partnering with Industry Leaders.  We partner with industry
+       leaders in each of our target end-user markets to take our strong
+       engineering and design capabilities to commercial levels. Our customer
+       base of industry leaders illustrates the acceptance of our products to
+       date, and we continue to partner with these customers and others to
+       develop and market our next generation products. Our applications and
+       design engineers support our customers' end product development.
+
+     o Maintain High Quality Customer Service.  Quality customer service is
+       critical to our customer retention and sales growth. Through our customer
+       relations initiatives, we believe we distinguish ourselves from our
+       competitors. Additionally, our sales force and authorized representatives
+       and distributors provide customer information programs and support our
+       comprehensive customer service efforts.
+
+
+                                       4
+<PAGE>
+
+PRODUCTS AND TECHNOLOGY
+
+     Our products are organized into three principal product groups: Analog &
+Mixed-Signal, Discrete Power and Wireless.
+
+<TABLE>
+<CAPTION>
+                                               ANALOG &                   DISCRETE
+                                             MIXED-SIGNAL                  POWER                  WIRELESS
+                                      --------------------------  ------------------------  ---------------------
+<S>                                   <C>                         <C>                       <C>
+FISCAL YEAR 2000 REVENUES...........  $396.8 million              $205.9 million            $51.5 million
+
+PERCENTAGE OF REVENUES..............  60.7%                       31.4%                     7.9%
+
+KEY CUSTOMERS.......................  Cisco                       Asustek                   Cisco
+                                      Compaq                      Bosch                     Nokia
+                                      Dell                        Compaq                    Siemens
+                                      Intel                       Emerson                   Sony
+                                      Siemens                                               3Com
+</TABLE>
+
+ANALOG & MIXED-SIGNAL
+
+     Our Analog & Mixed-Signal portfolio represented 60.7% of our fiscal year
+2000 revenue. We deliver leading-edge analog, mixed-signal and digital signal
+processing semiconductors and groups of semiconductors that are designed to work
+together, also known as chip set solutions, for today's fastest-growing
+communications markets. Our design focus targets such opportunities as wired
+networks, subscriber line interface circuits, or SLICs, which interface analog
+and digital signals for telecom systems, and high-speed digital radios for
+cellular basestations. The two analog product lines include the following:
+
+     Signal Processing Products.  We have a portfolio of linear, mixed-signal
+and digital signal processing integrated circuits optimized for high-speed
+communications applications. Communications analog and mixed-signal integrated
+circuits are primarily targeted at wired and wireless voice and data
+communications infrastructure applications. We have developed a complete
+portfolio of digital radio signal processing products and a line of 8-, 12- and
+14-bit high speed data acquisition converter integrated circuits for cellular
+basestations, wireless data links, wireless local loop and broadband wireless
+access, which we refer to as the wireless infrastructure market. These products,
+designated CommLink(TM), enable our customers to increase the amount of data
+that can be transmitted, enabling the addition of high speed data transmission
+to cellular communications networks. These integrated circuits enable faster
+wireless data links between remote basestations and also enable more efficient
+cable "headends"--the ground station for the satellite links and broadband
+wireless access--which is sometimes called Wireless Cable or LMDS. Our products
+support cellular standards including 2G Digital such as IS-95 CDMA and GSM, 2.5G
+such as Edge and IS-95+, and 3G such as Wideband CDMA. We utilize both systems
+level engineering and integrated circuit expertise to offer superior products
+for wireless communications systems. This combination of expertise enabled us to
+introduce the industry's first digital signal processing-based single chip, the
+HSP50016, which increased the efficiency of signal chain implementation through
+component reductions. We continue that leadership with the HSP50216 Quad
+programmable down converter for use in 2.5G cellular basestation designs.
+
+     New generations of high performance digital signal processing
+communications integrated circuits require ever increasing performance from the
+analog-to-digital and digital-to-analog converters that convert between digital
+signals and analog radio frequency signals for wireless applications. We
+currently market a family of 6- to 14-bit, CMOS analog-to-digital and
+digital-to-analog converters in multiple speed ranges and functional
+combinations in order to complement our digital radio wireless infrastructure
+solutions.
+
+     With more than 15 years of experience in their design and development, we
+continue to expand our portfolio of SLICs. SLICs, which are used in many
+telephone applications, serve two primary functions. First, they interface
+analog voice signals with digital processors. Second, they serve the simple, yet
+essential, function of ringing a telephone to signal an incoming call. Recently,
+we introduced an advanced ringing SLIC, which combined both functions into a
+single SLIC. Thus, the ringing SLIC acts as both an interface into the telephone
+and also rings the telephone. Our newest ringing SLIC product, a voice over
+internet protocol, or VoIP, product, enables the use of analog phones in the
+emerging Internet telephony market. Our SLIC portfolio of advanced telecom
+linecard solutions are ideal for today's universal telecom exchange
+
+
+
+                                       5
+<PAGE>
+
+systems, including Plain Old Telephone Service, or POTS, Private Branch
+Exchanges, Central Office, Loop Carrier, Fiber in the Loop and Wireless Local
+Loop.
+
+     Included in our legacy base product portfolio are operational amplifiers,
+which are referred to as op amps, interface integrated circuits, industrial and
+video integrated circuits and digital products which serve both defense and
+commercial systems, with microprocessor, memory and data communications
+products. These products typically have long life cycles and are designed into
+our customers' products. These include the industry standard BiCMOS high speed
+op amp and the low power instrumentation converter. This portfolio is sold to a
+broad range of customers in industrial, medical, computer, avionics and test and
+measurement instrumentation markets, primarily through distribution partners.
+These products typically have long life cycles and are designed into our
+customers' products thereby supporting long-term sales. Our end-user markets
+include wireless communications, video and image processing, high-speed
+satellite communications, test/measurement equipment and medical
+instrumentation.
+
+     We supply our communications products to Cisco, Dell, IBM, Lucent, Siemens
+and other customers.
+
+     Power Management Integrated Circuits.  We develop power system
+architectures and provide a portfolio of computer products, file server/storage
+system products, networking and VoIP products. Our power management products for
+computing applications operate in a voltage range of 1 to 30 volts and are
+designed into desktop personal computers, file servers and workstations. We have
+also developed new power management circuits for 24x7 server networks supporting
+e-commerce on the Internet.
+
+     Our highly successful HIP6000 family of pulse width modulator controller
+integrated circuits are used in about 30% of all personal computers that use
+Pentium, Pentium II and Pentium III class processors. We are currently working
+with motherboard manufacturers to have our pulse width modular controller
+integrated circuits designed into motherboards utilizing the recently introduced
+Pentium 4 processor. We expect to begin shipping products for Pentium 4
+motherboards as Pentium 4 processors begin to ship in greater volumes in the
+near term. Based on our current design wins, we believe that we also will have a
+substantial share of the volume of pulse width modulator controller integrated
+circuits used in motherboards utilizing Athlon processors.
+
+     We have introduced an advanced architecture which delivers multiphase power
+to higher speed microprocessors. This is a requirement for Intel and AMD
+microprocessors above 800 MHz. This new platform of products consists of three
+controllers (HIP6301, HIP6302 and HIP6303) and three gate drivers (HIP6601,
+HIP6602 and HIP6603). We also offer a complete advanced configuration power
+interface solution for instant on and sleep mode capability used to save energy
+in personal computers.
+
+     We provide complete power solutions for the file server and redundant array
+of independent disks, or RAID, market. Internet growth, especially e-commerce,
+is driving the need for high reliability/availability in these applications. Our
+family of hot plug products allows repair and maintenance of a file server and
+RAID without a complete shutdown of the file server.
+
+     We are currently expanding our space-qualified portfolio by offering our
+Starpower(TM) family of radiation hardened power management products for
+commercial satellite applications. We are developing what we believe will be an
+industry-leading radiation hardened DC/DC Converter power module line to provide
+highly reliable power management in communications satellites. Our radiation
+hardened integrated circuit product portfolio includes logic, memories, signal
+processing components, microprocessors and custom devices, providing system
+designers with a full complement of products for radiation hardened systems used
+in commercial space and defense applications.
+
+     Our power management integrated circuits are also used in industrial
+control and automotive engine management systems.
+
+     We supply our power management products to Asustek, Compaq, Dell, IBM,
+Intel and other customers.
+
+
+
+                                       6
+<PAGE>
+
+     DISCRETE POWER
+
+     Our Discrete Power portfolio represented 31.4% of our revenue for fiscal
+year 2000. Discrete Power products, coupled with our power management integrated
+circuits, provide unique power management solutions for the integrated
+communications market. Our metal oxide semiconductor field effect transistors,
+or MOSFETs have been designed in conjunction with our multiphase power
+integrated circuits for faster, next generation computers. We also manufacture
+efficient power MOSFETs used in servers supporting the Internet. We are
+investing in new, efficient trench power devices for cellular phones and
+portable information appliances.
+
+     In 1980, we invented IGBTs, or insulated gate bipolar transistors, and hold
+some of the fundamental patents that cover their production. We introduced our
+600V SMPS, or switch mode power supply Series IGBT family of high-speed, high
+efficiency IGBTs specifically tailored for operation in today's switched mode
+power supplies. Our portfolio also includes radiation hardened N- and P-channel
+metal oxide semiconductor field effect transistors, or MOSFETs, for
+high-reliability applications such as communications satellites.
+
+     In addition, our IGBTs, MOSFETs and rectifiers are used in automotive and
+industrial applications. These include motor management, automotive ignition,
+welding, instrumentation and other industrial applications. Like our base analog
+and mixed-signal products, our base power MOSFETs are designed into our
+customers' products with life cycles spanning several years.
+
+     We supply our Discrete Power products to Asustek, Bosch, Compaq, Emerson
+and Siemens and other customers who use our products for personal computer
+motherboard power, diesel fuel injection, body and chassis controls and
+industrial power supplies.
+
+     WIRELESS
+
+     Our Wireless portfolio represented 7.9% of our revenue for fiscal year
+2000. We are the leading developer of semiconductor solutions for the emerging
+wireless local area networking market. Our PRISM(R) family of chip sets
+addresses the growing demand for wireless networking for use in both the home
+and business providing cost effective, wireless access to high data rate
+broadband communications networks. We believe we are the only supplier of an
+integrated wireless networking product solution, including reference designs,
+software and all integrated circuits necessary for wireless data communications
+at data rates of 11 megabits-per-second.
+
+     The PRISM II chip set is composed of five highly integrated semiconductors.
+They are the 2.4GHz power amplifier, RF/IF up and down converter, IF/BV
+quadrature modulator/demodulator, baseband processor and the medium access
+controller. These integrated circuits represent design and manufacturing
+competence in radio frequency, or RF, mixed-signal and digital technologies. The
+2.4GHz power amplifier, RF/IF up and down converter, and the quadrature
+modular/demodulator are designed and manufactured using a high performance RF
+silicon germanium process technology. The baseband processor and medium access
+controller are designed and manufactured using submicron complementary metal
+oxide semiconductor, or CMOS, process technologies.
+
+     Because we design all of the components of our wireless chip set, including
+reference designs and software, we believe we provide our customers with the
+best available performance and value. Providing our customers with a turnkey
+wireless data radio solution enables them to have the fastest time to market for
+their systems which we believe is a critical competitive advantage in this
+emerging market. More than 40 companies, including Cisco, Compaq, Nokia, Samsung
+and Sony, have adopted use of the PRISM(R) chip set in their products. Our PRISM
+II chip set is our second-generation chip set capable of delivering high-speed
+wireless networking at data rates of 11 megabits-per-second. The PRISM II chip
+set incorporates advanced integrated circuit design with silicon germanium
+process technology which makes the PRISM II chip set five times faster while
+reducing power consumption by 50% compared to the original PRISM(R) chip set.
+Since the introduction of the PRISM II chip set, we have been developing
+relationships with original equipment manufacturers, including Cisco, Compaq,
+Nokia, Nortel, Siemens, Sony, Symbol and 3Com, for use of the PRISM II chip set
+in a variety of wireless local area network applications for home and business.
+
+     As of May 29, 2000, we acquired privately held No Wires Needed B.V., or
+NWN, for 3.35 million shares of our Class A Common Stock. Based in Bilthoven,
+The Netherlands, NWN provides high performance wireless-to-broadband access
+point reference designs. NWN utilizes the PRISM(R) chip set together with its
+own high data rate digital controller integrated circuits allowing end users to
+wirelessly connect multiple computers and hand-held or Internet appliances to a
+wired broadband network. NWN also provides wireless encryption software which
+enhances the security of a wireless local area
+
+
+
+                                       7
+<PAGE>
+
+network. Additionally, NWN has designed a high data rate digital controller
+integrated circuit, which is a component we believe will enhance the performance
+of future generations of our PRISM(R) chip set. The NWN digital integrated
+circuit, which we refer to as a medium access controller, or MAC, is compliant
+with the IEEE802.11b standard and can support data rates of up to 54
+megabits-per second, which is vital for multi-channel voice and digital video in
+homes and offices. The acquisition of NWN added 52 new employees.
+
+CUSTOMERS AND APPLICATIONS
+
+     We seek to capitalize on our core competencies by focusing on the
+integrated communications market. Within the integrated communications market,
+our products include communication integrated circuits, power management
+semiconductors and PRISM(R) wireless local area network chip sets.
+
+<TABLE>
+<CAPTION>
+                           END MARKETS                       APPLICATIONS                    KEY CUSTOMERS
+                     ------------------------   --------------------------------------    -------------------
+<S>                  <C>                        <C>                                       <C>
+Communications       Wireless local area        Wireless local area networks providing    Cisco, Compaq,
+                     networks,                  network wireless access to broadband      Dell, IBM, Lucent,
+                     communications,            (cable, ethernet, xDSL, ISDN)             Nokia, Nortel,
+                     telecommunications         networks, video, wired and wireless       Samsung, Siemens,
+                                                telephony, home gateways, networking      Sony, Symbol, 3Com
+
+Power Management     Networking and computing   File servers, PC motherboards,            Asustek, Compaq,
+                                                printers, workstations                    Dell, IBM, Intel
+</TABLE>
+
+     Outside of our targeted end markets, our remaining category is industrial
+products. Applications in this category include automotive applications such as
+fuel injection and ignition circuits, industrial applications including power
+supplies and defense applications such as smart munitions and tactical and
+strategic missiles. We sell to, among others, DaimlerChrysler, Siemens, Boeing,
+Lockheed Martin and Emerson.
+
+SALES, MARKETING AND DISTRIBUTION
+
+     In fiscal years 2000 and 1999, we derived about 60% and 66%, respectively,
+of our sales from original equipment manufacturer, or OEM, customers through our
+global sales organizations and 40% and 34%, respectively, of our sales through
+distributors. We operate sales organizations in the Americas, Europe and the
+Asia/Pacific region. Our sales organizations are supported by logistics
+organizations. Product orders flow to our manufacturing facilities or to one of
+our foundries where the product is made. Products are then shipped to the
+customer either directly or indirectly via our warehouses in the United States,
+Europe and Asia.
+
+     We have dedicated direct sales organizations operating in the Americas,
+Europe and Asia/Pacific regions that serve our major OEM customers. We have
+strategically located our sales offices near these major OEM customers. We also
+have a large network of distributors and manufacturers' representatives to
+distribute our products around the world. To serve our customer base, we
+maintain a small, highly focused, direct sales force selling products for each
+of our targeted product areas, combined with an extensive network of
+distributors and manufacturers' representatives. Our sales force is segmented by
+end-user markets, thereby ensuring each salesperson has an end-user market
+expertise and focus. We also maintain a dedicated marketing organization, which
+supports each product area on a regional basis.
+
+     Typically, distributors handle a wide variety of products, including
+products that compete with our products, and fill orders for many customers.
+Some of our sales to distributors are made under agreements allowing for market
+price fluctuations and/or the right of return on some unsold merchandise.
+Virtually all distribution agreements contain an industry standard stock
+rotation provision allowing for minimum levels of inventory returns. In our
+experience, these inventory returns can usually be resold. Manufacturers'
+representatives generally do not offer products that compete directly with our
+products, but may carry complementary items manufactured by others.
+Manufacturers' representatives do not maintain a product inventory; instead,
+their customers place large quantity orders directly with us and are referred to
+distributors for smaller orders.
+
+
+
+                                       8
+<PAGE>
+
+RESEARCH AND DEVELOPMENT
+
+     We believe that the continued introduction of new products in our target
+markets is essential to our growth. We believe that we must continue to
+innovate, enhance and expand our products and services to maintain our
+leadership position, and we intend to achieve this through in-house research and
+development efforts and selective acquisitions. As of June 30, 2000, we had 571
+employees engaged in research and development efforts. Our research and
+development efforts are focused on new product development and improvements in
+process technology in our growth areas of communications and power management.
+For fiscal year 2000, we allocated about 92% of our research and development
+investment towards development of products for the integrated communications
+market.
+
+     Our expenditures for research and development in fiscal years 1998, 1999
+and 2000 were $75.1 million, $67.0 million and $78.0 million, respectively. Each
+of our product areas maintains independent research and development
+organizations. We work closely with our major customers in many research and
+development situations to increase the likelihood that our products will be
+designed directly into the customers' products and achieve rapid and lasting
+market acceptance.
+
+MANUFACTURING
+
+     We fabricate wafers at three locations in the United States--Mountaintop,
+Pennsylvania, Palm Bay, Florida, and Findlay, Ohio. We also use a number of
+outside wafer fabrication foundries for the manufacture of device types where we
+do not have the necessary technologies resident in house. We also utilize
+advanced manufacturing processes of outside foundries for certain components of
+our PRISM(R) products.
+
+     We recently sold our principal assembly and test facility, located in Kuala
+Lumpur, Malaysia, to ChipPAC, Inc. and entered into a multi-year supply
+agreement with ChipPAC under which the Malaysian facility became our preferred
+provider of semiconductor assembly and test services. We also have limited
+assembly and test capability in Palm Bay, Florida. We use a number of assembly
+and test subcontractors for device types and packages that cannot be assembled
+and tested at ChipPAC's facility in Kuala Lumpur.
+
+     Our wafer fabs are among the most productive and efficient in the industry.
+We believe we can continue to maintain competitive cost, further increase
+productivity and enhance our process efficiency by investing in people and
+assets, where necessary.
+
+     We utilize an extensive set of manufacturing processes to fabricate our
+products, including technologies such as: ULTRAFET(R), IGBT, BiCMOS, Power
+BiCMOS, High Frequency Bipolar, CMOS and Rad Hard Processes. The table below
+sets forth some information regarding our manufacturing facilities, products,
+wafer diameter and annual wafer capacity:
+
+                             FABRICATION FACILITIES
+
+<TABLE>
+<CAPTION>
+                                                                                                 ANNUAL CAPACITY
+      LOCATION                         PRODUCTS/FUNCTIONS                    WAFER DIAMETER     (6" EQUIVALENT WAFERS)
+---------------------  --------------------------------------------------   ----------------    ---------------------------
+<S>                    <C>                                                  <C>                 <C>
+Mountaintop,           MOSFETs, IGBTs, rectifiers                                 6", 8"                  420,000
+ Pennsylvania
+
+Findlay, Ohio          Standard linear/interface integrated circuits,                 5"                  120,000
+                       power integrated circuits
+
+Palm Bay, Florida      Power integrated circuits, telecom SLICs, rad hard         4", 6"                  175,000
+                       integrated circuits
+</TABLE>
+
+
+
+                                       9
+<PAGE>
+
+     Our manufacturing processes use many raw materials, including silicon
+wafers and various chemicals and gases. We obtain our raw materials and supplies
+from a large number of sources on a just-in-time basis. Although supplies for
+the raw materials used by us are currently adequate, shortages could occur in
+various essential materials due to interruption of supply or increased demand in
+the industry.
+
+BACKLOG
+
+     Our sales are made pursuant to purchase orders that are generally booked
+from one to six months in advance of delivery. Backlog is influenced by several
+factors including market demand, pricing and customer order patterns in reaction
+to product lead times. Although quantities actually purchased by customers may
+vary between booking and delivery to the extent customer needs or industry
+conditions change, our backlog has historically been a reliable indicator of our
+future revenues. Our backlog was about $188.5 million at July 3, 1998, $174.0
+million at July 2, 1999 and $259.5 million at June 30, 2000. We expect to ship
+the backlog at June 30, 2000 within twelve months of that date.
+
+SEASONALITY
+
+     A lower percentage of our products is sold to the computer end-user or into
+the computer market than is sold by other semiconductor manufacturers. Sales in
+the computer market fluctuate more than in other semiconductor markets. As a
+result, we experience less seasonal fluctuation than the semiconductor industry
+as a whole. Historically, our first quarter has been the weakest due to model
+year changeovers in the automotive industry and summer holiday seasons,
+primarily in Europe. Our increasing focus on integrated communications products
+has resulted in a higher percentage of our sales coming from the communications
+markets in the second half of our fiscal year. Sales made into the
+communications market generally experience less seasonality than sales of our
+historical mix of products.
+
+COMPETITION
+
+     We compete in different markets to various degrees on the basis of price,
+technical performance, product features, product system compatibility,
+customized design, availability, quality and sales and technical support. Our
+ability to compete successfully depends on elements both within and outside of
+our control, including successful and timely development of new products and
+manufacturing processes, product performance and quality, manufacturing yields,
+product availability, intellectual property protection obtained by us and our
+competitors, customer service, pricing, industry trends and general economic
+trends.
+
+     The following chart sets forth our principal competitors by business unit:
+
+<TABLE>
+<CAPTION>
+BUSINESS UNIT               PRINCIPAL COMPETITORS
+--------------------------  ----------------------------------------------------------------------------
+
+<S>                         <C>
+Analog & Mixed-Signal       Analog Devices, Linear Technology, Semtech, Texas Instruments
+
+Discrete Power              International Rectifier, STMicroelectronics, Vishay
+
+Wireless                    Lucent, Philips, Texas Instruments
+</TABLE>
+
+
+
+                                       10
+<PAGE>
+
+TRADEMARKS AND PATENTS
+
+     We own rights to a number of trademarks and patents that are important to
+our business. Among others, we consider Intersil, PRISM(R), ULTRAFET(R) and
+CommLink to be trademarks that are material to our operations.
+
+     Our corporate policy is to protect proprietary products by obtaining
+patents for these products when practicable. We currently possess about 1,250
+patents.
+
+EMPLOYEES
+
+     Our worldwide workforce consisted of 2,930 employees (full- and part-time)
+as of June 30, 2000, of whom 730 were represented by collective bargaining
+arrangements. Of our employees, 1,715 were engaged in manufacturing, 571 were
+engaged in engineering, 394 were engaged in marketing and sales, 145 were
+engaged in administration and 105 were engaged in operating our management
+information systems. Of our employees, 1,786 were employed in the Analog &
+Mixed-Signal area; 882 were employed in the Discrete Power area; and 262 were
+employed in the Wireless area. We believe that our relations with our employees
+are good.
+
+ENVIRONMENTAL MATTERS
+
+     Our operations are subject to environmental laws in the countries in which
+we operate that regulate, among other things, air, ground and water emissions at
+our manufacturing facilities; the management and disposal of hazardous
+substances; and the investigation and remediation of environmental
+contamination. As with other companies engaged in like businesses, the nature of
+our operations exposes us to the risk of environmental liabilities or claims. We
+believe, however, that our operations are in substantial compliance with
+applicable environmental requirements. Our costs to comply with environmental
+regulations were about $6.3 million, $7.4 million and $4.8 million in each of
+fiscal years 1998, 1999 and 2000, respectively.
+
+     Our facilities in Findlay, Ohio have ongoing remediation projects to
+respond to releases of hazardous substances that occurred prior to the
+acquisition of Harris' semiconductor business. Our facilities in Mountaintop,
+Pennsylvania have groundwater and subsurface soil contamination from past
+operations, some of which occurred prior to Harris' acquisition of those
+facilities, for which remediation has been conducted, and additional remediation
+may be required. In addition, Harris' facilities in Palm Bay, Florida, a portion
+of which includes our business, are listed on the National Priorities List for
+clean-up under the Comprehensive Environmental Response, Compensation, and
+Liability Act ("Superfund"). Remediation activities are ongoing in Palm Bay in
+accordance with consent decrees entered into by Harris with the United States
+Environmental Protection Agency. Harris has agreed to indemnify us for the cost
+of these projects at all of our facilities,
+
+
+
+                                       11
+<PAGE>
+
+including at Findlay, Ohio, Mountaintop, Pennsylvania and Palm Bay, Florida and
+our former facility at Kuala Lumpur, Malaysia to the extent these costs exceed
+financial reserve amounts at the time of our acquisition of the semiconductor
+business of Harris. Based on the historical costs of these projects and because
+the remediation projects are in advanced stages, we do not believe that the
+future cleanup costs will be material, even without the indemnity.
+
+     In connection with the closure of a waste storage pad at our former Kuala
+Lumpur facility in Malaysia, a June 2000 environmental investigation identified
+evidence of potential releases to the groundwater of hazardous substances that
+were previously stored on the pad. Based on the composition of the groundwater
+impacts, it appears that the hazardous substances were those used by Harris or
+its predecessors, and not us. Harris has agreed to indemnify us for addressing
+environmental conditions created prior to our ownership, and accordingly we put
+Harris on notice of the potential environmental claim. We sold the business
+which operates out of the Kuala Lumpur, Malaysia facility to ChipPAC in June
+2000 (See Business--Manufacturing) and we gave ChipPAC a similar indemnity.
+ChipPAC provided us with a claim for indemnification by letter dated August 1,
+2000. We do not have adequate information to determine the extent of the impacts
+to groundwater, but we do not believe future cleanup costs, if needed, will be
+material, even without the Harris indemnity.
+
+     Future laws or regulations and changes in existing environmental laws or
+regulations may subject our operations to different, additional or more
+stringent standards. While historically the cost of compliance with
+environmental laws has not had a material adverse effect on our business,
+financial condition or results of operations, we cannot predict with certainty
+our future costs of compliance because of changing standards and requirements.
+We cannot assure you that material costs will not be incurred in connection with
+the future compliance with environmental laws or with future cleanup costs
+related to currently unknown contamination.
