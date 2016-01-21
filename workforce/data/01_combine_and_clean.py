@@ -8,12 +8,19 @@ Created on Thu Jan 21 08:44:40 2016
 import pandas as pd
 
 # %% Read in the data
+d1 = pd.read_excel("./D1_10k_files/semicon10k_2000_2005.xlsx")
 d2 = pd.read_csv("D2_firm_level_data.csv")
 d3 = pd.read_csv("D3_patent_data.csv")
 d4 = pd.read_csv("D4_cntrycode_ethnicity.csv")
 d5 = pd.read_csv("D4_ethnic_surnames.csv")
 
 # %% Combine data
+d1_2 = pd.merge(d1, d2,
+                left_on = 'Ticker',
+                right_on = 'firm_name',
+                how = 'outer')
+                
+                
 d2_3 = pd.merge(d2, d3, 
                 left_on = 'firm_name', 
                 right_on = 'firm', 
