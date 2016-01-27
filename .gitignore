@@ -66,9 +66,18 @@ networks/notes/*.pdf
 # ignore for workforce analytics
 workforce/docs/*.pdf
 workforce/data/*.zip
+workforce/lectures/*/*.xlsx
 
 # ignore for ml
 ml/hw/hw0/*.pdf
+
+# ignore for vis
+vis/*.pdf
+vis/*/*/*.xls
+vis/*/*/*.xlsx
+vis/*/*/*/*.xls
+vis/*/*/*/*.xlsx
+vis/*/*/*.pdf
 
 
 
