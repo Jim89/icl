@@ -73,18 +73,13 @@ for i in range(len(cleaned)):
     
 
 # generate firm symbols and years
-firms = []
-years = []
-for f in files:
-    # get firm name
-    firms.append(f.split('_')[0])
-    # get year
-    years.append((f.split('_')[1])[:4])
+firms = [f.split('_')[0] for f in files]
+years = [f.split('_')[1] for f in files]
 
 # combine in to tidy data frame
 data_dict = {'firm': firms,
              'year': years,
-             'content': cleaned}
+             'content': stops_removed}
              
 d1_detail = pd.DataFrame(data_dict)             
 
