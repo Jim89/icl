@@ -70,3 +70,14 @@ for firm1 in firms:
 	       sim_list.append(similarity(vect1,vect2))
         firm_comp[firm1]=sim_list
                
+# %% step 6 - read in firm data
+d2 = pd.read_csv("D2_firm_level_data.csv")
+
+
+# employee level
+mean_empys = np.mean(d2['Employees'])
+std_empys = np.std(d2['Employees'])
+
+large_firms = d2[d2['Employees'] >= std_empys+mean_empys]      
+
+avg_dictionary_size = np.mean([len(val) for val in firm_nouns.values()])
