@@ -22,7 +22,18 @@ def extract_nouns(text):
     for item in tags:
         if item[1] == 'NN' or item[1] == 'NNP' or item[1] == 'NNS' or item[1] == 'NNPS':
             nouns.append(item)
-    return nouns                
+    return nouns       
+
+  
+# Calculate the cosine similarity of two vectors 
+def similarity(vect1, vect2):
+    numerator =  len(list(set(vect1) & set(vect2)))
+    denom = len(list(set(vect1) | set(vect2)))
+    if not denom:
+        sim = 0
+    else:
+        sim = round(float(numerator)/denom,3)
+    return sim             
 
 
 # %% step 1
