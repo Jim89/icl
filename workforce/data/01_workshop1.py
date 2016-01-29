@@ -30,7 +30,7 @@ def extract_nouns(text):
 files = os.listdir("./D1_10k_files")
 
 # convenience subsetter for testing
-to_get = 10
+to_get = len(files)
 
 # generate firm symbols and years
 firms = [f.split('_')[0] for f in files]
@@ -82,10 +82,7 @@ firms = d1_data['firm'].unique()
 d1_data_grouped = pd.DataFrame(d1_data.groupby('firm')['nouns'].sum())
 
 firm_list = list(d1_data_grouped['nouns'])
-    
-
-
-    
+firm_list = [set(item) for item in firm_list]    
 
 
 # %% step 3 - remove duplicates from global list
@@ -101,9 +98,9 @@ def stop_words(word_list):
             stop_list.append(key)
     return (new_word_list, stop_list)
     
-new_words, stop_list = stop_words(global_list_words)
+(global_list_words,stop_list) = stop_words(global_list_words)
 
-global_list_words = [word for word in global_list if word not in stop_list]
+
 
 
 
