@@ -76,6 +76,7 @@ workforce/workshops/*/*.pdf
 
 # ignore for ml
 ml/hw/hw0/*.pdf
+ml/docs/*.pdf
 
 # ignore for vis
 vis/*.pdf
