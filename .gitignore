@@ -65,7 +65,9 @@ networks/notes/*.pdf
 
 # ignore for workforce analytics
 workforce/docs/*.pdf
-workforce/workshops/*/*.pdf
+workforce/docs/*.docx
+workforce/docs/*/*.pdf
+workforce/workshops/*/*.pf
 workforce/data/*.zip
 workforce/lectures/*/*.xlsx
 
