@@ -1,0 +1,137 @@
+---
+title: "Visualisation Assignment 1a"
+author: "Jim Leach"
+date: "3 February 2016"
+output: word_document
+---
+
+# Introduction
+
+## Background
+
+This assignment deals with the curiosities, circumstances, purpose and ideas potentially involved in creating a visualisation/infographic in a number of different scenarios. Four scenarios were considered, each dealing with data on capital punishment/executions in the state of Texas. Representative data were provided and the challenge was to consider these data and the various factors involved in formulating the brief for a visualisation across a number of situations.
+
+## Document structure
+
+This document presents the responses for section 1a of the first assignment for the BS1907 Visualisation module. The document is divided in to sections, one for each of the scenarios in the assignment. Each section is further divided in to sub-sections for the various tasks in the assignment.
+
+# Section 1 - Scenario A
+
+## The scenario
+
+This scenario imagines that we are working for a pro-capital punishment US newspaper reporting on a milestone execution (the 500th) in Texas. 
+
+## General assumptions
+
+I have assumed that the paper is well known for being pro-capital punishment. Additionally, I made a further assumption that the readership shares this view in general. I made a further assumption that part of the reason for the pro-capital punishment stance is a belief that it is an effective deterrent, and that part of it is due to a belief that it is a just punishment for the severity of the crimes involved. I have also assumed that this is not a large, national newspaper, probably something limited to just Texas, or perhaps to just several counties within Texas (given the state's large size).
+
+## Context
+
+### Reason
+
+Within this scenario, I imagined that the following two types of intrigue might present (a) reason(s) for creating the visualisation. 
+
+* __Audience intrigue__: I imagined that the audience might ask "how many victims have there been relative to the number of offenders?", leading in to the (more hypothetical) "how many lives are potentially being saved each year due to deterrent effects?".
+
+* __Anticipated intrigue__: An alternative is to consider readers who are not known to be strictly pro-capital punishment (but who are not anti-execution either). In this instance, the newspaper may want to make a similar case - visualising the number of victims over time for the 500 offenders executed to date. I imagined that the newspaper would think "[our readers] might like to know how many lives have been taken by offenders to date, and how many more might be lost if the deterrent effect was removed". Similarly, the newspaper might try to include in these numbers not just direct victims, but also injured parties, family members effected etc to consider that "[our readers] might be interested in the huge number of people negatively affected by the crimes of these offenders."
+
+### Circumstances
+
+* __Stakeholders__: I thought that the newspaper owner(s) along with our editors would be stakeholders as they have an interest in our work, but also in promoting and protecting the newspaper's interests (financial and otherwise). Similarly, the Texas Department of Justice and/or police force may also be stakeholders if quotes/clarification(s)/further data are required for the piece. Similarly, representatives from other pro-capital punishment groups might also be involved if wider information is sought. Finally, the readers of the paper are also stakeholders in the sense that they are financial contributors to the paper, and the piece should entice them to continue to purchase the paper for their news. 
+
+* __Audience__: I assumed that audience is the "average Joe", perhaps non-academic and maybe working class (I imagined the paper to be similar to UK "red-tops"). Overall I have assumed that the audience is not particularly sophisticated and read the paper for news and stories, rather than detailed analysis. I have assumed that, being a newspaper, the audience is relatively captivated: they are willing to sit and read an interesting story for several minutes rather than glancing at something on a poster or in the paper as part of a busy commute.
+
+* __Pressures__: I assumed that, given the scheduled nature of executions, the paper was given around 2 months to produce the piece. No extra financial budget has been given and so the piece forms part of "business as usual".
+
+* __Rules__: The piece needs to be tied to the newspaper's style, but must also be visually striking. As such, a broader colour palette has been permitted, but must be relatively muted and no more than 4 colours can be used in the visualisation. The font used in the piece is restricted to the newspapers in-house font used in all work. The work must be suitable for printing (hence the limited colour palette) and as such should not contain too many small/detailed points/marks that may not be clear in a print version.
+
+* __Frequency__: This is a one-off piece of work for a special feature in the paper. It will not be live and will only focus on data from the first to the 500th execution. Future data will not be incorporated in to the piece as they become available.
+
+* __Setting__: I assumed that the setting is relatively prolonged: the audience will take time to read over the piece as a whole and we do not need something that can be digested in 5 seconds (although considering the non-sophisticated audience it should not be a complex visual that takes a long time to comprehend). The audience is remote - we may need to add explanation(s) and call outs to anything we want to explain in more detail.
+
+* __Size__: The visualisation(s) are to accompany a two-page spread special feature. There needs to be one main visualisation that covers half to one full page of the spread. The data may be used to create either one or two profiles of particularly vicious offenders but these will not require much more that data extracts and quick summaries in terms of the visualisation. Each of these profiles will be at most one eigth of a page each.
+
+* __Format__: The visualisation is print-based. It must be formatted within the contraints set out in "rules" and "size" and is entirely static in nature. 
+
+* __Creators__: The visualisation will be created by a small team comprising of a single journalist with data manipulation skills supported by an illustrator/designer and a team lead/project manager/senior journalist.
+
+* __Tech__: The team does not have a great deal of advanced technical expertise on the data side, and so technology will be focussed on Excel and/or other GUI-based tools for data manipulation and preparation. The same case applies for creating the visualisation, however the illustrator/designer is proficient with artistic software (e.g. Photoshop/Illustrator) and can take a basic visualisation and transform it in to the finished product.
+
+
+## Vision
+
+### Purpose
+
+* __Experience__: The experience should be explanatory. The newspaper is simply seeking to present the data alongside a compelling written story for the special feature. Given the non-sophisticated audience, we may need to add explanation of anything that is complex. Some of the explaining will be done in the article, but we may need to add a call out on the visual that references anything contained in the written piece to emphasise it.
+
+* __Tone__: The tone is very much feeling. This is an emotive subject and the type of newspaper is such that an emotive message will be most effective for communicating our intended message/understanding of the data to the audience. Too many dry facts will not help us sell the newspaper, and we are seeking to (further) convince readers that capital punishment is the right choice. As such, a "feeling" tone is most appropriate. 
+
+## Ideas
+
+
+*******
+
+
+# Section 1 - Scenario B
+
+## The scenario
+
+This scenario imagines that we are analysts at the Texas Department of Criminal Justice reporting to senior management in the department.
+
+## General assumptions
+
+I have assumed that there is no particularly special context for this reporting, and that it represents an annual report of execution data as part of normal reporting to management. There are certain legal requirements for what must be reported and so these need to be included in the work.
+
+However, outside of these requirements, senior management are aware of media coverage of racial tensions between police and public across the US, and will likely want to focus on this issue as part of their overall report. They are also aware of several "botched executions" that have gathered further negative attention in the press, and they are keen to be made aware of any such events in Texas.
+
+As such, I have assumed that further data are available beyond what was provided in the assignment, specifically information about supplies of execution material and the amount of time it took for each offender to die.
+
+I have assumed that the report will be presented in PowerPoint format before being circulated as a document.
+
+## Context
+
+### Reason
+
+Within this scenario, I imagined that the following intrigue might present (a) reason(s) for creating the visualisation. 
+
+* __Audience intrigue__: Senior management are interested in the execution data within the context of the yearly report. Given the racial issues that they are concerned with, they are interested in knowing about the execution statistics broken down by racial group, covering questions such as "what proportion of executed offenders were non-white?" or "how has the racial breakdown of executed offenders changed over time?".
+
+### Circumstances
+
+* __Stakeholders__: The main stakeholders in this scenario are the audience - the senior management. We need to present the data to them, but also to ensure that we are providing answers to specific questions that they have about racial demographics and botched executions. The head of the analytics team is also a stakeholder as they will need to ensure that our work is accurate, as well as meeting senior management needs. Other Department of Criminal Justice staff will also be stakeholders as they may have data that we would like to access (e.g. relating to supplies or time-to-die information) and may be able to provide further context to data that we will need when presenting to senior management.
+
+* __Audience__: The audience is exclusively senior management, the report is internal and will not be widely circulated. The audience is informed and sophisticated, I have assumed that the management have spent many years working in the department and can understand more complex numerical summaries and graphical representations of the data. The audience is engaged and require clear information from the report such that they are equipped to answer questions to _their_ superiors in the future. However they are most focussed on their specific concerns and so may have less time to spend on the "normal" data that must be in the report.
+
+* __Pressures__: Given that this is an annual report, I have assumed that the analysts have 1 month to produce the report as part of their regular activities. They do not have extra budget beyond what is normal. The report is internal only and as such the team needs only to emulate the internal style of reports and does not need to create a stand-out visual to "wow" anyone.
+
+* __Rules__: The report must adhere to Texas DoJ internal standards. It must use the DoCJ standard-font and reporting colour palette and may not deviate from this. In terms of compatibility, the visualisations must be suitable for a PowerPoint-style presentation, as well as for printing within the report and therefore must fit within 1 sheet of A4 paper at their largest.
+
+* __Frequency__: The report must be produced once per year. There are certain visuals that are produced each year and so must be reproducible given similar data (e.g. number of executions split by crime, for example) each year (and as such last year's report may be used as a template). Given management's specific concerns, a small number of visualisations will be more bespoke and will not necessarily require repeated production. The report is not live and will only be updated next year, and so no provision for frequent data refreshes is necessary.
+
+* __Setting__: The setting is relatively rapid. Whilst management are interested in certain elements of the report, they are busy and will only look at details quickly - the visualisations need to be quick and punchy. The audience is a combination of live (during the presentation) and remote (when the report is circulated), therefore the visuals can require some explanation (in the presentation) but this explanation should be reproduced in text/explanatory call outs in the report.
+
+* __Size__: The visualisation elements of the report will a series of (at most) 10 PowerPoint slides, therefore at most 10 visualisations should be created. Each visualisation must be viewable on 1 slide and must be no larger than 1 side of A4 (either portrait or landscape) for when the report is printed. 
+
+* __Format__: The visualisations will be formatted both as PowerPoint slides, and also as print handouts of the slides. They do not need to be interactive.
+
+* __Creators__: There is a small (around 5 members) team of analysts in the Texas DoCJ comprising mainly technical analysts and statisticians. There is 1 senior analyst familiar with reporting within the DoCJ who will oversee the work. The team does not have a designer/illustrator or similar.
+
+* __Tech__: The team is proficient with software such as Excel/Tableau (or similar) as well as languages such as R for both data manipulation and visualisation. No team member is proficient with bespoke tools such as `d3` or _Illustrator_.
+
+## Vision
+
+### Purpose
+
+* __Experience__: The experience should be a mixture of explanatory and exhibitory. The standard reporting charts that must be produced can be almost entirely exhibitory in nature, simple presenting the data that the senior management will required - they are comfortable dealing with these charts and no further explanation is required. Charts focussing on senior managements specific concerns may need some explanation if they are non-standard chart types that senior management are not entirely familiar with.
+
+* __Tone__: The tone is very much reading. This is a dry, functional report. It is not seeking to excite or entertain senior management but merely to deliver the information that they require as efficiently as possible. Understanding will be driven through the delivery of facts, not through emotive reponses.
+
+## Ideas
+
+***
+
+
+
+
+
+
