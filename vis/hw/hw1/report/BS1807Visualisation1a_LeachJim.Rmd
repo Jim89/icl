@@ -72,7 +72,7 @@ Within this scenario, I imagined that the following two types of intrigue might 
 *******
 
 
-# Section 1 - Scenario B
+# Section 2 - Scenario B
 
 ## The scenario
 
@@ -128,10 +128,107 @@ Within this scenario, I imagined that the following intrigue might present (a) r
 
 ## Ideas
 
-***
+*****
+
+# Section 3 - Scenario C
+
+## The scenario
+
+This scenario imagines that we are part of a pressure group trying to influence the debate about the ending of capital punishment.
+
+## General assumptions
+
+I have assumed that the campaign group is anti-capital punishment and is seeking to influence the debate in order to achieve the end capital punishment. I assumed that the campaign group wants to focus on the inmates rather than on their crimes, and ideally to elicit some sympathy for them/the situation surrounding their crime(s) on a human/personal level.
+
+## Context
+
+### Reason
+
+Within this scenario, I imagined that the following intrigue might present (a) reason(s) for creating the visualisation. 
+
+* __Anticipated intrigue__: In this context I imagined that the campaign group would anticipate the intrigue of audience along the lines of "If they are thinking about abolishing capital punishment, they may be interested in knowing about the costs of holding a prisoner on death row, the amount of time prisoners spend on death row before being executed, the emotions of the inmate about to be executed or the amount of time it takes an inmate to die when they are executed." The campaign group wants to influence people and so is trying to anticipate what information will be most effective in doing so.
+
+### Circumstances
+
+* __Stakeholders__: In this scenario, I imagined that the stakeholders would be people such as the campaign manager(s) who must be kept "on side" whilst the project is ongoing. Other campaign/pressure groups may also be stakeholders if there is an element of collaboration. The Texas DoCJ may also be a stakeholder if the campaign group is seeking further data that is not readily available on the webpage provided in the assignment. There may need to be involvement of others who knew the inmates who would then also become stakeholders during journalistic work. The group might seek the advice of mental health professionals to help when profiling individuals, potentially making them stakeholders too. 
+
+* __Audience__: I have assumed that the audience is essentially the general public, who's mood/opinion the group seek to affect. I.e., the group is not seeking to _directly_ affect decision makers, but to sway others in order to create the political pressure that will do so. I have therefore assumed that the audience ranges from layperson with very little experience/information on the issues, to a more sophisticated reader who understands the subject well. The audience is not initially captivated (i.e. they have not necessarily sought out the work) and so it must draw them in quickly. However, given the potential range of audience, it must also provide scope for more depth in its message(s) once a reader is engaged. 
+
+* __Pressures__: I have assumed that this will be a relatively large piece of work and as such 6 months are available in which to produce the piece. Whilst the group is organised, it is not especially rich and so the budget is very limited - the solution must be cheap and not rely on expensive technologies or large numbers of paid staff to complete it. It must be visually distinct and striking in an effort to get it to "go viral" and deliver its message the largest number of people possible (even those beyond Texas).
+
+* __Rules__: The visualisation must be web-based and be optimised for a smart-phone/tablets as well as desktop/laptop viewing. There are no specific requirements around colour, font(s) or other branding. However the campaign group is keen to avoid gore-ish colours or overly-sensational themes and so would like to restrict the palette to a small selection of colours. The visualisation must be compatible with both Android and iOS as well as non-Internet Explorer desktop-based browsers (IE compatibility is desirable, but not a strict requirement).
+
+* __Frequency__: The visualisation will initially use historic data but a mechanism for refreshing the data every 6 months must be built in to the solution. The visualisation will not be _live_, but will change over time as new data become available.
+
+* __Setting__: The setting is remote and the solution should be rapid, but with the facility for a more prolonged examination if the user spends time with the solution. Given the audience, the initial message(s) should be clear and explained, with instructions for how to get more insight with time.
+
+* __Size__: Two related but separate versions of the visualisation will be produced. One for mobile devices which will be smaller scale with reduced detail (due to the smaller screen size) and one for lap/desktops with more functionality for exploring the detail in the data. 
+
+* __Format__: The output will be purely for the web, i.e. no print at all. The visualisation will be be landscape and will potentially have animated elements if this proves to be possible in the timeframes. 
+
+* __Creators__: The core (i.e. paid) team for the visualisation is small: 1 data expert, 1 artist/designer/animator and 1 journalist-type to gather more information on the inmates. However, given the nature of the campaign group there is the potential to crowd-source certain elements of the project and bring on additional volunteers to help with the project. 
+
+* __Tech__: The core team is proficient with advanced bespoke visualisation technology (e.g. `R` or `d3.js`) as well as custom animation tools and artistic programs (such as _Illustrator_). The data expert is comfortable doing most data manipulation and cleaning tasks using a variety of programmatic and GUI-based approaches. More experience with other tools can be sourced from campaign group volunteers if required.
+
+## Vision
+
+### Purpose
+
+* __Experience__: The experience will initially be explanatory, but with exploratory functionality built in to the solution, especially in the desktop version. The initial explanation should state exactly what is being shown in the visualisation, with interactive features to get more information on individual data points built in. 
+
+* __Tone__: The overall tone should be feeling to elicit a strong emotional reaction which will ideally help the project to "go viral". Within the exploratory layer, there is room for some elements of reading, presenting more detailed information about individual inmates and/or comparisons with similar inmates.
+
+## Ideas
 
 
+*****
 
+# Section 3 - Scenario D
 
+## The scenario
 
+In this scenario the assignment asks what intrigues _me_ about the data, and what might I do with it if I had the chance.
 
+## General assumptions
+
+I have assumed that there is no particularly special context for this project, that it is simply something I would undertake in my free time to share on my blog, twitter or similar for my own personal satisfaction.
+
+## Context
+
+### Reason
+
+Within this scenario, I imagined that the following intrigue might present (a) reason(s) for creating the visualisation. 
+
+* __Audience intrigue__: Senior management are interested in the execution data within the context of the yearly report. Given the racial issues that they are concerned with, they are interested in knowing about the execution statistics broken down by racial group, covering questions such as "what proportion of executed offenders were non-white?" or "how has the racial breakdown of executed offenders changed over time?".
+
+### Circumstances
+
+* __Stakeholders__: The main stakeholders in this scenario are the audience - the senior management. We need to present the data to them, but also to ensure that we are providing answers to specific questions that they have about racial demographics and botched executions. The head of the analytics team is also a stakeholder as they will need to ensure that our work is accurate, as well as meeting senior management needs. Other Department of Criminal Justice staff will also be stakeholders as they may have data that we would like to access (e.g. relating to supplies or time-to-die information) and may be able to provide further context to data that we will need when presenting to senior management.
+
+* __Audience__: The audience is exclusively senior management, the report is internal and will not be widely circulated. The audience is informed and sophisticated, I have assumed that the management have spent many years working in the department and can understand more complex numerical summaries and graphical representations of the data. The audience is engaged and require clear information from the report such that they are equipped to answer questions to _their_ superiors in the future. However they are most focussed on their specific concerns and so may have less time to spend on the "normal" data that must be in the report.
+
+* __Pressures__: Given that this is an annual report, I have assumed that the analysts have 1 month to produce the report as part of their regular activities. They do not have extra budget beyond what is normal. The report is internal only and as such the team needs only to emulate the internal style of reports and does not need to create a stand-out visual to "wow" anyone.
+
+* __Rules__: The report must adhere to Texas DoJ internal standards. It must use the DoCJ standard-font and reporting colour palette and may not deviate from this. In terms of compatibility, the visualisations must be suitable for a PowerPoint-style presentation, as well as for printing within the report and therefore must fit within 1 sheet of A4 paper at their largest.
+
+* __Frequency__: The report must be produced once per year. There are certain visuals that are produced each year and so must be reproducible given similar data (e.g. number of executions split by crime, for example) each year (and as such last year's report may be used as a template). Given management's specific concerns, a small number of visualisations will be more bespoke and will not necessarily require repeated production. The report is not live and will only be updated next year, and so no provision for frequent data refreshes is necessary.
+
+* __Setting__: The setting is relatively rapid. Whilst management are interested in certain elements of the report, they are busy and will only look at details quickly - the visualisations need to be quick and punchy. The audience is a combination of live (during the presentation) and remote (when the report is circulated), therefore the visuals can require some explanation (in the presentation) but this explanation should be reproduced in text/explanatory call outs in the report.
+
+* __Size__: The visualisation elements of the report will a series of (at most) 10 PowerPoint slides, therefore at most 10 visualisations should be created. Each visualisation must be viewable on 1 slide and must be no larger than 1 side of A4 (either portrait or landscape) for when the report is printed. 
+
+* __Format__: The visualisations will be formatted both as PowerPoint slides, and also as print handouts of the slides. They do not need to be interactive.
+
+* __Creators__: There is a small (around 5 members) team of analysts in the Texas DoCJ comprising mainly technical analysts and statisticians. There is 1 senior analyst familiar with reporting within the DoCJ who will oversee the work. The team does not have a designer/illustrator or similar.
+
+* __Tech__: The team is proficient with software such as Excel/Tableau (or similar) as well as languages such as R for both data manipulation and visualisation. No team member is proficient with bespoke tools such as `d3` or _Illustrator_.
+
+## Vision
+
+### Purpose
+
+* __Experience__: The experience should be a mixture of explanatory and exhibitory. The standard reporting charts that must be produced can be almost entirely exhibitory in nature, simple presenting the data that the senior management will required - they are comfortable dealing with these charts and no further explanation is required. Charts focussing on senior managements specific concerns may need some explanation if they are non-standard chart types that senior management are not entirely familiar with.
+
+* __Tone__: The tone is very much reading. This is a dry, functional report. It is not seeking to excite or entertain senior management but merely to deliver the information that they require as efficiently as possible. Understanding will be driven through the delivery of facts, not through emotive reponses.
+
+## Ideas
