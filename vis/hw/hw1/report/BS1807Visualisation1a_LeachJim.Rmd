@@ -183,7 +183,7 @@ Within this scenario, I imagined that the following intrigue might present (a) r
 
 *****
 
-# Section 3 - Scenario D
+# Section 4 - Scenario D
 
 ## The scenario
 
@@ -197,38 +197,36 @@ I have assumed that there is no particularly special context for this project, t
 
 ### Reason
 
-Within this scenario, I imagined that the following intrigue might present (a) reason(s) for creating the visualisation. 
-
-* __Audience intrigue__: Senior management are interested in the execution data within the context of the yearly report. Given the racial issues that they are concerned with, they are interested in knowing about the execution statistics broken down by racial group, covering questions such as "what proportion of executed offenders were non-white?" or "how has the racial breakdown of executed offenders changed over time?".
+* __Potential intrigue__: Within the context of this data, I am interested in the general sentiment of the last words of the individuals who have been executed. I wonder if there is commonality in sentiment across the entire data, or within groups in the data (e.g. based on race, age). I also wonder how this sentiment might shift with the amount of time the inmate spent on death row before being executed. 
 
 ### Circumstances
 
-* __Stakeholders__: The main stakeholders in this scenario are the audience - the senior management. We need to present the data to them, but also to ensure that we are providing answers to specific questions that they have about racial demographics and botched executions. The head of the analytics team is also a stakeholder as they will need to ensure that our work is accurate, as well as meeting senior management needs. Other Department of Criminal Justice staff will also be stakeholders as they may have data that we would like to access (e.g. relating to supplies or time-to-die information) and may be able to provide further context to data that we will need when presenting to senior management.
+* __Stakeholders__: There are no specific stakeholders as part of this project. It would be something I might complete in my own time in order to satisfy my own curiosity.
 
-* __Audience__: The audience is exclusively senior management, the report is internal and will not be widely circulated. The audience is informed and sophisticated, I have assumed that the management have spent many years working in the department and can understand more complex numerical summaries and graphical representations of the data. The audience is engaged and require clear information from the report such that they are equipped to answer questions to _their_ superiors in the future. However they are most focussed on their specific concerns and so may have less time to spend on the "normal" data that must be in the report.
+* __Audience__: The audience is likely to be anyone who stumbled upon my blog/twitter page, or those with whom I specifically shared the project. Given who reads my blog/follows me on twitter, it is likely that the audience will be relatively sophisticated and may understand more detailed analysis. Similarly, I would expect that they would be relatively captivated, having chosen to visit my page and having read about the visualisation.
 
-* __Pressures__: Given that this is an annual report, I have assumed that the analysts have 1 month to produce the report as part of their regular activities. They do not have extra budget beyond what is normal. The report is internal only and as such the team needs only to emulate the internal style of reports and does not need to create a stand-out visual to "wow" anyone.
+* __Pressures__: Any time constraints would be purely self imposed, and I think setting a limit of 1 month would be appropriate for the project. The budget would be £0.
 
-* __Rules__: The report must adhere to Texas DoJ internal standards. It must use the DoCJ standard-font and reporting colour palette and may not deviate from this. In terms of compatibility, the visualisations must be suitable for a PowerPoint-style presentation, as well as for printing within the report and therefore must fit within 1 sheet of A4 paper at their largest.
+* __Rules__: I would likely choose a muted and restricted colour palette, and a clean font compatible with my blog. Beyond this there would be no set rules for the project.
 
-* __Frequency__: The report must be produced once per year. There are certain visuals that are produced each year and so must be reproducible given similar data (e.g. number of executions split by crime, for example) each year (and as such last year's report may be used as a template). Given management's specific concerns, a small number of visualisations will be more bespoke and will not necessarily require repeated production. The report is not live and will only be updated next year, and so no provision for frequent data refreshes is necessary.
+* __Frequency__: This would be a one-off project, using historical data only (i.e. not live).
 
-* __Setting__: The setting is relatively rapid. Whilst management are interested in certain elements of the report, they are busy and will only look at details quickly - the visualisations need to be quick and punchy. The audience is a combination of live (during the presentation) and remote (when the report is circulated), therefore the visuals can require some explanation (in the presentation) but this explanation should be reproduced in text/explanatory call outs in the report.
+* __Setting__: The audience would be remote, and the setting would be for a medium to long duration spent with the visualisation.
 
-* __Size__: The visualisation elements of the report will a series of (at most) 10 PowerPoint slides, therefore at most 10 visualisations should be created. Each visualisation must be viewable on 1 slide and must be no larger than 1 side of A4 (either portrait or landscape) for when the report is printed. 
+* __Size__: There would be 2 or 3 simple charts each fitting on to a single screen.
 
-* __Format__: The visualisations will be formatted both as PowerPoint slides, and also as print handouts of the slides. They do not need to be interactive.
+* __Format__: The project would either be a `Shiny` web-app built using `R` and hosted online, or a selection of static images for a special blog post on my analysis.
 
-* __Creators__: There is a small (around 5 members) team of analysts in the Texas DoCJ comprising mainly technical analysts and statisticians. There is 1 senior analyst familiar with reporting within the DoCJ who will oversee the work. The team does not have a designer/illustrator or similar.
+* __Creators__: The creation team would be comprised of just me.
 
-* __Tech__: The team is proficient with software such as Excel/Tableau (or similar) as well as languages such as R for both data manipulation and visualisation. No team member is proficient with bespoke tools such as `d3` or _Illustrator_.
+* __Tech__: The technology available would be limited Excel, `R`, `Python`, a small amount of `CSS` and `HTML` and simple command line tools.
 
 ## Vision
 
 ### Purpose
 
-* __Experience__: The experience should be a mixture of explanatory and exhibitory. The standard reporting charts that must be produced can be almost entirely exhibitory in nature, simple presenting the data that the senior management will required - they are comfortable dealing with these charts and no further explanation is required. Charts focussing on senior managements specific concerns may need some explanation if they are non-standard chart types that senior management are not entirely familiar with.
+* __Experience__: The experience would be explanatory, presenting the findings of my analysis and explaining what I had found. If a `Shiny` web-app was built, then some limited interactivty would be possible in the charts, but the overall experience would still be one of explanation, and the interactivity would be limited to filtering/getting some further explanation as opposed to deep explorations.
 
-* __Tone__: The tone is very much reading. This is a dry, functional report. It is not seeking to excite or entertain senior management but merely to deliver the information that they require as efficiently as possible. Understanding will be driven through the delivery of facts, not through emotive reponses.
+* __Tone__: The tone would be more reading than feeling. It would simple present the results of my exploratory analysis and not seek to generate any strong emotions in the audience.
 
 ## Ideas
