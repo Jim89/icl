@@ -31,10 +31,11 @@ Some further notes that have been made about the data are:
 * The _Event_ field describes the gender of the event. I have therefore assumed that the athlete in the _Athlete(s)_ field is the same gender as that described in the _Event_.
 * Only certain types of events appear to be represented in the data, specifically those that are races. It would be necessary to confirm exactly which events were present included/omitted ahead of any more detailed analysis.
 * The _Athlete(s)_ field contains either a single name, or multiple names separated by commas. It has been assumed that those fields with multiple names represent a team of individuals that competed together (for example in a relay). Again, this would need confirmation ahead of formal analyses.
-* Due to the historic nature of the data, there are some country codes present in the data that are no longer in use, have merged with other contries or have split in to multiple countries. Examples include the country code for West Germany and the Soviet Union. 
-* Data are _not_ presented for particpants who did not win a medal of some kind (i.e. 4th and lower placing athletes).
+* Due to the historic nature of the data, there are some country codes present in the data that are no longer in use, have merged with other countries or have split in to multiple countries. Examples include the country code for West Germany and the Soviet Union. 
+* Data are _not_ presented for participants who did not win a medal of some kind (i.e. 4th and lower placing athletes).
 * The _Result_ field lists the time for each athlete in each race, but is not of a uniform nature (some are in seconds, some minutes etc). The _Unit_ field must be used to decode the _Result_ field.
-* The _ResultInSeconds_ field standardises the race time(s) in to seconds for all events presented
+* The _ResultInSeconds_ field standardises the race time(s) in to seconds for all events presented.
+* There are no "canooing" events until the 1936 games, similarly, there are no rowing events for the 1896 games.
 
 ## Data Set 2 Overview
 
@@ -45,11 +46,100 @@ Some further notes that have been made about the data are:
 
 * The _City_ field appears to provide the location of the games in the year listed. This would need confirmation.
 * There is a break in the _Edition_ field represented the games that were not held during World War 2.
-* The _Sport_ field appears to be the "top level" of the event-type heirarchy, having the fewest distinct values. There are, however, still quite a large number of values in this field (33), suggesting that further grouping could be performed.
-* The _Discipline_ field appears to be the "middle level" of the event-type heirarchy (sitting under _Sport_ but above _Event_). There is a lot of duplication with the _Sport_ field, with many values being identical to that found in the _Sport_ field. For example the _Sport_ baseball corresponds to the _Discipline_ baseball, similarly with athletics and many others.
+* The _Sport_ field appears to be the "top level" of the event-type hierarchy, having the fewest distinct values. There are, however, still quite a large number of values in this field (33), suggesting that further grouping could be performed.
+* The _Discipline_ field appears to be the "middle level" of the event-type hierarchy (sitting under _Sport_ but above _Event_). There is a lot of duplication with the _Sport_ field, with many values being identical to that found in the _Sport_ field. For example the _Sport_ baseball corresponds to the _Discipline_ baseball, similarly with athletics and many others.
 * The _Athlete_ field  appears to always contain a single individual, with any teams represented by multiple records in the data.
 * The country code (similar to the first data set one) at times references historic values that are either no longer used due to being merged/split into new countries, or only being relevant for certain games (e.g. EUN and IOP were only used in the 1992 games).
 * The _Gender_ field appears to list the gender of the athlete listed (as there is a separate _Event Gender_ field). This may require confirmation.
-* The _Event_ field appears to be the "bottom level" of the event-type heirarchy, with the most granular representation of the event. There is, however, still some duplication with _Discipline_ and _Sport_, for example the Volleyball event is listed as Volleyball in both _Discipline_ and _Sport_.
+* The _Event_ field appears to be the "bottom level" of the event-type hierarchy, with the most granular representation of the event. There is, however, still some duplication with _Discipline_ and _Sport_, for example the Volleyball event is listed as Volleyball in both _Discipline_ and _Sport_.
 * _Event Gender_ has 3 values, M, W, and X. It has been assumed that X represents mixed-gender team events. X event genders are confined exclusively to equestrian and sailing values in the _Sport_ field.
-* The _Medal_ field lists the medal received by the listed athlete in the listed event. Again, data are _not_ presented for particpants who did not win a medal of some kind (i.e. 4th and lower placing athletes).
+* The _Medal_ field lists the medal received by the listed athlete in the listed event. Again, data are _not_ presented for participants who did not win a medal of some kind (i.e. 4th and lower placing athletes).
+* Some appear to have been introducted very recently, for example Badminton and Baseball do not appear before 1992. Similarly, there are some historic events, such as Tug of War, which feature in old games but no longer appear. Some events, for instance tennis and archery, existed in early games but were then dropped until more recently. For all of these events, it would be interesting to confirm if they were really not present at the games during those years, or if they are just missing from the data. 
+
+## Comparisons and Contrasts
+
+Each data set offers a related but distinct view of the summer Olympics over the majority of the 20^th^ century. The first data set focuses on race-style events, i.e. those where the fastest time wins. It is exclusive in this regard, presenting no information about _any_ non-race events. Data set two presents a more mixed view, with other events also included, such as weightlifting and team games. The second data set does also contains data on non-race athletic events (field events) such as shot-put, hammer throw etc. 
+
+Whilst the first data set offers a richer perspective from a time perspective (containing data on more games in time), the second is richer from an event-based view, containing data on a significantly greater number of events. It is interesting to note that where the two data sets overlap (i.e. on race-events), the first contains slightly more information, as it provides data on race times as opposed to just who won each medal. 
+Data set one provides detail on the performance of the winning athletes in the events that are listed, and could be used to measure how winning individuals perform relative to each other (for example, just _how_ much faster was the Gold vs. Silver and Bronze winners), or how specific individuals changed over multiple appearances in the games. Data set two does not present this detail, but covers a wider range of events and athletes. In short, data set one has depth whereas data set two has breadth.
+
+In both data sets only a small subset of countries are observed winning medals in the early games (mainly those in Europe and North America) with more countries having success later on. It is not clear if these are the only countries that were present in the games, or only those that were winning. 
+
+Furthermore, the overall total number of medals is dominated by the large established countries, notably the US and European countries. However this is changing over time, with both African and Asian countries rising from no medals in the middle of the 20^th^ century to a larger share of medals by modern games (especially Asian countries). This increase appears to have come at the cost of Europe's medal share more than North America's.
+
+In both data sets, there are fewer women participants than male participants. This changes over time, with women seeing an increasing share of all medals listed in the data throughout the 20^th^ century. However, the share of medals one by women begins from a larger base in the first data set, potentially indicating that women were more represented in race-style events than non-races in earlier games.
+
+# Section 2
+
+This section lists possible transformations that could be made to the data in order to clean and/or enhance it. It also lists some other data that could be sourced to consolidate the data.
+
+## Data Set One
+
+### Transformations
+
+* Extract gender from the _Event_ field to classify athletes by gender, and to clean up the event name.
+* Standardise country _codes_ across group of related codes, for example grouping all German-based codes under the current code for Germany.
+* Standardise country _names_ across groups of related countries, for example standardising "Russia" and "Soviet Union" to just "Russia".
+* Ungroup teams of athletes winning events in to multiple lines per group, one for each athlete.
+* Standardise/clean up names in to a consistent format and case.
+* Calculate result in minutes and/or hours (as well as seconds) to give a more sensible unit for longer events (e.g. the marathon).
+* Calculate the first medal awarded to each country in order to provide a proxy for how long the country has been participating in the games.
+* Combine with data set two to create a larger, overall data set.
+* At a country (or continent) level, calculate the proportion of medals one by that country/continent for each year.
+
+### Additional data
+
+* Add country statistics data, e.g. population, GDP. Ideally this would be at the time of each games to show changes over time.
+* Relate countries to continents to give a higher level view.
+* Add country games were held in.
+* Add data on other countries participating in games/events.
+* Add athlete net worth/event winnings.
+* Add athlete age/race/height/weight/other physical characteristics.
+
+## Data Set Two
+
+### Transformations
+
+* Group sports/disciplines into a smaller number of groups to facilitate easier summarising.
+* Standardise country _codes_ across group of related codes, for example grouping all German-based codes under the current code for Germany.
+* Convert _Event gender_ 'W' to 'F' for standardisation. Similarly convert 'X' to 'Group' for legibility.
+* Standardise event names, e.g. weight classes across sports.
+* Standardise/clean up athlete names in to a consistent format and case.
+* Calculate the first medal awarded to each country in order to provide a proxy for how long the country has been participating in the games.
+* Add country games were held in from the city name.
+* At a country (or continent) level, calculate the proportion of medals one by that country/continent for each year.
+
+### Additional data
+
+* Add country statistics data, e.g. population, GDP. Ideally this would be at the time of each games to show changes over time.
+* Relate countries to continents.
+* Provide a lookup of standardised country codes to country _names_ for more readable labelling.
+* Add data on other countries participating in games/events.
+* Add athlete net worth/event winnings.
+* Add athlete age/race/height/weight/other physical characteristics.
+* Race time(s) for race-style events, and other similar details (e.g. distance jumped, number of points scored etc) for non-racing events.
+
+# Section 4 - Editorial Perspectives
+
+In this section I present a list of editorial perspectives that I have come up with whilst examining the data.
+
+## 1 - 100m race times over time
+
+* __Angle__: Fastest/winning time in the 100m sprint, split by men and women.
+* __Framing__: All 100m sprints held in summer Olympics games between 1928 and 2012. Both men's _and_ women's are shown.
+* __Focus__: Both genders made similar speed gains (~1.1-1.3 seconds) and female 2012 time now on a par with men's 1928 speed. 
+
+## 2 -  Share of medals by continent
+
+* __Angle__: Share of total medals one by each continent in each games.
+* __Framing__: All summer Olympics games held between 1920 and 2008, for both genders and for all events across both data sets.
+* __Focus__: The emergence of Asia - began from a share of 0.2% of medals in 1920 to reach approximately 25% of medals in 2008.
+
+
+## 3 - Dominant new countries
+
+* __Angle__: Total medals won by countries that are new to winning medals.
+* __Framing__: All summer Olympics games held since 1896. Only showing countries that first won a medal within the last 20 years, excluding "Russia" as it was competing as Soviet Union before that.
+* __Focus__: Dominance of China and South Korea in new medal winners - adding the USA circle for reference would help to emphasise this.
+
+N.B., given data on which countries actively participated in each games, this could be altered to total medals won by countries that are new to the games, not just those winning medals.
