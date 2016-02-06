@@ -15,3 +15,41 @@ This assignment deals with developing intimacy with data and establishing editor
 
 This document presents the responses for section 1b of the first assignment for the BS1907 Visualisation module. The document is divided in to sections, one for each of the four tasks in the assignment. Each section is further divided in to sub-sections for the two sets of data that were provided.
 
+# Section 1 - Examination
+
+In the following sections I provide an overview of each data set, describe their physical properties and provide some contrast as to what each data set shows.
+
+## Data Set 1 Overview
+
+The first data set is comprised of 4093 rows and 10 columns. It presents data on winners of Gold, Silver and Bronze medals in a variety of events for all Summer Olympic games that have been held since 1896. The table below summarises the various data fields, their types and some points of commentary:
+
+
+Some further notes that have been made about the data are:
+
+* There are a breaks in 4 year Olympic cycle presented in the _Games_ field representing the games that were not held during World Wars 1 and 2.
+* Individual events are classified in terms of the "Sport" that the fall under (e.g. athletics vs. swimming).
+* The _Event_ field describes the gender of the event. I have therefore assumed that the athlete in the _Athlete(s)_ field is the same gender as that described in the _Event_.
+* Only certain types of events appear to be represented in the data, specifically those that are races. It would be necessary to confirm exactly which events were present included/omitted ahead of any more detailed analysis.
+* The _Athlete(s)_ field contains either a single name, or multiple names separated by commas. It has been assumed that those fields with multiple names represent a team of individuals that competed together (for example in a relay). Again, this would need confirmation ahead of formal analyses.
+* Due to the historic nature of the data, there are some country codes present in the data that are no longer in use, have merged with other contries or have split in to multiple countries. Examples include the country code for West Germany and the Soviet Union. 
+* Data are _not_ presented for particpants who did not win a medal of some kind (i.e. 4th and lower placing athletes).
+* The _Result_ field lists the time for each athlete in each race, but is not of a uniform nature (some are in seconds, some minutes etc). The _Unit_ field must be used to decode the _Result_ field.
+* The _ResultInSeconds_ field standardises the race time(s) in to seconds for all events presented
+
+## Data Set 2 Overview
+
+The second data set is comprised of 26394 rows and 10 columns. It presents data on winners of Gold, Silver and Bronze medals in a variety of events for all Summer Olympic games that have been held between 1920 and 2008. The table below summarises the various data fields, their types and some points of commentary:
+
+
+Some further notes that have been made about the data are:
+
+* The _City_ field appears to provide the location of the games in the year listed. This would need confirmation.
+* There is a break in the _Edition_ field represented the games that were not held during World War 2.
+* The _Sport_ field appears to be the "top level" of the event-type heirarchy, having the fewest distinct values. There are, however, still quite a large number of values in this field (33), suggesting that further grouping could be performed.
+* The _Discipline_ field appears to be the "middle level" of the event-type heirarchy (sitting under _Sport_ but above _Event_). There is a lot of duplication with the _Sport_ field, with many values being identical to that found in the _Sport_ field. For example the _Sport_ baseball corresponds to the _Discipline_ baseball, similarly with athletics and many others.
+* The _Athlete_ field  appears to always contain a single individual, with any teams represented by multiple records in the data.
+* The country code (similar to the first data set one) at times references historic values that are either no longer used due to being merged/split into new countries, or only being relevant for certain games (e.g. EUN and IOP were only used in the 1992 games).
+* The _Gender_ field appears to list the gender of the athlete listed (as there is a separate _Event Gender_ field). This may require confirmation.
+* The _Event_ field appears to be the "bottom level" of the event-type heirarchy, with the most granular representation of the event. There is, however, still some duplication with _Discipline_ and _Sport_, for example the Volleyball event is listed as Volleyball in both _Discipline_ and _Sport_.
+* _Event Gender_ has 3 values, M, W, and X. It has been assumed that X represents mixed-gender team events. X event genders are confined exclusively to equestrian and sailing values in the _Sport_ field.
+* The _Medal_ field lists the medal received by the listed athlete in the listed event. Again, data are _not_ presented for particpants who did not win a medal of some kind (i.e. 4th and lower placing athletes).
