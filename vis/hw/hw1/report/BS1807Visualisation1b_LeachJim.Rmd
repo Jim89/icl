@@ -35,7 +35,7 @@ Some further notes that have been made about the data are:
 * Data are _not_ presented for participants who did not win a medal of some kind (i.e. 4th and lower placing athletes).
 * The _Result_ field lists the time for each athlete in each race, but is not of a uniform nature (some are in seconds, some minutes etc). The _Unit_ field must be used to decode the _Result_ field.
 * The _ResultInSeconds_ field standardises the race time(s) in to seconds for all events presented.
-* There are no "canooing" events until the 1936 games, similarly, there are no rowing events for the 1896 games.
+* There are no "canoeing" events until the 1936 games, similarly, there are no rowing events for the 1896 games.
 
 ## Data Set 2 Overview
 
@@ -54,7 +54,7 @@ Some further notes that have been made about the data are:
 * The _Event_ field appears to be the "bottom level" of the event-type hierarchy, with the most granular representation of the event. There is, however, still some duplication with _Discipline_ and _Sport_, for example the Volleyball event is listed as Volleyball in both _Discipline_ and _Sport_.
 * _Event Gender_ has 3 values, M, W, and X. It has been assumed that X represents mixed-gender team events. X event genders are confined exclusively to equestrian and sailing values in the _Sport_ field.
 * The _Medal_ field lists the medal received by the listed athlete in the listed event. Again, data are _not_ presented for participants who did not win a medal of some kind (i.e. 4th and lower placing athletes).
-* Some appear to have been introducted very recently, for example Badminton and Baseball do not appear before 1992. Similarly, there are some historic events, such as Tug of War, which feature in old games but no longer appear. Some events, for instance tennis and archery, existed in early games but were then dropped until more recently. For all of these events, it would be interesting to confirm if they were really not present at the games during those years, or if they are just missing from the data. 
+* Some events appear to have been introduced very recently, for example Badminton and Baseball do not appear before 1992. Similarly, there are some historic events, such as Tug of War, which feature in old games but no longer appear. Some events, for instance tennis and archery, existed in early games but were then dropped until more recently. For all of these events, it would be interesting to confirm if they were really not present at the games during those years, or if they are just missing from the data. 
 
 ## Comparisons and Contrasts
 
@@ -113,20 +113,24 @@ This section lists possible transformations that could be made to the data in or
 
 * Add country statistics data, e.g. population, GDP. Ideally this would be at the time of each games to show changes over time.
 * Relate countries to continents.
-* Provide a lookup of standardised country codes to country _names_ for more readable labelling.
+* Provide a lookup of standardised country codes to country _names_ for more readable labeling.
 * Add data on other countries participating in games/events.
 * Add athlete net worth/event winnings.
 * Add athlete age/race/height/weight/other physical characteristics.
 * Race time(s) for race-style events, and other similar details (e.g. distance jumped, number of points scored etc) for non-racing events.
 
+# Section 3 - Data Exploration
+
+In this section, I present a selection of Tableau-created visualisations that were made to help generate ideas for editorial perspectives in section 4. Additionally summaries and notes were made as part of the provided Excel workbook. Notes and observations made from this process have been documented in section two. The amended Excel workbook (as well as the created Tableau workbooks) are submitted as appendices to this assignment should the marker wish to view them. 
+
 # Section 4 - Editorial Perspectives
 
-In this section I present a list of editorial perspectives that I have come up with whilst examining the data.
+In this section I present a list of editorial perspectives that I have come up with whilst examining the data. Note that a number of these were mocked up during exploratory data analysis using Tableau, and can be seen in section three.
 
 ## 1 - 100m race times over time
 
 * __Angle__: Fastest/winning time in the 100m sprint, split by men and women.
-* __Framing__: All 100m sprints held in summer Olympics games between 1928 and 2012. Both men's _and_ women's are shown.
+* __Framing__: All 100m sprints held in summer Olympics games between 1928 and 2012. Both men's _and_ women's times are shown.
 * __Focus__: Both genders made similar speed gains (~1.1-1.3 seconds) and female 2012 time now on a par with men's 1928 speed. 
 
 ## 2 -  Share of medals by continent
@@ -143,3 +147,51 @@ In this section I present a list of editorial perspectives that I have come up w
 * __Focus__: Dominance of China and South Korea in new medal winners - adding the USA circle for reference would help to emphasise this.
 
 N.B., given data on which countries actively participated in each games, this could be altered to total medals won by countries that are new to the games, not just those winning medals.
+
+## 4 - Medals efficiency
+
+* __Angle__: Total medals won against number of games attended, split by gender.
+* __Framing__: All athletes winning at least one medal in summer Olympics across all events and disciplines. Only individual medals, i.e. no athletes that won multiple events as part of a team.
+* __Focus__: Highlight top (most efficient) athletes for men (Michael Phelps) and women (Larisa Latynina).
+
+## 5 - Growth in women's vs mens. events
+
+* __Angle__: Event discipline/types, sized by the number of individual events for men and women.
+* __Framing__: Show first games (1896) and most recent games (2012) _only_ - highlight growth in opportunity for women to compete in the games.
+* __Focust__: Growth in women's events relative to men's (i.e. it's much larger).
+
+## 6 - Total medals won by country
+
+* __Angle__: Total medals won by each country, over all games
+* __Framing__: All countries that have won at least one medal, _except_ the USA (which has won so many that no comparisons can be drawn between other countries).
+* __Focus__: Success of China, which has half has many medals as "top" countries (e.g. UK, France, Australia) despite competing for approximately one third of the same amount of time.
+
+## 7 - USA vs. China
+
+* __Angle__: Cumulative medal counts of USA and China.
+* __Framing__: Medals won by USA and China only since 1980 (when China first began to win medals). Only show medals won in Olympic summer games between 1980 and 2008.
+* __Focus__: Despite strong growth in Chinese medals, US still dominant.
+
+## 8 - Top 10 athletes 1
+
+* __Angle__: Athlete (name) vs. total medals won over all games attended.
+* __Framing__: Only top 10 athletes, ordered by most medals won. Male and female athletes combined.
+* __Focus__: Add discipline as detail.
+
+## 8 - Top 10 athletes 2
+
+* __Angle__: Athlete (name) vs. number of games attended.
+* __Framing__: Only top 10 athletes, ordered by most games attended won. Male and female athletes combined. Only show attendances at summer Olympic games.
+* __Focus__: Add discipline as detail.
+
+## 9 - Medals vs. Money
+
+* __Angle__: Total medals won vs. GDP per person.
+* __Framing__: All countries _except_ USA (which has so many medals that it over-dominates the data) for all years. GDP score is average GDP over that time for which data are available. Alternatively, if year-wise GDP data are available, then a separate chart could be made for each year in which games were held. 
+* __Focus__: (Assuming that rich countries win more medals) focus on relationship between wealth and medal success.
+
+## 10 - Appearances vs. Wins
+
+* __Angle__: Discrete number of appearance vs. number of medals won on that appearance (e.g. first appearance, 0 medals, second appearances 1 medal, and so on).
+* __Framing__: Average across all athletes to get a sense of how many games people attend vs. how many medals they win at each appearance.
+* __Focus__: Perhaps pick to show plots for specific individuals known to have been breakout superstars (e.g. winning many medals on the first appearance) or underwhelming performers (many appearances, few medals at each).
