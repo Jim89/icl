@@ -73,6 +73,7 @@ workforce/data/*/*.zip
 workforce/lectures/*/*.xlsx
 workforce/workshops/*/*.xlsx
 workforce/workshops/*/*.pdf
+workforce/hw/group/docs/*.pdf
 
 # ignore for ml
 ml/hw/hw0/*.pdf
