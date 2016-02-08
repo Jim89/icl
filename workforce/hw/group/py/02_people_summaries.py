@@ -81,7 +81,7 @@ for dic in person_list:
     
 # %% step 4 - create and write data frame 
 # generate data frame of centre and deduped nouns
-people_to_nouns = {'centre': people[:to_get],
+people_to_nouns = {'person': people[:to_get],
                     'nouns': person_list_deduped}
 
 people_df = pd.DataFrame(people_to_nouns)
