@@ -79,13 +79,13 @@ for dic in centre_list:
     dic = [word for word in dic if word not in stop_list]
     centre_list_deduped.append(dic)
     
-# %% step 4 - create and write data frame 
-# generate data frame of centre and deduped nouns
-centers_to_nouns = {'centre': centres[:to_get],
-                    'nouns': centre_list_deduped}
-
-centers_df = pd.DataFrame(centers_to_nouns)
-centers_df.to_csv("../data/cleaned/01_centres_to_nouns.csv", index = False)      
+## %% step 4 - create and write data frame 
+## generate data frame of centre and deduped nouns
+#centers_to_nouns = {'centre': centres[:to_get],
+#                    'nouns': centre_list_deduped}
+#
+#centers_df = pd.DataFrame(centers_to_nouns)
+#centers_df.to_csv("../data/cleaned/01_centres_to_nouns.csv", index = False)      
     
     
     
