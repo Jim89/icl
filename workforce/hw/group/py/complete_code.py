@@ -56,6 +56,7 @@ people_to_get = len(person_files)
 
 # generate firm symbols and years
 centres = [f.split('.')[0] for f in centre_files]
+people = [f.split('.')[0] for f in person_files]
 
 
 # set up lists to store variables
@@ -111,6 +112,33 @@ for dic in person_list:
     dic = [word for word in dic if word not in stop_list]
     person_list_deduped.append(dic)
     
+# %% step 4 - calculate similarites
+person = []
+centre = []
+sims = []
+i = 0   
+for faculty in person_list_deduped:
+    j = 0
+    for centre_name in centre_list_deduped:
+        person.append(people[i])
+        centre.append(centres[j])
+        sim = similarity(faculty, centre_name)
+        sims.append(sim)
+        j += 1
+    i += 1
+
+# %% Step 5 - Tidy up and write to data frame
+sims_dict = {"person": person,
+             "centre": centre,
+             "sim": sims}    
+             
+sims_data = pd.DataFrame(sims_dict)      
+
+# %% Step 6 - Find maximum similarity per person per centre
+max_sim = pd.DataFrame(sims_data.groupby('person')['sim'].max())
+max_sim.reset_index(level = 0, inplace = True)
+
+staff_to_centres = pd.merge(sims_data, max_sim, how = "inner")
     
     
     
