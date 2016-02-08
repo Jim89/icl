@@ -20,9 +20,10 @@ def extract_nouns(text):
     tokens = nltk.word_tokenize(text)
     tags = nltk.pos_tag(tokens)
     for item in tags:
-        if item[1] == 'NN' or item[1] == 'NNP' or item[1] == 'NNS' or item[1] == 'NNPS' or item[1]: # == 'VB' or item[1] == 'VBD' or item[1] == 'VBG' or item[1] == 'VBN' or item[1] == 'VBP' or item[1] == 'VBZ':
+        if (item[1] == 'NN' or item[1] == 'NNS'): 
+            # or item[1] == 'NNPS' or item[1] == 'NNP' == 'VB' or item[1] == 'VBD' or item[1] == 'VBG' or item[1] == 'VBN' or item[1] == 'VBP' or item[1] == 'VBZ':
             nouns.append(item)
-    return nouns    
+    return nouns
     
 def stop_words(word_list):
     from collections import Counter
@@ -32,7 +33,7 @@ def stop_words(word_list):
     for key in counts:
         new_word_list.append(key)
         freq=counts[key]/float(len(counts))
-        if freq >0.2:
+        if freq >0.1:
             stop_list.append(key)
     return (new_word_list, stop_list)  
     
@@ -71,9 +72,9 @@ for i in range(centers_to_get):
     content = codecs.open(path, 'r',            # read the file
                           encoding = 'utf-8', 
                           errors = 'ignore').read()
-    nouns = extract_nouns(content)            # extract the nouns
-    global_list = global_list + nouns         # update the global list of nouns
-    centre_list.append(nouns)                 # add centre nouns to list              
+    conent_nouns = extract_nouns(content)            # extract the nouns
+    global_list = global_list + conent_nouns         # update the global list of nouns
+    centre_list.append(conent_nouns)                 # add centre nouns to list              
     
     
 # loop over person files to extract nouns
@@ -83,9 +84,9 @@ for i in range(people_to_get):
     content = codecs.open(path, 'r',                # read the file
                           encoding = 'utf-8', 
                           errors = 'ignore').read()
-    nouns = extract_nouns(content)            # extract the nouns
-    global_list = global_list + nouns         # update the global list of nouns
-    person_list.append(nouns)                 # add person nouns to list      
+    conent_nouns = extract_nouns(content)            # extract the nouns
+    global_list = global_list + conent_nouns         # update the global list of nouns
+    person_list.append(conent_nouns)                 # add person nouns to list      
     
     
 # %% step 2 - remove duplicates and stopwords from global list of all words
