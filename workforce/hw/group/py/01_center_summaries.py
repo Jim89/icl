@@ -38,7 +38,7 @@ def stop_words(word_list):
     
 # %% step 1 - get the data for the centers
 # list all files in directory
-files = os.listdir("./data/center_summaries")
+files = os.listdir("../data/center_summaries")
 
 # convenience subsetter for testing
 to_get = len(files)
@@ -54,7 +54,7 @@ centre_list = []
 # loop over files to extract nouns
 for i in range(to_get):
     f = files[i]                    # get next file
-    path = "./data/center_summaries/" + f    # set up the path
+    path = "../data/center_summaries/" + f    # set up the path
     content = codecs.open(path, 'r', # read the file
                           encoding = 'utf-8', 
                           errors = 'ignore').read()
@@ -85,7 +85,7 @@ centers_to_nouns = {'centre': centres[:to_get],
                     'nouns': centre_list_deduped}
 
 centers_df = pd.DataFrame(centers_to_nouns)
-centers_df.to_csv("./data/cleaned/01_centres_to_nouns.csv")      
+centers_df.to_csv("../data/cleaned/01_centres_to_nouns.csv", index = False)      
     
     
     
