@@ -20,7 +20,7 @@ def extract_nouns(text):
     tokens = nltk.word_tokenize(text)
     tags = nltk.pos_tag(tokens)
     for item in tags:
-        if item[1] == 'NN' or item[1] == 'NNP' or item[1] == 'NNS' or item[1] == 'NNPS':
+        if item[1] == 'NN' or item[1] == 'NNP' or item[1] == 'NNS' or item[1] == 'NNPS' or item[1]: # == 'VB' or item[1] == 'VBD' or item[1] == 'VBG' or item[1] == 'VBN' or item[1] == 'VBP' or item[1] == 'VBZ':
             nouns.append(item)
     return nouns    
     
@@ -32,7 +32,7 @@ def stop_words(word_list):
     for key in counts:
         new_word_list.append(key)
         freq=counts[key]/float(len(counts))
-        if freq >0.1:
+        if freq >0.2:
             stop_list.append(key)
     return (new_word_list, stop_list)  
     
@@ -171,7 +171,7 @@ assigned_to_result_clean = pd.DataFrame(assigned_to_result.groupby('staff')['cor
 
 # %% Step 8 - compute some summary statistics to describe performance
 # Calculate summary of performance at matching
-prop_matched_correctly = np.mean(assigned_to_result_clean.correct)  
+prop_matched_correctly = np.mean(assigned_to_result_clean.correct)
 
 # Calculate average and standard deviation of similarity scores
 avg_sim = np.mean(sims_data.sim)
