@@ -45,7 +45,7 @@ def similarity(vect1, vect2):
     sim = top / float(bottom)
     return sim
 
-# %% step 1 - get the data for 
+# %% step 1 - get the data for staff and research centres
 # list all files in directory
 centre_files = os.listdir("../data/center_summaries")
 person_files =  os.listdir("../data/researchers_scraped")
@@ -54,7 +54,7 @@ person_files =  os.listdir("../data/researchers_scraped")
 centers_to_get = len(centre_files)
 people_to_get = len(person_files)
 
-# generate firm symbols and years
+# generate centre names and raw staff names
 centres = [f.split('.')[0] for f in centre_files]
 people = [f.split('.')[0] for f in person_files]
 
@@ -66,12 +66,11 @@ person_list = []
 
 # loop over centre files to extract nouns
 for i in range(centers_to_get):
-    f = centre_files[i]                    # get next file
-    path = "../data/center_summaries/" + f    # set up the path
-    content = codecs.open(path, 'r', # read the file
+    f = centre_files[i]                         # get next file
+    path = "../data/center_summaries/" + f      # set up the path
+    content = codecs.open(path, 'r',            # read the file
                           encoding = 'utf-8', 
                           errors = 'ignore').read()
-    # filtered = re.sub('\n', '', content)    # do a bit of cleaning
     nouns = extract_nouns(content)            # extract the nouns
     global_list = global_list + nouns         # update the global list of nouns
     centre_list.append(nouns)                 # add centre nouns to list              
@@ -79,22 +78,21 @@ for i in range(centers_to_get):
     
 # loop over person files to extract nouns
 for i in range(people_to_get):
-    f = person_files[i]                    # get next file
-    path = "../data/researchers_scraped/" + f    # set up the path
-    content = codecs.open(path, 'r', # read the file
+    f = person_files[i]                             # get next file
+    path = "../data/researchers_scraped/" + f       # set up the path
+    content = codecs.open(path, 'r',                # read the file
                           encoding = 'utf-8', 
                           errors = 'ignore').read()
-    # filtered = re.sub('\n', '', content)    # do a bit of cleaning
     nouns = extract_nouns(content)            # extract the nouns
     global_list = global_list + nouns         # update the global list of nouns
     person_list.append(nouns)                 # add person nouns to list      
     
     
-# %% step 2 - remove duplicates and stopwords from global list
-# this remove duplicates and generates a list of stop words
+# %% step 2 - remove duplicates and stopwords from global list of all words
+# remove duplicates and generate a list of stop words
 (global_list, stop_list) = stop_words(global_list)
 
-# this removes stop words
+# remove the stop words
 global_list = [word for word in global_list if word not in stop_list]
 
 # %% step 3 - remove stop words and duplicates from individual dictionaries
@@ -139,9 +137,47 @@ max_sim = pd.DataFrame(sims_data.groupby('person')['sim'].max())
 max_sim.reset_index(level = 0, inplace = True)
 
 staff_to_centres = pd.merge(sims_data, max_sim, how = "inner")
+
+# %% Step 7 - Join on cleaner staff names
+names = pd.read_csv("../data/names.csv")
+
+staff_to_centres = staff_to_centres.merge(names, 
+                                          left_on = "person", 
+                                          right_on = "file", 
+                                          how = "left")
+staff_to_centres.drop('file', axis = 1, inplace = True)
+                                          
+# %% Step 7 - get actual staff assignments and compare
+# get actual assignments
+assigned = pd.read_csv("../data/staff_to_centres.csv")
+
+# join on results of matching
+assigned_to_result = pd.merge(assigned, 
+                              staff_to_centres,
+                              left_on = 'staff_matched',
+                              right_on = 'names',
+                              how = 'inner')
+# get rid of some extra columns                              
+assigned_to_result.drop(['staff', 'person', 'names'], axis = 1, inplace = True)
+
+# rename fields
+assigned_to_result.columns = ['actual', 'staff', 'matched_to', 'sim']
+
+# matched correctly?
+assigned_to_result['correct'] = assigned_to_result.actual == assigned_to_result.matched_to    
     
-    
-    
-    
+# deal with those who are actually at multiple centres - take only records where we matched them  correctly
+assigned_to_result_clean = pd.DataFrame(assigned_to_result.groupby('staff')['correct'].max())  
+
+# %% Step 8 - compute some summary statistics to describe performance
+# Calculate summary of performance at matching
+prop_matched_correctly = np.mean(assigned_to_result_clean.correct)  
+
+# Calculate average and standard deviation of similarity scores
+avg_sim = np.mean(sims_data.sim)
+std_sim = np.std(sims_data.sim)
+min_sim = np.min(sims_data.sim)
+max_sim = np.max(sims_data.sim)
+
     
     
