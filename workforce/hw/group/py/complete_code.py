@@ -128,127 +128,184 @@ import timeit
 
 cosines = [False, True]
 thresholds = [0.05, 0.1, 0.2]
+to_extract = ['nn', 'nnpn', 'nnv', 'nnpnv']
 
 start_time = timeit.default_timer()
 
-for threshold_val in thresholds:
-    for val in cosines:
-    
-        # loop over centre files to extract_nouns
-        centre_list = [extract_pos(x, what = 'nn') for x in centre_list_raw]  
+for extract in to_extract:
+    for threshold_val in thresholds:
+        for val in cosines:
         
-        # loop over person files to extract nouns
-        person_list = [extract_pos(x, what = 'nn') for x in person_list_raw]
-        
-        # combine centre and person nouns in to the global list
-        global_list = []
-        for x in centre_list:
-            for y in x:
-                global_list.append(y)
+            # loop over centre files to extract_nouns
+            centre_list = [extract_pos(x, what = 'nn') for x in centre_list_raw]  
+            
+            # loop over person files to extract nouns
+            person_list = [extract_pos(x, what = 'nn') for x in person_list_raw]
+            
+            # combine centre and person nouns in to the global list
+            global_list = []
+            for x in centre_list:
+                for y in x:
+                    global_list.append(y)
+                    
+            for x in person_list:
+                for y in x:
+                    global_list.append(y)        
                 
-        for x in person_list:
-            for y in x:
-                global_list.append(y)        
+            #  step 2 - remove duplicates and stopwords from global list of all words
+            # remove duplicates and generate a list of stop words
+            (global_list, stop_list) = stop_words(global_list, threshold = threshold_val)
             
-        #  step 2 - remove duplicates and stopwords from global list of all words
-        # remove duplicates and generate a list of stop words
-        (global_list, stop_list) = stop_words(global_list, threshold = threshold_val)
-        
-        # remove the stop words
-        global_list = [word for word in global_list if word not in stop_list]
-        
-        #  step 3 - remove stop words and duplicates from individual dictionaries
-        # remove duplicates and stopwords from centre dictionaries
-        centre_list_deduped = []
-        for dic in centre_list:
-            dic = Counter(dic).keys()
-            dic = [word for word in dic if word not in stop_list]
-            centre_list_deduped.append(dic)    
+            # remove the stop words
+            global_list = [word for word in global_list if word not in stop_list]
             
-        # remove duplicates and stopwords from people dictionaries
-        person_list_deduped = []
-        for dic in person_list:
-            dic = Counter(dic).keys()
-            dic = [word for word in dic if word not in stop_list]
-            person_list_deduped.append(dic)
+            #  step 3 - remove stop words and duplicates from individual dictionaries
+            # remove duplicates and stopwords from centre dictionaries
+            centre_list_deduped = []
+            for dic in centre_list:
+                dic = Counter(dic).keys()
+                dic = [word for word in dic if word not in stop_list]
+                centre_list_deduped.append(dic)    
+                
+            # remove duplicates and stopwords from people dictionaries
+            person_list_deduped = []
+            for dic in person_list:
+                dic = Counter(dic).keys()
+                dic = [word for word in dic if word not in stop_list]
+                person_list_deduped.append(dic)
+                
+            #  step 4 - calculate similarites
+            person = []
+            centre = []
+            sims = []
+            i = 0   
+            for faculty in person_list_deduped:
+                j = 0
+                for centre_name in centre_list_deduped:
+                    person.append(people[i])
+                    centre.append(centres[j])
+                    sim = similarity(faculty, centre_name, cosine = val)
+                    sims.append(sim)
+                    j += 1
+                i += 1
             
-        #  step 4 - calculate similarites
-        person = []
-        centre = []
-        sims = []
-        i = 0   
-        for faculty in person_list_deduped:
-            j = 0
-            for centre_name in centre_list_deduped:
-                person.append(people[i])
-                centre.append(centres[j])
-                sim = similarity(faculty, centre_name, cosine = val)
-                sims.append(sim)
-                j += 1
-            i += 1
-        
-        #  Step 5 - Tidy up and write to data frame
-        sims_dict = {"person": person,
-                     "centre": centre,
-                     "sim": sims}    
-                     
-        sims_data = pd.DataFrame(sims_dict)
-        filename = "/data/outputs/sims/sim_data_cosine_" + str(val) + '_threshold' + str(threshold_val)
-        filename = filename.replace('.', '')
-        filename = '..' + filename + '.csv'
-        sims_data.to_csv(filename, index = False)
-        
-        #  Step 6 - Find maximum similarity per person per centre
-        max_sim = pd.DataFrame(sims_data.groupby('person')['sim'].max())
-        max_sim.reset_index(level = 0, inplace = True)
-        
-        staff_to_centres = pd.merge(sims_data, max_sim, how = "inner")
-        
-        #  Step 7 - Join on cleaner staff names
-        names = pd.read_csv("../data/names.csv")
-        
-        staff_to_centres = staff_to_centres.merge(names, 
-                                                  left_on = "person", 
-                                                  right_on = "file", 
-                                                  how = "left")
-        staff_to_centres.drop('file', axis = 1, inplace = True)
-                                                  
-        #  Step 7 - get actual staff assignments and compare
-        # get actual assignments
-        assigned = pd.read_csv("../data/staff_to_centres.csv")
-        
-        # join on results of matching
-        assigned_to_result = pd.merge(assigned, 
-                                      staff_to_centres,
-                                      left_on = 'staff_matched',
-                                      right_on = 'names',
-                                      how = 'inner')
-        # get rid of some extra columns                              
-        assigned_to_result.drop(['staff', 'person', 'names'], axis = 1, inplace = True)
-        
-        # rename fields
-        assigned_to_result.columns = ['actual', 'staff', 'matched_to', 'sim']
-        
-        # matched correctly?
-        assigned_to_result['correct'] = assigned_to_result.actual == assigned_to_result.matched_to
-        filename2 = "/data/outputs/assignments/assignment_to_status_cosine_" + str(val) + '_threshold' + str(threshold_val)
-        filename2 = filename2.replace('.', '')
-        filename2 = '..' + filename2 + '.csv'
-        assigned_to_result.to_csv(filename2, index = False)    
+            #  Step 5 - Tidy up and write to data frame
+            sims_dict = {"person": person,
+                         "centre": centre,
+                         "sim": sims}    
+                         
+            sims_data = pd.DataFrame(sims_dict)
+            filename = "../data/outputs/sims/sim_data_cosine_" + str(val) + '_threshold_' + str(threshold_val) + '_extract_' + extract + '.csv'
+            sims_data.to_csv(filename, index = False)
+            
+            #  Step 6 - Find maximum similarity per person per centre
+            max_sim = pd.DataFrame(sims_data.groupby('person')['sim'].max())
+            max_sim.reset_index(level = 0, inplace = True)
+            
+            staff_to_centres = pd.merge(sims_data, max_sim, how = "inner")
+            
+            #  Step 7 - Join on cleaner staff names
+            names = pd.read_csv("../data/names.csv")
+            
+            staff_to_centres = staff_to_centres.merge(names, 
+                                                      left_on = "person", 
+                                                      right_on = "file", 
+                                                      how = "left")
+            staff_to_centres.drop('file', axis = 1, inplace = True)
+                                                      
+            #  Step 7 - get actual staff assignments and compare
+            # get actual assignments
+            assigned = pd.read_csv("../data/staff_to_centres.csv")
+            
+            # join on results of matching
+            assigned_to_result = pd.merge(assigned, 
+                                          staff_to_centres,
+                                          left_on = 'staff_matched',
+                                          right_on = 'names',
+                                          how = 'inner')
+            # get rid of some extra columns                              
+            assigned_to_result.drop(['staff', 'person', 'names'], axis = 1, inplace = True)
+            
+            # rename fields
+            assigned_to_result.columns = ['actual', 'staff', 'matched_to', 'sim']
+            
+            # matched correctly?
+            assigned_to_result['correct'] = assigned_to_result.actual == assigned_to_result.matched_to
+            filename2 = "../data/outputs/assignments/assignment_to_status_cosine_" + str(val) + '_threshold_' + str(threshold_val) + '_extract_' + extract + '.csv'
+            assigned_to_result.to_csv(filename2, index = False)    
            
 elapsed = timeit.default_timer() - start_time    
 
-# %%
-# deal with those who are actually at multiple centres - take only records where we matched them  correctly
-# assigned_to_result_clean = pd.DataFrame(assigned_to_result.groupby('staff')['correct'].max())
+# %% Get similarity metrics
+sim_data = os.listdir("../data/outputs/sims")
+mean_sims = []
+std_sims = []
+min_sims = []
+max_sims = []
 
+for df in sim_data:
+    # Set up path
+    path = "../data/outputs/sims/" + df
+    
+    # Read in data
+    dat = pd.read_csv(path)
+    
+    # Compute summary statistics    
+    avg_sim = np.mean(dat.sim)
+    std_sim = np.std(dat.sim)
+    min_sim = np.min(dat.sim)
+    max_sim = np.max(dat.sim)    
+    
+    # Write to lists
+    mean_sims.append(avg_sim)
+    std_sims.append(std_sim)
+    min_sims.append(min_sim)
+    max_sims.append(max_sim)
+    
+cosines_sim = [x.split('_')[3] for x in sim_data]
+threshold_sim = [x.split('_')[5] for x in sim_data]
+content_sim = [(x.split('_')[7]).split('.')[0] for x in sim_data]
 
-#  Step 8 - compute some summary statistics to describe performance
-# Calculate summary of performance at matching
-prop_matched_correctly = np.mean(assigned_to_result_clean.correct)
+sim_summary_dict = {"cos": cosines_sim,
+                    "thresh": threshold_sim,
+                    "cont": content_sim,
+                    "avg": mean_sims,
+                    "std": std_sims,
+                    "mi": min_sims,
+                    "ma": max_sims}
+                    
+sim_summary = pd.DataFrame(sim_summary_dict)                    
 
-# Calculate average and standard deviation of similarity scores
-avg_sim = np.mean(sims_data.sim)
-std_sim = np.std(sims_data.sim)
-min_sim = np.min(sims_data.sim)
-max_sim = np.max(sims_data.sim)        
+# %% Get performance metrics
+assign_data = os.listdir("../data/outputs/assignments")
+
+performances = []
+
+for df in assign_data:
+    # Set up path
+    path = "../data/outputs/assignments/" + df
+    
+    # Read in data
+    dat = pd.read_csv(path)
+
+    # deal with those who are actually at multiple centres - take only records where we matched them  correctly
+    dat_cln = pd.DataFrame(dat.groupby('staff')['correct'].max())
+
+    # Calculate summary of performance
+    prop_matched_correctly = np.mean(dat_cln.correct)
+    
+    performances.append(prop_matched_correctly)
+    
+cosines_assign = [x.split('_')[4] for x in assign_data]
+threshold_assign = [x.split('_')[6] for x in assign_data]
+content_assign = [(x.split('_')[8]).split('.')[0] for x in assign_data]    
+
+assign_summary_dict = {"cos": cosines_assign,
+                    "thresh": threshold_assign,
+                    "cont": content_assign,
+                    "perf": performances}
+                    
+assign_summary = pd.DataFrame(assign_summary_dict)  
+
+# %% Summarise into single data set and write out to file
+overall_summary = pd.merge(sim_summary, assign_summary)
