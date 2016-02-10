@@ -1,0 +1,44 @@
+---
+title: "Workforce Analytics Group 8 Assignment"
+author: "Jim Leach, Lu Qi, Valentin Poirelle, Maria Engesaeth"
+date: "10 February 2016"
+output: pdf_document
+---
+
+# Introduction
+
+# This document
+
+# Section 1 - Matching individuals to centres
+
+```{r get_data, echo = FALSE, message = FALSE}
+library(readr)
+file <- "../data/outputs/overall_summary.csv"
+data <- read_csv(file)
+```
+
+```{r manip_data, echo = FALSE, message = FALSE}
+library(dplyr)
+data <- data %>% 
+        select(cos, cont, thresh, avg, std, mi, ma, perf) %>% 
+        mutate(cont = ifelse(cont == 'nn', 'Normal nouns',
+                      ifelse(cont == 'nnpn', 'Normal and proper nouns',
+                      ifelse(cont == 'nnv', 'Normal nouns and verbs',
+                      ifelse(cont == 'nnpnv', 'Normal and proper nouns, and verbs', 'Error')))),
+               cos = ifelse(cos == "True", "Cosine", "Overlap"))
+```
+
+```{r display_data, echo = FALSE, message = FALSE}
+library(knitr)
+data %>% 
+  arrange(cos, cont, thresh) %>% 
+  kable(digits = 3, row.names = NA, col.names = c("Similarity",
+                                                  "Threshold",
+                                                  "POS Used",
+                                                  "Average Sim",
+                                                  "Std. Dev. Sim",
+                                                  "Min. Sim",
+                                                  "Max Sim",
+                                                  "Accuracy"))
+```
+                                                  
