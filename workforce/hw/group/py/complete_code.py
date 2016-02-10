@@ -15,14 +15,30 @@ import nltk
 from collections import Counter
 
 # %% define untility functions
-def extract_nouns(text):
+def extract_pos(text, what = 'nn'):
     nouns = []
     tokens = nltk.word_tokenize(text)
     tags = nltk.pos_tag(tokens)
-    for item in tags:
-        if (item[1] == 'NN' or item[1] == 'NNS'): 
-            # or item[1] == 'NNPS' or item[1] == 'NNP' == 'VB' or item[1] == 'VBD' or item[1] == 'VBG' or item[1] == 'VBN' or item[1] == 'VBP' or item[1] == 'VBZ':
-            nouns.append(item)
+    if what == 'nn':
+        for item in tags:
+            if (item[1] == 'NN' or item[1] == 'NNS'): 
+                # or item[1] == 'NNPS' or item[1] == 'NNP' == 'VB' or item[1] == 'VBD' or item[1] == 'VBG' or item[1] == 'VBN' or item[1] == 'VBP' or item[1] == 'VBZ':
+                nouns.append(item)
+    elif what == 'nnpn':
+        for item in tags:
+            if (item[1] == 'NN' or item[1] == 'NNS' or item[1] == 'NNPS' or item[1] == 'NNP'): 
+                #  == 'VB' or item[1] == 'VBD' or item[1] == 'VBG' or item[1] == 'VBN' or item[1] == 'VBP' or item[1] == 'VBZ':
+                nouns.append(item)
+    elif what == 'nnv':
+        for item in tags:
+            if (item[1] == 'NN' or item[1] == 'NNS' or item[1] == 'VB' or item[1] == 'VBD' or item[1] == 'VBG' or item[1] == 'VBN' or item[1] == 'VBP' or item[1] == 'VBZ'): 
+                nouns.append(item)
+    elif what == 'nnpnv':
+         for item in tags:
+            if (item[1] == 'NN' or item[1] == 'NNS' or item[1] == 'NNPS' or item [1] == 'NNP' or item[1] == 'VB' or item[1] == 'VBD' or item[1] == 'VBG' or item[1] == 'VBN' or item[1] == 'VBP' or item[1] == 'VBZ'): 
+                nouns.append(item)
+    else:
+        raise NameError('Specify what = nn, nnpn, nnv or nnpnv')              
     return nouns
     
 def stop_words(word_list):
@@ -45,6 +61,10 @@ def similarity(vect1, vect2):
     bottom = len(a | b)
     sim = top / float(bottom)
     return sim
+    
+# Calculate the cosine similarity of two vectors
+def get_cosine_sim(vect1, vect2):
+    return None
 
 # %% step 1 - get the data for staff and research centres
 # list all files in directory
@@ -61,9 +81,9 @@ people = [f.split('.')[0] for f in person_files]
 
 
 # set up lists to store variables
-global_list = []
-centre_list = []
-person_list = []
+global_list_raw = []
+centre_list_raw = []
+person_list_raw = []
 
 # loop over centre files to extract nouns
 for i in range(centers_to_get):
@@ -72,9 +92,7 @@ for i in range(centers_to_get):
     content = codecs.open(path, 'r',            # read the file
                           encoding = 'utf-8', 
                           errors = 'ignore').read()
-    conent_nouns = extract_nouns(content)            # extract the nouns
-    global_list = global_list + conent_nouns         # update the global list of nouns
-    centre_list.append(conent_nouns)                 # add centre nouns to list              
+    centre_list_raw.append(content)                 # add centre nouns to list              
     
     
 # loop over person files to extract nouns
@@ -84,10 +102,24 @@ for i in range(people_to_get):
     content = codecs.open(path, 'r',                # read the file
                           encoding = 'utf-8', 
                           errors = 'ignore').read()
-    conent_nouns = extract_nouns(content)            # extract the nouns
-    global_list = global_list + conent_nouns         # update the global list of nouns
-    person_list.append(conent_nouns)                 # add person nouns to list      
-    
+    person_list_raw.append(content)                 # add person nouns to list      
+
+# %%    
+# loop over centre files to extract_nouns
+centre_list = [extract_pos(x, what = 'nn') for x in centre_list_raw]  
+
+# loop over person files to extract nouns
+person_list = [extract_pos(x, what = 'nn') for x in person_list_raw]
+
+# combine centre and person nouns in to the global list
+global_list = []
+for x in centre_list:
+    for y in x:
+        global_list.append(y)
+        
+for x in person_list:
+    for y in x:
+        global_list.append(y)        
     
 # %% step 2 - remove duplicates and stopwords from global list of all words
 # remove duplicates and generate a list of stop words
