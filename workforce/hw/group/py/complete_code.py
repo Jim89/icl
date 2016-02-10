@@ -10,7 +10,6 @@ import pandas as pd
 import numpy as np
 import codecs
 import os
-import re
 import nltk
 from collections import Counter
 import scipy as sp
@@ -309,3 +308,4 @@ assign_summary = pd.DataFrame(assign_summary_dict)
 
 # %% Summarise into single data set and write out to file
 overall_summary = pd.merge(sim_summary, assign_summary)
+overall_summary.to_csv("../data/outputs/overall_summary.csv")
