@@ -75,6 +75,7 @@ workforce/workshops/*/*.xlsx
 workforce/workshops/*/*.pdf
 workforce/hw/group/docs/*.pdf
 workforce/hw/group/r/*.pdf
+workforce/hw/individual/*.pdf
 
 # ignore for ml
 ml/hw/hw0/*.pdf
