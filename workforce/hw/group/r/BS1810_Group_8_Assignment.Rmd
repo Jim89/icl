@@ -5,40 +5,139 @@ date: "10 February 2016"
 output: pdf_document
 ---
 
-# Introduction
-
-# This document
-
-# Section 1 - Matching individuals to centres
-
 ```{r get_data, echo = FALSE, message = FALSE}
 library(readr)
+library(dplyr)
 file <- "../data/outputs/overall_summary.csv"
 data <- read_csv(file)
-```
-
-```{r manip_data, echo = FALSE, message = FALSE}
-library(dplyr)
 data <- data %>% 
-        select(cos, cont, thresh, avg, std, mi, ma, perf) %>% 
+        select(cos, cont, thresh, avg, std, -mi, ma, perf) %>% 
         mutate(cont = ifelse(cont == 'nn', 'Normal nouns',
                       ifelse(cont == 'nnpn', 'Normal and proper nouns',
                       ifelse(cont == 'nnv', 'Normal nouns and verbs',
-                      ifelse(cont == 'nnpnv', 'Normal and proper nouns, and verbs', 'Error')))),
+                      ifelse(cont == 'nnpnv', 'Normal, proper nouns, verbs', 'Error')))),
                cos = ifelse(cos == "True", "Cosine", "Overlap"))
 ```
+
+
+# Introduction
+
+There are a range of reasearch centres at Imperial College Business School. They all operate in related but distinct fields. A challenge in administering these centres is finding the right academic staff to perform research within them. In this assignment, we were tasked with investigating the use of dictionaries to match staff with centres, as well as thinking about other methods for performing the assignment. 
+
+# This document
+
+This document is broken down in to four sections. Section one presents an overview of the results obtained from applying the dictionary techniques to the matching problem. Section two covers a description of alternative techniques that could be used to match staff to centres. The appendices contain supporting tables and data obtained from the dictionary methods. The references contains a brief list of papers that were consulted when producing this analysis.
+
+# Section 1 - Matching individuals to centres
+
+## Approach
+
+In order to define the dictionary for a centre or staff member, research centre descriptions were manually sourced from the relevant ICBS web pages, and staff summaries were programatically scraped from the staff directory. 
+
+The _Natural Language Tool Kit_ `Python` package was then used to _tokenise_ the dictionary (split it in to individual words) and to _tag_ each word with its part of speech (_POS_), e.g. noun, verb etc. Only certain _POS_ tags were taken for a dictionary. Several combinations of _POS_ tags were investigated:
+
+* Normal nouns only (i.e. no proper nouns);
+* Normal _and_ proper nouns;
+* Normal nouns only, and verbs; and
+* Normal and proper nouns, and verbs.
+
+Common words (those that occured too frequently in the unique set of _all_ terms across _all_ dictionaries) were removed. Words that occured more than $X$% of the time were removed from the dictionaries. Three distinct values of $X$ were tested: 5%, 10% and 20%, to assess the impact of this threshold.
+
+The similarities between all centre-staff combinations were then calculated using two similarity metrics: overlap \eqref{eq:overlap} and cosine similarity \eqref{eq:cosine}.
+
+\begin{equation} \label{eq:overlap}
+Overlap(X, Y) = \dfrac{|X \cap Y|}{|X \cup Y|}
+\end{equation}
+
+\begin{equation} \label{eq:cosine}
+Similarity = \cos(\theta) = \dfrac{\sum_{i=1}^n A_i B_i}{\sqrt{\sum_{i=1}^n A_i^2} \sqrt{\sum_{i=1}^n B_i^2}}
+\end{equation}
+
+Having done this, the highest similarity was calculated for each staff member to assign them to a research centre. Comparisons were then made with _actual_ staff assignments. 
+
+## Results
+
+### Similarity metrics
+
+Overall the average similarity scores across all staff-centre combindations were very low using either method (appendix one). The average similarity was consistently below 0.1, with a small standard deviation of between `r round(min(data$std), 3)` and `r round(max(data$std), 3)`. The similarity was never greater than `r round(max(data$ma), 3)` across all combinations similarity measure, POS tags and common-word threshold.
+
+However, the highest accuracy found was `r 100*round(max(data$perf), 2)`%; impressive given the weak similarity and the messy nature of the data. 
+
+Cosine similarity measures produced results that were more accurate than the overlap method (appendix two). A $t$-test showed the results to be statistically significant: cosine mean of `r 100*round(mean(data$perf[data$cos == "Cosine"]), 2)`% compared with overlap mean of `r 100*round(mean(data$perf[data$cos == "Overlap"]), 2)`%, $p$-value of $`r t.test(data$perf[data$cos == "Cosine"], data$perf[data$cos == "Overlap"])$p.value`$. 
+
+The POS tags that were used seemed to have little effect on the accuracy(appendix three). Minor differences were observed in the accuracy based on the common-word threshold, but nothing significantly different (appendix four).
+
+## Summary
+
+Overall this method shows some merit for matching staff with research centres. Given the low similarity scores, the maximum accuracy when comparing assigned to actual staff to centres data is impressive. It would be interesting to see how more targetted data collection, or more thorough data cleansing could impact the results and potentially offer a novel way to help assign research staff to research centres.
+
+***
+
+# Section Two - Alternative techniques for matching.
+
+## Extended Dictionary Technique:
+
+Using the data gather for section one we could assume that researchers within one center would use a similar vocabulary to describe their work. Making this assumption, we could look for compare researchers with each other, and try to create clusters with the dictionaries.
+
+We could then either chose to match the cluster of researchers to a centre based on either the similarity of one of the individuals in the cluster to the centre, or based on the combined dictionary of the cluster as a whole.
+
+Other data that could enrich this process could be the lists of researchers that co-author papers together or perhaps social network-like data for some way in which the researchers communicate internally.
+
+## Bipartite Graph Preference-Weighted Matching ^(2)^
+
+A second alternative would be to consider the matching problem as a bipartite graph matching problem. Given a list of research centres, each staff member would then rank the centres in preference order. Given a list of staff, research centres would then do the same. Using these preference lists, a matching algorithm can be applied to the bipartite graph structure. This algorithm is known to produce a stable matching (i.e. one in which no staff member or research centre will switch given their current assignment) and would potentially be a promising candidate for solving this problem.
+
+***
+
+\pagebreak
+
+# Appendices
+
+## Appendix One - Summary of Results
 
 ```{r display_data, echo = FALSE, message = FALSE}
 library(knitr)
 data %>% 
   arrange(cos, cont, thresh) %>% 
   kable(digits = 3, row.names = NA, col.names = c("Similarity",
+                                                  "POS Tags",
                                                   "Threshold",
-                                                  "POS Used",
                                                   "Average Sim",
                                                   "Std. Dev. Sim",
-                                                  "Min. Sim",
-                                                  "Max Sim",
-                                                  "Accuracy"))
+                                                 "Max Sim",
+                                                  "Accuracy"),
+        caption = "Similarity score metrics and accuracy measures of each unique combination of similarity metric, POS tag(s) used and common-word threshold")
+```
+
+## Appendix Two - Accuracy by Similarity metric
+
+```{r sim, echo = FALSE}
+data %>% 
+  group_by(cos) %>% 
+  summarise(perf = mean(perf)) %>% 
+  kable(digits = 3, col.names = c("Similarity", "Mean Accuracy"))
 ```
                                                   
+## Appendix Three - Accuracy by POS Tag
+
+```{r pos, echo = FALSE}
+data %>% 
+  group_by(cont) %>% 
+  summarise(perf = mean(perf)) %>% 
+  kable(digits = 3, col.names = c("POS Tags", "Mean Accuracy"))
+```
+
+## Appendix Four - Accuracy by Common Word Threshold
+
+```{r thresh, echo = FALSE}
+data %>% 
+  group_by(thresh) %>% 
+  summarise(perf = mean(perf)) %>% 
+  kable(digits = 3, col.names = c("Common Word Threshold", "Mean Accuracy"))
+```
+
+                                                  
+# References                                                  
+
+1. "Robust Similarity Measures for Named Entity Matching"; Moreau, Yvon & Cappe (2008).
+2. "Network Analytics", lecture 7, MSc Business Analytics 2015/16.
