@@ -90,7 +90,7 @@ d3 = pd.merge(d3, patent_eth, how = 'left')
 # %% Step 7 and 8 - Calculate diversity and add team size and cross-cntry
 d3['eth_div'] = [1-herf(x) for x in d3.ethnicity]
 d3['cntry_div'] = [1-herf(x) for x in d3.cntries]
-d3['team_size'] = [len(x) for x in d3.lastname]
+d3['team_size'] = [len(x.split(';')) for x in d3.lastname]
 
 cross_cntry = []
 for i in range(len(d3)):
@@ -102,7 +102,7 @@ for i in range(len(d3)):
         
 d3['cross_cntry'] = cross_cntry        
 
-
+# d3.to_csv("../../data/D3_patents_to_eth.csv")
 
 
 
