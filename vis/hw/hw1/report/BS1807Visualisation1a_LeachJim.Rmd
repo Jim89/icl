@@ -37,7 +37,7 @@ Within this scenario, I imagined that the following two types of intrigue might 
 
 ### Circumstances
 
-* __Stakeholders__: I thought that the newspaper owner(s) along with our editors would be stakeholders as they have an interest in our work, but also in promoting and protecting the newspaper's interests (financial and otherwise). Similarly, the Texas Department of Justice and/or police force may also be stakeholders if quotes/clarification(s)/further data are required for the piece. Similarly, representatives from other pro-capital punishment groups might also be involved if wider information is sought. Finally, the readers of the paper are also stakeholders in the sense that they are financial contributors to the paper, and the piece should entice them to continue to purchase the paper for their news. 
+* __Stakeholders__: I thought that the newspaper owner(s) and (senior) editors would be stakeholders as they have an interest in both the work and also in promoting and protecting the newspaper's interests (financial and otherwise). Similarly, the Texas Department of Justice and/or police force may also be stakeholders if quotes/clarification(s)/further data are required for the piece. Similarly, representatives from other pro-capital punishment groups might also be involved if wider information is sought. Finally, the readers of the paper are also stakeholders in the sense that they are financial contributors to the paper, and the piece should entice them to continue to purchase the paper for their news. 
 
 * __Audience__: I assumed that audience is the "average Joe", perhaps non-academic and maybe working class (I imagined the paper to be similar to UK "red-tops"). Overall I have assumed that the audience is not particularly sophisticated and read the paper for news and stories, rather than detailed analysis. I have assumed that, being a newspaper, the audience is relatively captivated: they are willing to sit and read an interesting story for several minutes rather than glancing at something on a poster or in the paper as part of a busy commute.
 
@@ -49,27 +49,26 @@ Within this scenario, I imagined that the following two types of intrigue might 
 
 * __Setting__: I assumed that the setting is relatively prolonged: the audience will take time to read over the piece as a whole and we do not need something that can be digested in 5 seconds (although considering the non-sophisticated audience it should not be a complex visual that takes a long time to comprehend). The audience is remote - we may need to add explanation(s) and call outs to anything we want to explain in more detail.
 
-* __Size__: The visualisation(s) are to accompany a two-page spread special feature. There needs to be one main visualisation that covers half to one full page of the spread. The data may be used to create either one or two profiles of particularly vicious offenders but these will not require much more that data extracts and quick summaries in terms of the visualisation. Each of these profiles will be at most one eigth of a page each.
+* __Size__: The visualisation(s) are to accompany a two-page spread special feature. There needs to be one main visualisation that covers half to one full page of the spread. The data may be used to create either one or two profiles of particularly vicious offenders but these will not require much more that data extracts and quick summaries in terms of the visualisation. Each of these profiles will be at most one eighth of a page each.
 
-* __Format__: The visualisation is print-based. It must be formatted within the contraints set out in "rules" and "size" and is entirely static in nature. 
+* __Format__: The visualisation is print-based. It must be formatted within the constraints set out in "rules" and "size" and is entirely static in nature. 
 
 * __Creators__: The visualisation will be created by a small team comprising of a single journalist with data manipulation skills supported by an illustrator/designer and a team lead/project manager/senior journalist.
 
-* __Tech__: The team does not have a great deal of advanced technical expertise on the data side, and so technology will be focussed on Excel and/or other GUI-based tools for data manipulation and preparation. The same case applies for creating the visualisation, however the illustrator/designer is proficient with artistic software (e.g. Photoshop/Illustrator) and can take a basic visualisation and transform it in to the finished product.
+* __Tech__: The team does not have a great deal of advanced technical expertise on the data side, and so technology will be focused on Excel and/or other GUI-based tools for data manipulation and preparation. The same case applies for creating the visualisation, however the illustrator/designer is proficient with artistic software (e.g. Photoshop/Illustrator) and can take a basic visualisation and transform it in to the finished product.
 
 
 ## Vision
 
 ### Purpose
 
-* __Experience__: The experience should be explanatory. The newspaper is simply seeking to present the data alongside a compelling written story for the special feature. Given the non-sophisticated audience, we may need to add explanation of anything that is complex. Some of the explaining will be done in the article, but we may need to add a call out on the visual that references anything contained in the written piece to emphasise it.
+* __Experience__: The experience should be explanatory. The newspaper is seeking to present the data alongside a compelling written story for the special feature. Given the non-sophisticated audience, it may be necessary to add explanation of anything that is complex. Some of the explaining will be done in the article, but call outs on the visual that references anything contained in the written piece to could help to emphasise this.
 
-* __Tone__: The tone is very much feeling. This is an emotive subject and the type of newspaper is such that an emotive message will be most effective for communicating our intended message/understanding of the data to the audience. Too many dry facts will not help us sell the newspaper, and we are seeking to (further) convince readers that capital punishment is the right choice. As such, a "feeling" tone is most appropriate. 
+* __Tone__: The tone is very much feeling. This is an emotive subject and the type of newspaper is such that an emotive message will be most effective for communicating the intended message/understanding of the data to the audience. Too many dry facts will not help sell the newspaper, and they may be seeking to (further) convince readers that capital punishment is the right choice. As such, a "feeling" tone is most appropriate. 
 
 ## Ideas
 
-
-*******
+Please note that the victims vs. criminals idea in this section was inspired by the main graphic in the Wall Street Journal article, "An Eye for an Eye?"^(1)^.
 
 
 # Section 2 - Scenario B
@@ -94,23 +93,24 @@ I have assumed that the report will be presented in PowerPoint format before bei
 
 Within this scenario, I imagined that the following intrigue might present (a) reason(s) for creating the visualisation. 
 
-* __Audience intrigue__: Senior management are interested in the execution data within the context of the yearly report. Given the racial issues that they are concerned with, they are interested in knowing about the execution statistics broken down by racial group, covering questions such as "what proportion of executed offenders were non-white?" or "how has the racial breakdown of executed offenders changed over time?".
+* __Audience intrigue__: Senior management are interested in the execution data within the context of the yearly report. Given the racial issues that they are concerned with, they are interested in knowing about the execution statistics broken down by racial group, covering questions such as "what proportion of executed offenders were non-white?" or "how has the racial breakdown of executed offenders changed over time?". Concerns over the possibility of a "botched execution" could be addressed by a presentation of average time-to-die data addressing topics such as "they may be interested in knowing how long it took, on average, for inmates to die this year compared to the last [X] years".
+
 
 ### Circumstances
 
-* __Stakeholders__: The main stakeholders in this scenario are the audience - the senior management. We need to present the data to them, but also to ensure that we are providing answers to specific questions that they have about racial demographics and botched executions. The head of the analytics team is also a stakeholder as they will need to ensure that our work is accurate, as well as meeting senior management needs. Other Department of Criminal Justice staff will also be stakeholders as they may have data that we would like to access (e.g. relating to supplies or time-to-die information) and may be able to provide further context to data that we will need when presenting to senior management.
+* __Stakeholders__: The main stakeholders in this scenario are the audience - the senior management. Data must be presented to them, and concerns that they have about racial demographics and botched executions must be addressed. The head of the analytics team is also a stakeholder as they will need to ensure that the work is accurate, as well as meeting senior management needs. Other Department of Criminal Justice staff will also be stakeholders as they may have data that would be valuable (e.g. relating to supplies or time-to-die information) and may be able to provide further context to data that will be needed when presenting to senior management.
 
-* __Audience__: The audience is exclusively senior management, the report is internal and will not be widely circulated. The audience is informed and sophisticated, I have assumed that the management have spent many years working in the department and can understand more complex numerical summaries and graphical representations of the data. The audience is engaged and require clear information from the report such that they are equipped to answer questions to _their_ superiors in the future. However they are most focussed on their specific concerns and so may have less time to spend on the "normal" data that must be in the report.
+* __Audience__: The audience is exclusively senior management, the report is internal and will not be widely circulated. The audience is informed and sophisticated, I have assumed that the management have spent many years working in the department and can understand more complex numerical summaries and graphical representations of the data (e.g. box plots, stacked bars, forecasts). The audience is engaged and require clear information from the report such that they are equipped to answer questions to _their_ superiors in the future. However they are most focused on their concerns and so may have less time to spend on the "normal" data that must be in the report.
 
-* __Pressures__: Given that this is an annual report, I have assumed that the analysts have 1 month to produce the report as part of their regular activities. They do not have extra budget beyond what is normal. The report is internal only and as such the team needs only to emulate the internal style of reports and does not need to create a stand-out visual to "wow" anyone.
+* __Pressures__: Given that this is an annual report, I have assumed that the analysts have 1 month to produce the report as part of their regular activities. They do not have extra budget beyond what is normal and so cannot do anything extraordinary. The report is internal only and as such the team needs only to emulate the internal style of reports and does not need to create a stand-out visual to "wow" anyone.
 
 * __Rules__: The report must adhere to Texas DoJ internal standards. It must use the DoCJ standard-font and reporting colour palette and may not deviate from this. In terms of compatibility, the visualisations must be suitable for a PowerPoint-style presentation, as well as for printing within the report and therefore must fit within 1 sheet of A4 paper at their largest.
 
 * __Frequency__: The report must be produced once per year. There are certain visuals that are produced each year and so must be reproducible given similar data (e.g. number of executions split by crime, for example) each year (and as such last year's report may be used as a template). Given management's specific concerns, a small number of visualisations will be more bespoke and will not necessarily require repeated production. The report is not live and will only be updated next year, and so no provision for frequent data refreshes is necessary.
 
-* __Setting__: The setting is relatively rapid. Whilst management are interested in certain elements of the report, they are busy and will only look at details quickly - the visualisations need to be quick and punchy. The audience is a combination of live (during the presentation) and remote (when the report is circulated), therefore the visuals can require some explanation (in the presentation) but this explanation should be reproduced in text/explanatory call outs in the report.
+* __Setting__: The setting is relatively rapid. Whilst management are interested in certain elements of the report, they are busy and will only look at details briefly - the visualisations need to be quick and punchy. The audience is a combination of live (during the presentation) and remote (when the report is circulated), therefore the visuals can require some explanation (in the presentation) but this explanation should be reproduced in text/explanatory call outs in the report.
 
-* __Size__: The visualisation elements of the report will a series of (at most) 10 PowerPoint slides, therefore at most 10 visualisations should be created. Each visualisation must be viewable on 1 slide and must be no larger than 1 side of A4 (either portrait or landscape) for when the report is printed. 
+* __Size__: The visualisation elements of the report will a series of (at most) 10 PowerPoint slides, therefore at most 10 visualisations should be created. Each visualisation must be view able on 1 slide and must be no larger than 1 side of A4 (either portrait or landscape) for when the report is printed. 
 
 * __Format__: The visualisations will be formatted both as PowerPoint slides, and also as print handouts of the slides. They do not need to be interactive.
 
@@ -122,13 +122,14 @@ Within this scenario, I imagined that the following intrigue might present (a) r
 
 ### Purpose
 
-* __Experience__: The experience should be a mixture of explanatory and exhibitory. The standard reporting charts that must be produced can be almost entirely exhibitory in nature, simple presenting the data that the senior management will required - they are comfortable dealing with these charts and no further explanation is required. Charts focussing on senior managements specific concerns may need some explanation if they are non-standard chart types that senior management are not entirely familiar with.
+* __Experience__: The experience should be a mixture of explanatory and exhibitory. The standard reporting charts that must be produced can be almost entirely exhibitory in nature, simple presenting the data that the senior management will required - they are comfortable dealing with these charts and no further explanation is required. Charts focussing on senior managements specific concerns may need some explanation if they are non-standard chart types.
 
-* __Tone__: The tone is very much reading. This is a dry, functional report. It is not seeking to excite or entertain senior management but merely to deliver the information that they require as efficiently as possible. Understanding will be driven through the delivery of facts, not through emotive reponses.
+* __Tone__: The tone is very much reading. This is a dry, functional report. It is not seeking to excite or entertain senior management but merely to deliver the information that they require as efficiently as possible. Understanding will be driven through the delivery of facts, not through emotive responses.
 
 ## Ideas
 
-*****
+Please note that my ideas in this section were partially inspired by information found on the _Death Penalty Information_ website^(2)^.
+
 
 # Section 3 - Scenario C
 
@@ -138,7 +139,7 @@ This scenario imagines that we are part of a pressure group trying to influence 
 
 ## General assumptions
 
-I have assumed that the campaign group is anti-capital punishment and is seeking to influence the debate in order to achieve the end capital punishment. I assumed that the campaign group wants to focus on the inmates rather than on their crimes, and ideally to elicit some sympathy for them/the situation surrounding their crime(s) on a human/personal level.
+I have assumed that the campaign group is _anti_-capital punishment and is seeking to influence the debate in order to achieve the end capital punishment. I assumed that the campaign group wants to focus on the inmates rather than on their crimes, and ideally to elicit some sympathy for them/the situation surrounding their crime(s) on a human/personal level. Moreover, I assumed that other data, such as average cost (per month) of holding an inmate on death row, were available or could be obtained within the timeframes of the project.
 
 ## Context
 
@@ -146,7 +147,7 @@ I have assumed that the campaign group is anti-capital punishment and is seeking
 
 Within this scenario, I imagined that the following intrigue might present (a) reason(s) for creating the visualisation. 
 
-* __Anticipated intrigue__: In this context I imagined that the campaign group would anticipate the intrigue of audience along the lines of "If they are thinking about abolishing capital punishment, they may be interested in knowing about the costs of holding a prisoner on death row, the amount of time prisoners spend on death row before being executed, the emotions of the inmate about to be executed or the amount of time it takes an inmate to die when they are executed." The campaign group wants to influence people and so is trying to anticipate what information will be most effective in doing so.
+* __Anticipated intrigue__: In this context I imagined that the campaign group would anticipate the intrigue of audience along the lines of "If they are thinking about the abolition of capital punishment, they may be interested in knowing about the costs of holding a prisoner on death row, the amount of time prisoners spend on death row before being executed, the emotions of the inmate about to be executed or the amount of time it takes an inmate to die when they are executed." The campaign group wants to influence people and so is trying to anticipate what information will be most effective in doing so.
 
 ### Circumstances
 
@@ -166,9 +167,9 @@ Within this scenario, I imagined that the following intrigue might present (a) r
 
 * __Format__: The output will be purely for the web, i.e. no print at all. The visualisation will be be landscape and will potentially have animated elements if this proves to be possible in the timeframes. 
 
-* __Creators__: The core (i.e. paid) team for the visualisation is small: 1 data expert, 1 artist/designer/animator and 1 journalist-type to gather more information on the inmates. However, given the nature of the campaign group there is the potential to crowd-source certain elements of the project and bring on additional volunteers to help with the project. 
+* __Creators__: The core (i.e. paid) team for the visualisation is small: 2 data experts, 1 artist/designer/animator and 2 journalist-types to gather more information on the inmates. However, given the nature of the campaign group there is the potential to crowd-source certain elements of the project and bring on additional volunteers to help with the project. 
 
-* __Tech__: The core team is proficient with advanced bespoke visualisation technology (e.g. `R` or `d3.js`) as well as custom animation tools and artistic programs (such as _Illustrator_). The data expert is comfortable doing most data manipulation and cleaning tasks using a variety of programmatic and GUI-based approaches. More experience with other tools can be sourced from campaign group volunteers if required.
+* __Tech__: The core team is proficient with advanced bespoke visualisation technology (e.g. `R` or `d3.js`) as well as custom animation tools and artistic programs (such as _Illustrator_). The data experts are comfortable doing data manipulation and cleaning tasks using a variety of programmatic and GUI-based approaches. More experience with other tools can be sourced from campaign group volunteers if required.
 
 ## Vision
 
@@ -180,8 +181,8 @@ Within this scenario, I imagined that the following intrigue might present (a) r
 
 ## Ideas
 
+Some of the ideas around highlighting individuals present on death row were inspired by the Marshall Project.^(3)^
 
-*****
 
 # Section 4 - Scenario D
 
@@ -225,8 +226,14 @@ I have assumed that there is no particularly special context for this project, t
 
 ### Purpose
 
-* __Experience__: The experience would be explanatory, presenting the findings of my analysis and explaining what I had found. If a `Shiny` web-app was built, then some limited interactivty would be possible in the charts, but the overall experience would still be one of explanation, and the interactivity would be limited to filtering/getting some further explanation as opposed to deep explorations.
+* __Experience__: The experience would be explanatory, presenting the findings of my analysis and explaining what I had found. If a `Shiny` web-app was built, then some limited interactivity would be possible in the charts, but the overall experience would still be one of explanation, and the interactivity would be limited to filtering/getting some further explanation as opposed to deep explorations.
 
 * __Tone__: The tone would be more reading than feeling. It would simple present the results of my exploratory analysis and not seek to generate any strong emotions in the audience.
 
 ## Ideas
+
+# References
+
+1. Wall Street Journal Article, "An eye for an eye" -  [http://www.washingtonpost.com/wp-srv/special/outlook/death-penalty/](http://www.washingtonpost.com/wp-srv/special/outlook/death-penalty/). Sourced 2016/02/09
+2. Death penalty Information -  [http://www.deathpenaltyinfo.org/texas-1#sent](http://www.deathpenaltyinfo.org/texas-1#sent). Sourced 2016/02/09.
+3. The Marshall Project [https://www.themarshallproject.org/next-to-die/tx](https://www.themarshallproject.org/next-to-die/tx).

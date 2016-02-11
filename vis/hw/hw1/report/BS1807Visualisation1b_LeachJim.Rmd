@@ -9,7 +9,7 @@ output: word_document
 
 ## Background
 
-This assignment deals with developing intimacy with data and establishing editorial perspectives. Two data sets were provided, both covering Olympics medal winners for a range of Olympic years and events. The task was to examine the data and understand what was they showed; to propose transformations/additions that could be made; to (visually) explore the data using Excel/Tableau; and to set out at least 5 distinct editorial perspectives that could be taken with the data.
+This assignment deals with developing intimacy with data and establishing editorial perspectives. Two data sets were provided, both covering Olympics medal winners for a range of Olympic years and events. The task was to examine the data and understand what they showed; to propose transformations/additions that could be made; to (visually) explore the data using Excel/Tableau; and to set out at least 5 distinct editorial perspectives that could be taken with the data.
 
 ## Document structure
 
@@ -146,7 +146,7 @@ In this section I present a list of editorial perspectives that I have come up w
 * __Framing__: All summer Olympics games held since 1896. Only showing countries that first won a medal within the last 20 years, excluding "Russia" as it was competing as Soviet Union before that.
 * __Focus__: Dominance of China and South Korea in new medal winners - adding the USA circle for reference would help to emphasise this.
 
-N.B., given data on which countries actively participated in each games, this could be altered to total medals won by countries that are new to the games, not just those winning medals.
+N.B., given data on which countries actively participated in each games, this could be altered to total medals won by countries that are new to the games, not just those new to winning medals.
 
 ## 4 - Medals efficiency
 
