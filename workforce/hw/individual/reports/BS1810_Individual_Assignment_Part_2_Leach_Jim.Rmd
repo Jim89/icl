@@ -9,21 +9,25 @@ output: pdf_document
 
 This report outlines my response to the second question set as part of the Workforce Analytics individual assignment. The question that I imagined asking was "How can we measure employee satisfaction at a more individual level in order to reduce employee turnover?"
 
+## Side note
+
+Please note that the word limit was discussed with Professor Al-Nauimi who stated that slightly more than 300 words was acceptable.
+
 # Workforce Satisfaction
 
-Workforce satisfaction is notoriously hard to measure. Many companies struggle to realise that an employee is unhappy until it is too late. Employee turnover can be costly. As such a method for estimating satisfaction to enable corrective action to be taken is highly desirable. 
+Workforce satisfaction is notoriously hard to measure. Many companies struggle to identify unhappy employees until it is too late. Employee turnover is costly. A method for estimating satisfaction to help retain staff is therefore highly desirable. 
 
-Typically^1,3,4^, companies use standard satisfaction surveys and analyses of the results in order to gauge satisfaction. But more can be done. As several sources^2, 5^ note, satisfaction is actually a combination of workplace happiness and _engagement_. It is the latter area that has more scope for novel methods to aid in the measurement of overall satisfaction.
+Typically^3,4^, companies use broad-brush satisfaction surveys. But as several sources^2,5^ note, satisfaction is actually a combination of workplace happiness and _engagement_. It is the latter area that has more scope for innovation in satisfaction measurement at a personal level.
 
-Some novel sources of data to help this process are as follows:
+Some data sources relating to employee engagement are:
 
-* The number of training events attended by an employee each year, especially self-selected training;
-* The amount of "extra-curricular" work taken on by an employee (for example staff groups, industry events);
-* The use of non-work related websites / computer activity throughout the day; 
-* Dictionaries created via entity extraction of comments submitted in staff surveys/performance reviews etc could be assessed for the presence of certain indicative key words; and 
-* Using novel methods to track employee interactions in the workplace^6^, indicating strong bonds with colleagues.
+* The number of training events (especially self-selected) attended each year;
+* The amount of "extra-curricular" work taken on (e.g. staff groups, industry events);
+* The extent of non-work website visits / computer activity; 
+* The presence of indicative key words in dictionaries created from comments in staff surveys/performance reviews etc.; and 
+* Employee interaction tracking (as discussed by Alex Pentland in a HBR article^6^).
 
-Motivation theories could then be applied in order to use these data might to define the "type" of employee that each person was. Some example "types" are those proposed by Theresa Welbourne at the University of Chicago^1^:
+Motivation theories could be applied to use these data to define individual employee "types". Example "types" are those proposed by Theresa Welbourne at the University of Chicago^1^:
 
 ```{r show_tbl, echo = FALSE}
 library(knitr)
@@ -34,20 +38,22 @@ data.frame(Segment = c("Survivalist", "Seeker", "Contributor", "'Fun'damentalist
                    "Need to 'make a difference' and not motivated by money", 
                    "Need for work to be fun, enjoy what they do, helps others and part of the work social scene")) %>%
 kable(col.names = c("Segment", "Motivated by"),
-      caption = "Employee types and motivations (1)")
+      caption = "Employee types and motivations. Sourced from reference (1)")
 ```
 
-Typical measures of performance and information such as tenure, salary, recent promotions etc, could also be use in this process. For example, an individual attending a high number of training events, with limited use of non-work websites, and a dictionary containing certain key words (e.g. motivated, training, challenging) could be classified as a "Seeker". Alternatively an employee with a high attendance at "extra-curricular" activities, dictionary keywords such as "sharing", "public speaking" may be seen as "Contributors". Finally an employee with strong-interpersonal interactions or many office friends but a lower-than-average salary may be classified as a 'Fun'damentalist.
+Typical measures of performance and information such as tenure, salary, promotions etc, could also be use in this process. For example, an individual attending many training events, with limited non-work website use, and a dictionary containing certain key words (e.g. "motivated", "challenging") could be classified as a "Seeker". Alternatively an employee with a high attendance at "extra-curricular" activities, dictionary keywords such as "sharing", "public speaking" may be seen as "Contributors". Finally an employee with strong-interpersonal interactions or many office friends but a lower-than-average salary may be classified as a 'Fun'damentalist.
 
-These classifications could then be combined with survey results, tenure/salary/promotion data and performance ratings to create a more individual satisfaction rating. The strengths of this method are that the more personal/targeted measurement of satisfaction may help to identify "edge-cases" or employees that would otherwise have been overlook (perhaps those that did not stand out) that are at risk of leaving, allowing preventative action to be taken. Similarly, if warning signs were detected earlier rather than later, the firm may save time and/or money in negotiations trying to retain an employee who was already set on leaving.
+These classifications could be combined with conventional survey results to create more personalised satisfaction scores. These scores could be used to take more targeted action on increasing satisfaction.
 
-Some limitations of this method include the difficulties in tracking some information (such as attendance at external training course or events) and potential privacy concerns around tracking computer use and interaction types. Moreover, employees may object to being "labelled" or "classified" in to a distinct personality type which may actually have the unwanted side effect of causing a reduced satisfaction simply by proposing this method.
+The strengths of this method are that the more personal measurement of satisfaction may help to identify employees who would otherwise have been overlooked, and who are at risk of leaving (perhaps those who are more reserved). This would allow preventative action to be taken. Similarly, if warning signs were detected earlier rather than later, the firm may save time and/or money in negotiations trying to retain an employee who was already set on leaving.
+
+Some limitations of this method include the difficulties in tracking some information (such as attendance at external training course or events) and potential privacy concerns around tracking computer use and workplace interactions. Moreover, employees may object to being "labelled" or "classified" in to a distinct personality type which may actually have the unwanted side effect of causing a reduced satisfaction simply by proposing this method.
 
 # References
 
 1. B2B International: _Employee Satisfaction Surveys: Measuring Staff Engagement_ - https://www.b2binternational.com/publications/employee-satisfaction/;
 2. SurveyGizmo - _Why Employee Engagement Matters_ - https://www.surveygizmo.co.uk/survey-blog/why-employee-engagement-matters-and-how-to-measure-it/;
 3. Monster - _How can I measure emplyee satisfaction?_ - http://hiring.monster.ie/hr/hr-best-practices/workforce-management/employee-retention-strategies/how-can-i-measure-employee-loyalty-and-satisfaction-ie.aspx;
-4. Qualtics - _Employee Satisfaction Survey Template_ - http://www.qualtrics.com/blog/employee-satisfaction-survey/;
+4. Qualtrics - _Employee Satisfaction Survey Template_ - http://www.qualtrics.com/blog/employee-satisfaction-survey/;
 5. Harvard Business Review - _A Primer on Measuring Employee Engagement_ - https://hbr.org/2014/11/a-primer-on-measuring-employee-engagement
 6. Harvard Business Review - _The New Science of Building Great Teams_ - https://services.hbsp.harvard.edu/services/proxy/content/45226633/45226856/8df5cd76ca779699ca5561cbd4c3db41
