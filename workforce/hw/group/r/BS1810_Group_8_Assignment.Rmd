@@ -22,7 +22,7 @@ data <- data %>%
 
 # Introduction
 
-There are a range of research centres at Imperial College Business School. They all operate in related but distinct fields. A challenge in administering these centres is finding the right academic staff to perform research within them. In this assignment, we were tasked with investigating the use of dictionaries to match staff with centres, as well as thinking about other methods for performing the assignment. 
+There are a range of research centres at Imperial College Business School (ICBS). They all operate in related but distinct fields. A challenge in administering these centres is finding the right academic staff to perform research within them. In this assignment, we were tasked with investigating the use of dictionaries to match staff with centres, as well as thinking about other methods for performing the assignment. 
 
 # This document
 
@@ -32,9 +32,9 @@ This document is broken down in to four sections. Section one presents an overvi
 
 ## Approach
 
-Dictionaries were created for all staff members and research centres. Centre dictionaries were manually sourced using information on the relevant ICBS web pages. Staff summaries were programatically scraped from the staff directory. 
+Dictionaries were created for all staff members and research centres. Centre descriptions were manually sourced using information on the relevant ICBS web pages. Staff summaries were programatically scraped from the staff directory. 
 
-The _Natural Language Tool Kit_ `Python` package was then used to _tokenise_ the dictionaries and to _tag_ each word with its part of speech (_POS_), e.g. noun, verb etc. Only certain _POS_ tags were taken for a dictionary. Several combinations of _POS_ tags were investigated:
+The _Natural Language Tool Kit_ `Python` package was then used to _tokenise_ the descriptions and to _tag_ each word with its part of speech (_POS_), e.g. noun, verb etc. in order to create the dictionaries. Only certain _POS_ tags were taken for a dictionary. Several combinations of _POS_ tags were investigated:
 
 * Normal nouns only (i.e. no proper nouns);
 * Normal and proper nouns;
@@ -43,7 +43,7 @@ The _Natural Language Tool Kit_ `Python` package was then used to _tokenise_ the
 
 Stop-words, i.e those that occurred more than $X$% of the time (across the unique set of _all_ terms for _all_ dictionaries), were removed. Three distinct values of $X$ were tested: 5%, 10% and 20%.
 
-The similarities between all centre-staff combinations were then calculated using two similarity metrics: overlap \eqref{eq:overlap} and cosine similarity \eqref{eq:cosine}.
+The similarities between all centre-staff combinations were then calculated using one of two similarity metrics: overlap \eqref{eq:overlap} or cosine similarity \eqref{eq:cosine}.
 
 \begin{equation} \label{eq:overlap}
 Overlap(X, Y) = \dfrac{|X \cap Y|}{|X \cup Y|}
@@ -59,13 +59,13 @@ The highest similarity for each staff member was used to assign them to a resear
 
 ### Similarity metrics
 
-The average similarity scores across all staff-centre combinations were very low using either method (appendix one). The average similarity was consistently below 0.1, with a small standard deviation of between `r round(min(data$std), 3)` and `r round(max(data$std), 3)`. The similarity was never greater than `r round(max(data$ma), 3)` across all combinations similarity measure, POS tags and common-word threshold.
+The average similarity scores across all staff-centre combinations were very low using either method (appendix one). The average similarity was consistently below 0.1, with a small standard deviation of between `r round(min(data$std), 3)` and `r round(max(data$std), 3)` (depending on the parameters used). The largest similarity observed was `r round(max(data$ma), 3)`.
 
 ### Accuracy
 
 The highest accuracy found was `r 100*round(max(data$perf), 2)`%; impressive given the weak similarity scores and the messy nature of the data. 
 
-Cosine similarity measures produced results that were more accurate than the overlap method (appendix two). A $t$-test showed the results to be statistically significant: cosine mean of `r 100*round(mean(data$perf[data$cos == "Cosine"]), 2)`% compared with overlap mean of `r 100*round(mean(data$perf[data$cos == "Overlap"]), 2)`%, $p$-value of $`r t.test(data$perf[data$cos == "Cosine"], data$perf[data$cos == "Overlap"])$p.value`$. 
+Cosine similarity measures produced results that were more accurate than the overlap method (appendix two). A $t$-test showed the results to be statistically significant: cosine mean of `r 100*round(mean(data$perf[data$cos == "Cosine"]), 2)`% compared with overlap mean of `r 100*round(mean(data$perf[data$cos == "Overlap"]), 2)`%, $p$-value of $`r round(t.test(data$perf[data$cos == "Cosine"], data$perf[data$cos == "Overlap"])$p.value,3)`$ (appendix five). 
 
 The POS tags that were used also had an effect on the accuracy (appendix three). Using normal and proper nouns only produced the best accuracy measures relative to the other POS tags.
 
@@ -75,7 +75,7 @@ Minor differences were observed in the accuracy based on the common-word thresho
 
 Overall this method shows some merit for matching staff with research centres. It would be interesting to see how more targeted data collection, or more thorough data cleansing could impact the results and potentially offer a novel way to help assign research staff to research centres.
 
-A limitation of this method is that it relies on user-defined descriptions of research interest. It is the cas that these descriptions may not truly reflect reality (for example some staff summaries are brief or non-existent, whilst others are incredibly detailed). Additionally, research interests may change over time. Such changes may not be reflected in staff summaries, meaning that staff may remain assigned to a centre to which they were not best suited.
+A limitation of this method is that it relies on user-defined descriptions of research interest.These descriptions may not truly reflect reality (for example some staff summaries are brief or non-existent, whilst others are incredibly detailed). Additionally, research interests may change over time. Such changes may not be reflected in staff summaries, meaning that staff may remain assigned to a centre to which they were not best suited.
 
 ***
 
@@ -83,11 +83,11 @@ A limitation of this method is that it relies on user-defined descriptions of re
 
 ## Extended Dictionary Technique:
 
-Using the data gather for section one we could assume that researchers within one center would use a similar vocabulary to describe their work. Making this assumption, we could try to compare researchers with each other, and try to create clusters with the dictionaries based on similarities.
+Using the data gathered for section one we could assume that researchers within one center would use a similar vocabulary to describe their work. Making this assumption, we could try to compare researchers with each other, and try to create clusters based on dictionary similarities.
 
-We could then either chose to match the cluster of researchers to a centre based on either the similarity of one of the individuals in the cluster to the centre, or based on the combined dictionary of the cluster as a whole.
+We could then match the cluster of researchers to a centre based on either the similarity of one of the individuals in the cluster to the centre, or based on the combined dictionary of the cluster as a whole.
 
-Other data that could enrich this process could be the lists of researchers that co-author papers together or perhaps social network-like data for some way in which the researchers communicate internally. Such data could aid in the creation of clusters of researchers.
+Other data that could enrich this process are lists of researchers that co-author papers together or social network-like data for some way in which the researchers communicate internally. Such data could aid in the creation of clusters of researchers.
 
 ## Bipartite Graph Preference-Weighted Matching ^(2)^
 
@@ -97,7 +97,7 @@ Given a list of research centres, each staff member would then rank the centres 
 
 Using these preference lists, a matching algorithm can be applied to the bipartite graph structure. This algorithm is known to produce a stable matching (i.e. one in which no staff member or research centre will switch given their current assignment) and would potentially be a promising candidate for solving this problem.
 
-A limitation is that this is a potentially administratively complex exercise for each research centre due to the high number of staff they would have to list in preference order. They may then need to spend time reading staff descriptions to understand who was suitable. There is perhaps room for a dictionary-based similarity score that could be used to enhance this matching.
+A limitation is that this is a potentially administratively complex exercise for each research centre due to the high number of staff they would have to list in preference order. They may need to spend time reading staff descriptions to understand who was suitable. There is perhaps room for a dictionary-based similarity score that could be used to aid this matching.
 
 ***
 
@@ -148,6 +148,16 @@ data %>%
   kable(digits = 3, col.names = c("Common Word Threshold", "Mean Accuracy"))
 ```
 
+## Appendix Five - $t$-test output for similarity metric accuracy differences:
+
+```{r t, echo = FALSE}
+library(broom)
+x <- t.test(data$perf[data$cos == "Cosine"], data$perf[data$cos == "Overlap"])
+x <- tidy(x)
+x <- x %>% select(estimate1, estimate2, statistic, p.value, parameter)
+x %>% kable(digits = 4, 
+            col.names = c("Cosine Mean", "Overlap Mean", "t-Statistic", "p-Value", "Deg. Freedom"))
+```
                                                   
 # References                                                  
 
