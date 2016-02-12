@@ -8,8 +8,8 @@ Created on Thu Feb 11 06:59:08 2016
 # %% import packages
 import pandas as pd
 import jellyfish
-import numpy as np
-from collections import Counter
+import scipy as sp
+from scipy import stats
 
 # %% Define helper functions
 # Herfindal Index
@@ -87,9 +87,17 @@ patent_eth.reset_index(level = 0, inplace = True)
 
 d3 = pd.merge(d3, patent_eth, how = 'left')
 
+eths = []
+for i in range(len(d3)):
+    team_size = len(d3.lastname[i].split(';'))
+    eth2 = d3.ethnicity[i].split(',')[0:team_size]
+    eths.append(eth2)
+    
+d3.ethnicity = eths    
+
 # %% Step 7 and 8 - Calculate diversity and add team size and cross-cntry
 d3['eth_div'] = [1-herf(x) for x in d3.ethnicity]
-d3['cntry_div'] = [1-herf(x) for x in d3.cntries]
+d3['cntry_div'] = [1-herf(x.split(';')) for x in d3.cntries]
 d3['team_size'] = [len(x.split(';')) for x in d3.lastname]
 
 cross_cntry = []
@@ -100,9 +108,40 @@ for i in range(len(d3)):
     else:
         cross_cntry.append(0)
         
-d3['cross_cntry'] = cross_cntry        
+d3['cross_cntry'] = cross_cntry
+d3['eth_div_2'] = d3.eth_div**2
+d3['cntry_div_2'] = d3.cntry_div**2
+d3.columns = ['pnum', 'firm','year', 'performance', 'inv_num', 'lastname',
+       'cntries', 'ethnicity', 'eth_div', 'cntry_div', 'team_size',
+       'cross_cntry','eth_div_2', 'cntry_div_2']
 
 # d3.to_csv("../../data/D3_patents_to_eth.csv")
+
+# %% Step 9 - Calculate correlations
+inherant_cor = sp.stats.pearsonr(d3['performance'], d3.eth_div)
+acquired_cor = sp.stats.pearsonr(d3['performance'], d3.cntry_div)
+team_size_cor = sp.stats.pearsonr(d3['performance'], d3.team_size)
+
+
+def team_perf(inherant, acquired, team, constant):
+    import numpy as np
+    perf = np.exp(-.135*inherant + .231*(inherant**2) + 1.289*acquired - 1.623*(acquired**2) + .078*team + constant)
+    return perf
+
+d3['predicted_perf'] = team_perf(inherant = d3.eth_div,
+                                  acquired = d3.cntry_div,
+                                  team = d3.team_size,
+                                  constant = 2)
+
+# %% Fit a simple Poisson regression to the model
+import statsmodels.api as sm
+import pandas
+from patsy import dmatrices
+
+y, X = dmatrices('performance ~ eth_div + eth_div_2 + cntry_div + cntry_div_2 + team_size', data=d3, return_type='dataframe')
+
+pois = sm.Poisson(y, X)
+pois_res = pois.fit()
 
 
 
