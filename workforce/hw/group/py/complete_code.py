@@ -136,10 +136,10 @@ for extract in to_extract:
         for val in cosines:
         
             # loop over centre files to extract_nouns
-            centre_list = [extract_pos(x, what = 'nn') for x in centre_list_raw]  
+            centre_list = [extract_pos(x, what = extract) for x in centre_list_raw]  
             
             # loop over person files to extract nouns
-            person_list = [extract_pos(x, what = 'nn') for x in person_list_raw]
+            person_list = [extract_pos(x, what = extract) for x in person_list_raw]
             
             # combine centre and person nouns in to the global list
             global_list = []
