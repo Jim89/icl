@@ -8,7 +8,7 @@ fit <- glm(performance ~ eth_div + eth_div_2 + cntry_div + cntry_div_2 + team_si
           data = d3,
           family = "poisson")
 
-fit2 <- glmmboot(performance ~ eth_div + eth_div_2 + cntry_div + cntry_div_2 + team_size + year,
+fit2 <- glmmboot(performance ~ eth_div + eth_div_2 + cntry_div + cntry_div_2 + team_size + factor(year),
                  data = d3,
                  family = "poisson",
-                 cluster = firm)
+                 cluster = factor(firm))
