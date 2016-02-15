@@ -73,5 +73,6 @@ q1b_base = pd.DataFrame({'firm' : firm_list, 'inv': inv_list})
 q1b_base = q1b_base.merge(movers, how = 'left', left_on = ['firm', 'inv'],
                           right_on = ['firm', 'inv_num'])
 q1b_base['moved_to'] = pd.notnull(q1b_base.inv_num)
-q1b_base.drop('inv_num', inplace = True)
+q1b_base.drop('inv_num', axis = 1, inplace = True)
+q1b_base.to_csv("../../../../data/outputs/q1b_base.csv", index = False)
         
