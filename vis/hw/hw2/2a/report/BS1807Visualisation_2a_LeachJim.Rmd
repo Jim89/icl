@@ -9,8 +9,54 @@ output: pdf_document
 
 ## Background
 
-This assignment deals with the curiosities, circumstances, purpose and ideas potentially involved in creating a visualisation/infographic in a number of different scenarios. Four scenarios were considered, each dealing with data on capital punishment/executions in the state of Texas. Representative data were provided and the challenge was to consider these data and the various factors involved in formulating the brief for a visualisation across a number of situations.
+This assignment deals with developing a solution to an editorial perspective proposed in an earlier assignment (1b). Data were provided covering Olympics medal winners for a range of Olympic years and events. The task was to to use Tableau to create a dashboard that set out an editorial perspective that could be taken with the data.
 
 ## Document structure
 
-This document presents the responses for section 1a of the first assignment for the BS1907 Visualisation module. The document is divided in to sections, one for each of the scenarios in the assignment. Each section is further divided in to sub-sections for the various tasks in the assignment.
+This document is structured in to four sections. Each visualisation contained in the dashboard (of which there are three) is discussed in an individual section. The final section briefly summarises the overall dashboard.
+
+# Design Decisions
+
+## Visualisation One - Total medals by country
+
+This visualisation shows the total medals won by all countries across the entire timespan that the data cover. It uses the area mark (with the position of each area being constrained by geographical realities). In terms of channel, it uses brightness/luminosity to represent the total number of medals won by each country. It is a chloropleth map.
+
+A chloropleth map is appropriate for showing geographical data that is broken down by region in this way. The map quickly shows which countries are the "heavy-hitters" in terms of total medals won.
+
+Within the map itself, a user can zoom and pan to manipulate the visualisation if they are interested in a particular geographical region (e.g. Europe or Asia). The map also acts as a filter for the other visualisations. Selecting a country (or countries) filters the other visualisations to display just data for the selected countries, allowing a more granular view of the data to be seen.
+
+## Visualisation Two - Total medals by athlete
+
+This visualisation shows the total number of medals won by each individual athlete, for all athletes in the data. It uses the lines (bars) visual mark as well as the text mark to add extra detail for each athlete (their gender and sporting discipline). The _length_ visual channel is used to show the number of medals won by each athlete. Colour is not used to encode any data (i.e. it is used purely for decorative purposes), with all bars coloured in an identical manner.
+
+A barchart like this is effective for displaying count data broken down by individual groups/units (in this case athletes). It is easy to see differences in the total number of medals won by athletes in order to find the all-time best athletes (in terms of total medals) across all countries. Similarly, once visualisation one has been used to filter to just those athletes for a specific country, it is easy to identify stand-out successes within a country's team. 
+
+The addition of the gender and sporting discipline as a label add extra detail without cluttering the overall visual. Users can quickly get a sense of which displines have produced hugely successful athletes, as well as an idea of how men and women compare when it comes to total medals won.
+
+Hovering over an individual athlete highlights their position in visualisation three (athlete efficiency). This gives a user a better idea of how successful the athlete is from an efficiency perspective (i.e. how many medals they have won relative to how many appearances they have made). This highlighting allows athletes with an equivalent total-medal count to be compared by viewing their position on the efficiency chart via the highlighting interaction.
+
+## Visualisation Three - Athlete efficiency (Medals vs. Appearances)
+
+This visualisation shows the relationship between the total number of medals won by an athlete and the number of times they have competed at the Olympics. This is a measure of athlete efficiency. 
+
+The visualisation uses the point visual mark to plot each athlete on the chart. The position of each point encodes each athlete's efficiency (with positions in the top-left of the visualisation representing more efficient athletes). A scatter plot was chosen as it is the most effect visualisation for viewing the relationship between two numerical variables.
+
+Many athletes sit at the same positions on this chart (as both medal count and appearances are discrete numbers) and so saturation/transparency has been used to give a sense of where the bulk of athletes are positioned on this graph. I.e. it encodes the number of athletes at each position on the chart. Again the exact colour does not encode any data and has been used merely for aesthetic reasons.
+
+The line visual mark is also used, with the angle visual channel being used to encode the overall (linear) relationship between medals and appearances. 
+
+In terms of interactions, selecting a point (or group of points) in visualisation three will filter both visualisation one _and_ two to display just the data relevant to that point/points. This allows more information about groups of similarly-efficient athletes to be viewed (e.g. which countries they come from, their genders, and sporting disciplines).
+
+## The overall dashboard
+
+Overall this dashboard presents information on the total medals won by athletes, their efficiency, and the country that they come from. It uses a range of visualisations to present these data: a chloropleth map, a simple barchart and a scatterplot. The use of the visualisations allows the data to be viewed from multiple angles: at a country level as well as at an individual athlete level. 
+
+Reading from left-right, top-bottom the data tell an increasingly detailed story. The first, country level view, gives a quick overview. Next, the user sees an athlete-level view which gives more information about the individual athletes who have won medals (perhaps from a particular country if the first visualisation has been used to filter). The third and final visualisation gives even more detail about the individual athletes, revealing not just their raw performance (total medals) but their efficiency (medals vs. appearances). The user can filter and highlight in order to understand country-level groups, or athlete-specific information.
+
+
+
+
+
+
+
+
