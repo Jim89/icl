@@ -9,8 +9,8 @@ Created on Fri Feb 12 12:28:53 2016
 import pandas as pd
 
 # %%
-d2 = pd.read_csv('../../../data/d2_firm_level_data.csv')
-d3 = pd.read_csv('../../../data/d3_patent_data.csv')
+d2 = pd.read_csv('../../../../data/d2_firm_level_data.csv')
+d3 = pd.read_csv('../../../../data/d3_patent_data.csv')
 
 # %% Compute collaboration
 teams = d3.inv_num
@@ -55,7 +55,9 @@ elapsed = timeit.default_timer() - start_time
 
 # collapse to unique values and write to csv
 collaborators.drop_duplicates(inplace = True)
-collaborators.to_csv('../../../data/outputs/collaborators.csv', index = False)
+collaborators.to_csv('../../../../data/outputs/collaborators.csv', index = False)
                 
-                
+# %%
+d3_inv['pnum_str'] = d3_inv.pnum.apply(str)
+inv_to_pat = pd.DataFrame(d3_inv.groupby('inv_num')['pnum_str'].apply(lambda x: ', '.join(x)))
                 
