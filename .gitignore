@@ -82,6 +82,8 @@ workforce/hw/individual/reports/*.pdf
 ml/hw/hw0/*.pdf
 ml/docs/*.pdf
 ml/labs/02/*.pdf
+ml/hw/hw1/images/*
+ml/hw/hw1/*.pdf
 
 # ignore for vis
 vis/*.pdf
