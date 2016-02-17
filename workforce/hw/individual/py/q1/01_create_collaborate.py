@@ -27,6 +27,7 @@ d3_inv = pd.melt(d3_inv,
                  value_vars = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,25,25],
                  value_name = 'inv_num')
 d3_inv = d3_inv.drop('variable', axis = 1)
+d3_inv.to_csv("../../../../data/outputs/d3_inv.csv", index = False)
 
 # %%
 inv_list = pd.unique([inv for inv in d3_inv.inv_num])
@@ -60,4 +61,6 @@ collaborators.to_csv('../../../../data/outputs/collaborators.csv', index = False
 # %%
 d3_inv['pnum_str'] = d3_inv.pnum.apply(str)
 inv_to_pat = pd.DataFrame(d3_inv.groupby('inv_num')['pnum_str'].apply(lambda x: ', '.join(x)))
+inv_to_pat.reset_index(level = 0 , inplace = True)
+inv_to_pat.to_csv('../../../../data/outputs/inv_to_pats.csv', index = False)
                 
