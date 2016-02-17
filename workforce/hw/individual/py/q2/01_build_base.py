@@ -9,9 +9,9 @@ import pandas as pd
 import numpy as np
 
 # %% read in firm data and patent data
-d1 = pd.read_csv("../../../data/outputs/sims.csv")
-d2 = pd.read_csv("../../../data/D2_firm_level_data.csv")
-d3 = pd.read_csv("../../../data/D3_patent_data.csv")
+d1 = pd.read_csv("../../../../data/outputs/sims.csv")
+d2 = pd.read_csv("../../../../data/D2_firm_level_data.csv")
+d3 = pd.read_csv("../../../../data/D3_patent_data.csv")
 
 # %% Find inventors moving firms
 d3_firm_to_invs = pd.concat([d3.firm,
@@ -20,11 +20,11 @@ d3_firm_to_invs = pd.concat([d3.firm,
                              d3.inv_num.apply(lambda y: pd.Series(y.split(';')))], 
                              axis = 1)
                              
-d3_firm_to_inv_melt = pd.melt(d3_firm_to_invs, 
+d3_firm_to_invs = pd.melt(d3_firm_to_invs, 
                              id_vars = ['firm', 'pnum', 'year'], 
                              value_vars = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,25,25],
                              value_name = 'inv_num')
-d3_reshaped_firms = d3_firm_to_inv_melt.drop('variable', axis = 1)
+d3_reshaped_firms = d3_firm_to_invs.drop('variable', axis = 1)
 d3_reshaped_firms = d3_reshaped_firms.sort_values(['inv_num', 'pnum', 'firm'], ascending = [1, 1, 1])
 d3_reshaped_firms['firm_list'] = [[x] for x in d3_reshaped_firms.firm]
 

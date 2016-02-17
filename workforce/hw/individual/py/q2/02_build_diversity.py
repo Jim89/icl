@@ -87,8 +87,8 @@ firm_eth.reset_index(level = 0, inplace = True)
 firm_eth = pd.merge(firm_eth, d3_firm_countries)
 
 # %% Step 7 Calculate diversity and cross-cntry
-firm_eth['eth_div'] = firm_eth.ethnicity.apply(lambda x: 1-herf(x.split(',')))
-firm_eth['cntry_div'] = firm_eth.cntry.apply(lambda x: 1-herf(x.split(',')))
+firm_eth['eth_div'] = firm_eth.ethnicity.apply(lambda x: 1-herf(pd.unique(x.split(','))))
+firm_eth['cntry_div'] = firm_eth.cntry.apply(lambda x: 1-herf(pd.unique(x.split(','))))
 
 # Write to csv
 firm_eth.to_csv("../../../../data/outputs/firm_eth.csv", index = False)
