@@ -1,15 +1,111 @@
 ---
 title: "Workforce Analytics Individual Assignment Part 1a"
 author: "Jim Leach"
-date: "11 February 2016"
+date: "18 February 2016"
 output: pdf_document
 ---
+
+```{r load_pckgs, echo = FALSE, message = FALSE}
+library(readr)
+library(dplyr)
+library(magrittr)
+library(glmmML)
+library(broom)
+library(knitr)
+```
 
 # Introduction
 
 This report outlines my response to question 1a set as part of the Workforce Analytics individual assignment. The question was "What is the relationship between the number of times inventors collaborate and project performance?".
 
+## Side note
+
+Please note that the word limit was discussed with Professor Al-Nauimi who stated that slightly more than 300 words was acceptable.
+
+***
+
+# The effect of collaboration on performance
+
 ```{r get_data, echo = FALSE, message = FALSE}
-library(readr)
 q1a <- read_csv("../../../data/outputs/q1a.csv")
+
+q1a %<>%
+  mutate(cross_cntry = as.factor(cross_cntry),
+         team_size_2 = team_size^2)
+
+q1a <- q1a[, -1]
+```
+
+## Approach
+
+When assessing the effect of collaboration on performance, I chose to model collaboration in two ways and ran the same regression to compare results.
+
+The first method considered the network size of all inventors working on a patent. For each inventor, the set of _other_ inventors that they had worked with was found. Each set was combined with that for the other inventors and duplicate entries removed (e.g. if A and B had worked with inventor C, then C was counted only once). The size of the resulting set was used as a measure of collaboration. This method represents collaboration via the diversity and depth of experience that inventors bring to the team.
+
+The second method considered the number of times that inventors within the patent had worked _together_. For each inventor listed on a patent, the complete set of _all_ of their patents was found. This was then intersected with the sets for the other inventors on the patent. The size of this intersection was used as a measure of collaboration. This method represents collaboration via closeness formed through shared experiences.
+
+Other variables were used as controls:
+
+* Inventor ethnic diversity (and it's second-order polynomial);
+* Inventor country diversity (and it's second-order polynomial);
+* Team size;
+* A binary variable indicating if the team was working cross-border; and
+* Median average inventor performance (the median of average performance score for each inventor).
+
+## Results
+
+```{r fit_pois_1, echo = FALSE}
+pois_1 <- glm(performance ~ eth_div + eth_div_2 + cntry_div + cntry_div_2 + team_size + cross_cntry + med_inv_perf + collab1,
+           data = q1a,
+           family = "poisson")
+
+pois_results_1 <- tidy(pois_1) %>% 
+                  select(1, 2, 3, 5)
+```
+
+```{r fit_pois_2, echo = FALSE}
+pois_2 <- glm(performance ~ eth_div + eth_div_2 + cntry_div + cntry_div_2 + team_size + cross_cntry + med_inv_perf + collab2,
+           data = q1a,
+           family = "poisson")
+
+pois_results_2 <- tidy(pois_2) %>% 
+                  select(1, 2, 3, 5)
+```
+
+Using either method it was found that collaboration had a statistically significant, positive effect on performance. I.e., the more that a team collaborates, the more likely it is to be high performing.  
+
+Using method one, the value of the collaboration coefficient was `r round(pois_results_1[9, 2], 3)` with a $p$-value of $`r pois_results_1[9, 4]`$ (appendix 1).
+
+Using method two, the value of the collaboration coeffient was `r round(pois_results_2[9, 2], 3)` with a $p$-value of $`r pois_results_2[9, 4]`$ (appendix 2).
+
+The results for the other variables are also similar: Ethnic diversity initially decreases performance, but as it increases, so does performance. Country diversity has the opposite effect, initially increasing performance but gradually reducing it. Team size has a positive impact, perhaps represnting more ideas being brought to the team. The effect of working across borders is negative, possibly representing an administrative burden. The median average inventor performance also had a positive effect potentially indicating that better inventors tend to produce better patents.
+
+## Limitations & Further Work
+
+This method does account for time when modelling collaboration, i.e. it has not measured changes in performance when inventors have collaborated more/less in the past. A more detailed model that accounted for this would be more robust, and may give more interesting results. 
+
+Individual collaboration _within_ teams are also not accounted for. For example a team of A, B and C where A and B have worked together many times before (but never with C) should ideally be distinct from a team of X, Y and Z who have never worked together before. Pairwise collaboration metrics may help to remedy this and would be interesting to investigate. 
+
+***
+
+# Appendices
+
+## Appendix One - Poisson Regression Results Using Collaboration Method One
+
+```{r show_pois_1, echo = FALSE}
+pois_results_1 %>% 
+  kable(digits = 5,
+        col.names = c("Variable", "Estimate", "Std. Error", "P-Value"),
+        caption = "Poisson Regression results for model using collaboration method one. Variables are ethnic diversity (and its second order polynomial), country diversity (and its second order polynomial), team size, cross-country indicator, median average inventor performance, and collaboration.")
+```
+
+\pagebreak
+
+## Appendix Two - Poisson Regression Results Using Collaboration Method Two
+
+```{r show_pois_2, echo = FALSE}
+pois_results_2 %>% 
+  kable(digits = 5,
+        col.names = c("Variable", "Estimate", "Std. Error", "P-Value"),
+                caption = "Poisson Regression results for model using collaboration method two. Variables are ethnic diversity (and its second order polynomial), country diversity (and its second order polynomial), team size, cross-country indicator, median average inventor performance, and collaboration.")
 ```

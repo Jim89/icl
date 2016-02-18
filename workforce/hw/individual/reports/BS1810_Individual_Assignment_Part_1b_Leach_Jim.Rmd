@@ -1,0 +1,99 @@
+---
+title: "Workforce Analytics Individual Assignment Part 1b"
+author: "Jim Leach"
+date: "18 February 2016"
+output: pdf_document
+---
+
+```{r load_pckgs, echo = FALSE, message = FALSE}
+library(readr)
+library(dplyr)
+library(magrittr)
+library(logistf)
+library(broom)
+library(knitr)
+```
+
+# Introduction
+
+This report outlines my response to question 1b set as part of the Workforce Analytics individual assignment. The question was "What is the relationship between the ethnic composition of a firm and the likelihood that an inventor will move to that firm?".
+
+## Side note
+
+Please note that the word limit was discussed with Professor Al-Nauimi who stated that slightly more than 300 words was acceptable.
+
+***
+
+# The relationship between ethnic diversity and joining a firm
+
+```{r getdata, echo = FALSE}
+q1b <- read_csv("../../../data/outputs/q1b.csv")
+
+# transform certain columns
+q1b$moved_to %<>% as.logical()
+q1b$n_comp %<>% as.numeric()
+```
+
+## Approach
+
+For all inventors in the patents data set, the list of firms that each inventor had worked at (ordered chronologically using patent number) was found. Those that had worked at more than one firm were classified as having moved. For those inventors that moved, the first firm in their firm list was discarded (as they did not _move_ to that firm) and the remaining firms retained. 
+
+A table of all combinations of firm to inventor was created and the set of movers used to create a binary variable identifying which inventors had moved to which firms. A firms ethnic composition was calculated based on the ethnicities of inventors that had worked at the firm. Inventor ethnicities were calculated based on the inventors' last names matched to known ethnic surnames using a [Metaphone](https://en.wikipedia.org/wiki/Metaphone) transformation of the name. The overall ethnic composition of the firm was then calculated using \eqref{eq:herf}: 1 minus the [Herfindal Index](https://en.wikipedia.org/wiki/Herfindahl_index) of the ethnicities of its inventors.
+
+\begin{equation} \label{eq:herf}
+\begin{split}
+\text{Diversity} = 1 - \sum_{i=1}^nr_i^2 \\
+r_i = \text{ratio of item i}
+\end{split}
+\end{equation}
+
+Country diversity was also calculated for each firm using the same method, and the countries of the inventors. A number of other variables were used as controls:
+
+* employees;
+* sales;
+* R&D investment;
+* Average competition; and
+* Number of competitors.
+
+Very few inventors in the data set moved, potentially resulting in [separation](http://www.r-bloggers.com/example-8-15-firth-logistic-regression/) in the data. As such, both standard logistic regression and logistic regression using a penalised likelihood method proposed by Firth^1^ were used. 
+
+## Results
+
+```{r fit_logit, echo = FALSE, cache = F}
+fit <- glm(moved_to ~ ., data = q1b %>% select(-firm, -inv), family = "binomial")
+results <- tidy(fit) %>% 
+            select(1, 2, 3, 5)
+```
+
+```{r fit_logit_firth, echo = FALSE, cache = F}
+fit_firth <- logistf(moved_to ~ ., data = q1b %>% select(-firm, -inv))
+results_firth <- data_frame(term = fit_firth$terms,
+                      coef = as.numeric(fit_firth$coefficients),
+                      se = sqrt(diag(fit_firth$var)),
+                      p = as.numeric(fit_firth$prob))
+```
+
+# Appendices
+
+## Appendix One - Logistic regression results
+
+```{r show_logit, echo = FALSE}
+results %>% 
+  kable(col.names = c("Varialbe", "Estimate", "Std. Error", "P-value"),
+        digits = 5,
+        caption = "Standard logistic regression results. Variables are ethnic diversity, country diversity, number of employees, firm sales, firm R&D investment, average competition and number of close competitors. All values are rounded to 5dp.")
+```
+
+## Appendix Two - Logistic regression using Firth method results
+
+```{r show_logit_firth, echo = FALSE}
+results_firth %>% 
+  kable(col.names = c("Varialbe", "Estimate", "Std. Error", "P-value"),
+        digits = 5,
+        caption = "Firth method logistic regression results. Variables are ethnic diversity, country diversity, number of employees, firm sales, firm R&D investment, average competition and number of close competitors. All values are rounded to 5dp.")
+```
+
+# References
+
+1. Firth (1993 Biometrika 80:27-38);
+2. Firth regression in R: http://www.r-bloggers.com/example-8-15-firth-logistic-regression/
