@@ -15,7 +15,7 @@ inv_to_pat = pd.read_csv('../../../../data/outputs/inv_to_pats.csv')
 d3_inv = pd.read_csv('../../../../data/outputs/d3_inv.csv')
 d3_inv.dropna(inplace = True)
 
-# %% Collaboration 1 - total collaborators for all inventors on patent
+    # %% Collaboration 1 - total collaborators for all inventors on patent
 # Get list of all distinct patents
 all_patents = pd.unique(d3_inv.pnum)
 
@@ -56,33 +56,33 @@ patent_collaborators_1 = pd.DataFrame({'pnum': all_patents,
                                        
 patent_collaborators_1.to_csv("../../../../data/outputs/collab1.csv", index = False)                                       
                                        
-# %% Collaboration 2 - patent overlap
-inv_to_pat['pat_set'] = inv_to_pat.pnum_str.apply(lambda x: set(x.split(', ')))
-
-patentsets = inv_to_pat.pat_set
-inventors = inv_to_pat.inv_num
-
-overlaps = []
-start_time = timeit.default_timer()
-
-for patentset1 in patentsets:
-    for patentset2 in patentsets:
-        # print patent1, patent2, len(patent1 & patent2)
-        overlap = len(patentset1 & patentset2)
-        overlaps.append(overlap)
-elapsed = timeit.default_timer() - start_time         
-        
-
-inv1 = []
-inv2 = []
-for inventor1 in inventors:
-    for inventor2 in inventors:
-        inv1.append(inventor1)
-        inv2.append(inventor2)
- # %%       
-pairwise_overlap = pd.DataFrame({"inv1": inv1,
-                                 "inv2": inv2,
-                                 "overlap": overlaps})        
+## %% Collaboration 2 - patent overlap
+#inv_to_pat['pat_set'] = inv_to_pat.pnum_str.apply(lambda x: set(x.split(', ')))
+#
+#patentsets = inv_to_pat.pat_set
+#inventors = inv_to_pat.inv_num
+#
+#overlaps = []
+#start_time = timeit.default_timer()
+#
+#for patentset1 in patentsets:
+#    for patentset2 in patentsets:
+#        # print patent1, patent2, len(patent1 & patent2)
+#        overlap = len(patentset1 & patentset2)
+#        overlaps.append(overlap)
+#elapsed = timeit.default_timer() - start_time         
+#        
+#
+#inv1 = []
+#inv2 = []
+#for inventor1 in inventors:
+#    for inventor2 in inventors:
+#        inv1.append(inventor1)
+#        inv2.append(inventor2)
+# # %%       
+#pairwise_overlap = pd.DataFrame({"inv1": inv1,
+#                                 "inv2": inv2,
+#                                 "overlap": overlaps})        
 
 
 
