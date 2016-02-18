@@ -1,0 +1,15 @@
+---
+title: "Workforce Analytics Individual Assignment Part 1a"
+author: "Jim Leach"
+date: "11 February 2016"
+output: pdf_document
+---
+
+# Introduction
+
+This report outlines my response to question 1a set as part of the Workforce Analytics individual assignment. The question was "What is the relationship between the number of times inventors collaborate and project performance?".
+
+```{r get_data, echo = FALSE, message = FALSE}
+library(readr)
+q1a <- read_csv("../../../data/outputs/q1a.csv")
+```
