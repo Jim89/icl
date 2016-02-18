@@ -70,6 +70,7 @@ workforce/docs/*/*.pdf
 workforce/workshops/*/*.pf
 workforce/data/*.zip
 workforce/data/*/*.zip
+workforce/data/outputs/q1*
 workforce/lectures/*/*.xlsx
 workforce/workshops/*/*.xlsx
 workforce/workshops/*/*.pdf
@@ -96,6 +97,7 @@ vis/*/*/*.pdf
 vis/hw/hw1/report/*.pdf
 vis/hw/hw1/report/*.docx
 vis/hw/hw2/2a/report/*.pdf
+vis/hw/*/*.zip
 
 
 
