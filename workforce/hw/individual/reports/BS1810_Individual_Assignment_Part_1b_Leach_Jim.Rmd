@@ -36,9 +36,11 @@ q1b$n_comp %<>% as.numeric()
 
 ## Approach
 
-For all inventors in the patents data set, the list of firms that each inventor had worked at (ordered chronologically using patent number) was found. Those that had worked at more than one firm were classified as having moved. For those inventors that moved, the first firm in their firm list was discarded (as they did not _move_ to that firm) and the remaining firms retained. 
+For all inventors in the patents data set, the list of firms that each inventor had worked at (ordered chronologically using patent number) was found. Those that had worked at more than one firm were classified as having moved. For those inventors who moved, the first firm in their list was discarded (as they did not _move_ to that firm) and the remaining firms retained. 
 
-A table of all combinations of firm to inventor was created and the set of movers used to create a binary variable identifying which inventors had moved to which firms. A firms ethnic composition was calculated based on the ethnicities of inventors that had worked at the firm. Inventor ethnicities were calculated based on the inventors' last names matched to known ethnic surnames using a [Metaphone](https://en.wikipedia.org/wiki/Metaphone) transformation of the name. The overall ethnic composition of the firm was then calculated using \eqref{eq:herf}: 1 minus the [Herfindal Index](https://en.wikipedia.org/wiki/Herfindahl_index) of the ethnicities of its inventors.
+A table of all combinations of firm to inventor was created and the set of movers (and the firms they moved to) used to create a binary variable indicating which inventor(s) moved to which firm(s). 
+
+A firm's ethnic diversity was calculated based on the ethnicities of inventors that had worked at the firm. Inventor ethnicities were calculated based on the inventors' last names matched to known ethnic surnames using a [Metaphone](https://en.wikipedia.org/wiki/Metaphone) transformation of the name. The overall ethnic composition of the firm was then calculated using \eqref{eq:herf}: 1 minus the [Herfindal Index](https://en.wikipedia.org/wiki/Herfindahl_index) of the ethnicities of its inventors.
 
 \begin{equation} \label{eq:herf}
 \begin{split}
@@ -49,13 +51,13 @@ r_i = \text{ratio of item i}
 
 Country diversity was also calculated for each firm using the same method, and the countries of the inventors. A number of other variables were used as controls:
 
-* employees;
-* sales;
-* R&D investment;
+* Employees;
+* Sales;
+* Research and Development (R&D) investment;
 * Average competition; and
 * Number of competitors.
 
-Very few inventors in the data set moved, potentially resulting in [separation](http://www.r-bloggers.com/example-8-15-firth-logistic-regression/) in the data. As such, both standard logistic regression and logistic regression using a penalised likelihood method proposed by Firth^1^ were used. 
+Very few inventors in the data set moved, potentially resulting in [separation](http://www.r-bloggers.com/example-8-15-firth-logistic-regression/) in the data. As such, both standard logistic regression and logistic regression using a penalised likelihood method proposed by Firth^1^ (which can help reduce standard errors in the presence of separation) were used. 
 
 ## Results
 
@@ -73,20 +75,36 @@ results_firth <- data_frame(term = fit_firth$terms,
                       p = as.numeric(fit_firth$prob))
 ```
 
+Both the standard logit and the Firth method give similar results, with similar standard errors (although the Firth method does reduce them slightly). Full results can be seen in appendices one and two. 
+
+In both cases, ethnic diversity has a statistically significant, large positive impact on the log-odds (the likelihood) of an inventor moving to a firm. I.e., firms with higher diversity are more likely to be moved to. Conversely, _country_ diversity has a negative impact on movement likelihood. Perhaps inventors wish to work in diverse teams, but without the hassle of coordinating with staff dispersed globally. 
+
+Both employees and R&D investment have a small positive impact - inventors may wish to work for big firms that spend a lot of money on them. Sales have a negative but very small effect.
+
+Average firm competition is not statistically significant, indicating that it does not contribute to an inventors likelihood to move.  However, firms with a higher number of competitors are less likely to be moved to.
+
+## Limitations & Further work
+
+The choice to move to a firm likely depends on more than just the data available for this exercise. Employee satisfaction, salary and tenure information, firm reputation, or seasonal factors (e.g. many people move just after bonus season) may all play a large role. Collecting such data would be a logical next step and may help to isolate the true effect of ethnicity.
+
+***
+
 # Appendices
 
 ## Appendix One - Logistic regression results
 
-```{r show_logit, echo = FALSE}
+```{r show_logit, echo = FALSE, cache=F}
 results %>% 
   kable(col.names = c("Varialbe", "Estimate", "Std. Error", "P-value"),
         digits = 5,
         caption = "Standard logistic regression results. Variables are ethnic diversity, country diversity, number of employees, firm sales, firm R&D investment, average competition and number of close competitors. All values are rounded to 5dp.")
 ```
 
+\pagebreak
+
 ## Appendix Two - Logistic regression using Firth method results
 
-```{r show_logit_firth, echo = FALSE}
+```{r show_logit_firth, echo = FALSE, cache=F}
 results_firth %>% 
   kable(col.names = c("Varialbe", "Estimate", "Std. Error", "P-value"),
         digits = 5,
