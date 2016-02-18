@@ -56,42 +56,20 @@ patent_collaborators_1 = pd.DataFrame({'pnum': all_patents,
                                        
 patent_collaborators_1.to_csv("../../../../data/outputs/collab1.csv", index = False)                                       
                                        
-## %% Collaboration 2 - patent overlap
-#inv_to_pat['pat_set'] = inv_to_pat.pnum_str.apply(lambda x: set(x.split(', ')))
-#
-#patentsets = inv_to_pat.pat_set
-#inventors = inv_to_pat.inv_num
-#
-#overlaps = []
-#start_time = timeit.default_timer()
-#
-#for patentset1 in patentsets:
-#    for patentset2 in patentsets:
-#        # print patent1, patent2, len(patent1 & patent2)
-#        overlap = len(patentset1 & patentset2)
-#        overlaps.append(overlap)
-#elapsed = timeit.default_timer() - start_time         
-#        
-#
-#inv1 = []
-#inv2 = []
-#for inventor1 in inventors:
-#    for inventor2 in inventors:
-#        inv1.append(inventor1)
-#        inv2.append(inventor2)
-# # %%       
-#pairwise_overlap = pd.DataFrame({"inv1": inv1,
-#                                 "inv2": inv2,
-#                                 "overlap": overlaps})        
+# %% Collaboration 2 - patent overlap for all inventors in patent
+inv_to_pat['pat_set'] = inv_to_pat.pnum_str.apply(lambda x: set(x.split(', ')))
 
-
-
-
-
-
-
-
-
-
-
-
+intersections = []
+for patent in all_patents:
+    inventors = d3_inv[d3_inv.pnum == patent].inv_num
+    if len(inventors) < 2:
+        intersections.append(0)
+    else:
+        patents = inv_to_pat[inv_to_pat['inv_num'].isin(inventors)].pat_set
+        intersect_size = len(set.intersection(*[x for x in patents]))
+        intersections.append(intersect_size)
+    
+patent_collaborators_2 = pd.DataFrame({'pnum': all_patents,
+                                       'collab2': intersections})    
+                                       
+patent_collaborators_2.to_csv("../../../../data/outputs/collab2.csv", index = False) 
