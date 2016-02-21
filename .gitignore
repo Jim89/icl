@@ -100,4 +100,7 @@ vis/hw/hw2/2a/report/*.pdf
 vis/hw/*/*.zip
 
 
-
+# ignore for retail
+retail/data/CarbonatesBottlesandCans.csv
+retail/data/InstantCoffee.csv
+retail/data/*.xlsx
