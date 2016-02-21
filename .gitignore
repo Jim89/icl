@@ -98,6 +98,9 @@ vis/hw/hw1/report/*.pdf
 vis/hw/hw1/report/*.docx
 vis/hw/hw2/2a/report/*.pdf
 vis/hw/*/*.zip
+vis/data/lecture_data/*
+vis/hw/hw2/2a/data/*
+vis/hw/hw2/2a/tableau/*
 
 
 # ignore for retail
