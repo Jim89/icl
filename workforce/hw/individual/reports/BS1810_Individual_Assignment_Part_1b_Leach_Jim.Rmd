@@ -18,6 +18,8 @@ library(knitr)
 
 This report outlines my response to question 1b set as part of the Workforce Analytics individual assignment. The question was "What is the relationship between the ethnic composition of a firm and the likelihood that an inventor will move to that firm?".
 
+All code and data can be viewed online on GitHub: [https://github.com/Jim89/icl/tree/master/workforce/hw/individual](https://github.com/Jim89/icl/tree/master/workforce/hw/individual).
+
 ## Side note
 
 Please note that the word limit was discussed with Professor Al-Nauimi who stated that slightly more than 300 words was acceptable.
@@ -77,15 +79,15 @@ results_firth <- data_frame(term = fit_firth$terms,
 
 Both the standard logit and the Firth method give similar results, with similar standard errors (although the Firth method does reduce them slightly). Full results can be seen in appendices one and two. 
 
-In both cases, ethnic diversity has a statistically significant, large positive impact on the log-odds (the likelihood) of an inventor moving to a firm. I.e., firms with higher diversity are more likely to be moved to. Conversely, _country_ diversity has a negative impact on movement likelihood. Perhaps inventors wish to work in diverse teams, but without the hassle of coordinating with staff dispersed globally. 
+In both cases, ethnic diversity has a statistically significant, large, positive impact on the likelihood of an inventor moving to a firm. I.e., firms with higher diversity are more likely to be moved to. Conversely, _country_ diversity has a negative impact on movement likelihood. This may be due to inventors wishing to work in diverse teams, but without the hassle of coordinating with staff dispersed globally. 
 
-Both employees and R&D investment have a small positive impact - inventors may wish to work for big firms that spend a lot of money on them. Sales have a negative but very small effect.
+Both employees and R&D investment have a small positive impact - it seems to make sense that inventors would wish to work for big firms that spend a lot of money on them, increasing their likelihood of moving to such firms. Sales have a negative but very small effect.
 
 Average firm competition is not statistically significant, indicating that it does not contribute to an inventors likelihood to move.  However, firms with a higher number of competitors are less likely to be moved to.
 
 ## Limitations & Further work
 
-The choice to move to a firm likely depends on more than just the data available for this exercise. Employee satisfaction, salary and tenure information, firm reputation, or seasonal factors (e.g. many people move just after bonus season) may all play a large role. Collecting such data would be a logical next step and may help to isolate the true effect of ethnicity.
+The choice to move to a firm likely depends on more than just the data available for this exercise. Employee satisfaction, salary and tenure information, firm reputation, or seasonal factors (e.g. many people move just after bonus season) may all play a large role. Collecting such data would be a logical next step and may help to isolate the true effect of ethnicity on the likelihood to move to a firm.
 
 ***
 

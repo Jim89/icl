@@ -18,6 +18,8 @@ library(knitr)
 
 This report outlines my response to question 1a set as part of the Workforce Analytics individual assignment. The question was "What is the relationship between the number of times inventors collaborate and project performance?".
 
+All code and data can be viewed online on GitHub: [https://github.com/Jim89/icl/tree/master/workforce/hw/individual](https://github.com/Jim89/icl/tree/master/workforce/hw/individual).
+
 ## Side note
 
 Please note that the word limit was discussed with Professor Al-Nauimi who stated that slightly more than 300 words was acceptable.
@@ -72,17 +74,17 @@ pois_results_2 <- tidy(pois_2) %>%
                   select(1, 2, 3, 5)
 ```
 
-Using either method it was found that collaboration had a statistically significant, positive effect on performance. I.e., the more that a team collaborates, the more likely it is to be high performing.  
+Using either method it was found that collaboration had a statistically significant, positive effect on performance. I.e., the more that a team collaborates, the more likely it is to be high performing. 
 
-Using method one, the value of the collaboration coefficient was `r round(pois_results_1[9, 2], 3)` with a $p$-value of $`r pois_results_1[9, 4]`$ (appendix 1).
+Using method one, the value of the collaboration coefficient was `r round(pois_results_1[9, 2], 3)` with a $p$-value of $`r pois_results_1[9, 4]`$ (appendix 1). Under this method, teams where the individuals on that team have worked with a large number of people tend to perform better. This makes sense intuitively: teams exposed to a wider range of ideas have a lot of wider knowledge that they can bring to enhance performance.
 
-Using method two, the value of the collaboration coeffient was `r round(pois_results_2[9, 2], 3)` with a $p$-value of $`r pois_results_2[9, 4]`$ (appendix 2).
+Using method two, the value of the collaboration coeffient was `r round(pois_results_2[9, 2], 3)` with a $p$-value of $`r pois_results_2[9, 4]`$ (appendix 2). Under this method, teams that have worked together many times tend to perform better. This also makes sense intuitively: teams with shared experiences may know how each team member works and will establish routines that enable them to focus on the work and perform better.
 
-The results for the other variables are also similar: Ethnic diversity initially decreases performance, but as it increases, so does performance. Country diversity has the opposite effect, initially increasing performance but gradually reducing it. Team size has a positive impact, perhaps represnting more ideas being brought to the team. The effect of working across borders is negative, possibly representing an administrative burden. The median average inventor performance also had a positive effect potentially indicating that better inventors tend to produce better patents.
+The results for the other variables are also similar between the two models. Ethnic diversity initially decreases performance, but as it increases, so does performance. This may indicate that initial hurdles to overcome working with different people are not as large if everyone is making the same effort to overcome them. Country diversity has the opposite effect, initially increasing performance but gradually reducing it. Moreover, the effect of working across borders is negative. These two factors possibly represent an administrative burden when working across borders (and therefore likely across timezones). Team size has a positive impact, perhaps represnting more ideas being brought to the team. The median average inventor performance also had a positive effect potentially indicating that better inventors tend to produce better patents when they work with other high performing individuals.
 
 ## Limitations & Further Work
 
-This method does account for time when modelling collaboration, i.e. it has not measured changes in performance when inventors have collaborated more/less in the past. A more detailed model that accounted for this would be more robust, and may give more interesting results. 
+This method does account for time when modelling collaboration, i.e. it has not measured changes in performance when inventors have collaborated more/less in the past. A more detailed model that accounted for this would be more robust, and may give more interesting results. Performance due to collaboration may increase with time and then tail off as a group stagnates, or alternatively it may continue to increase as a team become more and more familiar with each other.
 
 Individual collaboration _within_ teams are also not accounted for. For example a team of A, B and C where A and B have worked together many times before (but never with C) should ideally be distinct from a team of X, Y and Z who have never worked together before. Pairwise collaboration metrics may help to remedy this and would be interesting to investigate. 
 
