@@ -1,6 +1,6 @@
-Games	Sport	Event	Athlete(s)	CountryCode	CountryName	Medal	ResultInSeconds
+Games	Sport	Event	Athlete	CountryCode	CountryName	Medal	ResultInSeconds
 2012	Athletics	10000m Men	Mo FARAH	GBR	Great Britain	Gold	1650.42
-2012	Athletics	10000m Men	Galen RUPP	USA	United States of America	Silver	1650.90
+2012	Athletics	10000m Men	Galen RUPP	USA	United States of America	Silver	1650.9
 2012	Athletics	10000m Men	Tariku BEKELE	ETH	Ethiopia	Bronze	1651.43
 2012	Athletics	10000m Women	Tirunesh DIBABA	ETH	Ethiopia	Gold	1820.75
 2012	Athletics	10000m Women	Sally Jepkosgei KIPYEGO	KEN	Kenya	Silver	1826.37
@@ -21,7 +21,7 @@ Games	Sport	Event	Athlete(s)	CountryCode	CountryName	Medal	ResultInSeconds
 2012	Athletics	1500m Men	Leonel MANZANO	USA	United States of America	Silver	214.79
 2012	Athletics	1500m Men	Abdalaati IGUIDER	MAR	Morocco	Bronze	215.13
 2012	Athletics	1500m Women	Asli CAKIR ALPTEKIN	TUR	Turkey	Gold	250.23
-2012	Athletics	1500m Women	Gamze BULUT	TUR	Turkey	Silver	250.40
+2012	Athletics	1500m Women	Gamze BULUT	TUR	Turkey	Silver	250.4
 2012	Athletics	1500m Women	Maryam yusuf JAMAL	BRN	Bahrain	Bronze	250.74
 2012	Athletics	200m Men	Usain BOLT	JAM	Jamaica	Gold	19.32
 2012	Athletics	200m Men	Yohan BLAKE	JAM	Jamaica	Silver	19.44
@@ -29,12 +29,12 @@ Games	Sport	Event	Athlete(s)	CountryCode	CountryName	Medal	ResultInSeconds
 2012	Athletics	200m Women	Allyson FELIX	USA	United States of America	Gold	21.88
 2012	Athletics	200m Women	Shelly-Ann FRASER-PRYCE	JAM	Jamaica	Silver	22.09
 2012	Athletics	200m Women	Carmelita JETER	USA	United States of America	Bronze	22.14
-2012	Athletics	20km Walk Men	Ding CHEN	CHN	China	Gold	4726.00
-2012	Athletics	20km Walk Men	Erick BARRONDO	GUA	Guatemala	Silver	4737.00
-2012	Athletics	20km Walk Men	Zhen WANG	CHN	China	Bronze	4765.00
-2012	Athletics	20km Walk Women	Elena LASHMANOVA	RUS	Russia	Gold	5102.00
-2012	Athletics	20km Walk Women	Olga KANISKINA	RUS	Russia	Silver	5109.00
-2012	Athletics	20km Walk Women	Shenjie QIEYANG	CHN	China	Bronze	5116.00
+2012	Athletics	20km Walk Men	Ding CHEN	CHN	China	Gold	4726
+2012	Athletics	20km Walk Men	Erick BARRONDO	GUA	Guatemala	Silver	4737
+2012	Athletics	20km Walk Men	Zhen WANG	CHN	China	Bronze	4765
+2012	Athletics	20km Walk Women	Elena LASHMANOVA	RUS	Russia	Gold	5102
+2012	Athletics	20km Walk Women	Olga KANISKINA	RUS	Russia	Silver	5109
+2012	Athletics	20km Walk Women	Shenjie QIEYANG	CHN	China	Bronze	5116
 2012	Athletics	3000m Steeplechase Men	Ezekiel KEMBOI	KEN	Kenya	Gold	498.56
 2012	Athletics	3000m Steeplechase Men	Mahiedine MEKHISSI-BENABBAD	FRA	France	Silver	499.08
 2012	Athletics	3000m Steeplechase Men	Abel Kiprop MUTAI	KEN	Kenya	Bronze	499.73
@@ -61,7 +61,7 @@ Games	Sport	Event	Athlete(s)	CountryCode	CountryName	Medal	ResultInSeconds
 2012	Athletics	4x100m Relay Women	Yelyzaveta BRYZGINA, Olesya POVH, Mariya RYEMYEN, Hrystyna STUY	UKR	Ukraine	Bronze	42.04
 2012	Athletics	4x400m Relay Men	Ramon MILLER, Chris BROWN, Michael MATHIEU, Demetrius PINDER	BAH	Bahamas	Gold	176.72
 2012	Athletics	4x400m Relay Men	Angelo TAYLOR, Tony MCQUAY, Bryshon NELLUM, Joshua MANCE	USA	United States of America	Silver	177.05
-2012	Athletics	4x400m Relay Men	Lalonde GORDON, Deon LENDORE, Jarrin SOLOMON, Ade ALLEYNE-FORTE	TTO	Trinidad and Tobago	Bronze	179.40
+2012	Athletics	4x400m Relay Men	Lalonde GORDON, Deon LENDORE, Jarrin SOLOMON, Ade ALLEYNE-FORTE	TTO	Trinidad and Tobago	Bronze	179.4
 2012	Athletics	4x400m Relay Women	Allyson FELIX, Deedee TROTTER, Sanya RICHARDS-ROSS, Francena MCCORORY	USA	United States of America	Gold	196.87
 2012	Athletics	4x400m Relay Women	Natalya ANTYUKH, Tatiana FIROVA, Yulia GUSHCHINA, Antonina KRIVOSHAPKA	RUS	Russia	Silver	200.23
 2012	Athletics	4x400m Relay Women	Rosemarie WHYTE, Shericka WILLIAMS, Novlene WILLIAMS-MILLS, Christine DAY	JAM	Jamaica	Bronze	200.95
@@ -71,28 +71,28 @@ Games	Sport	Event	Athlete(s)	CountryCode	CountryName	Medal	ResultInSeconds
 2012	Athletics	5000m Women	Meseret DEFAR	ETH	Ethiopia	Gold	904.25
 2012	Athletics	5000m Women	Vivian CHERUIYOT	KEN	Kenya	Silver	904.73
 2012	Athletics	5000m Women	Tirunesh DIBABA	ETH	Ethiopia	Bronze	905.15
-2012	Athletics	50km Walk Men	Sergey KIRDYAPKIN	RUS	Russia	Gold	12959.00
-2012	Athletics	50km Walk Men	Jared TALLENT	AUS	Australia	Silver	13013.00
-2012	Athletics	50km Walk Men	Tianfeng SI	CHN	China	Bronze	13036.00
+2012	Athletics	50km Walk Men	Sergey KIRDYAPKIN	RUS	Russia	Gold	12959
+2012	Athletics	50km Walk Men	Jared TALLENT	AUS	Australia	Silver	13013
+2012	Athletics	50km Walk Men	Tianfeng SI	CHN	China	Bronze	13036
 2012	Athletics	800m Men	David Lekuta RUDISHA	KEN	Kenya	Gold	100.91
 2012	Athletics	800m Men	Nijel AMOS	BOT	Botswana	Silver	101.73
 2012	Athletics	800m Men	Timothy KITUM	KEN	Kenya	Bronze	102.53
 2012	Athletics	800m Women	Mariya SAVINOVA	RUS	Russia	Gold	116.19
 2012	Athletics	800m Women	Caster SEMENYA	RSA	South Africa	Silver	117.23
 2012	Athletics	800m Women	Ekaterina POISTOGOVA	RUS	Russia	Bronze	117.53
-2012	Athletics	Marathon Men	Stephen KIPROTICH	UGA	Uganda	Gold	7681.00
-2012	Athletics	Marathon Men	Abel KIRUI	KEN	Kenya	Silver	7707.00
-2012	Athletics	Marathon Men	Wilson Kipsang KIPROTICH	KEN	Kenya	Bronze	7777.00
-2012	Athletics	Marathon Women	Tiki GELANA	ETH	Ethiopia	Gold	8587.00
-2012	Athletics	Marathon Women	Priscah JEPTOO	KEN	Kenya	Silver	8592.00
-2012	Athletics	Marathon Women	Tatyana PETROVA ARKHIPOVA	RUS	Russia	Bronze	8609.00
+2012	Athletics	Marathon Men	Stephen KIPROTICH	UGA	Uganda	Gold	7681
+2012	Athletics	Marathon Men	Abel KIRUI	KEN	Kenya	Silver	7707
+2012	Athletics	Marathon Men	Wilson Kipsang KIPROTICH	KEN	Kenya	Bronze	7777
+2012	Athletics	Marathon Women	Tiki GELANA	ETH	Ethiopia	Gold	8587
+2012	Athletics	Marathon Women	Priscah JEPTOO	KEN	Kenya	Silver	8592
+2012	Athletics	Marathon Women	Tatyana PETROVA ARKHIPOVA	RUS	Russia	Bronze	8609
 2012	Canoeing	C1 1000m Canadian Singles Men	Sebastian BRENDEL	GER	Germany	Gold	227.18
 2012	Canoeing	C1 1000m Canadian Singles Men	David CAL	ESP	Spain	Silver	228.05
-2012	Canoeing	C1 1000m Canadian Singles Men	Mark OLDERSHAW	CAN	Canada	Bronze	228.50
+2012	Canoeing	C1 1000m Canadian Singles Men	Mark OLDERSHAW	CAN	Canada	Bronze	228.5
 2012	Canoeing	C1 200m Canadian Singles Men	Yuriy CHEBAN	UKR	Ukraine	Gold	42.29
 2012	Canoeing	C1 200m Canadian Singles Men	Jevgenij SHUKLIN	LTU	Lithuania	Silver	42.79
 2012	Canoeing	C1 200m Canadian Singles Men	Ivan SHTYL	RUS	Russia	Bronze	42.85
-2012	Canoeing	C2 1000m Canadian Pairs Men	Peter KRETSCHMER, Kurt KUSCHELA	GER	Germany	Gold	213.80
+2012	Canoeing	C2 1000m Canadian Pairs Men	Peter KRETSCHMER, Kurt KUSCHELA	GER	Germany	Gold	213.8
 2012	Canoeing	C2 1000m Canadian Pairs Men	Aliaksandr BAHDANOVICH, Andrei BAHDANOVICH	BLR	Belarus	Silver	215.21
 2012	Canoeing	C2 1000m Canadian Pairs Men	Alexey KOROVASHKOV, Ilya PERVUKHIN	RUS	Russia	Bronze	216.41
 2012	Canoeing	K1 1000m Kayak Singles Men	Eirik Veraas LARSEN	NOR	Norway	Gold	206.46
@@ -108,23 +108,23 @@ Games	Sport	Event	Athlete(s)	CountryCode	CountryName	Medal	ResultInSeconds
 2012	Canoeing	K1 500m Kayak Singles Women	Inna OSYPENKO	UKR	Ukraine	Silver	112.69
 2012	Canoeing	K1 500m Kayak Singles Women	Bridgitte HARTLEY	RSA	South Africa	Bronze	112.92
 2012	Canoeing	K2 1000m Kayak Pairs Men	Roland KOKENY, Rudolf DOMBI	HUN	Hungary	Gold	189.65
-2012	Canoeing	K2 1000m Kayak Pairs Men	Emanuel SILVA, Fernando PIMENT	POR	Portugal	Silver	189.70
+2012	Canoeing	K2 1000m Kayak Pairs Men	Emanuel SILVA, Fernando PIMENT	POR	Portugal	Silver	189.7
 2012	Canoeing	K2 1000m Kayak Pairs Men	Andreas IHLE, Martin HOLLSTEIN	GER	Germany	Bronze	190.12
 2012	Canoeing	K2 200m Kayak Pairs Men	Yury POSTRIGAY, Alexander DYACHENKO	RUS	Russia	Gold	33.51
 2012	Canoeing	K2 200m Kayak Pairs Men	Vadzim MAKHNEU, Raman PIATRUSHENKA	BLR	Belarus	Silver	34.27
 2012	Canoeing	K2 200m Kayak Pairs Men	Liam HEATH, Jon SCHOFIELD	GBR	Great Britain	Bronze	34.42
 2012	Canoeing	K2 500m Kayak Pairs Women	Tina DIETZE, Franziska WEBER	GER	Germany	Gold	102.21
 2012	Canoeing	K2 500m Kayak Pairs Women	Katalin KOVACS, Natasa JANIC	HUN	Hungary	Silver	103.28
-2012	Canoeing	K2 500m Kayak Pairs Women	Beata MIKOLAJCZYK, Karolina NAJA	POL	Poland	Bronze	104.00
+2012	Canoeing	K2 500m Kayak Pairs Women	Beata MIKOLAJCZYK, Karolina NAJA	POL	Poland	Bronze	104
 2012	Canoeing	K4 1000m Kayak Fours Men	Jacob CLEAR, David SMITH, Tate SMITH, Murray STEWART	AUS	Australia	Gold	175.09
-2012	Canoeing	K4 1000m Kayak Fours Men	Zoltan KAMMERER, Tamas KULIFAI, Daniel PAUMAN, David TOTH	HUN	Hungary	Silver	175.70
+2012	Canoeing	K4 1000m Kayak Fours Men	Zoltan KAMMERER, Tamas KULIFAI, Daniel PAUMAN, David TOTH	HUN	Hungary	Silver	175.7
 2012	Canoeing	K4 1000m Kayak Fours Men	Josef DOSTAL, Daniel HAVEL, Jan STERBA, Lukas TREFIL	CZE	Czech Republic	Bronze	175.85
 2012	Canoeing	K4 500m Kayak Fours Women	Katalin KOVACS, Danuta KOZAK, Gabriella Timea SZABO, Krisztina FAZEKAS	HUN	Hungary	Gold	90.83
-2012	Canoeing	K4 500m Kayak Fours Women	Carolin Martina LEONHARDT, Katrin WAGNER-AUGUSTIN, Tina DIETZE, Franziska WEBER	GER	Germany	Silver	91.30
-2012	Canoeing	K4 500m Kayak Fours Women	Maryna PAUTARAN, Volha KHUDZENKA, Nadzeya PAPOK, Iryna PAMIALOVA	BLR	Belarus	Bronze	91.40
+2012	Canoeing	K4 500m Kayak Fours Women	Carolin Martina LEONHARDT, Katrin WAGNER-AUGUSTIN, Tina DIETZE, Franziska WEBER	GER	Germany	Silver	91.3
+2012	Canoeing	K4 500m Kayak Fours Women	Maryna PAUTARAN, Volha KHUDZENKA, Nadzeya PAPOK, Iryna PAMIALOVA	BLR	Belarus	Bronze	91.4
 2012	Rowing	Coxless Fours Men	Tom JAMES, Andrew TRIGGS HODGE, Pete REED, Alex GREGORY	GBR	Great Britain	Gold	363.97
 2012	Rowing	Coxless Fours Men	Drew GINN, James CHAPMAN, Joshua DUNKLEY-SMITH, William LOCKWOOD	AUS	Australia	Silver	365.19
-2012	Rowing	Coxless Fours Men	Scott GAULT, Charles COLE, Glenn OCHAL, Henrik RUMMEL	USA	United States of America	Bronze	367.20
+2012	Rowing	Coxless Fours Men	Scott GAULT, Charles COLE, Glenn OCHAL, Henrik RUMMEL	USA	United States of America	Bronze	367.2
 2012	Rowing	Coxless Pairs Men	Eric MURRAY, Hamish BOND	NZL	New Zealand	Gold	376.65
 2012	Rowing	Coxless Pairs Men	Germain CHARDIN, Dorian MORTELETTE	FRA	France	Silver	381.11
 2012	Rowing	Coxless Pairs Men	George NASH, William SATCH	GBR	Great Britain	Bronze	381.77
@@ -132,7 +132,7 @@ Games	Sport	Event	Athlete(s)	CountryCode	CountryName	Medal	ResultInSeconds
 2012	Rowing	Coxless Pairs Women	Sarah OUTHWAITE, Kate HORNSEY	AUS	Australia	Silver	449.86
 2012	Rowing	Coxless Pairs Women	Juliette HAIGH, Rebecca SCOWN	NZL	New Zealand	Bronze	450.19
 2012	Rowing	Double Sculls Men	Nathan COHEN, Joseph SULLIVAN	NZL	New Zealand	Gold	391.67
-2012	Rowing	Double Sculls Men	Alessio SARTORI, Romano BATTISTI	ITA	Italy	Silver	392.80
+2012	Rowing	Double Sculls Men	Alessio SARTORI, Romano BATTISTI	ITA	Italy	Silver	392.8
 2012	Rowing	Double Sculls Men	Iztok COP, Luka SPIK	SLO	Slovenia	Bronze	394.35
 2012	Rowing	Double Sculls Women	Katherine GRAINGER, Anna WATKINS	GBR	Great Britain	Gold	415.82
 2012	Rowing	Double Sculls Women	Kim CROW, Brooke PRATLEY	AUS	Australia	Silver	418.55
@@ -149,7 +149,7 @@ Games	Sport	Event	Athlete(s)	CountryCode	CountryName	Medal	ResultInSeconds
 2012	Rowing	Lightweight Double Sculls Men	Rasmus QUIST, Mads Reinholdt RASMUSSEN	DEN	Denmark	Gold	397.17
 2012	Rowing	Lightweight Double Sculls Men	Mark HUNTER, Zac PURCHASE	GBR	Great Britain	Silver	397.78
 2012	Rowing	Lightweight Double Sculls Men	Peter TAYLOR, Storm URU	NZL	New Zealand	Bronze	400.86
-2012	Rowing	Lightweight Double Sculls Women	Katherine COPELAND, Sophie HOSKING	GBR	Great Britain	Gold	429.30
+2012	Rowing	Lightweight Double Sculls Women	Katherine COPELAND, Sophie HOSKING	GBR	Great Britain	Gold	429.3
 2012	Rowing	Lightweight Double Sculls Women	Dongxiang XU, Wenyi HUANG	CHN	China	Silver	431.93
 2012	Rowing	Lightweight Double Sculls Women	Alexandra TSIAVOU, Christina GIAZITZIDOU	GRE	Greece	Bronze	432.09
 2012	Rowing	Quadruple Sculls Men	Tim GROHMANN, Lauritz SCHOOF, Karl SCHULZE, Phillipp WENDE	GER	Germany	Gold	342.48
@@ -184,16 +184,16 @@ Games	Sport	Event	Athlete(s)	CountryCode	CountryName	Medal	ResultInSeconds
 2012	Swimming	100m Butterfly Women	Alicia COUTTS	AUS	Australia	Bronze	56.94
 2012	Swimming	100m Freestyle Men	Nathan ADRIAN	USA	United States of America	Gold	47.52
 2012	Swimming	100m Freestyle Men	James MAGNUSSEN	AUS	Australia	Silver	47.53
-2012	Swimming	100m Freestyle Men	Brent HAYDEN	CAN	Canada	Bronze	47.80
-2012	Swimming	100m Freestyle Women	Ranomi KROMOWIDJOJO	NED	Netherlands	Gold	53.00
+2012	Swimming	100m Freestyle Men	Brent HAYDEN	CAN	Canada	Bronze	47.8
+2012	Swimming	100m Freestyle Women	Ranomi KROMOWIDJOJO	NED	Netherlands	Gold	53
 2012	Swimming	100m Freestyle Women	Aleksandra GERASIMENYA	BLR	Belarus	Silver	53.38
 2012	Swimming	100m Freestyle Women	Yi TANG	CHN	China	Bronze	53.44
-2012	Swimming	10km Marathon Men	Oussama MELLOULI	TUN	Tunisia	Gold	6595.10
-2012	Swimming	10km Marathon Men	Thomas LURZ	GER	Germany	Silver	6598.50
-2012	Swimming	10km Marathon Men	Richard WEINBERGER	CAN	Canada	Bronze	6600.30
-2012	Swimming	10km Marathon Women	Eva RISZTOV	HUN	Hungary	Gold	7058.20
-2012	Swimming	10km Marathon Women	Haley ANDERSON	USA	United States of America	Silver	7058.60
-2012	Swimming	10km Marathon Women	Martina GRIMALDI	ITA	Italy	Bronze	7061.80
+2012	Swimming	10km Marathon Men	Oussama MELLOULI	TUN	Tunisia	Gold	6595.1
+2012	Swimming	10km Marathon Men	Thomas LURZ	GER	Germany	Silver	6598.5
+2012	Swimming	10km Marathon Men	Richard WEINBERGER	CAN	Canada	Bronze	6600.3
+2012	Swimming	10km Marathon Women	Eva RISZTOV	HUN	Hungary	Gold	7058.2
+2012	Swimming	10km Marathon Women	Haley ANDERSON	USA	United States of America	Silver	7058.6
+2012	Swimming	10km Marathon Women	Martina GRIMALDI	ITA	Italy	Bronze	7061.8
 2012	Swimming	1500m Freestyle Men	Yang SUN	CHN	China	Gold	871.02
 2012	Swimming	1500m Freestyle Men	Ryan COCHRANE	CAN	Canada	Silver	879.63
 2012	Swimming	1500m Freestyle Men	Oussama MELLOULI	TUN	Tunisia	Bronze	880.31
@@ -222,7 +222,7 @@ Games	Sport	Event	Athlete(s)	CountryCode	CountryName	Medal	ResultInSeconds
 2012	Swimming	200m Freestyle Women	Camille MUFFAT	FRA	France	Silver	115.58
 2012	Swimming	200m Freestyle Women	Bronte BARRATT	AUS	Australia	Bronze	115.81
 2012	Swimming	200m Individual Medley Men	Michael PHELPS	USA	United States of America	Gold	114.27
-2012	Swimming	200m Individual Medley Men	Ryan LOCHTE	USA	United States of America	Silver	114.90
+2012	Swimming	200m Individual Medley Men	Ryan LOCHTE	USA	United States of America	Silver	114.9
 2012	Swimming	200m Individual Medley Men	Laszlo CSEH	HUN	Hungary	Bronze	116.22
 2012	Swimming	200m Individual Medley Women	Shiwen YE	CHN	China	Gold	127.57
 2012	Swimming	200m Individual Medley Women	Alicia COUTTS	AUS	Australia	Silver	128.15
@@ -251,9 +251,9 @@ Games	Sport	Event	Athlete(s)	CountryCode	CountryName	Medal	ResultInSeconds
 2012	Swimming	4x100m Medley Relay Women	Dana VOLLMER, Allison SCHMITT, Rebecca SONI, Missy FRANKLIN	USA	United States of America	Gold	232.05
 2012	Swimming	4x100m Medley Relay Women	Leisel JONES, Alicia COUTTS, Melanie SCHLANGER, Emily SEEBOHM	AUS	Australia	Silver	234.02
 2012	Swimming	4x100m Medley Relay Women	Aya TERAKAWA, Yuka KATO, Haruka UEDA, Satomi SUZUKI	JPN	Japan	Bronze	235.73
-2012	Swimming	4x200m Freestyle Relay Men	Ryan LOCHTE, Michael PHELPS, Ricky BERENS, Conor DWYER	USA	United States of America	Gold	419.70
+2012	Swimming	4x200m Freestyle Relay Men	Ryan LOCHTE, Michael PHELPS, Ricky BERENS, Conor DWYER	USA	United States of America	Gold	419.7
 2012	Swimming	4x200m Freestyle Relay Men	Amaury LEVEAUX, Clement LEFERT, Gregory MALLET, Yannick AGNEL	FRA	France	Silver	422.77
-2012	Swimming	4x200m Freestyle Relay Men	Yang SUN, Yun HAO, Haiqi JIANG, Yunqi LI	CHN	China	Bronze	426.30
+2012	Swimming	4x200m Freestyle Relay Men	Yang SUN, Yun HAO, Haiqi JIANG, Yunqi LI	CHN	China	Bronze	426.3
 2012	Swimming	4x200m Freestyle Relay Women	Dana VOLLMER, Allison SCHMITT, Missy FRANKLIN, Shannon VREELAND	USA	United States of America	Gold	462.92
 2012	Swimming	4x200m Freestyle Relay Women	Bronte BARRATT, Alicia COUTTS, Kylie PALMER, Melanie SCHLANGER	AUS	Australia	Silver	464.41
 2012	Swimming	4x200m Freestyle Relay Women	Ophelie-Cyrielle ETIENNE, Camille MUFFAT, Coralie BALMY, Charlotte BONNET	FRA	France	Bronze	467.49

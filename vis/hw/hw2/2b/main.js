@@ -72,31 +72,19 @@ d3.tsv('./data/MedalData1.csv', function(metaldata1) {
     d.Result = d.ResultInSeconds === 'No result' ? null : new Date(parseFloat(d.ResultInSeconds)*1000);
     //and delete the original column  
     delete d.ResultInSeconds;
+    // Clean athlete name
+    d.Athlete = d.Athlete.toLowerCase()
   });
     
   //use just a subset of the first 10 rows (0 ... start index, 10 length)
   var subset = metaldata1.slice(0,10);
+
+  var rolled_up = d3.nest()
+                .key(function(d) { return d.Athlete })
+                .rollup(function(leaves) { return leaves.length; })
+                .entries(metaldata1);
     
   //render the subset    
-  updateTable(table1, subset);
+  updateTable(table1, rolled_up);
 });
 
-var table2 = d3.select('body').append('table');
-table2.append('caption').text('Dataset2');
-table2.append('thead').append('tr');
-table2.append('tbody');
-
-d3.tsv('./data/MedalData2.csv', function(metaldata2) {
-  //data wrangling of the dataset    
-  metaldata2.forEach(function(d) {
-    //convert Edition column to number
-    d.Edition = parseInt(d.Edition);  
-  });
-    
-  //use just a subset where the Edition is 2008 and Gold medals and females only   
-  subset2008 = metaldata2.filter(function(d) {
-    return d.Edition === 2008 && d.Medal === 'Gold' && d.Event_gender === 'W';
-  });
-  
-  updateTable(table2, subset2008);    
-});
