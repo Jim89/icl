@@ -1,10 +1,22 @@
-/**
- * Created by Samuel Gratzl on 11.02.2016.
- */
-
+// Step 0 - Create variables ----------------------------------------------------------------
 //create a D3 time formatter for converting the result dates into pretty strings
 var result_formatter = d3.time.format.utc('%H:%M:%S.%L');
 
+var width = 420,
+    barHeight = 20;
+
+var x = d3.scale.linear()
+    .range([0, width]);
+
+var chart = d3.select(".chart")
+    .attr("width", width);
+
+var table1 = d3.select('body').append('table');
+table1.append('caption').text('Dataset1');
+table1.append('thead').append('tr');
+table1.append('tbody');    
+
+// Step 1 - Create functions ----------------------------------------------------------------
 /**
  * generates or update the table visualization
  * @param table the table DOM element
@@ -40,29 +52,34 @@ function updateTable(table, data) {
     };
   });
   cols.exit().remove();
-    
-
   rows.exit().remove();  
 }
 
+/**
+Generate a bar plot
+**/
+function barplot(data) {
+  x.domain([0, d3.max(data, function(d) { return d.values; })]);
 
+  chart.attr("height", barHeight * data.length);
 
-//append a table to the body with a common base structure
-//<table>
-//<caption>Dataset1</caption>
-//<thead>
-//   <tr><!--header--></tr>
-//<thead>
-//<tbody>
-//  <!--rows-->
-//</tbody>
-//</table>
-var table1 = d3.select('body').append('table');
-table1.append('caption').text('Dataset1');
-table1.append('thead').append('tr');
-table1.append('tbody');
+  var bar = chart.selectAll("g")
+      .data(data)
+    .enter().append("g")
+      .attr("transform", function(d, i) { return "translate(0," + i * barHeight + ")"; });
 
-//external data
+  bar.append("rect")
+      .attr("width", function(d) { return x(d.values); })
+      .attr("height", barHeight - 1);
+
+  bar.append("text")
+      .attr("x", function(d) { return x(d.values) - 3; })
+      .attr("y", barHeight / 2)
+      .attr("dy", ".35em")
+      .text(function(d) { return d.values; });
+}    
+
+// Step 2 - read in external data ----------------------------------------------------
 d3.tsv('./data/MedalData1.csv', function(metaldata1) {
   //data wrangling of the dataset    
   metaldata1.forEach(function(d) {
@@ -86,5 +103,8 @@ d3.tsv('./data/MedalData1.csv', function(metaldata1) {
     
   //render the subset    
   updateTable(table1, rolled_up);
+
+  // render barplot
+  barplot(rolled_up);
 });
 
