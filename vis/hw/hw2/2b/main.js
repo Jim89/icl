@@ -81,22 +81,3 @@ d3.tsv('./data/MedalData1.csv', function(metaldata1) {
   updateTable(table1, subset);
 });
 
-var table2 = d3.select('body').append('table');
-table2.append('caption').text('Dataset2');
-table2.append('thead').append('tr');
-table2.append('tbody');
-
-d3.tsv('./data/MedalData2.csv', function(metaldata2) {
-  //data wrangling of the dataset    
-  metaldata2.forEach(function(d) {
-    //convert Edition column to number
-    d.Edition = parseInt(d.Edition);  
-  });
-    
-  //use just a subset where the Edition is 2008 and Gold medals and females only   
-  subset2008 = metaldata2.filter(function(d) {
-    return d.Edition === 2008 && d.Medal === 'Gold' && d.Event_gender === 'W';
-  });
-  
-  updateTable(table2, subset2008);    
-});
