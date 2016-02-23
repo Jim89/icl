@@ -72,12 +72,19 @@ d3.tsv('./data/MedalData1.csv', function(metaldata1) {
     d.Result = d.ResultInSeconds === 'No result' ? null : new Date(parseFloat(d.ResultInSeconds)*1000);
     //and delete the original column  
     delete d.ResultInSeconds;
+    // Clean athlete name
+    d.Athlete = d.Athlete.toLowerCase()
   });
     
   //use just a subset of the first 10 rows (0 ... start index, 10 length)
   var subset = metaldata1.slice(0,10);
+
+  var rolled_up = d3.nest()
+                .key(function(d) { return d.Athlete })
+                .rollup(function(leaves) { return leaves.length; })
+                .entries(metaldata1);
     
   //render the subset    
-  updateTable(table1, subset);
+  updateTable(table1, rolled_up);
 });
 
