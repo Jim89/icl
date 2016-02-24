@@ -1,9 +1,9 @@
 // Step 0 - Set up environment ---------------------------------------------------------
 var result_formatter = d3.time.format.utc('%H:%M:%S.%L');
 
-var margin = {top: 20, right: 20, bottom: 10, left: 150},
-    width = 960 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
+var margin = {top: 40, right: 20, bottom: 10, left: 150},
+    width = 500 - margin.left - margin.right,
+    height = 1000 - margin.top - margin.bottom;
 
 /*
 var x = d3.scale.ordinal()
@@ -27,7 +27,7 @@ var x = d3.scale.linear()
         .range([0, width]);
 
 var y = d3.scale.ordinal()
-        .rangeRoundBands([0, height], .5);
+        .rangeRoundBands([0, height], .2);
 
 var xAxis = d3.svg.axis()
             .scale(x)
@@ -67,23 +67,29 @@ d3.tsv('./data/MedalData1.csv', function(metaldata1) {
     d.Team = d.Athlete.indexOf(",");
   });
 
+  // Create subset for showing data
   var subset = metaldata1.slice(0, 10);
 
+  // Roll-up: count of records (medals) per athlete
   var rolled_up = d3.nest()
                 .key(function(d) { return d.Athlete; })
-				.sortKeys(d3.ascending)                
                 .rollup(function(leaves) { return leaves.length; })
                 .entries(metaldata1);
 
-             
-
+  // Filter - just take athletes with >= 4 medals             
   var filtered = rolled_up.filter(function(d) { return d.values >= 4; });
 
+  // Sort the data such that the chart looks nicer
+  var filtered_ordered = filtered.sort(function(a, b){ 
+                                        if (a.values > b.values) {return -1;}
+                                        else if (a.values < b.values) {return 1;}
+                                        else return 0;});
+
   // render barplot
-  barplot(filtered);              
+  barplot(filtered_ordered);              
     
   //render the subset    
-  //updateTable(table1, subset);
+  // updateTable(table1, rolled_up);
 
 });
 

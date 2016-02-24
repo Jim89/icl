@@ -66,7 +66,7 @@ y.domain(data.map(function(d) { return d.key; }));
   svg.append("text")
     .attr("class", "xlab")
     .attr("text-anchor", "middle")
-    .attr("y", 15)
+    .attr("y", -25)
     .attr("x", width/2)
     .text("Total Medals")
   
