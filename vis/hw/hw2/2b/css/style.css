@@ -4,14 +4,17 @@
 /* Style bars */
 rect {
 fill: steelblue;
+opacity: .75;
 }
 
 .bar {
   fill: steelblue;
+  opacity: .75;
 }
 
 .bar:hover {
-  fill: brown;
+  fill: green;
+  opacity: .75;  
 }
 
 /* Style axes */
@@ -24,10 +27,6 @@ fill: steelblue;
   fill: none;
   stroke: #000;
   shape-rendering: crispEdges;
-}
-
-.axis path {
-  display: true;
 }
 
 .axis text {
@@ -68,4 +67,16 @@ fill: steelblue;
   margin: -1px 0 0 0;
   top: 100%;
   left: 0;
+}
+
+/*------------------------ Styles for scatterplot ------------------------- */
+/* Style dots */
+.dot {
+  stroke: "steelblue";
+  opacity: 75;
+}
+
+.dot:hover {
+  fill: green;
+  opacity: .75;  
 }
