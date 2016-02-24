@@ -103,7 +103,7 @@ d3.tsv("./data/data1_summary.csv", function(error, metaldata1) {
                 .entries(metaldata1);
   */
   // Filter - just take athletes with >= 4 medals             
-  var filtered = metaldata1.filter(function(d) { return d.Medals >= 4; });
+  var filtered = metaldata1.filter(function(d) { return d.CountryCode === 'USA' && d.Medals >= 3; });
 
   // Sort the data such that the chart looks nicer
   var filtered_ordered = filtered.sort(function(a, b){ 
