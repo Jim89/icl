@@ -38,11 +38,20 @@ var yAxis = d3.svg.axis()
             .tickSize(0, 0)
             .orient("left");
 
+var tip = d3.tip()
+          .attr('class', 'd3-tip')
+          .offset([-10, 0])
+          .html(function(d) {
+            return "<span>" + d.Gender + "</span><br><span>" + d.Sport + "</span><br><span>" + d.CountryName + "</span>";
+          })              
+
 var svg = d3.select("body").append("svg")
             .attr("width", width + margin.left + margin.right)
             .attr("height", height + margin.top + margin.bottom)
             .append("g")
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")"); 
+
+svg.call(tip);
 
 /*
 var table1 = d3.select('body').append('table');
@@ -52,6 +61,7 @@ var table1 = d3.select('body').append('table');
 */
 
 // Step 1 - read in external data ----------------------------------------------------
+/*
 d3.tsv('./data/MedalData1.csv', function(metaldata1) {
   //data wrangling of the dataset    
   metaldata1.forEach(function(d) {
@@ -66,35 +76,37 @@ d3.tsv('./data/MedalData1.csv', function(metaldata1) {
     d.Athlete = d.Athlete.toProperCase();
     d.Team = d.Athlete.indexOf(",");
   });
-
-  // Create subset for showing data
-  var subset = metaldata1.slice(0, 10);
+*/
+d3.tsv("./data/data1_summary.csv", function(error, metaldata1) {
+  metaldata1.forEach(function(d){
+    d.Athlete = d.Athlete.toProperCase();
+    d.Medals = +d.Medals;
+    d.Appearances = +d.Appearances
+  });
 
   // Roll-up: count of records (medals) per athlete
+  /*
   var rolled_up = d3.nest()
                 .key(function(d) { return d.Athlete; })
                 .rollup(function(leaves) { return leaves.length; })
                 .entries(metaldata1);
-
+  */
   // Filter - just take athletes with >= 4 medals             
-  var filtered = rolled_up.filter(function(d) { return d.values >= 4; });
+  var filtered = metaldata1.filter(function(d) { return d.Medals >= 4; });
 
   // Sort the data such that the chart looks nicer
   var filtered_ordered = filtered.sort(function(a, b){ 
-                                        if (a.values > b.values) {return -1;}
-                                        else if (a.values < b.values) {return 1;}
+                                        if (a.Medals > b.Medals) {return -1;}
+                                        else if (a.Medals < b.Medals) {return 1;}
                                         else return 0;});
 
   // render barplot
   barplot(filtered_ordered);              
     
   //render the subset    
-  // updateTable(table1, rolled_up);
+  //updateTable(table1, filtered_ordered);
 
 });
 
-function type(d) {
-  d.values = +d.values;
-  return d;
-}
+
 

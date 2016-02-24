@@ -43,8 +43,8 @@ function barplot(data) {
 */
 
 // Set up x and y domains
-x.domain([0, d3.max(data, function(d) { return d.values; })]);
-y.domain(data.map(function(d) { return d.key; }));
+x.domain([0, d3.max(data, function(d) { return d.Medals; })]);
+y.domain(data.map(function(d) { return d.Athlete; }));
 
 
 // Add X axis
@@ -78,9 +78,11 @@ y.domain(data.map(function(d) { return d.key; }));
     .enter().append("rect")
       .attr("class", "bar")
       .attr("x", 0)
-      .attr("width", function(d) { return x(d.values)})
-      .attr("y", function(d) { return y(d.key); })
-      .attr("height", y.rangeBand() );       
+      .attr("width", function(d) { return x(d.Medals)})
+      .attr("y", function(d) { return y(d.Athlete); })
+      .attr("height", y.rangeBand())
+      .on("mouseover", tip.show)
+      .on("mouseout", tip.hide);       
 } 
 
 
