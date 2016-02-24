@@ -2,6 +2,7 @@
 Generate a bar plot
 **/
 function barplot(data) {
+/*
 // Set up x and y domains
   x.domain(data.map(function(d) { return d.key; }));
   y.domain([0, d3.max(data, function(d) { return d.values; })]);
@@ -39,4 +40,47 @@ function barplot(data) {
       .attr("width", x.rangeBand())
       .attr("y", function(d) { return y(d.values); })
       .attr("height", function(d) { return height - y(d.values); });
+*/
+
+// Set up x and y domains
+x.domain([0, d3.max(data, function(d) { return d.values; })]);
+y.domain(data.map(function(d) { return d.key; }));
+
+
+// Add X axis
+  svg.append("g")
+        .attr("class", "x axis")
+        .call(xAxis)
+      .selectAll("text")
+        .attr("y", -2)
+        .attr("x", -3)
+        .attr("dy", "-.55em")
+        .style("text-anchor", "start")
+
+// Add Y axis
+  svg.append("g")
+      .attr("class", "y axis")
+      .call(yAxis)
+
+// Add x-axis label
+  svg.append("text")
+    .attr("class", "xlab")
+    .attr("text-anchor", "middle")
+    .attr("y", 15)
+    .attr("x", width/2)
+    .text("Total Medals")
+  
+    
+
+// Add the bars (i.e. the data!)
+  svg.selectAll(".bar")
+      .data(data)
+    .enter().append("rect")
+      .attr("class", "bar")
+      .attr("x", 0)
+      .attr("width", function(d) { return x(d.values)})
+      .attr("y", function(d) { return y(d.key); })
+      .attr("height", y.rangeBand() );       
 } 
+
+

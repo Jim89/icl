@@ -25,19 +25,31 @@
 		  shape-rendering: crispEdges;
 		}
 
-		.x.axis path {
-		  display: none;
+		.axis path {
+		  display: true;
+		}
+
+		.axis text {
+			font-famly: sans-serif;
+			font-size: 8px;
+		}
+
+		.xlab {
+			font-famly: sans-serif;
+			font-size: 15px;
 		}
 
 	</style>   
 </head>
 <body>
+
 	<!--include d3-->
 	<script src="libs/d3/3.5.14/d3.js"></script>
 	
 	<!-- include user-defined functions -->
 	<script src="js/updateTable.js"></script>
 	<script src="js/barplot.js"></script>
+	<script src="js/toProperCase.js"></script>
 	
 	<!--include main script-->
     <script src="main.js"></script>

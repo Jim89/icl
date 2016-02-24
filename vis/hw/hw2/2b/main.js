@@ -1,16 +1,11 @@
 // Step 0 - Set up environment ---------------------------------------------------------
 var result_formatter = d3.time.format.utc('%H:%M:%S.%L');
 
-var table1 = d3.select('body').append('table');
-table1.append('caption').text('Dataset1');
-table1.append('thead').append('tr');
-table1.append('tbody');    
-
-var margin = {top: 20, right: 20, bottom: 150, left: 40},
+var margin = {top: 20, right: 20, bottom: 10, left: 150},
     width = 960 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
-
+/*
 var x = d3.scale.ordinal()
         .rangeRoundBands([0, width], .15);
 
@@ -25,14 +20,14 @@ var xAxis = d3.svg.axis()
 var yAxis = d3.svg.axis()
     .scale(y)
     .orient("left")  
+*/
 
 
-/*
 var x = d3.scale.linear()
         .range([0, width]);
 
 var y = d3.scale.ordinal()
-        .rangeRoundBands([height, 0], .15);
+        .rangeRoundBands([0, height], .5);
 
 var xAxis = d3.svg.axis()
             .scale(x)
@@ -42,14 +37,19 @@ var yAxis = d3.svg.axis()
             .scale(y)
             .tickSize(0, 0)
             .orient("left");
-*/
-
 
 var svg = d3.select("body").append("svg")
             .attr("width", width + margin.left + margin.right)
             .attr("height", height + margin.top + margin.bottom)
             .append("g")
-            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");    
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")"); 
+
+/*
+var table1 = d3.select('body').append('table');
+			table1.append('caption').text('Dataset1');
+			table1.append('thead').append('tr');
+			table1.append('tbody');  
+*/
 
 // Step 1 - read in external data ----------------------------------------------------
 d3.tsv('./data/MedalData1.csv', function(metaldata1) {
@@ -62,28 +62,28 @@ d3.tsv('./data/MedalData1.csv', function(metaldata1) {
     //and delete the original column  
     delete d.ResultInSeconds;
     // Clean athlete name
-    d.Athlete = d.Athlete.toLowerCase()
+    d.Athlete = d.Athlete.toLowerCase();
+    d.Athlete = d.Athlete.toProperCase();
+    d.Team = d.Athlete.indexOf(",");
   });
-    
-  //use just a subset of the first 10 rows (0 ... start index, 10 length)
-  var subset = metaldata1.slice(0,10);
+
+  var subset = metaldata1.slice(0, 10);
 
   var rolled_up = d3.nest()
-                .key(function(d) { return d.Athlete })
+                .key(function(d) { return d.Athlete; })
+				.sortKeys(d3.ascending)                
                 .rollup(function(leaves) { return leaves.length; })
                 .entries(metaldata1);
 
              
 
-  var filtered = rolled_up.filter(function(d) { return d.values >= 2; });
-  filtered = filtered.filter(function(d) { return d.values >= 4; });
+  var filtered = rolled_up.filter(function(d) { return d.values >= 4; });
 
   // render barplot
   barplot(filtered);              
     
   //render the subset    
-  // updateTable(table1, filtered);
-
+  //updateTable(table1, subset);
 
 });
 
