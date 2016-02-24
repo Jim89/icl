@@ -6,18 +6,19 @@ table1.append('caption').text('Dataset1');
 table1.append('thead').append('tr');
 table1.append('tbody');    
 
-var margin = {top: 20, right: 20, bottom: 30, left: 40},
+var margin = {top: 20, right: 20, bottom: 150, left: 40},
     width = 960 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
 var x = d3.scale.ordinal()
-    .rangeRoundBands([0, width], .15);
+        .rangeRoundBands([0, width], .15);
 
 var y = d3.scale.linear()
     .range([height, 0]);
 
 var xAxis = d3.svg.axis()
     .scale(x)
+    .tickSize(0, 0)
     .orient("bottom");
 
 var yAxis = d3.svg.axis()
@@ -54,7 +55,8 @@ d3.tsv('./data/MedalData1.csv', function(metaldata1) {
 
              
 
-  var filtered = rolled_up.filter(function(d) { return d.values >= 4; });
+  var filtered = rolled_up.filter(function(d) { return d.values >= 2; });
+  filtered = filtered.filter(function(d) { return d.values >= 4; });
 
   // render barplot
   barplot(filtered);              

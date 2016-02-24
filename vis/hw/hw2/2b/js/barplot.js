@@ -6,7 +6,6 @@ function barplot(data) {
   x.domain(data.map(function(d) { return d.key; }));
   y.domain([0, d3.max(data, function(d) { return d.values; })]);
 
-
 // Add X axis
   svg.append("g")
         .attr("class", "x axis")
@@ -14,7 +13,7 @@ function barplot(data) {
         .call(xAxis)
       .selectAll("text")
         .attr("y", 0)
-        .attr("x", -50)
+        .attr("x", -150)
         .attr("dy", ".35em")
         .attr("transform", "rotate(-90)")
         .style("text-anchor", "start")
@@ -29,6 +28,7 @@ function barplot(data) {
       .attr("dy", ".71em")
       .style("text-anchor", "end")
       .text("Total Medals");
+
 
 // Add the bars (i.e. the data!)
   svg.selectAll(".bar")
