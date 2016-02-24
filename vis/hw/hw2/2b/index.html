@@ -6,32 +6,21 @@
     <link rel="stylesheet" href="style.css">
 	<style>
 
-		.bar {
-		  fill: steelblue;
-		}
+	.chart rect {
+	  fill: steelblue;
+	}
 
-		.bar:hover {
-		  fill: brown;
-		}
-
-		.axis {
-		  font: 10px sans-serif;
-		}
-
-		.axis path,
-		.axis line {
-		  fill: none;
-		  stroke: #000;
-		  shape-rendering: crispEdges;
-		}
-
-		.x.axis path {
-		  display: none;
-		}
+	.chart text {
+	  fill: white;
+	  font: 10px sans-serif;
+	  text-anchor: end;
+	}
 
 	</style>   
 </head>
 <body>
+	<svg class="chart"></svg>
+
 	<!--include d3-->
 	<script src="libs/d3/3.5.14/d3.js"></script>
 	
