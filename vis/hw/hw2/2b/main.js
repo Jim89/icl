@@ -1,28 +1,22 @@
 // Step 0 - Set up environment ---------------------------------------------------------
-var result_formatter = d3.time.format.utc('%H:%M:%S.%L');
-
+// Set up overall SVG element
 var margin = {top: 40, right: 20, bottom: 10, left: 150},
-    width = 500 - margin.left - margin.right,
-    height = 1000 - margin.top - margin.bottom;
+    width = 750 - margin.left - margin.right,
+    height = 750 - margin.top - margin.bottom;
 
-/*
-var x = d3.scale.ordinal()
-        .rangeRoundBands([0, width], .15);
+var svg = d3.select("body").append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")"); 
 
-var y = d3.scale.linear()
-    .range([height, 0]);
-
-var xAxis = d3.svg.axis()
-    .scale(x)
-    .tickSize(0, 0)
-    .orient("bottom");
-
-var yAxis = d3.svg.axis()
-    .scale(y)
-    .orient("left")  
-*/
-
-
+var svg2 = d3.select("body").append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");         
+       
+// Set up variables for barplot
 var x = d3.scale.linear()
         .range([0, width]);
 
@@ -44,14 +38,31 @@ var tip = d3.tip()
           .html(function(d) {
             return "<span>" + d.Gender + "</span><br><span>" + d.Sport + "</span><br><span>" + d.CountryName + "</span>";
           })              
-
-var svg = d3.select("body").append("svg")
-            .attr("width", width + margin.left + margin.right)
-            .attr("height", height + margin.top + margin.bottom)
-            .append("g")
-            .attr("transform", "translate(" + margin.left + "," + margin.top + ")"); 
-
 svg.call(tip);
+
+// Set up variables for scatterplot
+var x_scatter = d3.scale.linear()
+                .range([0, width]);
+
+var y_scatter = d3.scale.linear()
+                .range([height, 0]);
+
+var xAxisScatter = d3.svg.axis()
+                    .scale(x_scatter)
+                    .orient("bottom");
+
+var yAxisScatter = d3.svg.axis()
+                    .scale(y_scatter)                    
+                    .orient("left");
+
+// add the tooltip area to the webpage
+var tip2 = d3.tip()
+          .attr('class', 'd3-tip')
+          .offset([-10, 0])
+          .html(function(d) {
+            return "<span>" + d.Athlete + "</span>";
+          })              
+svg2.call(tip2);                  
 
 /*
 var table1 = d3.select('body').append('table');
@@ -104,7 +115,10 @@ d3.tsv("./data/data1_summary.csv", function(error, metaldata1) {
   barplot(filtered_ordered);              
     
   //render the subset    
-  //updateTable(table1, filtered_ordered);
+  // updateTable(table1, filtered_ordered);
+
+  // render scatterplot
+  scatterplot(filtered_ordered)
 
 });
 
