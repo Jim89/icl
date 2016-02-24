@@ -10,7 +10,7 @@ var margin = {top: 20, right: 20, bottom: 150, left: 40},
     width = 960 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
-/*
+
 var x = d3.scale.ordinal()
         .rangeRoundBands([0, width], .15);
 
@@ -25,9 +25,9 @@ var xAxis = d3.svg.axis()
 var yAxis = d3.svg.axis()
     .scale(y)
     .orient("left")  
-*/
 
 
+/*
 var x = d3.scale.linear()
         .range([0, width]);
 
@@ -42,7 +42,7 @@ var yAxis = d3.svg.axis()
             .scale(y)
             .tickSize(0, 0)
             .orient("left");
-
+*/
 
 
 var svg = d3.select("body").append("svg")
