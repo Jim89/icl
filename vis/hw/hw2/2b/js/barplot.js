@@ -17,7 +17,7 @@ data.forEach(function(d) {
         .attr("class", "x axis")
         .call(xAxis_bar)
       .selectAll("text")
-        .attr("y", -2)
+        .attr("y", -5)
         .attr("x", -3)
         .attr("dy", "-.55em")
         .style("text-anchor", "start")
@@ -30,10 +30,11 @@ data.forEach(function(d) {
 // Add x-axis label
   svg.append("text")
     .attr("class", "xlab")
-    .attr("text-anchor", "middle")
-    .attr("y", -25)
-    .attr("x", width/2)
+    .attr("text-anchor", "right")
+    .attr("y", 10)
+    .attr("x", width - 65)
     .text("Total Medals")
+  
   
 // Add the bars (i.e. the data!)
   svg.selectAll(".bar")

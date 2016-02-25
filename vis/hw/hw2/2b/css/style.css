@@ -29,7 +29,7 @@ opacity: .75;
 
 .xlab {
 	font-famly: sans-serif;
-	font-size: 15px;
+	font-size: 10px;
 }
 
 .ylab {
@@ -51,7 +51,7 @@ opacity: .75;
 .d3-tip:after {
   box-sizing: border-box;
   display: inline;
-  font-size: 10px;
+  font-size: 8px;
   width: 100%;
   line-height: 1;
   color: rgba(0, 0, 0, 0.8);
@@ -79,8 +79,8 @@ opacity: .75;
 #controls {
   font-size: 14px;
   position: absolute;
-  top: 240px;
-  left: 810px;
+  top: 900px;
+  left: 1150px;
 }
 
 input {

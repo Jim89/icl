@@ -1,8 +1,8 @@
 // Step 0 - Set up environment ---------------------------------------------------------
 // Set up overall SVG element
-var margin = {top: 40, right: 20, bottom: 10, left: 150},
+var margin = {top: 40, right: 20, bottom: 40, left: 150},
 	width = 750 - margin.left - margin.right,
-    height = 750 - margin.top - margin.bottom;
+    height = 900 - margin.top - margin.bottom;
     padding = 1;
     radius = 7.5;
 
@@ -79,6 +79,8 @@ var controls = d3.select("body").append("label")
 var checkbox = controls.append("input")
 				.attr("id", "collisiondetection")		
 				.attr("type", "checkbox");
+        //.attr("x", width - 24)
+        //.attr("y", 9)
 		controls.append("span")
 			.text("Collision detection")
 
@@ -100,15 +102,15 @@ d3.tsv("./data/data1_summary.csv", function(error, metaldata1) {
   var filtered = metaldata1.filter(function(d) { return d.Medals >= 4; });
 
   // Sort the data such that the chart looks nicer
-  /*
+
   var filtered_ordered = filtered.sort(function(a, b){ 
                                         if (a.Medals > b.Medals) {return -1;}
                                         else if (a.Medals < b.Medals) {return 1;}
                                         else return 0;});
-	*/                                        
+                                      
 
   // render barplot
-  barplot(filtered);              
+  barplot(filtered_ordered);              
     
   //render the subset    
   // updateTable(table1, filtered_ordered);

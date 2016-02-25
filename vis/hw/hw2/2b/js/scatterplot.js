@@ -9,13 +9,13 @@ var force = d3.layout.force()
 			.nodes(data)
 			.size([width, height])
 			.on("tick", tick)
-			.charge(-10)
+			.charge(-5)
 			.gravity(0)
-			.chargeDistance(20);
+			.chargeDistance(50);
 
 // Set up x and y domains 
 x.domain([0, d3.max(data, function(d) { return d.Appearances; })]).nice();
-y.domain([0, d3.max(data, function(d) { return d.Medals; })]).nice;
+y.domain([1, d3.max(data, function(d) { return d.Medals; })]).nice();
 
 // Set data values 
 data.forEach(function(d) {
