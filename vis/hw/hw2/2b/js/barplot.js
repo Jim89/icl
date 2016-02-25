@@ -47,30 +47,8 @@ data.forEach(function(d) {
       .attr("height", y_bar.rangeBand())
       .style("fill", function(d) { return d.color_bar; })
       .on("mouseover", tip.show)
-      .on("mouseout", tip.hide);  
+      .on("mouseout", tip.hide);      
 
-// Add legend
-var legend = svg.selectAll(".legend")
-        .data(color.domain())
-      .enter().append("g")
-        .attr("class", "legend")
-        .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
-
-legend.append("rect")
-  .attr("x", width - 18)
-  .attr("y", height - 100)  
-  .attr("width", 18)
-  .attr("height", 18)
-  .style("fill", color);
-
-legend.append("text")
-  .attr("x", width - 24)
-  .attr("y", height - 90)
-  .attr("dy", ".35em")
-  .style("text-anchor", "end")
-  .text(function(d) { return d; });           
-
-  
 } 
 
 
