@@ -85,12 +85,8 @@ var checkbox = controls.append("input")
 		controls.append("span")
 			.text("Collision detection")
 
-/*
-var table1 = d3.select('body').append('table');
-			table1.append('caption').text('Dataset1');
-			table1.append('thead').append('tr');
-			table1.append('tbody');  
-*/
+//after loading the data asynchronously they are stored in this variable
+var rawData;
 
 // Step 1 - read in external data ----------------------------------------------------
 d3.tsv("./data/data1_summary.csv", function(error, metaldata1) {
@@ -108,16 +104,20 @@ d3.tsv("./data/data1_summary.csv", function(error, metaldata1) {
                                         if (a.Medals > b.Medals) {return -1;}
                                         else if (a.Medals < b.Medals) {return 1;}
                                         else return 0;});
+
+  rawData = filtered_ordered;
                                       
 
   // render barplot
-  barplot(filtered_ordered);              
+  //barplot(rawData);              
     
   //render the subset    
   // updateTable(table1, filtered_ordered);
 
   // render scatterplot
-  scatterplot(filtered)
+  //scatterplot(rawData)
+
+  update(null);
 
 });
 

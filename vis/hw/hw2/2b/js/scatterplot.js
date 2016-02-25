@@ -1,4 +1,4 @@
-function scatterplot(data){
+function scatterplot(data, athlete_selection){
 // Set up ahead of drawing plot ---------------------------------------------------------------
 // Create helper variables to save some typing 
 var xVar = "Appearances",
@@ -25,6 +25,15 @@ data.forEach(function(d) {
 	d.radius = radius;
 })		
 
+// Set up filtering ----------------------------------------------------------------------------
+var filteredData = rawData;
+if (athlete_selection !== null) {
+	// If there is an athlete selection then just include those data items
+	filteredData = data.filter(function(d) {
+		return d.Athlete === athlete_selection;
+	});
+}
+
 // Create the plot -----------------------------------------------------------------------------
 // Add X-axis and label
 svg_scatter.append("g")
@@ -50,18 +59,31 @@ svg_scatter.append("g")
       .style("text-anchor", "end")
       .text("Medals")
 
-// Add nodes
+// Map data to dots
 var node = svg_scatter.selectAll(".dot")
-			.data(data)
-			.enter().append("circle")
-				.attr("class", "dot")
-				.attr("r", radius)
-				.attr("cx", function(d) { return x(d[xVar]); })
-				.attr("cy", function(d) { return y(d[yVar]); })
-				.style("fill", function(d) { return d.color; })
-				.style("opacity", .75)
-				.on("mouseover", tip2.show)
-	      		.on("mouseout", tip2.hide);
+			.data(filteredData);
+
+// Enter phase: append new circles with set radii			
+	node.enter().append("circle")
+		.attr("r", radius);
+
+// Update phase: set cx and cy according to scales and values
+	node.attr("class", "dot")
+		.attr("cx", function(d) { return x(d[xVar]); })
+		.attr("cy", function(d) { return y(d[yVar]); })
+		.style("fill", function(d) { return d.color; })
+		.style("opacity", .75)
+		.classed('selected', function(d){
+			// Add css class "selected" if athletes match
+			return d.Athlete === athlete_selection;
+		});
+
+// Event phase - things to do on actions  
+	node.on("mouseover", tip2.show)
+  		.on("mouseout", tip2.hide);
+
+// Exit phase: remove
+	node.exit().remove();  		
 
 // Add legend -----------------------------------------------------------------------------
 // Set up legend object
