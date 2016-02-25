@@ -1,8 +1,8 @@
 // Step 0 - Set up environment ---------------------------------------------------------
 // Set up overall SVG element
-var margin = {top: 40, right: 20, bottom: 40, left: 150},
+var margin = {top: 40, right: 20, bottom: 40, left: 160},
 	width = 750 - margin.left - margin.right,
-    height = 900 - margin.top - margin.bottom;
+    height = 850 - margin.top - margin.bottom;
     padding = 1;
     radius = 7.5;
 
@@ -55,6 +55,7 @@ var y = d3.scale.linear()
 var color = d3.scale.ordinal().range(["#1f77b4", "#800080"]);                
 
 var xAxis = d3.svg.axis()
+                    .tickFormat(d3.format("d"))
                     .scale(x)
                     .orient("bottom");
 
