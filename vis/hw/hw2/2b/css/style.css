@@ -3,18 +3,11 @@
 */
 /* Style bars */
 rect {
-fill: steelblue;
 opacity: .75;
 }
 
 .bar {
-  fill: steelblue;
   opacity: .75;
-}
-
-.bar:hover {
-  fill: green;
-  opacity: .75;  
 }
 
 /* Style axes */
@@ -37,6 +30,11 @@ opacity: .75;
 .xlab {
 	font-famly: sans-serif;
 	font-size: 15px;
+}
+
+.ylab {
+  font-famly: sans-serif;
+  font-size: 15px;
 }
 
 /* Style tooltips */
@@ -73,10 +71,19 @@ opacity: .75;
 /* Style dots */
 .dot {
   stroke: "steelblue";
-  opacity: 75;
+  opacity: .75;
+  stroke-opacity: .75;
+  fill-opacity: .75;
 }
 
-.dot:hover {
-  fill: green;
-  opacity: .75;  
+#controls {
+  font-size: 14px;
+  position: absolute;
+  top: 240px;
+  left: 810px;
 }
+
+input {
+  margin: 4px 4px 0;
+}
+
