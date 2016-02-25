@@ -15,7 +15,7 @@ var force = d3.layout.force()
 
 // Set up x and y domains 
 x.domain([0, d3.max(data, function(d) { return d.Appearances; })]).nice();
-y.domain([1, d3.max(data, function(d) { return d.Medals; })]).nice();
+y.domain([0, d3.max(data, function(d) { return d.Medals; })]).nice();
 
 // Set data values 
 data.forEach(function(d) {
