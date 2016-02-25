@@ -104,24 +104,3 @@ svg {
   display: inline-block;
 }
 
-
-
-/* format axis */
-g.xaxis path, g.yaxis path, g.xaxis line, g.yaxis line {
-  stroke: black;
-  fill: none;
-}
-
-/* center align text */
-text.label {
-  text-anchor: middle;
-}
-
-/* bars having the class selected should be filled darkblue*/
-rect.selected {
-  fill: red;
-}
-
-circle.selected {
-  fill: red;
-}
