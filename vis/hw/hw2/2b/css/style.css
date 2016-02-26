@@ -48,6 +48,11 @@ body {
   font-size: 15px;
 }
 
+.plottitle {
+  font-famly: serif;
+  font-size: 18px;
+}
+
 /* -------------------- Style tooltips -------------------- */
 .d3-tip {
   line-height: 1;
