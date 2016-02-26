@@ -33,15 +33,15 @@ svg.append("g")
     .attr("class", "xlab")
     .attr("text-anchor", "right")
     .attr("y", 10)
-    .attr("x", width - 75)
+    .attr("x", width_bar - 75)
     .text("Total Medals");
 
 // Add X grid
 svg.append("g")         
         .attr("class", "grid_bar")
-        .attr("transform", "translate(0," + height + ")")
+        .attr("transform", "translate(0," + height_bar + ")")
         .call(make_x_axis_bar()
-            .tickSize(-height, 0, 0)
+            .tickSize(-height_bar, 0, 0)
             .tickFormat("")
         )
 
@@ -101,7 +101,6 @@ athlete_selection = athlete_selection || [];
                 // add the only one
                 athlete_selection.push(new_athlete)
               }
-              //console.log(athlete_selection);
               update(athlete_selection);
             });
 
