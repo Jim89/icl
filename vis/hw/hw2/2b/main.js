@@ -2,7 +2,7 @@
 // Variables for SVG sizing
 var margin = {top: 40, right: 20, bottom: 40, left: 160},
     width = 750 - margin.left - margin.right,
-    height = 850 - margin.top - margin.bottom;
+    height = 825 - margin.top - margin.bottom;
     padding = 1;
     radius = 7.5;
 
