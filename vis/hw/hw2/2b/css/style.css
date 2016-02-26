@@ -24,7 +24,7 @@ opacity: .75;
 
 .axis text {
 	font-famly: serif;
-	font-size: 8px;
+	font-size: 10px;
 }
 
 .xlab {
@@ -89,7 +89,7 @@ input {
 
 .introduction {
   text-align: left;
-  font-size: 10px;
+  font-size: 12px;
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 
