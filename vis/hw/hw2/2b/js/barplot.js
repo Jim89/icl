@@ -63,35 +63,37 @@ var bars = svg.selectAll(".bar")
         .style("fill", function(d) { return d.color_bar; })
         .style("opacity", .75)
 
-// Set up (empty) array of selected athletes
-var athletes = [];
-// Event phase - things to do on actions        
+// Event phase - things to do on actions  
+// Add tooltip      
     bars.on("mouseover", tip.show)
         .on("mouseout", tip.hide)
-        .on("click", function(d){
-          // Select currently bound data element, i.e. the athlete
-            new_athlete = d.Athlete;
 
-          // Add the new athlete to the selection
-            athletes.push(new_athlete);            
+// Add selection for filtering        
+// Set up (empty) array of selected athletes
+var athletes = athletes || [];
+
+      bars.on("click", function(d){
+          // Select currently bound data element, i.e. the athlete
+            var new_athlete = d.Athlete;
 
           // If CTRL key is held, add the selection to the list of athletes
             if (d3.event.ctrlKey) {
-                // Get the clicked element
-                var clicked = d.Athlete;
-
-                // Add it to the list of athletes if it does not already contain it
-                // N.B. contains is a custom function that returns true if the second parameter
-                // exists as an element inside the first
-                if (!contains(athletes, clicked)){
-                  athletes.push(clicked);
+              if(contains(athletes, new_athlete)) {
+                // remove from array
+                athletes.splice(athletes.indexOf(new_athlete), 1);
+              } else {
+                // add to array
+                athletes.push(new_athlete);
                 }
-            }
-            // Print out athletes array for debugging
-            console.log(athletes);
-            update(athletes);
-            });
-        
+              } else {
+                // clear existing array
+                athletes.length = 0;
+                // add the only one
+                athletes.push(new_athlete)
+              }
+              console.log(athletes);
+              update(athletes);
+        });
 
 // Exit phase: remove remaining dom elements
     bars.exit().remove();
