@@ -1,15 +1,26 @@
-/**
-* Created by Samuel Gratzl on 11.02.2016.
+/* --------------------------------------------------------------------------------
+CSS Stylesheet for BS1807 Assignment 2b
+Jim Leach
+2016/02/26
 */
-/* Style bars */
-rect {
-opacity: .75;
-}
-.bar {
-  opacity: .75;
+
+/*-------------------- Styles for common html objects -------------------- */
+h1 {
+  text-align: center;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 
-/* Style axes */
+.introduction {
+  text-align: left;
+  font-size: 12px;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+body {
+  background: linear-gradient(to bottom, #E8E8EE, white);
+}
+
+/* -------------------- Style axes --------------------*/
 .axis {
   font-size: 10px;
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
@@ -18,7 +29,7 @@ opacity: .75;
 .axis path,
 .axis line {
   fill: none;
-  stroke: #000;
+  stroke: lightgrey;
   shape-rendering: crispEdges;
 }
 
@@ -37,7 +48,7 @@ opacity: .75;
   font-size: 15px;
 }
 
-/* Style tooltips */
+/* -------------------- Style tooltips -------------------- */
 .d3-tip {
   line-height: 1;
   font-weight: bold;
@@ -45,6 +56,7 @@ opacity: .75;
   background: rgba(0, 0, 0, 0.8);
   color: #fff;
   border-radius: 2px;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 
 /* Creates a small triangle extender for the tooltip */
@@ -58,6 +70,7 @@ opacity: .75;
   content: "\25BC";
   position: absolute;
   text-align: center;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;  
 }
 
 /* Style northward tooltips differently */
@@ -65,48 +78,47 @@ opacity: .75;
   margin: -1px 0 0 0;
   top: 100%;
   left: 0;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;  
 }
 
-/*------------------------ Styles for scatterplot ------------------------- */
+/* -------------------- Styles for barplot -------------------- */
+.bar {
+  fill-opacity: .95;
+}
+
+.grid_bar .tick {
+    stroke: lightgrey;
+    opacity: 0.7;
+}
+.grid_bar path {
+      stroke-width: 0;
+}
+
+#resetbutton {
+  font-size: 12px;
+  position: absolute;
+  top: 915px;
+  left: 400px;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;  
+}
+
+/* -------------------- Styles for scatterplot -------------------- */
 /* Style dots */
 .dot {
-  stroke: "steelblue";
-  opacity: .75;
-  stroke-opacity: .75;
   fill-opacity: .75;
 }
 
 #controls {
+  display: none;
   font-size: 12px;
   position: absolute;
   top: 890px;
-  left: 1150px;
+  left: 1100px;
 }
 
 input {
   margin: 4px 4px 0;
 }
-
-.introduction {
-  text-align: left;
-  font-size: 12px;
-  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-}
-
-h1 {
-  text-align: center;
-  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-}
-
-body {
-  background-color: #E8E8EE
-}
-
-svg {
-  display: inline-block;
-}
-
-
 
 .grid_scatter .tick {
     stroke: lightgrey;
@@ -117,10 +129,5 @@ svg {
 }
 
 
-.grid_bar .tick {
-    stroke: lightgrey;
-    opacity: 0.7;
-}
-.grid_bar path {
-      stroke-width: 0;
-}
+
+
