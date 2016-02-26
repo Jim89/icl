@@ -53,6 +53,14 @@ var tip = d3.tip()
           })              
 svg.call(tip);
 
+// Functions for drawing grid lines
+function make_x_axis_bar() {        
+    return d3.svg.axis()
+              .scale(x_bar)
+               .orient("bottom")
+               .ticks(13)
+}
+
 
 // Set up variables for scatterplot ----------------------------------------------------------
 // X scale
@@ -83,17 +91,29 @@ var tip2 = d3.tip()
           })              
 svg_scatter.call(tip2);
 
-
 // Control button for force-directed layout
 var controls = d3.select("body").append("label")
 				.attr("id", "controls");
 var checkbox = controls.append("input")
 				.attr("id", "collisiondetection")		
 				.attr("type", "checkbox");
-        //.attr("x", width - 24)
-        //.attr("y", 9)
 		controls.append("span")
-			.text("Collision detection")
+			.text("Collision detection (separate dots slightly)")
+
+// Functions for drawing grid lines
+function make_x_axis() {        
+    return d3.svg.axis()
+              .scale(x)
+               .orient("bottom")
+               .ticks(5)
+}
+
+function make_y_axis() {        
+    return d3.svg.axis()
+        .scale(y)
+        .orient("left")
+        .ticks(13)
+}
 
 
 // Read in external data ----------------------------------------------------
