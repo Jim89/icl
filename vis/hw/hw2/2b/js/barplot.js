@@ -3,7 +3,7 @@ Script for BS1807 Assignment 2b that creates a bar plot
 Jim Leach
 2016/02/26
 */
-function barplot(data, athlete_selection) {
+function barplot(data, athlete_selection, axis = true) {
 
 // Set up x and y domains
 x_bar.domain([0, d3.max(data, function(d) { return d.Medals; })]);
@@ -14,38 +14,39 @@ data.forEach(function(d) {
   d.color_bar = color(d.Gender);
 });
 
-
-// Add X axis
-svg.append("g")
+if (axis === true) {
+    // Add X axis
+      svg.append("g")
       .attr("class", "x axis")
       .call(xAxis_bar)
-    .selectAll("text")
-      .attr("y", -5)
-      .attr("x", -3)
-      .attr("dy", "-.55em")
-      .style("text-anchor", "start");
+      .selectAll("text")
+        .attr("y", -5)
+        .attr("x", -3)
+        .attr("dy", "-.55em")
+        .style("text-anchor", "start");
 
-// Add Y axis
-  svg.append("g")
-      .attr("class", "y axis")
-      .call(yAxis_bar);
-
-// Add x-axis label
-  svg.append("text")
+    // Add x-axis label
+    svg.append("text")
     .attr("class", "xlab")
     .attr("text-anchor", "right")
     .attr("y", 10)
     .attr("x", width_bar - 75)
     .text("Total Medals");
 
-// Add X grid
-svg.append("g")         
-        .attr("class", "grid_bar")
-        .attr("transform", "translate(0," + height_bar + ")")
-        .call(make_x_axis_bar()
-            .tickSize(-height_bar, 0, 0)
-            .tickFormat("")
-        )
+    // Add X grid
+    svg.append("g")         
+      .attr("class", "grid_bar")
+      .attr("transform", "translate(0," + height_bar + ")")
+      .call(make_x_axis_bar()
+      .tickSize(-height_bar, 0, 0)
+      .tickFormat("")
+      )
+
+    // Add Y axis
+    svg.append("g")
+      .attr("class", "y axis")
+      .call(yAxis_bar);
+}      
  
   
 // Bind data to bars 
@@ -93,7 +94,7 @@ athlete_selection = athlete_selection || [];
                 // add the only one
                 athlete_selection.push(new_athlete)
               }
-              update(athlete_selection);
+              update(athlete_selection, grid = false);
             });
 
 
@@ -103,7 +104,7 @@ athlete_selection = athlete_selection || [];
 
 // Set default force layout
 d3.select("#resetbutton").on("click", function() {
-  update(null);
+  update(athlete_selection = null, grid = false);
 });
 
 } 

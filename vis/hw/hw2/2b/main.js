@@ -134,7 +134,6 @@ function make_y_axis() {
 
 
 // Read in external data ----------------------------------------------------
-
 // After loading the data asynchronously they are stored in this variable
 var rawData;
 
@@ -157,7 +156,8 @@ d3.tsv("./data/data1_summary.csv", function(error, metaldata1) {
 
   rawData = filtered_ordered;
 
-  update(null);
+
+  update(athlete_selection = null, grid = true);
 
 });
 
