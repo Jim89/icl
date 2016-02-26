@@ -1,6 +1,8 @@
-/**
-Generate a bar plot
-**/
+/* --------------------------------------------------------------------------------
+Script for BS1807 Assignment 2b that creates a bar plot
+Jim Leach
+2016/02/26
+*/
 function barplot(data, athlete_selection) {
 
 // Set up x and y domains

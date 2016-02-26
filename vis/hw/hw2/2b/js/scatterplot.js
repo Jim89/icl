@@ -1,3 +1,8 @@
+/* --------------------------------------------------------------------------------
+Script for BS1807 Assignment 2b that creates a scatter plot
+Jim Leach
+2016/02/26
+*/
 function scatterplot(data, athlete_selection){
 // Set up ahead of drawing plot ---------------------------------------------------------------
 // Create helper variables to save some typing 
