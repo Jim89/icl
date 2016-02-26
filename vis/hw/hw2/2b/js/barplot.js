@@ -46,17 +46,7 @@ svg.append("g")
             .tickSize(-height_bar, 0, 0)
             .tickFormat("")
         )
-
-// Bind data to text
-var text = svg.selectAll(".bar")
-              .data(data);
-
-// Enter phase
-    text.enter()
-    .append("text")
-
-// Update    
-  
+ 
   
 // Bind data to bars 
 var bars = svg.selectAll(".bar")
