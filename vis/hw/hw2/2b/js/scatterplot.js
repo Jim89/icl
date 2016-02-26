@@ -1,4 +1,5 @@
 function scatterplot(data, athlete_selection){
+	//console.log(athlete_selection);
 // Set up ahead of drawing plot ---------------------------------------------------------------
 // Create helper variables to save some typing 
 var xVar = "Appearances",
@@ -41,6 +42,7 @@ if (athlete_selection !== null) {
 		// return d.Athlete === athlete_selection;
 	});
 }
+// 	console.log(filteredData);
 
 // Create the plot -----------------------------------------------------------------------------
 // Add X-axis and label

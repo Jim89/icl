@@ -95,6 +95,7 @@ var athletes = athletes || [];
               update(athletes);
         });
 
+
 // Exit phase: remove remaining dom elements
     bars.exit().remove();
 
