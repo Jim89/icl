@@ -16,7 +16,7 @@ var force = d3.layout.force()
 			.on("tick", tick)
 			.charge(-2.5)
 			.gravity(0)
-			.chargeDistance(6);
+			.chargeDistance(10);
 
 // Set up x and y domains 
 x.domain([0, d3.max(data, function(d) { return d.Appearances; })]).nice();
@@ -56,7 +56,7 @@ if (axis === true){
 		.call(xAxis)
 		.append("text")
 			.attr("class", "xlab")
-			.attr("x", width)
+			.attr("x", width - 20)
 			.attr("y", -6)
 			.style("text-anchor", "end")
 			.text("Appearances")
@@ -73,6 +73,14 @@ if (axis === true){
 	      .attr("dy", ".71em")
 	      .style("text-anchor", "end")
 	      .text("Medals")
+
+    // Add Title
+    svg_scatter.append("text")
+    .attr("class", "plottitle")
+    .attr("text-anchor", "center")
+    .attr("y", -25)
+    .attr("x", width - 450)
+    .text("Total Medals vs Appearances");	      
 
 	// Add X grid
 	svg_scatter.append("g")         

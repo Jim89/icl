@@ -20,7 +20,7 @@ if (axis === true) {
       .attr("class", "x axis")
       .call(xAxis_bar)
       .selectAll("text")
-        .attr("y", -5)
+        .attr("y", -3.5)
         .attr("x", -3)
         .attr("dy", "-.55em")
         .style("text-anchor", "start");
@@ -32,6 +32,14 @@ if (axis === true) {
     .attr("y", 10)
     .attr("x", width_bar - 75)
     .text("Total Medals");
+
+    // Add Title
+    svg.append("text")
+    .attr("class", "plottitle")
+    .attr("text-anchor", "center")
+    .attr("y", -25)
+    .attr("x", width_bar - 375)
+    .text("Total Medals by Athlete");
 
     // Add X grid
     svg.append("g")         

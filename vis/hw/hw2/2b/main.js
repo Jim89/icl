@@ -5,13 +5,13 @@ Jim Leach
 */
 // Set up overall SVG elements ----------------------------------------------------------
 // Variables for SVG sizing
-var margin_bar = {top: 40, right: 20, bottom: 40, left: 180},
-    width_bar = 725 - margin_bar.left - margin_bar.right,
-    height_bar = 825 - margin_bar.top - margin_bar.bottom;
+var margin_bar = {top: 40, right: 20, bottom: 55, left: 180},
+    width_bar = 775 - margin_bar.left - margin_bar.right,
+    height_bar = 800 - margin_bar.top - margin_bar.bottom;
 
-var margin = {top: 40, right: 20, bottom: 40, left: 80},
-    width = 800 - margin.left - margin.right,
-    height = 825 - margin.top - margin.bottom;
+var margin = {top: 40, right: 10, bottom: 80, left: 90},
+    width = 750 - margin.left - margin.right,
+    height = 800 - margin.top - margin.bottom;
     padding = 1;
     radius = 7.5;
 
@@ -58,7 +58,7 @@ var tip = d3.tip()
           .attr('class', 'd3-tip')
           .offset([-10, 0])
           .html(function(d) {
-            return "<span>" + d.Sport + "</span><br><span>" + d.CountryName + "</span>";
+            return "<span>" + d.Athlete + "</span><br><span>" + d.Sport + "</span><br><span>" + d.CountryName + "</span>";
           })              
 svg.call(tip);
 
