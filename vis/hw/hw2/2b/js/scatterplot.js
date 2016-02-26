@@ -17,6 +17,11 @@ var force = d3.layout.force()
 x.domain([0, d3.max(data, function(d) { return d.Appearances; })]).nice();
 y.domain([0, d3.max(data, function(d) { return d.Medals; })]).nice();
 
+// Set up grid lines
+var line = d3.svg.line()
+              .x(function(d) { return x(d.Appearances); })
+              .y(function(d) { return y(d.Medals); });
+
 // Set data values 
 data.forEach(function(d) {
 	d.x = x(d[xVar]);
@@ -30,7 +35,10 @@ var filteredData = rawData;
 if (athlete_selection !== null) {
 	// If there is an athlete selection then just include those data items
 	filteredData = data.filter(function(d) {
-		return d.Athlete === athlete_selection;
+		var present = contains(athlete_selection, d.Athlete);
+		// console.log(present)
+		if (present) { return d.Athlete; };
+		// return d.Athlete === athlete_selection;
 	});
 }
 
@@ -58,6 +66,23 @@ svg_scatter.append("g")
       .attr("dy", ".71em")
       .style("text-anchor", "end")
       .text("Medals")
+
+// Add X grid
+svg_scatter.append("g")         
+        .attr("class", "grid_scatter")
+        .attr("transform", "translate(0," + height + ")")
+        .call(make_x_axis()
+            .tickSize(-height, 0, 0)
+            .tickFormat("")
+        ) 
+
+// Add Y grid
+svg_scatter.append("g")         
+	.attr("class", "grid_scatter")
+	.call(make_y_axis()
+	    .tickSize(-width, 0, 0)
+	    .tickFormat("")
+	)        
 
 // Map data to dots
 var node = svg_scatter.selectAll(".dot")
@@ -95,15 +120,16 @@ var legend = svg_scatter.selectAll(".legend")
 
 // Add colour boxes
 		legend.append("rect")
-		  .attr("x", width - 18)
+		  .attr("x", width - 25)
+		  .attr("y", 12)
 		  .attr("width", 18)
 		  .attr("height", 18)
 		  .style("fill", color);
 
 // Add class labels
 		legend.append("text")
-		  .attr("x", width - 24)
-		  .attr("y", 9)
+		  .attr("x", width - 34)
+		  .attr("y", 21)
 		  .attr("dy", ".35em")
 		  .style("text-anchor", "end")
 		  .text(function(d) { return d; });
