@@ -1,5 +1,4 @@
 function scatterplot(data, athlete_selection){
-	//console.log(athlete_selection);
 // Set up ahead of drawing plot ---------------------------------------------------------------
 // Create helper variables to save some typing 
 var xVar = "Appearances",
@@ -12,7 +11,7 @@ var force = d3.layout.force()
 			.on("tick", tick)
 			.charge(-2.5)
 			.gravity(0)
-			.chargeDistance(5);
+			.chargeDistance(6);
 
 // Set up x and y domains 
 x.domain([0, d3.max(data, function(d) { return d.Appearances; })]).nice();
@@ -37,12 +36,11 @@ if (athlete_selection !== null) {
 	// If there is an athlete selection then just include those data items
 	filteredData = data.filter(function(d) {
 		var idx = athlete_selection.indexOf(d.Athlete);
-		// console.log(present)
-		if (idx > 0) { return d.Athlete; };
+		if (idx >= 0) { return d.Athlete; };
 		// return d.Athlete === athlete_selection;
 	});
 }
-// 	console.log(filteredData);
+
 
 // Create the plot -----------------------------------------------------------------------------
 // Add X-axis and label
