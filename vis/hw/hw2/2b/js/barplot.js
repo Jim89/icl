@@ -33,7 +33,7 @@ svg.append("g")
     .attr("class", "xlab")
     .attr("text-anchor", "right")
     .attr("y", 10)
-    .attr("x", width - 65)
+    .attr("x", width - 75)
     .text("Total Medals");
 
 // Add X grid
