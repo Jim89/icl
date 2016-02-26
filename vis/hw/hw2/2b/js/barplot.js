@@ -35,6 +35,15 @@ svg.append("g")
     .attr("y", 10)
     .attr("x", width - 65)
     .text("Total Medals");
+
+// Add X grid
+svg.append("g")         
+        .attr("class", "grid_bar")
+        .attr("transform", "translate(0," + height + ")")
+        .call(make_x_axis_bar()
+            .tickSize(-height, 0, 0)
+            .tickFormat("")
+        )     
   
   
 // Bind data to bars 
@@ -43,13 +52,7 @@ var bars = svg.selectAll(".bar")
 
 // Enter phase
     bars.enter()
-        .append("rect")
-        .on("click", function(d){
-            // Select currently bound data element, i.e. the athlete
-            var athlete = d.Athlete;
-            // Trigger to update visualisation
-            update(athlete);
-          });
+        .append("rect");
 
 // Update phase, set x, y, width, height
     bars.attr("class", "bar")
@@ -60,10 +63,34 @@ var bars = svg.selectAll(".bar")
         .style("fill", function(d) { return d.color_bar; })
         .style("opacity", .75)
 
-
+// Set up (empty) array of selected athletes
+var athletes = [];
 // Event phase - things to do on actions        
     bars.on("mouseover", tip.show)
-        .on("mouseout", tip.hide);
+        .on("mouseout", tip.hide)
+        .on("click", function(d){
+          // Select currently bound data element, i.e. the athlete
+            new_athlete = d.Athlete;
+
+          // Add the new athlete to the selection
+            athletes.push(new_athlete);            
+
+          // If CTRL key is held, add the selection to the list of athletes
+            if (d3.event.ctrlKey) {
+                // Get the clicked element
+                var clicked = d.Athlete;
+
+                // Add it to the list of athletes if it does not already contain it
+                // N.B. contains is a custom function that returns true if the second parameter
+                // exists as an element inside the first
+                if (!contains(athletes, clicked)){
+                  athletes.push(clicked);
+                }
+            }
+            // Print out athletes array for debugging
+            console.log(athletes);
+            update(athletes);
+            });
         
 
 // Exit phase: remove remaining dom elements
