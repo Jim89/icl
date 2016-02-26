@@ -10,9 +10,9 @@ var force = d3.layout.force()
 			.nodes(data)
 			.size([width, height])
 			.on("tick", tick)
-			.charge(-5)
+			.charge(-2.5)
 			.gravity(0)
-			.chargeDistance(50);
+			.chargeDistance(5);
 
 // Set up x and y domains 
 x.domain([0, d3.max(data, function(d) { return d.Appearances; })]).nice();
@@ -36,9 +36,9 @@ var filteredData = rawData;
 if (athlete_selection !== null) {
 	// If there is an athlete selection then just include those data items
 	filteredData = data.filter(function(d) {
-		var present = contains(athlete_selection, d.Athlete);
+		var idx = athlete_selection.indexOf(d.Athlete);
 		// console.log(present)
-		if (present) { return d.Athlete; };
+		if (idx > 0) { return d.Athlete; };
 		// return d.Athlete === athlete_selection;
 	});
 }

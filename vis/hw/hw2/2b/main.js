@@ -61,6 +61,14 @@ function make_x_axis_bar() {
                .ticks(13)
 }
 
+// Control button for force-directed layout
+var reset = d3.select("body").append("button")
+        .attr("id", "reset");
+var resetButton = reset.attr("id", "resetbutton")   
+        .attr("type", "button");
+    reset.append("span")
+      .text("Reset Selection")
+
 
 // Set up variables for scatterplot ----------------------------------------------------------
 // X scale

@@ -43,7 +43,17 @@ svg.append("g")
         .call(make_x_axis_bar()
             .tickSize(-height, 0, 0)
             .tickFormat("")
-        )     
+        )
+
+// Bind data to text
+var text = svg.selectAll(".bar")
+              .data(data);
+
+// Enter phase
+    text.enter()
+    .append("text")
+
+// Update    
   
   
 // Bind data to bars 
@@ -70,7 +80,7 @@ var bars = svg.selectAll(".bar")
 
 // Add selection for filtering        
 // Set up (empty) array of selected athletes
-var athletes = athletes || [];
+athlete_selection = athlete_selection || []; 
 
       bars.on("click", function(d){
           // Select currently bound data element, i.e. the athlete
@@ -78,26 +88,32 @@ var athletes = athletes || [];
 
           // If CTRL key is held, add the selection to the list of athletes
             if (d3.event.ctrlKey) {
-              if(contains(athletes, new_athlete)) {
+              if(athlete_selection.indexOf(new_athlete) > 0 ) {
                 // remove from array
-                athletes.splice(athletes.indexOf(new_athlete), 1);
+                athlete_selection.splice(athlete_selection.indexOf(new_athlete), 1);
               } else {
                 // add to array
-                athletes.push(new_athlete);
+                athlete_selection.push(new_athlete);
                 }
               } else {
                 // clear existing array
-                athletes.length = 0;
+                athlete_selection.length = 0;
                 // add the only one
-                athletes.push(new_athlete)
+                athlete_selection.push(new_athlete)
               }
-              console.log(athletes);
-              update(athletes);
-        });
+              //console.log(athlete_selection);
+              update(athlete_selection);
+            });
 
 
 // Exit phase: remove remaining dom elements
     bars.exit().remove();
+
+
+// Set default force layout
+d3.select("#resetbutton").on("click", function() {
+  update(null);
+});
 
 } 
 
