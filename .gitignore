@@ -65,6 +65,8 @@ networks/notes/*.pdf
 
 # ignore for workforce analytics
 workforce/docs/*.pdf
+workforce/docs/*/*.pdf
+workforce/docs/*/*.pptx
 workforce/docs/*.docx
 workforce/docs/*/*.pdf
 workforce/workshops/*/*.pf
@@ -82,9 +84,11 @@ workforce/hw/individual/reports/*.pdf
 # ignore for ml
 ml/hw/hw0/*.pdf
 ml/docs/*.pdf
+ml/docs/*/*.pdf
 ml/labs/02/*.pdf
 ml/hw/hw1/images/*
 ml/hw/hw1/*.pdf
+ml/hw/hw1/*.zip
 
 # ignore for vis
 vis/*.pdf
@@ -110,3 +114,13 @@ retail/data/*.xlsx
 retail/hw/*.pdf
 vis/hw/hw2/2b/testing/
 vis/hw/hw2/2b/complete.html
+
+# ignore for healthcare
+healthcare/docs/*.pdf
+healthcare/docs/lectures/*.pdf
+healthcare/docs/lectures/*.pptx
+
+# ignore for retail
+retail/docs/*.pdf
+retail/docs/lectures/*.pdf
+retail/docs/lectures/*.pptx
