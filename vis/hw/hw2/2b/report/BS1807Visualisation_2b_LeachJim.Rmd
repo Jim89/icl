@@ -1,0 +1,70 @@
+---
+title: "Visualisation Assignment 2b"
+author: "Jim Leach"
+date: "01 March 2016"
+output: pdf_document
+---
+
+# Introduction
+
+## Background
+
+This assignment deals with developing a solution to an editorial perspective proposed in an earlier assignment (1b). Data were provided covering Olympics medal winners for a range of Olympic years and events. The task was to to use `D3.js` to create a visualisation that set out an editorial perspective that could be taken with the data. Note that only the first data set was used.
+
+## Document structure
+
+This document is structured in to three sections. Each visualisation contained in the page (of which there are two) is discussed in an individual section. The final section briefly summarises the overall dashboard. Please note that due to the overlap with assignment 2a, some material in this document may be duplicated in the report for 2a.
+
+## Differences from 2a (Tableau Dashboard)
+
+The Tableau dashboard created as part of assignment 2a was slightly different from the visualisation here. These differences are covered and explained below:
+
+* __Use of colour to encode gender__: In the Tableau dashboard, colour was used solely for visual appeal. In the `D3` visualisation it has been use to encode the _gender_ variable. This decision was taken as limitations in Tableau regarding jitter on scatterplots meant that encoding gender with colour was problematic. This problem does not exist in `D3` and so colour was introduced to add another dimension to the page.
+* __Removal of map__: In the Tableau dashboard a chloropleth map was present that showed total medals for all countries in the data set. This has been removed in the `D3` example partly due to problems showing certain countries' data on the map (e.g. countries that no longer exist such as West Germany) and partly due to the addition of adding gender information to the remaining plots. The raw data contain countries that no longer exists. In the Tableau dashboard these were manually cleaned to facilitate plotting, but this was not performed for the `D3` example and so the map was dropped. Additionally, the extra information added by the encoding gender with colour was sufficient to retain interest in the visualisation even after removing the map.
+* __Removal of some data__: Due to the size of the data used in the visualisation, adding all of the data to a single plot results in a very fine-grained plot with many data points. Tableau handles this automatically via the addition of scroll-bars and zooming. Data were removed for the `D3` visualisation to compensate for the additional complexity required in creating similar automatic scroll bars required for displaying _all_ of the data at once. 
+
+# Design Decisions
+
+## Visualisation One - Total medals by athlete
+
+This visualisation shows the total number of medals won by each individual athlete, for those athletes in the data that have won at least four medals. It uses the lines (bars) visual mark to encode the total number of medals for each athlete. A text-tooltip was added on mouse-over to add extra detail for each athlete (their gender and sporting discipline). The _length_ visual channel is used to show the number of medals won by each athlete. 
+
+Colour was used to encode gender data with a small legend to decode the colours. As well as adding another dimension of data to the plot, the use of unified colour scheme helps to tie the two visualisations together. colour also adds some visual appeal which can be helpful in creating a favourable visual product. Grid lines were added to help tie bar values to the x-axis with which they are aligned. This aids cognition speed and improves the readability of the chart.
+
+A barchart was chosen as it is effective for displaying count data broken for individual groups/units. It is a well-known chart type that is easy to read. The horizontal layout makes it easy to read the athlete names (and helps ensure they fit on the page!). The tooltip adds detail on country and sport, adding extra detail without cluttering the plot. The barchart also makes it easy to see differences in the total number of medals won by athletes in order to find the all-time best athletes (in terms of total medals) across all countries. 
+
+The decision to use colour to encode gender was taken in order to provide an understanding of how men and women compare (when it comes to total medals won). 
+
+The decision to add the tooltip was taken as it adds extra detail without cluttering the overall visual. Users can get a sense of which disciplines and countries have produced hugely successful athletes.
+
+The linkage to the second visualisation gives more detail. Clicking on an individual bar will filter the scatterplot to just that athlete's position. Holding down the _CTRL_ key allows multiple selections to be performed at once. The _Reset_ button clears the selection and returns all points to the scatterplot.
+
+The scatterplot gives a measure of the athlete efficiency and so using the barchart to filter the scatterplot made sense. Using the barchart to filter the scatterplot means that groups of apparently-similar athletes on the bar chart (e.g. all those with 7 medals) can be compared from a different view. 
+
+## Visualisation Two - Athlete efficiency (Medals vs. Appearances)
+
+This visualisation shows the relationship between the total number of medals won by an athlete and the number of times they have competed at the Olympics. This is a measure of athlete efficiency. 
+
+The visualisation uses the point visual mark to plot each athlete on the chart. The position of each point encodes each athlete's efficiency (with positions in the top-left of the visualisation representing more efficient athletes). A scatter plot was chosen as it is the most effect visualisation for viewing the relationship between two numerical variables. Grid lines were added to aid reading the chart at speed. The tooltip helps individual athletes to be identified and (as before) adds further detail on sport and country.
+
+Many athletes sit at the same positions on this chart (as both medal count and appearances are discrete numbers) and so a force-directed layout has been used to separate the points slightly and to give a sense of where the bulk of athletes are positioned on this graph. The animated nature of this layout also gives the chart some visual appeal when it first loads, and when selections are reset with the provided button.
+
+Again colour was used to encode the gender of each athlete. This makes comparisons between men and women easy to identify (e.g. assessing gender differences in efficiency for the same number of medals). Using  the same colours as visualisation one helps to visually tie them together, as they present different views of the same data. It also helps to reduce clutter on the page, as only one legend is required.
+
+It was decided that this visualisation should not filter the other. This was because the barchart is at a higher level of detail compared with the scatter, and filtering the barchart with the scatter seemed redundant - the information in the barchart can be read directly from the scatter (with a little more effort).
+
+## The overall page
+
+This page uses two distinct but common (and hence read-able) chart types: a simple barchart and a scatterplot. Each visualisation enables a slightly different angle of the data to be viewed. Reading from left-right the data tell an increasingly detailed story and it was a conscious decision to arrange the charts in this manner. 
+
+The athlete-level view gives "raw performance" (i.e. total medals) information about the individual athletes. Colour enables some comparisons to be made between genders, and the tooltip adds more detail. The second visualisation gives even more detail about the individual athletes. It reveals not just their raw performance but their efficiency (medals vs. appearances). 
+
+The interactivity that has been introduced in to the page means that a user can filter and highlight in order to manipulate those angles. In doing so, further understanding can be gained, and clarity is developed. The limited colour palette not only adds detail but also helps to keep the visualisation clean and simple and to tie elements together. 
+
+
+
+
+
+
+
+
