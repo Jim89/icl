@@ -19,7 +19,12 @@ for i = 1:3
   
 end  
 %%
-for i = 1:3
-  char(kernels(i, :))
+losses = [];
+for i = 1:10
+  fitknn = fitcknn(train_input, train_output, ...
+                   'NumNeighbors', i,...
+                   'CrossVal', 'on',...
+                   'Standardize', 1);
+  loss = kfoldLoss(fitknn);
+  losses(i) = loss;
 end
-
