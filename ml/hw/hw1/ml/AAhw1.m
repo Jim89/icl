@@ -57,6 +57,9 @@ matches_svm = (test_output == predicted_svm);
 % Percent correct
 correct_svm = sum(matches_svm)/length(test_output);
 
+% Confusion matrix
+[conf_svm, order_svm] = confusionmat(predicted_svm, test_output);
+
 %% Test k-NN
 knn = TrainClassifier2(train_input, train_output);
 
@@ -69,5 +72,6 @@ matches_knn = (test_output == predicted_knn);
 % Percent correct
 correct_knn = sum(matches_knn)/length(test_output);
 
-
+% Confusion matrix
+[conf_knn, order_knn] = confusionmat(predicted_knn, test_output);
 
