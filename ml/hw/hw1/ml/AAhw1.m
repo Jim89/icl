@@ -59,6 +59,7 @@ correct_svm = sum(matches_svm)/length(test_output);
 
 % Confusion matrix
 [conf_svm, order_svm] = confusionmat(predicted_svm, test_output);
+csvwrite('./data/conf_svm.csv', conf_svm)
 
 %% Test k-NN
 knn = TrainClassifier2(train_input, train_output);
@@ -74,4 +75,4 @@ correct_knn = sum(matches_knn)/length(test_output);
 
 % Confusion matrix
 [conf_knn, order_knn] = confusionmat(predicted_knn, test_output);
-
+csvwrite('./data/conf_knn.csv', conf_knn)
