@@ -45,7 +45,7 @@ train_output = output(train_idx, :);
 test_input = input(test_idx, :);
 test_output = output(test_idx, :);
 
-%% Fit svm
+%% Test svm
 svm = TrainClassifier1(train_input, train_output);
 
 % Get predicted values 
@@ -57,7 +57,7 @@ matches_svm = (test_output == predicted_svm);
 % Percent correct
 correct_svm = sum(matches_svm)/length(test_output);
 
-%% Fit k-NN
+%% Test k-NN
 knn = TrainClassifier2(train_input, train_output);
 
 % Get predicted values 
