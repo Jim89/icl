@@ -4,6 +4,10 @@ load('../data/cancer.mat');
 input = cancer.inputs;
 output = cancer.outputs;
 
+% Write to CSV for ggplot2 visualisations
+csvwrite('../data/created/input.csv', input)
+csvwrite('../data/created/output.csv', output)
+
 %% Create histograms
 cols = size(input, 2);
 for i = 1:cols
@@ -23,6 +27,8 @@ nan_output = sum(any( isnan(output), 2 )); % Rows with NaN
 histogram(output); % Visualise class distributions
 
 
+
+
 %% Set up test and train  
 % Find number of rows
 rows = size(input, 1);
@@ -30,12 +36,12 @@ rows = size(input, 1);
 % Randomly permute rows
 elems = randperm(rows)';
 
-% Find half of data size
-half = floor(rows/2)';
+% Find 50% of data size
+frac = floor(rows/2)';
 
 % Set up test and train index
-train_idx = elems(1:half);
-test_idx = elems((half+1):end);
+train_idx = elems(1:frac);
+test_idx = elems((frac+1):end);
 
 % Create train
 train_input = input(train_idx, :);
@@ -59,7 +65,7 @@ correct_svm = sum(matches_svm)/length(test_output);
 
 % Confusion matrix
 [conf_svm, order_svm] = confusionmat(predicted_svm, test_output);
-csvwrite('./data/conf_svm.csv', conf_svm)
+csvwrite('../data/created/conf_svm.csv', conf_svm)
 
 %% Test k-NN
 knn = TrainClassifier2(train_input, train_output);
@@ -75,4 +81,4 @@ correct_knn = sum(matches_knn)/length(test_output);
 
 % Confusion matrix
 [conf_knn, order_knn] = confusionmat(predicted_knn, test_output);
-csvwrite('./data/conf_knn.csv', conf_knn)
+csvwrite('../data/created/conf_knn.csv', conf_knn)
