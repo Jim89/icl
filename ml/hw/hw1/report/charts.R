@@ -1,24 +1,75 @@
+# Step 0 - set up environment --------------------------------------------------
 library(readr)
 library(dplyr)
 library(tidyr)
 library(ggplot2)
 
-input <- read_csv("./hw/hw1/data/created/input.csv", col_names = FALSE)
-knn <- read_csv("./hw/hw1/data/created/knn_loss.csv") %>% mutate(k = row_number())
-
-knn_long <- knn %>% gather(key = "distance", value = "loss", -k)
-
-
-knn_long %>% 
-  ggplot(aes(x = k, y = loss, colour = distance)) + 
-  geom_line(aes(colour = distance), size = 1) +
-  theme_minimal() +
-  theme(legend.position = "bottom")
-
-
-knn_long %>% 
-  ggplot(aes(x = distance, y = loss))+
-  geom_boxplot()
-
+# Create some simple functions
+normalise <- function(x){(x-mean(x, na.rm = TRUE))/sd(x, na.rm = TRUE)}
 range_single <- function(x){range(x)[2] - range(x)[1]}
-apply(input, 2, range_single)
+to_proper <- function(x){paste0(toupper(substring(x, 1)), substring(x, 2))}
+
+# Step 1 - load data -----------------------------------------------------------
+input <- read_csv("./hw/hw1/data/created/input.csv", col_names = FALSE)
+output <- read_csv("./hw/hw1/data/created/output.csv", col_names = FALSE) %>% 
+          setNames("label")
+data <- bind_cols(input, output)
+
+knn <- read_csv("./hw/hw1/data/created/knn_loss.csv") %>% 
+        mutate(k = row_number())
+
+svm <- read_csv("./hw/hw1/data/created/svm_loss.csv") %>% 
+  mutate(slack = 1:11)
+
+# Step 2 - transform data ------------------------------------------------------
+knn_long <- knn %>% gather(key = "distance", value = "loss", -k) 
+
+svm_long <- svm %>% gather(key = "kernel", value = "loss", -slack)
+data_long <- data %>% gather(key = "field", value = "value", -label) %>% 
+              group_by(field) %>% 
+              mutate(value_norm = normalise(value)) %>% 
+              ungroup() %>% 
+              gather(key = "feature", value = "value", -label, -field)
+
+# Step 3 - create some plots ---------------------------------------------------
+knn_long %>%
+  ggplot(aes(x = k, y = loss, colour = distance)) + 
+  geom_line(aes(colour = distance), size = 1.25) +
+  geom_point(aes(colour = distance), size = 2.75) +
+  scale_x_continuous(breaks = seq(from = 0, to = 30, by = 2)) + 
+  scale_y_continuous(breaks = seq(from = 0, to = max(knn_long$loss), by = 0.01)) +
+  xlab("k (in k-Nearest Neighbours)") +
+  ylab("Loss") +
+  ggtitle("Average 10-fold cross-validated loss\n for a range of hyperparameters") +
+  guides(colour = guide_legend(title = "Distance Metric")) +
+  theme(legend.position = "bottom",
+        axis.text.y = element_text(size = 16),
+        axis.text.x = element_text(size = 16),
+        text = element_text(size = 14),
+        panel.grid.minor.x = element_blank(),
+        panel.grid.major.x = element_line(colour = "lightgrey", linetype = "dotted"),
+        panel.grid.minor.y = element_blank(),
+        panel.grid.major.y = element_line(colour = "lightgrey", linetype = "dotted"),
+        panel.margin.y = unit(0.1, units = "in"),
+        panel.background = element_rect(fill = "white", colour = "lightgrey"))
+
+
+
+
+
+data_long %>% 
+  # filter(feature == "value_norm") %>% 
+  ggplot(aes(x = field, y = value)) +
+  geom_boxplot() +
+  facet_grid(feature ~ ., scales = "free")
+
+
+
+
+svm_long %>% 
+  ggplot(aes(x = slack, y = loss, colour = kernel)) + 
+  geom_line(aes(colour = kernel), size = 1) +
+  geom_point(aes(colour = kernel), size = 2.5) +
+  theme_minimal() +
+  scale_x_discrete(labels = c(1e-5, 1e-4, 1e-3, 1e-2, 1e-1, 1, 1e1, 1e2, 1e3, 1e4, 1e5)) +
+  theme(legend.position = "bottom")
