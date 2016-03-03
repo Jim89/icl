@@ -32,7 +32,6 @@ losses(losses == 0) = NaN;
 
 % Find optimal parameters based on minimal loss
 k = I_row;
-dist = distances{I_col};
 
 parameters = fitcknn(input, output, 'NumNeighbors', k,...
                       'Standardize', 1,...
