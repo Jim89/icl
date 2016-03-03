@@ -17,7 +17,8 @@ h1 {
 }
 
 body {
-  background: linear-gradient(to bottom, #E8E8EE, white);
+  background: linear-gradient(to bottom, white, #E8E8EE);
+  background: #fff;
 }
 
 /* -------------------- Style axes --------------------*/
@@ -40,7 +41,7 @@ body {
 
 .xlab {
 	font-famly: serif;
-	font-size: 10px;
+	font-size: 12px;
 }
 
 .ylab {
