@@ -79,7 +79,7 @@ plot(firstPC)
 disp(['Variability explained: ' num2str( eigVal(maxEigValIndex)/sum(eigVal(:)) * 100)])
 
 %% 1st PC from cov and corr
-
+X(:,1) = X(:,6)*10
 close all;
 [eigVec, eigVal] = eig(cov(X));
 eigVal = diag(eigVal); 
@@ -92,16 +92,17 @@ hold on;
 eigVal = diag(eigVal); 
 [~, maxEigValIndex] = max(eigVal);
 firstPCCorr = X * eigVec(:,maxEigValIndex);
-plot(-firstPCCorr,'r')
+plot(firstPCCorr,'r')
 
 legend('Covariance','Correlation')
+
 
 %% Use matlab's PCA built-in function
 clc;
 [eigenVec,~,eigenVal,~,VarExplained] = pca(X)
 
 close all; 
-plot(VarExplained,'--o')
+plot(cumsum(VarExplained),'--o')
 ylim([0 100])
 set(gca,'XTick',1:length(VarExplained))
 xlabel('No. of PCs')
