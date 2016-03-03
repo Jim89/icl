@@ -30,11 +30,11 @@ disp(var(X))
 
 %% Correlation vs Covariance explanations
 clc
-% cov(A,B) = E([A?E(A)][B?E(B)])
+% cov(A,B) = E([A-E(A)][B-E(B)])
 disp('Covariance')
 disp(cov(X))
 
-% cor(A,B) = E([A?E(A)][B?E(B)]) / ( sd(A) * sd(B) )
+% cor(A,B) = E([A-E(A)][B-E(B)]) / ( sd(A) * sd(B) )
 disp('Correlation')
 disp(corr(X))
 
