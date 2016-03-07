@@ -1,4 +1,11 @@
-# Step 0 - set up environment --------------------------------------------------
+---
+title: "Machine Learning Assignment One"
+author: "Jim Leach"
+date: "4 March 2016"
+output: pdf_document
+---
+
+```{r loadPackages, echo = FALSE, message=FALSE,warning=FALSE}
 library(readr)
 library(dplyr)
 library(tidyr)
@@ -8,20 +15,23 @@ library(ggplot2)
 normalise <- function(x){(x-mean(x, na.rm = TRUE))/sd(x, na.rm = TRUE)}
 range_single <- function(x){range(x)[2] - range(x)[1]}
 to_proper <- function(x){paste0(toupper(substring(x, 1, 1)), substring(x, 2))}
+```
 
-# Step 1 - load data -----------------------------------------------------------
-input <- read_csv("./hw/hw1/data/created/input.csv", col_names = FALSE)
-output <- read_csv("./hw/hw1/data/created/output.csv", col_names = FALSE) %>% 
+```{r getdata, echo = FALSE}
+input <- read_csv("../data/created/input.csv", col_names = FALSE)
+output <- read_csv("../data/created/output.csv", col_names = FALSE) %>% 
           setNames("label")
 data <- bind_cols(input, output)
 
-knn <- read_csv("./hw/hw1/data/created/knn_loss.csv") %>% 
+knn <- read_csv("../data/created/knn_loss.csv") %>% 
         mutate(k = row_number())
 
-svm <- read_csv("./hw/hw1/data/created/svm_loss.csv") %>% 
+svm <- read_csv("../data/created/svm_loss.csv") %>% 
   mutate(slack = 1:11)
 
-# Step 2 - transform data ------------------------------------------------------
+```
+
+```{r transformData, echo = FALSE}
 knn_long <- knn %>% gather(key = "distance", value = "loss", -k) %>% 
                     mutate(distance = to_proper(distance))
 
@@ -33,8 +43,9 @@ data_long <- data %>% gather(key = "field", value = "value", -label) %>%
               mutate(value_norm = normalise(value)) %>% 
               ungroup() %>% 
               gather(key = "feature", value = "value", -label, -field)
+```
 
-# Step 3 - create some plots ---------------------------------------------------
+```{r setTheme, echo = FALSE}
 theme <-   theme(legend.position = "bottom",
                  axis.text.y = element_text(size = 16, colour = "black"),
                  axis.text.x = element_text(size = 16, colour = "black", angle = -90),
@@ -48,9 +59,9 @@ theme <-   theme(legend.position = "bottom",
                  panel.margin.y = unit(0.1, units = "in"),
                  panel.background = element_rect(fill = "white", colour = "lightgrey"),
                  panel.border = element_rect(colour = "black", fill = NA))
+```
 
-# Create plot that visualises distribution of each field - show normalisation
-# is important
+```{r dataDist, echo = FALSE}
 data_long %>% 
   arrange(feature, field) %>% 
   filter(feature == "value") %>% 
@@ -62,8 +73,9 @@ data_long %>%
   ylab("Feature Values") +
   ggtitle("Distribution of values for all non-normalised\n data input features") +
   theme
+```
 
-# Create plot that visualises distribution of each field after normalisation
+```{r dataDistNorm, echo = FALSE}
 data_long %>% 
   arrange(feature, field) %>% 
   filter(feature == "value_norm") %>% 
@@ -75,8 +87,11 @@ data_long %>%
   ylab("Feature Values") +
   ggtitle("Distribution of values for all normalised\n data input features") +
   theme
+```
 
-# Plot of k-NN training
+
+
+```{r knn, echo = FALSE}
 knn_long %>%
   ggplot(aes(x = k, y = loss, colour = distance)) + 
   geom_line(aes(colour = distance), size = 1.25) +
@@ -101,10 +116,9 @@ knn_long %>%
         panel.margin.y = unit(0.1, units = "in"),
         panel.background = element_rect(fill = "white", colour = "lightgrey"),
         panel.border = element_rect(colour = "black", fill = NA))
+```
 
-
-# Plot of SVM training
-# Set up axis labels
+```{r svm, echo = FALSE, fig.cap = "Cross Validated Loss Estimates for a range of hyperparameters tested during training a support vector machine on the training data"}
 xlabels <- c("0.00001", "0.0001", "0.001", "0.01", "0.1", "1", "10", "100", "1,000", "10,000", "100,000")
 
 svm_long %>% 
@@ -130,3 +144,5 @@ svm_long %>%
         panel.margin.y = unit(0.1, units = "in"),
         panel.background = element_rect(fill = "white", colour = "lightgrey"),
         panel.border = element_rect(colour = "black", fill = NA))
+```
+
