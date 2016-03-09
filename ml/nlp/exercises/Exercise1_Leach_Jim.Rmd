@@ -1,0 +1,176 @@
+---
+title: "Text Mining Exercise 1"
+author: "Jim Leach"
+date: "9 March 2016"
+output: pdf_document
+---
+
+# Exercise 1
+
+## Premlininaries
+
+The first step is to load the packages that are required for this analysis. `magrittr` is also loaded to faciliate `%>%` piping.
+
+```{r message=FALSE}
+library(quanteda)
+library(quantedaData)
+library(magrittr)
+```
+
+We can initially create a document feature matrix of the Irish 2010 budget speech corpus, removing stopwords, and then check the top 15 features:
+
+```{r}
+ie_dfm <- dfm(ie2010Corpus, ignoredFeatures = c(stopwords("english"), "will"), 
+              stem = TRUE, verbose = FALSE)
+ie_dfm %>% topfeatures(15)
+```
+
+`quanteda` also facilitates making word clouds via the `plot` command:
+
+```{r warning=FALSE, fig.width=4, fig.height=4}
+ie_dfm %>% plot(min.freq = 30, random.order = FALSE)
+```
+
+The output is not identical to that in the example report as a higher minimum word frequency was used.
+
+## Basic string manipulation
+
+The `nchar` function from `quanteda` is useful for counting characters in strings (as length will just return 1). It is also vectorised.
+
+```{r}
+s1 <- 'my example text'
+length(s1)
+nchar(s1)
+```
+
+`nchar` can therefore be used to answer some simple questions of text data. For example, using the inaugural addresses data set that comes with `quanteda` we can find the longest and shortest addresses:
+
+```{r}
+inaugTexts %>% nchar() %>% which.max()
+
+inaugTexts %>% nchar() %>% which.min()
+```
+
+We can extract substrings from text using `substr` or `str_sub` from the `stringr` package.
+
+```{r}
+library(stringr)
+s1 <- "This file contrains many fascinating example sentences."
+s1 %>% substr(6, 9)
+s1 %>% str_sub(6, 9)
+```
+
+We can also split strings by some delimiter using either `strsplit` or `str_split`:
+
+```{r}
+parts1 <- inaugTexts %>% names() %>% strsplit("-")
+parts2 <- inaugTexts %>% names() %>% str_split("-")
+
+years1 <- sapply(parts1, function(x) x[1])
+years2 <- sapply(parts2, function(x) x[1])
+
+pres1 <- sapply(parts1, function(x) x[2])
+pres2 <- sapply(parts2, function(x) x[2])
+
+all.equal(years1, years2)
+all.equal(pres1, pres2)
+```
+
+Tokenising also produces a list:
+
+```{r}
+toks <- tokenize("This is a sentence containing some caractères Français.")
+str(toks)
+```
+
+Calling `str` on the tokens object indicates that it is a list with various attributes, _class, what, ngrams,_ and _concatenator_.
+
+We can also look directly at `toks`:
+```{r echo = FALSE}
+toks
+```
+
+It looks the way it does as the function `tokenize` has split up the string with French characters into the individual _tokens_ (in this case words) that are part of that sentence. These are indexed from 1 to 9, with the final token being the full stop at the end of the string.
+
+There are many methods that we could apply to this object:
+
+```{r}
+methods(class = class(toks)[1]) # only take the first class as the second is a generic list
+```
+
+Looking at the output from `methods` shows all the functions that can be applied to an object of the same class as `toks` (`class(toks)[1]`). There are some functions introduced by `quanteda`, as well as generics such as `print`.
+
+Strings can be concatenated together with the `paste` command (with a default separator of a space) or with `paste0` (default separator is no space) and collapsed into single strings with the `collapse` argument:
+
+```{r}
+paste(years1, pres1, sep = "-")
+paste(years1, pres1, sep = ": ", collapse = "; ")
+```
+
+We can also force strings to upper or lower case.
+
+```{r}
+sVec <- c("Quanteda is the Best Text Package Ever, approved by NATO!", 
+          "A different string that also contains NATO as pandoc/LaTeX doesn't like non-unicode characters")
+tolower(sVec)
+```
+
+`quanteda` also provides a similar function, but lets us preserve acronyms (like "NATO").
+
+```{r}
+toLower(sVec, keepAcronyms = TRUE)
+```
+
+## Couting and comparing
+
+String comparisons work like other comparisons in `R` using `==` and `%in%` to do so. For instance, to count how many times _new_ appears in the 57^th^ inaugural speech we can use:
+
+```{r}
+text <- tokenize(inaugTexts[57])$`2013-Obama`
+"new" %in% text
+sum("new" == text)
+```
+
+From this we can see that "new" does appear in the 57^th^ inaugural address: 6 times.
+
+## Making a corpus
+
+Using `quanteda` we can make a corpus using the `corpus` command:
+
+```{r}
+corp <- corpus(inaugTexts)
+```
+
+We can then call `summary` on this corpus to understand it a bit more:
+
+```{r}
+summary(corp)
+```
+
+We can then, for example, look at the number of sentences in a speech over time and see that the number of sentences has gradually increased over time, with some wild swings year-by-year.
+
+```{r, fig.height=6, fig.width=6}
+library(ggplot2)
+sentences <- summary(corp)$Sentences
+year <- summary(corp)$Text %>% as.character() %>% str_sub(1, 4)
+data <- data.frame(sentences = sentences, year = as.numeric(year))
+
+ggplot(data, aes(x = year, y = sentences)) +
+  geom_line(colour = "steelblue", size = 1) +
+  xlab("Year") +
+  ylab("Sentences") +
+  ggtitle("Total Sentences in United States Presidential\nInaugural Address")+ 
+  theme(legend.position = "bottom",
+         axis.text.y = element_text(size = 16, colour = "black"),
+         axis.text.x = element_text(size = 16, colour = "black"),
+         title = element_text(size = 16),
+         panel.grid.minor.x = element_blank(),
+         panel.grid.major.x = element_line(colour = "grey", linetype = "dotted"),
+         panel.grid.minor.y = element_blank(),
+         panel.grid.major.y = element_line(colour = "grey", linetype = "dotted"),
+         panel.margin.y = unit(0.1, units = "in"),
+         panel.background = element_rect(fill = "white", colour = "lightgrey"),
+         panel.border = element_rect(colour = "black", fill = NA))
+```  
+
+
