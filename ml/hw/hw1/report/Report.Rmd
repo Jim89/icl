@@ -86,13 +86,13 @@ Before applying any machine learning algorithms, the data were examined and expl
 
 To begin with, the balance of the two classes in the data was viewed to check if one class was much more dominant than the other, as seen in figure 1 below.
 
-```{r class_freq_plot, echo = FALSE, fig.height = 4, fig.cap="Count of outcome classification labels for the data provided. The two values are 0 (malign) and 1 (benign)."}
+```{r class_freq_plot, echo = FALSE, fig.height = 4, fig.cap="Count of outcome classification labels for the data provided. The two values are 0 (malign) and 1 (benign).", fig.height = 3.5}
 ggplot(output, aes(x = as.factor(label))) +
   geom_bar(aes(fill = as.factor(label))) +
   scale_fill_brewer(type = "qual", palette = "Dark2") +
   xlab("Output Label") +
   ylab("Count (records in data)") +
-  ggtitle("Frequency plot of output data labels") +
+  ##ggtitle("Frequency plot of output data labels") +
   theme(legend.position = "none",
         axis.text.y = element_text(size = 16, colour = "black"),
         axis.text.x = element_text(size = 16, colour = "black"),
@@ -112,8 +112,7 @@ It was decided that the two class labels were not so imbalanced as to pose a pro
 
 Additionally, the distribution of each input feature was viewed. This was performed as features with extremely large or small value ranges might have a very large influence on certain classification algorithms. Each non-normalised feature's distribution was plotted and is shown in figure 2 below.
 
-
-```{r dataDist, echo = FALSE, fig.cap = "Non-normalised feature disribution, coloured by outcome label (i.e. malign or benign)."}
+```{r dataDist, echo = FALSE, fig.cap = "Non-normalised feature disribution, coloured by outcome label (i.e. malign or benign).", fig.height = 3.5}
 data_long %>% 
   arrange(feature, field) %>% 
   filter(feature == "value") %>% 
@@ -133,7 +132,9 @@ Due to the differences in range for several variables observed in figure 2 (e.g.
 z = \dfrac{x - \mu_x}{\sigma_x}
 \end{equation}
 
-```{r dataDistNorm, echo = FALSE, fig.cap = "Normalised feature disribution, coloured by outcome label (i.e. malign or benign)."}
+After performing this normalisation, the distributions of values for each feature were more similar, as shown by figure 3 below:
+
+```{r dataDistNorm, echo = FALSE, fig.cap = "Normalised feature disribution, coloured by outcome label (i.e. malign or benign).", fig.height = 3.5}
 data_long %>% 
   arrange(feature, field) %>% 
   filter(feature == "value_norm") %>% 
@@ -151,13 +152,18 @@ data_long %>%
 
 ## Classifier One - Support Vector Machine
 
+The first classifier developed was a Support Vector Machines (SVM). A SVM was chosen as they are typically well-performing classifiers, and can model both linear and non-linear decision boundaries flexibly.
+
 ### Parameter requirements
 
 ### Model selection
 
-### Training the model
+The optimal model for the SVM was selected via training the model using a range of hyperparameters. For each combination of hyperparameters used, 10-fold cross validation was used to give an estimate of the out-of-sample error (termed "loss"). Different kernels were tested, and the slack variable (i.e. the sensitivity/tolerance of the SVM to misclassification) was varied in line with recommendations on the `MATLAB` [help](http://uk.mathworks.com/help/stats/support-vector-machines-for-binary-classification.html#bsr5o3f) pages.
 
-```{r svm, echo = FALSE, fig.cap = "Cross Validated Loss Estimates for a range of hyperparameters tested during training a support vector machine on the training data"}
+Figure 4 below shows the cross validated loss found for each combination of hyperparameters tested.
+As seen in the figure, linear and polynomial kernels consistently performed better than Gaussian with optimal conditions being found for a linear kernel with a slack value of either 0.1 or 100.
+
+```{r svm, echo = FALSE, fig.cap = "Cross-validated loss (out-of-sample error) estimates for a range of hyperparameters tested when training a support vector machine on the data", fig.height = 4.5}
 xlabels <- c("0.00001", "0.0001", "0.001", "0.01", "0.1", "1", "10", "100", "1,000", "10,000", "100,000")
 
 svm_long %>% 
@@ -184,6 +190,10 @@ svm_long %>%
         panel.background = element_rect(fill = "white", colour = "lightgrey"),
         panel.border = element_rect(colour = "black", fill = NA))
 ```
+
+### Training the model
+
+The combination of hyperparameters found to have the lowest cross-validated error was chosen to be the "final" version of the SVM model using a "black box approach". That is, the optimal hyperparameters were chosen automatically by the `TrainClassifierX` function. (The results presented in figure 4 above are however representative of the testing performed).
 
 ## Classifier Two - k-Nearest Neighbours
 
