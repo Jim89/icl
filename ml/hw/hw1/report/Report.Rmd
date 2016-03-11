@@ -13,6 +13,7 @@ library(readr)
 library(dplyr)
 library(tidyr)
 library(ggplot2)
+library(knitr)
 
 # Create some simple functions
 normalise <- function(x){(x-mean(x, na.rm = TRUE))/sd(x, na.rm = TRUE)}
@@ -84,7 +85,7 @@ theme <-   theme(legend.position = "bottom",
 
 Before applying any machine learning algorithms, the data were examined and explored. 
 
-To begin with, the balance of the two classes in the data was viewed to check if one class was much more dominant than the other, as seen in figure 1 below.
+To begin with, the balance of the two classes in the data was viewed to check if one class was much more dominant than the other, as seen in figure 1.
 
 ```{r class_freq_plot, echo = FALSE, fig.height = 4, fig.cap="Count of outcome classification labels for the data provided. The two values are 0 (malign) and 1 (benign).", fig.height = 3.5}
 ggplot(output, aes(x = as.factor(label))) +
@@ -110,7 +111,7 @@ ggplot(output, aes(x = as.factor(label))) +
 
 It was decided that the two class labels were not so imbalanced as to pose a problem when creating the classifiers.
 
-Additionally, the distribution of each input feature was viewed. This was performed as features with extremely large or small value ranges might have a very large influence on certain classification algorithms. Each non-normalised feature's distribution was plotted and is shown in figure 2 below.
+Additionally, the distribution of each input feature was viewed. This was performed as features with extremely large or small value ranges might have a very large influence on certain classification algorithms (e.g. $k$-Nearest Neigbours). Each non-normalised feature's distribution was plotted and is shown in figure 2.
 
 ```{r dataDist, echo = FALSE, fig.cap = "Non-normalised feature disribution, coloured by outcome label (i.e. malign or benign).", fig.height = 3.5}
 data_long %>% 
@@ -132,7 +133,7 @@ Due to the differences in range for several variables observed in figure 2 (e.g.
 z = \dfrac{x - \mu_x}{\sigma_x}
 \end{equation}
 
-After performing this normalisation, the distributions of values for each feature were more similar, as shown by figure 3 below:
+After performing this normalisation, the distributions of values for each feature were more similar, as shown in figure 3.
 
 ```{r dataDistNorm, echo = FALSE, fig.cap = "Normalised feature disribution, coloured by outcome label (i.e. malign or benign).", fig.height = 3.5}
 data_long %>% 
@@ -156,14 +157,31 @@ The first classifier developed was a Support Vector Machines (SVM). A SVM was ch
 
 ### Parameter requirements
 
+In general, a support vector machine (with a _linear_ kernel) is seeking to find parameters, $w$, for each feature in the data via the generic optimisation presented in \eqref{eq:svm} (Weisemann, 2015).
+
+\begin{equation} \label{eq:svm}
+\min w^Tx
+\end{equation}
+
+In this instance, it can be seen that the parameter requirements will be one $w$ for each feature, plus $w_0$ (the intercept). Given that there were thirty features in the input data, this translates in to thirty one parameters required for the SVM. 
+
+However, in reality a SVM optimisation is solved via the dual solution to the generic problem in \eqref{eq:svm}. When solving this dual problem it is the case that the only values that need to be retained once optimality has been reached are the support vectors themselves, and their corresponding coefficients (i.e. dual variables). Whilst the support vectors are not truly "parameters" (in the same sense as the $w$ values), for the purposes of this question they have been treated as such. 
+
+Hence it is not possible to state _a priori_ the exact number of "parameters" required by a SVM. A general rule of thumb (given that the support vectors need to be retained) is that the "parameter" requirements are: the number of support vectors multiplied by the number of features in the input data, plus a dual variable for each support vector. 
+
+Additionally, if a _non-linear_ kernel is chosen then there are potentially an infinite number of dimensions of the data. However, it is the case that the "parameters" are still the support vectors and their dual variables, and so the rule of thumb outlined above will still hold.
+
+Other properties, e.g. the kernel to be used or the slack variable, are termed _hyperparameters_ and so are not included in this calculation. As the number of training points for each class was not radically different (figure 1), there was no need to account for such differences.
+
+
 ### Model selection
 
-The optimal model for the SVM was selected via training the model using a range of hyperparameters. For each combination of hyperparameters used, 10-fold cross validation was used to give an estimate of the out-of-sample error (termed "loss"). Different kernels were tested, and the slack variable (i.e. the sensitivity/tolerance of the SVM to misclassification) was varied in line with recommendations on the `MATLAB` [help](http://uk.mathworks.com/help/stats/support-vector-machines-for-binary-classification.html#bsr5o3f) pages.
+The optimal model for the SVM was selected via training the model using a range of hyperparameters. For each combination of hyperparameters used, 10-fold cross validation was used to give an estimate of the out-of-sample error (termed "loss"). Different kernels were tested, and the slack variable (i.e. the sensitivity/tolerance of the SVM to misclassification) was varied in line with recommendations on the `MATLAB` [help](http://uk.mathworks.com/help/stats/support-vector-machines-for-binary-classification.html#bsr5o3f) pages. Note that data were standardised as discussed above.
 
-Figure 4 below shows the cross validated loss found for each combination of hyperparameters tested.
-As seen in the figure, linear and polynomial kernels consistently performed better than Gaussian with optimal conditions being found for a linear kernel with a slack value of either 0.1 or 100.
+Figure 4 shows the average cross validated loss found for each combination of hyperparameters tested.
+As seen in the figure, in this instance linear and polynomial kernels consistently performed better than Gaussian with optimal conditions being found for a linear kernel with a slack value of 100.
 
-```{r svm, echo = FALSE, fig.cap = "Cross-validated loss (out-of-sample error) estimates for a range of hyperparameters tested when training a support vector machine on the data", fig.height = 4.5}
+```{r svm, echo = FALSE, fig.cap = "Cross-validated loss (out-of-sample error) estimates for a range of hyperparameters tested when training a support vector machine. Note that these results come from training the SVM on only the training data, i.e. 50% of the data provided.", fig.height = 4.5}
 xlabels <- c("0.00001", "0.0001", "0.001", "0.01", "0.1", "1", "10", "100", "1,000", "10,000", "100,000")
 
 svm_long %>% 
@@ -174,7 +192,7 @@ svm_long %>%
   guides(colour = guide_legend(title = "Kernel Function")) +
   ylab("Loss") + 
   xlab("Slack Parameter Value") +
-  ggtitle("Average 10-fold cross-validated loss\n for a range of hyperparameters") +
+  #ggtitle("Average 10-fold cross-validated loss\n for a range of hyperparameters") +
   scale_x_discrete(labels = xlabels) +
   theme(legend.position = "bottom",
         axis.text.y = element_text(size = 14, colour = "black"),
@@ -191,19 +209,32 @@ svm_long %>%
         panel.border = element_rect(colour = "black", fill = NA))
 ```
 
-### Training the model
+### Training the final model
 
-The combination of hyperparameters found to have the lowest cross-validated error was chosen to be the "final" version of the SVM model using a "black box approach". That is, the optimal hyperparameters were chosen automatically by the `TrainClassifierX` function. (The results presented in figure 4 above are however representative of the testing performed).
+The combination of hyperparameters found to have the lowest cross-validated error was chosen to be the "final" version of the SVM model using a "black box approach". That is, the optimal hyperparameters were chosen automatically by the `TrainClassifierX` function. (The results presented in figure 4 are however representative of the model selection when performed manually).
 
-## Classifier Two - k-Nearest Neighbours
+## Classifier Two - $k$-Nearest Neighbours
 
 ### Parameter requirements
 
+The $k$-Nearest Neighbours algorithm is actually a non-parametric method. However, in order for it to function as a classifier there is information that must be retained once the model has been trained. This information is, in fact, the training data itself. For a new data point, $x_0$, the class is predicted using \eqref{eq:knn} (James, Witten, Hastie, Tibshirani, 2013) and hence it is seen that the whole training data are required to be kept.
+
+\begin{equation} \label{eq:knn}
+Pr(Y=j|X=x_0) = \dfrac{1}{K}\sum_{i\in\mathcal{N}_0}I(y_i = j)
+\end{equation}
+
+This means that (assuming _all_ of the provided data are used to train the classifier) for the input data with $`r nrow(input)`$ rows and $`r ncol(input)`$ columns, there is a requirement to keep $`r prod(dim(input))`$ points of information from the input data. The class of each input data point is required, leading to an additional $`r nrow(output)`$ points of data, for a total of $`r prod(dim(input))+nrow(output)`$ pieces of data that must be retained for the classifier to work.
+
+Other properties, e.g. the distance metric to be used or the value of $k$, are termed _hyperparameters_ and so are not included in this calculation. As the number of training points for each class was not radically different (figure 1), there was no need to account for such differences.
+
 ### Model selection
 
-### Training the model
+Similar to the SVM, the optimal model for $k$-Nearest Neighbours was selected via training the model using a range of hyperparameters. Again, 10-fold cross validation was used to give an estimate of the out-of-sample error. Different distance metrics were used, and $k$ was varied from 0 to 30. Note that data were standardised as discussed above.
 
-```{r knn, echo = FALSE}
+Figure 5 shows the average loss found for each combination of hyperparameters with 10-fold cross validation.
+As seen in the figure, in this instance Cityblock, Euclidean and Minkowski distance metrics consistently outperformed Chebychev. The optimal value for $k$ was around 3 using the Cityblock distance metric.
+
+```{r knn, echo = FALSE, fig.cap = "Cross-validated loss (out-of-sample error) estimates for a range of hyperparameters tested when training k-Nearest Neighbours on the data. Note that these results come from training the k-NN classifier on only the training data, i.e. 50% of the data provided.", fig.height = 4}
 knn_long %>%
   ggplot(aes(x = k, y = loss, colour = distance)) + 
   geom_line(aes(colour = distance), size = 1.25) +
@@ -213,8 +244,10 @@ knn_long %>%
   scale_color_brewer(type = "qual", palette = "Dark2") + 
   xlab("k (in k-Nearest Neighbours)") +
   ylab("Loss") +
-  ggtitle("Average 10-fold cross-validated loss\n for a range of hyperparameters") +
-  guides(colour = guide_legend(title = "Distance Metric")) +
+  #ggtitle("Average 10-fold cross-validated loss\n for a range of hyperparameters") +
+  guides(colour = guide_legend(title = "Distance Metric", 
+                               nrow=2,
+                               byrow=TRUE)) +
   theme(legend.position = "bottom",
         axis.text.y = element_text(size = 16, colour = "black"),
         axis.text.x = element_text(size = 16, colour = "black"),
@@ -230,11 +263,55 @@ knn_long %>%
         panel.border = element_rect(colour = "black", fill = NA))
 ```
 
+### Training the final model
+
+Also as with the SVM, the exact combination of hyperparameters found to have the lowest cross-validated error was chosen to be the "final" version of the model using a "black box approach". That is, the optimal hyperparameters were chosen automatically by the `TrainClassifierX` function. (The results presented in figure 5 are however representative of the model selection when performed manually).
+
+***
+
 # Section Three - Testing Classifiers
+
+In order to test each classifier, the provided data were split evenly in to a training and test set. The SVM and $k$-Nearest Neighbours classifiers were trained as described in the previous sections and the test set used once (and once only) to evaluate their true out-of-sample performance. 
 
 ## Support Vector Machine
 
-## k-Nearest Neighbours
+```{r svm_conf, echo = FALSE}
+svm_conf <- read_csv("../data/created/conf_svm.csv", col_names = FALSE)
+svm_names <- read_csv("../data/created/conf_svm_names.csv", col_names = FALSE)
+colnames(svm_conf) <- as.character(svm_names$X1)
+rownames(svm_conf) <- as.character(svm_names$X1)
+# kable(svm_conf)
+accuracy_svm <- sum(diag(svm_conf %>% as.matrix())) / svm_conf %>% as.matrix() %>% sum()
+```
+
+The SVM classifier was able to successfully predict $`r round(100*accuracy_svm, 2)`$% of the samples in the test set. The confusion matrix for the SVM classifier is reported below.
+
+```{r svm_confs_show, echo = FALSE}
+kable(svm_conf, caption = "Confusion Matrix for SVM Classifier on test data set.")
+```
+
+## $k$-Nearest Neighbours
+
+```{r knn_conf, echo = FALSE}
+knn_conf <- read_csv("../data/created/conf_knn.csv", col_names = FALSE)
+knn_names <- read_csv("../data/created/conf_knn_names.csv", col_names = FALSE)
+colnames(knn_conf) <- as.character(knn_names$X1)
+rownames(knn_conf) <- as.character(knn_names$X1)
+# kable(svm_conf)
+accuracy_knn <- sum(diag(knn_conf %>% as.matrix())) / knn_conf %>% as.matrix() %>% sum()
+```
+
+The SVM classifier was able to successfully predict $`r round(100*accuracy_knn, 2)`$% of the samples in the test set. The confusion matrix for the $k$-NN classifier is reported below.
+
+```{r knn_confs_show, echo = FALSE}
+kable(knn_conf, caption = "Confusion Matrix for k-NN Classifier on test data set.")
+```
 
 ## Comparison and discussion
 
+As can be seen from the results reported above, both classifiers have achieved a high accuracy on the test set. As such, it is difficult to single one out as a "better" classifier in this setting. The SVM is known to be a flexible method which generalises well (James, Witten, Hastie, Tibshirani, 2013, figure on page 25). Moreover, given that they generally have a small number-of-parameters requirement (certainly in contrast to $k$-NN) they may be a better choice in this setting, given the potential size of the data that might be collected (i.e very many patients and very many features for each patient).
+
+# References
+
+1. Wolfram Weisemann (2015), _Optimisation and Decision Models, [Lecture] MSc. Business Analytics Imperial College London, December 2015.   
+2. James, Witten, Hastie, Tibshirani (2013), _An Introduction to Statistical Learning_, Springer Texts in Statistics. Springer New York, Springer.
