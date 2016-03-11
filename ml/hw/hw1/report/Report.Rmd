@@ -5,7 +5,6 @@ date: "4 March 2016"
 output: 
   pdf_document:
     fig_caption: yes
-    keep_tex: yes
 ---
 
 ```{r loadPackages, echo = FALSE, message=FALSE,warning=FALSE}
@@ -211,7 +210,7 @@ svm_long %>%
 
 ### Training the final model
 
-The combination of hyperparameters found to have the lowest cross-validated error was chosen to be the "final" version of the SVM model using a "black box approach". That is, the optimal hyperparameters were chosen automatically by the `TrainClassifierX` function. (The results presented in figure 4 are however representative of the model selection when performed manually).
+The combination of hyperparameters found to have the lowest cross-validated error was chosen to be the "final" version of the SVM model using a "black box approach". That is, the optimal hyperparameters were chosen automatically within the `TrainClassifierX` function. (The results presented in figure 4 were obtained via model selection when performed manually).
 
 ## Classifier Two - $k$-Nearest Neighbours
 
@@ -233,6 +232,8 @@ Similar to the SVM, the optimal model for $k$-Nearest Neighbours was selected vi
 
 Figure 5 shows the average loss found for each combination of hyperparameters with 10-fold cross validation.
 As seen in the figure, in this instance Cityblock, Euclidean and Minkowski distance metrics consistently outperformed Chebychev. The optimal value for $k$ was around 3 using the Cityblock distance metric.
+
+
 
 ```{r knn, echo = FALSE, fig.cap = "Cross-validated loss (out-of-sample error) estimates for a range of hyperparameters tested when training k-Nearest Neighbours on the data. Note that these results come from training the k-NN classifier on only the training data, i.e. 50% of the data provided.", fig.height = 4}
 knn_long %>%
@@ -263,11 +264,13 @@ knn_long %>%
         panel.border = element_rect(colour = "black", fill = NA))
 ```
 
+
 ### Training the final model
 
-Also as with the SVM, the exact combination of hyperparameters found to have the lowest cross-validated error was chosen to be the "final" version of the model using a "black box approach". That is, the optimal hyperparameters were chosen automatically by the `TrainClassifierX` function. (The results presented in figure 5 are however representative of the model selection when performed manually).
+Also as with the SVM, the exact combination of hyperparameters found to have the lowest cross-validated error was chosen to be the "final" version of the model using a "black box approach". That is, the optimal hyperparameters were chosen automatically within the `TrainClassifierX` function. (The results presented in figure 5 were obtained via model selection when performed manually).
 
-***
+\pagebreak
+
 
 # Section Three - Testing Classifiers
 
