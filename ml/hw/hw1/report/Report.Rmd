@@ -309,7 +309,11 @@ kable(knn_conf, caption = "Confusion Matrix for k-NN Classifier on test data set
 
 ## Comparison and discussion
 
-As can be seen from the results reported above, both classifiers have achieved a high accuracy on the test set. As such, it is difficult to single one out as a "better" classifier in this setting. The SVM is known to be a flexible method which generalises well (James, Witten, Hastie, Tibshirani, 2013, figure on page 25). Moreover, given that they generally have a small number-of-parameters requirement (certainly in contrast to $k$-NN) they may be a better choice in this setting, given the potential size of the data that might be collected (i.e very many patients and very many features for each patient).
+As can be seen from the results reported above, both classifiers have achieved a high accuracy on the test set. As such, it is difficult to single one out as a "better" classifier in this setting. The SVM is known to be a flexible method which generalises well (James, Witten, Hastie, Tibshirani, 2013, figure on page 25). Moreover, given that they generally have a small number-of-parameters requirement (certainly in contrast to $k$-NN) they may be a better choice in this setting, given the potential size of the data that might be collected (i.e very many patients and very many features for each patient). 
+
+An advantage of $k$-nearest neighbours is that it can  handle non-linear decision boundaries automatically. However, the fact that a linear SVM kernel was found to be at least as effective as non-linear kernels (e.g. Guassian/RBF) suggests that the normalised data are linearly separable to some extent. It would appear that in this case (based on the results obtained) this advantage of $k$-nearest neighbours will be mininal. 
+
+Therefore, due to the potential difficulties implementing $k$-Nearest Neighbours if the data are very large, and the absence of the "automatic" non-linear classification advantage, in this case the SVM as trained will likely prove to be a better and more generalisable method.
 
 # References
 
