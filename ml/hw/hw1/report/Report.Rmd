@@ -143,7 +143,7 @@ data_long %>%
   scale_color_brewer(type = "qual", palette = "Dark2") + 
   guides(colour = guide_legend(title = "Output Label")) +
   xlab("Input Feature") +
-  ylab("Feature Values (normalised)") +
+  ylab("Feature Values\n (normalised)") +
   #ggtitle("Distribution of values for all normalised\n data input features") +
   theme
 ```
@@ -156,26 +156,26 @@ The first classifier developed was a Support Vector Machines (SVM). A SVM was ch
 
 ### Parameter requirements
 
-In general, a support vector machine (with a _linear_ kernel) is seeking to find parameters, $w$, for each feature in the data via the generic optimisation presented in \eqref{eq:svm} (Weisemann, 2015).
+In general, the function relating input data $x$ to outputs $y$ for a support vector machine (with a _linear_ kernel) can be represeted via the function presented in \eqref{eq:svm} (James, Witten, Hastie, Tibshirani, 2013).
 
 \begin{equation} \label{eq:svm}
-\min w^Tx
+f(x) = \beta_0  + \sum_{i=1}^n \alpha_i<x,x_i>
 \end{equation}
 
-In this instance, it can be seen that the parameter requirements will be one $w$ for each feature, plus $w_0$ (the intercept). Given that there were thirty features in the input data, this translates in to thirty one parameters required for the SVM. 
+The parameter requirements will be one $\alpha_i$ for each record in the training data. Given that there were `r nrow(input)` records in the input data, this translates in to `r nrow(input)` parameters required for the SVM. (James, Witten, Hastie, Tibshirani, 2013). 
 
-However, in reality a SVM optimisation is solved via the dual solution to the generic problem in \eqref{eq:svm}. When solving this dual problem it is the case that the only values that need to be retained once optimality has been reached are the support vectors themselves, and their corresponding coefficients (i.e. dual variables). Whilst the support vectors are not truly "parameters" (in the same sense as the $w$ values), for the purposes of this question they have been treated as such. 
+However, the parameter ($\alpha_i$) is zero for all points in the training data, _apart from the support vectors_ (James, Witten, Hastie, Tibshirani, 2013). Whilst the support vectors are not truly "parameters", for the purposes of this question they have been treated as such. Therefore the rule of thumb is that the "parameter" requirements for a SVM are the number of support vectors found.
 
-Hence it is not possible to state _a priori_ the exact number of "parameters" required by a SVM. A general rule of thumb (given that the support vectors need to be retained) is that the "parameter" requirements are: the number of support vectors multiplied by the number of features in the input data, plus a dual variable for each support vector. 
+Hence it is not possible to state _a priori_ the exact number of "parameters" required by a SVM, only that the number of parameters will be the same as the number of support vectors. 
 
-Additionally, if a _non-linear_ kernel is chosen then there are potentially an infinite number of dimensions of the data. However, it is the case that the "parameters" are still the support vectors and their dual variables, and so the rule of thumb outlined above will still hold.
+Additionally, if a _non-linear_ kernel is chosen (such as the _radial_ kernel) then there are potentially an infinite number of dimensions of the input data (James, Witten, Hastie, Tibshirani, 2013). However, it is the case that the "parameters" are still the support vectors, and so the rule of thumb outlined above will still hold.
 
 Other properties, e.g. the kernel to be used or the slack variable, are termed _hyperparameters_ and so are not included in this calculation. As the number of training points for each class was not radically different (figure 1), there was no need to account for such differences.
 
 
 ### Model selection
 
-The optimal model for the SVM was selected via training the model using a range of hyperparameters. For each combination of hyperparameters used, 10-fold cross validation was used to give an estimate of the out-of-sample error (termed "loss"). Different kernels were tested, and the slack variable (i.e. the sensitivity/tolerance of the SVM to misclassification) was varied in line with recommendations on the `MATLAB` [help](http://uk.mathworks.com/help/stats/support-vector-machines-for-binary-classification.html#bsr5o3f) pages. Note that data were standardised as discussed above.
+The optimal model for the SVM was selected via training the model using a range of hyperparameters. For each combination of hyperparameters used, 10-fold cross validation was used to give an estimate of the out-of-sample error (termed "loss"). Different kernels were tested, and the slack variable (i.e. the sensitivity/tolerance of the SVM to misclassification) was varied in line with recommendations on the `MATLAB` [help](http://uk.mathworks.com/help/stats/support-vector-machines-for-binary-classification.html#bsr5o3f) pages. Note that data were normalised as discussed above.
 
 Figure 4 shows the average cross validated loss found for each combination of hyperparameters tested.
 As seen in the figure, in this instance linear and polynomial kernels consistently performed better than Gaussian with optimal conditions being found for a linear kernel with a slack value of 100.
@@ -210,7 +210,7 @@ svm_long %>%
 
 ### Training the final model
 
-The combination of hyperparameters found to have the lowest cross-validated error was chosen to be the "final" version of the SVM model using a "black box approach". That is, the optimal hyperparameters were chosen automatically within the `TrainClassifierX` function. (The results presented in figure 4 were obtained via model selection when performed manually).
+The combination of hyperparameters found to have the lowest cross-validated error was chosen to be the "final" version of the SVM model using a "black box approach". The provided data were split 50/50 in to a train and test set, and only the training data were used to fit the model. The optimal hyperparameters were chosen automatically within the `TrainClassifierX` function using the method outlined above. (The results presented in figure 4 were obtained via model selection when performed manually).
 
 ## Classifier Two - $k$-Nearest Neighbours
 
@@ -228,10 +228,10 @@ Other properties, e.g. the distance metric to be used or the value of $k$, are t
 
 ### Model selection
 
-Similar to the SVM, the optimal model for $k$-Nearest Neighbours was selected via training the model using a range of hyperparameters. Again, 10-fold cross validation was used to give an estimate of the out-of-sample error. Different distance metrics were used, and $k$ was varied from 0 to 30. Note that data were standardised as discussed above.
+Similar to the SVM, the optimal model for $k$-Nearest Neighbours was selected via training the model using a range of hyperparameters. Again, 10-fold cross validation was used to give an estimate of the out-of-sample error. Different distance metrics were used, and $k$ was varied from 0 to 30. Note that data were normalised as discussed above.
 
 Figure 5 shows the average loss found for each combination of hyperparameters with 10-fold cross validation.
-As seen in the figure, in this instance Cityblock, Euclidean and Minkowski distance metrics consistently outperformed Chebychev. The optimal value for $k$ was around 3 using the Cityblock distance metric.
+As seen in the figure, in this instance Cityblock, Euclidean and Minkowski distance metrics consistently outperformed Chebychev. The optimal value for $k$ was found to be 3, using the Cityblock distance metric.
 
 
 
@@ -267,10 +267,9 @@ knn_long %>%
 
 ### Training the final model
 
-Also as with the SVM, the exact combination of hyperparameters found to have the lowest cross-validated error was chosen to be the "final" version of the model using a "black box approach". That is, the optimal hyperparameters were chosen automatically within the `TrainClassifierX` function. (The results presented in figure 5 were obtained via model selection when performed manually).
+Also as with the SVM, the exact combination of hyperparameters found to have the lowest cross-validated error was chosen to be the "final" version of the model using a "black box approach". The provided data were split 50/50 in to a train and test set, and only the training data were used to fit the model. The optimal hyperparameters were chosen automatically within the `TrainClassifierX` function using the method outlined above. (The results presented in figure 5 were obtained via model selection when performed manually).
 
-\pagebreak
-
+***
 
 # Section Three - Testing Classifiers
 
@@ -287,7 +286,7 @@ rownames(svm_conf) <- as.character(svm_names$X1)
 accuracy_svm <- sum(diag(svm_conf %>% as.matrix())) / svm_conf %>% as.matrix() %>% sum()
 ```
 
-The SVM classifier was able to successfully predict $`r round(100*accuracy_svm, 2)`$% of the samples in the test set. The confusion matrix for the SVM classifier is reported below.
+The SVM classifier was able to successfully predict $`r round(100*accuracy_svm, 2)`$% of the samples in the test set. The confusion matrix for the SVM classifier is reported in table 1.
 
 ```{r svm_confs_show, echo = FALSE}
 kable(svm_conf, caption = "Confusion Matrix for SVM Classifier on test data set.")
@@ -304,7 +303,7 @@ rownames(knn_conf) <- as.character(knn_names$X1)
 accuracy_knn <- sum(diag(knn_conf %>% as.matrix())) / knn_conf %>% as.matrix() %>% sum()
 ```
 
-The SVM classifier was able to successfully predict $`r round(100*accuracy_knn, 2)`$% of the samples in the test set. The confusion matrix for the $k$-NN classifier is reported below.
+The SVM classifier was able to successfully predict $`r round(100*accuracy_knn, 2)`$% of the samples in the test set. The confusion matrix for the $k$-NN classifier is reported in table 2.
 
 ```{r knn_confs_show, echo = FALSE}
 kable(knn_conf, caption = "Confusion Matrix for k-NN Classifier on test data set.")
@@ -320,5 +319,4 @@ Therefore, due to the potential difficulties implementing $k$-Nearest Neighbours
 
 # References
 
-1. Wolfram Weisemann (2015), _Optimisation and Decision Models, [Lecture] MSc. Business Analytics Imperial College London, December 2015.   
-2. James, Witten, Hastie, Tibshirani (2013), _An Introduction to Statistical Learning_, Springer Texts in Statistics. Springer New York, Springer.
+1. James, Witten, Hastie, Tibshirani (2013), _An Introduction to Statistical Learning_, Springer Texts in Statistics. Springer New York, Springer.
