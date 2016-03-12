@@ -70,7 +70,3 @@ display('k-NN Test Error')
 display(correct_knn)
 
 clear;
-
-%% Write properties to file
-%csvwrite('../data/created/svm_test.csv.', correct_svm);
-%csvwrite('../data/created/knn_test.csv.', correct_knn);
