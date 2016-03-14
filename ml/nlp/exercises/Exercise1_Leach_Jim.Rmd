@@ -13,7 +13,7 @@ The first step is to load the packages that are required for this analysis. `mag
 
 ```{r message=FALSE}
 library(quanteda)
-library(quantedaData)
+# library(quantedaData)
 library(magrittr)
 ```
 
