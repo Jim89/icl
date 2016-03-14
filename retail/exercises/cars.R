@@ -14,6 +14,4 @@ fit_full <- lm(vehicle_price ~ 1 + as.factor(cylinders) + as.factor(doors) + as.
 
 model <- step(fit_null, scope = list(upper = fit_full), data = car)
 
-levels <- read.table("./data/LevelsAppTab.txt")
-ratings <- read.table("./data/RatingsAppTab.txt")
 
