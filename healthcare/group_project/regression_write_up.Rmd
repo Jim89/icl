@@ -1,15 +1,27 @@
-# Step 0 - prep env -------------------------------------------------------
+---
+title: "Group Project Report"
+author: "Jim Leach"
+date: "22 March 2016"
+output: word_document
+---
+
+```{r getData, echo = FALSE, message=FALSE, warning=FALSE}
 library(MASS)
 library(readr)
 library(dplyr)
 library(tidyr)
 library(ggplot2)
+library(GGally)
 
-data <- read_csv("./group_project/data/group_exercise_data.csv")
+
+data <- read_csv("./data/group_exercise_data.csv")
 colnames(data) <- make.names(colnames(data))     
 
+```
 
-# Create exploratory plots ------------------------------------------------
+You can also embed plots, for example:
+
+```{r set_up_plots, echo=FALSE}
 field_plot <- function(field) {
   ggplot(data, aes_string(x = "Day", y = field)) +
     geom_line(colour = "grey") +
@@ -30,22 +42,61 @@ field_plot <- function(field) {
           panel.background = element_rect(fill = "white", colour = "lightgrey"),
           panel.border = element_rect(colour = "black", fill = NA))
 }
+```
 
+# Plots of variables by day
+
+```{r tests, echo = FALSE}
 field_plot("Number.of.Blood.Tests") + ylab("Blood tests")
+```
+```{r women, echo = FALSE}
 field_plot("X..Women") + ylab("Women tested (%)")
-field_plot("X..Children") + ylab("Children tested (%)")
-field_plot("X..Covered.by.insurance") + ylab("Insurance covered (%)")
+```
 
-# Fit model ---------------------------------------------------------------
+```{r kids, echo = FALSE}
+field_plot("X..Children") + ylab("Children tested (%)")
+```
+
+```{r ins, echo = FALSE}
+field_plot("X..Covered.by.insurance") + ylab("Insurance covered (%)")
+```
+
+# Pairs plot
+
+```{r pairs, echo = FALSE, fig.height = 9, fig.width=9}
+ggpairs(data)
+```
+
+# Regression write-up
+
+As the variance of the outcome (number of blood tests) was significantly higher than the mean (see table), we chose a negative binomial model over a Poisson (as negative binomial is more appropriate in this setting).
+
+```{r var_means, echo = FALSE}
+vars <- apply(data, 2, var)
+means <- apply(data, 2, mean)
+df <- data_frame(feature = colnames(data),
+                 variance = vars,
+                 means = means)
+library(knitr)
+kable(df, col.names = c("Feature", "Variance", "Mean"),
+      caption = "Variance and means for data set features")
+```
+
+We used stepwise regression to find the best model from all features in the data. Having done so we obtained an error measure from the model using mean absolute deviation.
+
+```{r nb, echo = F, message = FALSE, warning = FALSE}
 fit <- glm.nb(Number.of.Blood.Tests ~ ., data = data)
-fit <- step(fit)
+fit <- step(fit, trace = 0)
 predicted <- predict(fit, type = "response")
 
 # Estimate model error
 mad <- mean(abs(data$Number.of.Blood.Tests - predicted))
 mse <- mean((data$Number.of.Blood.Tests - predicted)^2)
+```
 
+We found that, for a negative binomial model, the mean absolute deviation was `r round(mad, 2)`.
 
+```{r predict, echo = FALSE}
 # Create new data ---------------------------------------------------------
 means <- colMeans(data)
 new <- data_frame(Day = c(1000, 1010),
@@ -56,5 +107,13 @@ new <- data_frame(Day = c(1000, 1010),
 
 # Predict new points ------------------------------------------------------
 predictions <- predict(fit, newdata = new, type = "response")
+```
 
+We used this model to make predictions for the new days. As the other features were unobserved on these days, we used the mean value of each feature as a replacement. This produced the following predictions.
 
+```{r show_predictions, echo = FALSE}
+predictions %>% as.data.frame() %>% setNames("Prediction") %>% 
+  cbind(data.frame(Day = c(1000, 1010))) %>% 
+  dplyr::select(Day, Prediction) %>% 
+  kable()
+```
