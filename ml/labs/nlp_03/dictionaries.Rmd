@@ -1,0 +1,89 @@
+---
+title: "Exercise 2"
+author: "Jim Leach"
+date: "22 March 2016"
+output: html_document
+---
+
+```{r message = FALSE}
+library(quanteda)
+library(dplyr)
+```
+
+# Getting used to dictionaries
+
+## Create a dictionary
+
+Creating a dictionary is easy with `quanteda`.
+
+```{r}
+posDict <- dictionary(list(articles = c("the", "a", "an"),
+                           conjunctions = c("and", "but", "or", "nor", "for", "yet", "so")))
+```
+
+We can then apply this dictionary to a corpus of text to extract the numbers of articles and conjunctions in each text in that corpus.
+
+```{r}
+posDfm <- dfm(inaugCorpus, dictionary = posDict)
+```
+
+We can weight this by relative frequency to understand a little more:
+
+```{r}
+dfm_weight <- weight(posDfm, type = "relFreq")
+```
+
+We can also plot the values of articles:
+
+```{r}
+library(ggplot2)
+dfm_weight %>% as.data.frame() %>% add_rownames() %>% 
+  rename(text = rowname) %>% 
+  mutate(year = substr(text, 1, 4)) %>% 
+  ggplot(aes(x = as.numeric(year), y = articles)) +
+  # geom_bar(stat = "identity") +
+  geom_point() +
+  geom_smooth()
+```
+
+And conjunctions
+
+```{r}
+dfm_weight %>% as.data.frame() %>% add_rownames() %>% 
+  rename(text = rowname) %>% 
+  mutate(year = substr(text, 1, 4)) %>% 
+  ggplot(aes(x = as.numeric(year), y = conjunctions)) +
+  geom_point() +
+  geom_smooth()
+```
+
+The distribution of normalised articles is relatively normal across the years, but conjunctions have gradually increased over time.
+
+## Heirarchical dictionaries
+
+We can also create heirarchical dictionaries easily enough.
+
+```{r}
+heir_dict <- list(articles = list(definite = "the",
+                                  indefinite = c("a", "an")),
+                  conjunctions = list(coordinating = c("and", "but", "or", "nor", "for", "yet", "so"),
+                                      subordinating = c("although", "because", "since", "unless")))
+```
+
+```{r}
+df_heir <- dfm(inaugCorpus, dictionary = heir_dict)
+```
+
+We can then compare this approach with the previous method.
+
+```{r}
+articles_heir <- selectFeatures(df_heir, "*articles*") %>% rowSums() %>% sum()
+articles <- selectFeatures(posDfm, "*articles*") %>% rowSums() %>% sum()
+
+conj_heir <- selectFeatures(df_heir, "*conj*") %>% rowSums() %>% sum()
+conj <- selectFeatures(posDfm, "*conj*") %>% rowSums() %>% sum()
+```
+
+The number of articles found in the corpus from the flat dictionary was `r articles`. The number from the heirarchical dictionary was `r articles_heir`.
+
+For conjunctions the numbers were `r conj` and `r conj_heir` respectively.
