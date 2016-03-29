@@ -123,5 +123,5 @@ profile_scatter <- function(field1, field2, x = "", y = "") {
 }  
 
 med_v_proc <- profile_scatter("num_medications", "num_procedures", x = "Medications", y = "Procedures")
-time_v_pred <- profile_scatter("time_in_hospital", "pred", x = "Time in hospital", y = "Probability readmission")
+time_v_pred <- profile_scatter("time_in_hospital", "pred", x = "Time in hospital", y = "Probability readmission") + geom_hline(yintercept = .5, colour = "grey")
 lab_v_proc <- profile_scatter("num_lab_procedures", "num_procedures", x = "Lab procedures", y = "Procedures")
