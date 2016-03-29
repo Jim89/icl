@@ -56,6 +56,7 @@ tidy_fit <- tidy(q1a_fit)
 
 # Step 3 - visualise rel between time and readmission ---------------------
 readmission_vs_time <- data %>% 
+                        filter(race != "Unknown") %>% 
                         ggplot(aes(x = time_in_hospital, 
                                    y = pred, 
                                    colour = race)) +
@@ -67,7 +68,9 @@ readmission_vs_time <- data %>%
                         scale_color_brewer(type = "qual", palette = "Dark2") +
                         xlab("Time in Hospital [days]") +
                         ylab("Predicted probability of readmission") +
-                        theme_jim
+                        theme_jim +
+                        geom_hline(yintercept = 0.5, colour = "grey",
+                                   linetype = "dashed")
 
 
 # Step 4 - Patient profile differences ------------------------------------
