@@ -25,6 +25,7 @@ library(dplyr)
 library(broom)
 library(ggplot2)
 library(knitr)
+library(randomForest)
 
 # Setup theme object for easier plotting
 theme_jim <- theme(legend.position = "none",
@@ -52,11 +53,11 @@ data <- read_csv("./data/asg_readmission_data.csv") %>%
                              ifelse(race == "AfricanAmerican", "Black", race)),
                race = as.factor(race),
                gender = as.factor(gender),
-               age_clean = ifelse(age %in% c("[0-10]", "[10-20]", "[20-30]"), "Young (0-30)",
+               age_clean = ifelse(age %in% c("[0-10]", "[10-20]", "[20-30]"), "Young",
                                   ifelse(age %in% c("[30-40]", "[40-50]", "[50-60]"),
-                                         "Middle-Aged (30-60)", "Old (60+)")),
+                                         "Middle-Aged", "Old")),
                age_clean = factor(age_clean, 
-                                  levels = c("Young (0-30)", "Middle-Aged (30-60)", "Old (60+)")),
+                                  levels = c("Young", "Middle-Aged", "Old")),
                readmission = as.factor(readmission)) %>% 
 
         select(-age)
@@ -99,7 +100,7 @@ In a standard logistic regression, the probability of an event, $X$, occurring i
 p(X) = \dfrac{e^{\beta_0 + \beta_1 X + \text{...} + \beta_p X_p}}{1+e^{\beta_0 + \beta_1 X + \text{...} + \beta_p + X_p}}
 \end{equation}
 
-As such, after converting the probablity to _odds_ and linearising the model by taking logarithms, the final model can be presented as \eqref{eq:logit} (expanded from James, Witten, Hastie, Tibshirani, 2013).
+As such, after converting the probability to _odds_ and linearising the model by taking logarithms, the final model can be presented as \eqref{eq:logit} (expanded from James, Witten, Hastie, Tibshirani, 2013).
 
 \begin{equation} \label{eq:logit}
 \log\Big(\dfrac{p(X)}{1-p(X)}\Big) = \beta_0 + \beta_1\text{lab proc} + \beta_2\text{non-lab proc} + \beta_3\text{medications} + ... 
@@ -116,34 +117,230 @@ kable(tidy_fit %>% select(-statistic), col.names = c("Term", "Estimate", "Std. E
       caption = "Regression coefficients, standard errors and p-values for logistic regression of readmission on patient characterisitics. Note that for race the reference level is Asian, for gender it is female, and for age it is young")
 ```
 
-It is noted that all features except for unknown race and unknown gender have statistically significant results. Having more laboratory procedures increased the log-odds \eqref{eq:logit} of being readmitted to hospital, but having non-lab. procedures (e.g. surgeries) actually decreased the log-odds of readmission. Taking a larger number of medicines and spending more time in hosptial both increase the log-odds of readmission. In terms of race, all races are more likely to be readmitted than Asians. Moreover, older people are more likely to be readmitted than the young, with increased log-odds of readmission for both middle-aged and old people, relative to young.
+It is noted that all features except for unknown race and unknown gender have statistically significant results. Having more laboratory procedures increased the log-odds \eqref{eq:logit} of being readmitted to hospital, but having non-lab. procedures (e.g. surgeries) actually decreased the log-odds of readmission. Taking a larger number of medicines and spending more time in hospital both increase the log-odds of readmission. In terms of race, all races are more likely to be readmitted than Asians. Moreover, older people are more likely to be readmitted than the young, with increased log-odds of readmission for both middle-aged and old people, relative to young.
+
+\pagebreak
 
 # Section Two - Visualising the effect of hospital duration on readmission
 
 Using the results of the model from section one, a visualisation exploring the relationship between the time spent in hospital and the probability of readmission has been produced. This visualisation is presented in figure one. The plot utilises small multiples to present the relationship for each combination of race and age present in the data. Please note that the relationship for patients with an "Unknown" race is not shown as this was not found to have a statistically significant effect on the probability of readmission.
 
-```{r prob_time_plot, echo = FALSE, fig.height=6, fig.width=6.5, fig.caption="Probablity of readmission vs time spent in hospital."}
+```{r prob_time_plot, echo = FALSE, fig.cap="Probablity of readmission vs time spent in hospital", fig.height=7, fig.width=8}
 data %>% 
-                        filter(race != "Unknown") %>% 
-                        ggplot(aes(x = time_in_hospital, 
-                                   y = pred, 
-                                   colour = race)) +
-                        geom_point(alpha = 0.25) +
-                        facet_grid(age_clean ~ race) +
-                        geom_smooth(method = "glm") +
-                        scale_x_continuous(breaks = seq(0, 15, 5), 
-                                           limits = c(0, 15)) +
-                        scale_color_brewer(type = "qual", palette = "Dark2") +
-                        xlab("Time in Hospital [days]") +
-                        ylab("Predicted probability of readmission") +
-                        theme_jim +
-                        geom_hline(yintercept = 0.5, colour = "grey",
-                                   linetype = "dashed")
+  filter(race != "Unknown") %>% 
+  ggplot(aes(x = time_in_hospital, 
+             y = pred, 
+             colour = race)) +
+  geom_point(alpha = 0.25) +
+  facet_grid(age_clean ~ race) +
+  geom_smooth(method = "glm") +
+  scale_x_continuous(breaks = seq(0, 15, 5), 
+                     limits = c(0, 15)) +
+  scale_color_brewer(type = "qual", palette = "Dark2") +
+  xlab("Time in Hospital [days]") +
+  ylab("Predicted probability of readmission") +
+  theme_jim +
+  geom_hline(yintercept = 0.5, colour = "grey",
+             linetype = "dashed")
 
 ```
 
+Each point in the plot represents a patient in the data. Transparency has been used such that darker regions/points indicate more patients at that combination of probability/time in hospital. The horizontal, grey, dashed line in each plot lies at a probability of 0.5. I.e. lying above the line indicates that the patient is more-likely-than-not to be readmitted to hospital. 
 
-***
+For all races and age, the positive relationship between time in hospital and probability of readmission is observed: the longer a patient spends in hospital, the more likely they are to be readmitted. 
+
+Differences between the patient age/race groups are also readily identified. The increased likelihood of black and Caucasian patients to be readmitted is readily apparent, with many data points lying above the 0.5 line. Within each race, it is also easy to see that older patients are much more likely to be readmitted with a much larger proportion of patients lying above the 0.5 cut-off line.
+
+\pagebreak
+
+# Section Three - Patient differences based on time-to-readmission
+
+In this final section, potential differences in patient characteristics between those who were readmitted within and after 30 days are explored visually.
+
+```{r data_clean, echo = FALSE, message=FALSE}
+data_clean <- data %>% 
+              mutate(readmit = ifelse(readmission_lessthan30 == 1, "Readmitted < 30 days",
+                                ifelse(readmission_morethan30 == 1, "Readmitted > 30 days",
+                                        "Not readmitted"))) %>% 
+              filter(readmit != "Not readmitted") %>% 
+              mutate(readmit = as.factor(readmit))
+
+# Barplots
+profile_bar <- function(field, x = ""){
+  data_clean %>% 
+    group_by_("readmit", field) %>% 
+    summarise(patients = n()) %>% 
+    group_by(readmit) %>% 
+    mutate(prop_patients = patients/sum(patients)) %>% 
+    ggplot(aes_string(x = field, y = "prop_patients")) +
+    geom_bar(stat = "identity", aes(fill = readmit)) +
+    facet_grid(. ~ readmit) +
+    scale_y_continuous(labels = scales::percent)+
+    scale_fill_brewer(type = "qual", palette = "Dark2") +
+    xlab(x) +
+    ylab("Percentage of patients") +
+    theme_jim
+}  
+
+profile_scatter <- function(field1, field2, x = "", y = "") {
+          data_clean %>% 
+            ggplot(aes_string(x = field1, y = field2)) +
+            geom_point(aes(colour = readmit)) +
+            geom_smooth(aes(colour = readmit)) +
+            facet_grid(. ~ readmit) +
+            xlab(x) +
+            ylab(y) +
+            scale_colour_brewer(type = "qual", palette = "Dark2") +
+            theme_jim
+}  
+```
+
+There was a large difference in the total number of patients present in each group (see table) as as such any charts which depict patient numbers have been scaled to be the percentage of patients, rather than absolute number, in order to make the two groups comparable. Each chart below presents a different aspect of the "patient profile".
+
+```{r show_group_split, echo = FALSE}
+table(data_clean$readmit) %>% as.data.frame() %>% 
+kable(col.names = c("Readmitted", "Patients"),
+      caption = "Total number of patients readmitted within and after 30 days")
+```
+
+```{r make_plots, echo = FALSE}
+# Single-field distributions
+ages <- profile_bar("age_clean", "")
+races <- profile_bar("race", "") + theme(axis.text.x = element_text(angle = -90))
+gender <- profile_bar("gender", "")
+labs <- profile_bar("num_lab_procedures", x = "Number of laboratory procedures")
+proc <- profile_bar("num_procedures", x = "Number of procedures")
+meds <- profile_bar("num_medications", x = "Number of medications")
+time <- profile_bar("time_in_hospital", x = "Time in hospital")
+
+# Pair-wise field comparisons
+med_v_proc <- profile_scatter("num_medications", "num_procedures", x = "Medications", y = "Procedures")
+med_v_proc_lab <- profile_scatter("num_medications", "num_lab_procedures", x = "Medications", y = "Lab Procedures")
+lab_v_proc <- profile_scatter("num_lab_procedures", "num_procedures", x = "Lab procedures", y = "Procedures")
+```
+
+### Single-view comparisions
+
+In this section there are a number of figures that present a "single-view" comparison of patients readmitted within vs. after 30 days. The single-view comparison is simply a side-by-side view of the distribution of patients within each group for a range of characteristics in the patient profile. The characteristics presented are:
+
+* age;
+* race;
+* gender;
+* number of laboratory procedures;
+* number of non-lab. procedures;
+* number of medications taken; and
+* time spent in hospital.
+
+As seen in figures two to eight, there are no substantial differences in patient profile for any of these single-view comparisons. I.e., there may be some other, as yet unobserved factor, which would enable a different profile to be established for the two groups of patients.
+
+```{r show_age, echo = FALSE, fig.height=4, fig.width=8, fig.cap="Percentage of patients in each age bracket."}
+ages
+```
+
+```{r show_race, echo = FALSE, fig.height=4, fig.width=8, fig.cap="Percentage of patients in each race." }
+races
+```
+
+```{r show_gender, echo = FALSE, fig.height=4, fig.width=8, fig.cap="Percentage of patients in each gender." }
+gender
+```
+
+```{r show_lab, echo = FALSE, fig.height=4, fig.width=8, fig.cap="Percentage of patients for each number of laboratory procedures" }
+labs
+```
+
+```{r show_non_lab, echo = FALSE, fig.height=4, fig.width=8, fig.cap="Percentage of patients for each number of non-laboratory procedures." }
+proc
+```
+
+```{r show_meid, echo = FALSE, fig.height=4, fig.width=8, fig.cap="Percentage of patients for each number of medications taken." }
+meds
+```
+
+```{r show_time, echo = FALSE, fig.height=4, fig.width=8, fig.cap="Percentage of patients for each number of days spent in hospital." }
+time
+```
+
+\pagebreak
+
+### Pair-wise comparisions
+
+In this section there are a number of figures that present a "pair-wise" comparison of patients readmitted within vs. after 30 days. The pair-wise comparison is view of how certain fields are related to each other for patients within each group. The comparisons presented are:
+
+* number of medications vs. laboratory procedures;
+* number of medications vs. non-laboratory procedures;
+* number of laboratory procedures vs. non-laboratory procedures;
+
+As with the single-view comparisons, figures nine to eleven show that there are no substantial differences in the relationship between these pairs of features across the two groups of patients. 
+
+```{r show_medvproc, echo = FALSE, fig.height=4, fig.width=8, fig.cap="Relationshiop between number of medications taken and general procedures."}
+med_v_proc
+```
+
+```{r show_medvproclab, echo = FALSE, fig.height=4, fig.width=8, fig.cap="Relationshiop between number of medications taken and lab. procedures." }
+med_v_proc_lab
+```
+
+```{r show_labvprov, echo = FALSE, fig.height=4, fig.width=8, fig.cap="Relationshiop between number of lab procedures and general procedures." }
+lab_v_proc
+```
+
+\pagebreak
+
+## Examining differences analytically
+
+As there were no distinct differences observed in the patient profiles displayed above, two analytical methods were utilised to attempt to understand differences in the two groups. 
+
+### k-Means clustering
+
+A $k$-means clustering algorithm was applied to determine if the patient characteristics could be used to cluster the data into two groups. The clusters were then compared with the "true" labels (i.e. the readmission time). The results are presented in the table below. 
+
+```{r data_model, echo = FALSE}
+data_model <- data_clean %>% 
+              select(-1, -2, -3, -readmission) %>% 
+              mutate(race = as.numeric(race),
+                     gender = as.numeric(gender),
+                     age_clean = as.numeric(age_clean))
+```
+
+```{r kmeans, echo = FALSE}
+k_clust <- kmeans(data_model %>% select(-readmit), 2, iter.max = 100)
+conf <- table(k_clust$cluster, data_model$readmit)
+rownames(conf) <- c("Cluster 1", "Cluster 2")
+accuracy <- conf %>% diag %>% sum / conf %>% sum
+conf %>% kable(caption = "Confusion matrix for k-means clustering results with group lablels")
+```
+
+As seen from the table, the results from the $k$-means algorithm are not particularly brilliant, with an overlap between the found cluster and true labels of just `r scales::percent(round(accuracy, 2))`. Given the imbalance in the number of patients in each group this low value particularly highlights the lack of an easy and clear separation in the patient profiles for the two groups of patients.
+
+\pagebreak
+
+### Random Forest
+
+Treating the problem as a classification task, a random forest algorithm was applied to classify the data in to the two groups. Importance measures for performing the classification were captured for each aspect of the patient profile and are displayed in figure 12.
+
+```{r rf, echo = FALSE, message = FALSE}
+rf <- randomForest(readmit ~ ., data = data_model %>% select(-pred), importance = TRUE, ntree = 100)
+```
+
+The algorithm was applied and generated an estimated out-of-sample accuracy of `r scales::percent(sum(diag(rf$confusion))/sum(rf$confusion))`. This seems reasonably high, but further consideration of the data reveals that it is not: Of those readmitted, just `r scales::percent((table(data_clean$readmit)/nrow(data_clean) %>% as.numeric())[1])` were readmitted within 30 days. This means that the estimated accuracy obtained from the random forest algorithm could be just as easily obtained by _always_ predicting that the patient was readmitted after 30 days. Indeed on inspection of the confusion matrix generated from the algorithm (see below), it appears that this is exactly what the algorithm ends up doing!
+
+```{r rf_conf_mat, echo = FALSE}
+rf$confusion %>% kable(caption = "Confusion matrix for random forest predictions with true group labels.")
+```
+
+```{r var_imp, echo = FALSE, fig.height = 5, fig.width=8, fig.cap="Mean decrease in accuracy for removal of each feature used in the random forest algorithm"}
+colnames(rf$importance)[3] <- "Mean Decrease in Accuracy (%)"
+varImpPlot(rf, type = 1, main = "", cex = 1, color = "black", pch = 15)
+```
+
+From the variable importance plot in figure 12 it can be seen that the number of medications and time in hospital are the most important features that the random forest algorithm finds useful in classifying a patient in to each readmission group. This indicates that these are likely the biggest features with the largest differences in terms of patient profile across the two groups. 
+
+## Discussion of differences
+
+After reviewing the earlier visual representations, as well as the use of two distinct analytical methods, it does not appear that there are significant differences in the patient profiles for the patients who are readmitted in less than 30 days versus those readmitted in more than 30 days. It would be interesting to see, where the data collected, if other features (e.g. type of illness) could be used to better distinguish between patients in each of these two groups.
+
+\pagebreak
 
 # References
 
