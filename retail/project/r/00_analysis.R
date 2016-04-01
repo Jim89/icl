@@ -30,6 +30,7 @@ source("./project/r/files/000_clean_and_filter.R")
 source("./project/r/files/001_light_vs_heavy.R")
 source("./project/r/files/002_clean_brands.R")
 source("./project/r/files/004_create_id.R")
+source("./project/r/files/010_coffee_long.R")
 
 # Step 2 - switching and cooccurrence -------------------------------------
 
@@ -40,3 +41,8 @@ source("./project/r/files/402_switching_matrices.R")
 # Step 3 - Modelling traffic ----------------------------------------------
 
 source("./project/r/files/102_traffic_models.R")
+
+
+# Step 4 - Modelling shop choice ------------------------------------------
+
+
