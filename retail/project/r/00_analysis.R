@@ -1,5 +1,6 @@
 # Step 0 - prep env -------------------------------------------------------
 # Load packages
+library(countreg)
 library(dplyr)
 library(tidyr)
 library(magrittr)
@@ -26,3 +27,5 @@ theme_jim <-  theme(legend.position = "bottom",
 # Step 1 - get and clean --------------------------------------------------
 
 source("./project/r/files/000_clean_and_filter.R")
+source("./project/r/files/001_light_vs_heavy.R")
+source("./project/r/files/002_clean_brands.R")
