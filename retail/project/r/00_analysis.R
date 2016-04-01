@@ -4,6 +4,7 @@ library(countreg)
 library(dplyr)
 library(tidyr)
 library(magrittr)
+library(mlogit)
 library(ggplot2)
 library(GGally)
 
