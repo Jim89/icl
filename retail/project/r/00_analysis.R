@@ -39,11 +39,13 @@ source("./project/r/files/401_cooccurence_matrices.R")
 source("./project/r/files/402_switching_matrices.R")
 
 
-# Step 3 - Modelling traffic ----------------------------------------------
+# Step 3 - Modelling shop choice ------------------------------------------
+
+source("./project/r/files/101_choice_models.R")
+
+# Step 4 - Modelling traffic ----------------------------------------------
 
 source("./project/r/files/102_traffic_models.R")
 
-
-# Step 4 - Modelling shop choice ------------------------------------------
 
 
