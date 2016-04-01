@@ -29,7 +29,7 @@ theme_jim <-  theme(legend.position = "bottom",
 source("./project/r/files/000_clean_and_filter.R")
 source("./project/r/files/001_light_vs_heavy.R")
 source("./project/r/files/002_clean_brands.R")
-
+source("./project/r/files/004_create_id.R")
 
 # Step 2 - switching and cooccurrence -------------------------------------
 
