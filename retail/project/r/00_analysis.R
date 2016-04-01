@@ -29,3 +29,14 @@ theme_jim <-  theme(legend.position = "bottom",
 source("./project/r/files/000_clean_and_filter.R")
 source("./project/r/files/001_light_vs_heavy.R")
 source("./project/r/files/002_clean_brands.R")
+
+
+# Step 2 - switching and cooccurrence -------------------------------------
+
+source("./project/r/files/401_cooccurence_matrices.R")
+source("./project/r/files/402_switching_matrices.R")
+
+
+# Step 3 - Modelling traffic ----------------------------------------------
+
+source("./project/r/files/102_traffic_models.R")
