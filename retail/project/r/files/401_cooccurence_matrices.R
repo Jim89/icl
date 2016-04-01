@@ -21,6 +21,9 @@ stores_per_week_heavy <- find_shops("heavy")
 cooccurence_light <- table(stores_per_week_light$shop_desc_clean, stores_per_week_light$prev_shop)
 cooccurence_heavy <- table(stores_per_week_heavy$shop_desc_clean, stores_per_week_heavy$prev_shop)
 
+# Step 3 - clean up -------------------------------------------------------
 
+rm(stores_per_week_light, stores_per_week_heavy)
+gc()
 
 
