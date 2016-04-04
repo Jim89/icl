@@ -32,9 +32,9 @@ source("./project/r/functions/ggally_cor.R")
 
 # Step 0 - get and clean --------------------------------------------------
 source("./project/r/files/000_clean_and_filter.R")
-source("./project/r/files/001_light_vs_heavy.R")
 source("./project/r/files/002_clean_brands.R")
 source("./project/r/files/004_create_id.R")
+source("./project/r/files/001_light_vs_heavy.R")
 source("./project/r/files/009_coffee_wide.R")
 source("./project/r/files/010_coffee_long.R")
 
