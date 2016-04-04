@@ -1,7 +1,8 @@
 # Step 0 - prep env ------------------------------------------------------------
+# Function to compute switching matrix
 switching_mat <- function(custs) {
   data <- coffee_clean %>% 
-    filter(cust_type == custs) %>% 
+    filter(cust_type %in% custs) %>% 
     arrange(house, relweek, visit_id) %>% 
     select(house, relweek, visit_id, shop_desc_clean) %>% 
     distinct() %>% 
@@ -16,7 +17,26 @@ switching_mat <- function(custs) {
   return(switching_mat)
 }  
 
-# Step 1 - Generate switching matrices -----------------------------------------
-switch_heavy <- switching_mat("heavy")
-switch_light <- switching_mat("light")
+# Function to approximate repeat-purchase loyalties from switching mat
+get_loyalties <- function(mat) {
+  rep <- diag(mat)
+  current <- rowSums(mat)
+  mat2 <- mat
+  diag(mat2) <- 0
+  old <- colSums(mat2)
+  
+  loy <- rep / (current + old)
+  
+  return(loy)
+}
 
+# Step 1 - Generate switching matrices -----------------------------------------
+switch_mat <- switching_mat(c("heavy", "light"))
+
+# Compute repeat-purchase loyalty
+loyalties <- get_loyalties(switch_mat)
+
+# Step 2 - clean up -------------------------------------------------------
+
+rm(switching_mat, get_loyalties)
+gc(verbose = FALSE)
