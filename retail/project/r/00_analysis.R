@@ -1,4 +1,4 @@
-# Step 0 - prep env -------------------------------------------------------
+# prep env ---------------------------------------------------------------------
 # Load packages
 library(countreg)
 library(dplyr)
@@ -26,8 +26,7 @@ theme_jim <-  theme(legend.position = "bottom",
                     panel.background = element_rect(fill = "white", colour = "lightgrey"),
                     panel.border = element_rect(colour = "black", fill = NA))
 
-# Step 1 - get and clean --------------------------------------------------
-
+# Step 0 - get and clean --------------------------------------------------
 source("./project/r/files/000_clean_and_filter.R")
 source("./project/r/files/001_light_vs_heavy.R")
 source("./project/r/files/002_clean_brands.R")
@@ -35,19 +34,21 @@ source("./project/r/files/004_create_id.R")
 source("./project/r/files/009_coffee_wide.R")
 source("./project/r/files/010_coffee_long.R")
 
-# Step 2 - overall modelling ----------------------------------------------
-# elasticity
+# Step 1 - elasticity modelling ----------------------------------------------
 source("./project/r/files/100_elasticity_models.R")
-source("./project/r/files/401_cooccurence_matrices.R")
-source("./project/r/files/402_switching_matrices.R")
+source("./project/r/files/101_clout_and_vuln_stats.R")
+
+
+# Step 2 - switching matrices ---------------------------------------------
+source("./project/r/files/201_cooccurence_matrices.R")
+source("./project/r/files/202_switching_matrices.R")
 
 
 # Step 3 - user type level modelling --------------------------------------
 # shop choice
-source("./project/r/files/101_choice_models.R")
-
+source("./project/r/files/301_choice_models.R")
 # shop traffic
-source("./project/r/files/102_traffic_models.R")
+source("./project/r/files/302_traffic_models.R")
 
 
 
