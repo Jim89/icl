@@ -1,3 +1,6 @@
+# Source function for GGally pairs plot, helpfully adapted from 
+# https://github.com/tonytonov/ggally/blob/master/R/gg-plots.r
+
 ggally_cor <- function(data, mapping, corAlignPercent = 0.6, ...){
   
   # xVar <- data[,as.character(mapping$x)]
