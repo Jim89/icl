@@ -17,7 +17,7 @@ fit <-  coffee_clean %>%
         mutate(shop = as.factor(shop_desc_clean),
                brand = as.factor(brand_clean)) %>% 
         zerotrunc(visits ~ shop + brand + avg_price + promo_price + promo_units + min_price + max_price,
-                  data = ., dist = "poisson")
+                  data = ., dist = "negbin")
 }
 
 # Step 1 - fit models -----------------------------------------------------
