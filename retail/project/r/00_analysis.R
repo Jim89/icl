@@ -26,6 +26,10 @@ theme_jim <-  theme(legend.position = "bottom",
                     panel.background = element_rect(fill = "white", colour = "lightgrey"),
                     panel.border = element_rect(colour = "black", fill = NA))
 
+# source extra functions
+source("./project/r/functions/toproper.R")
+source("./project/r/functions/ggally_cor.R")
+
 # Step 0 - get and clean --------------------------------------------------
 source("./project/r/files/000_clean_and_filter.R")
 source("./project/r/files/001_light_vs_heavy.R")
@@ -42,6 +46,7 @@ source("./project/r/files/101_clout_and_vuln_stats.R")
 # Step 2 - switching matrices ---------------------------------------------
 source("./project/r/files/201_cooccurence_matrices.R")
 source("./project/r/files/202_switching_matrices.R")
+source("./project/r/files/203_market_share_correlation.R")
 
 
 # Step 3 - user type level modelling --------------------------------------
@@ -50,6 +55,9 @@ source("./project/r/files/301_choice_models.R")
 # shop traffic
 source("./project/r/files/302_traffic_models.R")
 
+# Step 5 - Prepare further visualisations ---------------------------------
+
+source("./project/r/files/501_vis_weekly_share_to_prop_promo.R")
 
 
 
