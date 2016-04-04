@@ -96,7 +96,6 @@ avg_prices_total <- coffee_clean %>%
 trans_choice_to_price <- trans_store_choice %>% 
                           left_join(avg_prices_daily) %>% 
                           left_join(avg_prices_total) %>% 
-                          rowwise() %>% 
                           mutate(price = coalesce(price, avg_price),
                                  promo_price = coalesce(promo_price, avg_promo_p),
                                  promo_units = coalesce(promo_units, avg_promo_u)) %>% 
@@ -167,12 +166,10 @@ avg_loyalty <- loyalties %>%
 
 coffee_long <- coffee_long %>% 
                 left_join(avg_loyalty) %>% 
-                rowwise() %>% 
                 mutate(loyalty = coalesce(loyalty, avg)) %>% 
                 select(-avg)
 
 # Step 3 - clean up -------------------------------------------------------
 rm(trans_store_choice, avg_prices_daily, avg_prices_total, trans_level, 
-   last_choice, trans_choice_to_price, check_class, check_length, check_type,
-   coalesce, replace_with, loyalties, avg_loyalty)
+   last_choice, trans_choice_to_price, loyalties, avg_loyalty)
 gc()
