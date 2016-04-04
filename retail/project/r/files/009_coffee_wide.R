@@ -17,7 +17,7 @@ widen <- function(data, cust_status = 0) {
     select(-promo_sales_price, -promo_sales_units) %>% 
     gather(variable, value, -(relweek:shop_desc_clean)) %>%
     mutate(shop_desc_clean = ifelse(shop_desc_clean == "aldi & lidl", 
-                                    "aldi&lidl", 
+                                    "aldi", 
                                     shop_desc_clean)) %>% 
     unite(temp, shop_desc_clean, variable, sep = "_") %>% 
     spread(temp, value) %>% 
