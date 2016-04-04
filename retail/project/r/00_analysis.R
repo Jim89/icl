@@ -7,6 +7,7 @@ library(magrittr)
 library(mlogit)
 library(ggplot2)
 library(GGally)
+library(broom)
 
 # Set up theme object
 theme_jim <-  theme(legend.position = "bottom",
@@ -31,21 +32,24 @@ source("./project/r/files/000_clean_and_filter.R")
 source("./project/r/files/001_light_vs_heavy.R")
 source("./project/r/files/002_clean_brands.R")
 source("./project/r/files/004_create_id.R")
+source("./project/r/files/009_coffee_wide.R")
 source("./project/r/files/010_coffee_long.R")
 
-# Step 2 - switching and cooccurrence -------------------------------------
-
+# Step 2 - overall modelling ----------------------------------------------
+# elasticity
+source("./project/r/files/100_elasticity_models.R")
 source("./project/r/files/401_cooccurence_matrices.R")
 source("./project/r/files/402_switching_matrices.R")
 
 
-# Step 3 - Modelling shop choice ------------------------------------------
-
+# Step 3 - user type level modelling --------------------------------------
+# shop choice
 source("./project/r/files/101_choice_models.R")
 
-# Step 4 - Modelling traffic ----------------------------------------------
-
+# shop traffic
 source("./project/r/files/102_traffic_models.R")
+
+
 
 
 
