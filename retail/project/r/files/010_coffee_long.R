@@ -149,5 +149,6 @@ coffee_long$choice[is.na(coffee_long$choice)] <- 0
 
 # Step 3 - clean up -------------------------------------------------------
 rm(trans_store_choice, avg_prices_daily, avg_prices_total, trans_level, 
-   last_choice, trans_choice_to_price)
+   last_choice, trans_choice_to_price, check_class, check_length, check_type,
+   coalesce, replace_with)
 gc()
