@@ -20,3 +20,9 @@ return(choice_fit)
 
 choice_heavy <- fit_choice_model("heavy")
 choice_light <- fit_choice_model("light")
+
+
+# Step 2 - clean up -------------------------------------------------------
+
+rm(fit_choice_model)
+gc(verbose = TRUE)
