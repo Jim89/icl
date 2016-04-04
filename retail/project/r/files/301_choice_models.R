@@ -10,7 +10,7 @@ choice_data <- mlogit.data(coffee_long %>% filter(cust_type == custs),
                            chid.var = "transaction_id",
                            id.var = "house")
 
-choice_fit <- mlogit(choice ~ price + promo_price + promo_units, data = choice_data)
+choice_fit <- mlogit(choice ~ price + promo_price + promo_units + loyalty, data = choice_data)
 
 return(choice_fit)
 
@@ -25,4 +25,4 @@ choice_light <- fit_choice_model("light")
 # Step 2 - clean up -------------------------------------------------------
 
 rm(fit_choice_model)
-gc(verbose = TRUE)
+gc(verbose = FALSE)

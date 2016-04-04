@@ -116,12 +116,22 @@ last_choice <- coffee_clean %>%
                 group_by(house) %>% 
                 mutate(prev_shop = lag(shop_desc_clean))
 
-
+# Set up loyalty
+loyalties <- coffee_clean %>% 
+              filter(relweek <= 230) %>% 
+              select(house, cust_type, visit_id, shop_desc_clean) %>% 
+              distinct() %>% 
+              group_by(house, cust_type, shop_desc_clean) %>% 
+              summarise(visits = n()) %>% 
+              group_by(house, cust_type) %>% 
+              mutate(shop_loyalty = visits/sum(visits)) %>% 
+              select(-visits)
 
 # Step 2 - create long format data ----------------------------------------
 coffee_long <- trans_choice_to_price %>% 
                 left_join(trans_level) %>% 
                 left_join(last_choice) %>% 
+                left_join(loyalties) %>% 
                 select(transaction_id,
                        house,
                        cust_type,
@@ -136,10 +146,12 @@ coffee_long <- trans_choice_to_price %>%
                        choice,
                        price,
                        promo_price,
-                       promo_units) %>% 
+                       promo_units,
+                       shop_loyalty) %>% 
                 rename(brand = brand_clean,
                        shop_choice = shop_desc_clean,
-                       prev_choice = prev_shop) %>% 
+                       prev_choice = prev_shop,
+                       loyalty = shop_loyalty) %>% 
                 mutate(brand = as.factor(brand),
                        shop_choice = as.factor(shop_choice),
                        prev_choice = as.factor(prev_choice))
@@ -147,8 +159,20 @@ coffee_long <- trans_choice_to_price %>%
 # Clean up choice
 coffee_long$choice[is.na(coffee_long$choice)] <- 0
 
+# Clean up loyalty
+avg_loyalty <- loyalties %>% 
+                group_by(cust_type, shop_desc_clean) %>% 
+                summarise(avg = mean(shop_loyalty)) %>% 
+                rename(shop = shop_desc_clean)
+
+coffee_long <- coffee_long %>% 
+                left_join(avg_loyalty) %>% 
+                rowwise() %>% 
+                mutate(loyalty = coalesce(loyalty, avg)) %>% 
+                select(-avg)
+
 # Step 3 - clean up -------------------------------------------------------
 rm(trans_store_choice, avg_prices_daily, avg_prices_total, trans_level, 
    last_choice, trans_choice_to_price, check_class, check_length, check_type,
-   coalesce, replace_with)
+   coalesce, replace_with, loyalties, avg_loyalty)
 gc()
