@@ -18,7 +18,7 @@ weekly_share_to_prop_promo <- coffee_clean %>%
   group_by(shop_desc_clean) %>% 
   mutate(relweek = row_number()) %>% 
   ggplot(aes(x = relweek, y = share)) +
-  geom_point(aes(colour = shop_desc_clean, size = prop_promo)) +
+  geom_point(aes(colour = shop_desc_clean, size = 100*prop_promo)) +
   geom_line(aes(colour = shop_desc_clean), size = 1.25) +
   facet_grid(shop_desc_clean ~ ., scales = "free_y") +
   scale_x_continuous(breaks = seq(0, 55, 5)) +
@@ -26,7 +26,7 @@ weekly_share_to_prop_promo <- coffee_clean %>%
   scale_colour_brewer(palette = "Dark2", type = "qual") +
   xlab("Week") +
   ylab("Market share (note different scales in each facet)") +
-  guides(size = guide_legend(title = "Proportion of promotional sales"),
+  guides(size = guide_legend(title = "Proportion of promotional sales (%)"),
          colour = "none") +
   theme_jim
   
