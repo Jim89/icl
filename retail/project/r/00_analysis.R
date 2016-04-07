@@ -58,8 +58,8 @@ source("./project/r/files/302_traffic_models.R")
 # Step 5 - Prepare further visualisations ---------------------------------
 
 source("./project/r/files/501_vis_weekly_share_to_prop_promo.R")
-source("./project/r/files/502_clout_and_vuln_map.R")
-source("./project/r/files/503_repeat_purchase_rate.R")
+source("./project/r/files/502_vis_clout_and_vuln_map.R")
+source("./project/r/files/503_vis_repeat_purchase_rate.R")
 source("./project/r/files/504_vis_weekly_price_to_share.R")
 source("./project/r/files/505_vis_sales_by_week.R")
 source("./project/r/files/506_vis_share_by_week.R")
