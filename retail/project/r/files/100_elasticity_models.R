@@ -136,7 +136,7 @@ elasticities <- elasticities * signifs
 return(elasticities)
 }
 
-elasticities <- get_elasticities(coffee_wide, custs = c("heavy", "light"))
+elasticities <- get_elasticities(coffee_wide, custs = c("heavy", "light", "medium"))
 
 # Step 5 - Clean up and garbage collect ----------------------------------------
 objects <- ls()
