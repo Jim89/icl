@@ -1,0 +1,164 @@
+---
+title: "Retail Analytics Individual Assignment Report"
+author: "Jim Leach"
+date: "7 April 2016"
+output:
+  word_document: default
+  pdf_document:
+    fig_caption: yes
+---
+
+```{r source, echo = FALSE, message = FALSE, warning = FALSE}
+# Load packages
+library(dplyr)
+library(tidyr)
+library(magrittr)
+library(mlogit)
+library(ggplot2)
+library(GGally)
+library(broom)
+library(knitr)
+
+# Set up theme object
+theme_jim <-  theme(legend.position = "bottom",
+                    axis.text.y = element_text(size = 16, colour = "black"),
+                    axis.text.x = element_text(size = 16, colour = "black"),
+                    legend.text = element_text(size = 16),
+                    legend.title = element_text(size = 16),
+                    title = element_text(size = 16),
+                    strip.text = element_text(size = 16, colour = "black"),
+                    strip.background = element_rect(fill = "white"),
+                    panel.grid.minor.x = element_blank(),
+                    panel.grid.major.x = element_line(colour = "grey", linetype = "dotted"),
+                    panel.grid.minor.y = element_line(colour = "lightgrey", linetype = "dotted"),
+                    panel.grid.major.y = element_line(colour = "grey", linetype = "dotted"),
+                    panel.margin.y = unit(0.1, units = "in"),
+                    panel.background = element_rect(fill = "white", colour = "lightgrey"),
+                    panel.border = element_rect(colour = "black", fill = NA))
+
+# source extra functions
+source("./r/functions/toproper.R")
+source("./r/functions/ggally_cor.R")
+
+# Step 0 - get and clean --------------------------------------------------
+source("./r/files/000_clean_and_filter.R")
+source("./r/files/001_clean_brands.R")
+source("./r/files/002_create_id.R")
+source("./r/files/003_light_vs_heavy.R")
+source("./r/files/009_coffee_wide.R")
+source("./r/files/010_coffee_long.R")
+
+# Step 1 - elasticity modelling ----------------------------------------------
+source("./r/files/100_elasticity_models.R")
+source("./r/files/101_clout_and_vuln_stats.R")
+
+
+# Step 2 - switching matrices ---------------------------------------------
+source("./r/files/201_cooccurence_matrices.R")
+source("./r/files/202_switching_matrices.R")
+source("./r/files/203_market_share_correlation.R")
+
+
+# Step 3 - user type level modelling --------------------------------------
+# shop choice
+source("./r/files/301_choice_models.R")
+# shop traffic
+source("./r/files/302_traffic_models.R")
+
+# Step 5 - Prepare further visualisations ---------------------------------
+
+source("./r/files/501_vis_weekly_share_to_prop_promo.R")
+source("./r/files/502_vis_clout_and_vuln_map.R")
+source("./r/files/503_vis_repeat_purchase_rate.R")
+source("./r/files/504_vis_weekly_price_to_share.R")
+source("./r/files/505_vis_sales_by_week.R")
+source("./r/files/506_vis_share_by_week.R")
+
+```
+
+# Introduction
+
+Using data from _Katar Worldpanel_ covering sales of coffee over a year at several major UK retailers, the task of this assignment was to develop a response to the question: 
+
+> "How do stores compete? If one store sees an improvement in traffic and sales, how was that store able to achieve such improvements in performance? Is it from stealing from other stores, and which competitors are likely the most affected? How would you model this data considering these findings and what suggestion would you give in terms of growing future sales?"
+
+This report presents a response to this question. Whilst the data are confidential, both the intermediate and final analytical code/results are packaged with this report, and can also be found on the online repository here: [https://github.com/Jim89/icl/tree/master/retail/project](https://github.com/Jim89/icl/tree/master/retail/project).
+
+This question has been approached in a number of ways. The following analyses have been considered and performed:
+
+* Weekly market share correlations;
+* Switching, and co-occurrence matrices;
+* Shop-level price elasticity;
+* Shop choice modelling; and
+* Shop traffic modelling.
+
+The results of these analyses allow a number of conclusions to be drawn, as well as some recommendations made. It should be noted that (as advised in the project brief) this report has been from the perspective of a shop manager at Morrisons). It should also be noted that as per the assignment instructions, the same data were used as had been for the group project. This meant that only data from the following retailers were included: Tesco, Asda, Sainsburys, Morrisons, Aldi, and Lidl. Additionally, only the following coffee types were retained: granules, freeze-dried and micro-ground.
+
+## Executive summary
+
+TODO
+
+***
+
+# Analysis
+
+### Data preparation
+
+## Approach
+
+In order to prepare the raw data for the analyses various steps were taken:
+
+Minor retailers were filtered out of the sample, and Aldi and Lidl were combined in to a single "Discounters" shop. Brand names were cleaned and grouped. Minor brands were labelled as "Other" and several minor brands falling under a major label were combined (e.g. all of Nescafe's products were labelled as "Nescafe"). This process resulted in the presence of five supermarkets, and six distinct brands (including "other") in the data. 
+
+Transaction and visit IDs were created. The former indicated each individual purchase (i.e. the unique combination of date, customer, shop and brand) wherease the latter indicated a visit (i.e. the unique combination of data, customer and shop). As such it is possible for several transactions to occur within a single visit. 
+
+Users were classified into one of three types: light, medium or heavy. This classification was performed as in the group exercise (Leach et al, 2016) using the average volume of coffee purchased per visit by the user. 
+
+The data were also transformed in to two separate formats: wide and long. The wide format aggregated sales for each shop at a daily level. For each shop, the average price of coffee on each day was calculated, along with the proportion of sales on that day which were made on a price-based promotion, and the proportion made on a unit-based promotion. The long format data aggregated data at a _transaction_ level. For each transaction, the choice of shop (from the possible five choices) made by the consumer was indicated, along with the brand that they purchased and the price of that brand at each of the shops listed. Data on the levels of promotion available at each of the shops was included, along with the loyalty of the customer of the transaction to each of the five shops. Shop loyalties were calculated based on the first 20 weeks worth of data provided. Customers that did not appear in the first 20 weeks of data (and so for who loyalties could not be calculated) were assumed to have the average shop loyalties of other customers in their segment (i.e. light, medium, or heavy).
+
+Data quality and validation results from earlier work (Leach et al, 2016) were also used, and no further quality or validity checks were made of the data. 
+
+### Market Structure
+
+In order to understand the market structure, several visualisations were created. Total and per-shop sales per week were charted, along with weekly market shares for each shop. The relationship between price and market share was plotted for each shop, as was the relationship between promotions and market share. 
+
+The correlations between weekly market shares for all shops was investigated to understand which shops might be stealing customers from others. The correlation between market share and weekly _total sales_ (across the whole market) was also investigated to understand whether, for weeks in which a particular shop's market share changed, whether that change was due to customers shopping elsewhere, or new shoppers/new sales being made in the market. 
+
+Finally, switching matrices (based on visit ID) were created for each customer segment in order to identify which shops might be seeing customers move between them. Using these results, plots were made to show the proportion of repeat purchases out of total purchases for each shop to help assess which shops had more loyal customers. Co-occurence matrices were also made at a weekly level, to identify (for customers with more than one visit in each week) which shops might be competing based on users shopping at both of them in a single week. 
+
+### Price Elasticitiy
+
+Using the _wide_ format data, own and cross-price elasticities were calculated for each shop. Calculating elasticities at an individual-segment level lead to insignificant and/or strange results, and so this was done at an aggregate level, i.e. accross all three customer segments. Clout and vulnerability statistics were also created and visualised. 
+
+### Shop Choice
+
+A simple model was created which modelled the effect of price, promotion and loyalty on a customers choice of shop. In order to account for potential unobserved differences in consumers (e.g. income, family size etc) this model was applied to each customer segment separately. 
+
+The model is limited, however, as important data such as the total spend on each trip and demographic information were not available. Moreover, there is no data for trips to the shop when coffee was _not_ purchased. As such, this choice model is inherently conditional on a purchase of coffee taking place.  
+
+There is also an implicit assumption that all consumers actually have physical access to each shop and have knowledge of the average price and promotional level at each of the alternative shop choices (which may not have been the case in reality).
+
+
+### Shop Traffic
+
+Shop _traffic_ in the form of visits per day was also modelled as an alternative to shop choice. As with shop choice, this model is specific to coffee sales only. It relates traffic at a shop to the brand purchased, the average price and promotional level for the shop/brand combination on that day, as well as including the minimum and maximum price (accross all shops) for that brand on that day to model reference-price effects. 
+
+It should be noted that the traffic model was _not_ made conditional on a purchase, i.e. for days when no purchases were observed in the category it was assumed that no visits occurred on that day.
+
+## Results
+
+### Market Structure
+
+### Price Elasticitiy
+
+### Shop Choice
+
+### Shop Traffic
+
+# Conclusion and Recommendations
+
+# Appendices
+
+# References
+
+1. Leach et al (2016), _Retail Analytics Group Report_, Imperial College Business School
