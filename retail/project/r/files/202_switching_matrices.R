@@ -31,10 +31,14 @@ get_loyalties <- function(mat) {
 }
 
 # Step 1 - Generate switching matrices -----------------------------------------
-switch_mat <- switching_mat(c("heavy", "light"))
+switch_mat_l <- switching_mat(c("light"))
+switch_mat_m <- switching_mat(c("medium"))
+switch_mat_h <- switching_mat(c("heavy"))
 
 # Compute repeat-purchase loyalty
-loyalties <- get_loyalties(switch_mat)
+loyalties_l <- get_loyalties(switch_mat_l)
+loyalties_m <- get_loyalties(switch_mat_m)
+loyalties_h <- get_loyalties(switch_mat_h)
 
 # Step 2 - clean up -------------------------------------------------------
 
