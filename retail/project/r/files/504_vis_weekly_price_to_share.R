@@ -3,7 +3,8 @@
 
 
 # Step 1 - make plot ------------------------------------------------------
-weekly_price_to_share <- coffee_clean %>% 
+weekly_price_to_share <- 
+  coffee_clean %>% 
   group_by(relweek, shop_desc_clean) %>% 
   summarise(sales = sum(packs),
             price = mean(price)) %>% 
@@ -16,15 +17,13 @@ weekly_price_to_share <- coffee_clean %>%
   ungroup() %>% 
   group_by(shop_desc_clean) %>% 
   mutate(relweek = row_number()) %>% 
-  ggplot(aes(x = relweek, y = price)) +
-  geom_point(aes(colour = shop_desc_clean, size = 100*(share))) +
-  geom_line(aes(colour = shop_desc_clean), size = 1.25) +
-  facet_grid(shop_desc_clean ~ ., scales = "free_y") +
-  scale_x_continuous(breaks = seq(0, 55, 5)) +
-  scale_y_continuous() +
+  ggplot(aes(x = price, y = share)) +
+  geom_point(aes(colour = shop_desc_clean), size = 2.5, alpha = .75) +
+  geom_smooth(aes(colour = shop_desc_clean), method = "lm", formula = y ~ x + poly(x, 2)) +
+  facet_grid(. ~ shop_desc_clean, scales = "free_x") +
   scale_colour_brewer(palette = "Dark2", type = "qual") +
-  xlab("Week") +
-  ylab("Average price (£)") +
-  guides(size = guide_legend(title = "Market share (%)"),
-         colour = "none") +
+  scale_y_continuous(labels = scales::percent) +
+  xlab("Average price (£)") +
+  ylab("Market Share") +
+  guides(colour = "none") +
   theme_jim
