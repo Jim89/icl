@@ -12,7 +12,7 @@ weekly_price_to_share <-
   mutate(share = sales/sum(sales),
          price = price,
          shop_desc_clean = toproper(shop_desc_clean),
-         shop_desc_clean = ifelse(shop_desc_clean == "Aldi & lidl", "Adli & Lidl",
+         shop_desc_clean = ifelse(shop_desc_clean == "Aldi & lidl", "Aldi & Lidl",
                                   shop_desc_clean)) %>% 
   ungroup() %>% 
   group_by(shop_desc_clean) %>% 

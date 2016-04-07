@@ -13,23 +13,22 @@ weekly_share_to_prop_promo <-
   mutate(share = sales/sum(sales),
          prop_promo = prop_promo,
          shop_desc_clean = toproper(shop_desc_clean),
-         shop_desc_clean = ifelse(shop_desc_clean == "Aldi & lidl", "Adli & Lidl",
+         shop_desc_clean = ifelse(shop_desc_clean == "Aldi & lidl", "Aldi & Lidl",
                                   shop_desc_clean)) %>% 
   ungroup() %>% 
   group_by(shop_desc_clean) %>% 
   mutate(relweek = row_number()) %>% 
-  ggplot(aes(x = prop_promo, y = share)) +
-  geom_point(aes(colour = shop_desc_clean, size = 100*prop_promo), alpha = .75) +
+  ggplot(aes(x = 100*prop_promo, y = share)) +
+  geom_point(aes(colour = shop_desc_clean), alpha = .75, size = 2.5) +
   facet_grid(. ~ shop_desc_clean, scales = "fixed") +
   geom_smooth(aes(colour = shop_desc_clean), method = "lm", formula = y ~ x + poly(x, 2)) +
-  geom_vline(xintercept = .5, linetype = "dashed", colour = "grey") + 
-  scale_x_continuous(labels = scales::percent) +
+  geom_vline(xintercept = 50, linetype = "dashed", colour = "grey") + 
+  #scale_x_continuous(labels = scales::percent) +
   scale_y_continuous(labels = scales::percent) +
   scale_colour_brewer(palette = "Dark2", type = "qual") +
-  xlab("Proportion of promotional sales") +
+  xlab("Proportion of promotional sales (%)") +
   ylab("Market share") +
-  guides(size = guide_legend(title = "Proportion of promotional sales (%)"),
-         colour = "none") +
+  guides(colour = "none") +
   theme_jim
   
 

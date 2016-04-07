@@ -71,7 +71,7 @@ assignInNamespace("ggally_cor", ggally_cor, "GGally")
 make_pairs <- function(data, custs = c("heavy", "medium", "light")) {
   data %>%
     filter(cust_type %in% custs) %>% 
-    select(-cust_type, -relweek) %>% 
+    select(-cust_type, -relweek) %>%
     ggpairs(lower = list(continuous = wrap(lowerFn, method = "lm")),
             upper = list(continuous = wrap("cor", size = 10)),
             diag = list(continuous = wrap(diagFn)))
@@ -87,7 +87,8 @@ share_pairs_all <- make_pairs(weekly_share)
 share_to_total_sales_plot <- weekly_share %>%  
                               left_join(weekly_sales %>% 
                                         select(cust_type, relweek, Total)) %>% 
-                              gather(key, value, -cust_type, -relweek, -Total) %>% 
+                              gather(key, value, -cust_type, -relweek, -Total) %>%
+                              mutate(key = gsub("Discounters", "Aldi & Lidl", key)) %>% 
                               ggplot(aes(x = Total, y = value)) +
                                 geom_point(aes(colour = key), size = 2.5, 
                                            alpha = .75) +
