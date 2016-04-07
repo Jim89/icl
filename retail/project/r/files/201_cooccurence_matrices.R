@@ -11,15 +11,19 @@ find_shops <- function(custs){
 
 # Step 1 - prepare data --------------------------------------------------------
 # Apply function for heavy and light users
-stores_per_week <- find_shops(custs = c("heavy", "light"))
+stores_per_week_l <- find_shops(custs = c("light"))
+stores_per_week_m <- find_shops(custs = c("medium"))
+stores_per_week_h <- find_shops(custs = c("heavy"))
 
 # Step 2 - reshape to co-occurence ---------------------------------------------
 # Get co-occurenc matrix (may be inefficient on large data)
-cooccurence <- table(stores_per_week$shop_desc_clean, stores_per_week$prev_shop)
+cooccurence_l <- table(stores_per_week_l$shop_desc_clean, stores_per_week_l$prev_shop)
+cooccurence_m <- table(stores_per_week_m$shop_desc_clean, stores_per_week_m$prev_shop)
+cooccurence_h <- table(stores_per_week_h$shop_desc_clean, stores_per_week_h$prev_shop)
 
 # Step 3 - clean up -------------------------------------------------------
 
-rm(stores_per_week, find_shops)
+rm(stores_per_week_l, stores_per_week_m, stores_per_week_h, find_shops)
 gc()
 
 
