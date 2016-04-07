@@ -19,6 +19,7 @@ return(choice_fit)
 # Step 1 - fit models -----------------------------------------------------
 
 choice_heavy <- fit_choice_model("heavy")
+choice_medium <- fit_choice_model("medium")
 choice_light <- fit_choice_model("light")
 
 
