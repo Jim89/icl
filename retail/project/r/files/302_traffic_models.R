@@ -69,6 +69,7 @@ model_traffic <- function(custs) {
 
 # Step 1 - fit models -----------------------------------------------------
 traffic_heavy <- model_traffic("heavy")
+traffic_medium <- model_traffic("medium")
 traffic_light <- model_traffic("light")
 
 # Step 2 - clean up -------------------------------------------------------
