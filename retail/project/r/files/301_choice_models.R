@@ -3,7 +3,7 @@
 fit_choice_model <- function(custs) {
 
 # Set up data
-choice_data <- mlogit.data(coffee_long %>% filter(cust_type == custs),
+choice_data <- mlogit.data(coffee_long %>% filter(cust_type %in% custs),
                            choice = "choice",
                            shape = "long",
                            alt.var = "shop",
@@ -21,6 +21,7 @@ return(choice_fit)
 choice_heavy <- fit_choice_model("heavy")
 choice_medium <- fit_choice_model("medium")
 choice_light <- fit_choice_model("light")
+choice_all <- fit_choice_model(c("light", "medium", "heavy"))
 
 
 # Step 2 - clean up -------------------------------------------------------
