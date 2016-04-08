@@ -4,6 +4,8 @@ lowerFn <- function(data, mapping, method = "lm", ...) {
   p <- ggplot(data = data, mapping = mapping) +
     geom_point() +
     geom_smooth(method = method, color = "blue", ...) +
+    scale_x_continuous(labels = scales::percent) +
+    scale_y_continuous(labels = scales::percent) +
     theme_jim +
     theme(axis.text.y = element_text(size = 10, colour = "black"),
           axis.text.x = element_text(size = 10, colour = "black"))
@@ -12,7 +14,8 @@ lowerFn <- function(data, mapping, method = "lm", ...) {
 
 diagFn <- function(data, mapping) {
   p <- ggplot(data = data, mapping = mapping) +
-       geom_density(fill = "steelblue", colour = "white", alpha = 0.75) +
+        geom_density(fill = "steelblue", colour = "white", alpha = 0.75) +
+        scale_x_continuous(labels = scales::percent) +
         theme_jim +
         theme(axis.text.y = element_text(size = 10, colour = "black"),
               axis.text.x = element_text(size = 10, colour = "black"))
