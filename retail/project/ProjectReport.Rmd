@@ -3,9 +3,9 @@ title: "Retail Analytics Individual Assignment Report"
 author: "Jim Leach"
 date: "7 April 2016"
 output:
+  word_document: default
   pdf_document:
     fig_caption: yes
-  word_document: default
 ---
 
 ```{r source, echo = FALSE, message = FALSE, warning = FALSE}
@@ -120,7 +120,7 @@ Data quality and validation results from earlier work (Leach et al, 2016) were a
 
 ### Market Structure
 
-In order to understand the market structure, several visualisations were created. Total and per-shop sales per week were charted, along with weekly market shares for each shop. The relationship between price and market share was plotted for each shop, as was the relationship between promotions and market share. 
+In order to understand the market structure, simple numerical summaries and several visualisations were created. Total and per-shop sales per week were charted, along with weekly market shares for each shop. The relationship between price and market share was plotted for each shop, as was the relationship between promotions and market share. 
 
 The correlations between weekly market shares for all shops was investigated to understand which shops might be stealing customers from others. The correlation between market share and weekly _total sales_ (across the whole market) was also investigated to understand whether, for weeks in which a particular shop's market share changed, whether that change was due to customers shopping elsewhere, or new shoppers/new sales being made in the market. 
 
@@ -128,7 +128,9 @@ Finally, switching matrices (based on visit ID) were created for each customer s
 
 ### Price Elasticitiy
 
-Using the _wide_ format data, own and cross-price elasticities were calculated for each shop. Calculating elasticities at an individual-segment level lead to insignificant and/or strange results, and so this was done at an aggregate level, i.e. accross all three customer segments. Clout and vulnerability statistics were also created and visualised. 
+Using the _wide_ format data, own and cross-price elasticities were calculated for each shop. Model selection for performing this calculation was done in a similar manner to that in earlier work (Leach et al, 2016), i.e. using cross-validation and mean-squared error to compare various models. 
+
+Calculating elasticities at an individual consumer segment level lead to insignificant and/or strange results (e.g. negative cross-price elasticities), and so the calcualtions were performed at an overall level, i.e. accross all three customer segments. Clout and vulnerability statistics were also created and visualised. 
 
 ### Shop Choice
 
@@ -194,15 +196,50 @@ It can be seen that Morrisons actually has a positive and highly statistically s
 
 If Morrisons also steals customers from other shops, it is important to know which ones. The correlations between weekly market shares for all five shops was assessed and is presented in figure TODO. 
 
-```{r show_spm, echo = FALSE, warning = F, message = F, fig.height = 6, fig.width = 10, fig.cap = "Relationships in weekly market share between all five retailers (N.B. Discounters are Aldi and Lidl). The lower half of the plot shows the pair-wise combinations with individual linear relationships, the diagonal plots show the distribution of weekly market share for each shop, and the upper-right of the plot shows the correlation values between each combination of shop's market share. Significance codes for these values are indicated using asterisks (more means more significant)."}
+```{r show_spm, echo = FALSE, warning = F, message = F, fig.height = 7.5, fig.width = 10, fig.cap = "Relationships in weekly market share between all five retailers (N.B. Discounters are Aldi and Lidl). The lower half of the plot shows the pair-wise combinations with individual linear relationships, the diagonal plots show the distribution of weekly market share for each shop, and the upper-right of the plot shows the correlation values between each combination of shop's market share. Significance codes for these values are indicated using asterisks (more means more significant)."}
 share_pairs_all
 ```
 
-From the data present in figure TODO it is clear that Morrisons can also increase its market share at the expense of Sainsburys and Tesco primarily, but also from Aldi and Lidl ("discounters"). Note that figure TODO shows an overall level view for all customer segments. The pair-wise patterns remain constant accross the three individual customer segments analyses. However the numerical values of the correlations change slightly, and as such the values for each consumer segment are presented in appendix TODO.
+From the data present in figure TODO it is clear that Morrisons increases its market share at the expense of Sainsburys and Tesco primarily, and also from Aldi and Lidl ("discounters"). Note that figure TODO shows an overall level view for all customer segments. The pair-wise patterns remain constant accross the three individual customer segments analyses. However the numerical values of the correlations change slightly, and as such the values for each consumer segment are presented in appendix TODO.
+
+Shop-level switching matrices were also computed accross the three customer segments. The overall matrix is presented in table TODO and the customer-segment level matrices in appendix TODO. These matrices show which shops customers are switching between and hence can be used to estimate competition between shops. For the overall matrix it can be seen that customers that shopped at Morrisons also shopped at Asda and Tesco, with some switching to Sainsburys as well. It is also possible to estimate just how much switching is occurring in the market place. At the overall level, around `r scales::percent(switch_all)` of visits were "switched" visits, i.e. those in which the customer was shopping at a different shop than on their previous visit. This shows that there is some consumer movement between shops within the market. It should be noted that this value is not constant across the three consumer segments, with light, medium and heavy users showing `r scales::percent(switch_l)`, `r scales::percent(switch_m)`, and `r scales::percent(switch_h)` of "switched" visits, respectively (based on switching matrices in appendix TODO). 
+
+The repeat purchase rate for each shop can also be viewed for each consumer segment (figure TODO). It can be seen that Morrisons' actually has a relatively constant repeat purchase rate across the three consumer segments (around 60%), although it is slightly lower for the heavy segment. 
+
+```{r show_rep_purchase, echo = FALSE, message = F, warning = F, fig.height = 7, fig.width=10, fig.cap="Repeat purchase rate (as percentage of total purchases) for each shop in each consumer segment. Note that Morrisons' rate stays relatively constant across the threee consumer segments."}
+repeat_purchase_rate_all
+```
+
+The cooccurrence matrices contain similar information as the switching matrices, and are presented at a consumer-level segment in appendix TODO. It is the case that as the data represent only coffee purchases, the cooccurrence matrices have very small values (few households shop for coffee at two different shops within the same week). As such, they present little additional information in this setting, but could be used to complement the switching matrices for other goods, or for data covering _all_ types of purchase at supermarkets.
 
 ### Price Elasticitiy
 
+Shop-level price elasticities were computed and the resulting elasticity matrix is presented below in table TODO. The clout and vulnerability map for these elasticities is shown in figure TODO.
+
+```{r elast_mat, echo = F, message=F, warning=F}
+elasticities <- elasticities %>% 
+        as.data.frame() %>% 
+        rename(Sainsburys = sains,
+               Asda = asda,
+               Tesco = tesco, 
+               Discounters = aldi, 
+               Morrisons = morrisons) %>% 
+        as.matrix()
+rownames(elasticities) <- colnames(elasticities)
+elasticities %>% kable(caption = "Price elasticities for each shop in the data. Note that 'Discounters' refers to Aldi & Lidl.")
+```
+
+```{r cv_map, echo=F, message=FALSE, warning=FALSE, fig.height = 5, fig.width=10, fig.cap = "Clout and Vulnerability map for the five shops in the data."}
+clout_and_vuln_map  
+```
+
+From the result in table TODO it is possible to see that, at a shop level, consumers are relatively price _inelastic_ (i.e. the absolute values of price elasticity are less than one), indicating that they are not particularly sensitive to the average price at each shop. This is in contrast with earlier work (Leach et al, 2016) which showed that at a _brand_ level, consumers are much more price sensitive. Even within this setting, however, it appears that Morrisons is at risk from a price perspective. It has very little clout, meaning that its price has no effect on sales at other shops, but is highly vulnerable, meaning that the price of other shops (Tesco and Asda in this instance)   can have a large effect on its sales. 
+
+The lack of shop-level price sensitivity is likely due to limitations of the data: they cover purchases of coffee only. Consumers in reality are probably highly sensitive to the average cost of a trip to each of the supermarkets. However, looking only at coffee sales does not show this trend, and so such sensitivities are not observed. Overall shop competition could be better measured with richer data, covering entire basket purchases at each shop.
+
 ### Shop Choice
+
+
 
 ### Shop Traffic
 
@@ -221,8 +258,37 @@ weekly_share_cor_m %>% kable(caption = "Market share correlations for medium use
 ```
 
 ```{r share_correl_h, echo = FALSE}
-weekly_share_cor_h %>% kable(caption = "Market share correlations for medium users")
+weekly_share_cor_h %>% kable(caption = "Market share correlations for heavy users")
 ```
+
+## Appendix TODO - Customer-segment level switching matrices
+
+```{r switch_mat_l, echo = FALSE}
+switch_mat_l %>% kable(caption = "Switching matrix for light users")
+```
+
+```{r switch_mat_m, echo = FALSE}
+switch_mat_m %>% kable(caption = "Switching matrix for medium users")
+```
+
+```{r switch_mat_h, echo = FALSE}
+switch_mat_h %>% kable(caption = "Switching matrix for heavy users")
+```
+
+## Appendix TODO - Customer-segment level cooccurrence matrices
+
+```{r cooc_mat_l, echo = FALSE}
+cooccurence_l %>% kable(caption = "Cooccurrence matrix for light users")
+```
+
+```{r cooc_mat_m, echo = FALSE}
+cooccurence_m %>% kable(caption = "Cooccurrence matrix for medium users")
+```
+
+```{r cooc_mat_h, echo = FALSE}
+cooccurence_h %>% kable(caption = "Cooccurrence matrix for heavy users")
+```
+
 
 # References
 
