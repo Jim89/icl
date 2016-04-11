@@ -105,6 +105,8 @@ vis/hw/*/*.zip
 vis/data/lecture_data/*
 vis/hw/hw2/2a/data/*
 vis/hw/hw2/2a/tableau/*
+vis/hw/hw2/2b/testing/
+vis/hw/hw2/2b/complete.html
 
 
 # ignore for retail
@@ -112,8 +114,7 @@ retail/data/CarbonatesBottlesandCans.csv
 retail/data/InstantCoffee.csv
 retail/data/*.xlsx
 retail/hw/*.pdf
-vis/hw/hw2/2b/testing/
-vis/hw/hw2/2b/complete.html
+retail/project/data/*
 
 # ignore for healthcare
 healthcare/docs/*.pdf
