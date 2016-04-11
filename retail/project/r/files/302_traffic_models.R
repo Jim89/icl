@@ -18,7 +18,7 @@ model_traffic <- function(custs) {
   visits_data <-  coffee_clean %>% 
     group_by(cust_type, relweek, day, shop_desc_clean, brand_clean) %>% 
     summarise(visits = n())
-
+  
   price_data <- coffee_clean %>% 
     group_by(relweek, day, shop_desc_clean, brand_clean) %>% 
     summarise(avg_price = mean(price),
@@ -59,12 +59,6 @@ model_traffic <- function(custs) {
   
   # Set visits to 0 if no visits
   combos$visits[is.na(combos$visits)] <-  0
-  
-  # Add lagged visits
-  combos <- combos %>% 
-            as_data_frame() %>% 
-            group_by(shop, brand, cust_type) %>% 
-            mutate(prev_visits = lag(visits))
   
   # Create model - many zeros so can do normal poisson
   fit <- combos %>% 
