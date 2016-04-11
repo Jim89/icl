@@ -6,14 +6,16 @@ find_shops <- function(custs){
     dplyr::select(relweek, house, shop_desc_clean) %>% 
     distinct() %>% 
     group_by(house, relweek) %>% 
-    mutate(prev_shop = lag(shop_desc_clean))
+    mutate(prev_shop = lag(shop_desc_clean),
+           shop_desc_clean = toproper(shop_desc_clean),
+           prev_shop = toproper(prev_shop))
 }
 
 # Step 1 - prepare data --------------------------------------------------------
 # Apply function for heavy and light users
-stores_per_week_l <- find_shops(custs = c("light"))
-stores_per_week_m <- find_shops(custs = c("medium"))
-stores_per_week_h <- find_shops(custs = c("heavy"))
+stores_per_week_l <- find_shops(custs = c("light")) %>% filter(prev_shop != "NANA")
+stores_per_week_m <- find_shops(custs = c("medium")) %>% filter(prev_shop != "NANA")
+stores_per_week_h <- find_shops(custs = c("heavy")) %>% filter(prev_shop != "NANA")
 
 # Step 2 - reshape to co-occurence ---------------------------------------------
 # Get co-occurenc matrix (may be inefficient on large data)

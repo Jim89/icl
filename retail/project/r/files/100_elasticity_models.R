@@ -140,7 +140,7 @@ elasticities <- get_elasticities(coffee_wide, custs = c("heavy", "light", "mediu
 
 # Step 5 - Clean up and garbage collect ----------------------------------------
 objects <- ls()
-idx <- grep("coffee_clean|coffee_wide|coffee_long|elasticities|theme_jim|toproper|ggally_cor|check_class|check_length|check_type|coalesce|replace_with", objects)
+idx <- grep("tidy_mlogit|coffee_clean|coffee_wide|coffee_long|elasticities|theme_jim|toproper|ggally_cor|check_class|check_length|check_type|coalesce|replace_with", objects)
 objects <- objects[-idx]
 
 rm(list = objects)
