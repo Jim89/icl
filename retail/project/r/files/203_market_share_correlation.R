@@ -3,7 +3,7 @@
 lowerFn <- function(data, mapping, method = "lm", ...) {
   p <- ggplot(data = data, mapping = mapping) +
     geom_point() +
-    geom_smooth(method = method, color = "blue", ...) +
+    geom_smooth(method = method, color = "blue", alpha = .75, ...) +
     scale_x_continuous(labels = scales::percent) +
     scale_y_continuous(labels = scales::percent) +
     theme_jim +
