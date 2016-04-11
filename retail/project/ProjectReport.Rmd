@@ -6,6 +6,11 @@ output:
   word_document: default
   pdf_document:
     fig_caption: yes
+  html_document:
+    number_sections: yes
+    theme: journal
+    toc: yes
+    toc_float: yes
 ---
 
 ```{r source, echo = FALSE, message = FALSE, warning = FALSE}
@@ -39,6 +44,7 @@ theme_jim <-  theme(legend.position = "bottom",
 # source extra functions
 source("./r/functions/toproper.R")
 source("./r/functions/ggally_cor.R")
+source("./r/functions/tidy_mlogit.R")
 
 # Step 0 - get and clean --------------------------------------------------
 source("./r/files/000_clean_and_filter.R")
@@ -102,85 +108,86 @@ TODO
 
 # Analysis
 
-### Data preparation
-
 ## Approach
+
+### Data preparation
 
 In order to prepare the raw data for the analyses various steps were taken:
 
-Minor retailers were filtered out of the sample, and Aldi and Lidl were combined in to a single "Discounters" shop. Brand names were cleaned and grouped. Minor brands were labelled as "Other" and several minor brands falling under a major label were combined (e.g. all of Nescafe's products were labelled as "Nescafe"). This process resulted in the presence of five supermarkets, and six distinct brands (including "other") in the data. 
+Minor retailers were removed, and Aldi and Lidl were combined to a single "Discounters" shop. Brand names were cleaned and grouped. Minor brands were labelled as "Other" and speciality brands of a major label were combined (e.g. all Nescafe specialities were labelled as "Nescafe"). This resulted in the presence of five supermarkets, and six distinct brands (including "other"). 
 
-Transaction and visit IDs were created. The former indicated each individual purchase (i.e. the unique combination of date, customer, shop and brand) wherease the latter indicated a visit (i.e. the unique combination of data, customer and shop). As such it is possible for several transactions to occur within a single visit. 
+Transaction and visit IDs were created. The former indicated each individual purchase (the unique combination of date, customer, shop and brand). The latter indicated a visit (the unique combination of data, customer and shop). Therefore several transactions may occur within a single visit. 
 
-Users were classified into one of three types: light, medium or heavy. This classification was performed as in the group exercise (Leach et al, 2016) using the average volume of coffee purchased per visit by the user. 
+Users were classified into one of three types: light, medium or heavy. This classification was performed using the average volume of coffee purchased per visit (as described in Leach et al, 2016). 
 
-The data were also transformed in to two separate formats: wide and long. The wide format aggregated sales for each shop at a daily level. For each shop, the average price of coffee on each day was calculated, along with the proportion of sales on that day which were made on a price-based promotion, and the proportion made on a unit-based promotion. The long format data aggregated data at a _transaction_ level. For each transaction, the choice of shop (from the possible five choices) made by the consumer was indicated, along with the brand that they purchased and the price of that brand at each of the shops listed. Data on the levels of promotion available at each of the shops was included, along with the loyalty of the customer of the transaction to each of the five shops. Shop loyalties were calculated based on the first 20 weeks worth of data provided. Customers that did not appear in the first 20 weeks of data (and so for who loyalties could not be calculated) were assumed to have the average shop loyalties of other customers in their segment (i.e. light, medium, or heavy).
+The data were also transformed in to two separate formats: wide and long. The wide format aggregated sales at a daily level. The shop-specific average price of coffee was calculated, along with the proportion of sales made on a price-based and unit-based promotion. The long format data aggregated data at a _transaction_ level. For each transaction, the choice of shop was indicated, along with the brand that was purchased and the price of that brand at each of the shops. Data on the level of promotion at each of the shops was included, along with the loyalty of the customer to each of the five shops. Shop loyalties were calculated based on the first 20 weeks of data. Customers who did not appear in the first 20 weeks of data (for whom loyalties could not be calculated) were assumed to have the average loyalties of the other customers in their segment (i.e. light, medium, or heavy).
 
-Data quality and validation results from earlier work (Leach et al, 2016) were also used, and no further quality or validity checks were made of the data. 
+Data quality and validation results from earlier work (Leach et al, 2016) were also used with no significant problems identified. No further quality or validity checks were performed. 
 
 ### Market Structure
 
-In order to understand the market structure, simple numerical summaries and several visualisations were created. Total and per-shop sales per week were charted, along with weekly market shares for each shop. The relationship between price and market share was plotted for each shop, as was the relationship between promotions and market share. 
+Numerical summaries and visualisations were created to understand the market structure. Total and per-shop weekly sales were charted, along with weekly market shares. The relationship between price and market share was plotted, as was the relationship between promotions and market share. 
 
-The correlations between weekly market shares for all shops was investigated to understand which shops might be stealing customers from others. The correlation between market share and weekly _total sales_ (across the whole market) was also investigated to understand whether, for weeks in which a particular shop's market share changed, whether that change was due to customers shopping elsewhere, or new shoppers/new sales being made in the market. 
+The correlation between weekly market share and _total market sales_ was investigated to understand, for weeks in which a particular shop's market share changed, whether that change was due to customers shopping elsewhere, or new sales being made in the market. Pairwise correlations between weekly market shares for all shops were investigated to understand which shops might be stealing customers from others. 
 
-Finally, switching matrices (based on visit ID) were created for each customer segment in order to identify which shops might be seeing customers move between them. Using these results, plots were made to show the proportion of repeat purchases out of total purchases for each shop to help assess which shops had more loyal customers. Co-occurence matrices were also made at a weekly level, to identify (for customers with more than one visit in each week) which shops might be competing based on users shopping at both of them in a single week. 
+Shop level switching matrices were created for each customer segment in order to further understand which shops were competing. These results generated plots to show the proportion of repeat purchases out of total purchases for each shop, helping to assess which shops had more loyal customers. Co-occurence matrices were also made at a weekly level, to identify (for customers with more than one visit in each week) which shops might be competing based on users shopping at both of them in a single week. 
 
 ### Price Elasticitiy
 
-Using the _wide_ format data, own and cross-price elasticities were calculated for each shop. Model selection for performing this calculation was done in a similar manner to that in earlier work (Leach et al, 2016), i.e. using cross-validation and mean-squared error to compare various models. 
+Own and cross-price elasticities were calculated for each shop using the _wide_ data. Model selection was performed using stepwise regression and cross-validation, utilising mean-squared error to compare models (Leach et al, 2016).  
 
-Calculating elasticities at an individual consumer segment level lead to insignificant and/or strange results (e.g. negative cross-price elasticities), and so the calcualtions were performed at an overall level, i.e. accross all three customer segments. Clout and vulnerability statistics were also created and visualised. 
+The calcualtions were performed accross all three customer segments as the calculations at segment level lead to insignificant and/or strange results. Clout and vulnerability statistics were created and visualised. 
 
 ### Shop Choice
 
-A simple model was created which modelled the effect of price, promotion and loyalty on a customers choice of shop. In order to account for potential unobserved differences in consumers (e.g. income, family size etc) this model was applied to each customer segment separately. 
+A simple model (multinomial logit) was created accounting for price, promotion and loyalty levels on shop choice. Unobserved potential heterogeneity (e.g. household income, family size etc) was accounted for by applying the model to each customer segment separately. 
 
-The model is limited, however, as important data such as the total spend on each trip and demographic information were not available. Moreover, there is no data for trips to the shop when coffee was _not_ purchased. As such, this choice model is inherently conditional on a purchase of coffee taking place.  
+The model was limited as important data (such as total spend per visit, or demographics) were not available. Moreover, there was no data for visits when coffee was _not_ purchased. As such, the choice model was conditional on the purchase of coffee.  
 
-There is also an implicit assumption that all consumers actually have physical access to each shop and have knowledge of the average price and promotional level at each of the alternative shop choices (which may not have been the case in reality).
+There model also assumed that all consumers had physical access to each shop, and had knowledge of price and promotional level at each alternative choice (which may not have been the case in reality).
 
 
 ### Shop Traffic
 
-Shop _traffic_ in the form of visits per day was also modelled as an alternative to shop choice. As with shop choice, this model is specific to coffee sales only. It relates traffic at a shop to the brand purchased, the average price and promotional level for the shop/brand combination on that day, as well as including the minimum and maximum price (accross all shops) for that brand on that day to model reference-price effects. 
+Shop _traffic_ (in the form of visits per day) was modelled in addition to choice. This model was also specific to coffee sales only. It related traffic at each shop to the brand purchased, the average price and promotional level for the shop/brand combination, as well as the minimum and maximum price (accross all shops) for that brand on that day to model reference-price effects. 
 
-It should be noted that the traffic model was _not_ made conditional on a purchase, i.e. for days when no purchases were observed in the category it was assumed that no visits occurred on that day.
+The traffic model was _not_ made conditional on a purchase: for days when no purchases were observed it was assumed that no visits occurred. As such there were many days with zero visits, and so a standard _Poisson_ (as opposed to a zero-truncated) model was used.
 
 ## Results
 
 ### Market Structure
 
-Firstly, a plot of total and per-shop weekly transactions (figure TODO) shows that, broadly, the total market is relatively flat (the yellow line and smoother in the plot), as are the sales of the individual shops.
+The total market size at a consumer segment level is reported in appendix TODO.
 
-```{r show_sales_by_week, echo = FALSE, message = FALSE, warning = FALSE, fig.height = 5, fig.width = 9, fig.cap = "Total (in yellow, with smoother) and shop-level sales per week. Note the peaks in Morrisons' sales just prior to weeks 20 and 40."}
+The plot of total and per-shop weekly transactions (figure TODO) shows that the market is relatively flat (the yellow line and smoother in the plot), as are the sales of individual shops.
+
+```{r show_sales_by_week, echo = FALSE, message = FALSE, warning = FALSE, fig.height = 5, fig.width = 9, fig.cap = "Total (in yellow, with smoother) and shop-level sales per week. Note the peaks in Morrisons' sales (the purple line) just prior to weeks 20 and 40."}
 sales_by_week
 ```
 
-It is the case that Morrisons has two "spikes" in its weekly transactions, around weeks twenty and fourty. Both of these peaks correspond with increased total market transactions, and none of the other shops show spikes in transactions at this time. 
+Morrisons has two "spikes" in its weekly transactions, around weeks twenty and fourty. Both of these spikes correspond with increased total market transactions, and none of the other shops show similar spikes at this time. 
 
-Plotting each shop's market share for each week (figure TODO) shows a similar pattern. The market share of Morrisons (along with the other shops) is relatively constant at around twenty to twenty-five percent. Two peaks are observed in the Morrisons market share around weeks twenty and fourty. In these weeks it appears that it is a combination of Tesco and Sainsburys that lose market share as Morrisons' increases.
+The shop weekly market share plot (figure TODO) shows a similar pattern. Morrisons' market share (along with the other shops) is relatively constant. Morrisons captures between fifteen and twenty-five percent of the market on average. Two peaks are observed in Morrisons' share around weeks twenty and fourty. In these weeks it is mainly Tesco that loses share, with Asda and Sainsburys making smaller losses.
 
-```{r show_share_by_week, echo = FALSE, message = FALSE, warning = FALSE, fig.height = 5, fig.width = 9, fig.cap = "Shop-level market share per week. Note the peaks in Morrisons' share just prior to weeks 20 and 40."}
+```{r show_share_by_week, echo = FALSE, message = FALSE, warning = FALSE, fig.height = 5, fig.width = 9, fig.cap = "Shop-level market share per week. Note the peaks in Morrisons' share (purple area) just prior to weeks 20 and 40."}
 share_by_week
 ```
 
-In order to understand what might be driving changes in both sales and market share, the relationship between both average price and promotional level with market share was investigated (figures TODO and TODO).
+In order to understand what might be driving these changes, the relationship between both average price and promotional level with market share was investigated (figures TODO and TODO).
 
 ```{r show_price_to_share, echo = FALSE, message = FALSE, warning = FALSE, fig.height = 5, fig.width = 10, fig.cap = "The relationship between average weekly price and weekly market share for each supermarket analysed. Coloured lines represent second order polynomial linear regressions of price on market share with the grey regions representing the 95% confidence interval for the fit."}
 weekly_price_to_share
 ```
 
+In terms of price, Morrisons' market share is highest at prices the middle of the range of prices that it has set. This is in contrast with, for example, Asda where higher prices clearly result in a lower market share. Morrisons has weeks with some of the highest average prices across the five shops, and in these weeks sees a sharp drop in its market share at these points. At lower prices, Morrisons' market share also drops, although what causes this is unclear. 
 
-In terms of price, it appears that Morrisons benefits most (in terms of increased market share) from a price in the middle of the range of prices that it has set. This is in contrast with, for example, Asda where it is clear that a higher price results in a lower market share. It can also be seen that, in terms of average price, Morrisons actually has weeks with some of the highest average prices across the five shops studied, and in these weeks sees a sharp drop in its market share. At much lower prices, Morrisons market share also drops, although the reasons for this are unclear. 
-
-```{r show_price_to_promo, echo = FALSE, message = FALSE, warning = FALSE, fig.height = 5, fig.width = 10, fig.cap = "The relationship between weekly proportion of sales on promotion and weekly market share for each supermarket analysed. Coloured lines represent second order polynomial linear regressions of proportion of promotional sales on market share with the grey regions representing the 95% confidence interval for the fit. The vertical dotted grey line is at 50% promotions, with points to to the right of that line indicating the majority of sales in that week were on promotion."}
+```{r show_price_to_promo, echo = FALSE, message = FALSE, warning = FALSE, fig.height = 5, fig.width = 10, fig.cap = "The relationship between weekly proportion of sales on promotion and weekly market share for each supermarket. Coloured lines are second order polynomial linear regressions of proportion of promotional sales on market share with the grey regions showing the 95% confidence interval for the fit. The vertical dotted grey line is at 50% promotions, with points to to the right of that line indicating the majority of sales in that week were on promotion."}
 weekly_share_to_prop_promo
 ```
 
-Similarly looking at the relationship between the proportion of weekly sales that were made on promotion and weekly market share also reveals some interesting insights. For Morrisons, there is a very strong relationship between promotional levels and market share. In general, more promotions relates to an increased market share. Such a strong relationship is not observed for other supermarkets (especially for Asda and Sainsburys). Furthermore, it is interesting to note that Morrisons' two best weeks (in terms of market share) were the weeks with the two highest levels of promotion.
+The relationship between the proportion of promotional sales and market share reveals some interesting insights. For Morrisons, there is a strong relationship between promotions and market share: promotions lead to increased market share. Such a strong relationship is not observed for the other shops. It is interesting to note that Morrisons' two best weeks (in terms of market share) were the weeks with the two highest levels of promotion.
 
-Broadly speaking, a shop can grow its customers in one of two ways: by stealing from other stores or by increasing the market size. In order to investigate which of these approaches might be relevant for Morrisons, the relationship between total market size (in terms of sales) and weekly market share was plotted for each supermarket (figure TODO). The numerical correlation between market share and total market size was also computed and is displayed in table TODO.
+Broadly speaking, a shop can grow its customers in two ways: increasing its market share, or increasing the market size. In order to investigate which of these approaches might be relevant for Morrisons, the relationship between total market size (customers accross all shops) and weekly market share was plotted (figure TODO). The numerical correlation between share and total market size was also computed and is displayed in table TODO.
 
 ```{r total_sales_to_share, echo = FALSE, message = FALSE, warning = FALSE, fig.height = 5, fig.width = 10, fig.cap = "The relationship between total sales and market share for each shop. Colour lines indicate the linear relationship between, with grey regions showing the 95% confidence interval for this fit."}
 share_to_total_sales_plot
@@ -192,29 +199,35 @@ share_to_total_sales_cor %>%
         caption = "Correlation between total market size and market share for each supermarket, along with statistical significance (p-value) of that correlation.")
 ```
 
-It can be seen that Morrisons actually has a positive and highly statistically significant relationship between total market size, and market share. I.e., when the size of the total market increases, it is Morrisons that is gaining the most customers/transactions from this and increasing its market share. This shows that Morrisons can (at least to some extent) grow its sales by increasing the size of the market.
+Morrisons has a positive and highly significant relationship between total market size and market share. When the total market size increases, it is Morrisons that is gaining the most (its share has the highest correlation with total market size). This shows that Morrisons can (to some extent) grow its sales by increasing the size of the market. From the data it is not clear what is causing this relationship.
 
-If Morrisons also steals customers from other shops, it is important to know which ones. The correlations between weekly market shares for all five shops was assessed and is presented in figure TODO. 
+If Morrisons also steals customers from other shops, it is important to know which ones. The pairwise correlations between weekly market shares for all five shops was assessed and is presented in figure TODO. 
 
 ```{r show_spm, echo = FALSE, warning = F, message = F, fig.height = 7.5, fig.width = 10, fig.cap = "Relationships in weekly market share between all five retailers (N.B. Discounters are Aldi and Lidl). The lower half of the plot shows the pair-wise combinations with individual linear relationships, the diagonal plots show the distribution of weekly market share for each shop, and the upper-right of the plot shows the correlation values between each combination of shop's market share. Significance codes for these values are indicated using asterisks (more means more significant)."}
 share_pairs_all
 ```
 
-From the data present in figure TODO it is clear that Morrisons increases its market share at the expense of Sainsburys and Tesco primarily, and also from Aldi and Lidl ("discounters"). Note that figure TODO shows an overall level view for all customer segments. The pair-wise patterns remain constant accross the three individual customer segments analyses. However the numerical values of the correlations change slightly, and as such the values for each consumer segment are presented in appendix TODO.
+It is clear that Morrisons increases its market share at the expense of Sainsburys and Tesco primarily, and also from Aldi and Lidl ("discounters"). Note that figure TODO shows an overall level view for all customer segments. The pairwise _patterns_ remain constant accross the individual customer segments, however the numerical values of the correlations change slightly. As such the values for each consumer segment are presented in appendix TODO.
 
-Shop-level switching matrices were also computed accross the three customer segments. The overall matrix is presented in table TODO and the customer-segment level matrices in appendix TODO. These matrices show which shops customers are switching between and hence can be used to estimate competition between shops. For the overall matrix it can be seen that customers that shopped at Morrisons also shopped at Asda and Tesco, with some switching to Sainsburys as well. It is also possible to estimate just how much switching is occurring in the market place. At the overall level, around `r scales::percent(switch_all)` of visits were "switched" visits, i.e. those in which the customer was shopping at a different shop than on their previous visit. This shows that there is some consumer movement between shops within the market. It should be noted that this value is not constant across the three consumer segments, with light, medium and heavy users showing `r scales::percent(switch_l)`, `r scales::percent(switch_m)`, and `r scales::percent(switch_h)` of "switched" visits, respectively (based on switching matrices in appendix TODO). 
+```{r show_switch_all, echo = FALSE}
+rownames(switch_mat_all) <- toproper(rownames(switch_mat_all))
+colnames(switch_mat_all) <- toproper(colnames(switch_mat_all))
+switch_mat_all %>% kable(caption = "Switching matrix for all customers")
+```
 
-The repeat purchase rate for each shop can also be viewed for each consumer segment (figure TODO). It can be seen that Morrisons' actually has a relatively constant repeat purchase rate across the three consumer segments (around 60%), although it is slightly lower for the heavy segment. 
+The overall switching matrix is presented in table TODO and customer segment level matrices in appendix TODO. These matrices show which shops customers are switching between and hence can be used to estimate competition between shops. For the overall matrix it can be seen that customers that shopped at Morrisons also shopped at Asda and Tesco, with some switching to Sainsburys as well. It is also possible to estimate just how much switching is occurring in the market place. At the overall level, around `r scales::percent(switch_all)` of visits were "switched" visits, i.e. those in which the customer was shopping at a different shop than on their previous visit. This shows that there is some consumer movement between shops in the market. It should be noted that this value is not constant across the three consumer segments, with light, medium and heavy users showing `r scales::percent(switch_l)`, `r scales::percent(switch_m)`, and `r scales::percent(switch_h)` of "switched" visits, respectively (based on switching matrices in appendix TODO). 
+
+The repeat purchase rate for each shop for each consumer segment is shown in figure TODO. Morrisons has a relatively constant repeat purchase rate across the three consumer segments (around 60%), although it is slightly lower for the heavy segment. 
 
 ```{r show_rep_purchase, echo = FALSE, message = F, warning = F, fig.height = 7, fig.width=10, fig.cap="Repeat purchase rate (as percentage of total purchases) for each shop in each consumer segment. Note that Morrisons' rate stays relatively constant across the threee consumer segments."}
 repeat_purchase_rate_all
 ```
 
-The cooccurrence matrices contain similar information as the switching matrices, and are presented at a consumer-level segment in appendix TODO. It is the case that as the data represent only coffee purchases, the cooccurrence matrices have very small values (few households shop for coffee at two different shops within the same week). As such, they present little additional information in this setting, but could be used to complement the switching matrices for other goods, or for data covering _all_ types of purchase at supermarkets.
+The cooccurrence matrices contain similar information as the switching matrices, and are presented at a consumer-level segment in appendix TODO. It is the case that as the data represent only coffee purchases, the cooccurrence matrices have very small values (few households shop for coffee at two different shops within the same week). As such, they present little additional information in this setting, but could be used to complement the switching matrices for other goods, or for data covering all goods purchased.
 
 ### Price Elasticitiy
 
-Shop-level price elasticities were computed and the resulting elasticity matrix is presented below in table TODO. The clout and vulnerability map for these elasticities is shown in figure TODO.
+Shop-level price elasticities were computed and the resulting elasticity matrix is presented in table TODO. The clout and vulnerability map for these elasticities is shown in figure TODO.
 
 ```{r elast_mat, echo = F, message=F, warning=F}
 elasticities <- elasticities %>% 
@@ -233,45 +246,152 @@ elasticities %>% kable(caption = "Price elasticities for each shop in the data. 
 clout_and_vuln_map  
 ```
 
-From the result in table TODO it is possible to see that, at a shop level, consumers are relatively price _inelastic_ (i.e. the absolute values of price elasticity are less than one), indicating that they are not particularly sensitive to the average price at each shop. This is in contrast with earlier work (Leach et al, 2016) which showed that at a _brand_ level, consumers are much more price sensitive. Even within this setting, however, it appears that Morrisons is at risk from a price perspective. It has very little clout, meaning that its price has no effect on sales at other shops, but is highly vulnerable, meaning that the price of other shops (Tesco and Asda in this instance)   can have a large effect on its sales. 
+At a shop level, consumers are price _inelastic_ (the absolute values of price elasticity are less than one), indicating that they are not particularly sensitive to price. This is in contrast with earlier work (Leach et al, 2016) showing that at _brand_ level consumers are much more price sensitive. 
 
-The lack of shop-level price sensitivity is likely due to limitations of the data: they cover purchases of coffee only. Consumers in reality are probably highly sensitive to the average cost of a trip to each of the supermarkets. However, looking only at coffee sales does not show this trend, and so such sensitivities are not observed. Overall shop competition could be better measured with richer data, covering entire basket purchases at each shop.
+Within this setting, however, it appears that Morrisons is most at risk from a price perspective. It has zero clout, meaning that its price has no effect on sales at other shops, but is highly vulnerable, meaning that the price of other shops (Tesco and Asda in this instance) can have a large effect on its sales. 
+
+The lack of shop-level price sensitivity is likely due to limitations of the data covering purchases of coffee only. Consumers in reality are probably highly sensitive to the average cost of a trip to each shop. However, looking only at coffee sales does not show this. Overall shop price sensitivity could be better measured with richer data, covering entire basket purchases at each shop.
 
 ### Shop Choice
 
+As noted, the shop choice model is very limited by the data and therefore does not provide a rigourous estimation of which shops are preferred. 
 
+However, it can measure the effect of price, promotions and loyalty on shop choice at a simple level. The results from each model at the segment level are presented in tables TODO, TODO, and TODO.
+
+```{r choice_light, echo = FALSE}
+fit <- summary(choice_light)$mfR2 %>% as.numeric() %>% round(3)
+tbl <- tidy_mlogit(choice_light)
+cap <- paste("Multinomial logit model coefficients and errors for light users. The McFadden $R^2$ value is", fit)
+kable(tbl, caption = cap)
+```
+
+```{r choice_med, echo = FALSE}
+fit <- summary(choice_medium)$mfR2 %>% as.numeric() %>% round(3)
+tbl <- tidy_mlogit(choice_medium)
+cap <- paste("Multinomial logit model coefficients and errors for medium users. The McFadden $R^2$ value is", fit)
+kable(tbl, caption = cap)
+```
+
+
+```{r choice_heavy, echo = FALSE}
+fit <- summary(choice_heavy)$mfR2 %>% as.numeric() %>% round(3)
+tbl <- tidy_mlogit(choice_heavy)
+cap <- paste("Multinomial logit model coefficients and errors for heavy users. The McFadden $R^2$ value is", fit)
+kable(tbl, caption = cap)
+```
+
+Whilst the exact coefficient values are different in each model, the general pattern is similar. Morrisons is somewhere in the middle of consumer preference. It is preferred over Aldi and Lidl in all segments. However, for light users all the other shops are _more_ preferred (their coefficients are greater), whereas for medium and heavy users, Morrisons is preferred over Sainsburys. 
+
+This tallies with the repeat purchase rate analysis earlier. For heavy and medium users Morrisons is able to compete with Asda and Tesco, but it struggles in the light consumer segment. For both light and medium users, increasing price is seen to have a negative impact on the likelihood of a visit. This is not the case for heavy users, which is unusual and is likely due to the absence of data on when purchases were _not_ made which may help to tease out the effect of price more readily.
+
+This analysis could be expanded with further data on things such as total basket spend, availability of each product, household inventory levels, and household demographics; as well as with data on trips to the shop where a purchase of coffee was not made. 
 
 ### Shop Traffic
 
+Shop traffic was also modelled at a segment level. There are limitations of these models as data on visits when coffee was not purchased are unavailable, and other details are missing, e.g. marketing levels, accurate price-reference effects, or the presence of loss-leader products in each shop. Were such data available, these models could be expanded and improved. For now they simply help to support the other analyses performed. 
+
+The results from each model are presented in tables TODO, TODO, and TODO.
+
+```{r traffic_light, echo = FALSE}
+tidy_poisson <- function(fit) {
+fit %>% 
+  tidy() %>% 
+  mutate(term = ifelse(grepl("\\(In", term), "Intercept", term),
+         term = ifelse(grepl("^shop", term), gsub("shop", "", term), term),
+         term = ifelse(grepl("^brand", term), gsub("^brand", "", term), term),
+         term = ifelse(grepl("avg_", term), "Avg. price", term),
+         term = ifelse(grepl("promo_p", term), "Price promo.", term),
+         term = ifelse(grepl("promo_u", term), "Unit promo.", term),
+         term = ifelse(grepl("min", term), "Min. (reference) price", term),
+         term = ifelse(grepl("max", term), "Max. (reference) price", term),
+         term = toproper(term))
+}  
+tidy_poisson(traffic_light) %>% kable(caption = "Poisson model parameters for light users' traffic model.",
+                                      col.names = c("Coefficient", "Estimate", "Std. Error", "t-Stat", "p-value"))  
+```
+
+```{r traffic_medium, echo = FALSE}
+tidy_poisson(traffic_medium) %>% kable(caption = "Poisson model parameters for medium users' traffic model.",
+                                       col.names = c("Coefficient", "Estimate", "Std. Error", "t-Stat", "p-value"))
+```
+
+```{r traffic_heavy, echo = FALSE}
+tidy_poisson(traffic_heavy) %>% kable(caption = "Poisson model parameters for heavy users' traffic model.",
+                                       col.names = c("Coefficient", "Estimate", "Std. Error", "t-Stat", "p-value"))
+```
+
+The results are broadly similar across the three segments and tell a similar story as the choice models. For customers in the light segment, traffic is not predicted to be much higher for Morrisons than for Aldi and Lidl and the other shops are busier. For medium users and heavy users Morrisons begins to compete with the other shops, especially Sainsburys and Asda. Price has a negative impact, indicating that visits are likely to be lower when prices are higher.
+
 # Conclusion and Recommendations
 
+The results of these analyses lead to a small number of recommendations for Morrisons to grow its future sales. 
+
+It has been seen that there is a significant positive correlation between total market size and Morrisons' market share, so Morrisons may wish to exploit this by growing the market (for example by tempting non coffee-buying customers to purchase coffee) in order to increase their revenue. 
+
+Similarly, it was shown that Morrisons has also increased its market share at the expense of Aldi and Lidl, Sainsburys and Tesco. However, Aldi and Lidl are mainly used by light users, a segment in which Morrisons performs more weakly (as seen in the choice and traffic models). Given the smaller market size within light consumers relative to medium and heavy (appendix TODO), Morrisons should focus on the medium and heavy segment. 
+
+Morrisons may wish to emulate behaviours of their main competitors, Sainsburys and Tesco, in order to take further market share. This could be done through similar offers, price matching or marketting campaigns. 
+
+Finally, the analyses in this report should be expanded and developed. Especially the choice and traffic models. More data relevant to these models should be collected including (but not limited to) marketing information, trips with no purchases, or purchases of _other_ goods in addition to coffee. 
+
 # Appendices
+
+## Appendix TODO - Sales and spend by customer segment
+
+```{r sales_by_seg, echo = FALSE}
+coffee_clean %>% 
+  select(house, cust_type, transaction_id, netspend) %>% 
+  distinct() %>% 
+  group_by(cust_type) %>% 
+  summarise(sales = n(),
+            spend = sum(netspend)) %>%
+  arrange(-sales) %>% 
+  ungroup() %>% 
+  mutate(cust_type = toproper(cust_type),
+         sales = scales::comma(sales),
+         spend = scales::comma(spend)) %>% 
+  kable(col.names = c("Customer Segment", "Total Sales", "Total Spend (£)"),
+        caption = "Total sales and spend per customer segment")
+```
+
 
 ## Appendix TODO - Market share correlations for light, medium, and heavy users
 
 ```{r share_correl_l, echo = FALSE}
+colnames(weekly_share_cor_l) <- gsub("Discounters", "Aldi & Lidl", colnames(weekly_share_cor_l))
+rownames(weekly_share_cor_l)<- colnames(weekly_share_cor_l)
 weekly_share_cor_l %>% kable(caption = "Market share correlations for light users")
 ```
 
 ```{r share_correl_m, echo = FALSE}
+colnames(weekly_share_cor_m) <- gsub("Discounters", "Aldi & Lidl", colnames(weekly_share_cor_m))
+rownames(weekly_share_cor_m)<- colnames(weekly_share_cor_m)
 weekly_share_cor_m %>% kable(caption = "Market share correlations for medium users")
 ```
 
 ```{r share_correl_h, echo = FALSE}
+colnames(weekly_share_cor_h) <- gsub("Discounters", "Aldi & Lidl", colnames(weekly_share_cor_h))
+rownames(weekly_share_cor_h)<- colnames(weekly_share_cor_h)
 weekly_share_cor_h %>% kable(caption = "Market share correlations for heavy users")
 ```
 
 ## Appendix TODO - Customer-segment level switching matrices
 
 ```{r switch_mat_l, echo = FALSE}
+rownames(switch_mat_l) <- toproper(rownames(switch_mat_l))
+colnames(switch_mat_l) <- toproper(colnames(switch_mat_l))
 switch_mat_l %>% kable(caption = "Switching matrix for light users")
 ```
 
 ```{r switch_mat_m, echo = FALSE}
+rownames(switch_mat_m) <- toproper(rownames(switch_mat_m))
+colnames(switch_mat_m) <- toproper(colnames(switch_mat_m))
 switch_mat_m %>% kable(caption = "Switching matrix for medium users")
 ```
 
 ```{r switch_mat_h, echo = FALSE}
+rownames(switch_mat_h) <- toproper(rownames(switch_mat_h))
+colnames(switch_mat_h) <- toproper(colnames(switch_mat_h))
 switch_mat_h %>% kable(caption = "Switching matrix for heavy users")
 ```
 
@@ -289,7 +409,9 @@ cooccurence_m %>% kable(caption = "Cooccurrence matrix for medium users")
 cooccurence_h %>% kable(caption = "Cooccurrence matrix for heavy users")
 ```
 
+\pagebreak
 
 # References
 
 1. Leach et al (2016), _Retail Analytics Group Report_, Imperial College Business School
+2. Henningsen, Arne and Toomet, Ott (2011). maxLik: A package for maximum likelihood estimation in R. Computational Statistics 26(3), 443-458. DOI 10.1007/s00180-010-0217-1.
