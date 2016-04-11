@@ -5,7 +5,7 @@ clout_and_vuln_map <- clout_and_vuln_stats %>%
                       mutate(shop = gsub("sains", "Sainsburys", shop),
                              shop = gsub("asda", "Asda", shop),
                              shop = gsub("tesco", "Tesco", shop),
-                             shop = gsub("aldi", "Adli & Lidl", shop),
+                             shop = gsub("aldi", "Aldi & Lidl", shop),
                              shop = gsub("morrisons", "Morrisons", shop)) %>% 
                       ggplot(aes(x = vulns, y = clouts)) +
                       geom_point(size = 10, aes(colour = shop)) +
