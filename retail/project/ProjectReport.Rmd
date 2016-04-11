@@ -3,14 +3,9 @@ title: "Retail Analytics Individual Assignment Report"
 author: "Jim Leach"
 date: "7 April 2016"
 output:
-  word_document: default
   pdf_document:
     fig_caption: yes
-  html_document:
-    number_sections: yes
-    theme: journal
-    toc: yes
-    toc_float: yes
+  word_document: default
 ---
 
 ```{r source, echo = FALSE, message = FALSE, warning = FALSE}
@@ -102,7 +97,7 @@ The results of these analyses allow a number of conclusions to be drawn, as well
 
 ## Executive summary
 
-TODO
+Focussing on Morrisons as the shop of interest, it has been found that it competes in a number of ways. It can improve its traffic through use of promotions, and does well with this tactic. It has had success growing sales by growing the total market and also by taking market share from (primarily) Tesco and Sainsburys. Although consumers are not found to be highly price sensitive at a shop level, Morrisons is at risk in terms of price, having very little market clout, but a high vulnerability to price changes at other retailers. 
 
 ***
 
