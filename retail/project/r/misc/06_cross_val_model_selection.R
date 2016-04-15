@@ -144,3 +144,5 @@ return(overall_average_error)
 results <- data_frame(model = c("level", "semi-log", "log-log")) %>% 
             rowwise() %>% 
             mutate(mse = model_selection(coffee_wide, model))
+
+write.csv(results, "./project/r/misc/cross_val_model_selection.csv")
