@@ -128,7 +128,7 @@ Morrisons competes in a number of ways. It improved its traffic through promotio
 
 ### Data preparation
 
-Minor retailers were removed, and Aldi and Lidl were combined as "Discounters". Brands were cleaned and grouped. Minor brands were labelled as "Other" and sub-brands of major labels were combined (e.g. all Nescafe sub-brands were labelled as "Nescafe"). 
+Minor retailers were removed, and Aldi and Lidl were combined as "Discounters". Brands cleaned and grouped. Minor brands were labelled as "Other" and sub-brands of major labels were combined (e.g. all Nescafe sub-brands were labelled as "Nescafe"). 
 
 Transaction and visit IDs were created. The former indicated individual purchases (the unique combination of date, customer, shop, brand). The latter indicated a visit (the unique combination of date, customer and shop). 
 
@@ -156,7 +156,7 @@ A simple (multinomial logit) model was created accounting for price, promotion a
 
 The model was limited as important data (such as total spend per visit, or demographics) were not available. There was no data for visits when coffee was _not_ purchased. Therefore the choice model was conditional on the purchase of coffee. This limited how robust the model was and therefore elasticities were not calculated from it at this stage.
 
-The model also assumed that all consumers had access to each shop, and knew the price and promotional level at each alternative (which may not have been the case in reality).
+There model also assumed that all consumers had access to each shop, and knew the price and promotional level at each alternative (which may not have been the case in reality).
 
 
 ### Shop Traffic
@@ -171,7 +171,7 @@ The model was _not_ made conditional on a purchase: for days with no purchases i
 
 ### Market Structure
 
-A breakdown of the market by shop, and by customer segment is presented in appendix one.
+The total market size at a consumer segment level is reported in appendix one.
 
 The plot of total and per-shop weekly transactions (figure one) shows that the market is relatively flat (the yellow line and smoother in the plot), as are the sales of individual shops.
 
@@ -193,7 +193,7 @@ In order to understand what might be driving these changes, the relationship bet
 weekly_price_to_share + theme(axis.text.x = element_text(size = 12))
 ```
 
-In terms of price, Morrisons' market share is highest at prices the middle of the range of prices that it has set. This contrasts with, for example, Asda where higher prices clearly result in a lower market share. Morrisons has weeks with some of the highest average prices across the five shops, and in these weeks sees a sharp drop in its market share at these points. At lower prices, Morrisons' market share also drops, although what causes this is unclear. 
+In terms of price, Morrisons' market share is highest at prices the middle of the range of prices that it has set. This is in contrast with, for example, Asda where higher prices clearly result in a lower market share. Morrisons has weeks with some of the highest average prices across the five shops, and in these weeks sees a sharp drop in its market share at these points. At lower prices, Morrisons' market share also drops, although what causes this is unclear. 
 
 ```{r show_price_to_promo, echo = FALSE, message = FALSE, warning = FALSE, fig.height = 5, fig.width = 10, fig.cap = "The relationship between weekly proportion of sales on promotion and weekly market share for each supermarket. Coloured lines are second order polynomial linear regressions of proportion of promotional sales on market share with the grey regions showing the 95% confidence interval for the fit. The vertical dotted grey line is at 50% promotions, with points to to the right of that line indicating the majority of sales in that week were on promotion."}
 weekly_share_to_prop_promo  + theme(axis.text.x = element_text(size = 12))
@@ -210,7 +210,7 @@ share_to_total_sales_plot + theme(axis.text.x = element_text(size = 12))
 ```{r total_sales_to_share_table, echo = FALSE, message = FALSE, warning = FALSE}
 share_to_total_sales_cor %>% 
   kable(col.names = c("Shop", "Correlation", "p-Value"),
-        caption = "Correlation between total market size and market share for each supermarket, along with statistical significance (p-value) of that correlation.", digits = 4)
+        caption = "Correlation between total market size and market share for each supermarket, along with statistical significance (p-value) of that correlation.")
 ```
 
 Morrisons has a positive and highly significant relationship between total market size and market share. When the total market size increases, it is Morrisons that is gaining the most (its share has the highest correlation with total market size). This shows that Morrisons has (to some extent) grown its sales by increasing the size of the market. From the data it is not clear what caused this, though.
@@ -247,7 +247,7 @@ The co-occurrence matrices present little additional information in this setting
 
 \pagebreak
 
-### Price Elasticity
+### Price Elasticitiy
 
 Shop-level price elasticities were computed and the resulting elasticity matrix is presented in table three. The clout and vulnerability map for these elasticities is shown in figure seven.
 
@@ -261,7 +261,7 @@ elasticities <- elasticities %>%
                Morrisons = morrisons) %>% 
         as.matrix()
 rownames(elasticities) <- colnames(elasticities)
-elasticities %>% kable(caption = "Price elasticities for each shop in the data. Note that 'Discounters' refers to Aldi & Lidl. Computed from a linear model with 1092 observations of unit sales, prices and promotional levels across the six retailers.", digits = 3)
+elasticities %>% kable(caption = "Price elasticities for each shop in the data. Note that 'Discounters' refers to Aldi & Lidl.")
 ```
 
 ```{r cv_map, echo=F, message=FALSE, warning=FALSE, fig.height = 4, fig.width=10, fig.cap = "Clout and Vulnerability map for the five shops in the data."}
@@ -287,36 +287,36 @@ However, it can measure the effect of price, promotions and loyalty on shop choi
 ```{r choice_light, echo = FALSE}
 fit <- summary(choice_light)$mfR2 %>% as.numeric() %>% round(3)
 tbl <- tidy_mlogit(choice_light)
-cap <- paste("Multinomial logit model coefficients and errors for light consumers. The McFadden $R^2$ value is", fit, " Total transactions (i.e. observations) for light users are reported in appendix one.")
-kable(tbl, caption = cap, digits = 3)
+cap <- paste("Multinomial logit model coefficients and errors for light consumers. The McFadden $R^2$ value is", fit)
+kable(tbl, caption = cap)
 ```
 
 ```{r choice_med, echo = FALSE}
 fit <- summary(choice_medium)$mfR2 %>% as.numeric() %>% round(3)
 tbl <- tidy_mlogit(choice_medium)
-cap <- paste("Multinomial logit model coefficients and errors for medium consumers. The McFadden $R^2$ value is", fit, " Total transactions (i.e. observations) for medium users are reported in appendix one.")
-kable(tbl, caption = cap, digits = 3)
+cap <- paste("Multinomial logit model coefficients and errors for medium consumers. The McFadden $R^2$ value is", fit)
+kable(tbl, caption = cap)
 ```
 
 
 ```{r choice_heavy, echo = FALSE}
 fit <- summary(choice_heavy)$mfR2 %>% as.numeric() %>% round(3)
 tbl <- tidy_mlogit(choice_heavy)
-cap <- paste("Multinomial logit model coefficients and errors for heavy consumers. The McFadden $R^2$ value is", fit, " Total transactions (i.e. observations) for heavy users are reported in appendix one.")
-kable(tbl, caption = cap, digits = 3)
+cap <- paste("Multinomial logit model coefficients and errors for heavy consumers. The McFadden $R^2$ value is", fit)
+kable(tbl, caption = cap)
 ```
 
 Whilst the exact coefficient values are different in each model, the general pattern is similar. Morrisons is somewhere in the middle of consumer preference. It is preferred over Aldi and Lidl in all segments. However, for light consumers all the other shops are _more_ preferred (their coefficients are greater), whereas for medium and heavy consumers, Morrisons is preferred over Sainsburys. 
 
 This tallies with the repeat purchase rate analysis earlier. For heavy and medium consumers Morrisons is able to compete with Asda and Tesco, but it struggles in the light consumer segment. For both light and medium consumers, increasing price is seen to have a negative impact on the likelihood of a visit. This is not the case for heavy consumers, which is unusual and is likely due to the absence of data on when purchases were _not_ made which may help to tease out the effect of price more readily.
 
-This analysis could be expanded with further data covering variables including total basket spend, product availability, household inventory levels, and household demographics; as well as with data on trips to the shop where a purchase of coffee was not made. 
+This analysis could be expanded with further data on things such as total basket spend, availability of each product, household inventory levels, and household demographics; as well as with data on trips to the shop where a purchase of coffee was not made. 
 
 ### Shop Traffic
 
 Shop traffic was also modelled at a segment level. There are limitations of these models as data on visits when coffee was not purchased are unavailable, and other details are missing, e.g. marketing levels, accurate price-reference effects, or the presence of loss-leader products in each shop. Were such data available, these models could be expanded and improved. For now they simply help to support the other analyses performed. 
 
-The results from each model are presented in tables seven, eight, and nine. 10,920 observations were used in the model (i.e. the total combinations of week, day, shop and brand per customer type).
+The results from each model are presented in tables seven, eight, and nine.
 
 ```{r traffic_light, echo = FALSE}
 tidy_poisson <- function(fit) {
@@ -333,19 +333,19 @@ fit %>%
          term = toproper(term))
 }  
 tidy_poisson(traffic_light) %>% kable(caption = "Poisson model parameters for light consumers' traffic model.",
-                                      col.names = c("Coefficient", "Estimate", "Std. Error", "t-Stat", "p-value"), digits = 4)  
+                                      col.names = c("Coefficient", "Estimate", "Std. Error", "t-Stat", "p-value"))  
 ```
 
 \pagebreak
 
 ```{r traffic_medium, echo = FALSE}
 tidy_poisson(traffic_medium) %>% kable(caption = "Poisson model parameters for medium consumers' traffic model.",
-                                       col.names = c("Coefficient", "Estimate", "Std. Error", "t-Stat", "p-value"), digits = 4)
+                                       col.names = c("Coefficient", "Estimate", "Std. Error", "t-Stat", "p-value"))
 ```
 
 ```{r traffic_heavy, echo = FALSE}
 tidy_poisson(traffic_heavy) %>% kable(caption = "Poisson model parameters for heavy consumers' traffic model.",
-                                       col.names = c("Coefficient", "Estimate", "Std. Error", "t-Stat", "p-value"), digits = 4)
+                                       col.names = c("Coefficient", "Estimate", "Std. Error", "t-Stat", "p-value"))
 ```
 
 The results are broadly similar across the three segments and tell a similar story as the choice models. For customers in the light segment, traffic is not predicted to be much higher for Morrisons than for Aldi and Lidl and the other shops are busier. For medium and heavy consumers Morrisons begins to compete with the other shops, especially Sainsburys and Asda. Price has a negative impact, indicating that visits are likely to be lower when prices are higher.
@@ -354,7 +354,7 @@ The results are broadly similar across the three segments and tell a similar sto
 
 There is a significant positive correlation between total market size and Morrisons' market share, so Morrisons may wish to exploit this by growing the market (perhaps by tempting non coffee-buying customers to purchase coffee) in order to increase their share, and thus revenue. 
 
-Morrisons has also increased its market share at the expense of Aldi and Lidl, Sainsburys, and Tesco. Aldi and Lidl are preferred by light consumers, with whom Morrisons competes more weakly (as seen in repeat purchase rates and the choice and traffic models). Given the reduced value of light consumers relative to medium and heavy (appendix one), Morrisons should focus on the medium and heavy segment in order to maximise their gains.
+Morrisons has also increased its market share at the expense of Aldi and Lidl, Sainsburys, and Tesco. Aldi and Lidl are preferred by light consumers, with whom Morrisons competes more weakly (as seen in repeat purchase rates and  the choice and traffic models). Given the reduced value of light consumers relative to medium and heavy (appendix one), Morrisons should focus on the medium and heavy segment in order to maximise their gains.
 
 Morrisons may wish to emulate behaviours of their main competitors, Sainsburys and Tesco, in order to take further market share. This could be done through similar offers, price matching or marketing campaigns. 
 
@@ -366,26 +366,9 @@ The analyses in this report should be expanded and developed, especially the cho
 
 # Appendices
 
-## Appendix One - Sales and spend by shop and by customer segment
+## Appendix One - Sales and spend by customer segment
 
-```{r sales_by_shop, echo = FALSE}
-coffee_clean %>% 
-  select(shop_desc_clean, transaction_id, netspend) %>% 
-  distinct() %>% 
-  group_by(shop_desc_clean) %>% 
-  summarise(sales = n(),
-            spend = sum(netspend)) %>%
-  arrange(-sales) %>% 
-  ungroup() %>% 
-  mutate(shop_desc_clean = toproper(shop_desc_clean),
-         sales = scales::comma(sales),
-         spend = scales::comma(spend)) %>% 
-  kable(col.names = c("Shop", "Total Sales", "Total Spend (£)"),
-        caption = "Total sales and spend per shop")
-```
-
-
-```{r sales_by_seg, echo = FALSE, message = FALSE}
+```{r sales_by_seg, echo = FALSE}
 coffee_clean %>% 
   select(house, cust_type, transaction_id, netspend) %>% 
   distinct() %>% 
@@ -394,16 +377,10 @@ coffee_clean %>%
             spend = sum(netspend)) %>%
   arrange(-sales) %>% 
   ungroup() %>% 
-  mutate(sales = scales::comma(sales),
+  mutate(cust_type = toproper(cust_type),
+         sales = scales::comma(sales),
          spend = scales::comma(spend)) %>% 
-  left_join(coffee_clean %>% 
-            select(house, cust_type) %>% 
-            distinct() %>% 
-            group_by(cust_type) %>% 
-            summarise(houses = n())) %>% 
-  mutate(cust_type = toproper(cust_type)) %>% 
-  select(cust_type, houses, sales, spend) %>% 
-  kable(col.names = c("Customer Segment", "Customers", "Total Sales", "Total Spend (£)"),
+  kable(col.names = c("Customer Segment", "Total Sales", "Total Spend (£)"),
         caption = "Total sales and spend per customer segment")
 ```
 
@@ -412,19 +389,19 @@ coffee_clean %>%
 ```{r share_correl_l, echo = FALSE}
 colnames(weekly_share_cor_l) <- gsub("Discounters", "Aldi & Lidl", colnames(weekly_share_cor_l))
 rownames(weekly_share_cor_l)<- colnames(weekly_share_cor_l)
-weekly_share_cor_l %>% kable(caption = "Pairwise weekly market share correlations for light consumers", digits = 4)
+weekly_share_cor_l %>% kable(caption = "Pairwise weekly market share correlations for light consumers")
 ```
 
 ```{r share_correl_m, echo = FALSE}
 colnames(weekly_share_cor_m) <- gsub("Discounters", "Aldi & Lidl", colnames(weekly_share_cor_m))
 rownames(weekly_share_cor_m)<- colnames(weekly_share_cor_m)
-weekly_share_cor_m %>% kable(caption = "Pairwise weekly market share correlations for medium consumers", digits = 4)
+weekly_share_cor_m %>% kable(caption = "Pairwise weekly market share correlations for medium consumers")
 ```
 
 ```{r share_correl_h, echo = FALSE}
 colnames(weekly_share_cor_h) <- gsub("Discounters", "Aldi & Lidl", colnames(weekly_share_cor_h))
 rownames(weekly_share_cor_h)<- colnames(weekly_share_cor_h)
-weekly_share_cor_h %>% kable(caption = "Pairwise weekly market share correlations for heavy consumers", digits = 4)
+weekly_share_cor_h %>% kable(caption = "Pairwise weekly market share correlations for heavy consumers")
 ```
 
 \pagebreak
@@ -450,8 +427,6 @@ switch_mat_h %>% kable(caption = "Switching matrix for heavy consumers")
 ```
 
 ## Appendix Four - Customer-segment level cooccurrence matrices
-
-Note that there are only 6 shops left in the data after the filtering described earlier, reducing the potential number of combinations of cooccurence. Additionally, in light of the total number of transactions (appendix one), it is clear that cooccurrence is a relatively rare phenomenon in this data.
 
 ```{r cooc_mat_l, echo = FALSE}
 cooccurence_l %>% kable(caption = "Cooccurrence matrix for light consumers")
