@@ -1,21 +1,18 @@
-# Get the text
-extracts <- emails$ExtractedBodyText
+# Remove "to" to get unique documents
+unqiues <- emails_clean %>% 
+            select(-to) %>% 
+            distinct()
+# Build a corpus
+hil_corp <- corpus(unqiues$body, docvars = unqiues[, c(2:6)],
+                   docnames = unqiues$DocNumber)
 
-# Find commonly-used words
-toks <- tokenize(extracts, removeNumbers = T, removePunct = T, 
-                 removeSeparators = T, removeHyphens = T)
-toks <- removeFeatures(toks, stopwords("english"))
-toks <- unlist(toks) 
-
-# find counts and props
-count_toks <- table(toks)
-prop_toks <- count_toks/sum(count_toks)
-
-
-# Build dfm
-extracts <- emails$ExtractedBodyText
-names(extracts) <- emails$DocNumber
-
-email_dfm <- dfm(extracts, ignoredFeatures = stopwords("english"))
+# Tokenise and remove stopwords
+hil_tok <- quanteda::tokenize(hil_corp, removeNumbers = T, removePunct = T, 
+                              removeSeparators = T, removeHyphens = T) %>% 
+            removeFeatures(c(stopwords("english"), "will"))
 
 
+# Translate to dfm and apply dict to get emotional content
+hil_dfm <- dfm(hil_tok, dictionary = liwc)
+
+summary(hil_corp)
