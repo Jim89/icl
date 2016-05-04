@@ -29,6 +29,9 @@ theme_jim <-  theme(legend.position = "bottom",
                     panel.background = element_rect(fill = "white", colour = "lightgrey"),
                     panel.border = element_rect(colour = "black", fill = NA))
 
+# Source user-defined functions
+source("./r/functions/search_in_emails.R")
+
 # Step 1 - run analysis step by step --------------------------------------
 
 source("./r/files/00_get_data.R")
