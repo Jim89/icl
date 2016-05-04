@@ -9,7 +9,7 @@ uniques <- emails_clean %>%
     distinct()
 
 # Build a corpus with quanteda
-hil_corp <- corpus(v$body, docvars = uniques[, c(2:6)],
+hil_corp <- corpus(uniques$body, docvars = uniques[, c(2:6)],
                    docnames = uniques$DocNumber)
 
 # Tokenise and remove stopwords from the corpus
