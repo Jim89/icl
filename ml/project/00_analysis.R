@@ -36,4 +36,6 @@ source("./r/functions/search_in_emails.R")
 
 source("./r/files/00_get_data.R")
 source("./r/files/01_to_from.R")
+source("./r/files/02_tokenise_texts.R")
+source("./r/files/03_country_matching.R")
 source("./r/files/10_clean_emails.R")
