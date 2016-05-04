@@ -8,20 +8,19 @@
 #LA is Los angeles and iso 2 for Lao
 #AQ is abbreviation of "As Quoted" and iso 2 for Antarctica
 
-# Set up country data
-cntry <- countrycode_data %>% select(country.name, iso2c, iso3c, regex)
+# Set up country data - remove records without ISO country code as they are
+# regions/no longer in existence and contaminate the data
+cntry <- countrycode_data %>% 
+            select(country.name, iso2c, iso3c, regex, continent, region) %>% 
+            na.omit()
 
-search_in_emails <- function(item, method = "in") {
-    # Perform basic text matching
-    if (method == "in") {
-    ans <- sapply(seq_along(hil_tok), function(x) item %in% hil_tok[[x]])
-    }
-    # Perform regex matching
-    if (method == "regex") {
-    ans <- sapply(seq_along(hil_tok), function(x) grepl(item, paste(hil_tok[[x]], collapse = " "), perl = T))
-    }
-    return(ans)
-}
+# Find countries that are words that may have been used and exclude them (no major countries)
+idx <- cntry$iso2c %in% c("RE", "PM", "FM", "TV", "LA", "AL", "BEN", "AQ")
+idx2 <- cntry$iso3c %in% c("RE", "PM", "FM", "TV", "LA", "AL", "BEN", "AQ")
+cntry <- cntry[!as.logical(idx + idx2), ]
+
+
+
 
 # Search for countries by name and ISO codes
 cntry_results <- search_in_emails(tolower(cntry$country.name))
@@ -30,6 +29,8 @@ iso3c_results <- search_in_emails(tolower(cntry$iso3c))
 
 # Combine direct results in to one table
 match_results <- cntry_results + iso2c_results + iso3c_results
+rownames(match_results) <- cntry$country.name
+colnames(match_results) <- names(hil_tok)
 
 # Have to use a slightly different method for regex matching, looping over the regex's
 regex_results <- lapply(seq_along(cntry$regex), 
@@ -50,5 +51,9 @@ cntry_matches <- t(cntry_matches)
 cntry_matches <- cntry_matches %>% 
                     as.data.frame() %>% 
                     dplyr::as_data_frame() %>% 
-                    mutate(doc = names(hil_tok))
-
+                    mutate(doc = names(hil_tok)) %>% 
+                    gather(cntry, matches, -doc) %>% 
+                    filter(matches > 0) %>% 
+                    select(-matches) %>% 
+                    left_join(cntry, by = c("cntry" = "country.name")) %>% 
+                    select(-c(iso2c, iso3c, regex))
