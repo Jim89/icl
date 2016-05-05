@@ -2,8 +2,8 @@
 # Step 0 - prep env -------------------------------------------------------
 
 
-# Step 1 - apply LIWC dictionary to corpus --------------------------------
-# Apply the dictionary
+# Step 1 - create dfm from corpus -----------------------------------------
+# Apply the dictionary in a new dfm
 hil_dfm_liwc <- dfm(hil_tok, dictionary = liwc)
 
 
