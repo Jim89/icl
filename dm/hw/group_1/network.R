@@ -8,12 +8,12 @@ graph_data <- lines %>%
               group_by(cust_id, recipnum) %>% 
               summarise(weight = n()) %>% 
               collect() %>% 
-              filter(weight > 10)
+              filter(weight > 5)
 
 graph <- graph_from_data_frame(graph_data)
 
-cl_walk <- cluster_walktrap(graph)
-members <- membership(cl_walk)
+# cl_walk <- cluster_walktrap(graph)
+# members <- membership(cl_walk)
 
 nw <- igraph_to_networkD3(graph, group = rep(1, V(graph) %>% length()))
 nw$links$value <- E(graph)$weight
