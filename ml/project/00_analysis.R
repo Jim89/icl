@@ -9,7 +9,6 @@ library(countrycode)
 library(igraph)
 library(networkD3)
 library(stringr)
-library(countrycode)
 library(ggplot2)
 
 # Set up theme object for prettier plots
@@ -31,6 +30,7 @@ theme_jim <-  theme(legend.position = "bottom",
 
 # Source user-defined functions
 source("./r/functions/search_in_emails.R")
+source("./r/functions/normalise.R")
 
 # Step 1 - run analysis step by step --------------------------------------
 
@@ -39,4 +39,7 @@ source("./r/files/01_to_from.R")
 source("./r/files/03_clean_emails.R")
 source("./r/files/04_tokenise_texts.R")
 source("./r/files/05_country_matching.R")
+source("./r/files/20_hil_dfm.R")
+source("./r/files/21_apply_dictionary.R")
+source("./r/files/30_network_analysis.R")
 
