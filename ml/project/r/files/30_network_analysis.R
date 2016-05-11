@@ -11,7 +11,7 @@ edgelist <- to_from %>%
     summarise(emails = n(),
               prop_redacted = mean(redacted)) %>% 
     na.omit() %>% 
-    filter(emails > 0)
+    filter(emails > 1)
 
 
 # Create the igraph object for further analysis
@@ -21,38 +21,37 @@ graph <- graph_from_data_frame(edgelist)
 # Step 2 - perform some analysis on the graph -----------------------------
 # Centrality
 centralities <- eigen_centrality(graph, weights = E(graph)$emails)
+V(graph)$eig <- centralities$vector
 
 # Betweenness
 betweens <- betweenness(graph, weights = E(graph)$emails)
+V(graph)$bet <- betweens
 
 # Closeness
 closes <- closeness(graph, weights = E(graph)$emails)
-
+V(graph)$close <- closes
 
 # Step 3 - try to find clusters in the graph ------------------------------
 
+cl_edge_bet <- cluster_edge_betweenness(graph)
 cl_walk <- cluster_walktrap(graph)
-members <- membership(cl_walk)
 
-# Convert to a networkD3 data structure for D3 plotting
-networks <- igraph_to_networkD3(graph, group = members)
+V(graph)$cl_walk <- membership(cl_walk)
+V(graph)$cl_edge_bet <- membership(cl_edge_bet)
 
-# Add link weights and optionally normalise
-networks$links$value <- E(graph)$emails %>% normalise
+# Step 4 - convert back to df ---------------------------------------------
 
-# Plot the network
-forceNetwork(Links = networks$links,
-             Nodes = networks$nodes,
-             colourScale = JS("d3.scale.category20()"),
-             Source = "source",
-             Target = "target",
-             Value = "value",
-             NodeID = "name",
-             Group = "group",
-             charge = -250,
-             linkColour = "grey",
-             opacity = 1,
-             legend = F,
-             bounded = F,
-             zoom = TRUE)
+from_stats <- data_frame(from = names(V(graph)),
+                         eig = V(graph)$eig,
+                         bet = V(graph)$bet,
+                         close = V(graph)$close,
+                         cl_eb = V(graph)$cl_edge_bet,
+                         cl_walk = V(graph)$cl_walk) %>% 
+                mutate(eig_norm = normalise(eig),
+                       bet_norm = normalise(bet),
+                       close_norm = normalise(close))
 
+                         
+# Step 5 - clean up -------------------------------------------------------
+rm(centralities, betweens, closes, cl_walk, cl_edge_bet)
+gc()
