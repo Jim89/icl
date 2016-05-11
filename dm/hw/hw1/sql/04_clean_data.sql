@@ -4,7 +4,7 @@ select
 	 ltrim(rtrim(cust_id)) as cust_id
 	,ltrim(rtrim(ordernum)) as ordernum
 	,cast(order_date as date) as order_date
-	,linedollars as line_dollars,lk.
+	,linedollars as line_dollars
 	,ltrim(rtrim(gift)) as gift
 	,ltrim(rtrim(recipnum)) as recipnum
 into lines_clean
