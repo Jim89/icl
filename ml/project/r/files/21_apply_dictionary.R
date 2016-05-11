@@ -4,7 +4,7 @@
 
 # Step 1 - create dfm from corpus -----------------------------------------
 # Apply the dictionary in a new dfm
-hil_dfm_liwc <- dfm(hil_tok, dictionary = liwc)
+hil_dfm_liwc <- dfm(hil_tok, dictionary = liwc, verbose = FALSE)
 
 
 # Step 2 - extract further features for analysis --------------------------

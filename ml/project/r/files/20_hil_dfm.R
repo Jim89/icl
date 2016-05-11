@@ -4,12 +4,12 @@
 
 # Step 1 - create dfm from corpus -----------------------------------------
 # Create the bare dfm
-hil_dfm <- dfm(hil_tok)
-topfeatures(hil_dfm, 20)
+hil_dfm <- dfm(hil_tok, verbose = FALSE)
+
 
 # Create a relative-frequency weighted dfm
 hil_dfm_rel <- weight(hil_dfm, type = "relFreq")
-topfeatures(hil_dfm_rel, 20)
+
 
 # Step 2 - extract features for further analysis --------------------------
 # Count the appearances of features (words) across all documents
