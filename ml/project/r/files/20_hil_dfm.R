@@ -17,10 +17,11 @@ feature_counts <- colSums(hil_dfm) %>%
                     as.matrix(ncol = 1) %>% 
                     data.frame(count = ., row.names = rownames(.)) %>% 
                     add_rownames("feature") %>% 
-                    arrange(-count)
+                    arrange(-count) %>% 
+                    mutate(freq = count/sum(count)*100)
 
 # Find only those words that are not too common, but not too rare
-to_keep <- feature_counts %>% filter(count > 5 & count <= 500) %>% .$feature 
+to_keep <- feature_counts %>% filter(freq > .05) %>% .$feature 
 
 # Only keep those words
 hil_dfm_words <- hil_dfm[, to_keep]            
