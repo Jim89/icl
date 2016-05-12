@@ -7,10 +7,13 @@ graph_data <- lines %>%
                      cust_id != recipnum) %>% 
               group_by(cust_id, recipnum) %>% 
               summarise(weight = n()) %>% 
-              collect() %>% 
-              filter(weight > 5)
+              collect()
 
-graph <- graph_from_data_frame(graph_data)
+to_plot <- graph_data %>% filter(weight >= 5) %>% 
+            bind_rows(graph_data %>% filter(cust_id == "33784549")) %>% 
+            distinct()
+
+graph <- graph_from_data_frame(to_plot)
 
 # cl_walk <- cluster_walktrap(graph)
 # members <- membership(cl_walk)
