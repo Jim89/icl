@@ -1,0 +1,298 @@
+---
+title: "BS1809 Individual Homework 2"
+author: "Jim Leach"
+date: "17 May 2016"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    code_folding: hide
+    theme: spacelab 
+---
+
+# Introduction
+
+This document presents the results of the second exercise for BS1809 - Digital Marketing. The task was to use a set of data on customer retention to attempt to build a predictive model for which customers would "churn" (i.e. not be retained).
+
+The data were briefly explored before a number of models were built to perform this prediction.
+
+## This document
+
+This document is split in to four sections. The first covers some brief data explorations that were performed, the middle two cover the models that were built, and the final section presents a brief comparison of the models.
+
+```{r setup, message = FALSE, warning = FALSE}
+# Load packages
+library(readxl)
+library(dplyr)
+library(randomForest)
+library(broom)
+library(knitr)
+library(ggplot2)
+
+# Get the data
+train <- read_excel("../../data/hw2/churn.xlsx", sheet = 1, na = "#N/A")
+test <- read_excel("../../data/hw2/churn.xlsx", sheet = 2, na = "#N/A")
+
+# Clean the data
+train <- train %>% 
+          mutate(retained = as.factor(retained),
+                 favday = as.factor(favday),
+                 city = as.factor(city),
+                 paperless = as.factor(paperless),
+                 refill = as.factor(refill),
+                 doorstep = as.factor(doorstep)) %>% 
+          select(-train) %>% 
+          na.omit()
+
+
+test <- test %>% 
+  mutate(retained = as.factor(retained),
+         favday = as.factor(favday),
+         city = as.factor(city),
+         paperless = as.factor(paperless),
+         refill = as.factor(refill),
+         doorstep = as.factor(doorstep)) %>% 
+  select(-train) %>% 
+  na.omit()
+```
+
+# Section 1 - Data exploration
+
+```{r field_plot}
+field_plot <- function(data, field, xlab, bins = 30) {
+  data %>% 
+    mutate(retained = as.character(retained),
+           retained = gsub("0", "Churned", retained),
+           retained = gsub("1", "Retained", retained)) %>% 
+   ggplot(aes_string(x = field)) +
+    geom_histogram(aes(fill = retained), bins = bins, colour = "white") +
+    facet_grid(retained ~ .) +
+    xlab(xlab) +
+    ylab("Records") +
+    guides(fill = guide_legend(title = "")) +
+    scale_y_continuous(labels = scales::comma) +
+    scale_fill_brewer(type = "qual", palette = "Dark2") +
+    theme(legend.position = "bottom",
+          axis.text.y = element_text(size = 16, colour = "black"),
+          axis.text.x = element_text(size = 16, colour = "black"),
+          legend.text = element_text(size = 16),
+          legend.title = element_text(size = 16),
+          title = element_text(size = 16),
+          strip.text = element_text(size = 16, colour = "black"),
+          strip.background = element_rect(fill = "white"),
+          panel.grid.minor.x = element_blank(),
+          panel.grid.major.x = element_line(colour = "grey", linetype = "dotted"),
+          panel.grid.minor.y = element_line(colour = "lightgrey", linetype = "dotted"),
+          panel.grid.major.y = element_line(colour = "grey", linetype = "dotted"),
+          panel.margin.y = unit(0.1, units = "in"),
+          panel.background = element_rect(fill = "white", colour = "lightgrey"),
+          panel.border = element_rect(colour = "black", fill = NA))
+    
+}  
+
+field_plot_disc <- function(data, field, xlab) {
+  data %>% 
+    mutate(retained = as.character(retained),
+           retained = gsub("0", "Churned", retained),
+           retained = gsub("1", "Retained", retained)) %>% 
+    ggplot(aes_string(x = field)) +
+    geom_bar(aes(fill = retained), stat = "count", colour = "white") +
+    facet_grid(retained ~ .) +
+    xlab(xlab) +
+    ylab("Records") +
+    guides(fill = guide_legend(title = "")) +
+    scale_y_continuous(labels = scales::comma) +
+    scale_fill_brewer(type = "qual", palette = "Dark2") +
+    theme(legend.position = "bottom",
+          axis.text.y = element_text(size = 16, colour = "black"),
+          axis.text.x = element_text(size = 16, colour = "black"),
+          legend.text = element_text(size = 16),
+          legend.title = element_text(size = 16),
+          title = element_text(size = 16),
+          strip.text = element_text(size = 16, colour = "black"),
+          strip.background = element_rect(fill = "white"),
+          panel.grid.minor.x = element_blank(),
+          panel.grid.major.x = element_line(colour = "grey", linetype = "dotted"),
+          panel.grid.minor.y = element_line(colour = "lightgrey", linetype = "dotted"),
+          panel.grid.major.y = element_line(colour = "grey", linetype = "dotted"),
+          panel.margin.y = unit(0.1, units = "in"),
+          panel.background = element_rect(fill = "white", colour = "lightgrey"),
+          panel.border = element_rect(colour = "black", fill = NA))
+  
+}  
+```
+
+Some plots were made visualising the individual fields of the training data to understand which might be suitable for use in the predicted model.
+
+## Field distrubtion plots {.tabset}
+
+In the following tabs are plots that show the split of customers across the various features by their retention status.
+
+### Creation date
+
+```{r creation}
+field_plot(train, "created", "Date created", 50)
+```
+
+### First order date
+
+```{r first_order}
+field_plot(train, "firstorder", "Date first order", 50)
+```
+
+### Last order
+
+```{r last_order}
+field_plot(train, "lastorder", "Date last order", 50)
+```
+
+### Emails Sent
+
+```{r emails}
+field_plot(train, "esent", "Emails sent", 50)
+```
+
+### Emails opened (rate)
+
+```{r emails_op}
+field_plot(train, "eopenrate", "Proportion emails opened", 50)
+```
+
+### Emails clicked (rate)
+
+```{r email_click}
+field_plot(train, "eclickrate", "Proportion emails clicked", 50)
+```
+
+### Average Order
+
+```{r avg_order}
+field_plot(train, "avgorder", "Average order size", 50)
+```
+
+### Order frequency
+
+```{r orderfreq}
+field_plot(train, "ordfreq", "Order frequency", 50)
+```
+
+### Paperless communications
+
+```{r paperless}
+field_plot_disc(train, "paperless", "Paperless")
+```
+
+### Automatic refill
+
+```{r refill}
+field_plot_disc(train, "refill", "Automatic refill")
+```
+
+### Doorstep delivery
+
+```{r doorstep}
+field_plot_disc(train, "doorstep", "Doorstep delivery")
+```
+
+### Favourite delivery day
+
+```{r deliv}
+field_plot_disc(train, "favday", "Favourite delivery day") + 
+  theme(axis.text.x = element_text(angle = 90))
+```
+
+### City
+
+```{r city}
+field_plot_disc(train, "city", "City of residence")
+```
+
+## Exploration summary
+
+Of the various features, only the number of emails sent, and the option for paperless communications appears to differ substantially between retained and churned customers. As such, no specific features were chosen for the prediction algorithms developed below. Feature selection was instead performed by stepwise methods (for the logistic regression) and as part of the algorithmic process (for random forest).
+
+Only the 
+
+# Section 2 - Logisitic regression
+
+Stepwise logitstic regression was used to build a predicted model using the training data, beginning with a model that included all possible features.
+
+```{r fit_logit, warning = FALSE, message = FALSE}
+logit_all <- glm(retained ~ ., family = "binomial", 
+                 data = train %>% select(-custid))
+
+
+logit_stepped <- step(logit_all, direction = "both", trace = 0)
+```
+
+The final model produced by the stepwise process is summarised below.
+
+```{r summarise_logit}
+logit_stepped %>% tidy() %>% kable(col.names = c("Term", "Estimate", "Std. Error",
+                                                 "t-Stat.", "p-Value"),
+                                   digits = 3,
+                                   caption = "Table 1: Logistic Regression Coefficients")
+
+logit_stepped %>% glance() %>% kable(col.names = c("Null deviance", "Deg. Freedom Null",
+                                                   "Log-Likelihood", "AIC", "BIC",
+                                                   "Deviance", "Deg. Freedom Residual"),
+                                     digits = 3,
+                                     caption = "Table 2: Logistic Regression Model fit")
+```
+
+
+This model was then used to make predictions on the test data. If the predicted probability of retention was greater than or equal to 0.5 then the customer was predicted to be retained, otherwise they were predicted to churn.
+
+```{r logit_pred}
+logit_predict <- predict(logit_stepped, newdata = test, type = "response")
+logit_predict[logit_predict >= .5] <- 1
+logit_predict[logit_predict < .5] <- 0
+
+logit_conf <- table(logit_predict, test$retained)
+logit_accuracy <- sum(diag(logit_conf)) / sum(logit_conf)
+```
+
+Performing such predictions, the accuracy of the logistic regression model on the test data was found to be `r scales::percent(logit_accuracy)`. The confusion matrix for this model is displayed below.
+
+```{r logit_conf}
+logit_conf %>% kable(caption = "Table 3: Logitistic regression out-of-sample confusion matrix. Rows represent the predicted labels and columns the actual values.")
+```
+
+
+# Section 3 - Random Forest
+
+In a similar process, a random forest algorithm was applied to the training data in order to try to build a similar model. As with the logistic regression, all features were used to generate the model.
+
+```{r rf}
+rf <- randomForest(retained ~ ., 
+                   data = train %>% select(-custid), 
+                   ntree = 500, 
+                   importance = TRUE)
+```
+
+Due to the way that the random forest algorithm is implemented, using bootstrapped samples of both training samples _and_ features, it is possible for the algorithm to generate an estimate of the out-of-sample performance after training the model on the training data. This estimate is presented below.
+
+```{r rf_oos_conf_sample}
+rf$confusion %>% kable(col.names = c("0", "1", "Class Error"),
+                       digits = 3,
+                       caption = "Table 4: Random forest in-sample confusion matrix estimate. Rows represent the predicted labels and columns the actual values.")
+```
+
+This seems to suggest that the accuracy of the model will be good on the test data. Predictions were made using the test data, and the true out-of-sample confusion matrix and accuracy are reported below.
+
+```{r rf_acc}
+rf_predict <- predict(rf, newdata = test)
+
+rf_conf <- table(rf_predict, test$retained)
+rf_accuracy <- sum(diag(rf_conf)) / sum(rf_conf)
+
+rf_conf %>% kable(caption = "Table 5: Random forest out-of-sample confusion matrix. Rows represent the predicted labels and columns the actual values.")
+```
+
+This is a much worse performance than would have been expected based on the training estimate, providing an accuracy of just `r scales::percent(rf_accuracy)`.
+
+# Section 4 - Comparison of models
+
+When considering why the random forest algorithm performed much more poorly than logistic regression (which is not expected, typically random forest is a robust approach), it was discovered that the temporal aspects of the training and testing data are very different. The data date fields (`created`, `firstorder`, and `lastorder`) range from `r min(min(train$created), min(train$firstorder), min(train$lastorder))` to `r max(max(train$created), max(train$firstorder), max(train$lastorder))` in the _training_ data whilst the _test_ data date fields range from `r min(min(test$created), min(test$firstorder), min(test$lastorder))` to `r max(max(test$created), max(test$firstorder), max(test$lastorder))` (clearly there is potentially a data quality issue for the dates in the testing data).
+
+The logistic regression is unaffected by these differences, with zero-valued coefficients for the date fields. Clearly this is not the case for the random forest model, which has been negatively impacted by the differences (as all other aspects of the model are identical). The random forest model should not be adjusted (as this would potentially cause overfitting) but it would be interesting to observe if the same differences in accuracy occurred if the training and test data were more balanced temporally. 
