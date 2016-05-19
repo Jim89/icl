@@ -33,5 +33,14 @@ data <- from_content %>%
     summarise(uses = sum(uses))
 
 d3wordcloud(data$word, data$uses, font = "Courier New", padding = 0.5,
-            size.scale = "linear", colors = brewer.pal(8, name = "Dark2"),
+            size.scale = "linear", 
+            tooltip = TRUE, spiral = "rectangular")
+
+data <- from_content %>% 
+    filter(prob <= .25) %>% 
+    group_by(word) %>% 
+    summarise(uses = sum(uses))
+
+d3wordcloud(data$word, data$uses, font = "Courier New", padding = 0.5,
+            size.scale = "linear",
             tooltip = TRUE, spiral = "rectangular")
