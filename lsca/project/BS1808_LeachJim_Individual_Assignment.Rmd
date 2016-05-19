@@ -1,0 +1,335 @@
+---
+title: "BS1808 Logisitics and Supply Chain Analytics Individual Assignment"
+author: "Jim Leach"
+date: "19 May 2016"
+output:
+  html_document:
+    code_folding: hide
+    number_sections: yes
+    theme: spacelab
+    toc: yes
+    toc_float: yes
+  pdf_document:
+    toc: yes
+  word_document:
+    toc: yes
+---
+
+# Introduction
+
+## Project overview
+
+For this project data from a large fast-food restaurant chain in the U.S.A. were provided. The data covered approximately 4 months of data from March until June 2015 in four restaurants: two in Berkley, California, and two in New York, New York. The data provided transaction information (e.g. which menu items were purchased and in what quantities), ingredient lists for all menu items, and associated metadata (e.g. store location, store type etc). 
+
+The goal of the project was to forecast demand for two specific ingredients (lettuce and tomatoes) for each of the the four locations. The forecast period was two weeks following the end of the data (from 2015-06-16 to 2015-06-29). 
+
+## This document
+
+This document is split in to TODO distinct sections, TODO. 
+
+The `R` code used to perform these analyses has been provided as supplementary files, and sections of the `R` code can be viewed in this report using the _Code_ buttons to toggle code viewing.
+
+This `HTML` report is best viewed using a modern web browser such as Mozilla Firefox or Google Chrome.
+
+```{r prep, echo = TRUE, message=FALSE}
+# Load packages
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+
+# Set up theme object for prettier plots
+theme_jim <-  theme(legend.position = "bottom",
+                    axis.text.y = element_text(size = 16, colour = "black"),
+                    axis.text.x = element_text(size = 16, colour = "black"),
+                    legend.text = element_text(size = 16),
+                    legend.title = element_text(size = 16),
+                    title = element_text(size = 16),
+                    strip.text = element_text(size = 16, colour = "black"),
+                    strip.background = element_rect(fill = "white"),
+                    panel.grid.minor.x = element_blank(),
+                    panel.grid.major.x = element_line(colour = "grey", linetype = "dotted"),
+                    panel.grid.minor.y = element_line(colour = "lightgrey", linetype = "dotted"),
+                    panel.grid.major.y = element_line(colour = "grey", linetype = "dotted"),
+                    panel.margin.y = unit(0.1, units = "in"),
+                    panel.background = element_rect(fill = "white", colour = "lightgrey"),
+                    panel.border = element_rect(colour = "black", fill = NA))
+
+# Source the data from the databse
+db <- src_postgres("lsca")
+
+# Function that takes a string and converts it in to "proper case" (i.e.
+# the first letter is capitalised, all remaining letters are lower case)
+# N.b. for multi-word strings, only the first word will be affected
+toproper <- function(x) { 
+  first <- substring(x, 1, 1) %>% toupper()
+  rest <- substring(x, 2) %>% tolower()
+  whole <- paste0(first, rest)
+  return(whole)
+}
+
+# Set lm tidy coef names
+tidy_names <- c("Term", "Estimate", "Std. Error", "t-Stat.", "p-Value")
+```
+
+# Data preparation and Exploration
+
+## Loading data
+
+The data were loaded in to a `Postgresql` database for storage and handling.
+
+```{r load_data, eval = FALSE}
+# Load packages for reading data
+library(readr)
+library(readxl)
+
+# Read in the data
+ingredients <- read_csv("./data/hw/ingredients.csv")
+menu_items <- read_csv("./data/hw/menu_items.csv")
+menuitem <-  read_csv("./data/hw/menuitem.csv") %>% mutate(date = lubridate::ymd(date))
+portion_uom_types <- read_csv("./data/hw/portion_uom_types.csv")
+pos_ordersale <- read_csv("./data/hw/pos_ordersale.csv") %>% mutate(date = lubridate::ymd(date))
+recipe_ingredient_assignments <- read_csv("./data/hw/recipe_ingredient_assignments.csv")
+recipe_sub_recipe_assignments <- read_csv("./data/hw/recipe_sub_recipe_assignments.csv")
+recipes <- read_csv("./data/hw/recipes.csv")
+store_restaurant <- read_excel("./data/hw/store_restaurant.xlsx")
+sub_recipe_ingr_assignments <- read_csv("./data/hw/sub_recipe_ingr_assignments.csv")
+sub_recipes <- read_csv("./data/hw/sub_recipes.csv")
+
+# Set all field names to lowercase for easier typing later
+colnames(ingredients) <- colnames(ingredients) %>% tolower()
+colnames(menu_items) <- colnames(menu_items) %>% tolower()
+colnames(menuitem) <- colnames(menuitem) %>% tolower()
+colnames(portion_uom_types) <- colnames(portion_uom_types) %>% tolower()
+colnames(pos_ordersale) <- colnames(pos_ordersale) %>% tolower()
+colnames(recipe_ingredient_assignments) <- colnames(recipe_ingredient_assignments) %>% tolower()
+colnames(recipe_sub_recipe_assignments) <- colnames(recipe_sub_recipe_assignments) %>% tolower()
+colnames(recipes) <- colnames(recipes) %>% tolower()
+colnames(store_restaurant) <- colnames(store_restaurant) %>% tolower()
+colnames(sub_recipe_ingr_assignments) <- colnames(sub_recipe_ingr_assignments) %>% tolower()
+colnames(sub_recipes) <- colnames(sub_recipes) %>% tolower()
+
+# Load the data to the database
+tmp <- copy_to(db, ingredients, temporary = FALSE)
+tmp <- copy_to(db, menu_items, temporary = FALSE)
+tmp <- copy_to(db, menuitem, temporary = FALSE)
+tmp <- copy_to(db, portion_uom_types, temporary = FALSE)
+tmp <- copy_to(db, pos_ordersale, temporary = FALSE)
+tmp <- copy_to(db, recipe_ingredient_assignments, temporary = FALSE)
+tmp <- copy_to(db, recipe_sub_recipe_assignments, temporary = FALSE)
+tmp <- copy_to(db, recipes, temporary = FALSE)
+tmp <- copy_to(db, store_restaurant, temporary = FALSE)
+tmp <- copy_to(db, sub_recipe_ingr_assignments, temporary = FALSE)
+tmp <- copy_to(db, sub_recipes, temporary = FALSE)
+```
+
+After loading the data to the database, `R` scripts were run to connect to the database and make it available in `R`.
+
+```{r get_data}
+
+# Set up sql command to get all relevant tables
+sql <- sql("select * from information_schema.tables where table_schema = 'public'")
+
+# Get the set of tables
+tbls <- tbl(db, sql) %>% collect() %>% .$table_name
+
+# Loop over table names to pull in the data
+for(i in seq_along(tbls)) {
+  assign(tbls[i], tbl(db, tbls[i]))
+}
+
+# Clean up
+rm(sql, tbls, i)
+```
+
+As sales, recipes, sub-recipes and ingredients were all stored in separate tables, several steps were required to create a view of the demand for lettuce and tomato on a single day. 
+
+## Ingredient requirements
+
+Firstly, all recipies containing either tomato or lettuce were found from the data, discarding other recipes (as they were not relevant). The amount of lettuce and tomato required for each recipe was found. As some recipies listed the amount in ounces and others in grams, the amount required for each recipe was standardised to be measure in grams. This produced a clean data set that listed, for recipies requiring either lettuce _or_ tomato, the total amounts of lettuce and tomato required in each recipe. 
+
+```{r recipies_to_ingredients, message = FALSE}
+tom_let_recipes <- recipes %>% 
+  left_join(recipe_ingredient_assignments) %>%
+  left_join(ingredients) %>%
+  select(recipeid,
+         ingredientid,
+         quantity,
+         ingredientname,
+         portionuomtypeid) %>%
+  left_join(portion_uom_types) %>%
+  collect() %>%
+  mutate(tom = ifelse(grepl("tomato|Tomato", ingredientname), 1, 0),
+         let = ifelse(grepl("lettuce|Lettuce", ingredientname), 1, 0)) %>%
+  filter(tom == 1 | let == 1) %>% 
+  select(recipeid,
+         ingredientname,
+         quantity,
+         portiontypedescription,
+         tom,
+         let) %>% 
+  mutate(quantity_clean = ifelse(portiontypedescription == "Gram",
+                                 quantity,
+                                 28.3495 * quantity),
+         ingredient = ifelse(tom == 1, "tomato", "lettuce")) %>% 
+  select(recipeid, ingredient, quantity_clean) %>% 
+  spread(ingredient, quantity_clean) %>% 
+  mutate(lettuce = ifelse(is.na(lettuce), 0, lettuce),
+         tomato = ifelse(is.na(tomato), 0, tomato))
+```
+
+A similar process was performed for all _sub_-recipies containing either tomato or lettuce. The amount of lettuce and tomato required for each subrecipe was found and standardised to grams. 
+
+```{r subrecipes_to_ingredients, message = FALSE}
+tom_let_sub_recipes <- sub_recipes %>% 
+  left_join(sub_recipe_ingr_assignments) %>% 
+  left_join(ingredients) %>% 
+  select(subrecipeid,
+         ingredientid,
+         quantity,
+         ingredientname,
+         portionuomtypeid) %>% 
+  left_join(portion_uom_types) %>%
+  collect() %>% 
+  mutate(tom = ifelse(grepl("tomato|Tomato", ingredientname), 1, 0),
+         let = ifelse(grepl("lettuce|Lettuce", ingredientname), 1, 0)) %>%
+  filter(tom == 1 | let == 1) %>% 
+  select(subrecipeid,
+         ingredientname,
+         quantity,
+         portiontypedescription,
+         tom,
+         let) %>% 
+  mutate(quantity_clean = ifelse(portiontypedescription == "Gram",
+                                 quantity,
+                                 28.3495 * quantity),
+         ingredient = ifelse(tom == 1, "tomato", "lettuce")) %>% 
+  select(subrecipeid, ingredient, quantity_clean) %>% 
+  spread(ingredient, quantity_clean) %>% 
+  mutate(lettuce = ifelse(is.na(lettuce), 0, lettuce),
+         tomato = ifelse(is.na(tomato), 0, tomato))
+```
+
+The linkage between recipe and sub-recipes was then used to calculate, for each recipe, the total amounts of lettuce and tomato required by the sub-recipe(s) beneath it.
+
+```{r recipe_to_sub_reqs, message = FALSE}
+recipe_to_sub_tom_let <- recipe_sub_recipe_assignments %>% 
+  select(recipeid, subrecipeid, factor) %>% 
+  inner_join(tom_let_sub_recipes, copy = T) %>% 
+  mutate(lettuce = lettuce * factor,
+         tomato = tomato * factor) %>% 
+  select(recipeid, subrecipeid, lettuce, tomato) %>% 
+  rename(sub_let = lettuce,
+         sub_tom = tomato) %>% 
+  collect() %>% 
+  group_by(recipeid) %>% 
+  summarise(sub_let = sum(sub_let, na.rm = T),
+            sub_tom = sum(sub_tom, na.rm = T))
+```
+
+The linkage between recipe and sub-recipe was then used to calculate the _total_ lettuce and tomato requirements for each recipe, i.e. combining the requirements of each recipe, as well as the requirements of any sub-recipes beneath each recipe. These data can be seen in table one.
+
+```{r recipes_to_tom_let, message = FALSE}
+recipes_to_tom_let <- tom_let_recipes %>% 
+  full_join(recipe_to_sub_tom_let) %>% 
+  select(recipeid, lettuce, tomato, sub_let, sub_tom) %>% 
+  rowwise() %>% 
+  mutate(total_lettuce = sum(lettuce, sub_let, na.rm = T),
+         total_tomato = sum(tomato, sub_tom, na.rm = T)) %>% 
+  select(recipeid, total_lettuce, total_tomato) %>% 
+  collect()
+
+DT::datatable(recipes_to_tom_let, 
+              colnames = c("Recipe ID", "Lettuce (g)", "Tomato (g)"),
+              caption = "Table 1: Total lettuce and tomato requirements in grams for all recipes with at least some requiement for either ingredient.")
+```
+
+## Orders requirements
+
+The lettuce and tomato requirements for each menu item were then determined, based on the recipe(s) requirements for each item.
+
+```{r menu_items_to_reqs, message = FALSE}
+menu_items_to_tom_let <- menu_items %>% 
+  collect() %>% 
+  inner_join(recipes_to_tom_let)
+```
+
+The linkage of orders to menu items was then used to determine the lettuce and tomato requirements for each order, based on the items selected in each order, and the number of each item selected (for example, requirements would double for the same item order twice within one order).
+
+```{r orders_to_reqs, message = FALSE}
+# Use menuitem to link ordersale md5 IDs to total lettuce and tomato requirements
+let_tom_reqs <- menuitem %>%
+  select(md5key_ordersale, quantity, plu, id, date) %>% 
+  collect() %>% 
+  inner_join(menu_items_to_tom_let, by = c("plu" = "plu", 
+                                           "id" = "menuitemid")) %>% 
+  mutate(lettuce = quantity * total_lettuce,
+         tomato = quantity * total_tomato) %>% 
+  select(md5key_ordersale, lettuce, tomato) %>% 
+  group_by(md5key_ordersale) %>% 
+  summarise(lettuce = sum(lettuce),
+            tomato = sum(tomato))
+
+# Link lettuce and tomato requirements to sales
+sales_to_demand <- pos_ordersale %>% 
+  collect() %>% 
+  inner_join(let_tom_reqs)
+```
+
+The daily demand of lettuce and tomato at each store was then determined via a simple summarisation process.
+
+```{r daily_demand}
+# Summarise by data to create ts
+daily_demand <- sales_to_demand %>% 
+  group_by(storenumber, date) %>% 
+  summarise(lettuce = sum(lettuce),
+            tomato = sum(tomato)) %>% 
+  mutate(store = as.character(storenumber)) %>% 
+  left_join(store_restaurant, by = c("storenumber" = "store_number"), copy = T) %>% 
+  mutate(store_address1 = stringr::str_trim(store_address1)) %>% 
+  ungroup()
+```
+
+## Visualising demand {.tabset}
+
+The daily demand of lettuce and tomato at each of the four restaurants (each small multiple in the plot) in the data was visualised in order to understand the structure of the data a little better. 
+
+There does not appear to be a _strong_ trend in either Californian or New York restaurants. Restaurant 20974 initially shows very low demand for both lettuce and tomato, before picking up to show demand comparable to the other stores. There is clearly some seasonality in the demand within Californian restaurants which appears to be at a weekly level. Such a strong pattern of seasonality is (interestingly) _not_ observed for the restaurants in New York.
+
+### Tomato
+
+```{r vis_tom_ts, fig.cap = "Figure 1: Daily demand for tomatoes,  split by restaurant.", fig.align="centre", out.width=800, out.height=900}
+daily_demand %>% 
+  ggplot(aes(x = date, y = tomato, colour = store_state)) +
+  geom_line(size = 1.25) +
+  scale_x_date(date_breaks = "2 week") +
+  scale_color_brewer(type = "qual", palette = "Dark2") +
+  facet_grid(store ~ .) +
+  guides(colour = guide_legend(title = "Store state")) +
+  xlab("") +
+  ylab("Demand for tomato (g)") +
+  theme_jim + 
+  scale_y_continuous(labels = scales::comma) +
+  theme(axis.text.x = element_text(angle = 45,
+                                   vjust = 0.5,
+                                   hjust = .5))
+```
+
+### Lettuce
+
+```{r vis_let_ts, fig.cap = "Figure 2: Daily demand for lettuce, split by restaurant.", fig.align="centre", out.width=800, out.height=900}
+daily_demand %>% 
+  ggplot(aes(x = date, y = lettuce, colour = store_state)) +
+  geom_line(size = 1.25) +
+  scale_x_date(date_breaks = "2 week") +
+  scale_color_brewer(type = "qual", palette = "Dark2") +
+  facet_grid(store ~ .) +
+  guides(colour = guide_legend(title = "Store state")) +
+  xlab("") +
+  ylab("Demand for lettuce (g)") +
+  theme_jim + 
+  scale_y_continuous(labels = scales::comma) +
+  theme(axis.text.x = element_text(angle = 45,
+                                   vjust = 0.5,
+                                   hjust = .5))
+```
+
