@@ -15,7 +15,7 @@ hil_corp <- corpus(uniques$body, docvars = uniques[, c(2:6)],
 # Tokenise and remove stopwords from the corpus
 hil_tok <- quanteda::tokenize(hil_corp, removeNumbers = T, removePunct = T, 
                               removeSeparators = T, removeHyphens = T) %>% 
-    removeFeatures(c(stopwords("english"), "will", "can", "ago"))
+    removeFeatures(c(stopwords("english"), "will", "can", "ago", "also"))
 
 # Step 2 - clean up -------------------------------------------------------
 rm(uniques)
