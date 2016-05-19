@@ -7,32 +7,29 @@ tomato_ts <- ts(daily_demand$tomato,
                 start = c(2005, 64),
                 frequency = 365.25)
 
-library(ggplot2)
 
-daily_demand %>% 
-  ggplot(aes(x = date, y = lettuce), group = 1) +
-  geom_line(colour = "steelblue", size = 1) +
-  scale_x_date(date_breaks = "1 week") +
-  xlab("Date") +
-  ylab("Demand for lettuce") +
-  scale_y_continuous(labels = scales::comma) +
-  theme(axis.text.x = element_text(angle = 45,
-                                   vjust = 0.5,
-                                   hjust = .5,
-                                   debug = F)) +
-  theme_jim
+make_ts <- function(data) {
+  series <- ts(data$demand, start = c(2005, 64), frequency = 365.25)
+  return(series)
+}
+
+test <- daily_demand %>% 
+  select(store, date, lettuce, tomato) %>% 
+  gather(ingredient, demand, c(-store, -date)) %>% 
+  nest(-c(store, ingredient), .key = "ts_data") %>% 
+  mutate(series = make_ts(ts_data$demand))
+
+
+  
+
+test <- daily_demand %>% 
+  select(store, date, lettuce, tomato) %>% 
+  gather(ingredient, demand, c(-store, -date)) %>% 
+  unite(store_ingredient, store, ingredient) %>% 
+  mutate(store_ingredient = as.factor(store_ingredient)) %>% 
+  split(., .$store_ingredient)
   
 
 
-daily_demand %>% 
-  ggplot(aes(x = date, y = tomato), group = 1) +
-  geom_line(colour = "steelblue", size = 1) +
-  scale_x_date(date_breaks = "1 week") +
-  xlab("Date") +
-  ylab("Demand for tomato") +
-  scale_y_continuous(labels = scales::comma) +
-  theme(axis.text.x = element_text(angle = 45,
-                                   vjust = 0.5,
-                                   hjust = .5,
-                                   debug = F)) +
-  theme_jim
+serieses <- lapply(test, make_ts)
+lapply(serieses, plot)

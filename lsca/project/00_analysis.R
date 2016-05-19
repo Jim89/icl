@@ -23,3 +23,9 @@ theme_jim <-  theme(legend.position = "bottom",
                     panel.background = element_rect(fill = "white", colour = "lightgrey"),
                     panel.border = element_rect(colour = "black", fill = NA))
 
+
+# Step 1 - run scrips -----------------------------------------------------
+
+source("./project/01_get_data.R")
+source("./project/02_link_data.R")
+source("./project/03_create_ts.R")

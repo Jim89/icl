@@ -97,7 +97,7 @@ tom_let_sub_recipes <- sub_recipes %>%
 
 # Create a unified view of recipes to ingredients
 recipe_to_sub_tom_let <- recipe_sub_recipe_assignments %>% 
-  inner_join(tom_let_recipes, copy = TRUE) %>% 
+  # inner_join(tom_let_recipes, copy = TRUE) %>% 
   select(recipeid, subrecipeid, factor) %>% 
   inner_join(tom_let_sub_recipes, copy = T) %>% 
   mutate(Lettuce = lettuce * factor,
@@ -110,7 +110,7 @@ recipe_to_sub_tom_let <- recipe_sub_recipe_assignments %>%
 
 # All recipies with SOME tomato or lettuce, and the required amount  
 recipes_to_tom_let <- tom_let_recipes %>% 
-  full_join(recipe_to_sub_tom_let) %>%
+  full_join(recipe_to_sub_tom_let) %>% 
   select(recipeid, lettuce, tomato, sub_let, sub_tom) %>% 
   rowwise() %>% 
   mutate(total_lettuce = sum(lettuce, sub_let, na.rm = T),
