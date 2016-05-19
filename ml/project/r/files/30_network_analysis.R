@@ -11,7 +11,7 @@ edgelist <- to_from %>%
     summarise(emails = n(),
               prop_redacted = mean(redacted)) %>% 
     na.omit() %>% 
-    filter(emails > 1)
+    filter(emails > 0)
 
 
 # Create the igraph object for further analysis
