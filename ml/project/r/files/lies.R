@@ -48,9 +48,9 @@ stats <- emails_clean %>%
 
 
 stats %>% 
-    filter(sent_rank <= 15) %>% 
+    filter(sent_rank <= 10) %>% 
     ggplot(aes(x = from, y = prob)) +
-    geom_boxplot()
+    geom_violin(aes(fill = as.factor(cl_walk)))
 
 stats %>% 
     na.omit() %>% 
@@ -60,8 +60,9 @@ stats %>%
 stats %>% 
     group_by(cl_walk) %>% 
     summarise(emails = n(),
-              avg_prob = mean(prob, na.rm = T)) %>% 
-    left_join(from_stats %>% group_by(cl_walk) %>% summarise(members = n())) %>% 
-    lm(avg_prob ~ members, data = .) 
+              avg_centrality = mean(eig_norm),
+              dishonesty = mean(prob, na.rm = T))
+
+
 
     
