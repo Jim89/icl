@@ -5,13 +5,10 @@
 # Summarise to/from data in to edgelist and grab only those pairs who sent/received
 # more than 1 email
 edgelist <- to_from %>% 
-    left_join(emails_clean) %>% 
-    select(DocNumber, from, to, redacted) %>% 
-    group_by(from, to) %>% 
-    summarise(emails = n(),
-              prop_redacted = mean(redacted)) %>% 
-    na.omit() %>% 
-    filter(emails > 0)
+            group_by(from, to) %>% 
+            summarise(emails = n()) %>% 
+            na.omit() %>% 
+            filter(emails > 1)
 
 
 # Create the igraph object for further analysis
