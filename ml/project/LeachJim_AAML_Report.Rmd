@@ -1,13 +1,40 @@
 ---
-title: "Advanced Analytics and Machine Learning Project"
-subtitle: "An analysis of Hilary Clinton's emails"
+title: "Advanced Analytics and Machine Learning Project Report"
 author: "Jim Leach"
-output: 
-    html_document:
-        code_folding: hide
+output:
+  html_document:
+    code_folding: hide
+    number_sections: yes
+    theme: spacelab
+    toc: yes
+    toc_float: yes
+  word_document:
+    toc: yes
 ---
 
-```{r script, message = FALSE, warning = FALSE, include = FALSE}
+```{r default_opts, include=FALSE}
+knitr::opts_chunk$set(message = FALSE, echo = T)
+```
+
+# Abstract
+
+# Introduction
+
+For this project sales and marketing data from a multi-channel company were provided. The data cover the company's retail stores, catalogue and website and detail customer records, marketing contacts, orders, and line item records.
+
+This project used these data to investigate various marketing techniques used by this company in order to understand their effectiveness. A specific focus was placed upon email vs. catalogue marketing. 
+
+## This document
+
+This document is split in to TODO distinct sections.
+
+The `R` code used to perform these analyses has been provided as supplementary files, and sections of the `R` code can be viewed in this report using the _Code_ buttons to toggle code viewing.
+
+This document has interactive elements and is best viewed using a modern web browser such as Mozilla Firefox or Google Chrome. Please note that submission of a report of this nature and format was discussed with Wei Pan who stated that it was entirely acceptable. 
+
+# Motivation and software choice
+
+```{r setup, message = FALSE, warning = FALSE}
 # Load packages
 library(readr)
 library(dplyr)
@@ -36,32 +63,296 @@ theme_jim <-  theme(legend.position = "bottom",
                     panel.background = element_rect(fill = "white", colour = "lightgrey"),
                     panel.border = element_rect(colour = "black", fill = NA))
 
-# Source user-defined functions
-source("./r/functions/search_in_emails.R")
-source("./r/functions/normalise.R")
-source("./r/functions/plot_network.R")
+# Get Clinton data
+emails <- read_csv("./data/Emails.csv")
+aliases <- read_csv("./data/Aliases.csv")
+receivers <- read_csv("./data/EmailReceivers.csv")
+people <- read_csv("./data/Persons.csv")
 
-# Step 1 - run analysis step by step --------------------------------------
+# Set rownames for easier use later
+rownames(emails) <- emails$DocNumber
 
-source("./r/files/00_get_data.R")
-source("./r/files/01_to_from.R")
-source("./r/files/03_clean_emails.R")
-source("./r/files/04_tokenise_texts.R")
-source("./r/files/05_country_matching.R")
-source("./r/files/20_hil_dfm.R")
-source("./r/files/21_apply_dictionary.R")
-source("./r/files/30_network_analysis.R")
+# Define normalisation helper function
+# Normalise is a functiont that takes in a numeric vector and normalises it,
+# subtracting the mean from each element, before dividing by the standard deviation
+normalise <- function(vec) {
+    ans <- (vec - mean(vec)) / sd(vec)
+    return(ans)
+}
 ```
 
-## This is a tabset test {.tabset}
+# External data
 
-### Walktrap
+The [Linguistic Inquiry Word Count](http://liwc.wpengine.com/) ("LIWC") dictionary was used as part of the analysis in order to help understand the content of the emails. It was loaded in to `R` using the `quanteda` package ([Benoit,  2016](https://cran.r-project.org/web/packages/quanteda/quanteda.pdf)). 
 
-```{r}
-plot_network(graph, "walk")
+```{r load_liwc, warning = FALSE, message = FALSE, include = FALSE}
+# Get dictionary
+liwc <- dictionary(file = "./data/LIWC2015_English_Flat.dic", format = "LIWC")
 ```
 
-### Betweenness
-```{r}
-plot_network(graph, "bet")
+```{r load_liwc_show, eval = FALSE}
+# Get dictionary
+liwc <- dictionary(file = "./data/LIWC2015_English_Flat.dic", format = "LIWC")
 ```
+
+The dictionary file contained `r length(liwc)` categories of words, each contained between `r min(sapply(seq_along(liwc), function(i) length(liwc[[i]])))` and `r max(sapply(seq_along(liwc), function(i) length(liwc[[i]])))` words, with an average category word count of `r ceiling(mean(sapply(seq_along(liwc), function(i) length(liwc[[i]]))))` (standard deviation of `r ceiling(sd(sapply(seq_along(liwc), function(i) length(liwc[[i]]))))`). The dictionary can be matched to pieces of text in order to understand their concepts and/or meaning. In this context it has been applied to the extracted body text of each email in order to understand the topics and themes in each message.
+
+# Methods
+
+## Build to/from data set
+
+In order to understand the social network structure of email senders and receivers it was first necessary to perform some data transformations. The raw data contained fields indicating the sender and recipient of the email, as well as a list of those who were copied in ("CC"). Additionally, senders and receivers had potentially several different aliases used across mutliple emails. As such steps were taken to clean this data in to a dervided data set with a _tidy_ ([Wickham, 2014](https://www.jstatsoft.org/article/view/v059i10)) structure.
+
+For recipients of emails, the `MetadataTo` and `ExtractedTo` fields were parsed to create a single view of the (direct) recipient of each email.
+
+```{r clean_to}
+to <- emails %>% 
+    select(DocNumber, MetadataTo, ExtractedTo) %>% 
+    rowwise() %>% 
+    mutate(pos = str_locate(ExtractedTo, "<")[1],
+           ExtractedTo = str_sub(ExtractedTo, start = 1L, end = pos-2)) %>% 
+    select(-pos) %>% 
+    gather(field, receiver, -DocNumber) %>% 
+    select(-field) %>% 
+    distinct() %>% 
+    na.omit()
+```
+
+A similar process was applied to the `ExtractedCc` field in order to generate a list of the individuals listed in CC for each email.
+
+```{r cc, warning = FALSE}
+cc <- emails %>% 
+    select(DocNumber, ExtractedCc) %>% 
+    separate(ExtractedCc, into = paste("person", 1:8), sep = ";") %>% 
+    gather(field, receiver, -DocNumber) %>% 
+    select(-field) %>% 
+    distinct() %>% 
+    na.omit() 
+```
+
+These two lists were then combined and joined with the sender of each email as identified by the `SenderPersonId` field. Further transformation was then applied using the aliases data in order to clean sender/receiver names to have a consistent identifier.
+
+```{r to_from}
+to_from <- bind_rows(to, cc) %>% 
+    left_join(emails %>% select(DocNumber, SenderPersonId)) %>% 
+    na.omit() %>% 
+    left_join(people, by = c("SenderPersonId" = "Id")) %>% 
+    select(DocNumber, Name, receiver) %>% 
+    mutate(receiver = gsub("[^a-zA-Z0-9\\@\\.\\,]", "", receiver),
+           receiver = gsub(",", " ", receiver),
+           receiver = str_trim(receiver),
+           receiver = tolower(receiver)) %>% 
+    left_join(aliases, by = c("receiver" = "Alias")) %>% 
+    left_join(people, by = c("PersonId" = "Id")) %>% 
+    select(DocNumber, Name.x, Name.y) %>% 
+    rename(from = Name.x,
+           to = Name.y) 
+    
+# Clean up excess objects    
+rm(to, cc)
+```
+
+Using this information, the emails data was tidied in to a standard format for use in later analysis.
+
+```{r emails_clean}
+emails_clean <- to_from %>% 
+                left_join(emails) %>% 
+                mutate(redacted = ifelse(ExtractedReleaseInPartOrFull == "RELEASE IN FULL", 0, 1)) %>% 
+                select(DocNumber, 
+                       from,
+                       to,
+                       redacted,
+                       MetadataSubject,
+                       MetadataDateSent,
+                       ExtractedSubject,
+                       ExtractedBodyText,
+                       RawText) %>% 
+                rename(meta_subject = MetadataSubject,
+                       sent = MetadataDateSent,
+                       extract_subject = ExtractedSubject,
+                       body = ExtractedBodyText,
+                       raw = RawText)
+```
+
+## Create network structure
+
+The clean to/from data was then summarise to create data in a directed edgelist (Talluri, 2015, "Network Analytics" MSc. Business Analytics Lecture 1) format. The weights on each edge were the number of emails sent between the indviduals. In order to simplify the analysis, only pairings of sender/receiver who had sent at least two emails to each other were included in this data.
+
+```{r create_edgelist}
+edgelist <- to_from %>% 
+            group_by(from, to) %>% 
+            summarise(emails = n()) %>% 
+            na.omit() %>% 
+            filter(emails > 1)
+```
+
+The `igraph` package was then used to convert this data into a graph object and perform some simple network analytics on the graph. Each node in the graph was therefore an individual in the data set, and the edges were communications between them. Giving that emails are _sent_ and _received_, the graph was established with a _directed_ structure ([Sedgewick & Wayne, "Algorithms", 4th Ed](http://algs4.cs.princeton.edu/42digraph/)).
+
+```{r igraph_make}
+graph <- graph_from_data_frame(edgelist, directed = TRUE)
+```
+
+## Generate network statistics
+
+Node importance was calculated using [centrality](https://en.wikipedia.org/wiki/Centrality) measures. Eigenvector, betweenness, and closeness centrality were all calculated with the `igraph` package. Community detection was also performed using two methods: the walktrap method (which estimates communities based on performing random walks on the graph), and the edge betweenness method (a heirarchical decomposition process which detects communities using the edge betweenness scores of each edge) (further details are available [here](http://stackoverflow.com/questions/9471906/what-are-the-differences-between-community-detection-algorithms-in-igraph)).
+
+```{r igraph_stats}
+# Eigenvector Centrality
+centralities <- eigen_centrality(graph, weights = E(graph)$emails)
+V(graph)$eig <- centralities$vector
+
+# Betweenness Centrality
+betweens <- betweenness(graph, weights = E(graph)$emails)
+V(graph)$bet <- betweens
+
+# Closeness Centrality
+closes <- closeness(graph, weights = E(graph)$emails)
+V(graph)$close <- closes
+
+# try to find clusters in the graph
+cl_edge_bet <- cluster_edge_betweenness(graph)
+cl_walk <- cluster_walktrap(graph)
+
+V(graph)$cl_walk <- membership(cl_walk)
+V(graph)$cl_edge_bet <- membership(cl_edge_bet)
+
+# Clean up loose objects
+rm(centralities, betweens, closes, cl_walk, cl_edge_bet)
+```
+
+Finally, the network statistics for each individual were extracted from the graph object and saved in to tidy data set. The centrality measures were converted in to Z-scores in order to make them comparable.
+
+\begin{equation}
+Z = \dfrac{X - \bar{X}}{sd(X)}
+\end{equation}
+
+```{r from_stats, message = F}
+from_stats <- data_frame(from = names(V(graph)),
+                         eig = V(graph)$eig,
+                         bet = V(graph)$bet,
+                         close = V(graph)$close,
+                         cl_eb = V(graph)$cl_edge_bet,
+                         cl_walk = V(graph)$cl_walk) %>% 
+                mutate(eig_norm = normalise(eig),
+                       bet_norm = normalise(bet),
+                       close_norm = normalise(close))
+```
+
+## Tokenise emails
+
+The `quanteda` package was used to tokenise the body text of each email, removing punctuation, numbers, and common English stopwords from the message content.
+
+```{r tokenise}
+# Use emails clean data and remove "to" to get unique documents
+uniques <- emails_clean %>% 
+    select(-to) %>% 
+    distinct()
+
+# Build a corpus with quanteda
+hil_corp <- corpus(uniques$body, docvars = uniques[, c(2:6)],
+                   docnames = uniques$DocNumber)
+
+# Tokenise and remove stopwords from the corpus
+hil_tok <- quanteda::tokenize(hil_corp, removeNumbers = T, removePunct = T, 
+                              removeSeparators = T, removeHyphens = T) %>% 
+    removeFeatures(c(stopwords("english"), "will", "can", "ago", "also"))
+```
+
+## Apply LIWC
+
+The LIWC dictionary was then applied to the tokenised texts using `quanteda`, producing a [document term matrix](https://en.wikipedia.org/wiki/Document-term_matrix).
+
+```{r apply_liwc}
+# Apply the dictionary in a new dfm
+hil_dfm_liwc <- dfm(hil_tok, dictionary = liwc, verbose = FALSE)
+```
+
+The default setting for this function is to _count_ the number of occurrences of a category within a document. However (in order to apply the dishonesty detection process) proportions of occurrences within each document were needed and so the results were weighted by relative frequency of each category.
+
+```{r weight_dfm}
+hil_dfm_liwc_weighted <- weight(hil_dfm_liwc, type = "relFreq")
+```
+
+## Subset to relevant content
+
+Only five features from the LIWC dictionary were relevant to the dishonesty model. These features were selected, discarding the others.
+
+```{r hil_dfm_lies}
+hil_dfm_lies <- hil_dfm_liwc_weighted[, c("i", "we", "shehe", "they", "negemo", "conj", "motion")]
+```
+
+## Apply dishonesty model
+
+The original dishonesty model used features that were not directly present in the version of LIWC used in this analysis, and so certain features were combined to obtain those that could be applied to the model. 
+
+```{r extract_features}
+# Convert to matrix
+hil_dfm_lies <- hil_dfm_lies %>% as.matrix()
+
+# Tidy up NaN values
+hil_dfm_lies <- hil_dfm_lies[complete.cases(hil_dfm_lies), ]
+
+# Combine classes
+first <- hil_dfm_lies[, "i"] + hil_dfm_lies[, "we"] %>% as.matrix(ncol = 1) 
+colnames(first) <- "first"
+
+third <- hil_dfm_lies[, "shehe"] + hil_dfm_lies[, "they"] %>% as.matrix(ncol = 1) 
+colnames(third) <- "third"
+
+neg <- hil_dfm_lies[, "negemo"] %>% as.matrix()
+colnames(neg) <- "negemo"
+
+exclusive <- hil_dfm_lies[, "conj"] %>% as.matrix()
+colnames(exclusive) <- "excl"
+
+motion <- hil_dfm_lies[, "motion"] %>% as.matrix()
+colnames(motion) <- "motion"
+
+# Clean up loose objects
+rm(hil_dfm_liwc_weighted, hil_dfm_liwc)
+```
+
+Emails which did not have _any_ features detected by LIWC were removed from the analysis (`r scales::percent(1- complete.cases(hil_dfm_lies) %>% mean())` of emails). 
+
+```{r include=FALSE}
+rm(hil_dfm_lies)
+```
+
+In line with the original dishonesty model, the features were converted in to Z-scores and used to rate emails in terms of their probablity of being honest.
+
+```{r apply_lies}
+dishonesty <- cbind(first, third, neg, exclusive, motion) %>% 
+                apply(2, normalise) %>% 
+                as.data.frame() %>% 
+                add_rownames(var = "DocNumber") %>% 
+                mutate(lie = .260*first + 
+                       .250*third - 
+                       .217*negemo + 
+                       .419*excl - 
+                       .259*motion,
+                   odds = exp(lie),
+                   prob = odds/(1+odds))
+```
+
+## Combine results
+
+Finally, clean data were produced that listed, for each email, its probablity of being honest along with its sender and the network statistics calculated for them (centralities and community membership). Those emails not classified by the dishonesty model (due to lack of content) were excluded.
+
+```{r stats}
+stats <- emails_clean %>% 
+    select(DocNumber, from) %>% 
+    left_join(dishonesty %>% select(DocNumber, prob)) %>% 
+    left_join(from_stats) %>% 
+    left_join(emails_clean %>% 
+                  count(from) %>% 
+                  arrange(-n) %>% 
+                  mutate(sent_rank = row_number())) %>% 
+    na.omit() %>% 
+    select(DocNumber, from, prob, cl_eb, cl_walk, eig_norm, bet_norm, close_norm, n) %>% 
+    rename(sent = n)
+```
+
+# Results
+
+# Conclusions
+
