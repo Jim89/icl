@@ -13,10 +13,16 @@ output:
 ---
 
 ```{r default_opts, include=FALSE}
-knitr::opts_chunk$set(message = FALSE, echo = T)
+knitr::opts_chunk$set(message = FALSE, echo = T, warning = FALSE)
 ```
 
 # Abstract
+
+<p><i>This paper presents the results of an analysis of emails released by Hillary Clinton following the discovery that she had used a private email server to process and store her email correspondence whilst acting as the United States' Secretary of State. This paper investigates the network structure of Mrs. Clinton's email contacts and attempts to understand if the important players in this network can be detected from this data. 
+
+It also applies previous work on the detection of dishonesty in text to attempt to explore levels of potentially dishonest communications issued as part of this data. Finally it explores the relationship between an email sender's importance, and the likelihood that the email is potentially dishonest in nature.
+
+Some success is found in investigating the network structure of the email contacts, particularly in identifying important individuals. Whilst the application of dishonesty-detecting techniques is interesting, no significant relationships between potential dishonesty and importance are found.</i></p>
 
 # Introduction
 
@@ -24,15 +30,29 @@ For this project sales and marketing data from a multi-channel company were prov
 
 This project used these data to investigate various marketing techniques used by this company in order to understand their effectiveness. A specific focus was placed upon email vs. catalogue marketing. 
 
-## This document
+## Software choice
 
-This document is split in to TODO distinct sections.
+This analysis has been completed in the `R` language. `R` was chosen as it is a both flexible and powerful language for performing a variety of analyses. In the context of this assignment, `R` was specifically chosen in order to use the `quanteda` package for text analysis and the `igraph` package for network analysis. `quanteda` was created by a lecturer for this course: Professor Kenneth Benoit. This made it an obvious choice of tool. `igraph` is a well-known software library for network analytics with bindings for `R`, `Python` and `C/C++`. Givent that the analysis of text was to be performed in `R` it seemed only logical to extend this to the network analysis. Finally, `R` has powerfull visualisation and report-generating capabilities. Packages such as `ggplot2` can create static visualisations whilst others, such as `networkD3` (used in this report) offer bindings to the `D3.js` visualisation library to create interactive charts from within `R` easily. Packages including `rmarkdown`, `knitr` and `DT` make creating reports such as this one easy and allow a tight integration of code and text to produce a reproducible analysis. Details of packages used in this assignment can be found at the below links:
 
-The `R` code used to perform these analyses has been provided as supplementary files, and sections of the `R` code can be viewed in this report using the _Code_ buttons to toggle code viewing.
+* [readr](https://github.com/hadley/readr)
+* [dplyr](https://github.com/hadley/dplyr)
+* [tidyr](https://github.com/hadley/tidyr)
+* [quanteda](https://github.com/kbenoit/quanteda)
+* [igraph](http://igraph.org/redirect.html)
+* [networkD3](https://christophergandrud.github.io/networkD3/)
+* [stringr](https://github.com/hadley/stringr)
+* [ggplot2](http://ggplot2.org/)
+* [rmarkdown](http://rmarkdown.rstudio.com/)
+
+## Supplementary Note
+
+The `R` code used to perform these analyses has been provided as supplementary files, and can be viewed in this report using the _Code_ buttons to toggle code viewing. 
 
 This document has interactive elements and is best viewed using a modern web browser such as Mozilla Firefox or Google Chrome. Please note that submission of a report of this nature and format was discussed with Wei Pan who stated that it was entirely acceptable. 
 
-# Motivation and software choice
+# Motivation 
+
+
 
 ```{r setup, message = FALSE, warning = FALSE}
 # Load packages
@@ -40,11 +60,11 @@ library(readr)
 library(dplyr)
 library(tidyr)
 library(quanteda)
-library(countrycode)
 library(igraph)
 library(networkD3)
 library(stringr)
 library(ggplot2)
+library(d3wordcloud)
 
 # Set up theme object for prettier plots
 theme_jim <-  theme(legend.position = "bottom",
@@ -99,9 +119,9 @@ The dictionary file contained `r length(liwc)` categories of words, each contain
 
 # Methods
 
-## Build to/from data set
+## Build sender/receiver data set
 
-In order to understand the social network structure of email senders and receivers it was first necessary to perform some data transformations. The raw data contained fields indicating the sender and recipient of the email, as well as a list of those who were copied in ("CC"). Additionally, senders and receivers had potentially several different aliases used across mutliple emails. As such steps were taken to clean this data in to a dervided data set with a _tidy_ ([Wickham, 2014](https://www.jstatsoft.org/article/view/v059i10)) structure.
+In order to understand the social network structure of email senders and receivers it was first necessary to perform some data transformations. The raw data contained fields indicating the sender and recipient of the email, as well as a list of those who were copied in ("CC"). Additionally, senders and receivers had potentially several different aliases used across multiple emails. As such steps were taken to clean this data in to a derived data set with a _tidy_ ([Wickham, 2014](https://www.jstatsoft.org/article/view/v059i10)) structure.
 
 For recipients of emails, the `MetadataTo` and `ExtractedTo` fields were parsed to create a single view of the (direct) recipient of each email.
 
@@ -176,7 +196,7 @@ emails_clean <- to_from %>%
 
 ## Create network structure
 
-The clean to/from data was then summarise to create data in a directed edgelist (Talluri, 2015, "Network Analytics" MSc. Business Analytics Lecture 1) format. The weights on each edge were the number of emails sent between the indviduals. In order to simplify the analysis, only pairings of sender/receiver who had sent at least two emails to each other were included in this data.
+The clean sender/receiver data was then summarise to create data in a directed edge-list (Talluri, 2015, "Network Analytics" MSc. Business Analytics Lecture 1) format. The weights on each edge were the number of emails sent between the individuals. In order to simplify the analysis, only pairings of sender/receiver who had sent at least two emails to each other were included in this data.
 
 ```{r create_edgelist}
 edgelist <- to_from %>% 
@@ -194,7 +214,7 @@ graph <- graph_from_data_frame(edgelist, directed = TRUE)
 
 ## Generate network statistics
 
-Node importance was calculated using [centrality](https://en.wikipedia.org/wiki/Centrality) measures. Eigenvector, betweenness, and closeness centrality were all calculated with the `igraph` package. Community detection was also performed using two methods: the walktrap method (which estimates communities based on performing random walks on the graph), and the edge betweenness method (a heirarchical decomposition process which detects communities using the edge betweenness scores of each edge) (further details are available [here](http://stackoverflow.com/questions/9471906/what-are-the-differences-between-community-detection-algorithms-in-igraph)).
+Node importance was calculated using [centrality](https://en.wikipedia.org/wiki/Centrality) measures. Eigenvector, betweenness, and closeness centrality were all calculated with the `igraph` package. Community detection was also performed using two methods: the walktrap method (which estimates communities based on performing random walks on the graph), and the edge betweenness method (a hierarchical decomposition process which detects communities using the edge betweenness scores of each edge) (further details are available [here](http://stackoverflow.com/questions/9471906/what-are-the-differences-between-community-detection-algorithms-in-igraph)).
 
 ```{r igraph_stats}
 # Eigenvector Centrality
@@ -252,17 +272,42 @@ uniques <- emails_clean %>%
 hil_corp <- corpus(uniques$body, docvars = uniques[, c(2:6)],
                    docnames = uniques$DocNumber)
 
+# Add a user-defined list of stopwords
+stops <- c('', 'when', "they'd", 'of', "couldn't", "we're", 'both', 'having', 'ought', "can't", 'if', "let's", 'have', 'in', 'did', "what's", 'such', 'from', 'themselves', "don't", 'under', 'all', "you're", "you'll", "you've", 'we', 'so', "he'd", 'further', "that's", 'were', 'other', 'not', 'with', 'its', "she's", 'that', 'ourselves', 'him', "doesn't", 'myself', 'up', 'here', 'who', "she'll", "hadn't", 'whom', "he's", 'this', 'at', 'doing', "we've", "who's", 'as', 'them', "they've", 'those', 'same', 'once', 'each', 'through', 'against', 'only', 'could', 'our', 'does', 'then', 'some', "didn't", 'www', 'your', 'cannot', 'where', 'it', 'what', 'more', 'would', 'because', 'their', 'com', 'the', 'my', 'for', 'me', 'these', "shouldn't", "won't", 'than', 'own', 'can', 'get', 'her', 'most', 'are', 'too', "wasn't", 'an', "aren't", 'herself', 'should', 'his', 'being', "here's", 'to', "i'd", 'about', 'down', 'after', 'been', 'on', 'i', "shan't", "they'll", 'you', "mustn't", "where's", 'out', 'which', "i'm", 'during', 'a', 'itself', 'ours', "he'll", "i'll", "weren't", 'below', 'theirs', "they're", "isn't", "i've", 'like', "she'd", 'how', 'r', "how's", 'any', 'he', 'over', "wouldn't", 'while', "you'd", 'they', 'yourself', 'she', 'no', 'again', 'few', 'but', 'hers', 'is', 'yourselves', "we'd", "when's", 'himself', 'has', "hasn't", "why's", 'be', 'into', 'why', 'just', 'off', 'very', 'or', 'until', 'nor', "it's", "we'll", 'http', "there's", 'do', 'had', 'before', 'am', 'by', 'yours', 'was', 'above', 'and', 'between', 'there', "haven't")
+
 # Tokenise and remove stopwords from the corpus
 hil_tok <- quanteda::tokenize(hil_corp, removeNumbers = T, removePunct = T, 
                               removeSeparators = T, removeHyphens = T) %>% 
-    removeFeatures(c(stopwords("english"), "will", "can", "ago", "also"))
+    removeFeatures(c(stopwords("english"), "will", "can", "ago", "also", "stops"))
+```
+
+## Create document term matrix
+
+`quanteda` was then used to transform the tokenised texts in to a [document term matrix](https://en.wikipedia.org/wiki/Document-term_matrix) (DFM) in order to easily extract the list of words for a specific document. Due to the diverse range of language used in the emails, only words which occurred at least 0.05% of the time were retained.
+
+```{r make_dfm}
+hil_dfm_words <- dfm(hil_tok, verbose = FALSE)
+
+# Count the appearances of features (words) across all documents
+feature_counts <- colSums(hil_dfm_words) %>% 
+                    as.matrix(ncol = 1) %>% 
+                    data.frame(count = ., row.names = rownames(.)) %>% 
+                    add_rownames("feature") %>% 
+                    arrange(-count) %>% 
+                    mutate(freq = count/sum(count)*100)
+
+# Find only those words that are not too common, but not too rare
+to_keep <- feature_counts %>% filter(freq > .05) %>% .$feature 
+
+# Only keep those words
+hil_dfm_words <- hil_dfm_words[, to_keep]   
 ```
 
 ## Apply LIWC
 
-The LIWC dictionary was then applied to the tokenised texts using `quanteda`, producing a [document term matrix](https://en.wikipedia.org/wiki/Document-term_matrix).
+The LIWC dictionary was then applied to the tokenised texts using `quanteda`, producing a special DFM where the features were LIWC category definitions, as opposed to terms in the document.
 
-```{r apply_liwc}
+```{r apply_liwc, cache = TRUE}
 # Apply the dictionary in a new dfm
 hil_dfm_liwc <- dfm(hil_tok, dictionary = liwc, verbose = FALSE)
 ```
@@ -318,7 +363,7 @@ Emails which did not have _any_ features detected by LIWC were removed from the 
 rm(hil_dfm_lies)
 ```
 
-In line with the original dishonesty model, the features were converted in to Z-scores and used to rate emails in terms of their probablity of being honest.
+In line with the original dishonesty model, the features were converted in to Z-scores and used to rate emails in terms of their probability of being honest. As this analysis was interested in _dishonesty_, the probablities of honesty were adjusted by subtracting them from 1, to give a probability that the email was _dishonest_.
 
 ```{r apply_lies}
 dishonesty <- cbind(first, third, neg, exclusive, motion) %>% 
@@ -331,28 +376,194 @@ dishonesty <- cbind(first, third, neg, exclusive, motion) %>%
                        .419*excl - 
                        .259*motion,
                    odds = exp(lie),
-                   prob = odds/(1+odds))
+                   prob = odds/(1+odds),
+                   prob_lie = 1 - prob)
 ```
 
 ## Combine results
 
-Finally, clean data were produced that listed, for each email, its probablity of being honest along with its sender and the network statistics calculated for them (centralities and community membership). Those emails not classified by the dishonesty model (due to lack of content) were excluded.
+Finally, clean data were produced that listed, for each email, its probability of being dishonest along with its sender and the network statistics calculated for them (centralities and community membership). Those emails not classified by the dishonesty model (due to lack of content) were excluded.
 
 ```{r stats}
 stats <- emails_clean %>% 
     select(DocNumber, from) %>% 
-    left_join(dishonesty %>% select(DocNumber, prob)) %>% 
+    left_join(dishonesty %>% select(DocNumber, prob_lie)) %>% 
     left_join(from_stats) %>% 
     left_join(emails_clean %>% 
                   count(from) %>% 
                   arrange(-n) %>% 
                   mutate(sent_rank = row_number())) %>% 
     na.omit() %>% 
-    select(DocNumber, from, prob, cl_eb, cl_walk, eig_norm, bet_norm, close_norm, n) %>% 
+    select(DocNumber, from, prob_lie, cl_eb, cl_walk, eig_norm, bet_norm, close_norm, n) %>% 
     rename(sent = n)
 ```
 
 # Results
+
+## Visualising the network {.tabset}
+
+The network created from the sender/receiver data was visualised in order to understand its structure, and the performance of each community detection approach. Nodes are sized by the number of emails they sent (measured on a logarithmic scale as some individuals sent significantly more emails than others) and coloured by the community that the algorithm has placed them in to. The width of each link represents the number of emails sent between those nodes.  
+
+(Note that the visualisation is interactive - click and drag or mousewheel zoom to navigate the network, and select/drag/highlight individual node with the mouse).
+
+In this instance the walktrap method appears to be superior. It has detected `r stats$cl_walk %>% max()` communities in the network which can be summarised as follows: One community appears to be those who have contacted Hillary Clinton and at most one other person, (typically no one); a second community appears to be those who have contacted Hillary but also sent/received emails to/from other memebers of the network. 
+
+Of the remaining two networks, both are perhaps erroneous and one could be encorporated in to the others. The first, containing Bill and Chelsea Clinton is entirely disconnected from the remainder of the network. This is likely not true in reality, and is simply a function of the low quality of the data extracted from the raw PDF documents. The final cluster, containing Jacob Lew and David Johnson should probably be included in that community that has primarily contacted Hillary Clinton. It has perhaps been detected as it is the only pair of nodes where one node is connected directly to Hillary Clinton, and the second node is connected to the first.
+
+The results from the betweenness method are much less concrete, that algorithm having detected `r stats$cl_eb %>% max()` communities. There is no clear structure in any of the communities detected by this method.
+
+### Figure One: Walktrap method communities
+
+```{r network_walk, fig.align='centre', eval = T}
+# Define a convenience function to plot the graph
+plot_network <- function(graph_object, clusters = "walk") {
+
+    if (clusters == "walk") {
+    # Convert to a networkD3 data structure for D3 plotting
+    networks <- igraph_to_networkD3(graph_object, group = V(graph)$cl_walk)
+    } else if (clusters == "bet") {
+    # Convert to a networkD3 data structure for D3 plotting
+    networks <- igraph_to_networkD3(graph_object, group = V(graph)$cl_edge_bet)
+    }
+
+# Add link weights and optionally normalise
+networks$links$value <- E(graph_object)$emails %>% normalise
+
+# Add nodesize based on emails sent
+networks$nodes <- networks$nodes %>% 
+    left_join(emails_clean %>% group_by(from) %>% summarise(sent = n()), 
+              by = c("name" = "from")) %>% 
+    mutate(sent = ifelse(is.na(sent), 1, sent + 1))
+
+# Plot the network
+forceNetwork(Links = networks$links,
+             Nodes = networks$nodes,
+             colourScale = JS("d3.scale.category10()"),
+             Source = "source",
+             Target = "target",
+             Value = "value",
+             NodeID = "name",
+             Nodesize = "sent",
+             radiusCalculation = JS("Math.log(d.nodesize)+5"),
+             Group = "group",
+             charge = -1000,
+             linkColour = "grey",
+             fontSize = 16,
+             opacity = 1,
+             legend = F,
+             bounded = F,
+             zoom = TRUE,
+             height = 650,
+             width = 800)
+}
+
+# Plot the graph
+plot_network(graph, clusters = "walk")
+```
+
+### Figure Two: Betweenness method communities
+
+```{r network_bet, fig.align = 'centre', eval = T}
+plot_network(graph, clusters = "bet")
+```
+
+## Assessing importance
+
+Using the three centrality scores that were calculated for each node, it is possible to rank the importance of each node in the network. Higher centrality measures resulted in a higher rank. The rank of each sender for each of the three measures is displayed in table TODO below. 
+
+```{r importance}
+importances <- from_stats %>% 
+    mutate(eig_rank = row_number(desc(eig_norm)),
+           bet_rank = row_number(desc(bet_norm)),
+           clo_rank = row_number(desc(close_norm))) %>% 
+    select(from, eig_rank, bet_rank, clo_rank) %>% 
+    arrange(eig_rank)
+
+DT::datatable(importances,
+              colnames = c("Sender", "Eigenvector importance rank",
+                           "Betweenness importance rank",
+                           "Closeness imortance rank"),
+              caption = "Table : Sender Importance Ranks")
+```
+
+## Dishonest communications
+
+Figure three shows the spread of predicted probabilities that the email was dishonest.
+
+```{r dishonest_hist, fig.cap = "Figure 3: Probability that communication was dishonest", out.width = 600, out.height=600, fig.align="center"}
+stats %>% 
+    ggplot(aes(x = prob_lie)) +
+    geom_histogram(fill = "steelblue", colour = "white") +
+    xlab("Probability dishonest") +
+    ylab("Emails") +
+    scale_x_continuous(labels = scales::percent) +
+    scale_y_continuous(labels = scales::comma) +
+    theme_jim
+```
+
+These probabilities can also be viewed for each of the four clusters detected by the walktrap method, as shown in figure four.
+
+```{r dis_hist_clust, fig.cap = "Figure 4: Probability that communication was dishonest by walktrap-detected community", out.width = 900, out.height=1000, fig.align="center"}
+stats %>% 
+    mutate(Community = as.factor(cl_walk)) %>% 
+    ggplot(aes(x = prob_lie, fill = Community)) +
+    geom_histogram(colour = "white") +
+    xlab("Probability dishonest") +
+    ylab("Emails") +
+    scale_fill_manual(values = c("#ff7f0e", "#d62728", "#1f77b4", "#2ca02c")) +
+    scale_y_continuous(labels = scales::comma) +
+    facet_grid(cl_walk ~ ., scales = "free_y") +
+    scale_x_continuous(labels = scales::percent) +
+    theme_jim
+```
+
+## Importance and dishonesty {.tabset}
+
+The relationship between the importance of an email's sender, and their average predicted probablity of dishonesty is displayed in figures five, six and seven below (one figure per importance measure).
+
+### Eigenvector measures
+
+```{r imp_to_dis, fig.cap = "Figure 5: The relationship between eigenvector centrality measured importance and dishonesty", out.width = 600, out.height=750, fig.align="center"}
+# Summarise data
+stats_summary <- stats %>% 
+    group_by(from) %>% 
+    summarise(prob_lie = mean(prob_lie, na.rm = T),
+              eig_norm = mean(eig_norm),
+              bet_norm = mean(bet_norm),
+              clo_norm = mean(close_norm),
+              sent = mean(sent))
+
+# Create plotting function
+imp_lie_plot <- function(imp, xlab = "") {
+stats_summary %>% 
+    ggplot(aes_string(x = imp, y = "prob_lie")) +
+    geom_point(aes(size = sent), colour = "firebrick") +
+    scale_y_continuous(labels = scales::percent) +
+    xlab(xlab) +
+    ylab("Average probability dishonest") +
+    guides(size = guide_legend(title = "Emails sent")) +
+    geom_smooth(method = "lm") +
+    theme_jim
+}    
+
+# Make the plot
+imp_lie_plot("eig_norm", "Eigenvector measured importance")
+```
+
+### Betweenness measures
+
+```{r imp_to_dis_bet, fig.cap = "Figure 6: The relationship between betweenness centrality measured importance and dishonesty", out.width = 600, out.height=750, fig.align="center"}
+# Make the plot
+imp_lie_plot("bet_norm", "Betweenness measured importance")
+```
+
+### Closeness measures
+
+```{r imp_to_dis_clo, fig.cap = "Figure 7: The relationship between closeness centrality measured importance and dishonesty", out.width = 600, out.height=750, fig.align="center"}
+# Make the plot
+imp_lie_plot("clo_norm", "Closeness measured importance")
+```
+
 
 # Conclusions
 
