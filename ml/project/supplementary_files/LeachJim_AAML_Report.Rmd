@@ -97,7 +97,7 @@ Overall most emails were predicted to be slightly dishonest, but not by large ma
 
 This analysis was completed in the `R` language. `R` was chosen as it is both flexible and powerful when performing a variety of analyses. Specifically, `R` was chosen in order to use the `quanteda` package for text analysis and the `igraph` package for network analysis. 
 
-`quanteda` was created by a lecturer for this course: Professor Kenneth Benoit. `igraph` is a well-known software library for network analytics with bindings for `R`, `Python` and `C/C++`. Given that the analysis of text was to be performed in `R` it seemed only logical to extend this to the network analysis. 
+`quanteda` was created by a lecturer for this course: Professor Kenneth Benoit. `igraph` is a well-known software library for network analytics with bindings for `R`, `Python` and `C/C++`. Givent that the analysis of text was to be performed in `R` it seemed only logical to extend this to the network analysis. 
 
 Finally, `R` has powerful visualisation and report-generating capabilities. Packages such as `ggplot2` can create static visualisations whilst others, such as `networkD3` (used in this report) offer bindings to the `D3.js` visualisation library to create interactive charts from within `R` easily. Packages including `rmarkdown`, `knitr` and `DT` make creating reports such as this one easy and allow a tight integration of code and text to produce a reproducible analysis. Details of packages and how they implement their functionality can be found at the below links:
 
@@ -378,7 +378,7 @@ newman <- data_frame(term = c("First person", "Third person", "Negative emotions
 
 # Display Newman model
 knitr::kable(newman, col.names = c("Term", "Coefficient"), 
-             caption = "Table 1: Newman model coefficients")
+             capton = "Table 1: Newman model coefficients")
 
 # Apply Newman and convert to dishonesty probability
 dishonesty <- cbind(first, third, neg, exclusive, motion) %>% # Combine results
@@ -483,7 +483,7 @@ plot_network(graph, clusters = "bet")
 
 ## Assessing importance
 
-Using the three centrality scores that were calculated for each node, it is possible to rank the importance of each node in the network. Higher centrality measures resulted in a higher rank. The rank of each sender for each of the three measures is displayed in table 2 below. 
+Using the three centrality scores that were calculated for each node, it is possible to rank the importance of each node in the network. Higher centrality measures resulted in a higher rank. The rank of each sender for each of the three measures is displayed in table TODO below. 
 
 ```{r importance, eval = T}
 # Rank individuals by cenrality (importance) measures
@@ -497,7 +497,7 @@ importances <- from_stats %>%
 DT::datatable(importances,
               colnames = c("Sender", "Eigenvector importance rank",
                            "Betweenness importance rank",
-                           "Closeness importance rank"),
+                           "Closeness imortance rank"),
               caption = "Table 2: Sender Importance Ranks")
 ```
 
@@ -559,7 +559,7 @@ stats_summary <- stats %>%
 DT::datatable(stats_summary %>% mutate(prob_lie = round(100*prob_lie, 1)),
               colnames = c("Sender", "Emails Sent", "Eigenvector importance rank",
                            "Betweenness importance rank",
-                           "Closeness importance rank", "Average probability dishonest (%)"),
+                           "Closeness imortance rank", "Average probability dishonest (%)"),
               caption = "Table 3: Importance ranks and dishonesty predictions")
 ```
 
@@ -630,7 +630,7 @@ Closeness centrality does not perform well. It calculates, for each node, how cl
 
 The walktrap algorithm has detected sensible groups. The `r stats$cl_walk %>% max()` communities it has detected can be summarised as follows: One appears to be those who have contacted Mrs. Clinton and at most one other person (typically no one); the second appears to be those who have contacted Mrs. Clinton but also many other members of the network. This second group contains the important individuals identified above and is therefore likely to be a group of interest. This demonstrates the effectiveness of the walktrap method in this setting where one cluster is highly connected and other groups in the network are not.
 
-Of the remaining two groups, both are perhaps erroneous. The first, containing Bill and Chelsea Clinton is entirely disconnected from the remainder of the network. This is likely not true in reality, and simply a function of the low quality of the data extracted from the raw PDF documents. The final cluster, containing Jacob Lew and David Johnson should probably be included in the community that has primarily contacted Mrs. Clinton. It has perhaps been detected as it is the only pair of nodes where one node is connected directly to Mrs. Clinton, and the second node is connected to the first and no-one else.
+Of the remaining two groups, both are perhaps erroneous. The first, containing Bill and Chelsea Clinton is entirely disconnected from the remainder of the network. This is likely not true in reality, ands imply a function of the low quality of the data extracted from the raw PDF documents. The final cluster, containing Jacob Lew and David Johnson should probably be included in the community that has primarily contacted Mrs. Clinton. It has perhaps been detected as it is the only pair of nodes where one node is connected directly to Mrs. Clinton, and the second node is connected to the first and no-one else.
 
 The results from the betweenness method are much less concrete, that algorithm having detected `r stats$cl_eb %>% max()` communities. There is no clear structure in any of the communities detected by this method and it has produced poor results.
 
