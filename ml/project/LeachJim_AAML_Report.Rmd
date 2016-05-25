@@ -5,7 +5,7 @@ output:
   html_document:
     code_folding: hide
     number_sections: yes
-    theme: spacelab
+    theme: readable
     toc: yes
     toc_float: yes
   pdf_document:
@@ -16,7 +16,7 @@ output:
 
 <br>
 <br>
-<p style="border:1.5px; border-style:solid; border-color:#000000; padding: 1em;">The `R` code used to perform these analyses has been provided as supplementary files, and can be viewed in this report using the _Code_ buttons to toggle code viewing. It is also available on the [online repository](https://github.com/Jim89/icl/tree/master/ml/project). This report has interactive elements and is best viewed using a modern web browser such as Mozilla Firefox or Google Chrome. Printing is possible but will not produce an optimal reading experience. Please note that submission of a report of this nature and format was discussed with Wei Pan who stated that it was entirely acceptable.</p>
+<p style="border:1.5px; border-style:solid; border-color:#000000; padding: 1em;">This report has interactive elements and is best viewed using a modern web browser such as Mozilla Firefox or Google Chrome. Printing is possible but will not produce an optimal reading experience. The `R` code used to perform these analyses has been provided as supplementary files, and can be viewed in this report using the _Code_ buttons to toggle code viewing. It is also available on the [online repository](https://github.com/Jim89/icl/tree/master/ml/project). Please note that submission of a report of this nature and format was discussed with Dr. Wei Pan who stated that it was entirely acceptable.</p>
 
 ```{r default_opts, include=FALSE}
 knitr::opts_chunk$set(message = FALSE, echo = T, warning = FALSE)
@@ -628,29 +628,29 @@ Closeness centrality does not perform well. It calculates, for each node, how cl
 
 ## Detecting groups
 
-The walktrap algorithm has detected sensible groups. The `r stats$cl_walk %>% max()` communities it has detected can be summarised as follows: One appears to be those who have contacted Mrs. Clinton and at most one other person, (typically no one); a second community appears to be those who have contacted Mrs. Clinton but also sent/received emails to/from other members of the network. This second group contains the important individuals identified above and is therefore likely to be a group of interest. This demonstrates the effectiveness of the walktrap method in this setting where one cluster is highly connected and other groups in the network are not.
+The walktrap algorithm has detected sensible groups. The `r stats$cl_walk %>% max()` communities it has detected can be summarised as follows: One appears to be those who have contacted Mrs. Clinton and at most one other person (typically no one); the second appears to be those who have contacted Mrs. Clinton but also many other members of the network. This second group contains the important individuals identified above and is therefore likely to be a group of interest. This demonstrates the effectiveness of the walktrap method in this setting where one cluster is highly connected and other groups in the network are not.
 
-Of the remaining two groups, both are perhaps erroneous. The first, containing Bill and Chelsea Clinton is entirely disconnected from the remainder of the network. This is likely not true in reality, and is simply a function of the low quality of the data extracted from the raw PDF documents. The final cluster, containing Jacob Lew and David Johnson should probably be included in the community that has primarily contacted Mrs. Clinton. It has perhaps been detected as it is the only pair of nodes where one node is connected directly to Mrs. Clinton, and the second node is connected to the first and no-one else.
+Of the remaining two groups, both are perhaps erroneous. The first, containing Bill and Chelsea Clinton is entirely disconnected from the remainder of the network. This is likely not true in reality, ands imply a function of the low quality of the data extracted from the raw PDF documents. The final cluster, containing Jacob Lew and David Johnson should probably be included in the community that has primarily contacted Mrs. Clinton. It has perhaps been detected as it is the only pair of nodes where one node is connected directly to Mrs. Clinton, and the second node is connected to the first and no-one else.
 
 The results from the betweenness method are much less concrete, that algorithm having detected `r stats$cl_eb %>% max()` communities. There is no clear structure in any of the communities detected by this method and it has produced poor results.
 
 ## Assessing dishonesty
 
-The results of applying the dishonesty model reveal that, whilst most of the communications cannot be distinguished as either _strongly_ honest or dishonest, most are predicted to be mildly dishonest. Considering the source of these emails, this is perhaps a worrying finding. There are, however, a large number of emails that are predicted to be honest (<50% likelihood of being dishonest), a small number that have a very high probability of honesty (<25% probability of being dishonest) and no virtually emails with a near-certain (> 80%) probability of being dishonest.
+The results of applying the dishonesty model reveal that, whilst most communications cannot be distinguished as either _strongly_ honest or dishonest, most are predicted to be _mildly_ dishonest. Considering the source of these emails, this is perhaps a worrying finding. There are, however, a large number that are predicted to be honest (<50% likelihood of being dishonest), and no virtually emails with a near-certain (> 80%) probability of being dishonest.
 
-The two main groups detected show a similar pattern of levels of potential dishonesty in the emails, with many predicted to be mildly (~60% probability) dishonest. It is also noted that the emails that are more strongly predicted to be dishonest come from one of these two clusters (although it is not possible to say if this is a function of the size of these clusters, or some inherent tendency towards dishonesty). Again, given the real-world importance of members of these groups (which contain both Mrs. Clinton and the individuals identified above), the overall tendency towards dishonesty is slightly concerning.
+The two main groups detected show similar levels of potential dishonesty, with many predicted to be mildly (~60% probability) dishonest. The emails that are most strongly predicted to be dishonest come from these two clusters (although it is not possible to say if this is simply a function of the size of these clusters, or some inherent tendency towards dishonesty). Given the real-world importance of members of these groups (which contain both Mrs. Clinton and the individuals identified above), the overall tendency towards dishonesty is slightly concerning.
 
 ## Dishonesty and importance
 
-For each of the three measures of importance investigated, there is no _significant_ positive or negative relationship between importance rank and the probability of sending dishonest communications. It is the case that less important individuals show a high variation in predicted probability of dishonesty; important individuals appear to clustered closer to a 50/50 honest/dishonest prediction.
+For each measures of importance investigated, there is no _significant_ relationship between importance and the probability of dishonesty. Less important individuals show a high variation in predicted probability of dishonesty; important individuals appear to clustered closer to a 50/50 honest/dishonest prediction.
 
-In this setting, the absence of a relationship is still interesting, however. The fact that an individual's importance does not appear to strongly affect their likelihood of (dis)honesty is potentially cause for concern: it would probably be hoped that important, influential figures with a great say in (inter)national affairs would typically show more honest communications than others. It is, however, pleasing to note that Mrs. Clinton herself has an overall probability of being _honest_, with an average predicted probability of dishonesty of 45.5%.
+The absence of a relationship is interesting, however. The fact that an individual's importance does not strongly affect their likelihood of (dis)honesty is potentially cause for concern: it would be hoped that important, influential figures with a say in (inter)national affairs would typically be more honest than others. It is pleasing to note that Mrs. Clinton herself has an overall probability of being _honest_, with an average probability of dishonesty of 45.5%.
 
 ## Overall 
 
-The analytical methods applied in this paper have had mixed results. Whist analysis of Mrs. Clinton's social network through importance measures and community detection produced reasonably conclusive and intuitive results, the application of existing methods for identifying dishonesty in communications did not produce strongly definitive results. 
+The methods applied in this paper have had mixed results. Whilst analysis of Mrs. Clinton's network through importance measures and community detection produced sensible and intuitive results; methods for identifying dishonesty in communications did not produce definitive results. 
 
-Perhaps as has been noted [elsewhere](http://www.theguardian.com/commentisfree/2014/aug/27/why-politicians-must-lie-and-how-selling-ice-creams-is-like-an-election-campaign), politicians _are_ dishonest, it is just that they are clever enough to use language to disguise this fact. Maybe, as is discussed in a [Telegraph article](http://www.telegraph.co.uk/news/general-election-2015/politics-blog/11629927/Politicians-lie.-Get-over-it.html) that fact should just be accepted.
+Perhaps as has been [noted](http://www.theguardian.com/commentisfree/2014/aug/27/why-politicians-must-lie-and-how-selling-ice-creams-is-like-an-election-campaign), politicians _are_ dishonest, it is just that they are clever enough to use language to disguise this fact. Maybe, as discussed in a [Telegraph article](http://www.telegraph.co.uk/news/general-election-2015/politics-blog/11629927/Politicians-lie.-Get-over-it.html) that fact should just be accepted.
 
 # References
 
