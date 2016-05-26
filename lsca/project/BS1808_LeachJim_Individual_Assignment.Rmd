@@ -21,7 +21,7 @@ output:
 
 For this project data from a large fast-food restaurant chain in the U.S.A. were provided. The data covered approximately 4 months of data from March until June 2015 in four restaurants: two in Berkley, California, and two in New York, New York. The data provided transaction information (e.g. which menu items were purchased and in what quantities), ingredient lists for all menu items, and associated metadata (e.g. store location, store type etc). 
 
-The goal of the project was to forecast demand for two specific ingredients (lettuce and tomatoes) for each of the the four locations. The forecast period was two weeks following the end of the data (from 2015-06-16 to 2015-06-29). 
+The goal of the project was to forecast demand for lettuce for each of the the four locations. The forecast period was two weeks following the end of the data (from 2015-06-16 to 2015-06-29). 
 
 ## This document
 
@@ -36,6 +36,9 @@ This `HTML` report is best viewed using a modern web browser such as Mozilla Fir
 library(dplyr)
 library(tidyr)
 library(ggplot2)
+library(lubridate)
+library(forecast)
+library(purrr)
 
 # Set up theme object for prettier plots
 theme_jim <-  theme(legend.position = "bottom",
@@ -141,11 +144,11 @@ for(i in seq_along(tbls)) {
 rm(sql, tbls, i)
 ```
 
-As sales, recipes, sub-recipes and ingredients were all stored in separate tables, several steps were required to create a view of the demand for lettuce and tomato on a single day. 
+As sales, recipes, sub-recipes and ingredients were all stored in separate tables, several steps were required to create a view of the demand for lettuce on a single day. 
 
 ## Ingredient requirements
 
-Firstly, all recipies containing either tomato or lettuce were found from the data, discarding other recipes (as they were not relevant). The amount of lettuce and tomato required for each recipe was found. As some recipies listed the amount in ounces and others in grams, the amount required for each recipe was standardised to be measure in grams. This produced a clean data set that listed, for recipies requiring either lettuce _or_ tomato, the total amounts of lettuce and tomato required in each recipe. 
+Firstly, all recipies containing lettuce were found from the data, discarding other recipes (as they were not relevant). The amount of lettuce required for each recipe was found. As some recipies listed the amount in ounces and others in grams, the amount required for each recipe was standardised to be measure in grams. This produced a clean data set that listed the total amounts of lettuce required in each recipe. 
 
 ```{r recipies_to_ingredients, message = FALSE}
 tom_let_recipes <- recipes %>% 
@@ -177,7 +180,7 @@ tom_let_recipes <- recipes %>%
          tomato = ifelse(is.na(tomato), 0, tomato))
 ```
 
-A similar process was performed for all _sub_-recipies containing either tomato or lettuce. The amount of lettuce and tomato required for each subrecipe was found and standardised to grams. 
+A similar process was performed for all _sub_-recipies containing lettuce. The amount of lettuce required for each subrecipe was found and standardised to grams. 
 
 ```{r subrecipes_to_ingredients, message = FALSE}
 tom_let_sub_recipes <- sub_recipes %>% 
@@ -209,7 +212,7 @@ tom_let_sub_recipes <- sub_recipes %>%
          tomato = ifelse(is.na(tomato), 0, tomato))
 ```
 
-The linkage between recipe and sub-recipes was then used to calculate, for each recipe, the total amounts of lettuce and tomato required by the sub-recipe(s) beneath it.
+The linkage between recipe and sub-recipes was then used to calculate, for each recipe, the total amounts of lettuce required by the sub-recipe(s) beneath it.
 
 ```{r recipe_to_sub_reqs, message = FALSE}
 recipe_to_sub_tom_let <- recipe_sub_recipe_assignments %>% 
@@ -226,7 +229,7 @@ recipe_to_sub_tom_let <- recipe_sub_recipe_assignments %>%
             sub_tom = sum(sub_tom, na.rm = T))
 ```
 
-The linkage between recipe and sub-recipe was then used to calculate the _total_ lettuce and tomato requirements for each recipe, i.e. combining the requirements of each recipe, as well as the requirements of any sub-recipes beneath each recipe. These data can be seen in table one.
+The linkage between recipe and sub-recipe was then used to calculate the _total_ lettuce requirements for each recipe, i.e. combining the requirements of each recipe, as well as the requirements of any sub-recipes beneath each recipe. These data can be seen in table one.
 
 ```{r recipes_to_tom_let, message = FALSE}
 recipes_to_tom_let <- tom_let_recipes %>% 
@@ -235,17 +238,19 @@ recipes_to_tom_let <- tom_let_recipes %>%
   rowwise() %>% 
   mutate(total_lettuce = sum(lettuce, sub_let, na.rm = T),
          total_tomato = sum(tomato, sub_tom, na.rm = T)) %>% 
-  select(recipeid, total_lettuce, total_tomato) %>% 
-  collect()
+  select(recipeid, total_lettuce) %>% 
+  filter(total_lettuce > 0) %>% 
+  collect() 
+
 
 DT::datatable(recipes_to_tom_let, 
-              colnames = c("Recipe ID", "Lettuce (g)", "Tomato (g)"),
-              caption = "Table 1: Total lettuce and tomato requirements in grams for all recipes with at least some requiement for either ingredient.")
+              colnames = c("Recipe ID", "Lettuce (g)"),
+              caption = "Table 1: Total lettuce requirements in grams for all recipes with at least some requiement for lettuce.", rownames = FALSE)
 ```
 
 ## Orders requirements
 
-The lettuce and tomato requirements for each menu item were then determined, based on the recipe(s) requirements for each item.
+The lettuce requirements for each menu item were then determined, based on the recipe(s) requirements for each item.
 
 ```{r menu_items_to_reqs, message = FALSE}
 menu_items_to_tom_let <- menu_items %>% 
@@ -253,7 +258,7 @@ menu_items_to_tom_let <- menu_items %>%
   inner_join(recipes_to_tom_let)
 ```
 
-The linkage of orders to menu items was then used to determine the lettuce and tomato requirements for each order, based on the items selected in each order, and the number of each item selected (for example, requirements would double for the same item order twice within one order).
+The linkage of orders to menu items was then used to determine the lettuce requirements for each order, based on the items selected in each order, and the number of each item selected (for example, requirements would double for the same item order twice within one order).
 
 ```{r orders_to_reqs, message = FALSE}
 # Use menuitem to link ordersale md5 IDs to total lettuce and tomato requirements
@@ -262,12 +267,10 @@ let_tom_reqs <- menuitem %>%
   collect() %>% 
   inner_join(menu_items_to_tom_let, by = c("plu" = "plu", 
                                            "id" = "menuitemid")) %>% 
-  mutate(lettuce = quantity * total_lettuce,
-         tomato = quantity * total_tomato) %>% 
-  select(md5key_ordersale, lettuce, tomato) %>% 
+  mutate(lettuce = quantity * total_lettuce) %>% 
+  select(md5key_ordersale, lettuce) %>% 
   group_by(md5key_ordersale) %>% 
-  summarise(lettuce = sum(lettuce),
-            tomato = sum(tomato))
+  summarise(lettuce = sum(lettuce))
 
 # Link lettuce and tomato requirements to sales
 sales_to_demand <- pos_ordersale %>% 
@@ -275,48 +278,29 @@ sales_to_demand <- pos_ordersale %>%
   inner_join(let_tom_reqs)
 ```
 
-The daily demand of lettuce and tomato at each store was then determined via a simple summarisation process.
+The daily demand of lettuce at each store was then determined via a simple summarisation process.
 
 ```{r daily_demand}
 # Summarise by data to create ts
 daily_demand <- sales_to_demand %>% 
   group_by(storenumber, date) %>% 
-  summarise(lettuce = sum(lettuce),
-            tomato = sum(tomato)) %>% 
+  summarise(lettuce = sum(lettuce)) %>% 
   mutate(store = as.character(storenumber)) %>% 
   left_join(store_restaurant, by = c("storenumber" = "store_number"), copy = T) %>% 
-  mutate(store_address1 = stringr::str_trim(store_address1)) %>% 
+  mutate(store_address1 = stringr::str_trim(store_address1),
+         store_city = stringr::str_trim(store_city),
+         store_state = stringr::str_trim(store_state)) %>% 
+  select(store, store_state, store_city, date, lettuce) %>% 
   ungroup()
 ```
 
-## Visualising demand {.tabset}
+## Visualising demand
 
-The daily demand of lettuce and tomato at each of the four restaurants (each small multiple in the plot) in the data was visualised in order to understand the structure of the data a little better. 
+The daily demand of lettuce at each of the four restaurants (each small multiple in the plot) in the data was visualised in order to understand the structure of the data a little better, in order that sensible forecasting methods could be applied.
 
-There does not appear to be a _strong_ trend in either Californian or New York restaurants. Restaurant 20974 initially shows very low demand for both lettuce and tomato, before picking up to show demand comparable to the other stores. There is clearly some seasonality in the demand within Californian restaurants which appears to be at a weekly level. Such a strong pattern of seasonality is (interestingly) _not_ observed for the restaurants in New York.
+Figure one shows that there does not appear to be a _strong_ trend in either the Californian or the New York restaurants. Restaurant 20974 initially shows very low demand, before picking up to show demand comparable to the other stores. There is clearly some seasonality in the demand within Californian restaurants which appears to be at a weekly level. Such a strong pattern of seasonality is not observed for the restaurants in New York.
 
-### Tomato
-
-```{r vis_tom_ts, fig.cap = "Figure 1: Daily demand for tomatoes,  split by restaurant.", fig.align="centre", out.width=800, out.height=900}
-daily_demand %>% 
-  ggplot(aes(x = date, y = tomato, colour = store_state)) +
-  geom_line(size = 1.25) +
-  scale_x_date(date_breaks = "2 week") +
-  scale_color_brewer(type = "qual", palette = "Dark2") +
-  facet_grid(store ~ .) +
-  guides(colour = guide_legend(title = "Store state")) +
-  xlab("") +
-  ylab("Demand for tomato (g)") +
-  theme_jim + 
-  scale_y_continuous(labels = scales::comma) +
-  theme(axis.text.x = element_text(angle = 45,
-                                   vjust = 0.5,
-                                   hjust = .5))
-```
-
-### Lettuce
-
-```{r vis_let_ts, fig.cap = "Figure 2: Daily demand for lettuce, split by restaurant.", fig.align="centre", out.width=800, out.height=900}
+```{r vis_let_ts, fig.cap = "Figure 1: Daily demand for lettuce, split by restaurant. The dashed grey line shows the train/test split point for fitting models (the last two weeks of the data).", fig.align="centre", out.width=800, out.height=900}
 daily_demand %>% 
   ggplot(aes(x = date, y = lettuce, colour = store_state)) +
   geom_line(size = 1.25) +
@@ -330,6 +314,87 @@ daily_demand %>%
   scale_y_continuous(labels = scales::comma) +
   theme(axis.text.x = element_text(angle = 45,
                                    vjust = 0.5,
-                                   hjust = .5))
+                                   hjust = .5)) +
+  geom_vline(xintercept = 16587, linetype = "dashed", colour = "darkgrey")
 ```
+
+In order to compare forecasting methods it was necessary to select some data from the time series for testing/evaluation purposes. It was decided that the last two weeks of data from each series would be used to form a testing set of data. The dashed grey lines in figure one show this cut-off of training and testing data.
+
+## Train and test split
+
+Using the final two-week period of each series for testing forecasting approaches, the data were split in to a train and test set prior to fitting any models. The data were [nested](https://blog.rstudio.org/2016/02/02/tidyr-0-4-0/) by store in order to make fitting multiple time series models more straightforward.
+
+```{r test_train}
+# Split in to train and test
+train <- daily_demand %>% 
+        filter(date <= max(date) - days(14)) %>% 
+        group_by(store, store_state, store_city) %>% 
+        nest(.key = ts_data)
+
+# Last 2 weeks = test
+test <- daily_demand %>% 
+        filter(date > max(date) - days(14)) %>% 
+        group_by(store, store_state, store_city) %>% 
+        nest(.key = ts_data)
+```
+
+The lettuce daily demand data for each store was converted in to an `R` `timeseries` object in order to fit the forecasting models.
+
+```{r make_ts}
+# First convert the time-series data in to actual R timeseries objects
+make_ts <- function(df) {
+  series <- ts(df$lettuce, start = 1, frequency = 7)
+  return(series)
+}
+
+# Use some functional programming on the nested data to convert it to a timeseries
+train <- train %>% 
+         mutate(ts_ts = ts_data %>% map(make_ts))
+
+test <- test %>% 
+        mutate(ts_ts = ts_data %>% map(make_ts))
+```
+
+# Forecasting methods 
+
+## Holt-Winters model {.tabset}
+
+Exponential smoothing state space models (Hyndman et. al., 2002) were applied to the time series, one model for each store. Given the absense of a visible trend in the exploratory visualisations (figure one), the function was applied specifying no trend. The error and seasonality types were left to be chosen automatically by the function.
+
+```{r fit_ets}
+# Function to fit the ets model to time series data with no trend
+fit_ets <- function(ts_data) {
+  ets(ts_data, model = "ZNZ")
+}
+
+# Apply the model to each store's timeseries
+train <- train %>% 
+          mutate(hw_ets = ts_ts %>% map(fit_ets))
+```
+
+```{r make_plots}
+plot_ets <- function(data, row) {
+  ets <- data$hw_ets[[row]]
+  store <- data %>% slice(row) %>% select(store, store_city) %>% paste(collapse = ", ")
+  method <- ets$method
+  title <- paste("Decomposition by", method, "for", store, sep = " ")
+  state <- data %>% slice(row) %>% select(store_state)
+  
+  col <- ifelse(state == "California", "#1b9e77", "#d95f02")
+  col <- rep(col, ets$x %>% length())
+  
+  autoplot(ets) + 
+    scale_y_continuous(labels = scales::comma) +
+    theme_jim + 
+    ggtitle(title) +
+    theme(title = element_text(size = 14))
+}
+```
+
+
+## ARIMA model
+
+## Discsussion
+
+
 
