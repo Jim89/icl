@@ -6,7 +6,7 @@ output:
   html_document:
     code_folding: hide
     number_sections: yes
-    theme: spacelab
+    theme: readable
     toc: yes
     toc_float: yes
   pdf_document:
@@ -39,6 +39,7 @@ library(ggplot2)
 library(lubridate)
 library(forecast)
 library(purrr)
+library(knitr)
 
 # Set up theme object for prettier plots
 theme_jim <-  theme(legend.position = "bottom",
@@ -59,6 +60,16 @@ theme_jim <-  theme(legend.position = "bottom",
 
 # Source the data from the databse
 db <- src_postgres("lsca")
+
+# Function that takes a string and converts it in to "proper case" (i.e.
+# the first letter is capitalised, all remaining letters are lower case)
+# N.b. for multi-word strings, only the first word will be affected
+toproper <- function(x) { 
+  first <- substring(x, 1, 1) %>% toupper()
+  rest <- substring(x, 2) %>% tolower()
+  whole <- paste0(first, rest)
+  return(whole)
+}
 
 # Function that takes a string and converts it in to "proper case" (i.e.
 # the first letter is capitalised, all remaining letters are lower case)
@@ -300,7 +311,7 @@ The daily demand of lettuce at each of the four restaurants (each small multiple
 
 Figure one shows that there does not appear to be a _strong_ trend in either the Californian or the New York restaurants. Restaurant 20974 initially shows very low demand, before picking up to show demand comparable to the other stores. There is clearly some seasonality in the demand within Californian restaurants which appears to be at a weekly level. Such a strong pattern of seasonality is not observed for the restaurants in New York.
 
-```{r vis_let_ts, fig.cap = "Figure 1: Daily demand for lettuce, split by restaurant. The dashed grey line shows the train/test split point for fitting models (the last two weeks of the data).", fig.align="centre", out.width=800, out.height=900}
+```{r vis_let_ts, fig.cap = "Figure 1: Daily demand for lettuce, split by restaurant. The dashed grey line shows the train/test split point for fitting models (the last two weeks of the data).", fig.align="centre", out.width=800, out.height=1000}
 daily_demand %>% 
   ggplot(aes(x = date, y = lettuce, colour = store_state)) +
   geom_line(size = 1.25) +
@@ -342,8 +353,10 @@ The lettuce daily demand data for each store was converted in to an `R` `timeser
 
 ```{r make_ts}
 # First convert the time-series data in to actual R timeseries objects
+# Daily deman is modelled with frequency = 7 as noted here http://robjhyndman.com/hyndsight/dailydata/
+# By R. Hyndman (author of forecast!)
 make_ts <- function(df) {
-  series <- ts(df$lettuce, start = 1, frequency = 7)
+  series <- ts(df$lettuce, frequency = 7)
   return(series)
 }
 
@@ -359,22 +372,22 @@ test <- test %>%
 
 ## Holt-Winters model {.tabset}
 
-Exponential smoothing state space models (Hyndman et. al., 2002) were applied to the time series, one model for each store. Given the absense of a visible trend in the exploratory visualisations (figure one), the function was applied specifying no trend. The error and seasonality types were left to be chosen automatically by the function.
+Exponential smoothing state space models (Hyndman et. al., 2002) were applied to the time series using the `ets` function. Despite the absense of obvious trends in the exploratory visualisations (figure one), the function was applied in a fully automated manner. This was done in order for potential trends to be identified by the model, should they exist in the data. 
 
 ```{r fit_ets}
 # Function to fit the ets model to time series data with no trend
 fit_ets <- function(ts_data) {
-  ets(ts_data, model = "ZNZ")
+  ets(ts_data, model = "ZZZ")
 }
 
 # Apply the model to each store's timeseries
 train <- train %>% 
-          mutate(hw_ets = ts_ts %>% map(fit_ets))
+          mutate(ets = ts_ts %>% map(fit_ets))
 ```
 
-```{r make_plots}
+```{r make_plots, include = FALSE}
 plot_ets <- function(data, row) {
-  ets <- data$hw_ets[[row]]
+  ets <- data$ets[[row]]
   store <- data %>% slice(row) %>% select(store, store_city) %>% paste(collapse = ", ")
   method <- ets$method
   title <- paste("Decomposition by", method, "for", store, sep = " ")
@@ -391,10 +404,173 @@ plot_ets <- function(data, row) {
 }
 ```
 
+The estimates from the ETS models were then used to specify a complete Holt-Winters model, using the `HoltWinters` function. In this way trends (and an estimation of the seasonal component) of each series detected by `ets` are passed to `HoltWinters` for assessment.
+
+```{r fit_hw}
+# Define function to run HW using output from the ets estimations
+fit_hw <- function(ts_data, ets_model) {
+  # Extract components from ets model
+  l <- ets_model$par["l"]
+  if (is.na(l)) { l <- NULL }
+  
+  b <- ets_model$par["b"]
+  if (is.na(b)) { b <- NULL }
+  
+  alpha <- ets_model$par["alpha"]
+  alpha_l <- ifelse(is.na(alpha), FALSE, TRUE) # Fit with alpha?
+  if (is.na(alpha)) { alpha <- 0.3} # Set default value if not viable
+  
+  beta <- ets_model$par["beta"]
+  beta_l <- ifelse(is.na(beta), FALSE, TRUE) # Fit with beta?
+  if (is.na(beta)) { beta <- 0.1}
+  
+  gamma <- ets_model$par["gamma"]
+  gamma_l <- ifelse(is.na(gamma), FALSE, TRUE) # Fit with gamma?
+  if (is.na(gamma)) { gamma <- 0.1}
+  
+  seasonality <- ets_model$components[3]
+  seasonality <- ifelse(seasonality == "A", "additive", 
+                        ifelse(seasonality == "N", "additive", 
+                               "multiplicative"))
+  
+  # Set logical alpha/beta/gamma parametes
+  
+  
+  hw <- HoltWinters(ts_data, alpha = alpha_l, beta = beta_l, gamma = gamma_l,
+                    seasonal = seasonality,
+                    start.periods = 6,
+                    l.start = l,
+                    b.start = b,
+                    optim.start = c(alpha = alpha,
+                                    beta = beta,
+                                    gamma = gamma))
+  return(hw)
+}  
+
+# Apply the function to fit the HW models
+train <- train %>% 
+          mutate(hw = ts_ts %>% map2(ets, fit_hw))
+
+```
+
+The estimation of the components (i.e. level, trend and seasonal), where applicable, along with the fitted values are displayed in the figures below, one for each model (i.e. for each of the four stores). For neither of the Californian stores was a trend detected, whereas both New York stores have a trend that varies over the series.
+
+The merits of the Holt-Winters model are detailed in the comparison section where the _test_ data is used to assess the strengths of each model.
+
+```{r plot_hw}
+# Create function to plot HW fitted model, using store and city name for labels
+plot_hw <- function(store, city, hw_object) {
+  # Create data from fitted part of the model - fortify for ggplot2 plotting
+  data <- hw_object$fitted %>% fortify.zoo()
+  
+  # Set tidier column names
+  colnames(data) <- colnames(data) %>% toproper() %>% gsub("Xhat", "Fitted", .)
+  
+  idx <- seq(ymd(min(daily_demand$date)), ymd(max(daily_demand$date)), length.out = nrow(data))
+  data$Index <- idx
+  
+  # Create plotting data in format that ggplot2 likes
+  data <- data %>% gather(field, value, -Index)
+  
+
+  
+  # Create title for the plot
+  title <- paste0("Holt-Winters model estimation for store ", store, " (", city, ")")
+    
+  # Make the plot
+  data %>% 
+  ggplot(aes(x = Index, y = value, group = field, colour = field)) + 
+    geom_line(size = 1.5, aes(colour = field)) +
+    scale_colour_brewer(palette = "Set1") +
+    facet_grid(field ~ ., scales = "free_y") + 
+    scale_y_continuous(labels = scales::comma) +
+    guides(colour = guide_legend(title = "")) + 
+    xlab("Time") +
+    ylab("Value") +
+    ggtitle(title) +
+    theme_jim +
+    theme(title = element_text(size = 14),
+          axis.text.y = element_text(size = 12))
+} 
+
+# Apply function to the data
+train <- train %>% 
+          mutate(hw_plot = pmap(list(store, store_city, hw), plot_hw))
+```
+
+```{r get_store_name, include = FALSE}
+get_store_name <- function(row) {
+  name <- train %>% slice(row) %>% select(store, store_city) %>% paste(collapse = "-")
+  storename <- paste("Store", name)
+  return(name)
+}
+```
+
+### `r get_store_name(1)`
+
+```{r display_hw_1, fig.cap = "Figure 2: Holt-Winters model estimates and fitted values", fig.align="center"}
+train$hw_plot[[1]]
+```
+
+### `r get_store_name(2)`
+
+```{r display_hw_2, fig.cap = "Figure 2: Holt-Winters model estimates and fitted values", fig.align="center"}
+train$hw_plot[[2]]
+```
+
+### `r get_store_name(3)`
+
+```{r display_hw_3, fig.cap = "Figure 2: Holt-Winters model estimates and fitted values", fig.align="center"}
+train$hw_plot[[3]]
+```
+
+### `r get_store_name(4)`
+
+```{r display_hw_4, fig.cap = "Figure 2: Holt-Winters model estimates and fitted values", fig.align="center"}
+train$hw_plot[[4]]
+```
 
 ## ARIMA model
 
-## Discsussion
+Firstly, the log-transform of each time-series was performed in order to ensure that each had a constant variance.
+
+```{r log_transform}
+# Log-transform each series
+train <- train %>% 
+  mutate(l_ts = ts_ts %>% map(log))
+```
+
+The appropriate number of differences required for each series to be made stationary was then found using the `ndiffs` function. A similar approach was taken to find the number of _seasonal_ differences required, using the `nsdiffs` function. The results from these tests are displayed in table TODO below. KPSS, ADF, and PP refer to the KPSS, Augmented Dickey-Fuller and Phillips-Perron tests for simple differencing requirements. CH and OCSB refer to Cenova-Hansen and Osborn-Chui-Smith-Birchenhall tests for determining seasonal difference requirements.
+
+```{r find_diffs}
+train <- train %>% 
+  mutate(# Determine difference reqs
+         diffs_kpss = l_ts %>% map_dbl(ndiffs, alpha = 0.01, test = "kpss"),
+         diffs_adf = l_ts %>% map_dbl(ndiffs, alpha = 0.01, test = "adf"),
+         diffs_pp = l_ts %>% map_dbl(ndiffs, alpha = 0.01, test = "pp"),
+         # Determine seasonal difference reqs
+         sdiffs_ch = l_ts %>% map_dbl(nsdiffs, test = "ch", max.D = 2),
+         sdiffs_ocsb = l_ts %>% map_dbl(nsdiffs, test = "ocsb", max.D = 2))
+
+train %>% 
+  select(store, store_city, diffs_kpss, diffs_adf, diffs_pp, sdiffs_ch, sdiffs_ocsb) %>% 
+  kable(col.names = c("Store", "City", "KPSS", "ADF", "PP", "CH", "OCSB"),
+        caption =  "Table TODO: Difference and seasonal difference requirements for each store's series")
+```
+
+Given that the KPSS and ADF methods indicate that no differencing is required for any of the foure series and only one series (Elmhurst) is indicated to require differencing by the PP test, no differencing was performed in order to make the series stationary. Given the strong pattern of seasonality observed in the Californian stores (figure one), the results from the OCSB method of detecting seasonal differnece requirements were used to perform seasonal differencing.
+
+```{r diff_ts}
+diff_ts <- function(ts, diff, lag) {
+  diff(ts, lag = lag, differences = diff)
+}
+
+train %>% 
+  mutate(l_ts_diff = pmap(l_ts, sdiffs_ocsb, 7, diff_ts))
+```
+
+
+## Model Comparison
 
 
 
