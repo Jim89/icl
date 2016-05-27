@@ -657,12 +657,40 @@ train$arima_plot[[4]]
 
 There are two methods that can be applied when diagnosing the two modelling approaches. The first approach considers the models in isolation, and looks at in-sample measures of fit to estimate model quality. The second approach is to forecast using each model and compare the results with the _test_ data, summarising differences using common error metrics (such as mean-squared error, or mean absolute deviation). Both approaches have been taken and are discussed below.
 
-## Holt-Winters
+## Holt-Winters {.tabset}
 
-
+A common method of evaluating a Holt-Winters model is to examine the residuals. In a good model fit, these should be TODO
 
 ## ARIMA
 
 ## Test errors
 
+```{r forecast_hw}
+# Create function to extract avg. forecasts for the next 14 days
+forcast_fortnight <- function(ts_model) {
+  forecast(ts_model, h = 14)$mean %>% as.numeric()
+}
 
+# Forecast for 14 days
+train <- train %>% 
+          mutate(hw_forecast = hw %>% map(forcast_fortnight),
+                 arima_forecast = arima %>% map(forcast_fortnight))
+
+# Expand forecasts
+forecasts <- train %>% 
+              select(store, store_state, store_city, hw_forecast, arima_forecast) %>% 
+              unnest() %>% 
+              group_by(store, store_state, store_city) %>% 
+              mutate(forecast = row_number(),
+                     arima_forecast = exp(arima_forecast)) %>% 
+              left_join(test %>% 
+                        select(-ts_ts) %>% 
+                        unnest() %>% 
+                        select(-storenumber) %>% 
+                        group_by(store, store_state, store_city) %>% 
+                        mutate(forecast = row_number())) %>% 
+              mutate(hw_diff = hw_forecast - lettuce,
+                     arima_diff = arima_forecast - lettuce)
+
+```
+  
