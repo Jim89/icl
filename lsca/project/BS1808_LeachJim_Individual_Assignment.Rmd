@@ -32,6 +32,9 @@ The `R` code used to perform these analyses has been provided as supplementary f
 This `HTML` report is best viewed using a modern web browser such as Mozilla Firefox or Google Chrome.
 
 ```{r prep, echo = TRUE, message=FALSE}
+# Set default knitr options
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+
 # Load packages
 library(dplyr)
 library(tidyr)
@@ -43,12 +46,12 @@ library(knitr)
 
 # Set up theme object for prettier plots
 theme_jim <-  theme(legend.position = "bottom",
-                    axis.text.y = element_text(size = 16, colour = "black"),
-                    axis.text.x = element_text(size = 16, colour = "black"),
-                    legend.text = element_text(size = 16),
-                    legend.title = element_text(size = 16),
+                    axis.text.y = element_text(size = 14, colour = "black"),
+                    axis.text.x = element_text(size = 14, colour = "black"),
+                    legend.text = element_text(size = 14),
+                    legend.title = element_text(size = 14),
                     title = element_text(size = 16),
-                    strip.text = element_text(size = 16, colour = "black"),
+                    strip.text = element_text(size = 14, colour = "black"),
                     strip.background = element_rect(fill = "white"),
                     panel.grid.minor.x = element_blank(),
                     panel.grid.major.x = element_line(colour = "grey", linetype = "dotted"),
@@ -85,7 +88,7 @@ toproper <- function(x) {
 tidy_names <- c("Term", "Estimate", "Std. Error", "t-Stat.", "p-Value")
 ```
 
-# Data preparation and Exploration
+# Data preparation
 
 ## Loading data
 
@@ -251,11 +254,13 @@ recipes_to_tom_let <- tom_let_recipes %>%
          total_tomato = sum(tomato, sub_tom, na.rm = T)) %>% 
   select(recipeid, total_lettuce) %>% 
   filter(total_lettuce > 0) %>% 
-  collect() 
+  collect() %>% 
+  left_join(recipes, copy = T) %>% 
+  select(recipeid, recipename, recipedescription, total_lettuce)
 
 
 DT::datatable(recipes_to_tom_let, 
-              colnames = c("Recipe ID", "Lettuce (g)"),
+              colnames = c("Recipe ID", "Recipe name", "Description", "Lettuce (g)"),
               caption = "Table 1: Total lettuce requirements in grams for all recipes with at least some requiement for lettuce.", rownames = FALSE)
 ```
 
@@ -438,7 +443,7 @@ fit_hw <- function(ts_data, ets_model) {
   
   hw <- HoltWinters(ts_data, alpha = alpha_l, beta = beta_l, gamma = gamma_l,
                     seasonal = seasonality,
-                    start.periods = 6,
+                    start.periods = 2,
                     l.start = l,
                     b.start = b,
                     optim.start = c(alpha = alpha,
@@ -453,15 +458,19 @@ train <- train %>%
 
 ```
 
-The estimation of the components (i.e. level, trend and seasonal), where applicable, along with the fitted values are displayed in the figures below, one for each model (i.e. for each of the four stores). For neither of the Californian stores was a trend detected, whereas both New York stores have a trend that varies over the series.
+The estimation of the components (i.e. level, trend and seasonal), where applicable, along with the fitted values are displayed in the figures below, one for each model (i.e. for each of the four stores). For neither of the Californian stores was a trend detected, whereas both New York stores have a trend that varies over the series. Each figure also displays the raw demand data in the first panel. The fitted values show a please correspondence with the raw data.
 
-The merits of the Holt-Winters model are detailed in the comparison section where the _test_ data is used to assess the strengths of each model.
+Further details on the merits of the Holt-Winters model are discussed in the model comparison section.
 
 ```{r plot_hw}
 # Create function to plot HW fitted model, using store and city name for labels
-plot_hw <- function(store, city, hw_object) {
+plot_hw <- function(store, city, hw_object, ts) {
   # Create data from fitted part of the model - fortify for ggplot2 plotting
   data <- hw_object$fitted %>% fortify.zoo()
+  
+  ts_data <- ts %>% fortify.zoo() %>% setNames(c("Index", "raw"))
+  
+  data <- data %>% left_join(ts_data)
   
   # Set tidier column names
   colnames(data) <- colnames(data) %>% toproper() %>% gsub("Xhat", "Fitted", .)
@@ -470,10 +479,11 @@ plot_hw <- function(store, city, hw_object) {
   data$Index <- idx
   
   # Create plotting data in format that ggplot2 likes
-  data <- data %>% gather(field, value, -Index)
-  
-
-  
+  data <- data %>% 
+          gather(field, value, -Index) %>% 
+          mutate(field = factor(field, levels = c("Raw", "Fitted", "Level", "Season", "Trend"))) %>% 
+          na.omit()
+ 
   # Create title for the plot
   title <- paste0("Holt-Winters model estimation for store ", store, " (", city, ")")
     
@@ -495,7 +505,7 @@ plot_hw <- function(store, city, hw_object) {
 
 # Apply function to the data
 train <- train %>% 
-          mutate(hw_plot = pmap(list(store, store_city, hw), plot_hw))
+          mutate(hw_plot = pmap(list(store, store_city, hw, ts_ts), plot_hw))
 ```
 
 ```{r get_store_name, include = FALSE}
@@ -514,23 +524,23 @@ train$hw_plot[[1]]
 
 ### `r get_store_name(2)`
 
-```{r display_hw_2, fig.cap = "Figure 2: Holt-Winters model estimates and fitted values", fig.align="center"}
+```{r display_hw_2, fig.cap = "Figure 3: Holt-Winters model estimates and fitted values", fig.align="center"}
 train$hw_plot[[2]]
 ```
 
 ### `r get_store_name(3)`
 
-```{r display_hw_3, fig.cap = "Figure 2: Holt-Winters model estimates and fitted values", fig.align="center"}
+```{r display_hw_3, fig.cap = "Figure 4: Holt-Winters model estimates and fitted values", fig.align="center"}
 train$hw_plot[[3]]
 ```
 
 ### `r get_store_name(4)`
 
-```{r display_hw_4, fig.cap = "Figure 2: Holt-Winters model estimates and fitted values", fig.align="center"}
+```{r display_hw_4, fig.cap = "Figure 5: Holt-Winters model estimates and fitted values", fig.align="center"}
 train$hw_plot[[4]]
 ```
 
-## ARIMA model
+## ARIMA model {.tabset}
 
 Firstly, the log-transform of each time-series was performed in order to ensure that each had a constant variance.
 
@@ -540,7 +550,7 @@ train <- train %>%
   mutate(l_ts = ts_ts %>% map(log))
 ```
 
-The appropriate number of differences required for each series to be made stationary was then found using the `ndiffs` function. A similar approach was taken to find the number of _seasonal_ differences required, using the `nsdiffs` function. The results from these tests are displayed in table TODO below. KPSS, ADF, and PP refer to the KPSS, Augmented Dickey-Fuller and Phillips-Perron tests for simple differencing requirements. CH and OCSB refer to Cenova-Hansen and Osborn-Chui-Smith-Birchenhall tests for determining seasonal difference requirements.
+The appropriate number of differences required for each series to be made stationary were then found using the `ndiffs` function. A similar approach was taken to find the number of _seasonal_ differences required, using the `nsdiffs` function. The results from these tests are displayed in table TODO below. KPSS, ADF, and PP refer to the KPSS, Augmented Dickey-Fuller and Phillips-Perron tests for simple differencing requirements. CH and OCSB refer to Cenova-Hansen and Osborn-Chui-Smith-Birchenhall tests for determining seasonal difference requirements.
 
 ```{r find_diffs}
 train <- train %>% 
@@ -558,19 +568,101 @@ train %>%
         caption =  "Table TODO: Difference and seasonal difference requirements for each store's series")
 ```
 
-Given that the KPSS and ADF methods indicate that no differencing is required for any of the foure series and only one series (Elmhurst) is indicated to require differencing by the PP test, no differencing was performed in order to make the series stationary. Given the strong pattern of seasonality observed in the Californian stores (figure one), the results from the OCSB method of detecting seasonal differnece requirements were used to perform seasonal differencing.
+Given that the KPSS and ADF methods indicated that no differencing was required for any of the four series and only one series (Elmhurst) is indicated to require differencing by the PP test, no differencing was performed in order to make the series stationary. 
+
+However, given the strong pattern of seasonality observed in the Californian stores (figure one), the results from the OCSB method of detecting seasonal differenece requirements were used to perform _seasonal_ differencing.
+
+The `auto.arima` function was used to fit an ARIMA model for each of the stores, using the differencing values identified above.
 
 ```{r diff_ts}
-diff_ts <- function(ts, diff, lag) {
-  diff(ts, lag = lag, differences = diff)
+diff_ts_and_fit <- function(ts, diff) {
+fitted <- auto.arima(ts, d = 0, D = diff)
+  return(fitted)
 }
 
-train %>% 
-  mutate(l_ts_diff = pmap(l_ts, sdiffs_ocsb, 7, diff_ts))
+train <- train %>%
+  mutate(arima = map2(l_ts, sdiffs_ocsb, diff_ts_and_fit),
+         arima_fitted = arima %>% map(forecast::fitted.Arima))
+```
+
+The raw data were then be compared to the fitted values from each ARIMA model to give an understanding of how well the models fit the data. In order to make comparisons, the exponential of the log-transformed values (returned by the `auto.arima` `fitted` method) from the models was taken.
+
+These comparisons were visualised and are presented in the figures below.
+
+```{r create_plot_arima}
+plot_arima <- function(store, city, fitted, raw) {
+# Set up objects to create plotting data
+  fitted <- fitted %>% as.numeric() %>% exp()
+  raw <- raw %>% as.numeric() %>% exp()
+  idx <- idx <- seq(ymd(min(daily_demand$date)), ymd(max(daily_demand$date)), length.out = length(fitted))
+ 
+ # Create plotting dataframe
+  data <- data_frame(fitted = fitted, raw = raw, idx = idx) %>% 
+          gather(key, value, -idx) %>% 
+          mutate(key = ifelse(key == "fitted", "Fitted", "Raw"),
+                 key = factor(key, levels = c("Raw", "Fitted")))
+  
+  # Create title for the plot
+  title <- paste0("ARIMA model estimation for store ", store, " (", city, ")")
+ 
+ data %>% 
+   ggplot(aes(x = idx, y = value, colour = key, group = key)) +
+   geom_line(size = 1.5) +
+   scale_colour_brewer(palette = "Set1") +
+   scale_y_continuous(labels = scales::comma) +
+   guides(colour = guide_legend(title = "")) + 
+   xlab("Time") +
+   ylab("Value") +
+   ggtitle(title) +
+   theme_jim +
+   theme(title = element_text(size = 14),
+         axis.text.y = element_text(size = 12))
+}  
+
+train <- train %>% 
+  mutate(arima_plot = pmap(list(store, store_city, arima_fitted, l_ts), plot_arima))
+
+```
+
+The ARIMA models show nice overlap with the raw demand data, with slightly better results for the two Berkley (CA) stores. Store 12631 (Ridgewood, NY) shows the estimated demand differ strongly in the ARIMA-fitted and real values. 
+
+Further details on the merits of the ARIMA models are discussed in the model comparison section.
+
+### `r get_store_name(1)`
+
+```{r display_arima_1, fig.cap = "Figure 6: ARIMA model fitted values compared with raw demand.", fig.align="center"}
+train$arima_plot[[1]]
+```
+
+### `r get_store_name(2)`
+
+```{r display_arima_2, fig.cap = "Figure 7: ARIMA model fitted values compared with raw demand.", fig.align="center"}
+train$arima_plot[[2]]
+```
+
+### `r get_store_name(3)`
+
+```{r display_arima_3, fig.cap = "Figure 8: ARIMA model fitted values compared with raw demand.", fig.align="center"}
+train$arima_plot[[3]]
+```
+
+### `r get_store_name(4)`
+
+```{r display_arima_4, fig.cap = "Figure 9: ARIMA model fitted values compared with raw demand.", fig.align="center"}
+train$arima_plot[[4]]
 ```
 
 
-## Model Comparison
+# Model diagnosis
 
+There are two methods that can be applied when diagnosing the two modelling approaches. The first approach considers the models in isolation, and looks at in-sample measures of fit to estimate model quality. The second approach is to forecast using each model and compare the results with the _test_ data, summarising differences using common error metrics (such as mean-squared error, or mean absolute deviation). Both approaches have been taken and are discussed below.
+
+## Holt-Winters
+
+
+
+## ARIMA
+
+## Test errors
 
 
