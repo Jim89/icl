@@ -62,7 +62,7 @@ theme_jim <-  theme(legend.position = "bottom",
                     panel.border = element_rect(colour = "black", fill = NA))
 
 # Source the data from the databse
-db <- src_postgres("lsca")
+db <- src_postgres("lsca", user = "postgres", password = "gy!be1989")
 
 # Function that takes a string and converts it in to "proper case" (i.e.
 # the first letter is capitalised, all remaining letters are lower case)
@@ -86,6 +86,7 @@ toproper <- function(x) {
 
 # Set lm tidy coef names
 tidy_names <- c("Term", "Estimate", "Std. Error", "t-Stat.", "p-Value")
+lb_names <- c("Test stat.", "p-Value", "Parameter")
 ```
 
 # Data preparation
@@ -542,25 +543,17 @@ train$hw_plot[[4]]
 
 ## ARIMA model {.tabset}
 
-Firstly, the log-transform of each time-series was performed in order to ensure that each had a constant variance.
-
-```{r log_transform}
-# Log-transform each series
-train <- train %>% 
-  mutate(l_ts = ts_ts %>% map(log))
-```
-
 The appropriate number of differences required for each series to be made stationary were then found using the `ndiffs` function. A similar approach was taken to find the number of _seasonal_ differences required, using the `nsdiffs` function. The results from these tests are displayed in table TODO below. KPSS, ADF, and PP refer to the KPSS, Augmented Dickey-Fuller and Phillips-Perron tests for simple differencing requirements. CH and OCSB refer to Cenova-Hansen and Osborn-Chui-Smith-Birchenhall tests for determining seasonal difference requirements.
 
 ```{r find_diffs}
 train <- train %>% 
   mutate(# Determine difference reqs
-         diffs_kpss = l_ts %>% map_dbl(ndiffs, alpha = 0.01, test = "kpss"),
-         diffs_adf = l_ts %>% map_dbl(ndiffs, alpha = 0.01, test = "adf"),
-         diffs_pp = l_ts %>% map_dbl(ndiffs, alpha = 0.01, test = "pp"),
+         diffs_kpss = ts_ts %>% map_dbl(ndiffs, alpha = 0.01, test = "kpss"),
+         diffs_adf = ts_ts %>% map_dbl(ndiffs, alpha = 0.01, test = "adf"),
+         diffs_pp = ts_ts %>% map_dbl(ndiffs, alpha = 0.01, test = "pp"),
          # Determine seasonal difference reqs
-         sdiffs_ch = l_ts %>% map_dbl(nsdiffs, test = "ch", max.D = 2),
-         sdiffs_ocsb = l_ts %>% map_dbl(nsdiffs, test = "ocsb", max.D = 2))
+         sdiffs_ch = ts_ts %>% map_dbl(nsdiffs, test = "ch", max.D = 2),
+         sdiffs_ocsb = ts_ts %>% map_dbl(nsdiffs, test = "ocsb", max.D = 2))
 
 train %>% 
   select(store, store_city, diffs_kpss, diffs_adf, diffs_pp, sdiffs_ch, sdiffs_ocsb) %>% 
@@ -568,7 +561,7 @@ train %>%
         caption =  "Table TODO: Difference and seasonal difference requirements for each store's series")
 ```
 
-Given that the KPSS and ADF methods indicated that no differencing was required for any of the four series and only one series (Elmhurst) is indicated to require differencing by the PP test, no differencing was performed in order to make the series stationary. 
+Given that the KPSS and PP methods indicated that no differencing was required for any of the four series and only one series (Elmhurst) is indicated to require differencing by the ADF test, no differencing was performed in order to make the series stationary. 
 
 However, given the strong pattern of seasonality observed in the Californian stores (figure one), the results from the OCSB method of detecting seasonal differenece requirements were used to perform _seasonal_ differencing.
 
@@ -581,19 +574,19 @@ fitted <- auto.arima(ts, d = 0, D = diff)
 }
 
 train <- train %>%
-  mutate(arima = map2(l_ts, sdiffs_ocsb, diff_ts_and_fit),
+  mutate(arima = map2(ts_ts, sdiffs_ocsb, diff_ts_and_fit),
          arima_fitted = arima %>% map(forecast::fitted.Arima))
 ```
 
-The raw data were then be compared to the fitted values from each ARIMA model to give an understanding of how well the models fit the data. In order to make comparisons, the exponential of the log-transformed values (returned by the `auto.arima` `fitted` method) from the models was taken.
+The raw data were then be compared to the fitted values from each ARIMA model to give an understanding of how well the models fit the data. 
 
 These comparisons were visualised and are presented in the figures below.
 
 ```{r create_plot_arima}
 plot_arima <- function(store, city, fitted, raw) {
 # Set up objects to create plotting data
-  fitted <- fitted %>% as.numeric() %>% exp()
-  raw <- raw %>% as.numeric() %>% exp()
+  fitted <- fitted %>% as.numeric()
+  raw <- raw %>% as.numeric()
   idx <- idx <- seq(ymd(min(daily_demand$date)), ymd(max(daily_demand$date)), length.out = length(fitted))
  
  # Create plotting dataframe
@@ -620,7 +613,7 @@ plot_arima <- function(store, city, fitted, raw) {
 }  
 
 train <- train %>% 
-  mutate(arima_plot = pmap(list(store, store_city, arima_fitted, l_ts), plot_arima))
+  mutate(arima_plot = pmap(list(store, store_city, arima_fitted, ts_ts), plot_arima))
 
 ```
 
@@ -655,17 +648,173 @@ train$arima_plot[[4]]
 
 # Model diagnosis
 
-There are two methods that can be applied when diagnosing the two modelling approaches. The first approach considers the models in isolation, and looks at in-sample measures of fit to estimate model quality. The second approach is to forecast using each model and compare the results with the _test_ data, summarising differences using common error metrics (such as mean-squared error, or mean absolute deviation). Both approaches have been taken and are discussed below.
+There are two methods that can be applied when diagnosing the two modelling approaches. The first approach considers the models in isolation, and looks at in-sample measures of fit to estimate model quality. The second approach is to forecast using each model and compare the results with the _test_ data, summarising differences using common error metrics. Both approaches have been taken and are discussed below.
 
 ## Holt-Winters {.tabset}
 
-A common method of evaluating a Holt-Winters model is to examine the residuals. In a good model fit, these should be TODO
+A common method of evaluating a Holt-Winters model is to examine the residuals. In a good model fit, these should have a mean of 0 and display constant variance. 
+
+```{r hw_resid}
+# Function to extract residuals
+extract_resid <- function(model) {
+  resids <- residuals(model)
+  return(resids)
+}
+
+# Extract HW residuals
+train <- train %>% mutate(hw_resid = hw %>% map(extract_resid))
+```
+
+After extracting the residuals from each model. The average value was computed and the residuals plotted out. 
+
+```{r plot_resids}
+plot_hw_resid <- function(resids) {
+  # Set up objects to create plotting data
+  resids <- resids %>% as.numeric()
+  idx <- idx <- seq(ymd(min(daily_demand$date)), ymd(max(daily_demand$date)), length.out = length(resids))
+ 
+ # Create plotting dataframe
+  data <- data_frame(resids = resids, idx = idx)
+  
+  data %>% 
+    ggplot(aes(x = idx, y = resids, group = 1)) +
+    geom_line(size = 1.5, colour = "steelblue") +
+    theme_jim +
+    xlab("Residual") +
+    ylab("Time") +
+    scale_y_continuous(labels = scales::comma)
+}
+
+train <- train %>% mutate(hw_resid_plot = hw_resid %>% map(plot_hw_resid))
+```
+
+In order to assess if the residuals from each model had constant variance, ACF plots were used, displaying the first 40 lags.
+
+```{r acf_plots}
+plot_acf <- function(residuals, lag = 35) {
+  vals <- acf(residuals, lag.max = lag, plot = F)
+  
+  title <- paste0("ACF plot of residuals up to lag ", lag, " (", lag/7, " weeks)")
+  
+ autoplot(vals) +
+   theme_jim +
+   ggtitle(title) +
+   scale_x_continuous(breaks = seq(vals$lag %>% min, vals$lag %>% max, 1))
+    
+}
+
+# Create ACF plots for each model
+train <- train %>% mutate(hw_acf = hw_resid %>% map(plot_acf))
+```
+
+Ljung–Box tests were also used to quantify the presence of serial correlations in the residuals.
+
+```{r lb_test}
+fit_lb <- function(residuals, lag = 35) {
+  fit <- Box.test(residuals, lag = lag, type = "Ljung-Box")
+  broom::tidy(fit)
+}
+
+# Train extract L-B test for each model
+train <- train %>% mutate(hw_lb = hw_resid %>% map(fit_lb))
+
+```
+
+### `r get_store_name(1)`
+
+The average residual was `r round(mean(train$hw_resid[[1]]), 2)`. The plot of the residuals and the ACF plot are displayed in figures below.
+
+```{r hw_resid1, fig.align='center'}
+train$hw_resid_plot[[1]]
+```
+
+```{r hw_acf1, fig.align='center'}
+train$hw_acf[[1]]
+```
+
+The results from the Ljung-Box test are presented in table TODO.
+
+```{r hw_lb1}
+kable(train$hw_lb[[1]],
+      col.names = lb_names,
+      caption = "Table TODO: Ljung-Box test statitics",
+      digits = 3)
+      
+```
+
+### `r get_store_name(2)`
+
+The average residual was `r round(mean(train$hw_resid[[2]]), 2)`. The plot of the residuals and the ACF plot are displayed in figures below.
+
+```{r hw_resid2, fig.align='center'}
+train$hw_resid_plot[[2]]
+```
+
+```{r hw_acf2, fig.align='center'}
+train$hw_acf[[2]]
+```
+
+The results from the Ljung-Box test are presented in table TODO.
+
+```{r hw_lb2}
+kable(train$hw_lb[[2]],
+      col.names = lb_names,
+      caption = "Table TODO: Ljung-Box test statitics",
+      digits = 3)
+      
+```
+
+### `r get_store_name(3)`
+
+The average residual was `r round(mean(train$hw_resid[[3]]), 2)`. The plot of the residuals and the ACF plot are displayed in figures below.
+
+```{r hw_resid3, fig.align='center'}
+train$hw_resid_plot[[3]]
+```
+
+```{r hw_acf3, fig.align='center'}
+train$hw_acf[[3]]
+```
+
+The results from the Ljung-Box test are presented in table TODO.
+
+```{r hw_lb3}
+kable(train$hw_lb[[3]],
+      col.names = lb_names,
+      caption = "Table TODO: Ljung-Box test statitics",
+      digits = 3)
+      
+```
+
+### `r get_store_name(4)`
+
+The average residual was `r round(mean(train$hw_resid[[4]]), 2)`. The plot of the residuals and the ACF plot are displayed in figures below.
+
+```{r hw_resid4, fig.align='center'}
+train$hw_resid_plot[[4]]
+```
+
+```{r hw_acf4, fig.align='center'}
+train$hw_acf[[4]]
+```
+
+The results from the Ljung-Box test are presented in table TODO.
+
+```{r hw_lb4}
+kable(train$hw_lb[[4]],
+      col.names = lb_names,
+      caption = "Table TODO: Ljung-Box test statitics",
+      digits = 3)
+      
+```
 
 ## ARIMA
 
 ## Test errors
 
-```{r forecast_hw}
+Each model (i.e. one Holt-Winters and one ARIMA model per store) was used to forecast for the 14 days following the end of the training data. 
+
+```{r forecast_test}
 # Create function to extract avg. forecasts for the next 14 days
 forcast_fortnight <- function(ts_model) {
   forecast(ts_model, h = 14)$mean %>% as.numeric()
@@ -675,22 +824,62 @@ forcast_fortnight <- function(ts_model) {
 train <- train %>% 
           mutate(hw_forecast = hw %>% map(forcast_fortnight),
                  arima_forecast = arima %>% map(forcast_fortnight))
+```
 
-# Expand forecasts
+These forecasts were then compared with the _real_ demand values from the test data set. 
+
+```{r forecast_to_test}
+# Expand forecasts by un-nesting training data and joining in the test data
 forecasts <- train %>% 
-              select(store, store_state, store_city, hw_forecast, arima_forecast) %>% 
-              unnest() %>% 
-              group_by(store, store_state, store_city) %>% 
-              mutate(forecast = row_number(),
-                     arima_forecast = exp(arima_forecast)) %>% 
-              left_join(test %>% 
-                        select(-ts_ts) %>% 
-                        unnest() %>% 
-                        select(-storenumber) %>% 
-                        group_by(store, store_state, store_city) %>% 
-                        mutate(forecast = row_number())) %>% 
-              mutate(hw_diff = hw_forecast - lettuce,
-                     arima_diff = arima_forecast - lettuce)
+      select(store, store_state, store_city, hw_forecast, arima_forecast) %>% 
+      unnest() %>% 
+      group_by(store, store_state, store_city) %>% 
+      mutate(forecast = row_number()) %>% 
+      left_join(test %>% 
+                select(-ts_ts) %>% 
+                unnest() %>% 
+                select(-storenumber) %>% 
+                group_by(store, store_state, store_city) %>% 
+                mutate(forecast = row_number())) %>% 
+      mutate(hw_diff = hw_forecast - lettuce,
+             arima_diff = arima_forecast - lettuce)
+```
 
+Figure 10 presents the results of the differences for each store and forecasting method. It is the case that ARIMA performs much better than Holt-Winters for both Californian and New York stores. Additionally, forecasts for Californian stores are much better than for New York stores when looking at either method. Forecasts are a little too high for Californian stores, and too low for New York stores.
+
+```{r present_diffs, fig.align="center", fig.cap="Figure 10: Forecasting errors for each store using both ARIMA and Holt-Winters methods."}
+forecasts %>% 
+  ungroup() %>% 
+  select(store, store_state, forecast, hw_diff, arima_diff) %>% 
+  gather(method, diff, -c(store:forecast)) %>% 
+  mutate(method = ifelse(method == "arima_diff", "ARIMA", "Holt-Winters")) %>% 
+  ggplot(aes(x = store, y = diff, fill = store_state)) +
+  geom_boxplot() +
+  facet_grid(. ~ method) +
+  scale_fill_brewer(palette = "Dark2") +
+  xlab("Store") +
+  ylab("Test-set forecast error") +
+  guides(fill = guide_legend(title = "Store State")) +
+  scale_y_continuous(labels = scales::comma, limits = c(-10000, 1000)) +
+  theme_jim
+```
+
+In order to summarise the overall error for each model and each store, the [mean absolute deviation](https://en.wikipedia.org/wiki/Average_absolute_deviation) (MAD) was calculate for each method. The MAD error metric was chosen as, in this setting, it is intuitive and describes how much the forecasted demands were "out" from the true values in the same units as the true demand values are measured in.
+
+```{r mad}
+mad <- forecasts %>% 
+  ungroup() %>% 
+  select(store, store_state, forecast, hw_diff, arima_diff) %>% 
+  gather(method, diff, -c(store:forecast)) %>% 
+  mutate(diff_abs  = abs(diff)) %>% 
+  group_by(store, store_state, method) %>% 
+  summarise(mad = mean(diff_abs)) %>% 
+  spread(method, mad)
+
+kable(mad, 
+      col.names = c("Store ID", "State", "ARIMA MAD", "Holt-Winters MAD"),
+      digits = 1,
+      caption = "Table TODO: MAD Values for ARIMA and Holt-Winters forecasted values when compared to those in the the testing set.")
 ```
   
+These results are presented in table TODO. Although there are differences between the two methods at a store level; overall it is the case that ARIMA performs better than Holt-Winters, with an average MAD value of `r scales::comma(round(mean(mad$arima), 1))`, compared to `r scales::comma(round(mean(mad$hw), 1))` for Holt-Winters. 
