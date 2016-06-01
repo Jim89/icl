@@ -15,21 +15,17 @@ output:
     toc: yes
 ---
 
+<br>
+<br>
+<p style="border:1.5px; border-style:solid; border-color:#000000; padding: 1em;">The `R` code used to perform this analysis can be viewed in this report using the _Code_ buttons to toggle code viewing. This `HTML` report is best viewed using a modern web browser such as Mozilla Firefox or Google Chrome. It is also available on the [online repository](https://github.com/Jim89/icl/tree/master/lsca/project). Printing is possible but will not produce an optimal reading experience.</p>
+
 # Introduction
 
 ## Project overview
 
-For this project data from a large fast-food restaurant chain in the U.S.A. were provided. The data covered approximately 4 months of data from March until June 2015 in four restaurants: two in Berkley, California, and two in New York, New York. The data provided transaction information (e.g. which menu items were purchased and in what quantities), ingredient lists for all menu items, and associated metadata (e.g. store location, store type etc). 
+For this project data from a large fast-food restaurant chain in the U.S.A. were provided. The data covered approximately 4 months from March until June 2015 in four restaurants: two in Berkley, California, and two in New York, New York. The data provided transaction information (e.g. which menu items were purchased and in what quantities), ingredient lists for all menu items, and associated metadata (e.g. store location, store type etc). 
 
 The goal of the project was to forecast demand for lettuce for each of the the four locations. The forecast period was two weeks following the end of the data (from 2015-06-16 to 2015-06-29). 
-
-## This document
-
-This document is split in to TODO distinct sections, TODO. 
-
-The `R` code used to perform these analyses has been provided as supplementary files, and sections of the `R` code can be viewed in this report using the _Code_ buttons to toggle code viewing.
-
-This `HTML` report is best viewed using a modern web browser such as Mozilla Firefox or Google Chrome.
 
 ```{r prep, echo = TRUE, message=FALSE}
 # Set default knitr options
@@ -43,6 +39,7 @@ library(lubridate)
 library(forecast)
 library(purrr)
 library(knitr)
+library(cowplot)
 
 # Set up theme object for prettier plots
 theme_jim <-  theme(legend.position = "bottom",
@@ -62,16 +59,10 @@ theme_jim <-  theme(legend.position = "bottom",
                     panel.border = element_rect(colour = "black", fill = NA))
 
 # Source the data from the databse
-db <- src_postgres("lsca", user = "postgres", password = "gy!be1989")
-
-# Function that takes a string and converts it in to "proper case" (i.e.
-# the first letter is capitalised, all remaining letters are lower case)
-# N.b. for multi-word strings, only the first word will be affected
-toproper <- function(x) { 
-  first <- substring(x, 1, 1) %>% toupper()
-  rest <- substring(x, 2) %>% tolower()
-  whole <- paste0(first, rest)
-  return(whole)
+if (Sys.info()[1] == "Linux") {
+  db <- src_postgres("lsca")
+} else {
+  db <- src_postgres("lsca", user = "postgres", password = "gy!be1989")
 }
 
 # Function that takes a string and converts it in to "proper case" (i.e.
@@ -459,7 +450,7 @@ train <- train %>%
 
 ```
 
-The estimation of the components (i.e. level, trend and seasonal), where applicable, along with the fitted values are displayed in the figures below, one for each model (i.e. for each of the four stores). For neither of the Californian stores was a trend detected, whereas both New York stores have a trend that varies over the series. Each figure also displays the raw demand data in the first panel. The fitted values show a please correspondence with the raw data.
+The estimation of the components (i.e. level, trend and seasonal), where applicable, along with the fitted values are displayed in the figures below, one for each model (i.e. for each of the four stores). For neither of the Californian stores was a trend detected, whereas both New York stores have a trend that varies over the series. Each figure also displays the raw demand data in the first panel. The fitted values show a good correspondence with the raw data.
 
 Further details on the merits of the Holt-Winters model are discussed in the model comparison section.
 
@@ -543,7 +534,27 @@ train$hw_plot[[4]]
 
 ## ARIMA model {.tabset}
 
-The appropriate number of differences required for each series to be made stationary were then found using the `ndiffs` function. A similar approach was taken to find the number of _seasonal_ differences required, using the `nsdiffs` function. The results from these tests are displayed in table TODO below. KPSS, ADF, and PP refer to the KPSS, Augmented Dickey-Fuller and Phillips-Perron tests for simple differencing requirements. CH and OCSB refer to Cenova-Hansen and Osborn-Chui-Smith-Birchenhall tests for determining seasonal difference requirements.
+Prior to fitting an ARIMA model, each series had to be made _stationary_ with constant variance. Inspection of the series in figure 1 indicated that the models already had constant variance. In order to confirm this analytically, the McLeod-Li test for constant variance was applied. The average p-values for each model are displayed in table 2 below. It can be seen thatt he null hypothesis (that there is non-constant variance) can be rejected in each case. 
+
+```{r mcleod_li}
+# Function to fit model
+fit_ml <- function(ts_data) {
+ p_val <-  TSA::McLeod.Li.test(y = ts_data, plot = F)["p.values"] %>% unlist %>% mean()
+ return(p_val)
+}  
+
+# Fit McLeod-Li to each series
+train <- train %>% mutate(ml = ts_ts %>% map(fit_ml))
+
+# Present results
+train %>% 
+  select(store, store_city, store_state, ml) %>% 
+  mutate(ml = ml %>% map_dbl(round, 4)) %>% 
+  kable(col.names = c("Store", "City", "State", "McLeod-Li p-value"),
+        caption = "Table 2: McLeod-Li p-values")
+```
+
+The appropriate number of differences required for each series to be made stationary were then found using the `ndiffs` function. A similar approach was taken to find the number of _seasonal_ differences required, using the `nsdiffs` function. The results from these tests are displayed in table 3 below. KPSS, ADF, and PP refer to the KPSS, Augmented Dickey-Fuller and Phillips-Perron tests for simple differencing requirements. CH and OCSB refer to Cenova-Hansen and Osborn-Chui-Smith-Birchenhall tests for determining seasonal difference requirements. 
 
 ```{r find_diffs}
 train <- train %>% 
@@ -558,7 +569,7 @@ train <- train %>%
 train %>% 
   select(store, store_city, diffs_kpss, diffs_adf, diffs_pp, sdiffs_ch, sdiffs_ocsb) %>% 
   kable(col.names = c("Store", "City", "KPSS", "ADF", "PP", "CH", "OCSB"),
-        caption =  "Table TODO: Difference and seasonal difference requirements for each store's series")
+        caption =  "Table 3: Difference and seasonal difference requirements for each store's series")
 ```
 
 Given that the KPSS and PP methods indicated that no differencing was required for any of the four series and only one series (Elmhurst) is indicated to require differencing by the ADF test, no differencing was performed in order to make the series stationary. 
@@ -646,11 +657,11 @@ train$arima_plot[[4]]
 ```
 
 
-# Model diagnosis
+# Model diagnostics
 
-There are two methods that can be applied when diagnosing the two modelling approaches. The first approach considers the models in isolation, and looks at in-sample measures of fit to estimate model quality. The second approach is to forecast using each model and compare the results with the _test_ data, summarising differences using common error metrics. Both approaches have been taken and are discussed below.
+There are two methods that can be applied when diagnosing the two modelling approaches. The first approach considers the models in isolation, and looks at residual analysis to estimate model quality and goodness-of-fit. The second approach is to forecast using each model and compare the results with the _test_ data, summarising differences using common error metrics. Both approaches have been taken and are discussed below.
 
-## Holt-Winters {.tabset}
+## Holt-Winters residuals {.tabset}
 
 A common method of evaluating a Holt-Winters model is to examine the residuals. In a good model fit, these should have a mean of 0 and display constant variance. 
 
@@ -668,7 +679,7 @@ train <- train %>% mutate(hw_resid = hw %>% map(extract_resid))
 After extracting the residuals from each model. The average value was computed and the residuals plotted out. 
 
 ```{r plot_resids}
-plot_hw_resid <- function(resids) {
+plot_resid <- function(resids, store, model) {
   # Set up objects to create plotting data
   resids <- resids %>% as.numeric()
   idx <- idx <- seq(ymd(min(daily_demand$date)), ymd(max(daily_demand$date)), length.out = length(resids))
@@ -676,16 +687,22 @@ plot_hw_resid <- function(resids) {
  # Create plotting dataframe
   data <- data_frame(resids = resids, idx = idx)
   
+  # Create title
+  title <- paste("Residual plot for", model, "\n applied to store", store)
+  
   data %>% 
     ggplot(aes(x = idx, y = resids, group = 1)) +
+    geom_hline(yintercept = 0, size = .5, linetype = "dashed") +
     geom_line(size = 1.5, colour = "steelblue") +
     theme_jim +
-    xlab("Residual") +
-    ylab("Time") +
-    scale_y_continuous(labels = scales::comma)
+    xlab("Time") +
+    ylab("Residual") +
+    ggtitle(title) +
+    scale_y_continuous(labels = scales::comma) +
+    theme(title = element_text(size = 12)) 
 }
 
-train <- train %>% mutate(hw_resid_plot = hw_resid %>% map(plot_hw_resid))
+train <- train %>% mutate(hw_resid_plot = pmap(list(hw_resid, store, "Holt-Winters"), plot_resid))
 ```
 
 In order to assess if the residuals from each model had constant variance, ACF plots were used, displaying the first 40 lags.
@@ -694,7 +711,7 @@ In order to assess if the residuals from each model had constant variance, ACF p
 plot_acf <- function(residuals, lag = 35) {
   vals <- acf(residuals, lag.max = lag, plot = F)
   
-  title <- paste0("ACF plot of residuals up to lag ", lag, " (", lag/7, " weeks)")
+  title <- paste0("ACF plot of residuals\n up to lag ", lag, " (", lag/7, " weeks)")
   
  autoplot(vals) +
    theme_jim +
@@ -720,95 +737,168 @@ train <- train %>% mutate(hw_lb = hw_resid %>% map(fit_lb))
 
 ```
 
+The results from these diagnositc analyses show that the Holt-Winters models have not fit these data particularly well. The residuals from each model have non-zero means, and both the ACF plots and the Ljung-Box tests reveal that there is serial correlation in the residuals. 
+
+This means that the Holt-Winters models have not fully detected the underlying structure of the demand series and are not completely _correct_. Only the test-set error, however, will reveal if these models are _useful_ in this context. 
+
 ### `r get_store_name(1)`
 
-The average residual was `r round(mean(train$hw_resid[[1]]), 2)`. The plot of the residuals and the ACF plot are displayed in figures below.
+The average residual was `r round(mean(train$hw_resid[[1]]), 2)`. The plot of the residuals and the ACF plot are displayed in figure 10A and 10B below.
 
-```{r hw_resid1, fig.align='center'}
-train$hw_resid_plot[[1]]
+```{r hw_resid1, fig.align='center', out.width = 800, fig.cap = "Figure 10: Residual and ACF plots"}
+plot_grid(train$hw_resid_plot[[1]], train$hw_acf[[1]], align = "hv", labels = c("A", "B"), vjust = .5)
 ```
 
-```{r hw_acf1, fig.align='center'}
-train$hw_acf[[1]]
-```
-
-The results from the Ljung-Box test are presented in table TODO.
+The results from the Ljung-Box test are presented in table 4. The significant p-value indicates the presence of serial correlation in the residuals, indicating a poor model fit.
 
 ```{r hw_lb1}
 kable(train$hw_lb[[1]],
       col.names = lb_names,
-      caption = "Table TODO: Ljung-Box test statitics",
+      caption = "Table 4: Ljung-Box test statitics",
       digits = 3)
       
 ```
 
 ### `r get_store_name(2)`
 
-The average residual was `r round(mean(train$hw_resid[[2]]), 2)`. The plot of the residuals and the ACF plot are displayed in figures below.
+The average residual was `r round(mean(train$hw_resid[[2]]), 2)`. The plot of the residuals and the ACF plot are displayed in figure 11A and 11B below.
 
-```{r hw_resid2, fig.align='center'}
-train$hw_resid_plot[[2]]
+```{r hw_resid2, fig.align='center', out.width = 800, fig.cap = "Figure 11: Residual and ACF plots"}
+plot_grid(train$hw_resid_plot[[2]], train$hw_acf[[2]], align = "hv", labels = c("A", "B"), vjust = .5)
 ```
 
-```{r hw_acf2, fig.align='center'}
-train$hw_acf[[2]]
-```
-
-The results from the Ljung-Box test are presented in table TODO.
+The results from the Ljung-Box test are presented in table 5. The significant p-value indicates the presence of serial correlation in the residuals, indicating a poor model fit.
 
 ```{r hw_lb2}
 kable(train$hw_lb[[2]],
       col.names = lb_names,
-      caption = "Table TODO: Ljung-Box test statitics",
+      caption = "Table 5: Ljung-Box test statitics",
       digits = 3)
       
 ```
 
 ### `r get_store_name(3)`
 
-The average residual was `r round(mean(train$hw_resid[[3]]), 2)`. The plot of the residuals and the ACF plot are displayed in figures below.
+The average residual was `r round(mean(train$hw_resid[[3]]), 2)`. The plot of the residuals and the ACF plot are displayed in figure 12A and 12B below.
 
-```{r hw_resid3, fig.align='center'}
-train$hw_resid_plot[[3]]
+```{r hw_resid3, fig.align='center', out.width = 800, fig.cap = "Figure 12: Residual and ACF plots"}
+plot_grid(train$hw_resid_plot[[3]], train$hw_acf[[3]], align = "hv", labels = c("A", "B"), vjust = 1.2)
 ```
 
-```{r hw_acf3, fig.align='center'}
-train$hw_acf[[3]]
-```
-
-The results from the Ljung-Box test are presented in table TODO.
+The results from the Ljung-Box test are presented in table 6. The significant p-value indicates the presence of serial correlation in the residuals, indicating a poor model fit.
 
 ```{r hw_lb3}
 kable(train$hw_lb[[3]],
       col.names = lb_names,
-      caption = "Table TODO: Ljung-Box test statitics",
+      caption = "Table 6: Ljung-Box test statitics",
       digits = 3)
       
 ```
 
 ### `r get_store_name(4)`
 
-The average residual was `r round(mean(train$hw_resid[[4]]), 2)`. The plot of the residuals and the ACF plot are displayed in figures below.
+The average residual was `r round(mean(train$hw_resid[[4]]), 2)`. The plot of the residuals and the ACF plot are displayed in figure 13A and 13B below.
 
-```{r hw_resid4, fig.align='center'}
-train$hw_resid_plot[[4]]
+```{r hw_resid4, fig.align='center', out.width = 800, fig.cap = "Figure 13: Residual and ACF plots"}
+plot_grid(train$hw_resid_plot[[4]], train$hw_acf[[4]], align = "hv", labels = c("A", "B"))
 ```
 
-```{r hw_acf4, fig.align='center'}
-train$hw_acf[[4]]
-```
-
-The results from the Ljung-Box test are presented in table TODO.
+The results from the Ljung-Box test are presented in table 7. The significant p-value indicates the presence of serial correlation in the residuals, indicating a poor model fit.
 
 ```{r hw_lb4}
 kable(train$hw_lb[[4]],
       col.names = lb_names,
-      caption = "Table TODO: Ljung-Box test statitics",
+      caption = "Table 7: Ljung-Box test statitics",
       digits = 3)
       
 ```
 
-## ARIMA
+## ARIMA residuals {.tabset}
+
+As with the Holt-Winters models, residual analysis can be useful in understanding the goodness-of-fit for an ARIMA model. The residuals were obtained and plotted, and ACF plots and Ljung-Box tests used to assess the quality of each model. 
+
+```{r arima_resid}
+train <- train %>% mutate(arima_resid = arima %>% map(extract_resid),
+                          arima_resid_plot = pmap(list(arima_resid, store, "ARIMA"), plot_resid),
+                          arima_acf = arima_resid %>% map(plot_acf),
+                          arima_lb = arima_resid %>% map(fit_lb))
+```
+
+The ARIMA model residual analyses show much better goodness-of-fit measures than the Holt-Winters methods, especially for the Californian stores. The residuals for the Californian stores have a mean of 0 (not the case for the two New York stores were the fit is poorer). All four stores display residuals with no serial correlation (insignificant p-values for the Ljung-Box tests).
+
+Overall these results indicate the the ARIMA models are better suited to fitting these time series. Comparisons of forecasting errors on the testing set provide further information on their suitability in this setting.
+
+### `r get_store_name(1)`
+
+The average residual was `r round(mean(train$arima_resid[[1]]), 2)`. The plot of the residuals and the ACF plot are displayed in figure 14A and 14B below.
+
+```{r arima_resid1, fig.align='center', out.width = 800, fig.cap = "Figure 14: Residual and ACF plots"}
+plot_grid(train$arima_resid_plot[[1]], train$arima_acf[[1]], align = "hv", labels = c("A", "B"))
+```
+
+The results from the Ljung-Box test are presented in table 8. The insignificant p-value indicates the absence of serial correlation in the residuals, indicating a good model fit.
+
+```{r arima_lb1}
+kable(train$arima_lb[[1]],
+      col.names = lb_names,
+      caption = "Table 8: Ljung-Box test statistics",
+      digits = 3)
+      
+```
+
+### `r get_store_name(2)`
+
+The average residual was `r round(mean(train$arima_resid[[2]]), 2)`. The plot of the residuals and the ACF plot are displayed in figure 15A and 15B below.
+
+```{r arima_resid2, fig.align='center', out.width = 800, fig.cap = "Figure 15: Residual and ACF plots"}
+plot_grid(train$arima_resid_plot[[2]], train$arima_acf[[2]], align = "hv", labels = c("A", "B"))
+```
+
+The results from the Ljung-Box test are presented in table 9. The insignificant p-value indicates the absence of serial correlation in the residuals, indicating a good model fit.
+
+```{r arima_lb2}
+kable(train$arima_lb[[2]],
+      col.names = lb_names,
+      caption = "Table 9: Ljung-Box test statistics",
+      digits = 3)
+      
+```
+
+### `r get_store_name(3)`
+
+The average residual was `r round(mean(train$arima_resid[[3]]), 2)`. The plot of the residuals and the ACF plot are displayed in figure 16A and 16B below. 
+
+```{r arima_resid3, fig.align='center', out.width = 800, fig.cap = "Figure 16: Residual and ACF plots"}
+plot_grid(train$arima_resid_plot[[3]], train$arima_acf[[3]], align = "hv", labels = c("A", "B"))
+```
+
+The results from the Ljung-Box test are presented in table 10. The insignificant p-value indicates the absence of serial correlation in the residuals, indicating a good model fit.
+
+```{r arima_lb3}
+kable(train$arima_lb[[3]],
+      col.names = lb_names,
+      caption = "Table 10: Ljung-Box test statistics",
+      digits = 3)
+      
+```
+
+### `r get_store_name(4)`
+
+The average residual was `r round(mean(train$arima_resid[[4]]), 2)`. The plot of the residuals and the ACF plot are displayed in figure 17A and 17B below.
+
+```{r arima_resid4, fig.align='center', out.width = 800, fig.cap = "Figure 17: Residual and ACF plots"}
+plot_grid(train$arima_resid_plot[[4]], train$arima_acf[[4]], align = "hv", labels = c("A", "B"))
+```
+
+The results from the Ljung-Box test are presented in table 11. The insignificant p-value indicates the absence of serial correlation in the residuals, indicating a good model fit.
+
+```{r arima_lb4}
+kable(train$arima_lb[[4]],
+      col.names = lb_names,
+      caption = "Table 11: Ljung-Box test statistics",
+      digits = 3)
+      
+```
 
 ## Test errors
 
@@ -816,14 +906,14 @@ Each model (i.e. one Holt-Winters and one ARIMA model per store) was used to for
 
 ```{r forecast_test}
 # Create function to extract avg. forecasts for the next 14 days
-forcast_fortnight <- function(ts_model) {
+forecast_fortnight <- function(ts_model) {
   forecast(ts_model, h = 14)$mean %>% as.numeric()
 }
 
 # Forecast for 14 days
 train <- train %>% 
-          mutate(hw_forecast = hw %>% map(forcast_fortnight),
-                 arima_forecast = arima %>% map(forcast_fortnight))
+          mutate(hw_forecast = hw %>% map(forecast_fortnight),
+                 arima_forecast = arima %>% map(forecast_fortnight))
 ```
 
 These forecasts were then compared with the _real_ demand values from the test data set. 
@@ -845,9 +935,9 @@ forecasts <- train %>%
              arima_diff = arima_forecast - lettuce)
 ```
 
-Figure 10 presents the results of the differences for each store and forecasting method. It is the case that ARIMA performs much better than Holt-Winters for both Californian and New York stores. Additionally, forecasts for Californian stores are much better than for New York stores when looking at either method. Forecasts are a little too high for Californian stores, and too low for New York stores.
+Figure 18 presents the results of the differences for each store and forecasting method. It is the case that ARIMA performs much better than Holt-Winters for both Californian and New York stores. Additionally, forecasts for Californian stores are much better than for New York stores when looking at either method. Forecasts are a little too high for Californian stores, and too low for New York stores.
 
-```{r present_diffs, fig.align="center", fig.cap="Figure 10: Forecasting errors for each store using both ARIMA and Holt-Winters methods."}
+```{r present_diffs, fig.align="center", fig.cap="Figure 18: Forecasting errors for each store using both ARIMA and Holt-Winters methods."}
 forecasts %>% 
   ungroup() %>% 
   select(store, store_state, forecast, hw_diff, arima_diff) %>% 
@@ -879,7 +969,105 @@ mad <- forecasts %>%
 kable(mad, 
       col.names = c("Store ID", "State", "ARIMA MAD", "Holt-Winters MAD"),
       digits = 1,
-      caption = "Table TODO: MAD Values for ARIMA and Holt-Winters forecasted values when compared to those in the the testing set.")
+      caption = "Table 12: MAD Values for ARIMA and Holt-Winters forecasted values when compared to those in the the testing set.")
 ```
   
-These results are presented in table TODO. Although there are differences between the two methods at a store level; overall it is the case that ARIMA performs better than Holt-Winters, with an average MAD value of `r scales::comma(round(mean(mad$arima), 1))`, compared to `r scales::comma(round(mean(mad$hw), 1))` for Holt-Winters. 
+These results are presented in table 12. Although there are differences between the two methods at a store level; overall it is the case that ARIMA performs better than Holt-Winters, with an average MAD value of `r scales::comma(round(mean(mad$arima), 1))`, compared to `r scales::comma(round(mean(mad$hw), 1))` for Holt-Winters. 
+
+## Model selection
+
+The results of both the residual diagnostics and the test-set forecast errors reveal that the ARIMA method is better than the Holt-Winters approach in this setting. As such, the ARIMA method will be used to perform the overall forecast for the two weeks following the end of the data.
+
+# Forecasting
+
+Having determined that the ARIMA models are more suitable for fitting these time series, the train and testing data were re-combined and an ARIMA model re-fit for forecasting unobserved periods. 
+
+```{r forecast_data}
+# Re-nest the raw data, this time not splitting in to test/train and the creating a time series for each set
+data <- daily_demand %>% 
+        group_by(store, store_state, store_city) %>% 
+        nest(.key = ts_data) %>% 
+        mutate(ts_ts = ts_data %>% map(make_ts))
+```
+
+The series were seasonally-differenced in the same manner as before (i.e. based on the output of the `nsdiffs` function) and an ARIMA model fit to each series.
+
+```{r forecast_data_diff_and_fit}
+# Determine difference requirements
+data <- data %>% 
+  mutate(# Determine difference reqs
+         diffs_kpss = ts_ts %>% map_dbl(ndiffs, alpha = 0.01, test = "kpss"),
+         diffs_adf = ts_ts %>% map_dbl(ndiffs, alpha = 0.01, test = "adf"),
+         diffs_pp = ts_ts %>% map_dbl(ndiffs, alpha = 0.01, test = "pp"),
+         # Determine seasonal difference reqs
+         sdiffs_ch = ts_ts %>% map_dbl(nsdiffs, test = "ch", max.D = 2),
+         sdiffs_ocsb = ts_ts %>% map_dbl(nsdiffs, test = "ocsb", max.D = 2))
+         
+data <- data %>%
+  mutate(arima = map2(ts_ts, sdiffs_ocsb, diff_ts_and_fit))
+```
+
+Forecasts for the two weeks following the end of the data were then made. These forecasts are visualised in figure 19 A, B, C and D.
+
+```{r forecast, fig.align='center', out.width = 800, fig.cap = "Figure 19: Forecast plots for each store using ARIMA methods.", out.height=1000}
+# Create function to extract forecasts for the next 14 days with CI and plot them plotting
+forecast_fortnight_plots <- function(ts_model, store) {
+  # Forecast
+  cast <- forecast(ts_model, h = 14)
+  
+  # Set up title
+  title <- paste("Forecast plot for demand of lettuce \n at store ", store)
+  
+  # Make the plot
+  autoplot(cast) +
+    theme_jim +
+    scale_y_continuous(labels = scales::comma) +
+    ylab("Demand") +
+    xlab("Time") +
+    ggtitle(title) +
+    guides(fill = guide_legend(title = "Confidence level (%)"))
+}
+
+# Forecast for 14 days
+data <- data %>% 
+          mutate(arima_forecast = arima %>% map(forecast_fortnight),
+                 arima_forecast_plot = map2(arima, store, forecast_fortnight_plots))
+
+plot_grid(data$arima_forecast_plot[[1]], 
+          data$arima_forecast_plot[[2]],
+          data$arima_forecast_plot[[3]],
+          data$arima_forecast_plot[[4]], 
+          labels = letters[1:4] %>% toupper(),
+          vjust = 1.1)
+```
+
+The point-estimate forecasts for each store are presented in table 13 below, and are submitted with this report as a standalone `csv` file.
+
+```{r forecast_tbl}
+# Unnest and clean up
+forecast_tbl <- data %>% 
+  select(store, store_state, store_city, arima_forecast) %>% 
+  unnest() %>% 
+  group_by(store, store_state, store_city) %>% 
+  mutate(date = seq(from = ymd("2015-06-16"),
+                    to = ymd("2015-06-29"),
+                    by = "day")) %>% 
+  ungroup() %>% 
+  mutate(store = gsub("46673", "California 1 (ID:46673)", store),
+         store = gsub("4904", "California 2 (ID:4904)", store),
+         store = gsub("12631", "New York 1 (ID:12631)", store),
+         store = gsub("20974", "New York 2 (ID:20974)", store),
+         arima_forecast = round(arima_forecast, 2)) %>% 
+  select(store, date, arima_forecast) %>% 
+  spread(store, arima_forecast) %>% 
+  rename(Date = date)
+
+# Push results to csv
+readr::write_csv(forecast_tbl, "./output/CID01135629_Leach_Jim_Forecasts.csv")
+  
+# Display the table
+kable(forecast_tbl, 
+      caption = "Table 13: Forecast values for each store")
+```
+
+***
