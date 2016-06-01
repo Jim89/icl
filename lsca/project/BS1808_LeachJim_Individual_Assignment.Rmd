@@ -23,7 +23,7 @@ output:
 
 ## Project overview
 
-For this project data from a large fast-food restaurant chain in the U.S.A. were provided. The data covered approximately 4 months from March until June 2015 in four restaurants: two in Berkley, California, and two in New York, New York. The data provided transaction information (e.g. which menu items were purchased and in what quantities), ingredient lists for all menu items, and associated metadata (e.g. store location, store type etc). 
+For this project data from a large fast-food restaurant chain in the U.S.A. were provided. The data covered approximately 4 months from March until June 2015 in four restaurants: two in Berkeley, California, and two in New York, New York. The data provided transaction information (e.g. which menu items were purchased and in what quantities), ingredient lists for all menu items, and associated metadata (e.g. store location, store type etc). 
 
 The goal of the project was to forecast demand for lettuce for each of the the four locations. The forecast period was two weeks following the end of the data (from 2015-06-16 to 2015-06-29). 
 
@@ -154,7 +154,7 @@ As sales, recipes, sub-recipes and ingredients were all stored in separate table
 
 ## Ingredient requirements
 
-Firstly, all recipies containing lettuce were found from the data, discarding other recipes (as they were not relevant). The amount of lettuce required for each recipe was found. As some recipies listed the amount in ounces and others in grams, the amount required for each recipe was standardised to be measure in grams. This produced a clean data set that listed the total amounts of lettuce required in each recipe. 
+Firstly, all recopies containing lettuce were found from the data, discarding other recipes (as they were not relevant). The amount of lettuce required for each recipe was found. As some recopies listed the amount in ounces and others in grams, the amount required for each recipe was standardised to be measure in grams. This produced a clean data set that listed the total amounts of lettuce required in each recipe. 
 
 ```{r recipies_to_ingredients, message = FALSE}
 tom_let_recipes <- recipes %>% 
@@ -186,7 +186,7 @@ tom_let_recipes <- recipes %>%
          tomato = ifelse(is.na(tomato), 0, tomato))
 ```
 
-A similar process was performed for all _sub_-recipies containing lettuce. The amount of lettuce required for each subrecipe was found and standardised to grams. 
+A similar process was performed for all _sub_-recopies containing lettuce. The amount of lettuce required for each sub-recipe was found and standardised to grams. 
 
 ```{r subrecipes_to_ingredients, message = FALSE}
 tom_let_sub_recipes <- sub_recipes %>% 
@@ -369,7 +369,7 @@ test <- test %>%
 
 ## Holt-Winters model {.tabset}
 
-Exponential smoothing state space models (Hyndman et. al., 2002) were applied to the time series using the `ets` function. Despite the absense of obvious trends in the exploratory visualisations (figure one), the function was applied in a fully automated manner. This was done in order for potential trends to be identified by the model, should they exist in the data. 
+Exponential smoothing state space models (Hyndman et. al., 2002) were applied to the time series using the `ets` function. Despite the absence of obvious trends in the exploratory visualisations (figure one), the function was applied in a fully automated manner. This was done in order for potential trends to be identified by the model, should they exist in the data. 
 
 ```{r fit_ets}
 # Function to fit the ets model to time series data with no trend
@@ -534,7 +534,7 @@ train$hw_plot[[4]]
 
 ## ARIMA model {.tabset}
 
-Prior to fitting an ARIMA model, each series had to be made _stationary_ with constant variance. Inspection of the series in figure 1 indicated that the models already had constant variance. In order to confirm this analytically, the McLeod-Li test for constant variance was applied. The average p-values for each model are displayed in table 2 below. It can be seen thatt he null hypothesis (that there is non-constant variance) can be rejected in each case. 
+Prior to fitting an ARIMA model, each series had to be made _stationary_ with constant variance. Inspection of the series in figure 1 indicated that the models already had constant variance. In order to confirm this analytically, the McLeod-Li test for constant variance was applied. The average p-values for each model are displayed in table 2 below. It can be seen that the null hypothesis (that there is non-constant variance) can be rejected in each case. As such no action was taken (e.g. taking logarithms) to transform each series to have constant variance.
 
 ```{r mcleod_li}
 # Function to fit model
@@ -574,7 +574,7 @@ train %>%
 
 Given that the KPSS and PP methods indicated that no differencing was required for any of the four series and only one series (Elmhurst) is indicated to require differencing by the ADF test, no differencing was performed in order to make the series stationary. 
 
-However, given the strong pattern of seasonality observed in the Californian stores (figure one), the results from the OCSB method of detecting seasonal differenece requirements were used to perform _seasonal_ differencing.
+However, given the strong pattern of seasonality observed in the Californian stores (figure one), the results from the OCSB method of detecting seasonal difference requirements were used to perform _seasonal_ differencing.
 
 The `auto.arima` function was used to fit an ARIMA model for each of the stores, using the differencing values identified above.
 
@@ -628,7 +628,7 @@ train <- train %>%
 
 ```
 
-The ARIMA models show nice overlap with the raw demand data, with slightly better results for the two Berkley (CA) stores. Store 12631 (Ridgewood, NY) shows the estimated demand differ strongly in the ARIMA-fitted and real values. 
+The ARIMA models show nice overlap with the raw demand data, with slightly better results for the two Berkeley (CA) stores. Store 12631 (Ridgewood, NY) shows the estimated demand differ strongly in the ARIMA-fitted and real values. 
 
 Further details on the merits of the ARIMA models are discussed in the model comparison section.
 
@@ -705,7 +705,7 @@ plot_resid <- function(resids, store, model) {
 train <- train %>% mutate(hw_resid_plot = pmap(list(hw_resid, store, "Holt-Winters"), plot_resid))
 ```
 
-In order to assess if the residuals from each model had constant variance, ACF plots were used, displaying the first 40 lags.
+In order to assess if the residuals from each model had constant variance, ACF plots were used, displaying the first 35 lags (5 weeks of data).
 
 ```{r acf_plots}
 plot_acf <- function(residuals, lag = 35) {
@@ -737,7 +737,7 @@ train <- train %>% mutate(hw_lb = hw_resid %>% map(fit_lb))
 
 ```
 
-The results from these diagnositc analyses show that the Holt-Winters models have not fit these data particularly well. The residuals from each model have non-zero means, and both the ACF plots and the Ljung-Box tests reveal that there is serial correlation in the residuals. 
+The results from these diagnostic analyses show that the Holt-Winters models have not fit these data particularly well. The residuals from each model have non-zero means, and both the ACF plots and the Ljung-Box tests reveal that there is serial correlation in the residuals. 
 
 This means that the Holt-Winters models have not fully detected the underlying structure of the demand series and are not completely _correct_. Only the test-set error, however, will reveal if these models are _useful_ in this context. 
 
@@ -746,7 +746,7 @@ This means that the Holt-Winters models have not fully detected the underlying s
 The average residual was `r round(mean(train$hw_resid[[1]]), 2)`. The plot of the residuals and the ACF plot are displayed in figure 10A and 10B below.
 
 ```{r hw_resid1, fig.align='center', out.width = 800, fig.cap = "Figure 10: Residual and ACF plots"}
-plot_grid(train$hw_resid_plot[[1]], train$hw_acf[[1]], align = "hv", labels = c("A", "B"), vjust = .5)
+plot_grid(train$hw_resid_plot[[1]], train$hw_acf[[1]], align = "hv", labels = c("A", "B"), vjust = 1.2)
 ```
 
 The results from the Ljung-Box test are presented in table 4. The significant p-value indicates the presence of serial correlation in the residuals, indicating a poor model fit.
@@ -764,7 +764,7 @@ kable(train$hw_lb[[1]],
 The average residual was `r round(mean(train$hw_resid[[2]]), 2)`. The plot of the residuals and the ACF plot are displayed in figure 11A and 11B below.
 
 ```{r hw_resid2, fig.align='center', out.width = 800, fig.cap = "Figure 11: Residual and ACF plots"}
-plot_grid(train$hw_resid_plot[[2]], train$hw_acf[[2]], align = "hv", labels = c("A", "B"), vjust = .5)
+plot_grid(train$hw_resid_plot[[2]], train$hw_acf[[2]], align = "hv", labels = c("A", "B"), vjust = 1.2)
 ```
 
 The results from the Ljung-Box test are presented in table 5. The significant p-value indicates the presence of serial correlation in the residuals, indicating a poor model fit.
@@ -800,7 +800,7 @@ kable(train$hw_lb[[3]],
 The average residual was `r round(mean(train$hw_resid[[4]]), 2)`. The plot of the residuals and the ACF plot are displayed in figure 13A and 13B below.
 
 ```{r hw_resid4, fig.align='center', out.width = 800, fig.cap = "Figure 13: Residual and ACF plots"}
-plot_grid(train$hw_resid_plot[[4]], train$hw_acf[[4]], align = "hv", labels = c("A", "B"))
+plot_grid(train$hw_resid_plot[[4]], train$hw_acf[[4]], align = "hv", labels = c("A", "B"), vjust = 1.2)
 ```
 
 The results from the Ljung-Box test are presented in table 7. The significant p-value indicates the presence of serial correlation in the residuals, indicating a poor model fit.
@@ -954,7 +954,7 @@ forecasts %>%
   theme_jim
 ```
 
-In order to summarise the overall error for each model and each store, the [mean absolute deviation](https://en.wikipedia.org/wiki/Average_absolute_deviation) (MAD) was calculate for each method. The MAD error metric was chosen as, in this setting, it is intuitive and describes how much the forecasted demands were "out" from the true values in the same units as the true demand values are measured in.
+In order to summarise the overall error for each model and each store, the [mean absolute deviation](https://en.wikipedia.org/wiki/Average_absolute_deviation) (MAD) was calculate for each method. The MAD error metric was chosen as, in this setting, it is intuitive and describes how much the forecast demands were "out" from the true values in the same units as the true demand values are measured in.
 
 ```{r mad}
 mad <- forecasts %>% 
