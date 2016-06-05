@@ -154,7 +154,7 @@ As sales, recipes, sub-recipes and ingredients were all stored in separate table
 
 ## Ingredient requirements
 
-Firstly, all recopies containing lettuce were found from the data, discarding other recipes (as they were not relevant). The amount of lettuce required for each recipe was found. As some recopies listed the amount in ounces and others in grams, the amount required for each recipe was standardised to be measure in grams. This produced a clean data set that listed the total amounts of lettuce required in each recipe. 
+Firstly, all recipes containing lettuce were found from the data, discarding other recipes (as they were not relevant). The amount of lettuce required for each recipe was found. As some recipes listed the amount in ounces and others in grams, the amount required was standardised to be measured in grams. This produced a clean data set that listed the total amounts of lettuce required in each recipe. 
 
 ```{r recipies_to_ingredients, message = FALSE}
 tom_let_recipes <- recipes %>% 
@@ -186,7 +186,7 @@ tom_let_recipes <- recipes %>%
          tomato = ifelse(is.na(tomato), 0, tomato))
 ```
 
-A similar process was performed for all _sub_-recopies containing lettuce. The amount of lettuce required for each sub-recipe was found and standardised to grams. 
+A similar process was performed for all _sub_-recipes containing lettuce. The amount of lettuce required for each sub-recipe was found and standardised to grams. 
 
 ```{r subrecipes_to_ingredients, message = FALSE}
 tom_let_sub_recipes <- sub_recipes %>% 
@@ -266,7 +266,7 @@ menu_items_to_tom_let <- menu_items %>%
   inner_join(recipes_to_tom_let)
 ```
 
-The linkage of orders to menu items was then used to determine the lettuce requirements for each order, based on the items selected in each order, and the number of each item selected (for example, requirements would double for the same item order twice within one order).
+The linkage of orders to menu items was then used to determine the lettuce requirements for each order, based on the items selected in each order, and the number of each item selected (for example, lettuce requirements would double for the same item ordered twice within one order).
 
 ```{r orders_to_reqs, message = FALSE}
 # Use menuitem to link ordersale md5 IDs to total lettuce and tomato requirements
@@ -304,7 +304,7 @@ daily_demand <- sales_to_demand %>%
 
 ## Visualising demand
 
-The daily demand of lettuce at each of the four restaurants (each small multiple in the plot) in the data was visualised in order to understand the structure of the data a little better, in order that sensible forecasting methods could be applied.
+The daily demand of lettuce at each of the four restaurants in the data was visualised in order to understand the structure of the data, in order that sensible forecasting methods could be applied.
 
 Figure one shows that there does not appear to be a _strong_ trend in either the Californian or the New York restaurants. Restaurant 20974 initially shows very low demand, before picking up to show demand comparable to the other stores. There is clearly some seasonality in the demand within Californian restaurants which appears to be at a weekly level. Such a strong pattern of seasonality is not observed for the restaurants in New York.
 
@@ -401,7 +401,7 @@ plot_ets <- function(data, row) {
 }
 ```
 
-The estimates from the ETS models were then used to specify a complete Holt-Winters model, using the `HoltWinters` function. In this way trends (and an estimation of the seasonal component) of each series detected by `ets` are passed to `HoltWinters` for assessment.
+The estimates from the ETS models were then used to specify a complete Holt-Winters model, using the `HoltWinters` function. In this way trends (and an estimation of the seasonal component) of each series detected by `ets` were passed to `HoltWinters` for refinement.
 
 ```{r fit_hw}
 # Define function to run HW using output from the ets estimations
@@ -450,7 +450,7 @@ train <- train %>%
 
 ```
 
-The estimation of the components (i.e. level, trend and seasonal), where applicable, along with the fitted values are displayed in the figures below, one for each model (i.e. for each of the four stores). For neither of the Californian stores was a trend detected, whereas both New York stores have a trend that varies over the series. Each figure also displays the raw demand data in the first panel. The fitted values show a good correspondence with the raw data.
+The estimation of the components (i.e. level, trend and seasonal), where applicable, along with the fitted values from each Holt-Winters model are displayed in the figures below. For neither Californian store was a trend detected, whereas both New York stores have a trend that varies over the series (something that was not expected based on the visualisations in figure one). Each figure also displays the raw demand data in the first panel. The fitted values show a good correspondence with the raw data.
 
 Further details on the merits of the Holt-Winters model are discussed in the model comparison section.
 
@@ -534,7 +534,9 @@ train$hw_plot[[4]]
 
 ## ARIMA model {.tabset}
 
-Prior to fitting an ARIMA model, each series had to be made _stationary_ with constant variance. Inspection of the series in figure 1 indicated that the models already had constant variance. In order to confirm this analytically, the McLeod-Li test for constant variance was applied. The average p-values for each model are displayed in table 2 below. It can be seen that the null hypothesis (that there is non-constant variance) can be rejected in each case. As such no action was taken (e.g. taking logarithms) to transform each series to have constant variance.
+Prior to fitting an ARIMA model, each series had to be made _stationary_. 
+
+Inspection of the series in figure 1 indicated that the models already had constant variance. In order to confirm this analytically, the McLeod-Li test for constant variance was applied. The average p-values for each model are displayed in table 2 below. It can be seen that the null hypothesis (that there is non-constant variance) can be rejected in each case. As such no action was taken (e.g. taking logarithms) to transform each series.
 
 ```{r mcleod_li}
 # Function to fit model
@@ -659,7 +661,7 @@ train$arima_plot[[4]]
 
 # Model diagnostics
 
-There are two methods that can be applied when diagnosing the two modelling approaches. The first approach considers the models in isolation, and looks at residual analysis to estimate model quality and goodness-of-fit. The second approach is to forecast using each model and compare the results with the _test_ data, summarising differences using common error metrics. Both approaches have been taken and are discussed below.
+There are two methods that can be applied when diagnosing the two modelling approaches. The first approach considers the models in isolation, and performs residual analysis to estimate model quality and goodness-of-fit. The second approach is to forecast using each model and compare the results with the _test_ data, summarising differences using common error metrics. Both approaches have been taken and are discussed below.
 
 ## Holt-Winters residuals {.tabset}
 
@@ -824,7 +826,7 @@ train <- train %>% mutate(arima_resid = arima %>% map(extract_resid),
                           arima_lb = arima_resid %>% map(fit_lb))
 ```
 
-The ARIMA model residual analyses show much better goodness-of-fit measures than the Holt-Winters methods, especially for the Californian stores. The residuals for the Californian stores have a mean of 0 (not the case for the two New York stores were the fit is poorer). All four stores display residuals with no serial correlation (insignificant p-values for the Ljung-Box tests).
+The ARIMA model residual analyses show much better goodness-of-fit measures than the Holt-Winters methods, especially for the Californian stores. The residuals for the Californian stores have a mean of 0 (not the case for the two New York stores where the fit is poorer). All four stores display residuals with no serial correlation (insignificant p-values for the Ljung-Box tests).
 
 Overall these results indicate the the ARIMA models are better suited to fitting these time series. Comparisons of forecasting errors on the testing set provide further information on their suitability in this setting.
 
@@ -954,7 +956,7 @@ forecasts %>%
   theme_jim
 ```
 
-In order to summarise the overall error for each model and each store, the [mean absolute deviation](https://en.wikipedia.org/wiki/Average_absolute_deviation) (MAD) was calculate for each method. The MAD error metric was chosen as, in this setting, it is intuitive and describes how much the forecast demands were "out" from the true values in the same units as the true demand values are measured in.
+In order to summarise the overall error for each model and each store, the [mean absolute deviation](https://en.wikipedia.org/wiki/Average_absolute_deviation) (MAD) was calculated for each method. The MAD error metric was chosen as, in this setting, it is intuitive and describes how much the forecast demands were "out" from the true values in the same units as the true demand values are measured in.
 
 ```{r mad}
 mad <- forecasts %>% 
@@ -973,6 +975,8 @@ kable(mad,
 ```
   
 These results are presented in table 12. Although there are differences between the two methods at a store level; overall it is the case that ARIMA performs better than Holt-Winters, with an average MAD value of `r scales::comma(round(mean(mad$arima), 1))`, compared to `r scales::comma(round(mean(mad$hw), 1))` for Holt-Winters. 
+
+In this setting this means that the ARIMA models were out by around `r scales::comma(signif(mean(mad$arima), 1))` grams, whereas the Holt-Winters models were out by around `r scales::comma(signif(mean(mad$hw), 0))` grams, a significantly weaker performance.
 
 ## Model selection
 
@@ -1070,4 +1074,7 @@ kable(forecast_tbl,
       caption = "Table 13: Forecast values for each store")
 ```
 
-***
+# References
+
+1. _Managing Many Models with R_, 2016, Hadley Wickham, EdinburghR Conference talk. Available [online](https://www.youtube.com/watch?v=rz3_FDVt9eg).
+2. _Forecasting with daily data_, 2013, Rob J. Hyndman, online blog post. Available [online](http://robjhyndman.com/hyndsight/dailydata/).
