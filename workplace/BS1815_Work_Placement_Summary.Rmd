@@ -1,15 +1,111 @@
 ---
 title: "BS1815 - Work Placement Summary"
-author: "Jim Leach"
 date: "10 July 2016"
 output: 
-    html_document:
-        toc: true
-        toc_float: true
-        code_folding: hide
+  pdf_document: 
+    fig_caption: yes
+    number_sections: yes
+    toc: yes
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+# Work Placement Details
+
+* Candidate Name: James Leach
+* Candidate Number: 01135629
+* Work placement organisation: J. Sainsbury plc.
+* Work placement dates: 2016/06/13 - 2016/07/22
+* Work placement position: Data Scientist, Algorithms Team
+
+## Project summary
+
+Teams within Sainsbury's use customer complaints in order to work with suppliers to improve the quality of products sold. This work is ongoing, occurring on a weekly basis, and highly manual. The large number of complaints received for high-sales-volume departments, coupled with low-quality of the customer comments (for example, one/two-word complaints, or complaints with numerous typographic errors) makes this process difficult. Consequently, quality issues are harder or more time-consuming to resolve. 
+
+During the work placement I was therefore responsible for a six-week project analysing the text of customer complaints. The goal was to develop automated, algorithmic, methods for detecting and creating structured topics from free-text complaint comments. Additional, business-led, hypotheses were then generated and tested on the results of my analysis. This enabled teams working with complaints data to better understand the complaints received and, crucially, to be able to take more focussed actions to remedy problems with suppliers. 
+
+# Self Evaluation
+
+This section provides information on how completion of this project has enabled me to meet each of the module outcomes. This section is separated in to the three broad categories of: knowledge objectives, skills objectives, and learning outcomes. 
+
+## Knowledge Objectives
+
+### Analysis of real, business related problems
+
+TODO
+
+### Application of MSc. modeule knowledge to solve business tasks; and integration of theorectical knowledge with relevant practical skills
+
+In order to solve the challenges presented on this assignment I had to use and integrate knowledge and skills obtained from the following MSc. modules:
+
+* _Retail and Marketing Analytics_ - This module gave me an understanding of common terminology used in a retail context. This helped me to have conversations with other members of the team about projects that they were working on, and to make suggestions about aspects of their project that they had not considered. 
+
+* _Very Large Data Management_ - I used skills from this module when creating a `PostgreSQL` database, loading data, performing sensible Extract, Transform and Load (ETL) steps in order to create a layered, relational data model; and to perform additional `SQL`-based data manipulations on the results obtained from topic-detection processes applied to customer complaint text.
+
+* _Advanced Analytics and Machine Learning_ - I used the series of lectures given by Professor Benoit as a basis for the main body of work involving text analysis. I used `R` and Prof. Benoit's `quanteda` package to detect and create topics across a large number of complaints for thousands of product categories using collocation analysis, a method specifically discussed in class. I also explored other methods for topic detection discussed in class, including Latent Dirichlet Allocation, but discarded them due to their weaknesses in this specific context. 
+
+* _Logistics and Supply Chain Analytics_ - I used time series methods (discussed in the module in the context of forecasting demand) in order to detect trends and potential seasonality in the time series of complaints received within a given product category. I performed these analyses using the `forecast` package in `R` that was introduced in this module.
+
+* _Digital Marketing_ - After detecting topics in the complaints, I used market-basket frequent item-set mining techniques (the _apriori algorithm_) in order to detect co-occurrence of individual topics in a single complaint across all complaints within a given product category. Understanding the various metrics involved (e.g. _support_ and _confidence_ of an item-set) enabled me to use these methods in a different context to those for which they were presented in class. I used `SQL` to prepare the data and the `arules` package in `R` in order to implement the _apriori_ algorithm.
+
+* _Network Analytics_ - I also used network analytics to detect clusters of individual topics when assessing the co-occurrence of topics on a single complaint. I used network centrality measures to understand the most important topics in a product category and community detection algorithms to find clusters in the graph structure. I performed these analyses using the `igraph` package, accessing its functionality from `R`.
+
+* _Visualisation_ - I used the `ggplot2` `R` package discussed (briefly) in class in order to visualise the results and present the results of my analyses. I also used `D3` and `JavaScript` libraries discussed in the second half of the module in order to produce some interactive visualisations for my final presentation. I used theoretical knowledge discussed in class to plan my visualisations and understand the best way to present certain kinds of data.
+
+* _Introduction to Data Analytics_ - I applied methods discussed in class to check my work for cognitive heuristics and biases which could be influencing my results. 
+
+The full code base for this project, demonstrating many of the steps taken above, is provided as evidence item [TODO].
+
+## Skills Objectives
+
+### Completion of business-related tasks and analyses; and evaluation of resuts
+
+TODO
+
+### Analysis of and interpretation of real-world business problems
+
+TODO
+
+### Management of line manager's, peer, and clients' expectations
+
+TODO
+
+### Deliver value through the completion of tasks
+
+TODO
+
+## Learning Outcomes
+
+### Problem solving skills
+
+TODO
+
+### Analytics skills to select and use relevant information
+
+During the initial stages of the project I met with 
+
+### Communication and presentation skills
+
+During the project the Algorithms team held informal daily stand-up meetings. We discussed the status of each of our projects and any problems that we were encountering. At times myself or other team members would make suggestions for others' projects or ask for advice on tricky problems we were facing. I had several more formal meetings with members of the algorithms team to discuss my project and ideas for approaches I could take. At these meetings I was clear and concise, and communicated effectively with my team members. 
+
+I had several meetings with the internal clients. These gave me the opportunity to understand the project requirements in more detail, and to communicate directly with senior members of Sainsbury's head-office staff. I was effective in these meetings, building rapport with the internal customers, whilst focussing on what was relevant to both them and myself for the projet I was working on.
+
+I also gave a major presentation to the internal analytics community in my final week. I presented the results of my work and walked through the steps I had taken at various stages of the project. During this presentation I was engaging and effectively communicated the results of the project to a large audience. s
+
+### Project management skills
+
+The overall project I was working on had been discussed and planned by the Algorithms team and its internal clients before my arrival at Sainsbury's. As such there was a well-defined statement of work for me to follow with a set of specific aims and requirements for the project. 
+
+As well as the daily stand-up meetings held within the Algorithms team, I also provided a weekly update slide to my team and the internal client detailing the status of the project (evidence item TODO). This weekly update was aligned to the statement of work, ensuring that set-requirements were met. This meant that my time and my client were kept informed of progess regularly, and any problems could be overcome or resolved in a timely fashion. 
+
+These actions demonstrates that I was able to deliver a large piece of work in a specific time-frame, working to a set of pre-defined requirements. 
+
+# Evidence list
+
+1. Emails discussing data requirements and extracts to/from Oliver TODO and Laura Varsandan. File(s): TODO
+1. Initial data explorations and high level overview. File: _[TODO].html_
+2. Full code base for end-to-end analysis. File(s): [TODO]
+3. Project management weekly updates. File(s): _DS022 Weekly Update [date].pptx_
+4. TODO Final report/presentation
