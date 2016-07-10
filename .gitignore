@@ -89,6 +89,7 @@ ml/labs/02/*.pdf
 ml/hw/hw1/images/*
 ml/hw/hw1/*.pdf
 ml/hw/hw1/*.zip
+*.dic
 
 # ignore for vis
 vis/*.pdf
@@ -127,10 +128,12 @@ retail/docs/lectures/*.pdf
 retail/docs/lectures/*.pptx
 *.pdf
 
-*.dic
+# Ignore for dm
 dm/data/hw1/DMEFExtractContactsV01.CSV
 dm/data/hw1/DMEFExtractLinesV01.csv
 dm/data/hw1/DMEFExtractOrdersV01.CSV
 dm/data/hw1/DMEFExtractSummaryV01.CSV
 dm/data/hw1/Digital Marketing HW1 data set.zip
+dm/labs/*.xlsx
+
 workplace/Re
