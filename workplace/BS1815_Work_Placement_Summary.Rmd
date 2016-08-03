@@ -1,19 +1,15 @@
 ---
 title: "BS1815 - Work Placement Summary"
 output:
-  html_document:
-    toc: yes
-    number_sections: yes
   pdf_document:
     fig_caption: yes
     number_sections: yes
     toc: yes
-date: "`r Sys.Date()`"
+  html_document:
+    number_sections: yes
+    toc: yes
+date: '`r Sys.Date()`'
 ---
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
 
 # Work Placement Details
 
@@ -27,7 +23,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 Teams within Sainsbury's use customer complaints in order to work with suppliers to address issues arising with their products. This work is ongoing, occurring on a weekly basis, and highly manual. The large number of complaints received for high-sales-volume departments, coupled with low-quality of the customer comments (for example, one/two-word complaints, or complaints with numerous typographical errors) makes this process difficult. Consequently, emerging and significant issues with products are hard to identify and time-consuming to resolve. 
 
-I was responsible for a six-week project analysing the text of customer complaints, working for an internal client responsible for monitoring and resolving complaints. The goal was to develop automated, algorithmic methods for detecting topics from free-text complaint comments. The algorithm needed to be developed, trained and refined using a factorial experiment approach. Additional, business-led hypotheses were generated and tested using the topics detected. This enabled teams working with complaints data to better understand the complaints received and, crucially, to be able to take more focussed actions to remedy problems with suppliers. 
+As a member of the Algorithms team I was responsible for a six-week project analysing the text of customer complaints, working for an internal client responsible for monitoring and resolving complaints. The goal was to develop automated, algorithmic methods for detecting topics from free-text complaint comments. The algorithm needed to be developed, trained and refined using a factorial experiment approach. Additional, business-led hypotheses were generated and tested using the topics detected. This enabled teams working with complaints data to better understand the complaints received and, crucially, to be able to take more focussed actions to remedy problems with suppliers. 
 
 The project was highly successful. I developed, trained, and refined an algorithm that detected topics in millions of historical complaints. The algorithm ran end-to-end in around 20 minutes, which represented a significant reduction in time compared to current review methods (which can take up to 1.5 days per week for teams receiving a few _thousand_ complaints per week). The additional hypothesis testing was also very successful and generated several informative outcomes that were highly relevant to the business, and could be used to inform and improve their complaints-handling processes. The Algorithms team and the internal client were pleased with both my performance, and the results produced.
 
@@ -63,13 +59,11 @@ In order to solve the challenges presented on this assignment I had to use and i
 
 ### Completion of business-related tasks and analyses; and evaluation of results
 
-TODO
-
-During this project I completed many common business-related tasks, including meeting colleagues and clients, writing analytical code, producing visualisations and reporting my results. 
+During this project I completed many common business-related tasks, including meeting colleagues and clients, writing analytical code, producing visualisations and reporting my results. I also completed many different analytical steps including reviewing of raw data, creating exploratory visualisation, calculating of descriptive statistics and running statistical hypothesis tests in order to address business questions. I used many methods to evaluate my results, including qualitative review (either by myself, by peers in the Algorithms team, by my line manager, or by the internal client) and quantitative comparisons (where appropriate) to compare differences in approaches. I developed other key business-related tasks including building rapport with colleagues, managing expectations, dealing with important stakeholders and resolving and problems that occurred swiftly.
 
 ### Analysis of and interpretation of real-world business problems
 
-Section 2.1.1 outlines the real-world business problem on this project. After meeting with the internal client I profiled the raw data and created some exploratory visualisations in order to understand how the data could be used to address the problem. I noted down and created exploratory plots of key attributes which helped me to interpret the problem from a data perspective. Understanding the data in this way enabled me to better analyse _why_ the real-world business problem was hard to solve and, therefore, what steps the algorithm I was developing would need to take. By analysing the interpreting the problem "from the data" I was better able to real-world significance of my work, and produce results that would be best-suited to resolving it.
+Section 2.1.1 outlines the real-world business problem on this project. After meeting with the internal client I profiled the raw data and created some exploratory visualisations in order to understand how the data could be used to address the problem. I noted down and created exploratory plots of key attributes which helped me to interpret the problem from a data perspective. Understanding the data in this way enabled me to better analyse _why_ the real-world business problem was hard to solve and, therefore, what steps the algorithm I was developing would need to take. By analysing and interpreting the problem "from the data" I was better able to real-world significance of my work, and produce results that would be best-suited to resolving it.
 
 ### Management of line manager's, peer, and clients' expectations
 
