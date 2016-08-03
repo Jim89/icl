@@ -3,6 +3,7 @@ title: "BS1815 - Work Placement Summary"
 output:
   html_document:
     toc: yes
+    number_sections: yes
   pdf_document:
     fig_caption: yes
     number_sections: yes
@@ -34,7 +35,7 @@ The project was highly successful. I developed, trained, and refined an algorith
 
 ## Knowledge Objectives
 
-### Analysis of real, business related problems
+### Analysis of real, business related problems;
 
 Improving customer satisfaction is a key business objective for Sainsbury's. Reviewing and resolving complaint issues is an important part of accomplishing this objective. The current business processes used to review complaints and resolve issues with suppliers are slow and highly manual. As such, any methods to better understand complaints are highly desirable and could help address a key business objective. Moreover, complaint volumes are a key metric used in performance monitoring and so helping to reduce them could significantly boost internal performance measures.
 
@@ -60,13 +61,15 @@ In order to solve the challenges presented on this assignment I had to use and i
 
 ## Skills Objectives
 
-### Completion of business-related tasks and analyses; and evaluation of resuts
+### Completion of business-related tasks and analyses; and evaluation of results
 
 TODO
+
+During this project I completed many common business-related tasks, including meeting colleagues and clients, writing analytical code, producing visualisations and reporting my results. 
 
 ### Analysis of and interpretation of real-world business problems
 
-TODO
+Section 2.1.1 outlines the real-world business problem on this project. After meeting with the internal client I profiled the raw data and created some exploratory visualisations in order to understand how the data could be used to address the problem. I noted down and created exploratory plots of key attributes which helped me to interpret the problem from a data perspective. Understanding the data in this way enabled me to better analyse _why_ the real-world business problem was hard to solve and, therefore, what steps the algorithm I was developing would need to take. By analysing the interpreting the problem "from the data" I was better able to real-world significance of my work, and produce results that would be best-suited to resolving it.
 
 ### Management of line manager's, peer, and clients' expectations
 
