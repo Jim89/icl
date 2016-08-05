@@ -1,0 +1,49 @@
+---
+title: The Network Structure of London Undgerground and Alternatives to Zone-based
+  Pricing
+author: "Jim Leach"
+date: "5 August 2016"
+output:
+  html_document:
+    toc: yes
+    toc_float: yes
+    theme: readable
+  pdf_document:
+    toc: yes
+bibliography: refs.bib
+nocite: | 
+    @newman_finding_2004
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Details
+
+* Name:
+* CID:
+* Title:
+* Word Count: 
+
+# Executive Summary
+
+Some text about what I've done - the abstract.
+
+# Introduction
+
+A more detailed intro to the problem.
+
+# Analysis
+
+R code, details, graphs go here.
+
+Test citation
+
+# Conclusions and Recommendations
+
+Some summary.
+
+# Appendices
+
+# References
