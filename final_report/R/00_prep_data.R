@@ -1,40 +1,39 @@
 # Step 0 - prep env -------------------------------------------------------
 # Load packages
-<<<<<<< HEAD
 library(dplyr)
 library(readr)
 library(readxl)
 library(tidyr)
 library(stringr)
-=======
-library(igraph)
-library(dplyr)
-library(readr)
-library(readxl)
->>>>>>> 6f813ad419f4c511bd99d5a9d042206beb418911
-
 
 # Step 1 - get data -------------------------------------------------------
 # Basic linkage data from Wiki
-adjacency <- read_csv("./data/geo/adjacency.csv")
-station_lk <- read_csv("./data/geo/station_lk.csv")
-station_details <- read_csv("./data/geo/stations_geo.csv")
+adjacency <- read_csv("./data/geo/adjacency.csv",
+                      col_types = cols(station1 = col_integer(),
+                                       station2 = col_integer(),
+                                       line = col_integer()))
+
+station_lk <- read_csv("./data/geo/station_lk.csv",
+                       col_types = cols(line = col_integer(),
+                                        name = col_character(),
+                                        colour = col_character(),
+                                        stripe = col_character()))
+
+station_details <- read_csv("./data/geo/stations_geo.csv",
+                            col_types = cols(id = col_integer(),
+                                             latitude = col_double(),
+                                             longitude = col_double(),
+                                             name = col_character(),
+                                             display_name = col_character(),
+                                             zone = col_double(),
+                                             total_lines = col_integer(),
+                                             rail = col_integer()))
 
 # Distances data from FOI
 dlr_abbr <- read_excel("./data/distances/formatted/FOI Request Station Abbreviations_CLN.xls")
-<<<<<<< HEAD
 stations_dist <- read_excel("./data/distances/formatted/Inter Station Train Times_CLN.xls")
 dlr_dist <- read_excel("./data/distances/formatted/Distance Martix DLR 2013_CLN.xlsx")
 
-# Usage data
-journeys <- read_csv("./data/journeys/Nov09JnyExport.csv")
-names(journeys) <- names(journeys) %>% tolower()
-
-=======
-stations <- read_excel("./data/distances/formatted/Inter Station Train Times_CLN.xls")
-dlr_dist <- read_excel("./data/distances/formatted/Distance Martix DLR 2013_CLN.xlsx")
-
->>>>>>> 6f813ad419f4c511bd99d5a9d042206beb418911
 # Step 2 - clean data -----------------------------------------------------
 # Set up adjacency list with names of stations, rather than ID
 links <- adjacency %>% left_join(station_details %>% select(id, name),
@@ -44,7 +43,6 @@ links <- adjacency %>% left_join(station_details %>% select(id, name),
     left_join(station_details %>% select(id, name),
               by = c("station2" = "id")) %>% 
     select(-station2) %>% 
-<<<<<<< HEAD
     rename(station2 = name) %>% 
     mutate(station1 = tolower(station1),
            station2 = tolower(station2),
@@ -134,18 +132,3 @@ links <- links %>%
 # Clean up mess
 rm(dlr_abbr, dlr_dist, dlr_dist_long, station_dist_long, distances, adjacency,
    stations_dist)
-
-
-# Step 3 - clean and process journeys data --------------------------------
-# This dataset provides a 5% sample of all Oyster card journeys performed in a
-# week during November 2009 on bus, Tube, DLR and London Overground.
-
-# Filter to just completed tube journeys
-journeys <- journeys %>% 
-    filter(subsystem == "LUL",
-           startstn != "Unstarted")
-
-
-=======
-    rename(station2 = name)
->>>>>>> 6f813ad419f4c511bd99d5a9d042206beb418911
