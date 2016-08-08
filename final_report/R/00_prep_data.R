@@ -18,6 +18,10 @@ dlr_abbr <- read_excel("./data/distances/formatted/FOI Request Station Abbreviat
 stations_dist <- read_excel("./data/distances/formatted/Inter Station Train Times_CLN.xls")
 dlr_dist <- read_excel("./data/distances/formatted/Distance Martix DLR 2013_CLN.xlsx")
 
+# Usage data
+journeys <- read_csv("./data/journeys/Nov09JnyExport.csv")
+names(journeys) <- names(journeys) %>% tolower()
+
 # Step 2 - clean data -----------------------------------------------------
 # Set up adjacency list with names of stations, rather than ID
 links <- adjacency %>% left_join(station_details %>% select(id, name),
@@ -30,22 +34,8 @@ links <- adjacency %>% left_join(station_details %>% select(id, name),
     rename(station2 = name) %>% 
     mutate(station1 = tolower(station1),
            station2 = tolower(station2),
-           station1 = gsub("\\(.*\\)|'|\\.", "", station1),
-           station2 = gsub("\\(.*\\)|'|\\.", "", station2),
-           station1 = gsub("edgware", "edgeware", station1),
-           station2 = gsub("edgware", "edgeware", station2),
            station1 = str_trim(station1),
-           station2 = str_trim(station2),
-           station1 = gsub("picadilly", "piccadilly", station1),
-           station2 = gsub("picadilly", "piccadilly", station2),
-           station1 = gsub("jamess", "james", station1),
-           station2 = gsub("jamess", "james", station2),
-           station1 = gsub("kings cross st pancras", "kings cross", station1),
-           station2 = gsub("kings cross st pancras", "kings cross", station2),
-           station1 = gsub("heathrow terminals 1, 2 & 3", "heathrow 123", station1),
-           station2 = gsub("heathrow terminals 1, 2 & 3", "heathrow 123", station2),
-           station1 = gsub("heathrow terminal 4", "heathrow 4", station1),
-           station2 = gsub("heathrow terminal 4", "heathrow 4", station2))
+           station2 = str_trim(station2))
 
 # DLR distances
 dlr_dist_long <- dlr_dist %>% gather(station, dist, -Metres) %>% 
@@ -79,20 +69,43 @@ station_dist_long <- stations_dist %>%
 distances <- bind_rows(dlr_dist_long, station_dist_long) %>% 
     mutate(station1 = tolower(station1),
            station2 = tolower(station2),
-           station1 = gsub("\\(.*\\)|'|\\.", "", station1),
-           station2 = gsub("\\(.*\\)|'|\\.", "", station2),
-           station1 = gsub("edgware", "edgeware", station1),
-           station2 = gsub("edgware", "edgeware", station2),
            station1 = str_trim(station1),
            station2 = str_trim(station2),
-           station1 = gsub("picadilly", "piccadilly", station1),
-           station2 = gsub("picadilly", "piccadilly", station2),
-           station1 = gsub("jamess", "james", station1),
-           station2 = gsub("jamess", "james", station2),
-           station1 = gsub("kings cross st pancras", "kings cross", station1),
-           station2 = gsub("kings cross st pancras", "kings cross", station2),
+           station1 = gsub("edgware", "edgeware", station1),
+           station2 = gsub("edgware", "edgeware", station2),
+           station1 = gsub("regents park", "regent's park", station1),
+           station2 = gsub("regents park", "regent's park", station2),
+           station1 = gsub("piccadilly", "picadilly", station1),
+           station2 = gsub("piccadilly", "picadilly", station2),
+           station1 = gsub("st james park", "st. james's park", station1),
+           station2 = gsub("st james park", "st. james's park", station2),
+           station1 = gsub("kings cross|kings cross st pancras", "king's cross st. pancras", station1),
+           station2 = gsub("kings cross|kings cross st pancras", "king's cross st. pancras", station2),
+           station1 = gsub("earls court", "earl's court", station1),
+           station2 = gsub("earls court", "earl's court", station2),
            station1 = gsub("highbury & islington", "highbury", station1),
-           station2 = gsub("highbury & islington", "highbury", station2))
+           station2 = gsub("highbury & islington", "highbury", station2),
+           station1 = gsub("paddington \\(.*\\)", "paddington", station1),
+           station2 = gsub("paddington \\(.*\\)", "paddington", station2),
+           station1 = gsub("st johns wood", "st. john's wood", station1),
+           station2 = gsub("st johns wood", "st. john's wood", station2),
+           station1 = gsub("queens park", "queen's park", station1),
+           station2 = gsub("queens park", "queen's park", station2),
+           station1 = gsub("heathrow 123", "heathrow terminals 1, 2 & 3", station1),
+           station2 = gsub("heathrow 123", "heathrow terminals 1, 2 & 3", station2),
+           station1 = gsub("heathrow four", "heathrow terminal 4", station1),
+           station2 = gsub("heathrow four", "heathrow terminal 4", station2),
+           station1 = gsub("hammersmith \\(.*\\)", "hammersmith", station1),
+           station2 = gsub("hammersmith \\(.*\\)", "hammersmith", station2),
+           station1 = gsub("st pauls", "st. paul's", station1),
+           station2 = gsub("st pauls", "st. paul's", station2))
+
+# Create "reversed" distances to account for possible different combos of stations
+distances <- bind_rows(distances, distances %>% 
+                           select(line, station2, station1, dist) %>% 
+                           rename(station3 = station1,
+                                  station1 = station2) %>% 
+                           rename(station2 = station3))
 
 # Add distances to station linkages data
 links <- links %>% 
@@ -107,4 +120,15 @@ links <- links %>%
 # Clean up mess
 rm(dlr_abbr, dlr_dist, dlr_dist_long, station_dist_long, distances, adjacency,
    stations_dist)
+
+
+# Step 3 - clean and process journeys data --------------------------------
+# This dataset provides a 5% sample of all Oyster card journeys performed in a
+# week during November 2009 on bus, Tube, DLR and London Overground.
+
+# Filter to just completed tube journeys
+journeys <- journeys %>% 
+    filter(subsystem == "LUL",
+           startstn != "Unstarted")
+
 
