@@ -29,12 +29,13 @@ names(journeys) <- names(journeys) %>% tolower()
 # This dataset provides a 5% sample of all Oyster card journeys performed in a
 # week during November 2009 on bus, Tube, DLR and London Overground.
 
-# Filter to just completed tube journeys
+# Filter to just completed tube journeys that were PAYG
 journeys <- journeys %>%
      filter(subsystem == "LUL",
             startstn != "Unstarted",
             endstation != "Unfinished",
-            endstation != "Not Applicable")
+            endstation != "Not Applicable",
+            finalproduct == "PAYG")
 
 # Clean up station names
 journeys <- journeys %>% 
@@ -65,7 +66,8 @@ journeys <- journeys %>%
            start_cln = gsub("St Johns Wood", "St. John's Wood", start_cln),
            start_cln = gsub("Wood Lane", "White City", start_cln),
            start_cln = gsub("Totteridge", "Totteridge & Whetstone", start_cln),
-           start_cln = gsub("Watford Met", "Watford", start_cln)) %>% 
+           start_cln = gsub("Watford Met", "Watford", start_cln),
+           start_cln = tolower(start_cln)) %>% 
     # End station names
     mutate(end_cln = endstation,
            end_cln = gsub("Earls Court", "Earl's Court", end_cln),
@@ -93,32 +95,48 @@ journeys <- journeys %>%
            end_cln = gsub("St Johns Wood", "St. John's Wood", end_cln),
            end_cln = gsub("Wood Lane", "White City", end_cln),
            end_cln = gsub("Totteridge", "Totteridge & Whetstone", end_cln),
-           end_cln = gsub("Watford Met", "Watford", end_cln))
+           end_cln = gsub("Watford Met", "Watford", end_cln),
+           end_cln = tolower(end_cln))
 
 # Add on ID-information and zone
 journeys <- journeys %>% 
-    left_join(station_details %>% select(name, id, zone), 
-              by = c("start_cln" = "name")) %>% 
+    left_join(station_details %>% select(name_cln, id, zone_cln), 
+              by = c("start_cln" = "name_cln")) %>% 
     rename(start_id = id,
-           start_zone = zone) %>% 
-    left_join(station_details %>% select(name, id, zone),
-              by = c("end_cln" = "name")) %>% 
+           start_zone = zone_cln) %>% 
+    left_join(station_details %>% select(name_cln, id, zone_cln),
+              by = c("end_cln" = "name_cln")) %>% 
     rename(end_id = id,
-           end_zone = zone) %>% 
-    mutate(start_zone = ceiling(start_zone),
-           end_zone = ceiling(end_zone))
+           end_zone = zone_cln)
 
 # Group and total
 journey_summaries <- journeys %>% 
-    group_by(daytype,
+    group_by(downo,
+             daytype,
              start_zone,
              end_zone) %>% 
     summarise(journeys = n(),
               total_rev = sum(dfare, na.rm = TRUE) / 100) %>% 
     ungroup() %>% 
     mutate(journeys_scaled = 20 * journeys,
-           total_rev_scaled = 20 * total_rev)
+           total_rev_scaled = 20 * total_rev,
+           rough_cpj = total_rev_scaled / journeys_scaled)
     
+
+# Get rough zone-zone costs
+zone_costs <- journeys %>% 
+    group_by(start_zone,
+             end_zone) %>% 
+    summarise(journeys = n(),
+              total_rev = sum(dfare, na.rm = TRUE) / 100) %>% 
+    ungroup() %>% 
+    mutate(journeys_scaled = 20 * journeys,
+           total_rev_scaled = 20 * total_rev,
+           cpj = total_rev_scaled / journeys_scaled) %>% 
+    select(start_zone, end_zone, cpj)
+
+
+
 
 
 
