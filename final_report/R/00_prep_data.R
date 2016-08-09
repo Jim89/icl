@@ -35,6 +35,10 @@ stations_dist <- read_excel("./data/distances/formatted/Inter Station Train Time
 dlr_dist <- read_excel("./data/distances/formatted/Distance Martix DLR 2013_CLN.xlsx")
 
 # Step 2 - clean data -----------------------------------------------------
+# set up clean lower-case name, and rounded zone-number in station details
+station_details <- station_details %>% mutate(name_cln = tolower(name),
+                                              zone_cln = ceiling(zone))
+
 # Set up adjacency list with names of stations, rather than ID
 links <- adjacency %>% left_join(station_details %>% select(id, name),
                                  by = c("station1" = "id")) %>% 
