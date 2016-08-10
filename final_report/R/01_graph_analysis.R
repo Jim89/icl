@@ -7,22 +7,13 @@ library(igraph)
 # Chop out line and distinct
 graph_data <- links %>% 
     distinct() %>% 
-    rename(weight = dist) %>% 
     select(-line)
 
-# Create "reversed" links to account for bi-directional travel!
-graph_data <- bind_rows(graph_data, graph_data %>% 
-                           select(station2, station1, weight) %>% 
-                           rename(station3 = station1,
-                                  station1 = station2) %>% 
-                           rename(station2 = station3))
-
-# Make the graph
+# Make the graph - retain distance as edge attribute but do not weight edges
 tfl_graph <- graph_data %>% 
-    select(-weight) %>% 
     graph_from_data_frame(directed = TRUE)
 
-# Tidy up
+# Clean up
 rm(graph_data)
 
 # Step 2 - centrality measures --------------------------------------------
@@ -65,10 +56,11 @@ clust_le <- cluster_leading_eigen(tfl_graph)
 # clust_l <- cluster_louvain(tfl_graph) - only works for undirected graphs
     
 # Hierarchical methods - use cut_at to chop up
-clust_w <- cluster_walktrap(tfl_graph, steps = 10)
-clust_eb <- cluster_edge_betweenness(tfl_graph, directed = T)
+# Use distances to help create clusters
+clust_w <- cluster_walktrap(tfl_graph, steps = 10, weights = E(tfl_graph)$dist)
+clust_eb <- cluster_edge_betweenness(tfl_graph, directed = T, weights = E(tfl_graph)$dist)
 # n.b. spins sets number of clusters
-clust_sg <- cluster_spinglass(tfl_graph, spins = 10)
+clust_sg <- cluster_spinglass(tfl_graph, spins = 10, weights = E(tfl_graph)$dist)
 
 
 # Create dataframe of results
