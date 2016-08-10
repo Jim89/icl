@@ -133,6 +133,14 @@ links <- links %>%
     mutate(dist = ifelse(is.na(dist),  mean(links$dist, na.rm = T), dist)) %>% 
     distinct()
 
+
+# Create "reversed" links to account for bi-directional travel!
+links <- bind_rows(links, links %>% 
+                            select(line, station2, station1, dist) %>% 
+                            rename(station3 = station1,
+                                   station1 = station2) %>% 
+                            rename(station2 = station3))
+
 # Clean up mess
-rm(dlr_abbr, dlr_dist, dlr_dist_long, station_dist_long, distances, adjacency,
+rm(dlr_abbr, dlr_dist, dlr_dist_long, station_dist_long, adjacency, distances,
    stations_dist)
