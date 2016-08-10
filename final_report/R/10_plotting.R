@@ -53,7 +53,7 @@ station_cluster_stats %>%
     ggplot(aes(x = longitude, y = latitude, label = station, colour = as.factor(value))) +
     geom_point(size = 2, alpha = .75) +
     facet_wrap(~method) +
-    scale_colour_manual(values = colour) +
+    scale_colour_manual(values = tfl_colour) +
     theme_jim
 
 
@@ -76,7 +76,6 @@ station_centrality_stats %>%
 
 
 plot_fares <- function(data) {
-pos <- data %>% arrange(downo) %>% select(daytype) %>% sapply(as.character) %>% as.vector()
 data %>% 
     ggplot(aes(x = daytype, y = total_fare_rev_scale)) +
     geom_bar(stat = "identity", fill = picadilly) +
@@ -87,13 +86,11 @@ data %>%
     theme_jim 
 }
 
-bind_rows(calcualte_daily_fares("current"),
-            calcualte_daily_fares("deg")) %>% 
-            
-
 methods <- c("current", "deg", "eig", "clo", "bet")
 data <- lapply(methods, calculate_daily_fares)
 data <- bind_rows(data)
+
+pos <- data %>% arrange(downo) %>% select(daytype) %>% sapply(as.character) %>% as.vector()
 
 data %>% 
 ggplot(aes(x = daytype, y = total_fare_rev_scale)) +
