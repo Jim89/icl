@@ -4,9 +4,10 @@ library(igraph)
 
 
 # Step 1 - create graph object --------------------------------------------
-# Chop out line and distinct
+# Chop out line and distinct, weight by daily trips
 graph_data <- links %>% 
     distinct() %>% 
+    rename(weight = daily_trips) %>% 
     select(-line)
 
 # Make the graph - retain distance as edge attribute but do not weight edges
