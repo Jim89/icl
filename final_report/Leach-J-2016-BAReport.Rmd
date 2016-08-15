@@ -498,7 +498,9 @@ eig_cent <- eigen_centrality(tfl_graph, directed = T, scale = F)
 V(tfl_graph)$eig <- eig_cent$vector
 ```
 
-These values were then summarised in to a tidy table of data.
+## Define importance-based zones
+
+In order to define fare zones based on station importance, it was necessary to group stations together. To make these zones more comparable to their real-life equivalents a simple decile rank was applied to each measure of station importance. 
 
 ```{r centrality_stats}
 # Convert to data frame of centrality stats
@@ -507,7 +509,119 @@ station_centrality_stats <- data_frame(station = names(V(tfl_graph)),
                             eig = V(tfl_graph)$eig,
                             bet = V(tfl_graph)$bet,
                             clo = V(tfl_graph)$close)
+
+station_importance_zones <- station_centrality_stats %>% 
+    gather(method, value, -station) %>% 
+    group_by(method) %>% 
+    mutate(zone = ntile(desc(value), 10)) %>% 
+    select(-value) %>% 
+    spread(method, zone)
 ```
+
+The real life zones were not equally distributed (i.e. there were more zone 1 stations thatn zone 10). This was not the case for the decile-ranked, importance-based zones, representing a weakness of this approach.
+
+## Compare importance-zones to reality
+
+Using the journeys data, it was possible to calcualte the total fares charged to Oyster pay-as-you-go customers on each day of the week.
+
+```{r journey_summary}
+# Group and total
+journey_summaries <- journeys %>% 
+    group_by(downo,
+             daytype,
+             start_zone,
+             end_zone) %>% 
+    summarise(journeys = n(),
+              total_rev = sum(dfare, na.rm = TRUE) / 100) %>% 
+    ungroup() %>% 
+    mutate(journeys_scaled = 20 * journeys,
+           total_rev_scaled = 20 * total_rev,
+           rough_cpj = total_rev_scaled / journeys_scaled)
+```
+
+Using a similar approach, it was also possible to estimate the cost of a single trip from any one zone to any other single zone.
+
+```{r zone_costs}
+# Get rough zone-zone costs
+zone_costs <- journeys %>% 
+    group_by(start_zone,
+             end_zone) %>% 
+    summarise(journeys = n(),
+              total_rev = sum(dfare, na.rm = TRUE) / 100) %>% 
+    ungroup() %>% 
+    mutate(journeys_scaled = 20 * journeys,
+           total_rev_scaled = 20 * total_rev,
+           cpj = total_rev_scaled / journeys_scaled) %>% 
+    select(start_zone, end_zone, cpj)
+```
+
+These zone-zone costs were then used (along with the sample journeys data) to estimate the total daily fare received under each alternative zoning approach. This was done by: 
+
+* assuming the cost of each zone-zone ticket (based on the sample journey data) remained constant; 
+* changing the zone of each station based on the alternative approach being considered; and
+* calculating the total fares charged per day based on the fixed zone-zone costs and alternative zoning approach being considered.
+
+```{r fare_estimations}
+# Create function to ease iteration over approaches
+calculate_daily_fares <- function(how) {
+    # the `how` argument will be one of the methods
+    # either "current", "bet", "deg", "eig", or "clo"
+
+    # Return "current" fares if requested
+if ( how == "current" ) {
+    ans <- journey_summaries %>%
+            group_by(downo, daytype) %>% 
+            summarise(total_fare_rev = sum(total_rev),
+                      total_fare_rev_scale = sum(total_rev_scaled)) %>% 
+            mutate(how = "current") %>% 
+            ungroup()
+} else {
+    # Calculate temporary zones for the desired metric
+    temp_zones <- station_centrality_stats %>% 
+        gather(measure, value, -station) %>% 
+        group_by(measure) %>% 
+        mutate(zone = ntile(desc(value), 10)) %>% 
+        filter(measure == how) %>% 
+        ungroup() %>% 
+        select(station, zone)
+
+    # Get journies data
+    temp_journeys <- journeys %>% 
+        select(start_cln, end_cln, ffare, dfare, downo, daytype)
+
+    # Join on new zones based on importance metric
+    temp_journeys_to_zones <- temp_journeys %>% 
+        left_join(temp_zones, by = c("start_cln" = "station")) %>% 
+        rename(start_zone = zone) %>% 
+        left_join(temp_zones, by = c("end_cln" = "station")) %>% 
+        rename(end_zone = zone)     
+        
+    # Join on pricing info from current zone-zone costs
+    temp_journeys_to_zones_to_prices <- temp_journeys_to_zones %>% 
+        left_join(zone_costs, by = c("start_zone", "end_zone"))
+    
+    # Create daily summary
+    ans <- temp_journeys_to_zones_to_prices %>% 
+        group_by(downo, daytype) %>% 
+        summarise(total_fare_rev = sum(cpj)) %>% 
+        mutate(total_fare_rev_scale = 20 * total_fare_rev) %>% 
+        ungroup() %>% 
+        mutate(how = how)
+}    
+
+# Push back the summary as the result
+return(ans)
+}
+
+# Set up list of methods
+methods <- c("current", "deg", "eig", "bet", "clo")
+
+# Loop over each method/zoning approach
+fares <- lapply(methods, calculate_daily_fares) %>% bind_rows()
+```
+
+The results of this analysis are presented in the results section.
+
 
 # Results
 
