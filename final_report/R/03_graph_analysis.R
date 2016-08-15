@@ -31,8 +31,12 @@ clo_cent <- closeness(tfl_graph)
 V(tfl_graph)$close <- clo_cent
 
 # Eigenvector centrality
-eig_cent <- eigen_centrality(tfl_graph, directed = T, scale = T)
+eig_cent <- eigen_centrality(tfl_graph, directed = T, scale = F)
 V(tfl_graph)$eig <- eig_cent$vector
+
+# Katz Centrality
+kat_cent <- alpha_centrality(tfl_graph)
+V(tfl_graph)$kat <- kat_cent
 
 # Convert to data frame of centrality stats
 station_centrality_stats <- data_frame(station = names(V(tfl_graph)),
@@ -43,12 +47,12 @@ station_centrality_stats <- data_frame(station = names(V(tfl_graph)),
 
 # Step 3 - clustering approaches ------------------------------------------
 # Non-hierarchical    
-clust_i <- cluster_infomap(tfl_graph, nb.trials = 10)
-clust_lp <- cluster_label_prop(tfl_graph)
+#clust_i <- cluster_infomap(tfl_graph, nb.trials = 10)
+#clust_lp <- cluster_label_prop(tfl_graph)
 
 
 # Requires large # communities
-clust_le <- cluster_leading_eigen(tfl_graph)
+#clust_le <- cluster_leading_eigen(tfl_graph)
 
 
 # Fails
