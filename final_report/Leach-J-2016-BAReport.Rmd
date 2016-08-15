@@ -1,49 +1,528 @@
 ---
-title: The Network Structure of London Undgerground and Alternatives to Zone-based
-  Pricing
+title: The Network Structure of London Underground and Alternative Zoning Approaches
 author: "Jim Leach"
-date: "5 August 2016"
+date: "`r Sys.Date()`"
 output:
   html_document:
     toc: yes
     toc_float: yes
     theme: readable
+    code_folding: hide
   pdf_document:
     toc: yes
-bibliography: refs.bib
+bibliography: [refs.bib, r.bib]
 nocite: | 
     @newman_finding_2004
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+```{r knitr_setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
 ```
+
+
+<p style="border:1.5px; border-style:solid; border-color:#000000; padding: 1em;">This `HTML` report is best viewed using a modern web browser such as Mozilla Firefox or Google Chrome. It is also available on the [online repository](https://github.com/Jim89/icl/tree/master/final_report). Printing is possible but will not produce an optimal reading experience. The `R` code used to perform this analysis can be viewed in this report using the _Code_ buttons to toggle code viewing.</p>
 
 # Details
 
-* Name:
-* CID:
-* Title:
-* Word Count: 
+* Name: James Leach
+* CID: 01135629
+* Title: The Network Structure of London Underground and Alternative Zoning Approaches
+* Word Count: TODO
 
-# Executive Summary
+# Abstract
 
-Some text about what I've done - the abstract.
+TODO
 
 # Introduction
 
-A more detailed intro to the problem.
+## Background (TODO lit summary)
 
-# Analysis
+## Overview of topic
 
-R code, details, graphs go here.
+TODO: Start out with summary of TfL finances, then move on to brief literature summary of papers reviewed to date.
 
-Test citation
+## Aims, data, and methods
 
-# Conclusions and Recommendations
+This work sought to use graph-theoretical [@_graph_2016] methods for modelling the Transport for London ("TfL") Underground network. More explicitly, the aim was to investigate the creation of fare zones using a data-driven approach, and to compare the results of such approaches with the fare zones that exist today. Such comparisons were made in both financial terms, as well as using theoretical measures proposed in earlier work [@yang_defining_2015]. 
+
+TODO: Describe two approaches. Go in to detail and provide the context
+
+### The data
+
+Open-source [@wikimedia_london_2009] and Tfl-provided [@tfl_oyster_2009; @tfl_distances_2013] data were obtained
+
+### Method summary
+
+The `R` language [@cite_r] used to clean and process the data. The `igraph` software package [@csardi_igraph:_2015] was used to create and analyse the graph structure. 
+
+# Methods
+
+## Create intial graph structure
+
+```{r setup, echo = FALSE}
+# Load packages
+library(igraph)
+library(readr)
+library(readxl)
+library(dplyr)
+library(tidyr)
+library(stringr)
+library(ggplot2)
+library(purrr)
+library(DT)
+
+# Set up ggplot2 theme object for prettier plots
+theme_jim <-  theme(legend.position = "bottom",
+                    axis.text.y = element_text(size = 16, colour = "black"),
+                    axis.text.x = element_text(size = 16, colour = "black"),
+                    legend.text = element_text(size = 16),
+                    legend.title = element_text(size = 16),
+                    title = element_text(size = 16),
+                    strip.text = element_text(size = 16, colour = "black"),
+                    strip.background = element_rect(fill = "white"),
+                    panel.grid.minor.x = element_blank(),
+                    panel.grid.major.x = element_line(colour = "grey", linetype = "dotted"),
+                    panel.grid.minor.y = element_line(colour = "lightgrey", linetype = "dotted"),
+                    panel.grid.major.y = element_line(colour = "grey", linetype = "dotted"),
+                    panel.margin.y = unit(0.1, units = "in"),
+                    panel.background = element_rect(fill = "white", colour = "lightgrey"),
+                    panel.border = element_rect(colour = "black", fill = NA))
+```
+
+The data for the graph structure [@wikimedia_london_2009] and the distances between adjacent stations [@tfl_distances_2013] (in km) were loaded in to `R` using the `readr` [@wickham_readr:_2016] and `readxl` [@wickham_readxl:_2016] packages.
+
+```{r load_prep}
+### Graph structure
+# Basic linkage data from Wiki
+adjacency <- read_csv("./data/geo/adjacency.csv",
+                      col_types = cols(station1 = col_integer(),
+                                       station2 = col_integer(),
+                                       line = col_integer()))
+
+# Line lookup values
+station_lk <- read_csv("./data/geo/station_lk.csv",
+                       col_types = cols(line = col_integer(),
+                                        name = col_character(),
+                                        colour = col_character(),
+                                        stripe = col_character()))
+
+# Station details
+station_details <- read_csv("./data/geo/stations_geo.csv",
+                            col_types = cols(id = col_integer(),
+                                             latitude = col_double(),
+                                             longitude = col_double(),
+                                             name = col_character(),
+                                             display_name = col_character(),
+                                             zone = col_double(),
+                                             total_lines = col_integer(),
+                                             rail = col_integer()))
+
+### Distances data from FOI
+# DLR name lookup
+dlr_abbr <- read_excel("./data/distances/formatted/FOI Request Station Abbreviations_CLN.xls")
+
+# Distances between stations
+stations_dist <- read_excel("./data/distances/formatted/Inter Station Train Times_CLN.xls")
+
+# DLR distance matrix
+dlr_dist <- read_excel("./data/distances/formatted/Distance Martix DLR 2013_CLN.xlsx")
+```
+
+Some basic processing and cleaning (e.g. standardising the names of stations) was performed using the `dplyr` [@wickham_dplyr:_2016], `stringr` [@wickham_stringr:_2015] and `tidyr` [@wickham_tidyr:_2016] packages.
+
+```{r clean_links_and_distances}
+# Set up clean lower-case name, and rounded zone-number in station details
+station_details <- station_details %>% mutate(name_cln = tolower(name),
+                                              zone_cln = ceiling(zone))
+
+# Set up adjacency list with names of stations, rather than ID as keys
+links <- adjacency %>% left_join(station_details %>% select(id, name),
+                                 by = c("station1" = "id")) %>% 
+    select(-station1) %>% 
+    rename(station1 = name) %>% 
+    left_join(station_details %>% select(id, name),
+              by = c("station2" = "id")) %>% 
+    select(-station2) %>% 
+    rename(station2 = name) %>% 
+    mutate(station1 = tolower(station1),
+           station2 = tolower(station2),
+           station1 = str_trim(station1),
+           station2 = str_trim(station2))
+
+# Clean up DLR distances table
+dlr_dist_long <- dlr_dist %>% gather(station, dist, -Metres) %>% 
+    rename(from = Metres,
+           to = station) %>% 
+    left_join(dlr_abbr, by = c("from" = "abbr")) %>% 
+    select(-from) %>% 
+    rename(station1 = station) %>% 
+    left_join(dlr_abbr, by = c("to" = "abbr")) %>% 
+    select(-to) %>% 
+    rename(station2 = station) %>% 
+    na.omit() %>% 
+    filter(dist > 0) %>% 
+    mutate(dist = dist / 1000,
+           line = "Docklands Light Railway") %>% 
+    select(line, station1, station2, dist) %>% 
+    ungroup()
+
+# Clean up station-station distances table
+station_dist_long <- stations_dist %>% 
+    group_by(Line, `Station from (A)`, `Station to (B)`) %>% 
+    summarise(dist = median(`Distance (Kms)`)) %>% 
+    rename(line = Line,
+           dist = dist,
+           station1 = `Station from (A)`,
+           station2 = `Station to (B)`) %>% 
+    ungroup()
+
+# Standardise station names to match links data
+distances <- bind_rows(dlr_dist_long, station_dist_long) %>% 
+    mutate(station1 = tolower(station1),
+           station2 = tolower(station2),
+           station1 = str_trim(station1),
+           station2 = str_trim(station2),
+           station1 = gsub("edgware", "edgeware", station1),
+           station2 = gsub("edgware", "edgeware", station2),
+           station1 = gsub("regents park", "regent's park", station1),
+           station2 = gsub("regents park", "regent's park", station2),
+           station1 = gsub("piccadilly", "picadilly", station1),
+           station2 = gsub("piccadilly", "picadilly", station2),
+           station1 = gsub("st james park", "st. james's park", station1),
+           station2 = gsub("st james park", "st. james's park", station2),
+           station1 = gsub("kings cross|kings cross st pancras", "king's cross st. pancras", station1),
+           station2 = gsub("kings cross|kings cross st pancras", "king's cross st. pancras", station2),
+           station1 = gsub("earls court", "earl's court", station1),
+           station2 = gsub("earls court", "earl's court", station2),
+           station1 = gsub("highbury & islington", "highbury", station1),
+           station2 = gsub("highbury & islington", "highbury", station2),
+           station1 = gsub("paddington \\(.*\\)", "paddington", station1),
+           station2 = gsub("paddington \\(.*\\)", "paddington", station2),
+           station1 = gsub("st johns wood", "st. john's wood", station1),
+           station2 = gsub("st johns wood", "st. john's wood", station2),
+           station1 = gsub("queens park", "queen's park", station1),
+           station2 = gsub("queens park", "queen's park", station2),
+           station1 = gsub("heathrow 123", "heathrow terminals 1, 2 & 3", station1),
+           station2 = gsub("heathrow 123", "heathrow terminals 1, 2 & 3", station2),
+           station1 = gsub("heathrow four", "heathrow terminal 4", station1),
+           station2 = gsub("heathrow four", "heathrow terminal 4", station2),
+           station1 = gsub("hammersmith \\(.*\\)", "hammersmith", station1),
+           station2 = gsub("hammersmith \\(.*\\)", "hammersmith", station2),
+           station1 = gsub("st pauls", "st. paul's", station1),
+           station2 = gsub("st pauls", "st. paul's", station2))
+```
+
+After ensuring that (wherever possible) all station-station distances were present, these data were joined with the data of the graph structure. 
+
+```{r create_initial_links}
+# Create "reversed" distances to account for possible different combos of stations
+distances <- bind_rows(distances, distances %>% 
+                           select(line, station2, station1, dist) %>% 
+                           rename(station3 = station1,
+                                  station1 = station2) %>% 
+                           rename(station2 = station3))
+
+# Add distances to station linkages data
+links <- links %>% 
+    left_join(distances %>% select(-line), by = c("station1" = "station1",
+                                "station2" = "station2"))
+
+# Clean up missing distances - set to average
+links <- links %>%
+    mutate(dist = round(ifelse(is.na(dist), 
+                               mean(links$dist, na.rm = T), 
+                               dist),
+                        2)) %>% 
+    distinct()
+
+
+# Create "reversed" links to account for bi-directional travel!
+links <- bind_rows(links, links %>% 
+                            select(line, station2, station1, dist) %>% 
+                            rename(station3 = station1,
+                                   station1 = station2) %>% 
+                            rename(station2 = station3))
+
+# Clean up intermediate tables)
+rm(dlr_abbr, dlr_dist, dlr_dist_long, station_dist_long, adjacency, distances,
+   stations_dist)
+```
+
+The `igraph` package was then used to transform the graph structure _data_ in to a graph _object_, retaining the distance between adjacent stations as an edge attribute.
+
+```{r initial_graph_structure}
+# Chop out line and distinct
+graph_data <- links %>% 
+    distinct() %>% 
+    select(-line)
+
+# Make the graph - retain distance as edge attribute but do not weight edges
+tfl_graph <- graph_data %>% 
+    graph_from_data_frame(directed = TRUE)
+
+# Clean up
+rm(graph_data)
+```
+
+## Estimate network routes
+
+In order to model the graph structure more correctly, it was necessary to estimate routes taken through the network based on sample journey data. These routes could then be used to correctly weight edges in the graph based on the number of journeys occurring between nodes (i.e. very popular trips would be highly weighted). This sample of Oyster journeys was provided through the TfL API [@tfl_oyster_2009] and was loaded to `R`, again using the `readr` package.
+
+```{r load_journeys, cache = T}
+# Usage data
+journeys <- read_csv("./data/journeys/Nov09JnyExport.csv",
+                     col_types = cols(downo = col_integer(),
+                                      daytype = col_character(),
+                                      SubSystem = col_character(),
+                                      StartStn = col_character(),
+                                      EndStation = col_character(),
+                                      EntTime = col_integer(),
+                                      EntTimeHHMM = col_character(),
+                                      ExTime = col_integer(),
+                                      EXTimeHHMM = col_character(),
+                                      ZVPPT = col_character(),
+                                      JNYTYP = col_character(),
+                                      DailyCapping = col_character(),
+                                      FFare = col_integer(),
+                                      DFare = col_integer(),
+                                      RouteID = col_character(),
+                                      FinalProduct = col_character()))
+names(journeys) <- names(journeys) %>% tolower()
+
+```
+
+These data contained a sample of _all_ journeys made with an Oyster card in one week of November 2009 (including bus journeys). As such these data were filtered to include only those journeys made on the London Underground, and only those that were fully pay-as-you-go (i.e. not using a daily/weekely/monthly travelcard). 
+
+```{r filter_journeys, cache = TRUE}
+# Filter to just completed tube journeys that were PAYG
+journeys <- journeys %>%
+     filter(subsystem == "LUL",
+            startstn != "Unstarted",
+            endstation != "Unfinished",
+            endstation != "Not Applicable",
+            finalproduct == "PAYG")
+```
+
+Further cleaning and standardisation of station names was performed to ensure that they matched those present in the graph linkage data.
+
+```{r clean_journeys, cache = TRUE}
+# Clean up station names
+journeys <- journeys %>% 
+    # Start station names
+    mutate(start_cln = startstn,
+           start_cln = gsub("Earls Court", "Earl's Court", start_cln),
+           start_cln = gsub("Highbury", "Highbury & Islington", start_cln),
+           start_cln = gsub("St James's Park", "St. James's Park", start_cln),
+           start_cln = gsub("St Pauls", "St. Paul's", start_cln),
+           start_cln = gsub("Kings Cross [MT]", "King's Cross St. Pancras", start_cln),
+           start_cln = gsub("Piccadilly Circus", "Picadilly Circus", start_cln),
+           start_cln = gsub("Hammersmith [DM]", "Hammersmith", start_cln),
+           start_cln = gsub("Bromley By Bow", "Bromley-By-Bow", start_cln),
+           start_cln = gsub("Canary Wharf E2", "Canary Wharf", start_cln),
+           start_cln = gsub("Edgware Road [BM]", "Edgware Road (B)", start_cln),
+           start_cln = gsub("Great Portland St", "Great Portland Street", start_cln),
+           start_cln = gsub("Waterloo JLE", "Waterloo", start_cln),
+           start_cln = gsub("Shepherd's Bush Mkt", "Shepherd's Bush (H)", start_cln),
+           start_cln = gsub("Shepherd's Bush Und", "Shepherd's Bush (C)", start_cln),
+           start_cln = gsub("Harrow On The Hill", "Harrow-on-the-Hill", start_cln),
+           start_cln = gsub("Harrow Wealdstone", "Harrow & Wealdston", start_cln),
+           start_cln = gsub("Heathrow Term [45]", "Heathrow Terminal 4", start_cln),
+           start_cln = gsub("Heathrow Terms 123", "Heathrow Terminals 1, 2 & 3", start_cln),
+           start_cln = gsub("Tottenham Court Rd", "Tottenham Court Road", start_cln),
+           start_cln = gsub("High Street Kens", "High Street Kensington", start_cln),
+           start_cln = gsub("Regents Park", "Regent's Park", start_cln),
+           start_cln = gsub("Queens Park", "Queen's Park", start_cln),
+           start_cln = gsub("St Johns Wood", "St. John's Wood", start_cln),
+           start_cln = gsub("Wood Lane", "White City", start_cln),
+           start_cln = gsub("Totteridge", "Totteridge & Whetstone", start_cln),
+           start_cln = gsub("Watford Met", "Watford", start_cln),
+           start_cln = tolower(start_cln)) %>% 
+    # End station names
+    mutate(end_cln = endstation,
+           end_cln = gsub("Earls Court", "Earl's Court", end_cln),
+           end_cln = gsub("Highbury", "Highbury & Islington", end_cln),
+           end_cln = gsub("St James's Park", "St. James's Park", end_cln),
+           end_cln = gsub("St Pauls", "St. Paul's", end_cln),
+           end_cln = gsub("Kings Cross [MT]", "King's Cross St. Pancras", end_cln),
+           end_cln = gsub("Piccadilly Circus", "Picadilly Circus", end_cln),
+           end_cln = gsub("Hammersmith [DM]", "Hammersmith", end_cln),
+           end_cln = gsub("Bromley By Bow", "Bromley-By-Bow", end_cln),
+           end_cln = gsub("Canary Wharf E2", "Canary Wharf", end_cln),
+           end_cln = gsub("Edgware Road [BM]", "Edgware Road (B)", end_cln),
+           end_cln = gsub("Great Portland St", "Great Portland Street", end_cln),
+           end_cln = gsub("Waterloo JLE", "Waterloo", end_cln),
+           end_cln = gsub("Shepherd's Bush Mkt", "Shepherd's Bush (H)", end_cln),
+           end_cln = gsub("Shepherd's Bush Und", "Shepherd's Bush (C)", end_cln),
+           end_cln = gsub("Harrow On The Hill", "Harrow-on-the-Hill", end_cln),
+           end_cln = gsub("Harrow Wealdstone", "Harrow & Wealdston", end_cln),
+           end_cln = gsub("Heathrow Term [45]", "Heathrow Terminal 4", end_cln),
+           end_cln = gsub("Heathrow Terms 123", "Heathrow Terminals 1, 2 & 3", end_cln),
+           end_cln = gsub("Tottenham Court Rd", "Tottenham Court Road", end_cln),
+           end_cln = gsub("High Street Kens", "High Street Kensington", end_cln),
+           end_cln = gsub("Regents Park", "Regent's Park", end_cln),
+           end_cln = gsub("Queens Park", "Queen's Park", end_cln),
+           end_cln = gsub("St Johns Wood", "St. John's Wood", end_cln),
+           end_cln = gsub("Wood Lane", "White City", end_cln),
+           end_cln = gsub("Totteridge", "Totteridge & Whetstone", end_cln),
+           end_cln = gsub("Watford Met", "Watford", end_cln),
+           end_cln = tolower(end_cln))
+
+# Add on ID-information and zone
+journeys <- journeys %>% 
+    left_join(station_details %>% select(name_cln, id, zone_cln), 
+              by = c("start_cln" = "name_cln")) %>% 
+    rename(start_id = id,
+           start_zone = zone_cln) %>% 
+    left_join(station_details %>% select(name_cln, id, zone_cln),
+              by = c("end_cln" = "name_cln")) %>% 
+    rename(end_id = id,
+           end_zone = zone_cln)
+```
+
+These journey data only provided the start and end point of the journey, and not the route taken. Therefore, it was necessary to approximate the route taken. This was done by applying Dijkstra's [-@dijkstra_note_1959] algorithm to the intial graph structure created in the previous step, weighting the edges by the distance between them in km. Whilst this method did not neccessarily return the _exact_ route taken on each journey, it provided a useful approximation in the absence of such data.
+
+In order to computationally simplify this step, popular (e.g. Oxford Circus to Victoria) journeys in this sample data were de-duplicated, ensuring that a route for a particular journey was only calculated once.
+
+A simple function was defined to apply the algorithm and return the vertex path in an ordered list (where the first element is the starting station, the second element the second station, and so on up to the final station). The `purrr` [@wickham_purrr:_2016] package was then used to apply this function to the set of distinct journeys.
+
+```{r get_routes, cache = T}
+# Dedupe journeys
+distinct_journeys <- journeys %>% select(start_cln, end_cln) %>% distinct()
+
+# Define a function that will calcualte the path and return it as an ordered list
+get_shortest_path <- function(node1, node2, graph = tfl_graph) {
+    path <- shortest_paths(graph, node1, node2, weights = E(graph)$dist)$vpath
+    path <- path[[1]]
+    path <- path %>% as.list() %>% names()
+    return(path)
+}
+
+routes <- distinct_journeys %>% 
+    mutate(path = map2(start_cln, end_cln, get_shortest_path)) %>% 
+    unnest(path)
+
+```
+
+## Add daily trips as graph attribute
+
+The routes calculated with this approach were then used to determine the number of daily trips between all adjacent stations in the graph structure. These daily trips could then be used to weight the edges of the graph. 
+
+For example, a trip from Earl's Court to Pimlico was found to go from Earl's Court through Gloucester Road, South Kensington, Sloane Square, Victoria, to Pimlico. Therefore a single journey from Earl's Court to Pimlico needed to be used to add weight to several edges in the graph structure. 
+
+It was therefore necessary to summarise and aggregate _journeys_ at a _route_ level in order to correctly weight the graph structure to be used for the analysis. Per journey, all pairs of adjacent stations in the path between the start and the end were determined.
+
+```{r summarise_routes}
+# Set up routes per journey   
+routes <- routes %>% 
+    group_by(start_cln, end_cln) %>% 
+    mutate(to = lead(path, 1)) %>% 
+    na.omit() %>% 
+    rename(from = path)
+```
+   
+The number of occurrences for all pairs of adjacent stations was then calculated. As the sample data covered 5% of journeys for a week long period, it was necessary to adjust the total counts to arrive at an approximate value for total daily trips between each pair of adjacent stations.
+
+```{r summarise_route_journeys}    
+# Total up all the routes and summarise trips between stations
+routes <- journeys %>% 
+    select(start_cln, end_cln) %>% 
+    left_join(routes) %>% 
+    group_by(from, to) %>% 
+    summarise(daily_trips = n(),
+              daily_trips = daily_trips / 7,
+              daily_trips = ceiling(daily_trips * 20))
+```
+
+This summary was then joined with the graph structure data to add the daily trips between each pair of adjacent stations. Some pairs of adjacent stations in the graph structure were missing an esimation of the daily trips. This is because they were  infrequently visited, outlying stations and no journeys were found to go through them. Such pairs of stations were set to have a number of trips equal to 25% of the average daily trips on their joining TfL tube line.
+
+```{r add_}
+# Join in with links data
+links <- links %>% 
+    left_join(routes, by = c("station1" = "from",
+                                   "station2" = "to"))
+## Fill in the blanks
+# Find average trips per line
+avg_per_line <- links %>% 
+    group_by(line) %>% 
+    summarise(avg_trips = mean(daily_trips, na.rm = T)*0.25)
+
+# Fill in the blanks with a coalesce
+links <- links %>% left_join(avg_per_line) %>% 
+    mutate(daily_trips = coalesce(daily_trips, avg_trips)) %>% 
+    select(-avg_trips)
+```
+
+## Create final graph structure
+
+The `igraph` package was then used to re-create the graph object from the graph structure data, this time using the daily trips as the edge weight attribute.
+
+```{r create_final_graph}
+# Chop out line and distinct, weight by daily trips
+graph_data <- links %>% 
+    distinct() %>% 
+    rename(weight = daily_trips) %>% 
+    select(-line)
+
+# Make the graph - retain distance as edge attribute but do not weight edges
+tfl_graph <- graph_data %>% 
+    graph_from_data_frame(directed = TRUE)
+
+# Clean up
+rm(graph_data)
+```
+
+## Calculate station importance
+
+In order to determine the importance of a station, several common node properties were calcualted:
+
+* __Degree__ [@opsahl_node_2010] measures the number of edges incident on a node. In this context it can be thought of as, for each station, how many other stations are connected to it directly.
+* __Betweenness__ [@freeman_centrality_1979; @brandes_faster_2001] measures the number of paths going through each node. In this context it can be thought of as how likely it is that travellers will visit or pass through it on other journeys, or how much "connectivity" it provides to the network.
+* __Closeness__ [@freeman_centrality_1979; @newman_scientific_2001] measures how many steps exist between each node and all other nodes in the network. In this context, it can be thought of as how central the station is in the overall network (i.e. does it lie at the end of a long branch, or close to the middle of London).
+* __Eigenvector centrality__ [@bonacich_power_1987] measures the importance of a node based on how important it is, and how important its neighbours are. In this context it can be thought of as a combination of how connected a station is, and how connected its adjacent stations are.
+
+```{r centralities}
+# Degree centrality
+deg_cent <- degree(tfl_graph, loops = TRUE)
+V(tfl_graph)$deg <- deg_cent
+
+# Betweenness centrality
+bet_cent <- betweenness(tfl_graph, directed = T)
+V(tfl_graph)$bet <- bet_cent
+
+# Closeness centrality
+clo_cent <- closeness(tfl_graph)
+V(tfl_graph)$close <- clo_cent
+
+# Eigenvector centrality
+eig_cent <- eigen_centrality(tfl_graph, directed = T, scale = F)
+V(tfl_graph)$eig <- eig_cent$vector
+```
+
+These values were then summarised in to a tidy table of data.
+
+```{r centrality_stats}
+# Convert to data frame of centrality stats
+station_centrality_stats <- data_frame(station = names(V(tfl_graph)),
+                            deg = V(tfl_graph)$deg,
+                            eig = V(tfl_graph)$eig,
+                            bet = V(tfl_graph)$bet,
+                            clo = V(tfl_graph)$close)
+```
+
+# Results
+
+# Conclusions
 
 Some summary.
 
 # Appendices
 
+## Appendix One - Cleaned links data
+
+```{r app1}
+datatable(links, colnames = c("Line", "From", "To", "Distance (km)"))
+```
+
 # References
+
+
