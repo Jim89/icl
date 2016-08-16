@@ -5,7 +5,8 @@ date: '`r Sys.Date()`'
 output:
   html_document:
     code_folding: hide
-    number_sections: no
+    fig_caption: yes
+    keep_md: yes
     theme: readable
     toc: yes
     toc_float: yes
@@ -47,7 +48,7 @@ TODO
 
 TODO: Start out with summary of TfL finances, then move on to brief literature summary of papers reviewed to date.
 
-## Aims, data, and methods
+## Analytical Objective
 
 This work sought to use graph-theoretical [@_graph_2016] methods for modelling the Transport for London ("TfL") Underground network. More explicitly, the aim was to investigate the creation of fare zones using a data-driven approach, and to compare the results of such approaches with the fare zones that exist today. Such comparisons were made in both financial terms, as well as using theoretical measures proposed in earlier work [@yang_defining_2015]. 
 
@@ -57,11 +58,15 @@ TODO: There are a range of community detection algorithms, each with varying per
 
 Typically, However, some of these algorithms have the advantage of being 
 
-### The data
+## Data Used
 
-Open-source [@wikimedia_london_2009] and Tfl-provided [@tfl_oyster_2009; @tfl_distances_2013] data were obtained
+The following data were obtained and used for the purposes of the analysis conducted in this assignment:
 
-# Supported Arguments
+* Transport for London Underground Station adjacency, fare zone and line information available as open-source data hosted on [Wikimedia](https://commons.wikimedia.org/wiki/London_Underground_geographic_maps/CSV#Routes) [-@wikimedia_london_2009]. Referred to as the "raw graph structure data"; 
+* Transport for London Underground inter-station distances [@tfl_distances_2013], made available by Transport for London under a Freedom of Information request in [2013](https://www.whatdotheyknow.com/request/distances_between_adjacent_oyste). Referred to as the "distances data"; and
+* Sample journey data provided by Transport for London [-@tfl_oyster_2009]. The data cover 5% of all Oyster card journeys made in one week in November 2009. The data are available through the Transport for London [API](https://tfl.gov.uk/info-for/open-data-users/our-feeds#on-this-page-6). Referred to as the "journey data".
+
+# Methodology
 
 ```{r setup, echo = FALSE}
 # Load packages
@@ -119,7 +124,7 @@ theme_jim <-  theme(legend.position = "bottom",
 
 ### Load and clean linkage data
 
-The data for the graph structure [@wikimedia_london_2009] and the distances between adjacent stations [@tfl_distances_2013] (in km) were loaded and some basic processing and cleaning (e.g. standardising the names of stations) was performed.
+The raw graph structure [@wikimedia_london_2009] and the distances data [@tfl_distances_2013] were loaded and some basic processing and cleaning (e.g. standardisation of the names of stations) was performed.
 
 ```{r load_and_clean}
 # Load the data ----------------------------------------------------------------
@@ -527,9 +532,12 @@ forceNetwork(Links = d3_data$links, Nodes = d3_data$nodes, Nodesize = "n",
              radiusCalculation = JS("d.nodesize+5"),
              Group = 'group', colourScale = JS(ColourScale),
              zoom = T, opacity = 1, legend = T, width = 800, bounded = F)
+```
 
+```{r include = F}
 figure <- figure + 1
 ```
+
 
 ## Alternative zoning approaches
 
@@ -630,7 +638,8 @@ cosines <- station_importance_zones %>%
                 Zone = zone_cln) %>% 
          select(-station) %>% 
          as.matrix() %>% 
-         lsa::cosine()
+         lsa::cosine() %>% 
+         round(3)
 ```
 
 ### Financial approach
@@ -894,7 +903,9 @@ links %>%
     theme_jim +
     theme(axis.text.y = element_text(size = 10),
           axis.text.x = element_text(size = 10))
+```
 
+```{r include = F}
 figure <- figure + 1
 ```
 
@@ -931,7 +942,9 @@ fare_estimations %>%
     xlab("") + 
     ylab("") +
     theme_jim
+```
 
+```{r include = F}
 figure <- figure + 1
 ```
 
@@ -1009,7 +1022,9 @@ leaflet(width = 800) %>%
                                     "Walktrap", "Spinglass"),
                      overlayGroups = c("Show/hide area labels"),
                      options = layersControlOptions(collapsed = F))
+```
 
+```{r include = F}
 figure <- figure + 1
 ```
 
@@ -1048,7 +1063,9 @@ community_metrics %>%
     xlab("") +
     ylab("") +
     theme_jim
+```
 
+```{r include = F}
 figure <- figure + 1
 ```
 
@@ -1061,8 +1078,6 @@ tukey_den %>% kable(col.names = c("Comparison", "Difference", "p-Value"),
 tukey_sep %>% kable(col.names = c("Comparison", "Difference", "p-Value"),
                 caption = "Table TODO: Tukey HSDs for differences in community separability")
 ```
-
-
 
 # Conclusions
 
@@ -1092,12 +1107,19 @@ The `R` language [@cite_r] was used to perform the data manipulation, modelling 
 app <- app + 1
 ```
 
+<br>
+
 #### Appendix `r app`: _Cleaned graph structure data._
 
 ```{r}
 datatable(links, colnames = c("Line", "From", "To", "Distance (km)", "Daily trips"))
+```
+
+```{r include = F}
 app <- app + 1
 ```
+
+<br>
 
 #### Appendix `r app`: _The geographic distribution of existing and importance-based fare zones. The figure is interactive, select a fare-zoning approach and toggle area names on/off with the buttons provided._
 
@@ -1150,9 +1172,13 @@ leaflet(width = 800) %>%
     ) %>% 
     addLegend("bottomright", pal = pal, values = as.factor(1:10), opacity = 1, 
               title = "Zone/Cluster")
+```
 
+```{r include = F}
 app <- app + 1
 ```
+
+<br>
 
 #### Appendix `r app`: _The list of stations and their associated, importance-based fare zones._
 
@@ -1169,6 +1195,9 @@ station_importance_zones %>%
                            "Eigenvector", "Existing Zone"),
               caption = "Fare zones based on node importance measures")
     
+```
+
+```{r include = F}
 app <- app + 1
 ```
 
