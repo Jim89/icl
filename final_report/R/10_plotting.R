@@ -58,21 +58,27 @@ station_cluster_stats %>%
 
 
 station_centrality_stats %>% 
-    select(station, ends_with("zone")) %>% 
     left_join(station_details %>% 
-                  select(name, 
+                  select(name_cln, 
                          latitude, 
-                         longitude,
-                         zone) %>% 
-                  mutate(name = tolower(name),
-                         zone = ceiling(zone)),
-              by = c("station" = "name")) %>% 
+                         longitude),
+              by = c("station" = "name_cln")) %>% 
     gather(method, value, -station, -latitude, -longitude) %>% 
     ggplot(aes(x = longitude, y = latitude, label = station, colour = as.factor(value))) +
     geom_point(size = 2, alpha = .75) +
     facet_wrap(~method) +
     scale_colour_manual(values = colour) +
     theme_jim
+
+station_centrality_stats %>% 
+    gather(measure, value, -station) %>% 
+    group_by(measure) %>% 
+    mutate(value = (value - mean(value)) / sd(value)) %>% 
+    ungroup() %>% 
+    ggplot(aes(y = value, x = station)) +
+    geom_boxplot() +
+    facet_grid(~measure)
+
 
 
 plot_fares <- function(data) {
@@ -254,7 +260,7 @@ daily_visits <- journeys %>%
     mutate(n = (n - mean(n))/sd(n))
 
 # Tag stations
-d3_data$nodes <- d3_data$nodes %>% left_join(daily_visits)
+d3_data$nodes <- d3_data$nodes %>% left_join(daily_visits, by = "name_cln")
 
 # Set up custom colour scale
 ColourScale <- 'd3.scale.ordinal()
