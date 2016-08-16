@@ -45,3 +45,12 @@ if ( how == "current" ) {
 return(ans)
 }
 
+methods <- c("current", "deg", "eig", "bet", "clo")
+fares <- lapply(methods, calculate_daily_fares) %>% bind_rows()
+
+fares %>% ggplot(aes(x = daytype, y = total_fare_rev_scale)) +
+    geom_bar(aes(fill = how),
+             stat = "identity",
+             position = "dodge") +
+    scale_x_discrete(limits = c("Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"))
+
