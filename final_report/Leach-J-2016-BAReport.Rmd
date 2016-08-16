@@ -44,11 +44,79 @@ TODO
 
 # Introduction
 
-## Background (TODO lit summary)
+## Document Structure
+
+Brief description of document structure
+
+## Background
 
 TODO: Start out with summary of TfL finances, then move on to brief literature summary of papers reviewed to date.
 
+### Transport for London
+
+[Transport for London](https://tfl.gov.uk/) ("TfL") is a government body responsible for almost all roads and buses, many train services, as well as other forms of public transport (including taxis and boats) in the UK capital. 
+
+TODO: some brief network stats (stations, lines, journeys, etc), introduce Oyster
+
+Operating in London, a city of around 8 million people [@census_comparing_2015], TfL also has a huge financial responsibility. In the 2015 financial year, TfL reported total revenue of £5.289 billion, of which £2.559 billion (62%) came directly from ticket fares on the London Underground [@tfl_annual_2015]. 
+
+### TODO some title about "the problem"
+
+It is generally the case that fares are set lower than the costs of running services [@montella_multimodal_2014], thus setting up a requirement for some kind of subsidy. Whilst setting fares lower than costs can be part of a capacity-management strategy [@turvey_simple_1975], this is likely not the case for TfL which has seen demand increase year-on-year. Indeed, based on current figures, it is possible that demand will outstrip capacity within the next fifteen to twenty years [@_tube_2016]. Therefore TfL also receives a significant portion of its yearly income in the form of cash from central government: an estimated 23% came from grants and subsidies in 2015/16 [@tfl_how_2015].
+
+However, as noted by Cervero [-@cervero_flat_1981], subsidisation can lead a sequence of events that, over time, actually reduce revenue. Fares kept low through subsidisation results in fare revenue (relative to costs) decreasing over time. This fact (coupled with social and political pressure to maintain low fares) means that subsidisation continues to be a requirement. 
+
+TfL will loose its operational subsidy from 2019 onwards [@tfl_annual_2015]. Therefore it must seek actions which can dramatically cut its costs, or grow its income. With the noted pressures of demand building, and politicians struggling to maintain price freezes [@_sadiq_2016] this may prove to be a difficult prospect for TfL. 
+
+It must seek new and inventive strategies to maintain the infrastructure that is so critical to the smooth running of the capital whilst operating in an increasingly tight financial situation.
+
+### Pricing public transport
+
+The pricing of public transport has long been studied in the literature. Noting that pricing required a fine balancing of managing demand and capacity, Turvey [-@turvey_simple_1975] found that distance-based pricing was preferable to flat-fares with longer trips requiring larger fares. This principal seems intuitive (and indeed is the basis for the current fare zones employed by TfL) but much work has gone into understanding exactly how fares should be set up. 
+
+Cervero [-@cervero_flat_1981] introduced the concept of 'faireness' in how customers subsidise each other. He found that, under certain models, short-distance customers could end up subsidising those on longer journeys (something he did not regard as fair) whereas other models (such as peak vs. off-peak, coupled with a distance component) were better at eliminating this effect. Cervero also discussed how the fare-model choice was highly dependent on the policy objective of the operator. For example, 'fare comprehension' fares would be greatly different to 'deficit reduction' fares.
+
+Daskin et. al. [-@daskin_quadratic_1988] built on this work, and provide a list of requirements for pricing schemes. They should be:
+
+* sensitive to the many issues involved in transport fares (both from the provider's _and_ the user's perspective);
+* based on appropriate economic, political, and analytical theory;
+* easy for the end-user to understand;
+* feasible to implement; and
+* basic to test and analyse in the presence of alternatives.
+
+Daskin et. al. developed a model to test several alternative pricing models, and found that the results were highly dependent how strongly the price elasticity of demand was related to distance, with zone-based pricing most optimal when elasticity was not strongly related to trip distance. 
+
+Sharaby and Shiftan [-@sharaby_impact_2012] have investigated how fare integration (for example, TfL's Oyster scheme) affected travel behaviour. Fare integration is defined as the ability to "transfer" within the transport system from one form of transport to another (e.g. from bus to train), or between multiple routes in one form of transport (e.g. changing bus routes), without incurring a cost penalty. They found that the use of fare integration, along with a zone-based pricing policy led to increased ticket purchases along with increased customer satisfaction. However, in their study, integrated pricing was also coupled with an overall reduction in fares and therefore potentially suggests that less integration could be beneficial for TfL. 
+ 
+### Zone-based pricing
+
+Zone-based pricing is the idea that a transport area (here, London) is divided in to zones based on some measure, either analytical or political/administrative in nature. Prices are then based on the number of zones crossed in a journey, generally the more zones crossed, the more expensive the journey. 
+
+Montella and D'Acierno [-@montella_multimodal_2014] provide a brief overview how fare zones are created in transport networks and provide a four step process to finalising the fare zones:
+
+> 1. Define initial zones
+2. Optimise of fares across these zones
+3. Evaluate the results
+4. Use the results to find the best zone/fare combination
+
+They note three main types of zones: concentric rings; circular rings/sectors (similar to concentric rings, but with radial "cuts" in the rings to define new zones); and alveolar zones (zones defined across the area, rather than radiating from a centre point). Transport for London uses a concentric rings appraoch, first introduced in the 1980's [@_london_2016]. As noted by Montella and D'Acierno, concentric ring zones are typically used in captial cities where there is a single, central district of increased importance surrounded by areas which decrease in importance the further they are from the centre. Fares are then charged based on how important the zones entered/exited are (i.e. trips to the centre are more expensive). 
+
+Jansson and Angell [@-jansson_is_2012], have shown that highly complex arrangements of fare zones are not practical. They considered the case in Oslo, which previously had eighty-eight fare zones before simplifying down to just ten. They derived forumlae for the optimal price based on the operator's cost(s), the (social and financial) cost(s) associated with extra passengers using the service, and the journey distance. They foundd that the optimal price can be approximated with a zone-based system with travel to more important zones (in their context: '[zones] closer to the city centre') incurring higher fares. 
+
+Jansson and Angell [@-jansson_is_2012] also described several alternative zoning approaches which they investigated. Their results were as follows:
+
+* __Ring zones__ resulted in only small increases in price for travelling between zones, but generated a too high a number of zones in the city centre to compensate for this.
+* __Dense, suburban, and rural zones__ suffered from a similar problem to ring zones: in order to keep "jumps" in fare for crossing zones minimal, too many zones had to be introduced in the city centre.
+* __Large central, small surrounding zones__ was found to be successful, with simplified transit in the both the city centre (where the majority of journeys occurred) and in the suburbs. However, there were then significant jumps in fare for travelling between zones.
+* __Three main zones__ spanning the entire area, whilst _very_ simple, was found to reduce fare revenue so much that extensive subsidisation was required.
+* __Single zone, with distance-based pricing__ was simple to implement and easy for customers to understand, but resulted in high prices for short trips (typically those in the city centre) which would have been unpopular.
+* __Munipal zones__ based on existing political boundaries were also easy for customers to understand, but resulted in some short journeys crossing many zones (and therefore being expensive), and long journeys remaining in just one zone (and therefore being cheap), countering one of the main aims of zone-based prices.
+
+### Analytics for transport
+
 ## Analytical Objective
+
+### TODO describe approach
 
 This work sought to use graph-theoretical [@_graph_2016] methods for modelling the Transport for London ("TfL") Underground network. More explicitly, the aim was to investigate the creation of fare zones using a data-driven approach, and to compare the results of such approaches with the fare zones that exist today. Such comparisons were made in both financial terms, as well as using theoretical measures proposed in earlier work [@yang_defining_2015]. 
 
@@ -57,6 +125,10 @@ TODO: Describe two approaches. Go in to detail and provide the context
 TODO: There are a range of community detection algorithms, each with varying performance characteristics [@lancichinetti_community_2009]. Such algorithms can be used to detect and label groups of "similar" nodes in a graph (with the definition of similarity varying across the algorithms). Typically, 
 
 Typically, However, some of these algorithms have the advantage of being 
+
+### TODO Academic justification
+
+TODO brief review of Yeung et. al (2013) and Shimamoto (2008) for use of graph analysis in transport problems
 
 ## Data Used
 
@@ -122,7 +194,7 @@ theme_jim <-  theme(legend.position = "bottom",
 
 ## Graph creation
 
-### Load and clean linkage data
+### Prepare and clean data
 
 The raw graph structure [@wikimedia_london_2009] and the distances data [@tfl_distances_2013] were loaded and some basic processing and cleaning (e.g. standardisation of the names of stations) was performed.
 
@@ -246,7 +318,7 @@ distances <- bind_rows(dlr_dist_long, station_dist_long) %>%
            station2 = gsub("st pauls", "st. paul's", station2))
 ```
 
-After ensuring that (wherever possible) all station-station distances were present, these data were joined with the data of the graph structure. The graph structure _data_ was then transformed in to a graph _object_, retaining the distance between adjacent stations as an edge attribute.
+After ensuring that (wherever possible) all station-station distances were present, these data were joined with the data of the graph structure. The graph structure _data_ was then transformed in to a graph object, retaining the distance between adjacent stations as an edge attribute.
 
 ```{r create_initial_graph}
 # Create "reversed" distances to account for possible different combos of stations
@@ -294,9 +366,7 @@ tfl_graph <- graph_data %>%
 rm(graph_data)
 ```
 
-### Estimate journey routes
-
-In order to model the graph structure more correctly, it was necessary to estimate routes taken through the network based on sample journey data. These routes could then be used to correctly weight edges in the graph based on the number of journeys occurring between nodes (i.e. very popular trips would be highly weighted). The sample of Oyster journeys [@tfl_oyster_2009] was loaded and filtered. These data contained a sample of _all_ journeys made with an Oyster card in one week of November 2009 (including bus journeys). As such these data were filtered to include only those journeys made on the London Underground, and only those that were fully pay-as-you-go (i.e. not using a daily/weekely/monthly travelcard). 
+The journey data [@tfl_oyster_2009] were also loaded and filtered. These data contained a sample of _all_ journeys made with an Oyster card in one week of November 2009 (including bus journeys). As such these data were filtered to include only those journeys made on the London Underground, and only those that were fully pay-as-you-go (i.e. not using a daily/weekely/monthly travelcard). 
 
 ```{r load_filter_journeys, cache = T}
 # Usage data
@@ -404,9 +474,13 @@ journeys <- journeys %>%
            end_zone = zone_cln)
 ```
 
-The journey data only provided the start and end point of the overall journey, and not the route taken. Therefore, it was necessary to approximate the route. This was done by applying Dijkstra's [-@dijkstra_note_1959] algorithm to the intial graph structure, weighting the edges by the distance between them. Whilst this method did not neccessarily return the _exact_ route taken on each journey, it provided a useful approximation in the absence of such data.
+### Estimate journey routes
 
-In order to computationally simplify this step, popular (e.g. Oxford Circus to Victoria) journeys in this sample data were de-duplicated, ensuring that a route for a particular journey was only calculated once. A simple function was defined to apply the algorithm and return the vertex path in an ordered list (where the first element is the starting station, the second element the second station, and so on up to the final station). 
+In order to model the graph structure with edges weighted by trips between adjacent stations, it was necessary to estimate routes taken through the network based on sample journey data. These routes could then be used to correctly weight edges in the graph based on the number of journeys utilising each edge (e.g. a journey from A-D might use edges A-B, B-C, and C-D and each of these edges should be weighted). 
+
+The journey data only provided the start and end point of the overall journey, and not the route taken. Therefore, it was necessary to determine the route for each journey. This was done by applying Dijkstra's [-@dijkstra_note_1959] algorithm to the intial graph structure, weighting the edges by the distance between adjacent stations found in the distances data. Whilst this method did not neccessarily return the _exact_ route taken by the customer on each journey, it provided a useful approximation in the absence of such data.
+
+Journeys in the journey data were de-duplicated, ensuring that a route for a particular journey was only calculated once. (This was done as many, popular, journeys occurred multiple times, e.g. Oxford Circus to Victoria). A simple function was defined to apply Dijkstra's algorithm and return the route path in an ordered list (with the first element corresponding to the starting station, the second element the second station, and so on up to the final station). 
 
 ```{r get_routes, cache = T}
 # Dedupe journeys
