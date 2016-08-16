@@ -5,6 +5,7 @@ date: '`r Sys.Date()`'
 output:
   html_document:
     code_folding: hide
+    number_sections: no
     theme: readable
     toc: yes
     toc_float: yes
@@ -14,38 +15,35 @@ output:
     toc: yes
 bibliography:
 - refs.bib
-- r.bib
+- extra.bib
 ---
 
 ```{r knitr_setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+knitr::opts_chunk$set(message = FALSE, warning = FALSE,
+                      include = T, eval = T, echo = T)
 figure <- 1
 app <- 1
 ```
 
+`r figure <- 1; app <- 1`
 
-<p style="border:1.5px; border-style:solid; border-color:#000000; padding: 1em;">This `HTML` report is best viewed using a modern web browser such as Mozilla Firefox or Google Chrome. It is also available on the [online repository](https://github.com/Jim89/icl/tree/master/final_report). Printing is possible but will not produce an optimal reading experience. The `R` code used to perform this analysis can be viewed in this report using the _Code_ buttons to toggle code viewing.</p>
+<p style="border:1.5px; border-style:solid; border-color:#000000; padding: 1em;">This `HTML` report should be viewed using a modern web browser such as Mozilla Firefox or Google Chrome. Printing is possible but will not produce an optimal reading experience. The `R` code used to perform this analysis can be viewed in this report using the _Code_ buttons to toggle code viewing.</p>
 
 # Details
 
 * Name: James Leach
 * CID: 01135629
 * Title: The Network Structure of London Underground and Alternative Zoning Approaches
+* GitHub Repository: [jim89/icl/final_report](https://github.com/Jim89/icl/tree/master/final_report)
 * Word Count: TODO
 
 # Abstract
 
 TODO
 
-# Document structure
-
-TODO
-
 # Introduction
 
 ## Background (TODO lit summary)
-
-## Overview of topic
 
 TODO: Start out with summary of TfL finances, then move on to brief literature summary of papers reviewed to date.
 
@@ -63,13 +61,7 @@ Typically, However, some of these algorithms have the advantage of being
 
 Open-source [@wikimedia_london_2009] and Tfl-provided [@tfl_oyster_2009; @tfl_distances_2013] data were obtained
 
-### Method summary
-
-The `R` language [@cite_r] used to clean and process the data. The `igraph` software package [@csardi_igraph:_2015] was used to create and analyse the graph structure. 
-
-# Methods
-
-## Create intial graph structure
+# Supported Arguments
 
 ```{r setup, echo = FALSE}
 # Load packages
@@ -84,6 +76,7 @@ library(purrr)
 library(DT)
 library(networkD3)
 library(leaflet)
+library(knitr)
 
 # Set up colour objects
 bakerloo <- rgb(red = 137, green = 78, blue = 36, maxColorValue = 255)
@@ -122,9 +115,14 @@ theme_jim <-  theme(legend.position = "bottom",
                     panel.border = element_rect(colour = "black", fill = NA))
 ```
 
-The data for the graph structure [@wikimedia_london_2009] and the distances between adjacent stations [@tfl_distances_2013] (in km) were loaded in to `R` using the `readr` [@wickham_readr:_2016] and `readxl` [@wickham_readxl:_2016] packages.
+## Graph creation
 
-```{r load_prep}
+### Load and clean linkage data
+
+The data for the graph structure [@wikimedia_london_2009] and the distances between adjacent stations [@tfl_distances_2013] (in km) were loaded and some basic processing and cleaning (e.g. standardising the names of stations) was performed.
+
+```{r load_and_clean}
+# Load the data ----------------------------------------------------------------
 ### Graph structure
 # Basic linkage data from Wiki
 adjacency <- read_csv("./data/geo/adjacency.csv",
@@ -159,11 +157,9 @@ stations_dist <- read_excel("./data/distances/formatted/Inter Station Train Time
 
 # DLR distance matrix
 dlr_dist <- read_excel("./data/distances/formatted/Distance Martix DLR 2013_CLN.xlsx")
-```
 
-Some basic processing and cleaning (e.g. standardising the names of stations) was performed using the `dplyr` [@wickham_dplyr:_2016], `stringr` [@wickham_stringr:_2015] and `tidyr` [@wickham_tidyr:_2016] packages.
 
-```{r clean_links_and_distances}
+# Clean the data ----------------------------------------------------------------
 # Set up clean lower-case name, and rounded zone-number in station details
 station_details <- station_details %>% mutate(name_cln = tolower(name),
                                               zone_cln = ceiling(zone))
@@ -245,9 +241,9 @@ distances <- bind_rows(dlr_dist_long, station_dist_long) %>%
            station2 = gsub("st pauls", "st. paul's", station2))
 ```
 
-After ensuring that (wherever possible) all station-station distances were present, these data were joined with the data of the graph structure. 
+After ensuring that (wherever possible) all station-station distances were present, these data were joined with the data of the graph structure. The graph structure _data_ was then transformed in to a graph _object_, retaining the distance between adjacent stations as an edge attribute.
 
-```{r create_initial_links}
+```{r create_initial_graph}
 # Create "reversed" distances to account for possible different combos of stations
 distances <- bind_rows(distances, distances %>% 
                            select(line, station2, station1, dist) %>% 
@@ -279,11 +275,7 @@ links <- bind_rows(links, links %>%
 # Clean up intermediate tables)
 rm(dlr_abbr, dlr_dist, dlr_dist_long, station_dist_long, adjacency, distances,
    stations_dist)
-```
 
-The `igraph` package was then used to transform the graph structure _data_ in to a graph _object_, retaining the distance between adjacent stations as an edge attribute.
-
-```{r initial_graph_structure}
 # Chop out line and distinct
 graph_data <- links %>% 
     distinct() %>% 
@@ -297,11 +289,11 @@ tfl_graph <- graph_data %>%
 rm(graph_data)
 ```
 
-## Estimate journey routes
+### Estimate journey routes
 
-In order to model the graph structure more correctly, it was necessary to estimate routes taken through the network based on sample journey data. These routes could then be used to correctly weight edges in the graph based on the number of journeys occurring between nodes (i.e. very popular trips would be highly weighted). This sample of Oyster journeys was provided through the TfL API [@tfl_oyster_2009] and was loaded to `R`, again using the `readr` package.
+In order to model the graph structure more correctly, it was necessary to estimate routes taken through the network based on sample journey data. These routes could then be used to correctly weight edges in the graph based on the number of journeys occurring between nodes (i.e. very popular trips would be highly weighted). The sample of Oyster journeys [@tfl_oyster_2009] was loaded and filtered. These data contained a sample of _all_ journeys made with an Oyster card in one week of November 2009 (including bus journeys). As such these data were filtered to include only those journeys made on the London Underground, and only those that were fully pay-as-you-go (i.e. not using a daily/weekely/monthly travelcard). 
 
-```{r load_journeys, cache = T}
+```{r load_filter_journeys, cache = T}
 # Usage data
 journeys <- read_csv("./data/journeys/Nov09JnyExport.csv",
                      col_types = cols(downo = col_integer(),
@@ -322,11 +314,6 @@ journeys <- read_csv("./data/journeys/Nov09JnyExport.csv",
                                       FinalProduct = col_character()))
 names(journeys) <- names(journeys) %>% tolower()
 
-```
-
-These data contained a sample of _all_ journeys made with an Oyster card in one week of November 2009 (including bus journeys). As such these data were filtered to include only those journeys made on the London Underground, and only those that were fully pay-as-you-go (i.e. not using a daily/weekely/monthly travelcard). 
-
-```{r filter_journeys, cache = TRUE}
 # Filter to just completed tube journeys that were PAYG
 journeys <- journeys %>%
      filter(subsystem == "LUL",
@@ -336,7 +323,7 @@ journeys <- journeys %>%
             finalproduct == "PAYG")
 ```
 
-Further cleaning and standardisation of station names was performed to ensure that they matched those present in the graph linkage data.
+Further cleaning and standardisation of station names was performed to ensure that they matched those present in the graph structure data.
 
 ```{r clean_journeys, cache = TRUE}
 # Clean up station names
@@ -412,11 +399,9 @@ journeys <- journeys %>%
            end_zone = zone_cln)
 ```
 
-These journey data only provided the start and end point of the journey, and not the route taken. Therefore, it was necessary to approximate the route taken. This was done by applying Dijkstra's [-@dijkstra_note_1959] algorithm to the intial graph structure created in the previous step, weighting the edges by the distance between them in km. Whilst this method did not neccessarily return the _exact_ route taken on each journey, it provided a useful approximation in the absence of such data.
+The journey data only provided the start and end point of the overall journey, and not the route taken. Therefore, it was necessary to approximate the route. This was done by applying Dijkstra's [-@dijkstra_note_1959] algorithm to the intial graph structure, weighting the edges by the distance between them. Whilst this method did not neccessarily return the _exact_ route taken on each journey, it provided a useful approximation in the absence of such data.
 
-In order to computationally simplify this step, popular (e.g. Oxford Circus to Victoria) journeys in this sample data were de-duplicated, ensuring that a route for a particular journey was only calculated once.
-
-A simple function was defined to apply the algorithm and return the vertex path in an ordered list (where the first element is the starting station, the second element the second station, and so on up to the final station). The `purrr` [@wickham_purrr:_2016] package was then used to apply this function to the set of distinct journeys.
+In order to computationally simplify this step, popular (e.g. Oxford Circus to Victoria) journeys in this sample data were de-duplicated, ensuring that a route for a particular journey was only calculated once. A simple function was defined to apply the algorithm and return the vertex path in an ordered list (where the first element is the starting station, the second element the second station, and so on up to the final station). 
 
 ```{r get_routes, cache = T}
 # Dedupe journeys
@@ -436,11 +421,11 @@ routes <- distinct_journeys %>%
 
 ```
 
-## Add trips as graph attribute
+### Aggregate routes
 
-The routes calculated with this approach were then used to determine the number of daily trips between all adjacent stations in the graph structure. These daily trips could then be used to weight the edges of the graph. 
+The routes calculated with this approach were then used to determine the number of daily trips between all adjacent stations in the graph. These daily trips were then to be used to weight the edges of the graph. 
 
-For example, a trip from Earl's Court to Pimlico was found to go from Earl's Court through Gloucester Road, South Kensington, Sloane Square, Victoria, to Pimlico. Therefore a single journey from Earl's Court to Pimlico needed to be used to add weight to several edges in the graph structure. 
+For example, the route for a journey from Earl's Court to Pimlico was found to go from Earl's Court through Gloucester Road, South Kensington, Sloane Square, and Victoria to Pimlico. Therefore a single journey from Earl's Court to Pimlico needed to be used to add weight to several edges in the graph. 
 
 It was therefore necessary to summarise and aggregate _journeys_ at a _route_ level in order to correctly weight the graph structure to be used for the analysis. Per journey, all pairs of adjacent stations in the path between the start and the end were determined.
 
@@ -466,7 +451,7 @@ routes <- journeys %>%
               daily_trips = ceiling(daily_trips * 20))
 ```
 
-This summary was then joined with the graph structure data to add the daily trips between each pair of adjacent stations. Some pairs of adjacent stations in the graph structure were missing an esimation of the daily trips. This is because they were  infrequently visited, outlying stations and no journeys were found to go through them. Such pairs of stations were set to have a number of trips equal to 25% of the average daily trips on their joining TfL tube line.
+This summary was then joined with the graph structure data to add the daily trips between each pair of adjacent stations. Some pairs of adjacent stations in the graph structure were missing an esimation of the daily trips. This is because they were infrequently visited, outlying stations and no journeys were found to go through them. Such pairs of stations were set to have a number of trips equal to 25% of the average daily trips on their joining TfL tube line.
 
 ```{r add_}
 # Join in with links data
@@ -485,9 +470,9 @@ links <- links %>% left_join(avg_per_line) %>%
     select(-avg_trips)
 ```
 
-## Create final graph structure
+### Create final graph structure
 
-The `igraph` package was then used to re-create the graph object from the graph structure data, this time using the daily trips as the edge weight attribute.
+The graph object was then re-created, this time using the daily trips between adjacent stations as the edge weight attribute. A visualisation of the resulting graph structure is presented in figure `r figure`.
 
 ```{r create_final_graph}
 # Chop out line and distinct, weight by daily trips
@@ -504,9 +489,53 @@ tfl_graph <- graph_data %>%
 rm(graph_data)
 ```
 
-A visualisation of the resulting graph structure is presented in the results section.
+#### Figure `r figure`: TfL Underground graph structure
 
-## Calculate station importance
+_The graph structure of the TfL Underground in a force directed [@kobourov_spring_2012] layout. Nodes are sized based on the number of visits per day and coloured based on the fare zone which they are assigned to. (Note: this figure is interactive)._
+
+```{r show_graph}
+d3_data <- igraph_to_networkD3(tfl_graph, group = rep(1, length(V(tfl_graph))))
+d3_data$nodes <- d3_data$nodes %>% 
+    left_join(station_details %>% select(name, name_cln, zone_cln),
+              by = c("name" = "name_cln")) %>% 
+    select(name, name.y, zone_cln) %>% 
+    rename(name = name.y,
+           name_cln = name,
+           group = zone_cln)
+
+# Get estimated visits
+daily_visits <- journeys %>% 
+    select(start_cln, end_cln) %>% 
+    gather(x, name_cln) %>% 
+    count(name_cln) %>% 
+    mutate(n = n/7,
+           n = n*20) %>% 
+    ungroup() %>% 
+    mutate(n = (n - mean(n))/sd(n))
+
+# Tag stations
+d3_data$nodes <- d3_data$nodes %>% left_join(daily_visits, by = "name_cln")
+
+# Set up custom colour scale
+ColourScale <- 'd3.scale.ordinal()
+            .domain(["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"])
+           .range(["#1B9E77", "#D95F02", "#7570B3", "#E7298A", "#66A61E", "#E6AB02", "#A6761D", "#666666", "#6a3d9a", "#c51b7d"]);'
+
+# Make the plot
+forceNetwork(Links = d3_data$links, Nodes = d3_data$nodes, Nodesize = "n",
+             Source = 'source', Target = 'target', NodeID = 'name', 
+             radiusCalculation = JS("d.nodesize+5"),
+             Group = 'group', colourScale = JS(ColourScale),
+             zoom = T, opacity = 1, legend = T, width = 800, bounded = F)
+
+figure <- figure + 1
+```
+
+## Alternative zoning approaches
+
+### Importance-based zones
+
+#### Station importance
 
 In order to determine the importance of a station, several common node properties were calcualted:
 
@@ -529,11 +558,11 @@ clo_cent <- closeness(tfl_graph)
 V(tfl_graph)$close <- clo_cent
 
 # Eigenvector centrality
-eig_cent <- eigen_centrality(tfl_graph, directed = T, scale = F)
+eig_cent <- eigen_centrality(tfl_graph, directed = T, scale = T)
 V(tfl_graph)$eig <- eig_cent$vector
 ```
 
-## Define importance-based zones
+#### Define zones
 
 In order to define fare zones based on station importance, it was necessary to group stations together. To make these zones more comparable to their real-life equivalents a simple decile rank was applied to each measure of station importance. 
 
@@ -555,9 +584,58 @@ station_importance_zones <- station_centrality_stats %>%
 
 The real life zones were not equally distributed (i.e. there were more zone 1 stations thatn zone 10). This was not the case for the decile-ranked, importance-based zones, representing a weakness of this approach.
 
-## Compare importance-zones to reality
+### Graph-community zones
 
-Using the journeys data, it was possible to calcualte the total fares charged to Oyster pay-as-you-go customers on each day of the week.
+#### Discovering communities
+
+In order to define zones based on communities of stations in the graph, three alternative algorithms were used:
+
+* __Walktrap__ [@pons_computing_2005]. This algorithm detects communities by performing random walks on the graph. The algorithm records the nodes visited in each walk and uses the results to partition the graph in to communities of nodes that frequently occurred in the same walk. In this context, such communities can be imagined to be groups of stations located in close proximity, or on the same train line.
+* __Edge betweenness__ [@newman_finding_2004]. This algorithm detects communities based on the _betweeness_ metric of the edges in the graph. The algorithm iteratively removes the edge with the largest betweeness value, dividing the graph into groups and ultimately into invididual nodes. Recording this process, it uses the results to construct communities. In this context, such communities will be defined by stations which serve as "hubs" connecting outlying branches of the graph to the more highly connected centre.
+* __Spinglass__ [@reichardt_statistical_2006]. This algorithm uses a more abstract approach to community detection. Briefly, it uses ideas from statistical physics/mechanics to identify groups of nodes which are in some way "similar". In this context it is difficult to suggest a practical intuition which can be used to describe the algorithmic approach. 
+
+```{r graph_communities}
+# Hierarchical methods - use cut_at to chop up
+# Use distances to help create clusters
+clust_w <- cluster_walktrap(tfl_graph, steps = 10, weights = E(tfl_graph)$dist)
+clust_eb <- cluster_edge_betweenness(tfl_graph, directed = T, weights = E(tfl_graph)$dist)
+# n.b. spins sets number of clusters
+clust_sg <- cluster_spinglass(tfl_graph, spins = 10, weights = E(tfl_graph)$dist)
+```
+
+As both the _walktrap_ and _edge betweenness_ algorithms are hierarchical, the results were used to create a specified number of communities. The _spinglass_ algorithm has a parameter which was used to pre-specify the number of communities. In each case, ten station communities were specified in order to draw comparisons with the existing ten fare zones. 
+
+```{r station_cluster_stats}
+# Create dataframe of results
+station_cluster_stats <- data_frame(station = names(V(tfl_graph)),
+                                   eb = cut_at(clust_eb, no = 10),
+                                   walk = cut_at(clust_w, no = 10),
+                                   sg = membership(clust_sg))
+```
+
+## Comparisons with reality
+
+### Basic similarity measures
+
+Salton's cosine similarity[-@Salton:1986:IMI:576628] measure was used to compare the differences in importance-based fare zones. Such comparisons were made both between each zoning approach, and with the existing fare-zones.
+
+```{r cosine}
+cosines <- station_importance_zones %>% 
+         left_join(station_details %>% select(name_cln, zone_cln),
+                    by = c("station" = "name_cln")) %>% 
+         rename(Betweenness = bet,
+                Closeness = clo,
+                Degree = deg,
+                Eigenvector = eig,
+                Zone = zone_cln) %>% 
+         select(-station) %>% 
+         as.matrix() %>% 
+         lsa::cosine()
+```
+
+### Financial approach
+
+Using the journeys data, it was possible to calculate the total fares charged to Oyster pay-as-you-go customers on each day of the week.
 
 ```{r journey_summary}
 # Group and total
@@ -655,36 +733,26 @@ methods <- c("current", "deg", "eig", "bet", "clo")
 fare_estimations <- lapply(methods, calculate_daily_fares) %>% bind_rows()
 ```
 
+The differences in estimated fares were also compared statistically using Tukey's [-@tukey_comparing_1949] "Honest Significant Difference" method.
+
+```{r hsd}
+fit <- aov(total_fare_rev_scale ~ how, data = fare_estimations)
+tukey <- TukeyHSD(fit, conf.level = 0.95)
+tukey <- broom::tidy(tukey) %>% 
+            select(-term, -conf.low, -conf.high) %>% 
+            mutate(comparison = gsub("clo", "Closeness", comparison),
+                   comparison = gsub("bet", "Betweenness", comparison),
+                   comparison = gsub("eig", "Eigenvector", comparison),
+                   comparison = gsub("deg", "Degree", comparison),
+                   comparison = gsub("current", "Existing Zones", comparison),
+                   estimate = round(estimate, 0),
+                   adj.p.value = round(adj.p.value, 3))
+```
+
+
 The results of this analysis are presented in the results section.
 
-## Calculate graph-community zones
-
-In order to define zones based on communities of stations in the graph, three alternative algorithms were used:
-
-* __Walktrap__ [@pons_computing_2005]. This algorithm detects communities by performing random walks on the graph. The algorithm records the nodes visited in each walk and uses the results to partition the graph in to communities of nodes that frequently occurred in the same walk. In this context, such communities can be imagined to be groups of stations located in close proximity, or on the same train line.
-* __Edge betweenness__ [@newman_finding_2004]. This algorithm detects communities based on the _betweeness_ metric of the edges in the graph. The algorithm iteratively removes the edge with the largest betweeness value, dividing the graph into groups and ultimately into invididual nodes. Recording this process, it uses the results to construct communities. In this context, such communities will be defined by stations which serve as "hubs" connecting outlying branches of the graph to the more highly connected centre.
-* __Spinglass__ [@reichardt_statistical_2006]. This algorithm uses a more abstract approach to community detection. Briefly, it uses ideas from statistical physics/mechanics to identify groups of nodes which are in some way "similar". In this context it is difficult to suggest a practical intuition which can be used to describe the algorithmic approach. 
-
-```{r graph_communities}
-# Hierarchical methods - use cut_at to chop up
-# Use distances to help create clusters
-clust_w <- cluster_walktrap(tfl_graph, steps = 10, weights = E(tfl_graph)$dist)
-clust_eb <- cluster_edge_betweenness(tfl_graph, directed = T, weights = E(tfl_graph)$dist)
-# n.b. spins sets number of clusters
-clust_sg <- cluster_spinglass(tfl_graph, spins = 10, weights = E(tfl_graph)$dist)
-```
-
-As both the _walktrap_ and _edge betweenness_ algorithms are hierarchical, the results were used to create a specified number of communities. The _spinglass_ algorithm has a parameter which was used to pre-specify the number of communities. In each case, ten station communities were specified in order to draw comparisons with the existing ten fare zones. 
-
-```{r station_cluster_stats}
-# Create dataframe of results
-station_cluster_stats <- data_frame(station = names(V(tfl_graph)),
-                                   eb = cut_at(clust_eb, no = 10),
-                                   walk = cut_at(clust_w, no = 10),
-                                   sg = membership(clust_sg))
-```
-
-## Compare graph communities to fare zones
+### Graph theoretical approach
 
 As the station communities were more arbitrarily defined than the importance-based zones, comparisons of estimated fares were not made. Instead, metrics suggested by 
 Yang and Leskovec [-@yang_defining_2015] were used to measure the "goodness" of the detected communities. The same metrics were calculated for the existing fare zones and the results compared.
@@ -706,12 +774,12 @@ Where $n_S$ is the number of nodes _within_ the community, $m_S$ the number of e
 These metrics were calculated for each of the communities detected using the three algorithms mentioned above, as well as for the existing fare zones.
 
 ```{r community_metrics}
-get_cluster_stats <- function(how) {
+get_cluster_stats <- function(how, data) {
 # Function argument 'how' defines which community detection method (inc. current zone)
 # should be used 
     
 # Take created "zones" (clusters) and join in actual zones, gather into long table
-    tmp_zones <- station_cluster_stats %>% 
+    tmp_zones <- data %>% 
         left_join(station_details %>% select(name_cln, zone_cln),
                   by = c("station" = "name_cln")) %>% 
         gather(method, value, -station) %>% 
@@ -743,64 +811,50 @@ get_cluster_stats <- function(how) {
     
     # Perform summaries
     zone_summary <- zone_summary %>% 
-        mutate(separability = ms / cs,
-               density = ms / (n*(n - 1) / 2),
+        mutate(Separability = ms / cs,
+               Density = ms / (n*(n - 1) / 2),
                method = how)
     
     return(zone_summary)
 }
 
 methods <- c("zone_cln", "eb", "walk", "sg")
-community_metrics <- lapply(methods, get_cluster_stats) %>% bind_rows()
+community_metrics <- lapply(methods, get_cluster_stats, 
+                            data = station_cluster_stats) %>% bind_rows()
+```
+
+The statistical differences in these metrics were calculated for each of the community detection algorithms using Tukey's Honest Significant Differences.
+
+```{r tukey_dens_sep}
+fit_sep <- aov(Separability ~ method, community_metrics)
+tukey_sep <- TukeyHSD(fit_sep, conf.level = .95) %>% 
+             broom::tidy() %>% 
+             select(-term, -conf.low, -conf.high) %>% 
+             mutate(comparison = gsub("eb", "Edge betweenness", comparison),
+                    comparison = gsub("walk", "Walktrap", comparison),
+                    comparison = gsub("sg", "Spinglass", comparison),
+                    comparison = gsub("zone_cln", "Existing Zones", comparison),
+                    estimate = round(estimate, 3),
+                    adj.p.value = round(adj.p.value, 4))
+
+fit_den <- aov(Density ~ method, community_metrics)
+tukey_den <- TukeyHSD(fit_den, conf.level = .95) %>% 
+             broom::tidy() %>% 
+             select(-term, -conf.low, -conf.high) %>% 
+             mutate(comparison = gsub("eb", "Edge betweenness", comparison),
+                    comparison = gsub("walk", "Walktrap", comparison),
+                    comparison = gsub("sg", "Spinglass", comparison),
+                    comparison = gsub("zone_cln", "Existing Zones", comparison),
+                    estimate = round(estimate, 3),
+                    adj.p.value = round(adj.p.value, 4))
+
 ```
 
 # Results
 
-#### Figure `r figure`: TfL Underground graph structure
+## Importance-based zones
 
-_The graph structure of the TfL Underground in a force directed [@kobourov_spring_2012] layout. Nodes are sized based on the number of visits per day and coloured based on the fare zone which they are assigned to._
-
-```{r show_graph}
-d3_data <- igraph_to_networkD3(tfl_graph, group = rep(1, length(V(tfl_graph))))
-d3_data$nodes <- d3_data$nodes %>% 
-    left_join(station_details %>% select(name, name_cln, zone_cln),
-              by = c("name" = "name_cln")) %>% 
-    select(name, name.y, zone_cln) %>% 
-    rename(name = name.y,
-           name_cln = name,
-           group = zone_cln)
-
-# Get estimated visits
-daily_visits <- journeys %>% 
-    select(start_cln, end_cln) %>% 
-    gather(x, name_cln) %>% 
-    count(name_cln) %>% 
-    mutate(n = n/7,
-           n = n*20) %>% 
-    ungroup() %>% 
-    mutate(n = (n - mean(n))/sd(n))
-
-# Tag stations
-d3_data$nodes <- d3_data$nodes %>% left_join(daily_visits, by = "name_cln")
-
-# Set up custom colour scale
-ColourScale <- 'd3.scale.ordinal()
-            .domain(["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"])
-           .range(["#1B9E77", "#D95F02", "#7570B3", "#E7298A", "#66A61E", "#E6AB02", "#A6761D", "#666666", "#6a3d9a", "#c51b7d"]);'
-
-# Make the plot
-forceNetwork(Links = d3_data$links, Nodes = d3_data$nodes, Nodesize = "n",
-             Source = 'source', Target = 'target', NodeID = 'name', 
-             radiusCalculation = JS("d.nodesize+5"),
-             Group = 'group', colourScale = JS(ColourScale),
-             zoom = T, opacity = 1, legend = T, width = 800, bounded = F)
-
-figure <- figure + 1
-```
-
-## Station importance
-
-Station importance was found to vary substantially based on the metric used to calculate it. Figure `r figure` shows the spread of (normalised) station importance for each line in the TfL underground for each of the importance metrics used. The values are substantially different, indicating that the different approaches may give substantially different results when compared analytically.
+Station importance was found to vary substantially based on the metric used to calculate it. Figure `r figure` shows (normalised) station importance for each line in the TfL underground for each of the importance metrics used. Intuitively, in this setting, the four methods each measure different aspects of the TfL network. Closeness and eigenvector centrality measure how central a the proximity to central London and importance, respectively. Degree centrality could be imagined to measure the "usefulness" of each station, independant of the other stations it was connected to (with usefulness being directly proportional to the number of adjacent stations). Betweeness measures how much each station helps to connect the overall network, and could be used to identify critical points in the network. The analytical differences between these zones and the existing fare zones are presented below.
 
 #### Figure `r figure`: Normalised station importance metrics
 
@@ -838,12 +892,23 @@ links %>%
     guides(fill = FALSE,
            colour = FALSE) +
     theme_jim +
-    theme(axis.text.y = element_text(size = 12))
+    theme(axis.text.y = element_text(size = 10),
+          axis.text.x = element_text(size = 10))
 
 figure <- figure + 1
 ```
 
-It is the case that the importance-based zones were not geographically distinct from one another (appendix TODO) in the same way as the existing fare zones are. Furthermore, given the unequal distribution of stations to fare-zones in the existing fare zone model (when compared to the decile-rank approach taken for the importance-based zones), straightforward station-to-station comparisons of similarity in zone(s) were also innapropriate (appendix TODO). 
+### Basic similarity
+
+The importance-based zones did not appear to be geographically distinct from one another (appendix TODO) in the same way as the existing fare zones. However, when measured with Salton's [-@Salton:1986:IMI:576628] cosine measure, the zones defined using station importance metrics showed a high similarity with each other, and with the exising fare zones. This was slightly surprising given the forced, equal distribution of the number of stations in each importance-based zone (not the case for the existing zones).
+
+```{r show_cosine}
+cosines %>% kable(caption = "Cosine similarity measures between zones defined using importance-based metrics and the existing TfL payment zones.")
+```
+
+Eigenvector centrality-based zoning produced the most similar results to the existing zones, and closeness-based zones also showed a high similarity with the existing zones. This was an intuitive result: the current fare zones are defined in some way based on a station's proximity to central London (similar to closeness) and it's importance in daily London life (similar to Eigenvector centrality). It therefore made sense that these two measures showed the most similarity with the existing model.
+
+### Financial differences
 
 Using the approach outlined previously, daily fares were estimated using each of the three importance-based zoning approaches and compared with the daily fares using the current fare-zoning method. The results of this comparison are presented in figure `r figure`.
 
@@ -874,10 +939,128 @@ The alternative approaches consistently out-performed the current zoning approac
 
 Zones created through closeness measures most closely matched the figures for the current zones, which was to be expected given the similarities in how they are defined (based on distance to all other stations). The increase in fares based on closeness zones relative to the current zone model was probably due to the equal distribution of stations to zones enforced by the decile-rank approach to creating the zones. 
 
-Betweenness and degree centrality-based zones were found to perform "best", i.e. generated the highest fares. This is due to the fact that many of the stations have large differences in zone when moving from the importance-based to the current fare zone models (appendix TODO). For example, Regent's Park station is currently in fare zone 1 due to it's proximity to central London. However, as it is not a well-visited station on one of the less-busy lines (the Bakerloo line), it is placed in to zone 10 for by betweenness-based zoning. 
+Betweenness and degree centrality-based zones were found to perform "best", i.e. generated the highest fares. This is due to the fact that many of the stations have large differences in zone when moving from the importance-based to the current fare zone models (appendix TODO). For example, Regent's Park station is currently in fare zone 1 due to it's proximity to central London. However, as it is not a well-visited station on one of the less-busy lines (the Bakerloo line), it is placed in to zone 10 for by betweenness-based zoning. Eigenvector centrality-based zoning also out-performed the current fare zones and was found to produce results most similar to the existing zones. 
 
-These results show that different approaches to pricing and creating fare-zones could have a significant impact on TfL's top line.
+However, none of the differences in estimated fare were found to be statistically significant as measured by Tukey's Honest Significant Differences [-@tukey_comparing_1949] (table TODO).
 
+```{r show_tukey}
+tukey %>% kable(col.names = c("Comparison", "Fare difference (£)", "p-Value"),
+                caption = "Table TODO: Tukey HSDs for financial differences in zoning approach")
+```
+
+## Graph-community zones
+
+### Geographical distribution
+
+The graph communities discovered by the three algorithms employed generally showed distinct geographical separation from one another (figure `r figure`).
+
+
+#### Figure `r figure`: The geographic distribution of existing and graph-community zones. 
+
+_The figure is interactive, select a community detection algorithm and toggle area names on/off with the buttons provided._
+
+```{r show_graph_comms}
+# Create plotting data
+clusters <- station_cluster_stats %>% 
+    left_join(station_details %>% 
+                  select(name_cln, 
+                         latitude, 
+                         longitude,
+                         zone_cln,
+                         name),
+              by = c("station" = "name_cln")) %>% 
+    select(name, latitude, longitude, eb, walk, sg, zone_cln) %>% 
+    gather(method, value, -name, -latitude, -longitude) %>% 
+    rename(lat = latitude,
+           lon = longitude) %>% 
+    mutate(value = as.factor(value),
+           popup = paste(name, "- Zone/Cluster", value))
+
+# Set up colours
+pal <- colorFactor(c(RColorBrewer::brewer.pal(8, "Dark2"), "#6a3d9a", "#c51b7d"), 
+                   domain = levels(clusters$value))
+
+# Make the map
+leaflet(width = 800) %>% 
+    # Add map tiles
+    addProviderTiles("CartoDB.PositronNoLabels", group = "No area labels") %>% 
+    addProviderTiles("CartoDB.Positron", group = "Show/hide area labels") %>% 
+    # Add zones
+    addCircles(data = clusters %>% filter(method == "zone_cln"), radius = 250, 
+               stroke = F, fillColor = ~pal(value), fillOpacity = 1, 
+               group = "Zones (default)", popup = ~popup) %>% 
+    # Add edge-bet clusters
+    addCircles(data = clusters %>% filter(method == "eb"), radius = 250,
+               stroke = F, fillColor = ~pal(value), fillOpacity = 1,
+               group = "Edge Betweenness", popup = ~popup) %>%
+    # Add walktrap clusters
+    addCircles(data = clusters %>% filter(method == "walk"), radius = 250,
+               stroke = F, fillColor = ~pal(value), fillOpacity = 1,
+               group = "Walktrap", popup = ~popup) %>%
+    # Add spinglass clusters
+    addCircles(data = clusters %>% filter(method == "sg"), radius = 250,
+               stroke = F, fillColor = ~pal(value), fillOpacity = 1,
+               group = "Spinglass", popup = ~popup) %>%
+    # Add a zone legend
+    addLegend("bottomright", pal = pal, values = as.factor(1:10), opacity = 1, 
+              title = "Zone/Cluster") %>% 
+    # Add layers control box
+    addLayersControl(baseGroups = c("Zones (default)", "Edge Betweenness", 
+                                    "Walktrap", "Spinglass"),
+                     overlayGroups = c("Show/hide area labels"),
+                     options = layersControlOptions(collapsed = F))
+
+figure <- figure + 1
+```
+
+The geographical distribution of communities defined using edge betweenness show the most similarity with the exising zones. There is a clear central zone, surrounded by radial/branch zones which could be broken down by geographic region or using a similar approach to that used for London postcodes. 
+
+The walktrap algorithm did not performed well in this setting: there is little intuitive distinction between communities when viewed geographically.
+
+Whilst not as geographically distinct as the edge-betweenness communities, the spinglass algorithm generated generated clear communities which could be used to create fare zones relatively simply. 
+
+### Theoretical properties
+
+The density and separability [@yang_defining_2015] metrics for each approach (along with the existing zones) are showm in figure TODO.
+
+Discounting the walktrap algorithm (based on its poor performance when viewing the results geographically), the best approach appears to be the edge betweenness algorithm. It generates dense communities which are separable from each other. Spinglass also performed well, although the communities it detected were less dense and less separable thant those for edge-betweenness.
+
+Both edge betweenness and spinglass generated communities which were more dense and more separable than the existing fare zones. The differences in density were not statistically significant when measured using Tukey's Honest Significant Differences (tables TODO and TODO), however edge betweenness produced significantly more separable clusters than the current zones. 
+
+This results was not, however, particularly surprising as the existing zones were generated in such a different manner than the graph communities. 
+
+#### Figure `r figure`: Community density and separability for communities detected with the edge-betweeness, walktrap, and spinglass algorithms. Also shown are the density and separability values for the existing fare zones.
+
+```{r dens_sep, out.width = 800}
+community_metrics %>% 
+    mutate(Density = ifelse(is.na(Density), 0, Density)) %>% 
+    select(zone1, Separability, Density, method) %>% 
+    gather(measure, value, -zone1, -method) %>% 
+    mutate(method = gsub("zone_cln", "Zones", method),
+           method = gsub("eb", "Edge\nbetweenness", method),
+           method = gsub("sg", "Spinglass", method),
+           method = gsub("walk", "Walktrap", method)) %>% 
+    ggplot(aes(x = method, y = value, fill = method)) +
+    geom_boxplot() +
+    scale_fill_brewer(palette = "Dark2") +
+    facet_grid(measure~., scales = "free") +
+    guides(fill = FALSE) + 
+    xlab("") +
+    ylab("") +
+    theme_jim
+
+figure <- figure + 1
+```
+
+```{r show_tukey_dens}
+tukey_den %>% kable(col.names = c("Comparison", "Difference", "p-Value"),
+                caption = "Table TODO: Tukey HSDs for differences in community densities")
+```
+
+```{r show_tukey_sep}
+tukey_sep %>% kable(col.names = c("Comparison", "Difference", "p-Value"),
+                caption = "Table TODO: Tukey HSDs for differences in community separability")
+```
 
 
 
@@ -887,18 +1070,36 @@ Some summary.
 
 # Appendices
 
-## Appendix `r app`: 
+#### Appendix `r app`: _Software packages used_
 
-_Cleaned graph structure data._
+The `R` language [@cite_r] was used to perform the data manipulation, modelling and visualisations for this report. The following `R` packages were also used:
+
+* `igraph` [@csardi_igraph:_2015];
+* `readr` [@wickham_readr:_2016];
+* `readxl` [@wickham_readxl:_2016];
+* `dplyr` [@wickham_dplyr:_2016];
+* `tidyr` [@wickham_tidyr:_2016];
+* `stringr` [@wickham_stringr:_2015];
+* `purrr` [@wickham_purrr:_2016];
+* `lsa` [@wild_lsa:_2015];
+* `broom` [@robinson_broom:_2016];
+* `ggplot2` [@wickham_ggplot2:_2016];
+* `networkD3` [@gandrud_networkd3:_2016];
+* `leaflet` [@cheng_leaflet:_2016]; and
+* `DT` [@xie_dt:_2016].
+
+```{r include = F}
+app <- app + 1
+```
+
+#### Appendix `r app`: _Cleaned graph structure data._
 
 ```{r}
 datatable(links, colnames = c("Line", "From", "To", "Distance (km)", "Daily trips"))
 app <- app + 1
 ```
 
-## Appendix `r app`: 
-
-_The geographic distribution of existing and importance-based fare zones. The figure is interactive, select a fare-zoning approach and toggle area names on/off with the buttons provided._
+#### Appendix `r app`: _The geographic distribution of existing and importance-based fare zones. The figure is interactive, select a fare-zoning approach and toggle area names on/off with the buttons provided._
 
 ```{r}
 # Create plotting data
@@ -953,9 +1154,7 @@ leaflet(width = 800) %>%
 app <- app + 1
 ```
 
-## Appendix `r app`
-
-_The list of stations and their associated, importance-based fare zones._
+#### Appendix `r app`: _The list of stations and their associated, importance-based fare zones._
 
 ```{r show_imp_fare_zones}
 # Create plotting data
