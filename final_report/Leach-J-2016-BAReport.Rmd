@@ -22,9 +22,10 @@ knitr::opts_chunk$set(message = FALSE, warning = FALSE,
                       include = T, eval = T, echo = T)
 figure <- 1
 app <- 1
+table <- 1
 ```
 
-`r figure <- 1; app <- 1`
+`r figure <- 1; app <- 1; table <- 1`
 
 <p style="border:1.5px; border-style:solid; border-color:#000000; padding: 1em;">This `HTML` report should be viewed using a modern web browser such as Mozilla Firefox or Google Chrome. Printing is possible but will not produce an optimal reading experience. The `R` code used to perform this analysis can be viewed in this report using the _Code_ buttons to toggle code viewing.</p>
 
@@ -1093,11 +1094,15 @@ Zones created through closeness measures most closely matched the figures for th
 
 Betweenness and degree centrality-based zones were found to perform "best", i.e. generated the highest fares. This is due to the fact that many of the stations have large differences in zone when moving from the importance-based to the current fare zone models (appendix TODO). For example, Regent's Park station is currently in fare zone 1 due to it's proximity to central London. However, as it is not a well-visited station on one of the less-busy lines (the Bakerloo line), it is placed in to zone 10 for by betweenness-based zoning. Eigenvector centrality-based zoning also out-performed the current fare zones and was found to produce results most similar to the existing zones. 
 
-However, none of the differences in estimated fare were found to be statistically significant as measured by Tukey's Honest Significant Differences [-@tukey_comparing_1949] (table TODO).
+However, none of the differences in estimated fare were found to be statistically significant as measured by Tukey's Honest Significant Differences [-@tukey_comparing_1949] (table `r table`).
 
 ```{r show_tukey}
 tukey %>% kable(col.names = c("Comparison", "Fare difference (£)", "p-Value"),
-                caption = "Table TODO: Tukey HSDs for financial differences in zoning approach")
+                caption = paste0("Table ", table, ": Tukey HSDs for financial differences in zoning approach"))
+```
+
+```{r include = F}
+table <- table + 1
 ```
 
 
@@ -1106,7 +1111,12 @@ tukey %>% kable(col.names = c("Comparison", "Fare difference (£)", "p-Value"),
 The rankings against the criteria set out by @daskin_quadratic_1988 are listed in table TODO.
 
 ```{r show_importance_daskin_rankings}
-kable(importance_daskin_rankings, caption = "Table TODO: Rankings of importance-based zones against the existing fare zones using Daskin's proposed criteria.")
+kable(importance_daskin_rankings, 
+      caption = paste0("Table ", table, ": Rankings of importance-based zones against the existing fare zones using Daskin's proposed criteria."))
+```
+
+```{r include = F}
+table <- table + 1
 ```
 
 ## Graph-community zones
@@ -1184,11 +1194,11 @@ Whilst not as geographically distinct as the edge-betweenness communities, the s
 
 ### Theoretical properties
 
-The density and separability [@yang_defining_2015] metrics for each approach (along with the existing zones) are showm in figure TODO.
+The density and separability [@yang_defining_2015] metrics for each approach (along with the existing zones) are showm in figure `r figure`.
 
 Discounting the walktrap algorithm (based on its poor performance when viewing the results geographically), the best approach appears to be the edge betweenness algorithm. It generates dense communities which are separable from each other. Spinglass also performed well, although the communities it detected were less dense and less separable thant those for edge-betweenness.
 
-Both edge betweenness and spinglass generated communities which were more dense and more separable than the existing fare zones. The differences in density were not statistically significant when measured using Tukey's Honest Significant Differences (tables TODO and TODO), however edge betweenness produced significantly more separable clusters than the current zones. 
+Both edge betweenness and spinglass generated communities which were more dense and more separable than the existing fare zones. The differences in density were not statistically significant when measured using Tukey's Honest Significant Differences (tables `r table` and `r table+1`), however edge betweenness produced significantly more separable clusters than the current zones. 
 
 This results was not, however, particularly surprising as the existing zones were generated in such a different manner than the graph communities. 
 
@@ -1219,12 +1229,20 @@ figure <- figure + 1
 
 ```{r show_tukey_dens}
 tukey_den %>% kable(col.names = c("Comparison", "Difference", "p-Value"),
-                caption = "Table TODO: Tukey HSDs for differences in community densities")
+                caption = paste0("Table", table, ": Tukey HSDs for differences in community densities"))
+```
+
+```{r include = F}
+table <- table + 1
 ```
 
 ```{r show_tukey_sep}
 tukey_sep %>% kable(col.names = c("Comparison", "Difference", "p-Value"),
-                caption = "Table TODO: Tukey HSDs for differences in community separability")
+                caption = paste0("Table", table, ": Tukey HSDs for differences in community separability"))
+```
+
+```{r include = F}
+table <- table + 1
 ```
 
 ### Daskin's Rankings
