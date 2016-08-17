@@ -10,10 +10,8 @@ output:
     theme: readable
     toc: yes
     toc_float: yes
-  pdf_document:
-    toc: yes
   word_document:
-    toc: yes
+    toc: no
 bibliography:
 - refs.bib
 - extra.bib
@@ -34,7 +32,7 @@ app <- 1
 
 * Name: James Leach
 * CID: 01135629
-* Title: The Network Structure of London Underground and Alternative Zoning Approaches
+* Title: The Network Structure of London Underground and Alternative Fare Zoning Approaches
 * GitHub Repository: [jim89/icl/final_report](https://github.com/Jim89/icl/tree/master/final_report)
 * Word Count: TODO
 
@@ -44,39 +42,58 @@ TODO
 
 # Introduction
 
-## Document Structure
-
-Brief description of document structure
-
 ## Background
-
-TODO: Start out with summary of TfL finances, then move on to brief literature summary of papers reviewed to date.
 
 ### Transport for London
 
 [Transport for London](https://tfl.gov.uk/) ("TfL") is a government body responsible for almost all roads and buses, many train services, as well as other forms of public transport (including taxis and boats) in the UK capital. 
 
-TODO: some brief network stats (stations, lines, journeys, etc), introduce Oyster
+Operating in a city of around 8 million people [@census_comparing_2015], TfL also has a huge financial responsibility. In the 2015 financial year, TfL reported total revenue of £5.289 billion, of which £2.559 billion (62%) came directly from ticket fares on the London Underground [@tfl_annual_2015]. One of the most famous aspects of the London transport system (along with the iconic "black cab" taxis), the Underground ("tube") operates across 11 train lines, 270 stations, and carried 1.34 billion passengers in 2015/16 [@tfl_facts_2016]. 
 
-Operating in London, a city of around 8 million people [@census_comparing_2015], TfL also has a huge financial responsibility. In the 2015 financial year, TfL reported total revenue of £5.289 billion, of which £2.559 billion (62%) came directly from ticket fares on the London Underground [@tfl_annual_2015]. 
+### Fares & subsidisation
 
-### TODO some title about "the problem"
+Fares are often set lower than the costs of running services [@montella_multimodal_2014], setting up a requirement for some kind of subsidy. Whilst setting fares lower than costs can be part of a capacity-management strategy [@turvey_simple_1975], this is likely not the case for TfL which has seen demand increase year-on-year. Based on current figures it is likely that (without significant service improvements) demand will outstrip capacity within the next twenty years [@_tube_2016]. 
 
-It is generally the case that fares are set lower than the costs of running services [@montella_multimodal_2014], thus setting up a requirement for some kind of subsidy. Whilst setting fares lower than costs can be part of a capacity-management strategy [@turvey_simple_1975], this is likely not the case for TfL which has seen demand increase year-on-year. Indeed, based on current figures, it is possible that demand will outstrip capacity within the next fifteen to twenty years [@_tube_2016]. Therefore TfL also receives a significant portion of its yearly income in the form of cash from central government: an estimated 23% came from grants and subsidies in 2015/16 [@tfl_how_2015].
+However, as noted by Cervero [-@cervero_flat_1981], subsidisation can lead a sequence of events that, over time, actually reduce revenue. Fares kept low through subsidisation result in relative fare revenue decreasing over time as costs increase. This fact means that subsidisation continues to be a requirement. 
 
-However, as noted by Cervero [-@cervero_flat_1981], subsidisation can lead a sequence of events that, over time, actually reduce revenue. Fares kept low through subsidisation results in fare revenue (relative to costs) decreasing over time. This fact (coupled with social and political pressure to maintain low fares) means that subsidisation continues to be a requirement. 
+Political pressures have resulted in efforts by TfL to keep fares low, and therefore TfL is a subsidised organisation. A significant portion of its yearly income comes in the form of a subsidy direct from central government: an estimated 23% came from grants and subsidies in 2015/16 [@tfl_how_2015].
 
-TfL will loose its operational subsidy from 2019 onwards [@tfl_annual_2015]. Therefore it must seek actions which can dramatically cut its costs, or grow its income. With the noted pressures of demand building, and politicians struggling to maintain price freezes [@_sadiq_2016] this may prove to be a difficult prospect for TfL. 
+## Motivation
+
+TfL will loose its operational subsidy from 2019 onwards [@tfl_annual_2015]. 
+
+It _must_, therefore, seek actions which dramatically cut its costs, or grow its income. With demand pressures building, and politicians struggling to maintain price freezes [@_sadiq_2016] this may prove to be a difficult prospect. 
 
 It must seek new and inventive strategies to maintain the infrastructure that is so critical to the smooth running of the capital whilst operating in an increasingly tight financial situation.
 
+@jansson_is_2012 showed that changes to fare systems can be sensitive to political concerns and must be justifiable to the users of the system. @daskin_quadratic_1988 set out requirements for pricing systems (see below) that can be used to judge if a new system is adequate for implementation.
+
+## Approach
+
+In this report, a novel approach to designing fare systems has been investigated. Graph-analysis methods have been used to model the TfL Underground network as a graph with stations as _nodes_ [@NewmanBook:2010] and links between adjacent stations as _edges_ [@NewmanBook:2010]. Specifically, the creation of fare zones based on the graph properties of the network have been adopted and evaluated.
+
+Two main approaches have been performed:
+
+* _Designing zones based on station importance_: Using common algorithms for identifying important nodes, stations (nodes) were grouped based on their importance.
+* _Designing zones based on graph communities_: Using community-detection algorithms, groups of stations (nodes) were found in the network.
+
+In each case the resulting groups were used to define new fare zones which were alveolar in nature [@montella_multimodal_2014]. These zones were then compared with the existing fare zones using a variety of methods.
+
+Making an assumption that inter-zone (e.g. zone 1 to zone 2) fares remained constant in each scenario, differences in fare revenue between the new approaches and existing fares were compared. Standard techniques for measuring similarity (via the cosine) were also used. 
+
+For zones defined through community-detection algorithms, graph theoretical measures proposed by @yang_defining_2015 were also used to evaluate the new and existing zones.
+
+Finally, the zones generated via these alternative approaches were rated against the criteria set out by @daskin_quadratic_1988 for measuring the suitability of pricing systems.
+
+## Literature Review
+
 ### Pricing public transport
 
-The pricing of public transport has long been studied in the literature. Noting that pricing required a fine balancing of managing demand and capacity, Turvey [-@turvey_simple_1975] found that distance-based pricing was preferable to flat-fares with longer trips requiring larger fares. This principal seems intuitive (and indeed is the basis for the current fare zones employed by TfL) but much work has gone into understanding exactly how fares should be set up. 
+The pricing of public transport has long been studied. Noting that pricing required a fine balancing of managing demand and capacity, @turvey_simple_1975 found that distance-based pricing was preferable to flat-fares with longer trips requiring larger fares. This principal seems intuitive (and indeed is the basis for the current fare zones employed by TfL) but much work has gone into understanding exactly how fares should be set up. 
 
-Cervero [-@cervero_flat_1981] introduced the concept of 'faireness' in how customers subsidise each other. He found that, under certain models, short-distance customers could end up subsidising those on longer journeys (something he did not regard as fair) whereas other models (such as peak vs. off-peak, coupled with a distance component) were better at eliminating this effect. Cervero also discussed how the fare-model choice was highly dependent on the policy objective of the operator. For example, 'fare comprehension' fares would be greatly different to 'deficit reduction' fares.
+@cervero_flat_1981 introduced the concept of 'faireness' in how customers subsidise each other. He found that, under certain models, short-distance customers could end up subsidising those on longer journeys (something he did not regard as fair) whereas other models (such as peak vs. off-peak, coupled with a distance component) were better at eliminating this effect. Cervero also discussed how the fare-model choice was highly dependent on the policy objective of the operator. For example, 'fare comprehension' fares would be greatly different to 'deficit reduction' fares.
 
-Daskin et. al. [-@daskin_quadratic_1988] built on this work, and provide a list of requirements for pricing schemes. They should be:
+@daskin_quadratic_1988 built on this work, and provided a list of requirements for pricing schemes. They should be:
 
 * sensitive to the many issues involved in transport fares (both from the provider's _and_ the user's perspective);
 * based on appropriate economic, political, and analytical theory;
@@ -86,24 +103,24 @@ Daskin et. al. [-@daskin_quadratic_1988] built on this work, and provide a list 
 
 Daskin et. al. developed a model to test several alternative pricing models, and found that the results were highly dependent how strongly the price elasticity of demand was related to distance, with zone-based pricing most optimal when elasticity was not strongly related to trip distance. 
 
-Sharaby and Shiftan [-@sharaby_impact_2012] have investigated how fare integration (for example, TfL's Oyster scheme) affected travel behaviour. Fare integration is defined as the ability to "transfer" within the transport system from one form of transport to another (e.g. from bus to train), or between multiple routes in one form of transport (e.g. changing bus routes), without incurring a cost penalty. They found that the use of fare integration, along with a zone-based pricing policy led to increased ticket purchases along with increased customer satisfaction. However, in their study, integrated pricing was also coupled with an overall reduction in fares and therefore potentially suggests that less integration could be beneficial for TfL. 
+@sharaby_impact_2012 investigated how fare integration (for example, TfL's Oyster scheme) affected travel behaviour. Fare integration is defined as the ability to "transfer" within the transport system from one form of transport to another (e.g. from bus to train), or between multiple routes in one form of transport (e.g. changing tube lines), without incurring a cost penalty. They found that the use of fare integration, along with a zone-based pricing policy led to increased ticket purchases along with increased customer satisfaction. However, in their study, integrated pricing was also coupled with an overall reduction in fares and therefore potentially suggests that less integration could be beneficial for TfL. 
  
 ### Zone-based pricing
 
-Zone-based pricing is the idea that a transport area (here, London) is divided in to zones based on some measure, either analytical or political/administrative in nature. Prices are then based on the number of zones crossed in a journey, generally the more zones crossed, the more expensive the journey. 
+Zone-based pricing is the idea that a transport area is divided in to zones based on some measure, either analytical, political, administrative, or socio-economic in nature. Prices are then based on the number of zones crossed in a journey, generally the more zones crossed (i.e. the greater the distance travelled), the more expensive the journey. 
 
-Montella and D'Acierno [-@montella_multimodal_2014] provide a brief overview how fare zones are created in transport networks and provide a four step process to finalising the fare zones:
+@montella_multimodal_2014 provided a brief overview how fare zones are created  and provided a four step process to finalising the fare zones:
 
 > 1. Define initial zones
 2. Optimise of fares across these zones
 3. Evaluate the results
 4. Use the results to find the best zone/fare combination
 
-They note three main types of zones: concentric rings; circular rings/sectors (similar to concentric rings, but with radial "cuts" in the rings to define new zones); and alveolar zones (zones defined across the area, rather than radiating from a centre point). Transport for London uses a concentric rings appraoch, first introduced in the 1980's [@_london_2016]. As noted by Montella and D'Acierno, concentric ring zones are typically used in captial cities where there is a single, central district of increased importance surrounded by areas which decrease in importance the further they are from the centre. Fares are then charged based on how important the zones entered/exited are (i.e. trips to the centre are more expensive). 
+They noted three main types of zones: concentric rings; circular rings/sectors (similar to concentric rings, but with radial "cuts" in the rings to define new zones); and alveolar zones (zones defined across the area, rather than radiating from a centre point). Montella and D'Acierno noted that concentric ring zones are typically used in captial cities where there is a single, central district of increased importance surrounded by areas which decrease in importance the further they are from the centre. Fares are then charged based on how important the zones entered/exited are (i.e. trips to the centre are more expensive). Transport for London has used such an approach since the 1980's [@_london_2016].
 
-Jansson and Angell [@-jansson_is_2012], have shown that highly complex arrangements of fare zones are not practical. They considered the case in Oslo, which previously had eighty-eight fare zones before simplifying down to just ten. They derived forumlae for the optimal price based on the operator's cost(s), the (social and financial) cost(s) associated with extra passengers using the service, and the journey distance. They foundd that the optimal price can be approximated with a zone-based system with travel to more important zones (in their context: '[zones] closer to the city centre') incurring higher fares. 
+Moreover, highly complex arrangements of fare zones are not practical [@jansson_is_2012]. Considering a the city and suburbus surrounding Oslo, Jansson and Angell showed that zone simplification was possible: Oslo previously had eighty-eight fare zones before simplifying down to just ten. They also derived forumlae for the optimal fare based on the operator's cost(s), the (social and financial) cost(s) associated with extra passengers using the service, and the journey distance. They foundd that the optimal price can be approximated with a zone-based system with travel to more important zones (in their context: '[zones] closer to the city centre') incurring higher fares. 
 
-Jansson and Angell [@-jansson_is_2012] also described several alternative zoning approaches which they investigated. Their results were as follows:
+@jansson_is_2012 also described several alternative zoning approaches which they investigated. Their results were as follows:
 
 * __Ring zones__ resulted in only small increases in price for travelling between zones, but generated a too high a number of zones in the city centre to compensate for this.
 * __Dense, suburban, and rural zones__ suffered from a similar problem to ring zones: in order to keep "jumps" in fare for crossing zones minimal, too many zones had to be introduced in the city centre.
@@ -112,31 +129,21 @@ Jansson and Angell [@-jansson_is_2012] also described several alternative zoning
 * __Single zone, with distance-based pricing__ was simple to implement and easy for customers to understand, but resulted in high prices for short trips (typically those in the city centre) which would have been unpopular.
 * __Munipal zones__ based on existing political boundaries were also easy for customers to understand, but resulted in some short journeys crossing many zones (and therefore being expensive), and long journeys remaining in just one zone (and therefore being cheap), countering one of the main aims of zone-based prices.
 
-### Analytics for transport
+### Smartcards, data & analytics
 
-## Analytical Objective
+After its public launch [@ctt_londons_2003], TfL's Oyster smartcard scheme grew massively. Oyster card technology was soon used in all London train stations [@ctt_foundations_2006] and the majority of journeys were made using an Oyster card [@ctt_10_2007]. 
 
-### TODO describe approach
+@mcdonald_multipurpose_2000 provided an overview of some key benefits of smartcard technologies, finding that they reduce fraud, ticket failure and fare collection expenses; and increase ease-of-use for the customer. They were also found to enable the use of flexible fare polcies, something also noted by [@borndorfer_models_2012].
 
-This work sought to use graph-theoretical [@_graph_2016] methods for modelling the Transport for London ("TfL") Underground network. More explicitly, the aim was to investigate the creation of fare zones using a data-driven approach, and to compare the results of such approaches with the fare zones that exist today. Such comparisons were made in both financial terms, as well as using theoretical measures proposed in earlier work [@yang_defining_2015]. 
+@chen_promises_2016 investigated travel patterns and how they can be used to guide investment. Whilst recognising the need to validate assumptions and inferences, they also noted that combining this data with other "big" data sources (including mobile device tracking data) could be critical for understanding route choices, or for inferring journey purposes. @pelletier_smart_2011 performed similar work using smartcard-based data to group passengers based on the similarity in their travel patterns and to investigate the differences in travel on weekdays and weekends.
 
-TODO: Describe two approaches. Go in to detail and provide the context
+@bagchi_potential_2005, however, noted that analysis of smartcard data should not be considered a 'utopian[n] replacement' for traditional approaches, and showed that smartcard data should be supplemented with other sources (e.g. customer surveys) in order to develop a holistic approach to understanding the transport system.
 
-TODO: There are a range of community detection algorithms, each with varying performance characteristics [@lancichinetti_community_2009]. Such algorithms can be used to detect and label groups of "similar" nodes in a graph (with the definition of similarity varying across the algorithms). Typically, 
+### Graphs and importance
 
-Typically, However, some of these algorithms have the advantage of being 
+The use of graph analysis is not entirely new. @yeung_physics_2013 used it to perform route optimisation on the London Underground, finding that the "best" route was dependant not only on the network structure, but also on the routes taken by other users of the network. 
 
-### TODO Academic justification
-
-TODO brief review of Yeung et. al (2013) and Shimamoto (2008) for use of graph analysis in transport problems
-
-## Data Used
-
-The following data were obtained and used for the purposes of the analysis conducted in this assignment:
-
-* Transport for London Underground Station adjacency, fare zone and line information available as open-source data hosted on [Wikimedia](https://commons.wikimedia.org/wiki/London_Underground_geographic_maps/CSV#Routes) [-@wikimedia_london_2009]. Referred to as the "raw graph structure data"; 
-* Transport for London Underground inter-station distances [@tfl_distances_2013], made available by Transport for London under a Freedom of Information request in [2013](https://www.whatdotheyknow.com/request/distances_between_adjacent_oyste). Referred to as the "distances data"; and
-* Sample journey data provided by Transport for London [-@tfl_oyster_2009]. The data cover 5% of all Oyster card journeys made in one week in November 2009. The data are available through the Transport for London [API](https://tfl.gov.uk/info-for/open-data-users/our-feeds#on-this-page-6). Referred to as the "journey data".
+Similarly, the measurement of station importance is also not revolutionary. @shimamoto_evaluating_2008 sought to define important stations based on the risks of overcrowding at stations when failures occurred in the network. Modelling both passenger arrival and "failure" to board a train probablistically, they found that certain key stations (namely Victoria) were found to be the most important in a number of different scenarios.
 
 # Methodology
 
@@ -192,6 +199,16 @@ theme_jim <-  theme(legend.position = "bottom",
                     panel.border = element_rect(colour = "black", fill = NA))
 ```
 
+## Data Used
+
+The following data were obtained and used for the purposes of the analysis conducted in this assignment:
+
+* Transport for London Underground Station adjacency, fare zone and line information available as open-source data hosted on [Wikimedia](https://commons.wikimedia.org/wiki/London_Underground_geographic_maps/CSV#Routes) [-@wikimedia_london_2009]. Referred to as the "raw graph structure data"; 
+* Transport for London Underground inter-station distances [@tfl_distances_2013], made available by Transport for London under a Freedom of Information request in [2013](https://www.whatdotheyknow.com/request/distances_between_adjacent_oyste). Referred to as the "distances data"; and
+* Sample journey data provided by Transport for London [-@tfl_oyster_2009]. The data cover 5% of all Oyster card journeys made in one week in November 2009. The data are available through the Transport for London [API](https://tfl.gov.uk/info-for/open-data-users/our-feeds#on-this-page-6). Referred to as the "journey data".
+
+Examples of these data can be seen in appendix TODO.
+
 ## Graph creation
 
 ### Prepare and clean data
@@ -199,7 +216,7 @@ theme_jim <-  theme(legend.position = "bottom",
 The raw graph structure [@wikimedia_london_2009] and the distances data [@tfl_distances_2013] were loaded and some basic processing and cleaning (e.g. standardisation of the names of stations) was performed.
 
 ```{r load_and_clean}
-# Load the data ----------------------------------------------------------------
+# Load the data
 ### Graph structure
 # Basic linkage data from Wiki
 adjacency <- read_csv("./data/geo/adjacency.csv",
@@ -236,7 +253,7 @@ stations_dist <- read_excel("./data/distances/formatted/Inter Station Train Time
 dlr_dist <- read_excel("./data/distances/formatted/Distance Martix DLR 2013_CLN.xlsx")
 
 
-# Clean the data ----------------------------------------------------------------
+# Clean the data
 # Set up clean lower-case name, and rounded zone-number in station details
 station_details <- station_details %>% mutate(name_cln = tolower(name),
                                               zone_cln = ceiling(zone))
@@ -670,6 +687,8 @@ The real life zones were not equally distributed (i.e. there were more zone 1 st
 
 #### Discovering communities
 
+There are a range of community detection algorithms, each with varying performance characteristics [@lancichinetti_community_2009]. Such algorithms can be used to detect and label groups of "similar" nodes in a graph (with the definition of similarity varying across the algorithms). 
+
 In order to define zones based on communities of stations in the graph, three alternative algorithms were used:
 
 * __Walktrap__ [@pons_computing_2005]. This algorithm detects communities by performing random walks on the graph. The algorithm records the nodes visited in each walk and uses the results to partition the graph in to communities of nodes that frequently occurred in the same walk. In this context, such communities can be imagined to be groups of stations located in close proximity, or on the same train line.
@@ -933,6 +952,52 @@ tukey_den <- TukeyHSD(fit_den, conf.level = .95) %>%
 
 ```
 
+### Zone Rankings
+
+Each of the zones created under the two alternative zoning approaches were compared with the current zones that TfL uses, using the criteria for pricing schemes set out by @daskin_quadratic_1988 as a measure. Given the ease with which these zoning approaches can be implemented, Daskin's critera of feasibility of implementation was not considered. The follwing scale was used to perform this ranking:
+
+* +2 - significantly better than existing zones;
+* +1 - marginally better;
+* 0 - no change;
+* -1 - marginally worse than existing zones; and
+* -2 - siginficatly worse than existing zones
+
+* sensitive to the many issues involved in transport fares (both from the provider's _and_ the user's perspective);
+* based on appropriate economic, political, and analytical theory;
+* easy for the end-user to understand;
+* feasible to implement; and
+* evaluation ease
+
+```{r zone_rankings}
+# Set up daskin issues
+
+daskin <- c("Sensitivity to issues",
+            "Theoretical basis",
+            "Ease of understanding",
+            "Ease of evaluation")
+
+# Set up importance-zone rankings
+importance_daskin_rankings <- tibble(Method = c("Betweenness", "Closeness", "Degree", "Eigenvector"),
+                                     `Sensitivity to issues` = c(1, 0, -2, 2),
+                                     `Theoretical basis` = c(0, 2, -1, 0),
+                                     `Ease of understanding` = c(-1, -1, 0, -2),
+                                     `Ease of evaluation` = c(-2, -1, -2, 0),
+                                     Comment = str_wrap(c("Sensitive to pressures at key stations, but zones too geographically spread",
+                                                 "Captures distance-based pricing, but may be hard to comprehend",
+                                                 "Too inensitive to many transport and pricing issues",
+                                                 "Captures both distance and importance issues, but too complex to understand")))
+
+# Set up graph community-zone rankings
+community_daskin_rankings <- tibble(Method = c("Edge Betweenness", "Spinglass", "Walktrap"),
+                                     `Sensitivity to issues` = c(1, 0, -2),
+                                     `Theoretical basis` = c(0, 1, -2),
+                                     `Ease of understanding` = c(1, 1, -1),
+                                     `Ease of evaluation` = c(0, 0, -2),
+                                     Comment = str_wrap(c("Captures notion of 'hubs' defining central zone, with radiating branches",
+                                                 "Shows promise if other measures of similarity (e.g. economic) could be included",
+                                                 "Performs poorly on all measures.")))
+```
+
 # Results
 
 ## Importance-based zones
@@ -1033,6 +1098,15 @@ However, none of the differences in estimated fare were found to be statisticall
 ```{r show_tukey}
 tukey %>% kable(col.names = c("Comparison", "Fare difference (£)", "p-Value"),
                 caption = "Table TODO: Tukey HSDs for financial differences in zoning approach")
+```
+
+
+### Daskin's Rankings
+
+The rankings against the criteria set out by @daskin_quadratic_1988 are listed in table TODO.
+
+```{r show_importance_daskin_rankings}
+kable(importance_daskin_rankings, caption = "Table TODO: Rankings of importance-based zones against the existing fare zones using Daskin's proposed criteria.")
 ```
 
 ## Graph-community zones
@@ -1153,9 +1227,33 @@ tukey_sep %>% kable(col.names = c("Comparison", "Difference", "p-Value"),
                 caption = "Table TODO: Tukey HSDs for differences in community separability")
 ```
 
-# Conclusions
+### Daskin's Rankings
 
-Some summary.
+The rankings against the criteria set out by @daskin_quadratic_1988 are listed in table TODO.
+
+```{r show_community_daskin_rankings}
+kable(community_daskin_rankings, caption = "Table TODO: Rankings of graph community-based zones against the existing fare zones using Daskin's proposed criteria.")
+```
+
+# Conclusions & Recommendations
+
+#### Conclusions
+
+This report has shown that novel approaches to the creation of fare zones could be used to help TfL change its approach to pricing on the London underground. Both theoretical and practical considerations have born this out, demonstrating the possibility of using such data-driven methods as these.
+
+Node importance measure-based zoning approaches showed good overalp with existing the zones, and could result in potentially higher fare revenues under the existing charge scheme. Community-detection algorithms were able to identify groups of stations with good graph-theoretical properties, and which showed a similar geographic distinction as the existing zones. 
+
+In both approaches, some methods proved better than others. For station importance-based zones, closeness and eigenvector centrality measures generated the best results (both in terms of similarity with existing zones, and using estimations of resulting fare revenues). The edge-betweenness and spinglass algorithms produced the best outcomes for graph community based zones when considering the geographical intuition of the resulting zones, and their evaluation against existing criteria [@daskin_quadratic_1988].
+
+Whilst promising, however, the results are not conclusive. Decisions about transport prices, especially in a city such as London, are greatly affected by social, economic, and political pressures. Therefore these results present only a small first-step in investigating alternative courses of action for TfL to take if it is to manage the loss of its subsidy and continue to provide the transport services the UK capital needs. 
+
+#### Recommendation
+
+Having concluded that methods such as these could offer a potential new avenue for designing fare models in the London Underground system, it is recommended that further study be undertaken. Collecting and using socio-economic, political, and administrative data could help to enhance the methods proposed here. 
+
+Social, as well as technical and financial considerations are critical and any solution proposed to help TfL manage the loss of its subsidy should be evaluated with this in mind. 
+
+It is therefore recommended that TfL continue to provide their services as they currently plan to, whilst rigourously assessing alternative pricing and cost-reduction strategies that may help them to alleviate the effects of losing their subsidy.
 
 # Appendices
 
