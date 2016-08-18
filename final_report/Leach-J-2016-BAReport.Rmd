@@ -1,5 +1,5 @@
 ---
-title: "The Network Structure of London Underground and Alternative Zoning Approaches"
+title: "The Network Structure of the London Underground and Alternative Zoning Approaches"
 author: "Jim Leach"
 date: '`r Sys.Date()`'
 output:
@@ -27,15 +27,27 @@ table <- 1
 
 `r figure <- 1; app <- 1; table <- 1`
 
+<br>
+
 <p style="border:1.5px; border-style:solid; border-color:#000000; padding: 1em;">This `HTML` report should be viewed using a modern web browser such as Mozilla Firefox or Google Chrome. Printing is possible but will not produce an optimal reading experience. The `R` code used to perform this analysis can be viewed in this report using the _Code_ buttons to toggle code viewing.</p>
 
-# Details
+<br>
+
+# Report overview
+
+#### Details
 
 * Name: James Leach
 * CID: 01135629
-* Title: The Network Structure of London Underground and Alternative Fare Zoning Approaches
+* Title: The Network Structure of the London Underground and Alternative Zoning Approaches
 * GitHub Repository: [jim89/icl/final_report](https://github.com/Jim89/icl/tree/master/final_report)
 * Word Count: TODO
+
+#### This document
+
+This document is broken down in the several sections. The introduction presents some background, discusses the motivations for and analytical approaches to this work, and provides a brief summary of some relevant literature. The methodology section describes the analytical steps, and provides the `R` code used in the analysis to make this work reproducible (the necessary data are also provided). The results section contains summary statistics and visualisations for the analysis, and the conclusion provides some final remarks and recommendations. Some additional tables and visualisations are presented in the appendices and a full list of references is provided. 
+
+<br>
 
 # Abstract
 
@@ -49,102 +61,115 @@ TODO
 
 [Transport for London](https://tfl.gov.uk/) ("TfL") is a government body responsible for almost all roads and buses, many train services, as well as other forms of public transport (including taxis and boats) in the UK capital. 
 
-Operating in a city of around 8 million people [@census_comparing_2015], TfL also has a huge financial responsibility. In the 2015 financial year, TfL reported total revenue of £5.289 billion, of which £2.559 billion (62%) came directly from ticket fares on the London Underground [@tfl_annual_2015]. One of the most famous aspects of the London transport system (along with the iconic "black cab" taxis), the Underground ("tube") operates across 11 train lines, 270 stations, and carried 1.34 billion passengers in 2015/16 [@tfl_facts_2016]. 
+Operating in a city of around 8 million people [@census_comparing_2015], TfL also has a huge financial responsibility. In the 2015 financial year, TfL reported total revenue of £5.289 billion, of which £2.559 billion came directly from ticket fares on the London Underground [@tfl_annual_2015]. One of the most famous aspects of the London transport system (along with the iconic "black cab" taxis), the Underground ("tube") operates across 11 train lines, 270 stations, and carried 1.34 billion passengers in 2015/16 [@tfl_facts_2016]. 
 
 ### Fares & subsidisation
 
-Fares are often set lower than the costs of running services [@montella_multimodal_2014], setting up a requirement for some kind of subsidy. Whilst setting fares lower than costs can be part of a capacity-management strategy [@turvey_simple_1975], this is likely not the case for TfL which has seen demand increase year-on-year. Based on current figures it is likely that (without significant service improvements) demand will outstrip capacity within the next twenty years [@_tube_2016]. 
+Fares are often set lower than the costs of running services [@montella_multimodal_2014], setting up a requirement for some kind of subsidy, and TfL is no exception. 
 
-However, as noted by Cervero [-@cervero_flat_1981], subsidisation can lead a sequence of events that, over time, actually reduce revenue. Fares kept low through subsidisation result in relative fare revenue decreasing over time as costs increase. This fact means that subsidisation continues to be a requirement. 
+Whilst setting fares lower than costs can be part of a capacity-management strategy [@turvey_simple_1975] (i.e. encouraging greater use of the service), this is likely not the case for TfL which has seen demand increase year-on-year. Based on current figures it is likely that (without significant service improvements) demand will outstrip capacity within the next twenty years [@_tube_2016]. 
 
-Political pressures have resulted in efforts by TfL to keep fares low, and therefore TfL is a subsidised organisation. A significant portion of its yearly income comes in the form of a subsidy direct from central government: an estimated 23% came from grants and subsidies in 2015/16 [@tfl_how_2015].
+However, as noted by Cervero [-@cervero_flat_1981], subsidisation can lead a sequence of events that, over time, actually reduce revenue. Fares kept low through subsidisation result in relative fare revenue decreasing as costs increase. This fact means that subsidisation continues to be a requirement. 
+
+Political pressures have resulted in efforts by TfL to keep fares low, and TfL is a heavily subsidised organisation. A significant portion of its yearly income comes in the form of a subsidy direct from central government: an estimated 23% in 2015/16 [@tfl_how_2015].
 
 ## Motivation
 
 TfL will loose its operational subsidy from 2019 onwards [@tfl_annual_2015]. 
 
-It _must_, therefore, seek actions which dramatically cut its costs, or grow its income. With demand pressures building, and politicians struggling to maintain price freezes [@_sadiq_2016] this may prove to be a difficult prospect. 
+It _must_, therefore, seek actions which dramatically cut its costs, or grow its income. With demand pressures building, and political pressure to maintain low prices [@_sadiq_2016], this may prove to be a difficult prospect. 
 
-It must seek new and inventive strategies to maintain the infrastructure that is so critical to the smooth running of the capital whilst operating in an increasingly tight financial situation.
-
-@jansson_is_2012 showed that changes to fare systems can be sensitive to political concerns and must be justifiable to the users of the system. @daskin_quadratic_1988 set out requirements for pricing systems (see below) that can be used to judge if a new system is adequate for implementation.
+Transport for London must seek new, innovative strategies to maintain the infrastructure that is so critical to the smooth running of the capital whilst operating in an increasingly tight financial situation.
 
 ## Approach
 
-In this report, a novel approach to designing fare systems has been investigated. Graph-analysis methods have been used to model the TfL Underground network as a graph with stations as _nodes_ [@NewmanBook:2010] and links between adjacent stations as _edges_ [@NewmanBook:2010]. Specifically, the creation of fare zones based on the graph properties of the network have been adopted and evaluated.
+In this analysis, a novel approach to designing fare systems has been investigated. Graph-analysis methods have been used to model the TfL Underground network as a graph with stations as _nodes_ [@NewmanBook:2010] and links between adjacent stations as _edges_ [@NewmanBook:2010]. 
 
-Two main approaches have been performed:
+Specifically, the creation of new fare zones based on the graph properties of the network have been adopted and evaluated. This was done to understand if data-driven methods could be used as one of the "innovative strategies" TfL will require in order to meet its financial reqirements. Re-zoning of the TfL tube could provide the basis for changing pricing in order to increase fare revenue.
 
-* _Designing zones based on station importance_: Using common algorithms for identifying important nodes, stations (nodes) were grouped based on their importance.
-* _Designing zones based on graph communities_: Using community-detection algorithms, groups of stations (nodes) were found in the network.
+Two main approaches were performed:
 
-In each case the resulting groups were used to define new fare zones which were alveolar in nature [@montella_multimodal_2014]. These zones were then compared with the existing fare zones using a variety of methods.
+* _Designing zones based on station importance_: Using common algorithms for identifying important nodes, stations were grouped based on their importance.
+* _Designing zones based on graph communities_: Using community-detection algorithms, groups of stations were found in the network.
 
-Making an assumption that inter-zone (e.g. zone 1 to zone 2) fares remained constant in each scenario, differences in fare revenue between the new approaches and existing fares were compared. Standard techniques for measuring similarity (via the cosine) were also used. 
+In each case the resulting groups were used to define new, alveolar fare zones [@montella_multimodal_2014]. These zones were then compared with the existing fare zones using a variety of methods.
 
-For zones defined through community-detection algorithms, graph theoretical measures proposed by @yang_defining_2015 were also used to evaluate the new and existing zones.
+Making an assumption that inter-zone (for example zone 1 to zone 2) fares remained constant between the current zones and the new approaches, differences in fare revenue between the new approaches and existing fares were estimated and compared. Standard techniques for measuring similarity (via Salton's cosine method [-@Salton:1986:IMI:576628]) were also used to compare the new and existing zones. 
 
-Finally, the zones generated via these alternative approaches were rated against the criteria set out by @daskin_quadratic_1988 for measuring the suitability of pricing systems.
+For zones defined through community-detection algorithms, graph theoretical measures proposed by @yang_defining_2015 were also used to evaluate the new and existing zones. Finally, the zones generated via these alternative approaches were rated against criteria set out by @daskin_quadratic_1988 for measuring the suitability of pricing systems.
 
 ## Literature Review
 
 ### Pricing public transport
 
-The pricing of public transport has long been studied. Noting that pricing required a fine balancing of managing demand and capacity, @turvey_simple_1975 found that distance-based pricing was preferable to flat-fares with longer trips requiring larger fares. This principal seems intuitive (and indeed is the basis for the current fare zones employed by TfL) but much work has gone into understanding exactly how fares should be set up. 
+The pricing of public transport has long been studied. Noting that pricing required a fine balancing of managing demand and capacity, @turvey_simple_1975 found that distance-based pricing was preferable to flat-fares with longer trips requiring larger fares. This principal is the basis for the current fare zones employed by TfL. 
 
-@cervero_flat_1981 introduced the concept of 'faireness' in how customers subsidise each other. He found that, under certain models, short-distance customers could end up subsidising those on longer journeys (something he did not regard as fair) whereas other models (such as peak vs. off-peak, coupled with a distance component) were better at eliminating this effect. Cervero also discussed how the fare-model choice was highly dependent on the policy objective of the operator. For example, 'fare comprehension' fares would be greatly different to 'deficit reduction' fares.
+@cervero_flat_1981 introduced the concept of 'fairness' in how customers subsidise each other. He found that, under certain models, short-distance customers could end up subsidising those on longer journeys (something he did not regard as fair) whereas other models (such as peak vs. off-peak prices) were better at eliminating this effect. Again, these principals have been incorporated in to the current pricing schemes that TfL uses. Cervero also discussed how the fare-model choice was highly dependent on the policy objective of the operator. For example, 'fare comprehension' fares would be greatly different to 'deficit reduction' fares. 
 
 @daskin_quadratic_1988 built on this work, and provided a list of requirements for pricing schemes. They should be:
 
-* sensitive to the many issues involved in transport fares (both from the provider's _and_ the user's perspective);
+* sensitive to the many issues involved in fares (both from the provider's _and_ the user's perspective);
 * based on appropriate economic, political, and analytical theory;
 * easy for the end-user to understand;
 * feasible to implement; and
-* basic to test and analyse in the presence of alternatives.
+* easy to test and analyse in the presence of alternatives.
 
-Daskin et. al. developed a model to test several alternative pricing models, and found that the results were highly dependent how strongly the price elasticity of demand was related to distance, with zone-based pricing most optimal when elasticity was not strongly related to trip distance. 
+Daskin et. al. developed a model to test several alternative pricing models, and found that zone-based pricing was most optimal when price-sensitivty was not strongly related to trip distance. 
 
-@sharaby_impact_2012 investigated how fare integration (for example, TfL's Oyster scheme) affected travel behaviour. Fare integration is defined as the ability to "transfer" within the transport system from one form of transport to another (e.g. from bus to train), or between multiple routes in one form of transport (e.g. changing tube lines), without incurring a cost penalty. They found that the use of fare integration, along with a zone-based pricing policy led to increased ticket purchases along with increased customer satisfaction. However, in their study, integrated pricing was also coupled with an overall reduction in fares and therefore potentially suggests that less integration could be beneficial for TfL. 
+@van_vuuren_optimal_2002 reported that customers were much less sensitive to price during peak hours than outside of these times (stating 'commuters usually do not have many alternatives').  
+
+@sharaby_impact_2012 investigated how fare integration (for example, TfL's Oyster scheme) affected travel behaviour. Fare integration is defined as the ability to "transfer" within the transport system from one form of transport to another (e.g. from bus to train), or between multiple routes in one form of transport (e.g. changing tube lines), without incurring a cost penalty. They found that the use of fare integration, along with a zone-based pricing policy led to increased ticket purchases along with increased customer satisfaction. However, in their study, integrated pricing was also coupled with an overall reduction in fares.
  
 ### Zone-based pricing
 
-Zone-based pricing is the idea that a transport area is divided in to zones based on some measure, either analytical, political, administrative, or socio-economic in nature. Prices are then based on the number of zones crossed in a journey, generally the more zones crossed (i.e. the greater the distance travelled), the more expensive the journey. 
+Zone-based pricing is the idea that a transport network be divided in to zones based on some measure, either analytical, political, administrative, or socio-economic. Journey prices are based on the number of zones crossed, more zones (i.e. the greater the distance travelled) generally meaning a more expensive journey. 
 
-@montella_multimodal_2014 provided a brief overview how fare zones are created  and provided a four step process to finalising the fare zones:
+@montella_multimodal_2014 provided a brief overview how fare zones are created  and provided a four step process to finalising the fare zones (this study being focussed on the first of these):
 
 > 1. Define initial zones
 2. Optimise of fares across these zones
 3. Evaluate the results
 4. Use the results to find the best zone/fare combination
 
-They noted three main types of zones: concentric rings; circular rings/sectors (similar to concentric rings, but with radial "cuts" in the rings to define new zones); and alveolar zones (zones defined across the area, rather than radiating from a centre point). Montella and D'Acierno noted that concentric ring zones are typically used in captial cities where there is a single, central district of increased importance surrounded by areas which decrease in importance the further they are from the centre. Fares are then charged based on how important the zones entered/exited are (i.e. trips to the centre are more expensive). Transport for London has used such an approach since the 1980's [@_london_2016].
+They noted three main types of zones: concentric rings; circular rings/sectors (similar to concentric rings, but with radial "cuts" in the rings to define new zones); and alveolar zones (zones defined across the area). 
 
-Moreover, highly complex arrangements of fare zones are not practical [@jansson_is_2012]. Considering a the city and suburbus surrounding Oslo, Jansson and Angell showed that zone simplification was possible: Oslo previously had eighty-eight fare zones before simplifying down to just ten. They also derived forumlae for the optimal fare based on the operator's cost(s), the (social and financial) cost(s) associated with extra passengers using the service, and the journey distance. They foundd that the optimal price can be approximated with a zone-based system with travel to more important zones (in their context: '[zones] closer to the city centre') incurring higher fares. 
+Montella and D'Acierno noted that concentric ring zones are typically used in capital cities where there is a
+single, central district of increased importance surrounded by areas which decrease in importance the further they are from the centre. Fares are then charged based on how important the zones entered/exited are (i.e. trips to the centre are more expensive). Transport for London has used such an approach since the 1980's [@_london_2016].
+
+Highly complex arrangements of fare zones are not practical [@jansson_is_2012]. Considering the city and suburbs surrounding Oslo, Jansson and Angell showed that zone simplification was possible: Oslo previously had eighty-eight fare zones before simplifying down to just ten. They also derived formulae for the optimal fare based on the operator's cost(s), the (social and financial) cost(s) associated with extra passengers using the service, and the journey distance. They found that optimal prices can be approximated with a zone-based system with travel to more important zones (in their context: '[zones] closer to the city centre') incurring higher fares. 
 
 @jansson_is_2012 also described several alternative zoning approaches which they investigated. Their results were as follows:
 
-* __Ring zones__ resulted in only small increases in price for travelling between zones, but generated a too high a number of zones in the city centre to compensate for this.
+* __Ring zones__ resulted in only small increases in price for travelling between zones, but generated too high a number of zones.
 * __Dense, suburban, and rural zones__ suffered from a similar problem to ring zones: in order to keep "jumps" in fare for crossing zones minimal, too many zones had to be introduced in the city centre.
-* __Large central, small surrounding zones__ was found to be successful, with simplified transit in the both the city centre (where the majority of journeys occurred) and in the suburbs. However, there were then significant jumps in fare for travelling between zones.
-* __Three main zones__ spanning the entire area, whilst _very_ simple, was found to reduce fare revenue so much that extensive subsidisation was required.
-* __Single zone, with distance-based pricing__ was simple to implement and easy for customers to understand, but resulted in high prices for short trips (typically those in the city centre) which would have been unpopular.
-* __Munipal zones__ based on existing political boundaries were also easy for customers to understand, but resulted in some short journeys crossing many zones (and therefore being expensive), and long journeys remaining in just one zone (and therefore being cheap), countering one of the main aims of zone-based prices.
+* __A large central, with small surrounding zones__ was found to be successful. This model simplified transit in the both the city centre (where the majority of journeys occurred) and in the suburbs. However, there were more significant jumps in fare for travelling between zones.
+* __Three main zones__ spanning the entire area was _very_ simple, but found to reduce fare revenue so much that extensive subsidisation was required.
+* __A single zone, with distance-based pricing__ was also simple to implement and easy for customers to understand, but resulted in high prices for short trips (typically those in the city centre) which would have been unpopular.
+* __Munipal zones__ based on existing political boundaries were also easy for customers to understand, but resulted in some short journeys crossing many zones (and therefore being expensive), and long journeys remaining in just one zone (and therefore being cheap). This countered existing tranport pricing theory, and so was seen as a negative result.
 
-### Smartcards, data & analytics
+### Smart-cards, data & analytics
 
-After its public launch [@ctt_londons_2003], TfL's Oyster smartcard scheme grew massively. Oyster card technology was soon used in all London train stations [@ctt_foundations_2006] and the majority of journeys were made using an Oyster card [@ctt_10_2007]. 
+After its public launch [@ctt_londons_2003], TfL's Oyster smart-card scheme grew massively. Oyster card technology was soon used in all London train stations [@ctt_foundations_2006] and the majority of journeys were made using an Oyster card [@ctt_10_2007]. 
 
-@mcdonald_multipurpose_2000 provided an overview of some key benefits of smartcard technologies, finding that they reduce fraud, ticket failure and fare collection expenses; and increase ease-of-use for the customer. They were also found to enable the use of flexible fare polcies, something also noted by [@borndorfer_models_2012].
+@mcdonald_multipurpose_2000 provided an overview of some key benefits of smart-card technologies, finding that they reduce fraud, ticket failure and fare collection expenses; and increase ease-of-use for the customer. They were also found to enable the use of flexible fare polices, something also noted by [@borndorfer_models_2012].
 
-@chen_promises_2016 investigated travel patterns and how they can be used to guide investment. Whilst recognising the need to validate assumptions and inferences, they also noted that combining this data with other "big" data sources (including mobile device tracking data) could be critical for understanding route choices, or for inferring journey purposes. @pelletier_smart_2011 performed similar work using smartcard-based data to group passengers based on the similarity in their travel patterns and to investigate the differences in travel on weekdays and weekends.
+@chen_promises_2016 used smart-card data to investigate travel patterns and how they can be used to guide investment. Whilst recognising the need to validate assumptions and inferences, they also noted that combining this data with other sources (including mobile device tracking data) could be critical for understanding route choices, or for inferring journey purposes. @pelletier_smart_2011 performed similar work using smart-card data to group passengers based on the similarity in their travel patterns and to investigate the differences in travel on weekdays and weekends.
 
-@bagchi_potential_2005, however, noted that analysis of smartcard data should not be considered a 'utopian[n] replacement' for traditional approaches, and showed that smartcard data should be supplemented with other sources (e.g. customer surveys) in order to develop a holistic approach to understanding the transport system.
+@bagchi_potential_2005, however, noted that analysis of smart-card data should not be considered a 'utopian[n] replacement' for traditional approaches, and showed that smart-card data should be supplemented with other sources (e.g. customer surveys) in order to develop a holistic approach to understanding the transport system.
 
 ### Graphs and importance
 
-The use of graph analysis is not entirely new. @yeung_physics_2013 used it to perform route optimisation on the London Underground, finding that the "best" route was dependant not only on the network structure, but also on the routes taken by other users of the network. 
+@yeung_physics_2013 used graph analysis to perform route optimisation for the London Underground, finding that the "best" route was dependant not only on the network structure, but also on the routes taken by other users of the network. Although not focussed on transport, @yang_defining_2015 provided a set of useful criteria for evaluation communities/groups detected in graphs.
 
-Similarly, the measurement of station importance is also not revolutionary. @shimamoto_evaluating_2008 sought to define important stations based on the risks of overcrowding at stations when failures occurred in the network. Modelling both passenger arrival and "failure" to board a train probablistically, they found that certain key stations (namely Victoria) were found to be the most important in a number of different scenarios.
+Similarly, the measurement of station importance is also not revolutionary. @shimamoto_evaluating_2008 sought to define important stations based on the risks of overcrowding at stations when failures occurred in the network. Modelling both passenger arrival and "failure" to board a train probabilistically, they found that certain key stations (namely Victoria) were found to be the most important in a number of different scenarios.
+
+#### Literature Summary
+
+Pricing of public transport journies has been seen to generally be dependent on the distance travelled. Zone-based approaches extends this to include measures such as origin/destination importance into the price. 
+
+The use of smart-card technology, whilst also providing many benefits, has enabled and encouraged increasingly sophisticated analyses of transport systems to be undertaken. This has included efforts to use graph theory for route optimisation, and the evaluation of the importance of stations in the network.
+
+These factors show that approaching the design of fare-zones through graph-theoretical methods is not only novel, but also has basis in existing theory. Node importance measures are an alternative to arbitrary decision about which stations are important, and both these and community-detection methods can be used to capture existing practices for pricing journies based on distance travelled. The use of advanced data and analytical approaches for transport issues has also been shown to have academic justification.
 
 # Methodology
 
@@ -162,6 +187,7 @@ library(DT)
 library(networkD3)
 library(leaflet)
 library(knitr)
+library(ggbeeswarm)
 
 # Set up colour objects
 bakerloo <- rgb(red = 137, green = 78, blue = 36, maxColorValue = 255)
@@ -202,19 +228,19 @@ theme_jim <-  theme(legend.position = "bottom",
 
 ## Data Used
 
-The following data were obtained and used for the purposes of the analysis conducted in this assignment:
+The following data were obtained and used for the purposes of this analysis:
 
 * Transport for London Underground Station adjacency, fare zone and line information available as open-source data hosted on [Wikimedia](https://commons.wikimedia.org/wiki/London_Underground_geographic_maps/CSV#Routes) [-@wikimedia_london_2009]. Referred to as the "raw graph structure data"; 
 * Transport for London Underground inter-station distances [@tfl_distances_2013], made available by Transport for London under a Freedom of Information request in [2013](https://www.whatdotheyknow.com/request/distances_between_adjacent_oyste). Referred to as the "distances data"; and
 * Sample journey data provided by Transport for London [-@tfl_oyster_2009]. The data cover 5% of all Oyster card journeys made in one week in November 2009. The data are available through the Transport for London [API](https://tfl.gov.uk/info-for/open-data-users/our-feeds#on-this-page-6). Referred to as the "journey data".
 
-Examples of these data can be seen in appendix TODO.
+Examples of these data can be seen in appendix one.
 
 ## Graph creation
 
 ### Prepare and clean data
 
-The raw graph structure [@wikimedia_london_2009] and the distances data [@tfl_distances_2013] were loaded and some basic processing and cleaning (e.g. standardisation of the names of stations) was performed.
+The raw graph structure [@wikimedia_london_2009] and the distances data [@tfl_distances_2013] were loaded and some basic processing and cleaning (e.g. standardisation of station names) was performed.
 
 ```{r load_and_clean}
 # Load the data
@@ -300,7 +326,7 @@ station_dist_long <- stations_dist %>%
            station2 = `Station to (B)`) %>% 
     ungroup()
 
-# Standardise station names to match links data
+# Standardise station names to match graph structure data
 distances <- bind_rows(dlr_dist_long, station_dist_long) %>% 
     mutate(station1 = tolower(station1),
            station2 = tolower(station2),
@@ -368,7 +394,7 @@ links <- bind_rows(links, links %>%
                             rename(station2 = station3))
 
 # Clean up intermediate tables)
-rm(dlr_abbr, dlr_dist, dlr_dist_long, station_dist_long, adjacency, distances,
+rm(dlr_abbr, dlr_dist, dlr_dist_long, station_dist_long, adjacency,
    stations_dist)
 
 # Chop out line and distinct
@@ -384,10 +410,10 @@ tfl_graph <- graph_data %>%
 rm(graph_data)
 ```
 
-The journey data [@tfl_oyster_2009] were also loaded and filtered. These data contained a sample of _all_ journeys made with an Oyster card in one week of November 2009 (including bus journeys). As such these data were filtered to include only those journeys made on the London Underground, and only those that were fully pay-as-you-go (i.e. not using a daily/weekely/monthly travelcard). 
+The journey data [@tfl_oyster_2009] were also loaded and filtered. These data contained a sample of _all_ journeys made with an Oyster card in one week of November 2009 (including bus journeys). As such these data were filtered to include only those journeys made on the London Underground, and only those that were pay-as-you-go ("PAYG"). 
 
 ```{r load_filter_journeys, cache = T}
-# Usage data
+# Journey data
 journeys <- read_csv("./data/journeys/Nov09JnyExport.csv",
                      col_types = cols(downo = col_integer(),
                                       daytype = col_character(),
@@ -494,11 +520,11 @@ journeys <- journeys %>%
 
 ### Estimate journey routes
 
-In order to model the graph structure with edges weighted by trips between adjacent stations, it was necessary to estimate routes taken through the network based on sample journey data. These routes could then be used to correctly weight edges in the graph based on the number of journeys utilising each edge (e.g. a journey from A-D might use edges A-B, B-C, and C-D and each of these edges should be weighted). 
+In order to model the graph structure with edges weighted by trips between adjacent stations, it was necessary to estimate routes taken through the network based on sample journey data. These routes could then be used to correctly weight edges in the graph based on the number of journeys utilising each edge (e.g. a journey from A-D might use edges A-B, B-C, and C-D and each of these edges required weighting). 
 
-The journey data only provided the start and end point of the overall journey, and not the route taken. Therefore, it was necessary to determine the route for each journey. This was done by applying Dijkstra's [-@dijkstra_note_1959] algorithm to the intial graph structure, weighting the edges by the distance between adjacent stations found in the distances data. Whilst this method did not neccessarily return the _exact_ route taken by the customer on each journey, it provided a useful approximation in the absence of such data.
+As the journey data only provided the start and end point, and not the route taken, it was necessary to determine the route for each journey. This was done by applying Dijkstra's [-@dijkstra_note_1959] algorithm to the initial graph structure, weighting the edges by the distance between adjacent stations as listed in the distances data. Whilst this method did not necessarily return the _exact_ route taken by the customer on each journey, it provided a useful approximation in the absence of such data.
 
-Journeys in the journey data were de-duplicated, ensuring that a route for a particular journey was only calculated once. (This was done as many, popular, journeys occurred multiple times, e.g. Oxford Circus to Victoria). A simple function was defined to apply Dijkstra's algorithm and return the route path in an ordered list (with the first element corresponding to the starting station, the second element the second station, and so on up to the final station). 
+Journeys in the journey data were de-duplicated, ensuring that a route for a particular journey was only calculated once. A simple function was defined to apply Dijkstra's algorithm and return the route path in an ordered list (with the first element corresponding to the starting station, the second element the second station, and so on up to the final station). 
 
 ```{r get_routes, cache = T}
 # Dedupe journeys
@@ -520,11 +546,11 @@ routes <- distinct_journeys %>%
 
 ### Aggregate routes
 
-The routes calculated with this approach were then used to determine the number of daily trips between all adjacent stations in the graph. These daily trips were then to be used to weight the edges of the graph. 
+The routes were then used to determine the number of daily trips between all adjacent stations in the graph. These daily trips were then to be used to weight the edges of the graph. 
 
 For example, the route for a journey from Earl's Court to Pimlico was found to go from Earl's Court through Gloucester Road, South Kensington, Sloane Square, and Victoria to Pimlico. Therefore a single journey from Earl's Court to Pimlico needed to be used to add weight to several edges in the graph. 
 
-It was therefore necessary to summarise and aggregate _journeys_ at a _route_ level in order to correctly weight the graph structure to be used for the analysis. Per journey, all pairs of adjacent stations in the path between the start and the end were determined.
+It was therefore necessary to summarise and aggregate _journeys_ at a _route_ level to correctly weight the graph to be used for the analysis. Per journey, all pairs of adjacent stations in the path between the start and the end were determined.
 
 ```{r summarise_routes}
 # Set up routes per journey   
@@ -548,7 +574,7 @@ routes <- journeys %>%
               daily_trips = ceiling(daily_trips * 20))
 ```
 
-This summary was then joined with the graph structure data to add the daily trips between each pair of adjacent stations. Some pairs of adjacent stations in the graph structure were missing an esimation of the daily trips. This is because they were infrequently visited, outlying stations and no journeys were found to go through them. Such pairs of stations were set to have a number of trips equal to 25% of the average daily trips on their joining TfL tube line.
+This summary was then joined with the graph structure data to add the daily trips between each pair of adjacent stations. Some pairs of adjacent stations in the graph structure were missing an estimation of the daily trips. This is because they were infrequently visited, outlying stations and no journeys were found to go through them. Such pairs of stations were set to have a number of trips equal to 25% of the average daily trips on their joining tube line.
 
 ```{r add_}
 # Join in with links data
@@ -588,7 +614,7 @@ rm(graph_data)
 
 #### Figure `r figure`: TfL Underground graph structure
 
-_The graph structure of the TfL Underground in a force directed [@kobourov_spring_2012] layout. Nodes are sized based on the number of visits per day and coloured based on the fare zone which they are assigned to. The edge with is proportional to the number of route/journeys passing between the two adjoining stations each day. (Note: this figure is interactive)._
+_The graph structure of the TfL Underground in a force directed [@kobourov_spring_2012] layout. Nodes are sized based on the number of visits per day and coloured based on the fare zone which they are assigned to. Link widths are proportional to the number of route/journeys passing between the two adjoining stations each day. (Note: this figure is interactive)._
 
 ```{r show_graph}
 # Get the data in the right form
@@ -627,48 +653,63 @@ d3_nodes <- d3_nodes %>% left_join(daily_visits, by = "name_cln")
 
 ## Add daily_trips from links
 # First need to add names to d3_links
-d3_links <- d3_links %>% left_join(d3_nodes %>% select(node_id, name_cln), by = c("source" = "node_id")) %>% rename(station1 = name_cln)
-d3_links <- d3_links %>% left_join(d3_nodes %>% select(node_id, name_cln), by = c("target" = "node_id")) %>% rename(station2 = name_cln)
+d3_links <- d3_links %>% 
+    left_join(d3_nodes %>% select(node_id, name_cln), 
+              by = c("source" = "node_id")) %>% 
+    rename(station1 = name_cln)
+
+d3_links <- d3_links %>% 
+    left_join(d3_nodes %>% select(node_id, name_cln), 
+              by = c("target" = "node_id")) %>% 
+    rename(station2 = name_cln)
 
 # Add daily trips from links
-d3_links <- d3_links %>% left_join(links, by = c("station1", "station2")) %>% select(source, target, daily_trips, dist)
+d3_links <- d3_links %>% 
+    left_join(links, by = c("station1", "station2")) %>% 
+    select(source, target, daily_trips, dist)
 
 # Set up custom colour scale
 ColourScale <- 'd3.scale.ordinal()
             .domain(["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"])
-           .range(["#1B9E77", "#D95F02", "#7570B3", "#E7298A", "#66A61E", "#E6AB02", "#A6761D", "#666666", "#6a3d9a", "#c51b7d"]);'
+           .range(["#1B9E77", 
+                    "#D95F02", 
+                    "#7570B3",
+                    "#E7298A",
+                    "#66A61E", 
+                    "#E6AB02", 
+                    "#A6761D", 
+                    "#666666", 
+                    "#6a3d9a", 
+                    "#c51b7d"]);'
 
 # Make the plot
 forceNetwork(Links = d3_links, Nodes = d3_nodes, Nodesize = "n",
-             Value = "daily_trips", linkWidth = JS("function(d){return Math.log(d.value)-5;}"),
+             Value = "daily_trips", 
+             linkWidth = JS("function(d){return Math.log(d.value)-5;}"),
              Source = 'source', Target = 'target', NodeID = 'name', charge = -75,
              radiusCalculation = JS("d.nodesize+5"),
              Group = 'zone', colourScale = JS(ColourScale),
-             zoom = T, opacity = .9, legend = F)
+             zoom = T, opacity = .9, legend = F, width = 800)
 ```
 
-```{r legend}
-include_graphics("./Screenshot from 2016-08-18 13:42:21.png")
-```
-
-
-```{r include = F}
-figure <- figure + 1
-```
-
+`r figure <- figure + 1`
 
 ## Alternative zoning approaches
+
+Building on the statements of @montella_multimodal_2014 that zones are created based on station importance, or administrative arguments [@jansson_is_2012], and seeking to avoid arbitrary decisions about the creation of fare zones [@_this_2016], the use of graph-based approaches extends existing analytical approaches to understanding transport systems [@yeung_physics_2013].
 
 ### Importance-based zones
 
 #### Station importance
 
-In order to determine the importance of a station, several common node properties were calcualted:
+The first approach was to to determine the importance of a station and use this information to group stations in to zones. Adopting a different approach that used by @shimamoto_evaluating_2008, common graph-theoretical measures of node importance were calculated for each station:
 
-* __Degree__ [@opsahl_node_2010] measures the number of edges incident on a node. In this context it can be thought of as, for each station, how many other stations are connected to it directly.
-* __Betweenness__ [@freeman_centrality_1979; @brandes_faster_2001] measures the number of paths going through each node. In this context it can be thought of as how likely it is that travellers will visit or pass through it on other journeys, or how much "connectivity" it provides to the network.
+* __Degree__ [@opsahl_node_2010] measures the number of edges incident on a node. In this context it was thought of as, for each station, how many direct links it has to other stations.
+* __Betweenness__ [@freeman_centrality_1979; @brandes_faster_2001] measures, for each node, how many other nodes are connected on their shortest path through that node. In this context it was thought of as how likely it is that travellers will visit or pass through a station on other journeys, or how much "connectivity" it provides to the network.
 * __Closeness__ [@freeman_centrality_1979; @newman_scientific_2001] measures how many steps exist between each node and all other nodes in the network. In this context, it can be thought of as how central the station is in the overall network (i.e. does it lie at the end of a long branch, or close to the middle of London).
-* __Eigenvector centrality__ [@bonacich_power_1987] measures the importance of a node based on how important it is, and how important its neighbours are. In this context it can be thought of as a combination of how connected a station is, and how connected its adjacent stations are.
+* __Eigenvector centrality__ [@bonacich_power_1987] measures the importance of a node based on its own _and_ its neighbours importance. In this context it was thought of as a combination of how busy/connected a station is, and how busy/connected its adjacent stations are.
+
+Each of these measures in some way captured existing theory for the creation of fare zones.
 
 ```{r centralities}
 # Degree centrality
@@ -690,16 +731,17 @@ V(tfl_graph)$eig <- eig_cent$vector
 
 #### Define zones
 
-In order to define fare zones based on station importance, it was necessary to group stations together. To make these zones more comparable to their real-life equivalents a simple decile rank was applied to each measure of station importance. 
+In order to define fare zones based on station importance, it was necessary to group stations together. To make these zones comparable to their real-life equivalents a simple decile rank was applied to each measure of station importance to form ten zones. The real life zones were not equally distributed (i.e. there were more zone 1 stations than zone 10). This was not the case for the decile-ranked zones, a weakness of this approach.
 
 ```{r centrality_stats}
-# Convert to data frame of centrality stats
+# Convert graph object to data frame of centrality stats
 station_centrality_stats <- data_frame(station = names(V(tfl_graph)),
                             deg = V(tfl_graph)$deg,
                             eig = V(tfl_graph)$eig,
                             bet = V(tfl_graph)$bet,
                             clo = V(tfl_graph)$close)
 
+# Use decile-ranks to form 10 fare zones
 station_importance_zones <- station_centrality_stats %>% 
     gather(method, value, -station) %>% 
     group_by(method) %>% 
@@ -708,19 +750,19 @@ station_importance_zones <- station_centrality_stats %>%
     spread(method, zone)
 ```
 
-The real life zones were not equally distributed (i.e. there were more zone 1 stations thatn zone 10). This was not the case for the decile-ranked, importance-based zones, representing a weakness of this approach.
-
 ### Graph-community zones
 
 #### Discovering communities
 
-There are a range of community detection algorithms, each with varying performance characteristics [@lancichinetti_community_2009]. Such algorithms can be used to detect and label groups of "similar" nodes in a graph (with the definition of similarity varying across the algorithms). 
+The second approach to creating fare zones, was to directly use the structure of graph to find _communities_ of related stations. There are a range of community detection algorithms, each with varying performance characteristics [@lancichinetti_community_2009]. 
 
-In order to define zones based on communities of stations in the graph, three alternative algorithms were used:
+Three alternative algorithms were used in this analysis:
 
-* __Walktrap__ [@pons_computing_2005]. This algorithm detects communities by performing random walks on the graph. The algorithm records the nodes visited in each walk and uses the results to partition the graph in to communities of nodes that frequently occurred in the same walk. In this context, such communities can be imagined to be groups of stations located in close proximity, or on the same train line.
-* __Edge betweenness__ [@newman_finding_2004]. This algorithm detects communities based on the _betweeness_ metric of the edges in the graph. The algorithm iteratively removes the edge with the largest betweeness value, dividing the graph into groups and ultimately into invididual nodes. Recording this process, it uses the results to construct communities. In this context, such communities will be defined by stations which serve as "hubs" connecting outlying branches of the graph to the more highly connected centre.
-* __Spinglass__ [@reichardt_statistical_2006]. This algorithm uses a more abstract approach to community detection. Briefly, it uses ideas from statistical physics/mechanics to identify groups of nodes which are in some way "similar". In this context it is difficult to suggest a practical intuition which can be used to describe the algorithmic approach. 
+* __Walktrap__ [@pons_computing_2005]. This algorithm detects communities by performing random walks on the graph. The algorithm records the nodes visited in each walk and uses the results to partition the graph in to communities of nodes that frequently occurred in the same walk. In this context, such communities can be imagined to be groups of stations located in close proximity, perhaps on the same tube line.
+* __Edge betweenness__ [@newman_finding_2004]. This algorithm detects communities based on the _betweeness_ metric of the edges in the graph (similar to node betweenness mentioned above). The algorithm iteratively removes the edge with the largest betweenness value, dividing the graph into groups and ultimately into individual nodes. Recording this process, it uses the results to construct communities. In this context, such communities are defined by stations which serve as "hubs" connecting outlying branches of the graph to the more highly connected centre.
+* __Spinglass__ [@reichardt_statistical_2006]. This algorithm uses a more abstract approach to community detection. Using ideas from statistical physics/mechanics it identifies groups of nodes which are in some way "similar". In this context "similarity" was defined as a combination of a station's connections to other stations and how frequently it was travelled to or through in the journey data. 
+
+For each algorithm, ten station communities were created in order to draw comparisons with the existing ten fare zones. Both the _walktrap_ and _edge betweenness_ algorithms are hierarchical (i.e. some communities may be super/subsets of one another), meaning that is possible by combining smaller communities to form ten overall communities. The _spinglass_ algorithm has a parameter which was used to pre-specify the number of communities.
 
 ```{r graph_communities}
 # Hierarchical methods - use cut_at to chop up
@@ -729,11 +771,7 @@ clust_w <- cluster_walktrap(tfl_graph, steps = 10, weights = E(tfl_graph)$dist)
 clust_eb <- cluster_edge_betweenness(tfl_graph, directed = T, weights = E(tfl_graph)$dist)
 # n.b. spins sets number of clusters
 clust_sg <- cluster_spinglass(tfl_graph, spins = 10, weights = E(tfl_graph)$dist)
-```
 
-As both the _walktrap_ and _edge betweenness_ algorithms are hierarchical, the results were used to create a specified number of communities. The _spinglass_ algorithm has a parameter which was used to pre-specify the number of communities. In each case, ten station communities were specified in order to draw comparisons with the existing ten fare zones. 
-
-```{r station_cluster_stats}
 # Create dataframe of results
 station_cluster_stats <- data_frame(station = names(V(tfl_graph)),
                                    eb = cut_at(clust_eb, no = 10),
@@ -745,7 +783,9 @@ station_cluster_stats <- data_frame(station = names(V(tfl_graph)),
 
 ### Basic similarity measures
 
-Salton's cosine similarity[-@Salton:1986:IMI:576628] measure was used to compare the differences in importance-based fare zones. Such comparisons were made both between each zoning approach, and with the existing fare-zones.
+Salton's cosine similarity [-@Salton:1986:IMI:576628] measure was used to compare the differences in importance-based and existing fare zones (as zone 1 was the most - and zone 10 the least - important in both cases). 
+
+Given that zone labels for the the community-based zones were created in an arbitrary manner (i.e. the zones are purely categorical, not ordinal), this was not done for the community-based approach.
 
 ```{r cosine}
 cosines <- station_importance_zones %>% 
@@ -764,7 +804,7 @@ cosines <- station_importance_zones %>%
 
 ### Financial approach
 
-Using the journeys data, it was possible to calculate the total fares charged to Oyster pay-as-you-go customers on each day of the week.
+Using the journeys data, it was possible to calculate the total zone-zone fares charged to Oyster PAYG customers on each day of the week.
 
 ```{r journey_summary}
 # Group and total
@@ -878,15 +918,13 @@ tukey <- broom::tidy(tukey) %>%
                    adj.p.value = round(adj.p.value, 3))
 ```
 
-
-The results of this analysis are presented in the results section.
+Again, as the zone labels for the community-based zones were entirely categorical (unlike the ordinal labels for the existing and importance-based zones) this approach was taken only for the importance based zones. The results of this analysis are presented in the results section.
 
 ### Graph theoretical approach
 
-As the station communities were more arbitrarily defined than the importance-based zones, comparisons of estimated fares were not made. Instead, metrics suggested by 
-Yang and Leskovec [-@yang_defining_2015] were used to measure the "goodness" of the detected communities. The same metrics were calculated for the existing fare zones and the results compared.
+Metrics suggested by @yang_defining_2015 were used to measure the "goodness" of the detected communities for the community-based aproach. The same metrics were calculated for the existing fare zones and the results compared.
 
-Yang and Leskovec [-@yang_defining_2015] state that "good" communities are small, with many links between nodes _within_ the community and a small number of links connected to other communities.
+Yang and Leskovec state that "good" communities are small, with many links between nodes _within_ the community and a small number of links connected to other communities.
 
 Amongst other metrics, they define the _density_ and _separability_ of a community:
 
@@ -898,9 +936,9 @@ Density = \dfrac{m_S}{n_s(n_s-1)/2}
 Separability = \dfrac{m_S}{c_S}
 \end{equation}
 
-Where $n_S$ is the number of nodes _within_ the community, $m_S$ the number of edges entirely within the community and $c_S$ the number of edges link the community to another community.
+Where $n_S$ is the number of nodes in the community, $m_S$ the number of edges entirely within the community and $c_S$ the number of edges link the community to another community.
 
-These metrics were calculated for each of the communities detected using the three algorithms mentioned above, as well as for the existing fare zones.
+These metrics were calculated for each of the communities detected, as well as for the existing fare zones.
 
 ```{r community_metrics}
 get_cluster_stats <- function(how, data) {
@@ -952,7 +990,7 @@ community_metrics <- lapply(methods, get_cluster_stats,
                             data = station_cluster_stats) %>% bind_rows()
 ```
 
-The statistical differences in these metrics were calculated for each of the community detection algorithms using Tukey's Honest Significant Differences.
+The statistical differences in these metrics were calculated for each of the community detection algorithms, again using Tukey's Honest Significant Differences [@tukey_comparing_1949].
 
 ```{r tukey_dens_sep}
 fit_sep <- aov(Separability ~ method, community_metrics)
@@ -981,19 +1019,13 @@ tukey_den <- TukeyHSD(fit_den, conf.level = .95) %>%
 
 ### Zone Rankings
 
-Each of the zones created under the two alternative zoning approaches were compared with the current zones that TfL uses, using the criteria for pricing schemes set out by @daskin_quadratic_1988 as a measure. Given the ease with which these zoning approaches can be implemented, Daskin's critera of feasibility of implementation was not considered. The follwing scale was used to perform this ranking:
+Each of the zones created under the two approaches were qualitatively compared with the current fare zones, using the criteria set out by @daskin_quadratic_1988. Given the ease with which these zoning approaches can be implemented, Daskin's criteria of 'feasibility of implementation' was not considered. The following scale was used to perform this ranking:
 
 * +2 - significantly better than existing zones;
 * +1 - marginally better;
 * 0 - no change;
 * -1 - marginally worse than existing zones; and
-* -2 - siginficatly worse than existing zones
-
-* sensitive to the many issues involved in transport fares (both from the provider's _and_ the user's perspective);
-* based on appropriate economic, political, and analytical theory;
-* easy for the end-user to understand;
-* feasible to implement; and
-* evaluation ease
+* -2 - significantly worse than existing zones
 
 ```{r zone_rankings}
 # Set up daskin issues
@@ -1029,7 +1061,9 @@ community_daskin_rankings <- tibble(Method = c("Edge Betweenness", "Spinglass", 
 
 ## Importance-based zones
 
-Station importance was found to vary substantially based on the metric used to calculate it. Figure `r figure` shows (normalised) station importance for each line in the TfL underground for each of the importance metrics used. Intuitively, in this setting, the four methods each measure different aspects of the TfL network. Closeness and eigenvector centrality measure how central a the proximity to central London and importance, respectively. Degree centrality could be imagined to measure the "usefulness" of each station, independant of the other stations it was connected to (with usefulness being directly proportional to the number of adjacent stations). Betweeness measures how much each station helps to connect the overall network, and could be used to identify critical points in the network. The analytical differences between these zones and the existing fare zones are presented below.
+Station importance was found to vary substantially based on the metric used to calculate it. Figure `r figure` shows the distribution of (normalised) station importance for each line in the TfL underground for each of the importance metrics used. 
+
+For example, eigenvector centrality measures were clearly dominated by a few stand-out stations, with only small variations otherwise. Some lines did "better" on some measures than others, e.g. the Docklands Light Railway generally had a high closeness score, but a very low betweenness. The impact of such differences is explored below.
 
 #### Figure `r figure`: Normalised station importance metrics
 
@@ -1051,39 +1085,32 @@ links %>%
     mutate(value_norm = (value - mean(value)) / sd(value),
            name = gsub(" Line", "", name),
            name = gsub("East London", "Overground", name)) %>% 
-    ggplot(aes(x = name, y = value_norm, fill = name)) +
-    geom_boxplot() +
-    #geom_point(aes(colour = name), alpha = 0.75) + 
-    scale_fill_manual(values = c(bakerloo, central, circle, district, dlr, hc,
-                                 jubilee, metropolitan, northern, overground,
-                                 picadilly, victoria, wc)) +
+    ggplot(aes(y = name, x = value_norm, colour = name)) +
+    geom_quasirandom(alpha = .75) +
     scale_colour_manual(values = c(bakerloo, central, circle, district, dlr, hc,
                                  jubilee, metropolitan, northern, overground,
                                  picadilly, victoria, wc)) +
     facet_wrap(~method) +
-    coord_flip() +
     xlab("") +
     ylab("") +
     guides(fill = FALSE,
            colour = FALSE) +
-    theme_jim +
-    theme(axis.text.y = element_text(size = 10),
-          axis.text.x = element_text(size = 10))
+   theme_minimal()
 ```
 
-```{r include = F}
-figure <- figure + 1
-```
+`r figure <- figure + 1`
 
 ### Basic similarity
 
-The importance-based zones did not appear to be geographically distinct from one another (appendix TODO) in the same way as the existing fare zones. However, when measured with Salton's [-@Salton:1986:IMI:576628] cosine measure, the zones defined using station importance metrics showed a high similarity with each other, and with the exising fare zones. This was slightly surprising given the forced, equal distribution of the number of stations in each importance-based zone (not the case for the existing zones).
+The importance-based zones did not appear to be geographically distinct from one another (appendix TODO) in the same way as the existing fare zones. However, when measured with Salton's [-@Salton:1986:IMI:576628] cosine measure, the zones defined using station importance metrics generally showed a high similarity with the existing fare zones (table `r table`). This was slightly surprising given the forced, equal distribution of the number of stations in each importance-based zone (not the case for the existing zones).
 
 ```{r show_cosine}
-cosines %>% kable(caption = "Cosine similarity measures between zones defined using importance-based metrics and the existing TfL payment zones.")
+cosines %>% kable(caption = paste0("Table ", table, ": Cosine similarity measures between zones defined using importance-based metrics and the existing TfL payment zones."))
 ```
 
-Eigenvector centrality-based zoning produced the most similar results to the existing zones, and closeness-based zones also showed a high similarity with the existing zones. This was an intuitive result: the current fare zones are defined in some way based on a station's proximity to central London (similar to closeness) and it's importance in daily London life (similar to Eigenvector centrality). It therefore made sense that these two measures showed the most similarity with the existing model.
+`r table <- table + 1`
+
+Eigenvector centrality-based zone produced the most similar results to the existing zones, and closeness-based zones also showed a high similarity with the existing zones. This was intuitive: the current fare zones are defined in some way based on a station's proximity to central London (similar to closeness) and it's importance in daily London life (similar to Eigenvector centrality). It therefore made sense that these two measures showed the most similarity with the existing model.
 
 ### Financial differences
 
@@ -1110,15 +1137,15 @@ fare_estimations %>%
     theme_jim
 ```
 
-```{r include = F}
-figure <- figure + 1
-```
+`r figure <- figure + 1`
 
-The alternative approaches consistently out-performed the current zoning approach when considering expected daily fares (Tfl Underground, Oyster-PAYG only). 
+The alternative approaches consistently out-performed the current zoning approach when considering expected daily, Oyster-PAYG fares. 
 
-Zones created through closeness measures most closely matched the figures for the current zones, which was to be expected given the similarities in how they are defined (based on distance to all other stations). The increase in fares based on closeness zones relative to the current zone model was probably due to the equal distribution of stations to zones enforced by the decile-rank approach to creating the zones. 
+Zones created through closeness most closely matched the figures for the current zones, which was to be expected given the similarities in how they are defined. The increase in fares based on closeness zones relative to the current zone model was probably due to the equal distribution of stations to zones enforced by the decile-rank grouping approach creating a greater number of (more expensive) intra-zone journies. 
 
-Betweenness and degree centrality-based zones were found to perform "best", i.e. generated the highest fares. This is due to the fact that many of the stations have large differences in zone when moving from the importance-based to the current fare zone models (appendix TODO). For example, Regent's Park station is currently in fare zone 1 due to it's proximity to central London. However, as it is not a well-visited station on one of the less-busy lines (the Bakerloo line), it is placed in to zone 10 for by betweenness-based zoning. Eigenvector centrality-based zoning also out-performed the current fare zones and was found to produce results most similar to the existing zones. 
+Betweenness and degree centrality-based zones were found to perform "best", i.e. generated the highest fares. This is due to the fact that many of the stations have large differences in zone when moving from the importance-based to the current fare zone models (appendix TODO). For example, Regent's Park station is currently in fare zone 1 (due to it's proximity to central London). However, as it is not a well-visited station on one of the less-busy lines (the Bakerloo), it is placed in to zone 10 by betweenness-based zoning. 
+
+Eigenvector centrality-based zoning also out-performed the current fare zones which, when coupled with the founding that it produced results most similar to the existing zones, suggests it could be the most promising of the four approaches.
 
 However, none of the differences in estimated fare were found to be statistically significant as measured by Tukey's Honest Significant Differences [-@tukey_comparing_1949] (table `r table`).
 
@@ -1127,32 +1154,28 @@ tukey %>% kable(col.names = c("Comparison", "Fare difference (£)", "p-Value"),
                 caption = paste0("Table ", table, ": Tukey HSDs for financial differences in zoning approach"))
 ```
 
-```{r include = F}
-table <- table + 1
-```
-
+`r table <- table + 1`
 
 ### Daskin's Rankings
 
-The rankings against the criteria set out by @daskin_quadratic_1988 are listed in table TODO.
+The rankings against the criteria set out by @daskin_quadratic_1988 are listed in table `r table`.
 
 ```{r show_importance_daskin_rankings}
 kable(importance_daskin_rankings, 
       caption = paste0("Table ", table, ": Rankings of importance-based zones against the existing fare zones using Daskin's proposed criteria."))
 ```
 
-```{r include = F}
-table <- table + 1
-```
+`r table <- table + 1`
+
+Whilst eigenvector-based methods performed the best in the other comparisons, they are likely too complicated for customers to understand, a significant negative mark against them in Daskin's criteria.
 
 ## Graph-community zones
 
 ### Geographical distribution
 
-The graph communities discovered by the three algorithms employed generally showed distinct geographical separation from one another (figure `r figure`).
+The graph communities discovered by the three algorithms employed generally showed distinct geographical separation from one another (figure `r figure`) (a factor found to be useful by @jansson_is_2012).
 
-
-#### Figure `r figure`: The geographic distribution of existing and graph-community zones. 
+#### Figure `r figure`: The geographic distribution of existing and graph-community based zones. 
 
 _The figure is interactive, select a community detection algorithm and toggle area names on/off with the buttons provided._
 
@@ -1208,23 +1231,21 @@ leaflet(width = 800) %>%
                      options = layersControlOptions(collapsed = F))
 ```
 
-```{r include = F}
-figure <- figure + 1
-```
+`r figure <- figure + 1`
 
-The geographical distribution of communities defined using edge betweenness show the most similarity with the exising zones. There is a clear central zone, surrounded by radial/branch zones which could be broken down by geographic region or using a similar approach to that used for London postcodes. 
+The geographical distribution of communities defined using edge betweenness show the most similarity with the existing zones. There is a clear central zone, surrounded by radial/branch zones which could be broken down by geographic region, perhaps using a similar approach to that used for London postcodes. 
 
-The walktrap algorithm did not performed well in this setting: there is little intuitive distinction between communities when viewed geographically.
+The walktrap algorithm did not performed well in this setting: there is little intuitive distinction between communities when viewed geographically. 
 
-Whilst not as geographically distinct as the edge-betweenness communities, the spinglass algorithm generated generated clear communities which could be used to create fare zones relatively simply. 
+Whilst not as geographically distinct as the edge-betweenness communities, the spinglass algorithm generated generated clear communities which could be used to create fare zones relatively simply, especially with the use of other data, such as socio-ecomoic factors. 
 
 ### Theoretical properties
 
-The density and separability [@yang_defining_2015] metrics for each approach (along with the existing zones) are showm in figure `r figure`.
+The density and separability [@yang_defining_2015] metrics for each approach (along with the existing zones) are shown in figure `r figure`.
 
-Discounting the walktrap algorithm (based on its poor performance when viewing the results geographically), the best approach appears to be the edge betweenness algorithm. It generates dense communities which are separable from each other. Spinglass also performed well, although the communities it detected were less dense and less separable thant those for edge-betweenness.
+Discounting the walktrap algorithm (based on its poor performance when viewing the results geographically), the best approach appears to be edge betweenness. It generates dense, separable communities. Spinglass also performed well, although the communities it detected were less dense and less separable than those for edge-betweenness.
 
-Both edge betweenness and spinglass generated communities which were more dense and more separable than the existing fare zones. The differences in density were not statistically significant when measured using Tukey's Honest Significant Differences (tables `r table` and `r table+1`), however edge betweenness produced significantly more separable clusters than the current zones. 
+Both edge betweenness and spinglass generated communities were more dense and more separable than the existing fare zones. The differences in density were not statistically significant when measured using Tukey's Honest Significant Differences (tables `r table` and `r table+1`), however edge betweenness produced significantly more separable clusters than the current zones. 
 
 This results was not, however, particularly surprising as the existing zones were generated in such a different manner than the graph communities. 
 
@@ -1246,38 +1267,34 @@ community_metrics %>%
     guides(fill = FALSE) + 
     xlab("") +
     ylab("") +
-    theme_jim
+    theme_minimal()
 ```
 
-```{r include = F}
-figure <- figure + 1
-```
+`r figure <- figure + 1`
 
 ```{r show_tukey_dens}
 tukey_den %>% kable(col.names = c("Comparison", "Difference", "p-Value"),
                 caption = paste0("Table", table, ": Tukey HSDs for differences in community densities"))
 ```
 
-```{r include = F}
-table <- table + 1
-```
+`r table <- table + 1`
 
 ```{r show_tukey_sep}
 tukey_sep %>% kable(col.names = c("Comparison", "Difference", "p-Value"),
                 caption = paste0("Table", table, ": Tukey HSDs for differences in community separability"))
 ```
 
-```{r include = F}
-table <- table + 1
-```
+`r table <- table + 1`
 
 ### Daskin's Rankings
 
-The rankings against the criteria set out by @daskin_quadratic_1988 are listed in table TODO.
+The rankings against the criteria set out by @daskin_quadratic_1988 are listed in table `r table`.
 
 ```{r show_community_daskin_rankings}
-kable(community_daskin_rankings, caption = "Table TODO: Rankings of graph community-based zones against the existing fare zones using Daskin's proposed criteria.")
+kable(community_daskin_rankings, caption = paste0("Table ", table, ": Rankings of graph community-based zones against the existing fare zones using Daskin's proposed criteria."))
 ```
+
+`r table <- table + 1`
 
 # Conclusions & Recommendations
 
@@ -1285,7 +1302,7 @@ kable(community_daskin_rankings, caption = "Table TODO: Rankings of graph commun
 
 This report has shown that novel approaches to the creation of fare zones could be used to help TfL change its approach to pricing on the London underground. Both theoretical and practical considerations have born this out, demonstrating the possibility of using such data-driven methods as these.
 
-Node importance measure-based zoning approaches showed good overalp with existing the zones, and could result in potentially higher fare revenues under the existing charge scheme. Community-detection algorithms were able to identify groups of stations with good graph-theoretical properties, and which showed a similar geographic distinction as the existing zones. 
+Node importance measure-based zoning approaches showed good overlap with existing the zones, and could result in potentially higher fare revenues under the existing charge scheme. Community-detection algorithms were able to identify groups of stations with good graph-theoretical properties, and which showed a similar geographic distinction as the existing zones. 
 
 In both approaches, some methods proved better than others. For station importance-based zones, closeness and eigenvector centrality measures generated the best results (both in terms of similarity with existing zones, and using estimations of resulting fare revenues). The edge-betweenness and spinglass algorithms produced the best outcomes for graph community based zones when considering the geographical intuition of the resulting zones, and their evaluation against existing criteria [@daskin_quadratic_1988].
 
@@ -1297,9 +1314,41 @@ Having concluded that methods such as these could offer a potential new avenue f
 
 Social, as well as technical and financial considerations are critical and any solution proposed to help TfL manage the loss of its subsidy should be evaluated with this in mind. 
 
-It is therefore recommended that TfL continue to provide their services as they currently plan to, whilst rigourously assessing alternative pricing and cost-reduction strategies that may help them to alleviate the effects of losing their subsidy.
+It is therefore recommended that TfL continue to provide their services as they currently plan to, whilst rigorously assessing alternative pricing and cost-reduction strategies that may help them to alleviate the effects of losing their subsidy.
+
+***
 
 # Appendices
+
+#### Appendix `r app`: _Examples of raw data used_
+
+__Raw graph structure data__:
+
+```{r raw_graph_struc, echo = F}
+links %>% 
+    select(line, station1, station2) %>% 
+    sample_n(10) %>% 
+    kable(col.names = c("Line", "Station 1", "Station 2"))
+```
+
+__Distances data__:
+
+```{r raw_distances, echo = F}
+distances %>% 
+    sample_n(10) %>% 
+    kable(col.names = c("Line", "Station 1", "Station 2", "Distance (km)"))
+```
+
+__Journey data__:
+
+```{r raw_journeys}
+journeys %>% 
+    sample_n(10) %>% 
+    select(daytype, startstn, endstation, enttimehhmm, extimehhmm, dfare) %>% 
+    kable(col.names = c("Day", "From", "To", "Start time", "End time", "Fare (p)"))
+```
+
+`r app <- app + 1`
 
 #### Appendix `r app`: _Software packages used_
 
@@ -1315,6 +1364,7 @@ The `R` language [@cite_r] was used to perform the data manipulation, modelling 
 * `lsa` [@wild_lsa:_2015];
 * `broom` [@robinson_broom:_2016];
 * `ggplot2` [@wickham_ggplot2:_2016];
+* `ggbeeswarm` [@clarke_ggbeeswarm:_2016];
 * `networkD3` [@gandrud_networkd3:_2016];
 * `leaflet` [@cheng_leaflet:_2016]; and
 * `DT` [@xie_dt:_2016].
@@ -1325,21 +1375,9 @@ app <- app + 1
 
 <br>
 
-#### Appendix `r app`: _Cleaned graph structure data._
-
-```{r}
-datatable(links, colnames = c("Line", "From", "To", "Distance (km)", "Daily trips"))
-```
-
-```{r include = F}
-app <- app + 1
-```
-
-<br>
-
 #### Appendix `r app`: _The geographic distribution of existing and importance-based fare zones. The figure is interactive, select a fare-zoning approach and toggle area names on/off with the buttons provided._
 
-```{r}
+```{r, echo = F}
 # Create plotting data
 clusters <- station_importance_zones %>% 
     left_join(station_details %>% 
@@ -1398,7 +1436,7 @@ app <- app + 1
 
 #### Appendix `r app`: _The list of stations and their associated, importance-based fare zones._
 
-```{r show_imp_fare_zones}
+```{r show_imp_fare_zones, echo = F}
 # Create plotting data
 station_importance_zones %>% 
     left_join(station_details %>% 
