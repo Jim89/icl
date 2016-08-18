@@ -13,8 +13,8 @@ output:
   word_document:
     toc: no
 bibliography:
-- refs.bib
-- extra.bib
+- refs/refs.bib
+- refs/extra.bib
 ---
 
 ```{r knitr_setup, include=FALSE}
@@ -588,17 +588,29 @@ rm(graph_data)
 
 #### Figure `r figure`: TfL Underground graph structure
 
-_The graph structure of the TfL Underground in a force directed [@kobourov_spring_2012] layout. Nodes are sized based on the number of visits per day and coloured based on the fare zone which they are assigned to. (Note: this figure is interactive)._
+_The graph structure of the TfL Underground in a force directed [@kobourov_spring_2012] layout. Nodes are sized based on the number of visits per day and coloured based on the fare zone which they are assigned to. The edge with is proportional to the number of route/journeys passing between the two adjoining stations each day. (Note: this figure is interactive)._
 
 ```{r show_graph}
+# Get the data in the right form
 d3_data <- igraph_to_networkD3(tfl_graph, group = rep(1, length(V(tfl_graph))))
-d3_data$nodes <- d3_data$nodes %>% 
+
+# Convert to tibble and separate objects
+d3_links <- as_data_frame(d3_data$links)
+d3_nodes <- as_data_frame(d3_data$nodes)
+
+# Add node id and convert name to character
+d3_nodes <- d3_nodes %>% mutate(node_id = row_number()-1,
+                                name = as.character(name))
+
+# Join on the zone info to the nodes (stations)
+d3_nodes <- d3_nodes %>% 
     left_join(station_details %>% select(name, name_cln, zone_cln),
               by = c("name" = "name_cln")) %>% 
-    select(name, name.y, zone_cln) %>% 
+    select(name, name.y, zone_cln, node_id) %>% 
     rename(name = name.y,
            name_cln = name,
-           group = zone_cln)
+           zone = zone_cln) %>% 
+    mutate(name = paste(name, "- Zone", zone))
 
 # Get estimated visits
 daily_visits <- journeys %>% 
@@ -610,8 +622,16 @@ daily_visits <- journeys %>%
     ungroup() %>% 
     mutate(n = (n - mean(n))/sd(n))
 
-# Tag stations
-d3_data$nodes <- d3_data$nodes %>% left_join(daily_visits, by = "name_cln")
+# Tag stations with daily visits
+d3_nodes <- d3_nodes %>% left_join(daily_visits, by = "name_cln")
+
+## Add daily_trips from links
+# First need to add names to d3_links
+d3_links <- d3_links %>% left_join(d3_nodes %>% select(node_id, name_cln), by = c("source" = "node_id")) %>% rename(station1 = name_cln)
+d3_links <- d3_links %>% left_join(d3_nodes %>% select(node_id, name_cln), by = c("target" = "node_id")) %>% rename(station2 = name_cln)
+
+# Add daily trips from links
+d3_links <- d3_links %>% left_join(links, by = c("station1", "station2")) %>% select(source, target, daily_trips, dist)
 
 # Set up custom colour scale
 ColourScale <- 'd3.scale.ordinal()
@@ -619,12 +639,18 @@ ColourScale <- 'd3.scale.ordinal()
            .range(["#1B9E77", "#D95F02", "#7570B3", "#E7298A", "#66A61E", "#E6AB02", "#A6761D", "#666666", "#6a3d9a", "#c51b7d"]);'
 
 # Make the plot
-forceNetwork(Links = d3_data$links, Nodes = d3_data$nodes, Nodesize = "n",
-             Source = 'source', Target = 'target', NodeID = 'name', 
+forceNetwork(Links = d3_links, Nodes = d3_nodes, Nodesize = "n",
+             Value = "daily_trips", linkWidth = JS("function(d){return Math.log(d.value)-5;}"),
+             Source = 'source', Target = 'target', NodeID = 'name', charge = -75,
              radiusCalculation = JS("d.nodesize+5"),
-             Group = 'group', colourScale = JS(ColourScale),
-             zoom = T, opacity = 1, legend = T, width = 800, bounded = F)
+             Group = 'zone', colourScale = JS(ColourScale),
+             zoom = T, opacity = .9, legend = F)
 ```
+
+```{r legend}
+include_graphics("./Screenshot from 2016-08-18 13:42:21.png")
+```
+
 
 ```{r include = F}
 figure <- figure + 1
