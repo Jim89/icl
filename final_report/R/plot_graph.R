@@ -2,8 +2,7 @@
 library(readr)
 library(stringr)
 library(igraph)
-library(dplyr)
-library(ggplot2)
+library(tidyverse)
 library(ggforce)
 library(ggraph)
 
@@ -52,8 +51,6 @@ journeys <- read_csv("./data/journeys/Nov09JnyExport.csv",
                                       FinalProduct = col_character()))
 
 names(journeys) <- names(journeys) %>% tolower()
-
-
 
 # Step 2 - clean data -----------------------------------------------------
 # Set up clean lower-case name, and rounded zone-number in station details
@@ -139,7 +136,7 @@ distinct_journeys <- journeys %>%
     select(start_nm, end_nm) %>% 
     distinct() %>% 
     na.omit()
-    
+
 # Step 3 - find routes ----------------------------------------------------
 # Define basic graph to find paths through the network
 gr_basic <- graph_from_data_frame(adjacency, directed = FALSE, 
@@ -166,7 +163,7 @@ routes <- routes %>%
     rename(from = path)
 
 # Total up all the routes and summarise trips between stations
-routes <- journeys %>% 
+tot_routes <- journeys %>% 
     select(start_nm, end_nm) %>% 
     left_join(routes) %>% 
     group_by(from, to) %>% 
@@ -176,7 +173,17 @@ routes <- journeys %>%
     ungroup()
 
 # Join in with station details to get IDs
-usage <- routes %>% 
+day_routes <- journeys %>% 
+    select(downo, start_nm, end_nm) %>% 
+    left_join(routes) %>% 
+    group_by(downo, from, to) %>% 
+    summarise(daily_trips = n(),
+              daily_trips = daily_trips / 7,
+              daily_trips = ceiling(daily_trips * 20)) %>% 
+    ungroup() 
+
+# Join in with station details to get IDs
+tot_usage <- tot_routes %>% 
     left_join(stations, by = c("from" = "name")) %>% 
     select(from, to, daily_trips, id) %>% 
     rename(station1 = id) %>% 
@@ -191,7 +198,32 @@ adjacency <- adjacency %>%
     left_join(usage)
 
 # Add line colour
-adjacency <- adjacency %>% 
+day_usage <- day_routes %>% 
+    left_join(stations, by = c("from" = "name")) %>% 
+    select(downo, from, to, daily_trips, id) %>% 
+    rename(station1 = id) %>% 
+    left_join(stations, by = c("to" = "name")) %>% 
+    select(downo, from, to, daily_trips, station1, id) %>% 
+    rename(station2 = id) %>% 
+    select(downo, station1, station2, daily_trips) %>% 
+    na.omit()
+
+# Join back in with adjacency
+tot_adjacency <- adjacency %>% 
+    left_join(tot_usage)
+
+day_adjacency <- adjacency %>% 
+    left_join(day_usage) %>% 
+    arrange(downo, station1, station1)
+
+# Add line colour
+tot_adjacency <- tot_adjacency %>% 
+    left_join(lines) %>% 
+    rename(line_name = name) %>% 
+    select(-stripe) %>% 
+    mutate(colour = paste0('#', colour))
+
+day_adjacency <- day_adjacency %>% 
     left_join(lines) %>% 
     rename(line_name = name) %>% 
     select(-stripe) %>% 
@@ -216,14 +248,70 @@ V(gr)$imp <- eig$vector
 lay <- stations %>% dplyr::rename(y = latitude, x = longitude)
 lay_data <- createLayout(gr, 'manual', node.positions = lay)
 
+tot_gr <- tot_adjacency %>% 
+    mutate(line = as.factor(line)) %>% 
+    graph_from_data_frame(directed = FALSE, vertices = stations)
+
+day_gr <- day_adjacency %>% 
+    mutate(line = as.factor(line)) %>% 
+    graph_from_data_frame(directed = FALSE, vertices = stations)
+
+# Step 4 - create graph ---------------------------------------------------
+
+# # Use day #1 for layout
+# subGr <- subgraph.edges(day_gr, which(E(day_gr)$downo == 1))
+# V(subGr)$degree <- degree(subGr)
+# lay <- createLayout(subGr, 'igraph', algorithm = 'lgl')
+# 
+# # Then we reassign the full graph with edge trails
+# attr(lay, 'graph') <- day_gr
+# 
+# # Set up colours
+# line_cols <- paste0('#', lines$colour)
+# names(line_cols) <- lines$name
+# 
+# p <- ggraph(data = lay) +
+#     geom_node_point(size = .5) +
+#     geom_edge_fan(aes(colour = line_name, edge_width = daily_trips, frame = downo), 
+#                   show.legend = F, edge_alpha = 1) +
+#     scale_edge_colour_manual(name = "Line", values = line_cols) +
+#     theme_void() 
+# 
+# animation::ani.options(interval=0.1)
+# gganimate::gg_animate(p, 'animation.gif', title_frame = FALSE)
+
+
+
+
+# Set up the layout using lat and lon
+lay <- stations %>% dplyr::rename(y = latitude, x = longitude)
+
+# Create graph layout
+lay_data <- createLayout(tot_gr, 'manual', node.positions = lay)
+
 # Set up colours
 line_cols <- paste0('#', lines$colour)
 names(line_cols) <- lines$name
 
-ggraph(gr, 'manual', data = lay_data) +
-    geom_node_point(aes(size = imp)) +
+tube_map <- ggraph(tot_gr, 'manual', data = lay_data) +
+    geom_node_point(size = .5) +
     geom_edge_fan(aes(colour = line_name, edge_width = daily_trips), 
                   show.legend = F, edge_alpha = 1) +
     scale_edge_colour_manual(name = "Line", values = line_cols) +
     theme_void() 
 
+# ggsave("./blog_post/tube_map.png", tube_map, width = 16, height = 13)
+
+
+library(ggmap)
+
+map <- get_map(location = c(lon = -0.1275, lat = 51.5072), maptype = "toner-lite")
+map_plot <- ggmap(map)
+
+# ggraph(tot_gr, 'manual', data = lay_data) +
+#     geom_node_point(size = .5) +
+#     geom_edge_fan(aes(colour = line_name, edge_width = daily_trips), 
+#                   show.legend = F, edge_alpha = 1) +
+#     scale_edge_colour_manual(name = "Line", values = line_cols)
+# 
+# 
