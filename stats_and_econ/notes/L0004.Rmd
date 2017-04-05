@@ -2,7 +2,11 @@
 title: "Statistics and Econometrics - Lecture 4"
 author: "Jim Leach"
 date: "19 October 2015"
-output: pdf_document
+output:   
+  html_document:     
+    theme: readable     
+    toc: true     
+    toc_float: true
 ---
 
 # Multiple Regression Analysis

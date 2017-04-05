@@ -2,7 +2,11 @@
 title: "Statistics and Econometrics - Lecture 9"
 author: "Jim Leach"
 date: "09 November 2015"
-output: pdf_document
+output:   
+  html_document:     
+    theme: readable     
+    toc: true     
+    toc_float: true
 ---
 
 # Model Specification and Data Issues

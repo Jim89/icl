@@ -2,7 +2,11 @@
 title: "Statistics and Econometrics - Lecture 10"
 author: "Jim Leach"
 date: "10 November 2015"
-output: pdf_document
+output:   
+  html_document:     
+    theme: readable     
+    toc: true     
+    toc_float: true
 ---
 
 # Limited Dependent Variables

@@ -2,7 +2,11 @@
 title: "Statistics and Econometrics - Lecture 3"
 author: "Jim Leach"
 date: "13 October 2015"
-output: pdf_document
+output:   
+  html_document:     
+    theme: readable     
+    toc: true     
+    toc_float: true
 ---
 
 # Ordinary least squares (OLS)

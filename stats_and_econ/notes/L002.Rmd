@@ -2,7 +2,11 @@
 title: "Statistics and Econometrics Lecture 2"
 author: "Jim Leach"
 date: "12 October 2015"
-output: pdf_document
+output:   
+  html_document:     
+    theme: readable     
+    toc: true     
+    toc_float: true
 ---
 
 

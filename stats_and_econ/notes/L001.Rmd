@@ -3,7 +3,10 @@ title: "Statistics and Econometrics Lecture 1"
 author: "Jim Leach"
 date: "12 October 2015"
 output:
-  pdf_document
+  html_document:
+    theme: readable
+    toc: true
+    toc_float: true
 ---
 
 # The nature of econometrics and econometric data
