@@ -34,6 +34,7 @@ optimisation/hw/*/*/*.doc
 stats_and_econ/docs/*.pdf
 stats_and_econ/lectures/*.pdf
 stats_and_econ/notes/*.pdf
+stats_and_econ/notes/*.html
 stats_and_econ/docs/lectures/*.pdf
 stats_and_econ/homework/*.pdf
 stats_and_econ/homework/*/*.pdf
@@ -65,6 +66,7 @@ networks/hw/*/*.pdf
 networks/hw/*/*/*.pdf
 networks/hw/*/*/*.jpg
 networks/notes/*.pdf
+networks/notes/*.html
 
 # ignore for workforce analytics
 workforce/docs/*.pdf
