@@ -1,0 +1,157 @@
+# Network Analytics
+Jim Leach  
+30 November 2015  
+
+# An Introduction to Network Analytics
+
+Networks are everywhere, and everything. Some common examples include the Internet and the World Wide Web, food trees, evolutuionary trees, scientific citations, social networks, neural networks, organisational networks, trade partners, genetics, protein interactions, copororate alliances, travel networks, and many more.
+
+## The Language of Networks
+
+Developed from graph theory (maths, computer science, OR) and extended with human behaviour (e.g. economics, sociology), game theory (economics), and dynamics (economics, physics, computer science).
+
+### Some basic definitions
+
+A network/graph can be described by two simpe components: a set of __nodes__ (also called _vertices_) that are connected by __edges__. 
+
+\begin{equation}
+G = (V, E)
+\end{equation}
+
+(G = graph, V = vertices, E = edges).
+
+The nodes are the points in the graph, and the edges are the links. A graph can be described as __directed__ (links "point" from one node to another) or __undirected__ (links are non-directional, they do _not_ "point"). Directed graphs are sometimes called _digraphs_.
+
+Edges can be represented as vertex pairs, e.g. $(a, b)$, $(b, c)$, $(c, a)$. Two nodes are said to be __adjacent__ to each other if there is a link/edge betwen them. All nodes connected to one single node are said to be its __neighbours__ (e.g. if A is connected to B, C, and D then B, C, and D are the _neighbours_ of A). An edge present between two nodes is said to be __incident__ on the nodes: for example the edge $(a, b)$, is _incident_ on a and b. 
+
+In _directed_ graphs, edges can sometimes be referred to as __arcs__. As mentioned, in a directed graph edges go _from_ one node _to_ another. The __tail__ of an arc is where the edge begins (i.e. the _from_ node) and the __head__ of the arc is where the edge ends (i.e. the _to_ node). Arcs can be __incoming__ or __outgoing__ and it is possible to have multiple edges between nodes, or loops from a node to itself.
+
+### Subgraphs
+
+A __subgraph__ is a subset of nodes and edges from a larger graph. A subgraph is termed an __induced subgraph__ if, for the nodes in the subgraph, all edges that connect those nodes are present. I.e. an induced subgraph contains _all_ edges _incident_ on the nodes in the subgraph. 
+There are some other important terms we use when dealing with subgraphs:
+
+* __path__: a set of nodes going from some original origin to a final destination, with no repetition of a node, e.g. a-b-c-d-e;
+* __trail__: similar to a path, but this time no _egde_ can be repeated (although nodes can be visited more than once), e.g. a-b-c-d-e-b-d;
+* __walk__: similar to both, exept both edges and nodes can be repeated, e.g. a-b-d-a-b-c
+
+Each of these is termed "closed" if the start and end point are the same (i.e. if the path ends where it started).
+
+* __length__: the number of edges in the path, trail or walk
+* __circuit__: a closed trail, e.g. a-b-c-d-b-e-d-a
+* __cycle__: a closed path, e.g. a-b-c-d-a
+
+The same concepts apply in a _directed_ graph, but clearly the direction of the edge plays a part, so moving from a to b can only be done if a is the _tail_ and b is the _head_ of the arc/edge.
+
+### Special types of graph
+
+There are several special types of graph that we may encounter "in the wild", or that may be interesting when studying other concepts:
+
+* __acyclic graph__: also called a __forest__, simply a graph with _no_ cycles;
+* __tree__: a connected, acyclic graph. A tree is a subgraph, but it is not necessarily _induced_ as it need not contain all edges incident on the nodes in it;
+* __rooted tree__: a tree with a "root" or __distinguished vertex__ (i.e. some starting point, e.g. an evolutionary tree) - the "leaves" of the tree are the terminal nodes (i.e the end of each path in the tree);
+* __directed acyclic graph__ (DAG): a digraph with no cycles;
+* __weighted graph__: any graph where the edges have weights associated with them (_edge-weighted_), or the nodes/vertices do (_vertex-weighted_)
+
+## (Visual) Representation of graphs
+
+There are many ways to represent a graph. If the graph is not too large or complex (or if it is necessary/desired to do so) then a _visual_ representation may be appropriate. There are general and specialised tools for doing this.
+
+Alternatively, graphs can be represented in a data centric manner with a few structures:
+
+#### Adjacecy lists
+
+A |V| array where each cell, i, contains a list of all vertices adjacent to $v_i$ (i.e. it's neighbours), e.g.
+
+
+Node   Neighbours 
+-----  -----------
+a      c, d       
+b      c, d       
+c      a, d, b    
+d      a, c, b    
+
+#### Adjacency Matrices
+
+A |V|x|V| matrix where each of the cells, $i,j$ contains 1 if there is an edge between vertex $v_i$ and $v_j$, and 0 otherwise, e.g.
+
+
+       a    b    c    d
+---  ---  ---  ---  ---
+a      0    0    1    1
+b      0    0    1    1
+c      1    1    0    1
+d      1    1    1    0
+
+#### Incidence Matrices
+
+A |V| by |E| matrix where each column, $e$, has value 1 in row $v$ if edge is incident on v and 0 otherwise. Note that for a digraph, 1 is used to denote the _tail_ (start) of the edge, and -1 is used to denote the _head_ (end), e.g.
+
+
+      (a,b)   (a,d)   (b,c)   (b,e)   (c,d)   (d,b)   (d,e)
+---  ------  ------  ------  ------  ------  ------  ------
+a         1       1       0       0       0       0       0
+b        -1       0       1       1       0      -1       0
+c         0       0      -1       0       1       0       0
+d         0      -1       0       0      -1       1       1
+e         0       0       0      -1       0       0      -1
+
+## More Concepts
+
+### Connectedness
+
+An (undirected) graph is __connected__ if there is a path from every node to every other node. __Components__ of a graph are maximal connected subgraphs (i.e. the subgraphs that are themselves connected).
+
+### Degree
+
+The __degree__ of a vertex/node is the number of vertices that are adjacent to it (its neighbours), or the number of edges that are indcident on it. In a digraph there is the concept of __out-degree__ (the number of _outgoing_ connections on a node) and __in-degree__ (the number of _incoming__ connections to a node).
+
+### Bipartite graphs
+
+Bipartite graphs are these in which the nodes are partitioned into two sets, U and V. _All_ edges go from a node in U to a node in V (and not between nodes in U nor between nodes in V).
+
+### Complete graphs
+
+A __complete__ graph is one in which there is an edge from every node to every other node in the graph.
+
+#### Cliques
+
+A __clique__ in a graph is a maximum complete connected subgraph. I.e. it is a subgraph which is complete (it is also connected but if there is a direct link from every node to every other node, it will also be complete as that is just a requirement for a _path_ from each node to every other node).
+
+### Spanning Trees
+
+For a given connected graph, G, a __spanning tree__ is a subgraph of G that includes _every_ node and is also a tree (i.e. there are no loops in the graph).
+
+If the graph is not connected then there is the potential to have a __spanning forest__ which is the set of spanning trees for each component of the graph.
+
+## Some History
+
+The theory and applications of networks have developed over time.
+
+They began with fairly abstract __graph theory__ i.e. trying to understand the properties of graphs. This is a branch of mathematics, going back to Koenig and Euler. 
+
+From there came __combinatorial optimisation__, trying to find parameters in a graph or optimise some function of the graph. This introduced computer science and operations research to the field. 
+
+Later came __random graph theory__ (graphs where edges are formed at random) which brought _more_ mathematics and computer science to the field. 
+
+Finally came __behavioural analysis__ on graphs, i.e. interactions of humans/institutions on a network, agent theory, optimisation and interaction between agents. This introduced graph theory in to economics and sociology, as well as OR and business. 
+
+Several auxiliary concepts are at play in the study of graphs, including optimisation, game theory and probability. 
+
+### Some "interesting questions"
+
+#### OR
+
+Find the shortest path, the best route, the best network design, search for information in a network, Pagerank.
+
+#### Economics
+
+Network effects (e.g. the telephone and how it affects people); economic history (e.g. Erdos-Renyi and their study of Italian families in 1400's) - builds on random graph theory
+
+#### Sociology
+
+Milgram experiment - "6 degrees of separation". Interesting that the number is both low, and that people somehow "knew" how to act to produce such a low number. Also study power and balance in network, communication etc
+
+#### Marketting
+
+Targetted marketing, viral campaings. How to understand and optimise efforts.

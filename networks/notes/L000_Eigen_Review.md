@@ -1,0 +1,66 @@
+# Network Analytics
+Jim Leach  
+30 November 2015  
+
+# Eigenvectors and Eigenvalues Review
+
+An _eigenvector_, x,  is a non-zero vector of a __square__ matrix, A, if there exists a single scalar value, $\lambda$, such that $Ax = \lambda x$.
+
+The $\lambda$ value is known as an _eigenvalue_ of A. x is the eigenvector _corresponding_ to $\lambda$. 
+
+Computing eigenvectors and eigenvalues can be tedious (it is required to solve a polynomial equation) but most software packages will do it easier, e.g. to find eigenvalues $Ax = \lambda x$ or ($A-\lambda I).x = 0$ for $x\neq0$. $A-\lambda I$ does not have full rank, so we solve det($A-\lambda I$) = 0.
+
+#### For example:
+
+\[
+A = 
+\begin{bmatrix}
+1 & 6 \\
+5 & 2
+\end{bmatrix}
+\]
+
+\[
+det(\begin{bmatrix}1-\lambda & 6 \\ 5 & -2\lambda\end{bmatrix}) = 0
+\] 
+
+Therefore:
+
+$(1-\lambda)(2-\lambda) - 30 = 0$
+
+$2-2\lambda-\lambda-\lambda^2-30=0$
+
+$\lambda^2-3\lambda - 28 = 0$
+
+$(\lambda - 7)(\lambda + 4) = 0$
+$\lambda = 7, \lambda = -4$
+
+### Geometric Intuition
+
+Matrix multiplication is a linear transformation, i.e. we can view it as a function.
+
+We can multiply by scaling matrices, e.g in 2 dimensions.
+
+\[\begin{bmatrix}r_1 & 0 \\ 0 & r_2 \end{bmatrix}\]
+
+Or rotating matrices, e.g in 2 dimensions.
+
+\[\begin{bmatrix}cos\theta & -sin \theta \\ sin \theta & cos\theta \end{bmatrix}\]
+
+__Eigenvectors__ of A are special in that their direction does __not__ change (except getting scaled by the eigenvalue $\lambda$) when undergoing a linear transformation by A.
+
+### Uses
+
+#### PCA
+
+The main use in data analysis is for dimensionality reducted (Principal Components, factor analysis). The data are centered around the means. We have $n$ data points so the data matrix, A has $n$ rows and $m$ columns. 
+
+The variation in a given direction, x, is given by: $xA^TAx$ and for PCA we seek the $\max xA^TAx$ (i.e. the direction of maximum variation). This is an alternate definition of the largest eigenvalue. 
+
+#### Diagonalizability
+
+A square matrix, A, is diagonalisable if:
+
+$A = U^T\Lambda U$
+
+Here, $\Lambda$ is a diagonal matrix (the entries are eigenvalues) and the matrix, U, consists of orthogonal vectors. From this, we can see that taking powers becomes easy: $A^2x = AAx = A\lambda x = \lambda Ax = \lambda \lambda x = \lambda^2 x ...$, $A^{100}x = \lambda^{100}x$

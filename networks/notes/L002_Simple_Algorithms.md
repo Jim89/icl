@@ -1,0 +1,95 @@
+# Network Analytics
+Jim Leach  
+30 November 2015  
+
+# Simple Algorithms
+
+There are a number of simple (and a number of hard) algorithms that can be applied to find properties of a graph.
+
+Computationally, an algorithm needs 3 things:
+
+1. Input (e.g. data);
+2. A process (i.e. the steps to take); and
+3. Output (i.e. what to return)
+
+It needs precise definition of all 3, with no ambiguity. An algorithm must also be "correct" - it must return the right solution or goal, guarenteed. The "goal" might be a vague concept (e.g. Google search), so this can be ard to define. However, we just need to ensure that our solution adheres to whatever goal is set. 
+
+An additional criteria might be that it should terminate (i.e. finish), and ideally in a reasonable amount of time. Complexity theory can help determine this.
+
+## Breadth-First Search (BFS)
+
+This (greedy) algorithm searches through a network from a given start to a given end (so it can be used to find the shortest path). 
+
+* Input: Undirected graph G = (V, E) and a root node, s;
+* Output: Label all nodes by the shortest distance to s;
+* Algorithm:
+
+    1. Start (k = 0), label node $s$ with label = 0;
+    2. Repeat (i.e. iterate): go through all nodes that have not been labelled k and label their neighbours that have not yet been labelled with k + 1;
+    3. Replace k with k + 1;
+    4. Repeat until all nodes are labelled (defines the stopping criteria)
+
+
+Essentially, a given start point is labelled 0. It's neighbours are then labelled 1, their neighbours are labelled 2, and their neighbours 3 and so on until all nodes have then been labelled. The shortest path is then found from the start, s, to all other nodes based on their label.
+
+BFS can be shown to be correct (but we won't do that here). It's complexity (and running time) is a function of the input size. Assuming a graph has $n$ nodes and $m$ edges, then in the _worst_ case it needs to assess every neighbour of each node. We check if each neighbour is unlabelled so we examine each edge twice. It's complexity is therefore defined as O(m) ("Oh of m").
+
+## Min-Cost Spanning Tree
+
+Recall the definition of the spanning tree: a tree (i.e. a subgraph with no loops) that includes every node in the graph. 
+
+To find the __min-cost__ spanning tree, we also need the weights on the edges. This is another greedy algorithm called Kruskal's algorithm.
+
+* Input: undirected graph, with weights on edges;
+* Output: a spanning tree - a subgraph that is a tree and that spans all nodes of the graph;
+* Algorithm:
+
+    1. Sort edges by _increasing_ weight;
+    2. Iteratively, pick the next lowest cost/weight edge 
+    3. If that edge has a. has not been picked yet and b. does not create a cycle in the graph
+    4. Add it to the spanning tree otherwise move on to the next edge
+    5. Repeat until all nodes are spanned
+
+Again, there is a formal proof for its correct-ness. Running time is again dependant on $m$ edges and $n$ nodes and is affected by:
+
+* the time to sort all edges by weight (O(m $log_2$ m)); and
+* the time to check if adding an edge would create a loop which can be done in O($log_e$ n)
+
+The resulting overall complexity is then O($log_2$ n + m $log_2$ m). The second term here is always larger and so the overall complexity is O(m $log_2$ m).
+
+The check to see if adding an edge creates a cycle can be performed by keeping a list of groups of connected nodes and for each edge, checking if both start and end are in the same set. Alternatively (and it's much slower) the shortest path can be found each time. 
+
+## Dijkstra's Algorithm for shortest path
+
+This algorithm needs the assumption that all weights on the edges are positive. It is also greedy, but more complex than MST. If there are negative weights (but no negative cycles) then Dynamic programming can be used. Negative cycles have no current method in polynomial time. 
+
+* Input: set of edges with weights, start node and finish node;
+* Output: shortest path from start to finish;
+* Algorithm:
+
+    1. Initialise two sets, S (the set of vertices for whom the shortest path has already been found) to empty, and S-v (everything else) to everything;
+    2. Initialise d (the shortest path best estimates) to infinity for all distances and pi (the set of predecessors for each vertex) to empty;
+    3. Then, while there are still vertices in S-v: i. sort the vertices in S-v by their estimated distance from the source, ii. add the vertex with the shortest distance (i.e. the closest one) to S, iii. _Relax_ all the vertices still in S-v that are connected to u (relaxation is updating the costs of all the vertices, v, connected to a vertex, u, if we could improve the best estimate of the shortest path to v by including (u,v) in the path to v)
+    
+An alternative explanation of the algorithm is:
+
+1. Set a permanent label on the start node to be 0 (it is next to itself);
+2. For all the neighbours of s, label them with a temporary label equal to the weight on the edge between the neighbour and s (all other nodes receive the temporary label $\infty$)
+3. Iteratively: amongst all nodes with temporary labels, find the one with the smallest value and make its label permanent, update all the remaining temporary labels by adding the minimum of their temporary label and the weight from that node to a neighbour that is connected to the start;
+4. Repeat this until the finish node receives a permament label, or until all nodes have a permanent label
+
+This takes $n$ steps, with each step requiring at most n m $log_2$ (m) calculations. As such the overall complexity is O($n^2$ m $log_2$ m).
+
+## The travelling salesman problem
+
+In this problem, the shortest __tour__ of the graph is desired. This is a path that visits all nodes in a network once, and only once. A simply approach would be to define _all_ tours and then pick the shortest one (or the least cost one). However this is computationally infeasible, so this problem is termed to be NP-hard. 
+
+## Complexity Theory - an overview
+
+Complexity theory splits problems in to several classes. One is polynomial-time solvable, that is the time required is O($property^value$) where property is some function of the algorithm input and value is just a number. BFS, Kruskal (min-cost spanning tree) and Dijkstra are all polynomial time solvable. 
+
+The travelling salesman is termed NP-hard as there is no known algorithm that is not an _exponential_ functin of input, i.e. O($value^property$).
+
+For difficult problems, e.g. largest clique, longest path, graph partitioning, it may be better to resort to heuristics or sub-optimal solutions. 
+
+

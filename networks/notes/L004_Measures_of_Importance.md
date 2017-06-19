@@ -1,0 +1,262 @@
+# Network Analytics
+Jim Leach  
+30 November 2015  
+
+# Measures of Importance
+
+Measuring importance of nodes in a network is a hot topic in network analytics, especially in viral marketing where it is of critical importance. 
+
+In a social network, edges represent "friends" and the weights the strengths of those friendships. But we need a way to determine who is cental/influential. Increasingly, this can be done on _massive_ datasets (e.g. Facebook, phone records, twitter) and can rely on other fields to add insight (e.g. text mining). 
+
+Network algorithms use automated analytical measures to do some "first pass" analysis to characterise local (e.g. degree) as well as global (e.g. eigenvalue) properties. Often multiple measures must be combined.
+
+Intution has been gained on small scale empirical data and studies and is being applied at scale to identify bridges, groups and influential nodes. 
+
+To do this we might want to measure a node's centrality, prestige, importance, power, influence, all of which have intuitive explanations on small networks.
+
+## Centrality
+
+Centrality is an important concept used in many fields (e.g. economic history, diffusion of micro-finance and targetting, viral marketing etc.) and there are many ways to measure it:
+
+### Degree centrality
+
+The simplest measure. One value per node.
+
+Centrality = node degree.
+
+Normalised centrality = $\dfrac{degree}{N-1}$ (where N = total number of nodes)
+
+### Dispersion of centrality
+
+More complex, applies to whole graph. Measures the concentration of power in the network.
+
+\begin{equation}
+C_D = \dfrac{\sum_{i=1}^g[C_D(n^*) - C_D(i)]}{[(N-1)(N-2)]}
+\end{equation}
+
+Where $C_D(n^*)$ is the maximum centrality in the whole network.
+
+### Betweenness
+
+If a node, B, is on the path from A to C then it is _between_ A and C and is influential as it connects A and C. As such, _betweenness_ measures, for each node, how many pairs of nodes are connected via a path that includes it. 
+
+\begin{equation}
+C_B(i) = \sum_{j<k}g_{jk}(i)/g_{jk}
+\end{equation}
+
+Where $g_{jk}$ is the number of shortest paths connecting jk and $g_{jk}(i)$ the the number that node i is on. 
+
+This can be normalised thus:
+
+\begin{equation}
+C_D^{'}(i) = \dfrac{C_B(i)}{[(N-1)(N-2)/2]}
+\end{equation}
+
+Computing the number of shortest paths between two nodes can be done quickly using a method similar to Dijkstra. Also, if A is the adjacency matrix of an undirected graph then $A^K$ gives the pairwise number of paths of length exactly k. 
+
+### Flow Centrality
+
+People/nodes do not always communicate via the shortest path. Therefore, for a pair of nodes, i and j, what proportion pass through k. This defines the importance of k in the communication between i and j. 
+
+### Digraph variations
+
+* Centrality - degree centrality of node i = # outgoing edges/N-1
+* Betweenness centrality - same idea as for undirected graph, but now paths are directed (and as such the normalising constant is double and i -> j $\neq$ j -> i)
+* Prestige - similar to degree centrality = # incoming edges / N-1
+
+### Eigen Vector Centrality
+
+Consider an undirected graph, with edges representing relationships/communication. The notion is that important is not just a function of how many friends a node has, but also the importance of the friends.
+
+Therefore importance of a node ~ importance of its neighbours.
+
+This is then a recursive definition:
+
+\begin{equation}
+x_i \propto x_j + x_k
+\end{equation}
+
+Because we define $x_j$ in the same way!
+
+In matrix form, if A is the adjacent matrix of the undirected graph, then for each node:
+
+\begin{equation}
+Ax = \lambda x
+\end{equation}
+
+Where $\lambda$ is the proportionality constant. 
+
+For a given graph, G = (V, E) with adjacency matrix A = ($a_{v, t}$) then the centrality score of vertex, v is defined thus:
+
+\begin{equation}
+x_v = \dfrac{1}{\lambda } \sum_{t\in M(v)} x_t = \dfrac{1}{\lambda } \sum_{t\in G} a_{v,t} x_t
+\end{equation}
+
+Where M(v) is the set of neighbours of v and $\lambda$ is a constant. 
+
+This is equivalent to the matrix from presented above, which itself can be written as the below for the simple netwok A-B, B-C, C-B (i.e. a simple cycle):
+
+\[
+\begin{pmatrix}
+    & a & b & c \\
+  a & 0 & 1 & 1 \\
+  b & 1 & 0 & 1 \\
+  c & 1 & 1 & 0
+\end{pmatrix}
+\begin{pmatrix}
+  x_a \\ 
+  x_b \\
+  x_c 
+\end{pmatrix}
+=
+\lambda
+\begin{pmatrix}
+  x_a \\ 
+  x_b \\
+  x_c
+\end{pmatrix}
+\]
+
+(Where $x_a$ is the importance of node a). Writing out the result of this multiplication gives:
+
+\begin{equation}
+\begin{split}
+x_b + x_c = \lambda x_a \\
+x_a + x_c = \lambda x_b \\
+x_a + x_b = \lambda x_c
+\end{split}
+\end{equation}
+
+I.e. the form of the equation seen previously! $\lambda$ is an eigen-vale for A. 
+
+If A is symmetric, then all the eigenvalues are real numbers (else they can be complex - imaginary). If A is a positive matrix (no negative elements) then the largest eigenvalue is real and positive and the eigenvector has all non-negative real values. 
+
+Additionally, if A is a stochastic matrix (the sum of the elements of each column or each row sum to 1) then the largest eigenvalue = 1.
+
+It is the case the the greatest eigenvalue results in the desired centrality measure and the $v^th$ component of the related eigen vector gives the centrality score of the node v in the network.
+
+## Application - Ranking/Scoring Hits: Pagerank
+
+When searching a network, hits must be presented in some order (e.g. relevance, recency, popularity). Ideally we'd like an overall measure of "quality". This is where PageRank comes in.
+
+We make an assumption - if there is link in page A to page B then this is a _recommendation_ of B by A. (B is termed a _successor_) of A. 
+
+The "quality" of a page is related to the number of links that point to it (it's in-degree) as well as the quality of the pages providing those links. This looks like our recursive eigenvector centrality again and is the foundation of Pagerank.
+
+### Key Ideas
+
+* A "vote" from an important page is worth more.
+* A page is important if it is pointed to by other important pages
+* The "rank" for each node (page), $r_j$ is defined thus:
+
+\begin{equation}
+r_j = \sum_{i \rightarrow j}\dfrac{r_i}{d_{out}(i)}
+\end{equation}
+
+I.e. the rank of page j is equivalent to the rank of all the pages that link to it divided by how many links those pages each have. 
+
+Working with matrices, this can be written as: $r = W^T r$ (where W is weights).
+
+### Model of a web-surfer
+
+A surfer is initially at a random page. Each each step the surfer proceeds to a _randomly_ chosen web page with probability, d or to a _randomly_ chosen successor of the current page with probability 1-d.
+
+The PageRank of a page, p, is the fraction of steps the surfer spends at p as the number of steps tends to $\infty$.
+
+### The formula
+
+\begin{equation}
+PageRank(p) = \dfrac{d}{n} + (1-d) \sum_{(q, p)\in E} PageRank(q)/outdegree(q)
+\end{equation}
+
+Where $n$ is the total number of nodes in the graph. No one knows the exact value of $d$ that was chosen by Google, hearsay is 0.85. PageRank is a probability distribution over web pages. The sum of all PageRanks of all pages is 1. 
+
+#### Simple example
+
+Consider a digraph defined by the adjacency matrix:
+
+\[
+\begin{pmatrix}
+    & 1 & 2 & 3 & 4 \\
+  1 & 0 & 1 & 0 & 0 \\
+  2 & 1 & 0 & 0 & 1 \\
+  3 & 0 & 1 & 0 & 1 \\
+  4 & 0 & 1 & 1 & 0
+\end{pmatrix}
+\]
+
+This gives the following weight matrix
+
+\[
+\begin{pmatrix}
+    & 1 & 2 & 3 & 4 \\
+  1 & 0 & 1 & 0 & 0 \\
+  2 & 0.5 & 0 & 0 & 0.5 \\
+  3 & 0 & 0.5 & 0 & 0.5 \\
+  4 & 0 & 0.5 & 0.5 & 0
+\end{pmatrix}
+\]
+
+The edges have been scaled by the number of connections made by each node. E.g. node 2 has 2 outwards connections, so they are both scaled to 1/2. Because node 1 makes only 1 outgoing link it's connection is not scaled.
+
+#### Recursive notions of node importance.
+
+Let $w_{ij}$ be the weight of link from node i to node j. We assume that $\sum_j w_{ij} = 1$ and that the weights are all non-negative (i.e. the default choice $w_{ij} = 1/outedgree(i)$).
+
+We then define the importance of node j in a directed graph:
+
+\begin{equation}
+r_j = \sum_i w_{ij} r_i \quad i, j = 1, ..., n
+\end{equation}
+
+The importance of a node is a weighted sum of the importance of nodes that point to it. This leads to recursive linear equations. 
+
+e.g. using the example above:
+
+$r_2 = 1r_1 + 0 r_2 + 0.5r_3 + 0.5r_4$ which is the dot product of a vector r with column 2 of the weights matrix.
+
+#### Matrix-vector form
+
+This allows us to rewrite the importance equation.
+
+* Let $\underline{r} = n x 1$ vector of importance values for n nodes
+* Let W = n x n matrix of link weights
+
+This gives the importance equations as:
+
+\begin{equation}
+\underline{r} = W^T\underline{r}
+\end{equation}
+
+We then need to solve for $\underline{r}$ with known W. This is a standard eigenvalue problem!
+i.e. $A\underline{r} = \lambda\underline{r}$ where $A = W^T$ with $\lambda = 1$ and $\underline{r}$ being the corresponding eigenvector for $\lambda = 1$
+
+#### Eigenvector Formulation
+
+We therefore need to solve for $\underline{r}$ in:
+
+\begin{equation}
+(W^T - \lambda I)\underline{r} = 0
+\end{equation}
+
+Note that W is stochastic (rows are non-negative and sum to 1) hence W and $W^T$ have the same eigenvectors/eigenvalues the largest of which is always 1 and the vector $\underline{r}$ corresponds to the eigenvector corresponding to the largest eigenvalue of W (or $W^T$).
+
+Hence solving for $\underline{r}$ with an eigenvalue of 1 gives $\underline{r} = [0.2, 0.4, 0.133, 0.2667]$ which is intuitive - node 2 is the most important as it is pointed at by all the other 3!
+
+### Application to the Web
+
+The process for applying this to web-search is as follows:
+
+1. Crawl the web to get nodes (pages) and edges (hyperlinks);
+2. Weights on each page = 1/# outlinks;
+3. Solve for the eigenvector $\underline{r}$ (for $\lambda = 1$) of the weights matrix
+
+(Although in practice the set of pages can be substantially limited using keywords in the search term).
+
+Computationally solving the eigenvector scales with O($n^3$). For the entire Web the graph n > 10 billion pages. So a direct solution is not feasible. Therefore we can use the iterative power method to solve:
+
+\begin{equation}
+\underline{r}^{(k+1)} = W^T \underline{r}^k
+\end{equation}
+
+I.e. pick an initial $\underline{r}$, e.g. [1, 1, 1, 1] and iteratively solve. 

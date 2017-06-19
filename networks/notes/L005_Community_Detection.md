@@ -1,0 +1,82 @@
+# Network Analytics
+Jim Leach  
+14 December 2015  
+
+# Community Detection
+
+## Problems and algorithms
+
+Some problems and algorithms will _always_ give the same solution given the same input, e.g. shortest-path, max-flow. These are "black box" problems, we don't need to code a solution, we can just use an algorithm.
+
+However, the real work remains to be done in non-black-box problems where even the input data can be poorly defined. Such processes are not necessarily repeatbable, difference software may give different answers, there is no ground truth and we cannot verify performance. Community detection falls in to this latter class.
+
+## An example - Facebook relationship prediction
+
+(Romantic Partnerships and the Dispersion of Social Ties: A Network Analysis of Relationship Status on Facebook - Backstrom and Kleinberg).
+
+Given just the network structure and extra features (e.g. messages, photos etc), can we predict which of the contacts is the girl/boyfriend?
+
+### Algorithm strategy
+
+1. Define some network measure and calculate it for all pairs in the network. 
+2. Choose the pair (i.e. edge) with the highest/best score on this measure.
+
+But what measures should we choose? Some examples could be betweenness, embeddedness (the number of mutual friends shared by nodes of that edge), or dispersion.
+
+#### Dispersion
+
+Dispersion is calculated for edges connected to a node. For a given node, $u$, we induce a subgraph, $G_u$ that includes all edges incident on $u$ (and therefore includes all of its neighbours). For every node, $v$ in $G_u$, $C_{uv}$ is defined as the set of _common neighbours_ of $u$ and $v$. Not considering paths through $u$ or $v$, the absolute dispersion of the $u-v$ link is defined as the sum of all distances between nodes in $C_{uv}$ (i.e. in the set of common neighbours)
+
+\begin{equation}
+disp(u, v) = \sum_{s, t \in C_{u, v}} d_v(s, t)
+\end{equation}
+
+The "distances" are typically defined as a function that is equal to 1 if s, t are no connected by an edged and have no common neighbours other than u and v, and 0 otherwise.
+
+## Clustering for network segmentation
+
+We can also use more traditional clustering techniques to perform segmentation, e.g. customer segmentation.
+
+We position the data in space and find clusters that are similar within themselves, but distinct outside of this. The points in space represent the objects we are seeking to group and we often use the distance between objects as a measure of their similarity (e.g. Euclidean distance is typical $\sqrt((x_{1i} - x_{1j})^2 + (x_{2i}-x_{2j})^2)$.
+
+This can be tricky with "real" data: numerical values should be normalised (- mean / sd) and categorial varialbes must be dealt with - often by treating them as dummy variables and calculating similarity measures between rows with levels of the dummy.
+
+## Network clustering
+
+However, if we have graph data we may want to perform clustering based on the network structure (e.g. the karate club network). We don't need to position the data in space to do this the network defines our distance metric(s) for us. 
+
+There are many methods of doing this, some local and some global, some easier and some harder. We will examine a few.
+
+### Cut-based methods
+
+In cut-based methods, we might seek to find the minimum cut among all pairs of nodes (as we have seen previously). However, this is not a good concept, it is too arbitrary. It can also often result in 1 node in 1 cut and the rest in another! 
+
+We can extend this to try and find more balanced cuts however, with a good number of nodes on each side. We can define a partition of a graph, P. P is a set of nodes where $P_i$ are disjointed, e.g. {1, 2, 3}{4, 5, 6, 7, 8, 9} (two sets of nodes). 
+
+We can then define the __ratio cut__:
+
+\begin{equation}
+Ratio\ Cut(P) = \dfrac{1}{k}\sum_{i=1}^k\dfrac{cut(P_i, \bar{P_i})}{|P_i|}
+\end{equation}
+
+And the __normalised cut__:
+
+\begin{equation}
+Normalised\ Cut(P) = \dfrac{1}{k} \sum_{i=1}^k \dfrac{cut(P_i, \bar{P_i})} {vol(P_i)}
+\end{equation}
+
+Where $\bar{P_i} = V-P_i$ is the complement cut set, $cut(P_i, \bar{P_i})$ is the size of the cut (the number of edges that are outward from it) and $vol(P_i) = \sum_{v \in P_i} d_v$ (degree on vertex), $k$ is the number of partitions, $|P_i|$ is the size of the group
+
+The "best" partition is the one with the lowest value of the ratio/normalised cut. Unfortunately, this is an NP-hard problem as we would need to enumerate all possible cuts which is $O(2^n)$.
+
+## Girman-Newman method
+
+An alternative is to define a "betweenness" measure for each edge. We then find the edge with the higheset edge and remove it. We then recalculate the betweenness values and repeat.
+
+This is the Girman-Newman method and forms a dendrogram at the end - i.e. it is a heirachical method - where the leaves of the tree are the individual nodes. 
+
+Typically we can just use the betweenness score seen previously - the number of pairs of nodes that use that edge on their shortest paths. If a pair of edges has multiple shortest paths, we can give that weight 1/number of shortest paths.
+
+
+
+

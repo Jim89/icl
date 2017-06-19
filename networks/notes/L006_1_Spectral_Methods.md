@@ -1,0 +1,103 @@
+# Network Analytics
+Jim Leach  
+14 December 2015  
+
+# Spectral Community Detection
+
+Spectral based methods are very powerful community detection methods relying on a lot of linear algebra. They are general in nature and can be applied in a variety of settings. 
+
+## How it works - 2 clusters
+
+Spectral clustering is _very_ simple when just two clusters are desired:
+
+1. Define the _adjaceny matrix_ of the graph, $A$;
+2. Define the _degree matrix_ of the graph, $D$ - the degree matrix is a diagonal matrix where each element on the diagonal is the degree of that node (i.e. the first value is for the first node, the second for the second node, and so on);
+3. Calculate the _Laplacian_ matrix, $L$ using the adjacency matrix and the degree matrix: $L = D-A$;
+4. Find the eigenvectors and associated eigenvalues of the Laplacian;
+5. Find the _second smallest_ eigenvalue and its assocaited eigenvector (the smallest has a value of 0);
+6. Within this vector, some of the elements will be positive and some will be negative;
+7. Split the graph in to clusters using the sign on the eigenvector - all nodes with a negative sign in the eigenvector go in to one cluster, and all nodes with a positive sign go in to the other.
+
+A similar procedure takes place if 3 (or more) clusters are desired, i.e. we instead take the _third_ smallest eigenvector, too, and perform the same procedure. Note that this _will_ result in some overlap between clusters.
+
+### Rationale
+
+Recall that the ratio of a cut is defined as:
+
+\begin{equation}
+Ratio\ Cut(P) = \dfrac{1}{k} \sum_{i=1}^k\dfrac{cut(P_i, \hat{P_i})}{|P_i|}
+\end{equation}
+
+Enumerating all possible cuts to find the maximum ratio cut is an NP-Hard problem. Instead we can consider an optimisation problem for a cut with nodes P. Defining a vector, $x$, that corresponds to P where $x_i$ = 1 if the node $i$ is in P and 0 otherwise.
+
+Now:
+
+\begin{equation} \label{eq:cutP}
+\begin{split}
+Cut(P, \bar{P}) = \sum_{(i,j) \in E}(x_i - x_j)^2 \\
+|P| = \sum_{i\in V}x_i^2 = x^Tx
+\end{split}
+\end{equation}
+
+
+Note that for $x_i \rightarrow x_k$ (i.e. the edge between $x_i$ and $x_j$), as both variables are $\in \{0, 1\}$ then this will be 1-1 if _both_ nodes are in the cut, 1-0/0-1 if only one is, and 0-0 otherwise.
+
+This \eqref{eq:cutP} can be connected to the Laplacian thusly:
+
+\begin{equation}
+\begin{split}
+\text{Because L = D- A:} \\
+x^TLX = x^TDx - x^TAx = \sum_{i=1}^nd_ix_i^2 - \sum_{(i, j)\in E}x_ix_j \\
+\text{Cross-multiplying i with j: }\\
+= \dfrac{1}{2}(2\sum_{i=1}^n d_i x_i^2 - 2 \sum_{(i, j)\in E}x_ix_j) \\
+= \dfrac{1}{2}(\sum_{i=1}^n d_i x_i^2 - 2\sum_{(i, j)\in E}x_ix_j + \sum_{j=1}^n d_j x_j^2) \\
+\text{Value is squared, therefore always positive} \\
+= \dfrac{1}{2}(\sum_{(i, j)\in E} (x_i - x_j)^2) \\
+\end{split}
+\end{equation}
+
+Here $x_i - x_j$ is the value of cut for a 0-1 choice vector, $x$. This equation implies that L is positive-semidefinite, i.e. that it is a square matrix where $x^TMx$ is positive for _all_ values of $x$. 
+
+This can then be expressed as an opimisation problem: $\min x^TLx$ where $x$ is the 0-1 vector of decision variables. This is nothing but integer programming with a quadratic objective function. Moreoever, the eigenvalues of a symmetric, positive semi-definite matrix (such as the Laplacian) have nice properties in that they are all positive, real and the smallest value is 0. 
+
+Therefore the eigenvalues can be written as:
+
+\begin{equation}
+\begin{split}
+\lambda_1 = \min_x \dfrac{x^TAx}{x^Tx},\ x_1 = \arg \min_x \dfrac{x^TAx}{x^Tx} \\
+\lambda_2 = \min_{x\perp x_1} \dfrac{x^TAx}{x^Tx},\ x_2 = \arg \min_{x\perp x_1} \dfrac{x^TAx}{x^Tx} 
+\end{split}
+\end{equation}
+
+Where $x_1$ is the eigenvector for eigenvalue $\lambda_1$. If we find the _smallest_ eigenvalue of the Laplacian this will not work, as we _know_ that the smallest eigenvalue is 0. Hence we take the _second_ smallest value. 
+
+We also add the following constraint:
+
+\begin{equation}
+x_i = \begin{cases} 
+        \sqrt{\dfrac{|\bar{P}|}{|P|}}\ i \in P \\ 
+        -\sqrt{\dfrac{|\bar{P}|}{|P|}}\ i \in \bar{P }
+    \end{cases}
+\end{equation}
+
+These values are then subsituted in to $x^TLx$ to get the ratio cut: $x^TLx = n.Ratio\ Cut(P, \bar{P})$ (i.e we minimise this function subject to $x$ being orthogonal to the first eigenvector).
+
+## Modularity-Based Detection
+
+Another viewpoint is that clustering/communities are anything but random. Therefore, if we could measure how far from a random graph a cluster was, we could use that measure to define clusters. 
+
+This is the heart of community detection - we calculate this measure and solve spectral decomposition with this measure as weights on the edges (or use a greedy heuristic such as Girman-Newman method).
+
+### Modularity of a cut
+
+The modularity of a cut measures how distinct it is from a random graph of the same size.
+
+\begin{equation}
+Q = \dfrac{1}{2m}\sum_{vw}[A_{vw} - \dfrac{k_v k_w}{2m}]\delta(c_v, c_w)
+\end{equation}
+
+In this equation, A is the adjacency matrix for the graph, $\frac{k_v k_w}{2m}$ is the number of edges expected in a random graph model, and $\delta(c_v, c_w)$ is 1 if both $v$ and $w$ are in the same community (i.e. in $P$ or its complement, $\bar{P}$) and 0 otherwise. 
+
+For a completely random network, Q = 0. 
+
+We then seek to find a cut that maximises the modularity. 

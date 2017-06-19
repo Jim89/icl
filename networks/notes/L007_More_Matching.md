@@ -1,0 +1,107 @@
+# Network Analytics
+Jim Leach  
+14 December 2015  
+
+# Matching
+
+## Simple matching - finding the maximum size matching
+
+Often we might seek to find a maximum-size matching. The simplest form of this is for an unweighted bipartite graph.
+
+A "greedy" algorithm that picks an edge accross two unmatched nodes repeatedly often does not work. This method can be augmented to improve it though. We look for unmatched nodes and if we can form a path to them using nodes/edges that are already part of the matching then we can change the paths and form a new edge. 
+
+### Perfect matches
+
+A perfect match is one for which every node has an edge incident on it, and each node has _only_ one edge indicent on it. To establish a perfect matching there can be __no constricted sets__.
+
+A constricted set is defined as a group of nodes in 1 side of the bipartite graph with a number of neighbours (i.e. nodes on the other side of the graph) that is smaller than the number of nodes in the group, i.e. $N(S) < |S|$. (N(S) is the neighbours of S)
+
+#### Halls Theorem
+
+Halls theorem (also called the perfect matching theorem) states that:
+
+> A bipartite graph (G = (U, V; E)) has a matching incident on every node of U if _and only if_ |N(S)| $\geq$ |S| for every subset, S of U.
+
+There is a similar concept of a _overdemanded set_ which is a set of nodes in one side that are "pointed at" (i.e. have an edge with) by nodes on the other side, where there are more "pointers" than "pointees".
+
+## Weighted perfect matching
+
+In a weighted perfect matching (which is much more common) we assume |U| = |V| (i.e. the same number of nodes on both sides of the graph). We also have weights on each edge. Every "buyer" (node on one side) puts a valuation on each item of each "seller" (nodes on the other side).
+
+Almost all matching problems can be _transformed_ in to a problem of finding the weighted perfect matching, e.g. by adding extra dummy nodes, edges with weight 0, extra copies of nodes etc.
+
+Weighted perfect matching is similar to an aution with buyers and sellers. The model is such that "sellers" quote a price, buyers have valuations on items and then:
+
+* buyers choose the item that maximises the highest net valuation (valuation - price) and make an offer;
+* sellers choose the highest price offer
+
+Equilibrium occurs when there is a set of prices and trades (i.e. matches) such that:
+
+* the market clears - i.e. everyone has traded everything they have to offer;
+* rationality holds - a trader only trades with the best prices in their neighbourhood (note that not every node, either buyer or seller, need have an edge);
+* the set of trades (matches) must ensure supply = demand at every vertex (i.e. we cannot sell something twice!)
+
+It is the case that there is _always_ a set of prices that will clear the market and obtain a perfect matching. If the seller belongs to an overdemanded set (i.e. is chosen by two buyers) then the price of that seller increased by 1 unit. This will repeat until an equilibrium forms. 
+### Why does this work?
+
+At each stage we define "potential energy". The current potential energy = sum of current prices + sum of maximum net benefits to each buyer. 
+
+When we find a constricted set of buyers, each seller (in the overdemanded set) raises the price by 1 for each node in the constricted set. 
+
+The size of the constricted set (S) is greater than (>) the size of the over-demanded set of sellers (N(S)). So sellers raising their prices by 1 reduces the potential enegery, it adds |N(S)| to the sum of the current prices and reduces the sum of the max benefits by |S|. 
+
+### Rescaling
+
+If the smallest price is greater than (>) 0 then we need to rescale, i.e. reduce the seller prices by this amount to make the smallest price = 0. Note that adding/removing a constant from _all_ sellers' prices does not change the potential energy and does not change buyer's indeference edges (i.e. it does not change the graph). This ensures every buys maximim net valuation is always $\geq$ 0 and thus that potential energy is always $\geq$ 0. 
+
+### Another reason it works
+
+One way to solve this system is to use linear programming. If A is the node-edge incidence matrix of the bipartite graph then we can fomulate the problem as follows:
+
+\begin{equation*}
+\begin{split}
+\max \sum_{i, j} v_{ij} x_{ij} \\
+s.t\\
+\sum_i x_{ij} = 1 \\
+\sum_j x_{ij} = 1 \\
+x_{ij} \geq 0
+\end{split}
+\end{equation*}
+
+Or alternatively in matrix form:
+
+\begin{equation*}
+\begin{split}
+\max v^Tx \\
+s.t\\
+Ax = 1
+x \geq 0
+\end{split}
+\end{equation*}
+
+Solving this linear program will find the perfect matching and has the additional note that the prices are the optimal dual variables to this linear program. 
+
+## Stable matching
+
+In stable matching we are generally dealing with a preference-listed bipartite graph (i.e. nodes on one side have preferences for nodes on the other). 
+
+_Stability_ is reached when a better (i.e. more preferred) matching is not possible, i.e. there is no node pair who prefer each other more than they prefer their current partner.
+
+Note that there can be many stable matchings for a given graph. 
+
+Formally, if (m', w') $\in$ M and (m'', w'') $\in$ M then m' prefers w' to w'' or w'' prefers m'' to m'.
+
+When dealing with scenarious like this, we have as out input a preference list for one side of the graph, ${m_1, m_2, m_3, ..., m_n}$ and for the other ${w_1, w_2, w_3, ..., w_n}$. 
+
+The algorithm is then as follows:
+
+* m proposes to w;
+* if w is unmatched, w accepts;
+* if w is matched; then
+    * if w prefers m to $m_2$, w accepts m and dumps $m_2$ (i.e dumps its current match);
+    * if w prefers $m_2$ to m, w rejects m
+* An unmatched m proposes to the highest-ranked w on its preference list _that it has not already proposed to_
+
+This algorithm takes at most n^2^ steps to resolve and the end result is _always_ stable.
+
+Note that the results will be different depending on who proposes. If m proposes to w then the algorithm is termed m-optimal and m get "better" (for them) results than if w propose to m. Therefore the stable match is not necessarily "fair" - it depends on which side proposes. 
