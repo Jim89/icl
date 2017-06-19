@@ -3,7 +3,10 @@ title: "Network Analytics"
 author: "Jim Leach"
 date: "14 December 2015"
 output:
-  pdf_document
+  html_document:
+    theme: readable
+    toc: true
+    toc_float: true
 ---
 
 # Community Detection

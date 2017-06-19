@@ -3,7 +3,10 @@ title: "Network Analytics"
 author: "Jim Leach"
 date: "30 November 2015"
 output:
-  pdf_document
+  html_document:
+    theme: readable
+    toc: true
+    toc_float: true
 ---
 
 # Simple Algorithms
