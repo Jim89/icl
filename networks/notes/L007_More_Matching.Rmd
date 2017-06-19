@@ -4,9 +4,9 @@ author: "Jim Leach"
 date: "14 December 2015"
 output:
   html_document:
+    keep_md: yes
     theme: readable
-    toc: true
-    toc_float: true
+    toc: yes
 ---
 
 # Matching
