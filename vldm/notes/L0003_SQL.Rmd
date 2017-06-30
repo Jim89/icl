@@ -2,7 +2,9 @@
 title: "Very Large Data Management Lecture 3-4"
 author: "Jim Leach"
 date: "11 November 2015"
-output: pdf_document
+output: 
+  html_document:
+    theme: readable
 ---
 
 # Basics of SQL
