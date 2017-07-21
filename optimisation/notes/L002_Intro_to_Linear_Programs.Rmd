@@ -3,7 +3,8 @@ title: "Optimisation and Decision Models Module 1"
 author: "Jim Leach"
 date: "25 November 2015"
 output:
-  pdf_document
+  html_document:
+    theme: readable
 ---
 
 # An Introduction to Linear Programs

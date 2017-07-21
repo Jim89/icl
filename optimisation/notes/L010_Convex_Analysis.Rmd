@@ -3,7 +3,8 @@ title: "Optimisation and Decision Models Module 3"
 author: "Jim Leach"
 date: "29 Decembber 2015"
 output:
-  pdf_document
+  html_document:
+    theme: readable
 ---
 
 # Convex Analysis

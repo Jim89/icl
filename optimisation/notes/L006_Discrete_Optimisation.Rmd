@@ -3,7 +3,8 @@ title: "Optimisation and Decision Models Module 2"
 author: "Jim Leach"
 date: "8 Decembber 2015"
 output:
-  pdf_document
+  html_document:
+    theme: readable
 ---
 
 # Discrete Optimisation
